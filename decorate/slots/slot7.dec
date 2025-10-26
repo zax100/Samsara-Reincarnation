@@ -102,7 +102,7 @@ actor SamsaraSlotSevenPickup : SamsaraSlotPickup replaces BFG9000
       ChexFull:             PLZD B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HereticFull:          HDST B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       WolfFull:             PSPR B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      LostWolfFull:         PSPR B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      LostWolfFull:         PSPR D 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       TotenkopfFull:        TK09 H 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HexenFull:            PWRT B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HexenClassicFull:     goto HexenFull

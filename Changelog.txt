@@ -37,7 +37,8 @@ Wolfenstein 3D:
 
 -B.J. Blazkowicz (Original/Lost Episodes)-
 
-! Updated offset and weapon outlines for the original version's hybrid pickup sprites.
+! Updated offset and weapon outlines for hybrid pickup sprites.
++ Added hybrid pickup sprites for LE Mauser Rifle and Spear of Destiny.
 + The flamethrower now deals 10-40 damage in multiples of 10 (increased from 8-32 in multiples of 8).
 
 Hexen I:
