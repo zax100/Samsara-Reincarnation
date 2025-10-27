@@ -35,14 +35,14 @@ Corvus (Heretic):
 
 Wolfenstein 3D:
 
--All-
-
-! Updated offset and weapon outlines for hybrid pickup sprites.
-
 -B.J. Blazkowicz (Original/Lost Episodes)-
 
 + Added hybrid pickup sprites for the Lost Episodes Mauser rifle and Spear of Destiny.
 + The flamethrower now deals 10-40 damage in multiples of 10 (increased from 8-32 in multiples of 8).
+
+-All-
+
+! Updated offset and weapon outlines for hybrid pickup sprites.
 
 Hexen I:
 
