@@ -1135,7 +1135,7 @@ actor SamsaraDoomguyStrClusterPyroShot : SamsaraDoomguyStrPyroShot
 		PYXP B 2 Bright Light("PyroDeathB")
 		PYXP C 2 Bright Light("PyroDeathC") A_Explode(192,128)
 		TNT1 A 0 A_GiveInventory("SamsaraAMushroomBypassOn")
-		TNT1 A 0 A_Mushroom("SamsaraDoomguyStrPyroShotSilent",4,MSF_DontHurt)
+		TNT1 A 0 A_Mushroom("SamsaraDoomguyStrPyroShotSilent",3,MSF_DontHurt)
 		TNT1 A 0 A_Mushroom("SamsaraDoomguyStrPyroFlare",32,MSF_DontHurt)
 		TNT1 A 0 A_GiveInventory("SamsaraAMushroomBypassOff")
 		TNT1 A 0 A_SetDamageType("DoomDamageTypeFireExplosive")
