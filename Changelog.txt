@@ -128,8 +128,8 @@ Ranger (Quake I):
 - Multi rockets now deal 64 splash damage in PVP and 80 splash damage in PVE (decreased from 100). This is because it adds up to doing twice as much damage as a primary shot over four multi rockets.
 - The thunderbolt (lightning mode) now deals 40 damage in PVE (decreased from 50).
 - The thunderbolt (plasma mode)'s lightning bolts now deal 40 damage (decreased from 50).
-- Ranger now receives the normal amount of Ammo 3 rounds from ammo pickups instead of getting more rounds.
 - Ranger now gets 2 rounds of Ammo 3 from medium Ammo 2 pickups (decreased from 3) and 3 rounds of Ammo 3 from large Ammo 2 pickups (decreased from 4).
+- Ranger now receives the normal amount of Ammo 3 rounds from ammo pickups instead of getting more rounds.
 
 Strifeguy (Strife):
 
