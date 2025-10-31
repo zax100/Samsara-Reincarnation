@@ -223,8 +223,8 @@ actor ImpalingDart
     Projectile
     Radius 3
     Height 3
-    Speed 40
-    Damage (7)
+    Speed 50
+    Damage (8)
     DamageType "EradPiercingDart"
     Obituary "%o was pierced by %k's death darts."
     Scale 0.5

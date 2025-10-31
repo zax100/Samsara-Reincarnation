@@ -349,7 +349,7 @@ actor RippingDisc
     Radius 6
     Height 5
     Speed 70
-    Damage (random(10,15))
+    Damage (random(10,18))
     DamageType "EradDisc"
     BounceCount 6
     BounceFactor 1

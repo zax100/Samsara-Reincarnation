@@ -145,7 +145,7 @@ actor EradEnergyWhipBolt
     Projectile
     Radius 16
     Height 16
-    Speed 32
+    Speed 40
     Damage (10)
     DamageType "EradShock"
     Gravity 0.1
@@ -158,6 +158,7 @@ actor EradEnergyWhipBolt
     States
     {
       Spawn:
+        BNFR A 0 Bright //First state skipped
         BNFR A 3 Bright
         BNFR BCDEF 3 Bright A_GiveInventory("EradFlameLifeTime")
         stop
@@ -178,14 +179,20 @@ actor EradEnergyWhipBoltCoop : EradEnergyWhipBolt
 {
     Species "Player"
     +THRUSPECIES
+    Damage (12)
 }
 
-actor EradEnergyWhipBolt2 : EradEnergyWhipBolt { Speed 48 }
+actor EradEnergyWhipBolt2 : EradEnergyWhipBolt
+{
+	Speed 50
+    Damage (12)
+}
 
 actor EradEnergyWhipBolt2Coop : EradEnergyWhipBolt2
 {
     Species "Player"
     +THRUSPECIES
+    Damage (16)
 }
 
 // Kamchak
@@ -333,7 +340,7 @@ actor EradNitrofoggerGas
     Projectile
     Radius 16
     Height 16
-    Speed 32
+    Speed 40
     Damage (10)
     DamageType "EradDisc"
     Gravity 0.1
@@ -343,6 +350,7 @@ actor EradNitrofoggerGas
     States
     {
       Spawn:
+        ER75 I 0 Bright //First state skipped
         ER75 I 3 Bright
         ER75 JKLMN 3 Bright A_GiveInventory("EradFlameLifeTime")
         stop
@@ -363,14 +371,20 @@ actor EradNitrofoggerGasCoop : EradNitrofoggerGas
 {
     Species "Player"
     +THRUSPECIES
+    Damage (12)
 }
 
-actor EradNitrofoggerGas2 : EradNitrofoggerGas { Speed 48 }
+actor EradNitrofoggerGas2 : EradNitrofoggerGas
+{
+    Speed 50
+    Damage (12)
+}
 
 actor EradNitrofoggerGas2Coop : EradNitrofoggerGas2
 {
     Species "Player"
     +THRUSPECIES
+    Damage (16)
 }
 
 // Dan Blaze/Alliance Commando
@@ -518,7 +532,7 @@ actor EradFlamethrowerFire
     Projectile
     Radius 16
     Height 16
-    Speed 32
+    Speed 40
     Damage (10)
     DamageType "EradGreenFire"
     Gravity 0.1
@@ -528,6 +542,7 @@ actor EradFlamethrowerFire
     States
     {
       Spawn:
+        FTER A 0 Bright //First state skipped
         FTER A 3 Bright
         FTER BCDEF 3 Bright A_GiveInventory("EradFlameLifeTime")
         stop
@@ -548,12 +563,18 @@ actor EradFlamethrowerFireCoop : EradFlamethrowerFire
 {
     Species "Player"
     +THRUSPECIES
+    Damage (12)
 }
 
-actor EradFlamethrowerFire2 : EradFlamethrowerFire { Speed 48 }
+actor EradFlamethrowerFire2 : EradFlamethrowerFire
+{
+    Speed 50
+    Damage (12)
+}
 
 actor EradFlamethrowerFire2Coop : EradFlamethrowerFire2
 {
     Species "Player"
     +THRUSPECIES
+    Damage (16)
 }

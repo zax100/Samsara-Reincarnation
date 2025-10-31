@@ -146,6 +146,28 @@ Eradicator:
 -All-
 
 ! The fallback weapons now have Compendium sprites.
++ The Claw now deals 12-24 damage in multiples of 4 (increased from 9-18 damage in multiples of 3).
++ The Ripper Disc now deals 10-18 damage (increased from 10-14).
++ All three slot 1 weapons have their direct hit damage increased from 60 to 75.
+! All three slot 1 weapons have their explosion damage decreased from 175 to 160, and their explosion radius increased from 55 to 80.
++ The Sonic Shock now does 9-15 damage per individual bullet (increased from 9-12), and still fires 6 per shot.
++ The Death Bomb and Cluster Bomb now deal 60 damage per bomb (increased from 50), and their explosion damage and radius is now 120 (increased from 100).
++ Dart Cannon darts now move at speed 50 (increased from 40), and their damage is now 8 (increased from 7).
++ All three slot 4S weapons now last for an additional 3 tics in the air and move at speed 40 (increased from 32).
++ All three slot 4S weapons deal 12 damage in coop (increased from 10).
++ Missile Launcher primary fire projectiles deal 80 damage (increased from 75) and explode for 128 damage and 128 radius (increased from 120/120).
++ Missile Launcher alt-fire projectiles explode for 144 damage and 128 radius (increased from 140/120).
+- All three slot 6 weapons now take 4 cells to fire.
++ The Smoke Bomb now does 40 damage on direct hit (increased from 20), explodes for 80 damage and radius (increased from 60/60), and the smoke deals 8 damage in a radius of 64 (increased from 5 damage and 60 radius).
+! Smoke from the Smoke Bomb has a scale of 1.5 (increased from 1.0) to make it look bigger and more smokey.
++ The Napalm Charge now deals 45-75 damage on direct hit (increased from 24-45) and explodes for 64 damage and radius (increased from 50/60).
++ The Napalm Charge's green fire now burns with a radius of 32 in DM (increased from 25) and a radius of 48 in coop (increased from 25)
++ The Ion Sphere now does 80 damage on direct hit (increased from 60)
++ The Ion Sphere explodes for 96 damage in a radius of 128 in both DM and coop (increased from 80/100 in DM and 32/100 in coop)
++ Sparks from the Ion Sphere explode in a radius of 40 (increased from 25).
+- The Plasma Ball has a ReactionTime of 28 (decreased from 36), meaning it lasts roughly 12 seconds (decreased from roughly 15.4).
+- The Plasma Ball in DM explodes for 300-350 damage with a radius of 192 (decreased from (700 to 800)/(1 to 2) damage with a radius of 211).
+- The Plasma Ball in coop explodes three times for 100-200 damage each with a radius of 192 (decreased from 284/(1 to 2) three times with a radius of 211).
 
 Kyle Katarn (Star Wars: Dark Forces):
 
