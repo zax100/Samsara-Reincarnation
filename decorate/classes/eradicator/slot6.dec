@@ -429,7 +429,6 @@ actor NapalmChargeGlass
 
 actor NapalmChargeCoopGlass : NapalmChargeGlass
 {
-    DamageType "EradExplosive2"
     Species "Player"
     +NODAMAGETHRUST
     +THRUSPECIES
@@ -442,7 +441,7 @@ actor NapalmChargeCoopGlass : NapalmChargeGlass
         TNT1 A 0 A_SpawnDebris("GlassPiece4")
         TNT1 A 0 A_SpawnDebris("GlassPiece5")
         TNT1 AAAAAA 0 A_SpawnItemEx("EradCoopGreenFire",0,0,0,random(-30,30)/10.00,random(-30,30)/10.00,random(50,150)/10.00)
-        TNT1 A 1 A_Explode(64,64)
+        TNT1 A 1 A_Explode(64,64,0)
         stop
     }
 }
