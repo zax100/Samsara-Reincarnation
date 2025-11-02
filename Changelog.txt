@@ -135,6 +135,7 @@ Rise of the Triad:
 
 -All-
 
+* Fixed the landing attack taking effect when dead.
 * Fixed Dog Mode not being properly counted towards invulnerability checks.
 
 Strifeguy (Strife):
@@ -207,6 +208,10 @@ Eradicator:
 - The death sphere now has a ReactionTime of 28 (decreased from 36), meaning it lasts roughly 12 seconds (decreased from roughly 15.4).
 - In PVP, the death sphere now deals 300-350 splash damage across 192 map units (decreased from 650-800 splash damage across 211 map units).
 - In PVE, the death sphere's three A_Explode calls now deal 100-200 splash damage across 192 map units (decreased from 142-284 splash damage in multiples of 142 across 211 map units).
+
+LDF Commando (Rebel Moon Rising):
+
+! The Subestron arm has been moved from an extra slot 7 weapon to a slot 6S weapon.
 
 Kyle Katarn (Star Wars: Dark Forces):
 

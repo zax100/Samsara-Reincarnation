@@ -2,19 +2,13 @@ actor "Subestron Arm" : SamsaraRMRWeapon
 {
     Inventory.PickupMessage "Mechanical Weapon Arm"
     Weapon.SelectionOrder 600
-    Weapon.SlotNumber 7
+    Weapon.SlotNumber 6
     Weapon.AmmoType "Cell"
-    //Weapon.AmmoGive 24
+    Weapon.AmmoGive 24
     Weapon.AmmoUse 8
     Tag "Subestron Arm"
-    +BFG
     States
     {
-      Spawn:
-        RM2X H 0
-        TNT1 A 1 A_SpawnItemEx("SamsaraSlotSevenPickup")
-        stop
-
       Ready:
         RM2X E 1 A_WeaponReady
         loop

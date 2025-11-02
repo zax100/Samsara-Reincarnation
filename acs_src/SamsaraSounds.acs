@@ -428,6 +428,9 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
             {"RMR/pickup"},
             {"RMR/pickup"},
             {"RMR/pickup"},
+            {""},
+            {""},
+            {"RMR/pickup"},
         }},
         {{
             {"katarn/itemup"},
@@ -1169,6 +1172,9 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
             {"RMR/pickup"},
             {"RMR/pickup"},
             {"RMR/pickup"},
+            {""},
+            {""},
+            {"RMR/pickup"},
         }},
         {{
             {"katarn/itemup"},
@@ -1772,7 +1778,7 @@ str MiscPickupSounds[2][MISCPICKUPCOUNT][LOADOUTCOUNT] =
         {"strife/sigilcharge"},
         {"strife/itemget"},
         {"strife/itemget"},
-        {"RMR/pickup"},
+        {"RMR/pickup"}, // TO BE REMOVED
         {"katarn/itemup"},
         {"greed/pickup"},
         {"greed/pickup"},
@@ -1824,7 +1830,7 @@ str MiscPickupSounds[2][MISCPICKUPCOUNT][LOADOUTCOUNT] =
         {"strife/sigilcharge"},
         {"strife/itemget"},
         {"strife/itemget"},
-        {"RMR/pickup"},
+        {"RMR/pickup"}, // TO BE REMOVED
         {"katarn/itemup"},
         {"greed/pickup"},
         {"greed/pickup"},

@@ -265,8 +265,8 @@ SAMSARA_RMR_OB_SLOT3 = "%k blasted %o using the ACR Add-On.";
 SAMSARA_RMR_OB_SLOT4 = "%k showed %o the wonders of particle acceleration.";
 SAMSARA_RMR_OB_SLOT5 = "%k deployed the grenade launcher against %o.";
 SAMSARA_RMR_OB_SLOT6 = "%k pinned down %o with the Railgun.";
-SAMSARA_RMR_OB_SLOT7A = "%k overcharged %o with the Plasma Cannon.";
-SAMSARA_RMR_OB_SLOT7B = "%k fired the Subestron Arm at %o.";
+SAMSARA_RMR_OB_SLOT6S = "%k fired the Subestron Arm at %o.";
+SAMSARA_RMR_OB_SLOT7 = "%k overcharged %o with the Plasma Cannon.";
 
 SAMSARA_DARKFORCES_OB_FALLBACKMELEE = "%k gave %o a nasty left hook.";
 SAMSARA_DARKFORCES_OB_FALLBACKRANGED = "%k sniped %o with the Bryar Pistol.";

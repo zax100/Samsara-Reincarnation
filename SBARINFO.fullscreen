@@ -6067,6 +6067,8 @@ StatusBar Fullscreen, ForceScaled
                     InInventory GotWeapon6 || "Rocket Powered Impaler" { DrawImage "STYSNUM6", 176, 10; }
                 } else InInventory CalebClass {
                     InInventory GotWeapon6 || BloodFlamethrower { DrawImage "STYSNUM6", 176, 10; }
+                } else InInventory RMRClass {
+                    InInventory GotWeapon6 || "Subestron Arm" { DrawImage "STYSNUM6", 176, 10; }
                 } else InInventory KatarnClass {
                     InInventory GotWeapon6 || "Czerka Adventurer" { DrawImage "STYSNUM6", 176, 10; }
                 } else InInventory DisruptorClass {
@@ -6143,6 +6145,7 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected "SPNKR-25 Auto Cannon" { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected "Rocket Powered Impaler" { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected BloodFlamethrower { DrawImage "STY3NUM6", 176, 10; }
+                IsSelected "Subestron Arm" { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected "Czerka Adventurer" { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected " Disruptor Plasmalance " { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected Q2PlasmaBeam { DrawImage "STY3NUM6", 176, 10; }
@@ -6220,7 +6223,7 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected " Mauler ", " Mauler Torpedo " { DrawImage "STY2NUM7", 186, 10; }
                 IsSelected " Plasma Ball " { DrawImage "STY2NUM7", 186, 10; }
                 IsSelected "AlienDisintegrator" { DrawImage "STY2NUM7", 186, 10; }
-                IsSelected " RMR Plasma Cannon ", "Subestron Arm" { DrawImage "STY2NUM7", 186, 10; }
+                IsSelected " RMR Plasma Cannon " { DrawImage "STY2NUM7", 186, 10; }
                 IsSelected "Assault Cannon" { DrawImage "STY2NUM7", 186, 10; }
                 IsSelected " Super Plasma Annihilator " { DrawImage "STY2NUM7", 186, 10; }
                 IsSelected " Disruptor Zodiac " { DrawImage "STY2NUM7", 186, 10; } // weapons take priority over inventory items

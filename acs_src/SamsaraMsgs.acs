@@ -4388,6 +4388,42 @@ str ClassPickupMessages[CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT][MSGCOUNT]
             "",
             "",
         }},
+        {{
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+        }},
+        {{
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+        }},
+        {{
+            "Mechanical Weapon Arm",
+            "Get this, you got another laser gun!",
+            "At least this pierces.",
+            "Now I have a robot arm!",
+            "Now you have all the colors of the rainbow!",
+            "I think this might be a weapon in Dead Rising 2.", // hmm
+            "",
+            "",
+            "",
+            "",
+        }},
     }},
     {{
         {{
@@ -9957,7 +9993,7 @@ str MiscPickupMessages[MISCPICKUPCOUNT][LOADOUTCOUNT][MSGCOUNT] =
         "",
         "",
     }},
-    {{
+    {{ // TO RE REMOVED
         "Mechanical Weapon Arm",
         "Get this, you got another laser gun!",
         "At least this pierces.",
