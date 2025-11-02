@@ -127,8 +127,8 @@ Actor "Ice Halberd" : WTWeapon
 
 Actor WTIceHalberdProjectile : WTGigaMeleeProjectile
 {
-	Speed 70
-	Damage (random(75,120))
+	Speed 105
+	Damage (random(100,160))
 	Obituary "$SAMSARA_WITCHAVEN_OB_SLOT_IV"
 	DamageType "WTMeleeIce"
 }
@@ -137,8 +137,8 @@ Actor WTIceHalberdProjectile_2 : WTIceHalberdProjectile { Species "Player" +THRU
 
 Actor WTIceHalberdProjectile_Weak : WTMegaMeleeProjectile
 {
-	Speed 70
-	Damage (random(45,90))
+	Speed 105
+	Damage (random(60,120))
 	Obituary "$SAMSARA_WITCHAVEN_OB_SLOT_IV"
 	DamageType "WTMeleeIce"
 }

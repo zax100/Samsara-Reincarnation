@@ -231,23 +231,23 @@ Actor "Broad Sword" : WTWeapon
 
 Actor WTBroadswordProjectile : WTMeleeProjectile
 {
-	Speed 128
+	Speed 192
 	+FORCEPAIN
-	Damage (random(60,75))
+	Damage (random(80,100))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS"
 }
 
 Actor WTBroadswordProjectile_Weak : WTMeleeProjectile
 {
-	Speed 128
+	Speed 192
 	+FORCEPAIN	
-	Damage (random(45,60))
+	Damage (random(60,80))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS"
 }
 
 Actor WTMegaBroadswordProjectile : WTGigaMeleeProjectile
 {
-	Speed 128
+	Speed 192
 	+FORCEPAIN
 	Damage (random(120,150)) //Too much damage?
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS_MEGA"
@@ -264,7 +264,7 @@ Actor WTMegaBroadswordProjectile : WTGigaMeleeProjectile
 
 Actor WTMegaBroadswordProjectile_Weak : WTGigaMeleeProjectile
 {
-	Speed 128
+	Speed 192
 	+FORCEPAIN
 	Damage (random(90,120))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS_MEGA"

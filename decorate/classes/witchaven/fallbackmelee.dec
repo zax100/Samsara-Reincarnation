@@ -81,15 +81,15 @@ Actor Witchaven_Dagger : WTWeapon
 
 Actor WTDaggerProjectile : WTMeleeProjectile
 {
-	Speed 64
+	Speed 96
 	+FORCEPAIN
-	Damage (random(30,45)) // all damage values, except the fireballs, icicles, arrows, and magic spells, are there Witch 1 values *3. Enchantments do double what the normal attacks do.
+	Damage (random(40,60)) // all damage values, except the fireballs, icicles, arrows, and magic spells, are there Witch 1 values *4. Enchantments do double what the normal attacks do.
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS"
 }
 
 Actor WTDaggerProjectileWeak : WTMeleeProjectile
 {
-	Speed 64
+	Speed 96
 	+FORCEPAIN
 	Damage (random(15,24))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS"
@@ -97,16 +97,16 @@ Actor WTDaggerProjectileWeak : WTMeleeProjectile
 
 Actor WTMegaDaggerProjectile : WTMegaMeleeProjectile
 {
-	Speed 64
+	Speed 96
 	+FORCEPAIN
-	Damage (random(60,90))
+	Damage (random(80,120))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS"
 }
 
 Actor WTMegaDaggerProjectileWeak : WTMegaMeleeProjectile
 {
-	Speed 64
+	Speed 96
 	+FORCEPAIN
-	Damage (random(30,48))
+	Damage (random(40,64))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS"
 }

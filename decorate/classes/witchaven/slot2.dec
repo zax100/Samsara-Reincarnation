@@ -166,23 +166,23 @@ Actor "Shortsword" : WTWeapon
 
 Actor WTShortswordProjectile : WTMeleeProjectile
 {
-	Speed 64
+	Speed 96
 	+FORCEPAIN
-	Damage (random(30,60))
+	Damage (random(40,80))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS"
 }
 
 Actor WTShortswordProjectile_Weak : WTMeleeProjectile
 {
-	Speed 64
+	Speed 96
 	+FORCEPAIN	
-	Damage (random(30,48))
+	Damage (random(40,64))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS"
 }
 
 Actor WTMegaShortswordProjectile : WTGigaMeleeProjectile
 {
-	Speed 64
+	Speed 96
 	+FORCEPAIN
 	Damage (random(60,120)) //Too much damage?
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS_MEGA"
@@ -200,7 +200,7 @@ Actor WTMegaShortswordProjectile : WTGigaMeleeProjectile
 
 Actor WTMegaShortswordProjectile_Weak : WTGigaMeleeProjectile
 {
-	Speed 64
+	Speed 96
 	+FORCEPAIN
 	Damage (random(60,96))
 	Obituary "$SAMSARA_WITCHAVEN_OB_FISTS_MEGA"
