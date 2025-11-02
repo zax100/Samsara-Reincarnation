@@ -9993,18 +9993,6 @@ str MiscPickupMessages[MISCPICKUPCOUNT][LOADOUTCOUNT][MSGCOUNT] =
         "",
         "",
     }},
-    {{ // TO RE REMOVED
-        "Mechanical Weapon Arm",
-        "Get this, you got another laser gun!",
-        "At least this pierces.",
-        "Now I have a robot arm!",
-        "Now you have all the colors of the rainbow!",
-        "I think this might be a weapon in Dead Rising 2.", // hmm
-        "",
-        "",
-        "",
-        "",
-    }},
     {{
         "Stun Gauntlets",
         "Shockingly, these aren't as widely used as you'd think.",
@@ -10383,4 +10371,4 @@ str MiscPickupMessages[MISCPICKUPCOUNT][LOADOUTCOUNT][MSGCOUNT] =
     }},
 };
 
-// jesus fucking christ, 10350 lines
+// jesus fucking christ, 10370 lines

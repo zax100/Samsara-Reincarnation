@@ -7206,7 +7206,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 33);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 32);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -7578,7 +7578,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 34);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 33);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -10839,7 +10839,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
 
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 39);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 38);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
                 }
@@ -10875,7 +10875,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
 
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 39);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 38);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
                 }
@@ -10911,7 +10911,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
 
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 39);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 38);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
                 }

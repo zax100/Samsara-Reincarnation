@@ -1778,7 +1778,6 @@ str MiscPickupSounds[2][MISCPICKUPCOUNT][LOADOUTCOUNT] =
         {"strife/sigilcharge"},
         {"strife/itemget"},
         {"strife/itemget"},
-        {"RMR/pickup"}, // TO BE REMOVED
         {"katarn/itemup"},
         {"greed/pickup"},
         {"greed/pickup"},
@@ -1830,7 +1829,6 @@ str MiscPickupSounds[2][MISCPICKUPCOUNT][LOADOUTCOUNT] =
         {"strife/sigilcharge"},
         {"strife/itemget"},
         {"strife/itemget"},
-        {"RMR/pickup"}, // TO BE REMOVED
         {"katarn/itemup"},
         {"greed/pickup"},
         {"greed/pickup"},
