@@ -248,6 +248,18 @@ Kyle Katarn (Star Wars: Dark Forces):
 ! The Wookie Bowcaster's main projectile now deals 96 splash damage (changed from 84-108).
 ! The Wookie Bowcaster's cluster projectiles now deal 80 damage (changed from 70-85).
 
+Grondoval (Witchaven):
+
++ Most melee attacks have +50% range. This buff includes the Dagger, Shortsword, Battle Axe, Ice Halberd, Fire Mace, Broad Sword, and Frozen Two-Hand Sword.
++ A lot of melee attacks have +33% damage. This buff includes the Dagger, Battle Axe, Ice Halberd, Fire Mace, and Frozen Two-Hand Sword.
+- The Pike Axe takes 10 cells to fire (increased from 8).
++ The Pike Axe's melee attacks have 192 range (increased from 64).
++ The Pike Axe's strong melee attack deals 220-320 damage (increased from 110-160).
++ The Pike Axe's weak melee attack deals 120-190 damage (increased from 60-95).
++ The Pike Axe's projectiles now deal 300-480 damage in coop (increased from 100-160) and 200 damage in DM (increased from 100).
++ The Pike Axe's projectiles now move at speed 48 in coop (increased from 40) and speed 36 in DM (increased from 30).
++ The Pike Axe's projectiles now have a weak form of homing in DM.
+
 Bitterman (Quake II):
 
 * Fixed Bitterman playing the wrong sound when getting crushed.

@@ -201,8 +201,8 @@ Actor WTFrozen2HandAmmoDrain : WTACSTrigger
 
 Actor WTTwoHandProjectile : WTGigaMeleeProjectile
 {
-	Speed 128
-	Damage (random(135,180))
+	Speed 192
+	Damage (random(180,240))
 	Obituary "$SAMSARA_WITCHAVEN_OB_SLOT_VII"
 }
 
@@ -210,8 +210,8 @@ Actor WTTwoHandProjectile_2 : WTTwoHandProjectile { Species "Player" +THRUSPECIE
 
 Actor WTTwoHandProjectile_Weak : WTGigaMeleeProjectile
 {
-	Speed 128
-	Damage (random(120,165))
+	Speed 192
+	Damage (random(160,220))
 	Obituary "$SAMSARA_WITCHAVEN_OB_SLOT_VII"
 }
 
@@ -219,8 +219,8 @@ Actor WTTwoHandProjectile_Weak_2 : WTTwoHandProjectile_Weak { Species "Player" +
 
 Actor WTMegaTwoHandProjectile : WTGigaMeleeProjectile
 {
-	Speed 128
-	Damage (random(270,360))
+	Speed 192
+	Damage (random(360,480))
 	Obituary "$SAMSARA_WITCHAVEN_OB_SLOT_VII_MEGA"
 	states
 	{
@@ -243,8 +243,8 @@ Actor WTMegaTwoHandProjectile_2 : WTMegaTwoHandProjectile { Species "Player" +TH
 
 Actor WTMegaTwoHandProjectile_Weak : WTGigaMeleeProjectile
 {
-	Speed 128
-	Damage (random(240,330))
+	Speed 192
+	Damage (random(320,440))
 	Obituary "$SAMSARA_WITCHAVEN_OB_SLOT_VII_MEGA"
 	states
 	{
