@@ -245,7 +245,7 @@ actor SamsaraDoomguyStrStunnerRifleDummy : SamsaraSlotPickupDummy
     States
     {
       Spawn:
-        STPP A 38 NoDelay A_JumpIf(!CallACS("SamsaraDecorate", 66), "Super::Spawn")
+        STPP A 38
         stop
     }
 }

@@ -273,6 +273,10 @@ Sarge (Quake III Arena):
 + The rocket launcher now does 128 splash damage within a radius of 128 map units in PVE (increased from 100 splash damage across 100 map units).
 + The rocket launcher now deals half self-damage to the player.
 
+-Settings-
+
+- Removed the "Extra Weapons" setting in the weapon options.
+
 --------------------------------------------------------------------------
 -----------------------------Reincarnation 2.2----------------------------
 --------------------------------------------------------------------------

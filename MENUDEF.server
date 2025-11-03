@@ -69,7 +69,6 @@ OptionMenu "SamsaraServerSideOptions"
     StaticText "Weapon Options", 1
     Option "Ultimate Weapons Stay",             "samsara_permault",            "YesNo"
     Option "Dual Wield Pickup Mode",            "samsara_dualpickup",          "DualPickupOptions"
-    Option "Extra Weapons",                     "samsara_extraweapons",        "YesNo"
     Option "Reloading",                         "samsara_reloadmode",          "ReloadModeOptions"
     Option "Bottomless Magazines",              "samsara_bottomlessmagazines", "OnOff"
     Option "Weapon Overheating",                "samsara_weaponoverheating",   "WeaponOverheatingOptions"

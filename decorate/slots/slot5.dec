@@ -242,7 +242,7 @@ actor SamsaraDoomguyStrLandMineLayerDummy : SamsaraSlotPickupDummy
     States
     {
       Spawn:
-        M_N3 A 38 NoDelay A_JumpIf(!CallACS("SamsaraDecorate", 66), "Super::Spawn")
+        M_N3 A 38
         stop
     }
 }

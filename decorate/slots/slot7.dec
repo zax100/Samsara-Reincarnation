@@ -256,7 +256,7 @@ actor SamsaraDoomguyStrPyroCannonDummy : SamsaraSlotPickupUltDummy
     States
     {
       Spawn:
-        WPYR A 38 NoDelay A_JumpIf(!CallACS("SamsaraDecorate", 66), "Super::Spawn")
+        WPYR A 38
         stop
     }
 }
