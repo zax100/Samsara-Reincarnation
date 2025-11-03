@@ -1533,6 +1533,7 @@ Script "RTCW_BulletDamage" (int damage, int soundtype)
 	int monsterHealth = GetActorProperty(0,APROP_Health);
 	int monsterHeight = GetActorProperty(0,APROP_Height);
 	int monsterWidth = GetActorProperty(0,APROP_Radius)*2;
+	int health = GetActorProperty(0,APROP_SpawnHealth);
 
 	str soundName;
 
@@ -1551,7 +1552,12 @@ Script "RTCW_BulletDamage" (int damage, int soundtype)
 
 	PlaySound(0,soundName,CHAN_6,0.5,0,ATTN_NORM);
 
-	if(monsterWidth >= monsterHeight && !CheckInventory("IsFatButBiped"))
+	if (health >= 1000)
+	{
+		SetResultValue(damage);
+		terminate;
+	}
+	else if(monsterWidth >= monsterHeight && !CheckInventory("IsFatButBiped"))
 	{
 		int relativeAngle = abs(relativeAngleToXY(0, bulletX, bulletY));
 

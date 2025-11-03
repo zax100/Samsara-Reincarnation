@@ -103,8 +103,13 @@ Script "UnrealHitBox" (int damage, int headshotdmg)
 	int monsterHealth = GetActorProperty(0,APROP_Health);
 	int height = GetActorProperty(0,APROP_Height);
 	int width = GetActorProperty(0,APROP_Radius)*2;
+	int health = GetActorProperty(0,APROP_SpawnHealth);
 
-	if(!CheckInventory("IsFatButBiped") && width >= height)
+	if (health >= 1000)
+	{
+		SetResultValue(damage);
+	}
+	else if(!CheckInventory("IsFatButBiped") && width >= height)
 	{
 		int relativeAngle = abs(relativeAngleToXY(0, x, y));
 

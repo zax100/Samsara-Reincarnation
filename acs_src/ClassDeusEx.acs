@@ -163,8 +163,13 @@ Script "DeusEx_DamageModifiers" (int damage)
 	int monsterZ = GetActorZ(0);
 	int monsterHeight = GetActorProperty(0,APROP_Height);
 	int monsterWidth = GetActorProperty(0,APROP_Radius)*2;
+	int health = GetActorProperty(0,APROP_SpawnHealth);
 
-	if(monsterWidth > monsterHeight)
+	if (health >= 1000)
+	{
+		damage = damage;
+	}
+	else if(monsterWidth > monsterHeight)
 	{
 		int relativeAngle = abs(relativeAngleToXY(0, bulletX, bulletY));
 

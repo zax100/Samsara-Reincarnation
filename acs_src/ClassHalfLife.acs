@@ -1734,8 +1734,14 @@ Script "HalfLife_BulletDamage" (int damage)
 	int monsterZ = GetActorZ(0);
 	int monsterHeight = GetActorProperty(0,APROP_Height);
 	int monsterWidth = GetActorProperty(0,APROP_Radius)*2;
+	int health = GetActorProperty(0,APROP_SpawnHealth);
 
-	if(!CheckInventory("IsFatButBiped") && monsterWidth > monsterHeight)
+	if (health >= 1000)
+	{
+		SetResultValue(damage);
+		terminate;
+	}
+	else if(!CheckInventory("IsFatButBiped") && monsterWidth > monsterHeight)
 	{
 		int relativeAngle = abs(relativeAngleToXY(0, bulletX, bulletY));
 

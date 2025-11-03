@@ -260,6 +260,12 @@ Grondoval (Witchaven):
 + The Pike Axe's projectiles now move at speed 36 in PVP (increased from 30), and speed 48 in PVE (increased from 40).
 + The Pike Axe's projectiles now have a weak form of homing in PVP.
 
+Half-Life:
+
+-All-
+
+- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
+
 Bitterman (Quake II):
 
 * Fixed Bitterman playing the wrong sound when getting crushed.
@@ -267,11 +273,29 @@ Bitterman (Quake II):
 ! Instead of a convoluted layered explosion, the BFG10K projectile now deals 200 splash damage in a radius of 200 map units, as per Quake II. However, it now deals self-damage, also as per Quake II.
 + The BFG10K projectile now calls a second explosion when the player is in line of sight of the projectile as it explodes, similar to how the original game's super explosion worked. This explosion deals 200 splash damage (PVP) or 500 splash damage (PVE) in a radius of 1000 map units.
 
+GoldenEye 007:
+
+-All-
+
+- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
+
+Prisoner 849 (Unreal):
+
+- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
+
+B.J. Blazkowicz (Return to Castle Wolfenstein):
+
+- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
+
 Sarge (Quake III Arena):
 
 - The rocket launcher now does 80 direct damage in PVE (decreased from 100).
 + The rocket launcher now does 128 splash damage within a radius of 128 map units in PVE (increased from 100 splash damage across 100 map units).
 + The rocket launcher now deals half self-damage to the player.
+
+JC Denton (Deus Ex):
+
+- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 
 -Settings-
 
