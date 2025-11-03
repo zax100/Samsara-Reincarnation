@@ -776,17 +776,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if(CheckInventory("Doom64_IHaveUnmaker"))
 							{
-								if(CheckWeapon(" Unmaker "))
-								{
-									if(CheckInventory("DGStrHasPyroCannon"))
-									{
-										SetWeapon("Pyro Cannon");
-									}
-									else
-									{
-										SetWeapon("B.F.G. 9000");
-									}
-								}
+								if(CheckWeapon(" Unmaker ")) { SetWeapon("Pyro Cannon"); }
 							}
 
 							GiveInventory("DoomGuyScalar",1);
