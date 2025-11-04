@@ -306,6 +306,11 @@ Sarge (Quake III Arena):
 
 JC Denton (Deus Ex):
 
+- The Guided Explosive Projectile Gun's regular rockets now deal 25% less damage.
+- The Guided Explosive Projectile Gun's WP rockets now explode in a radius of 192 map units (decreased from 384).
+- The Guided Explosive Projectile Gun's WP rockets now burn enemies at a radius of 256 map units (decreased from 384).
+- LAMS now deals 20% less damage.
+- LAMS now explode in a radius of 256 map units (decreased from 384).
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 - Headshot damage is now a 2x multiplier (decreased from 3x).
 
