@@ -90,6 +90,11 @@ Wolfenstein 3D:
 + Added hybrid pickup sprites for the Lost Episodes Mauser rifle and Spear of Destiny.
 + The flamethrower now deals 10-40 damage in multiples of 10 (increased from 8-32 in multiples of 8).
 
+-B.J. Blazkowicz (Castle Totenkopf SDL)-
+
+- The Panzerschreck rocket now does 250 splash damage in PVE (decreased from 400).
+- The Panzerschreck rocket now does 175 splash damage in PVP (decreased from 200).
+
 -All-
 
 ! Updated offset and weapon outlines for hybrid pickup sprites.
@@ -295,6 +300,8 @@ Prisoner 849 (Unreal):
 
 B.J. Blazkowicz (Return to Castle Wolfenstein):
 
+- The Panzerfaust rocket now does 200 direct damage (decreased from 250).
+- The Panzerfaust rocket now does 250 splash damage (decreased from 300).
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 - Headshot damage is now a 2x multiplier (decreased from 3x).
 
