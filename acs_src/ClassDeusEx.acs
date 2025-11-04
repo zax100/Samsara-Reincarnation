@@ -176,11 +176,11 @@ Script "DeusEx_DamageModifiers" (int damage)
 		if(bulletZ > monsterZ + FixedMul(monsterHeight,0.55) && bulletZ < monsterZ + FixedMul(monsterHeight,0.75) && (relativeAngle < 0.65 && relativeAngle > 0.45))
 		{
 			//8x? Absolutely not!!
-			damage *= 3;
+			damage *= 2;
 		}
 	}
 	else if(bulletZ > monsterZ + FixedMul(monsterHeight,0.8))
-		damage *= 3;
+		damage *= 2;
 
 	SetResultValue(damage);
 }
@@ -203,7 +203,7 @@ Script "DeusEx_BackDamage" (int damage)
 		backdamage = 1;
 
 	if(bulletZ > monsterZ + FixedMul(monsterHeight,0.8))
-		damage *= 3;
+		damage *= 2;
 
 	SetResultValue(backdamage*damage);
 }

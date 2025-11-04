@@ -296,6 +296,7 @@ Prisoner 849 (Unreal):
 B.J. Blazkowicz (Return to Castle Wolfenstein):
 
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
+- Headshot damage is now a 2x multiplier (decreased from 3x).
 
 Sarge (Quake III Arena):
 
@@ -306,6 +307,7 @@ Sarge (Quake III Arena):
 JC Denton (Deus Ex):
 
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
+- Headshot damage is now a 2x multiplier (decreased from 3x).
 
 -Settings-
 
