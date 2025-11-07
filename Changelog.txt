@@ -100,6 +100,10 @@ Wolfenstein 3D:
 
 Hexen I:
 
+-Parias (Classic)-
+
+- The Bloodscourge now only deals 7-56 direct damage in multiples of 7 (decreased from 14-112 in multiples of 14), to compensate for ripping all enemies that aren't bosses (see Daedolon's section).
+
 -Daedolon-
 
 + The Bloodscourge now has its special ripper properties from Hexen, meaning that it rips all enemies that are not boss monsters. This also applies to Classic Parias' Bloodscourge.
