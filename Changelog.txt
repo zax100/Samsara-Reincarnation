@@ -269,6 +269,22 @@ Half-Life:
 -All-
 
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
+- The 9mm Pistol deals 16 damage (decreased from 20).
+- The 9mm Pistol's altfire now has a spread of (5.0, 5.0) (increased from (6.0, 5.0)).
+- The Assault Shotgun deals 10 damage per pellet (decreased from 13).
+- The Assault Shotgun's altfire now has a spread of (5.0, 3.5) (increased from (3.5, 3.5)).
++ The Assault Shotgun's primary fire now fires 7 pellets (increased from 6), much like how it operates in Half-Life 2. This is to compensate for the damage nerf.
+? This change does NOT affect the altfire, which still fires only 12 pellets, which is also how it operated in Half-Life 2.
+- The MP5 primary fire deals 10 damage per bullet (decreased from 13).
+
+-Gordon Freeman (Half-Life)-
+
+- The .357 Python deals 80 damage (decreased from 100).
+- The RPG deals 240 explosion damage (decreased from 300).
+
+-Adrian Shepard (Half-Life: Opposing Force)-
+
+- The Desert Eagle deals 70 damage (decreased from 88).
 
 Bitterman (Quake II):
 

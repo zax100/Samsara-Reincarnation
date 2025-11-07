@@ -405,10 +405,10 @@ actor HLPythonBullet : HLBullet
     {
         Crash:
         Death:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",100),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",80),8,!XF_HURTSOURCE,0,8)
             Goto Super::Death
         XDeath:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",100),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",80),8,!XF_HURTSOURCE,0,8)
             Goto Super::XDeath
     }
 }
@@ -421,10 +421,10 @@ actor HLPythonBulletCoop : HLBulletCoop
     {
         Crash:
         Death:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",100),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",80),8,!XF_HURTSOURCE,0,8)
             Goto Super::Death
         XDeath:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",100),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",80),8,!XF_HURTSOURCE,0,8)
             Goto Super::XDeath
     }
 }
@@ -1072,10 +1072,10 @@ actor HLDeagleBullet : HLBullet
     {
         Crash:
         Death:
-            TNT1 A 0 A_Explode(88,8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(70,8,!XF_HURTSOURCE,0,8)
             Goto Super::Death
         XDeath:
-            TNT1 A 0 A_Explode(88,8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(70,8,!XF_HURTSOURCE,0,8)
             Goto Super::XDeath
     }
 }
@@ -1088,10 +1088,10 @@ actor HLDeagleBulletCoop : HLBulletCoop
     {
         Crash:
         Death:
-            TNT1 A 0 A_Explode(88,8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(70,8,!XF_HURTSOURCE,0,8)
             Goto Super::Death
         XDeath:
-            TNT1 A 0 A_Explode(88,8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(70,8,!XF_HURTSOURCE,0,8)
             Goto Super::XDeath
     }
 }
@@ -1104,10 +1104,10 @@ actor HLDeagleBulletLaser : HLBullet
     {
         Crash:
         Death:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",88),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",70),8,!XF_HURTSOURCE,0,8)
             Goto Super::Death
         XDeath:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",88),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",70),8,!XF_HURTSOURCE,0,8)
             Goto Super::XDeath
     }
 }
@@ -1120,10 +1120,10 @@ actor HLDeagleBulletLaserCoop : HLBulletCoop
     {
         Crash:
         Death:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",88),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",70),8,!XF_HURTSOURCE,0,8)
             Goto Super::Death
         XDeath:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",88),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",70),8,!XF_HURTSOURCE,0,8)
             Goto Super::XDeath
     }
 }

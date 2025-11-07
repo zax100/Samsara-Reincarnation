@@ -651,11 +651,11 @@ actor SamsaraHalfLife9mmHandgunSecondaryAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
       PickupAttackDM:
-        TNT1 A 0 A_FireCustomMissile("HL9mmBullet",frandom(-5.00,5.00),false,5,3,0,frandom(-5.00,5.00))
+        TNT1 A 0 A_FireCustomMissile("HL9mmBullet",frandom(-6.00,6.00),false,5,3,0,frandom(-5.00,5.00))
         goto PickupFinish
 
       PickupAttackCoop:
-        TNT1 A 0 A_FireCustomMissile("HL9mmBulletCoop",frandom(-5.00,5.00),false,5,3,0,frandom(-5.00,5.00))
+        TNT1 A 0 A_FireCustomMissile("HL9mmBulletCoop",frandom(-6.00,6.00),false,5,3,0,frandom(-5.00,5.00))
         goto PickupFinish
 
       // Finishing stuff
@@ -679,10 +679,10 @@ Actor HL9mmBullet : HLBullet
     {
         Crash:
         Death:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",20),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",16),8,!XF_HURTSOURCE,0,8)
             Goto Super::Death
         XDeath:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",20),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",16),8,!XF_HURTSOURCE,0,8)
             Goto Super::XDeath
     }
 }
@@ -694,10 +694,10 @@ Actor HL9mmBulletCoop : HLBulletCoop
     {
         Crash:
         Death:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",20),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",16),8,!XF_HURTSOURCE,0,8)
             Goto Super::Death
         XDeath:
-            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",20),8,!XF_HURTSOURCE,0,8)
+            TNT1 A 0 A_Explode(CallACS("HalfLife_BulletDamage",16),8,!XF_HURTSOURCE,0,8)
             Goto Super::XDeath
     }
 }
