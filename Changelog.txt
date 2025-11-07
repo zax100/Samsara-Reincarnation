@@ -268,7 +268,6 @@ Half-Life:
 
 -All-
 
-- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 - The 9mm pistol's secondary fire now has a horizontal spread of 6 (increased from 5).
 - The 9mm pistol now deals 16 damage (decreased from 20).
 + The assault shotgun's primary fire now fires 7 pellets (increased from 6), much like how it operates in Half-Life 2. This is to compensate for the damage nerf mentioned below.
@@ -278,6 +277,7 @@ Half-Life:
 - The Desert Eagle now deals 70 damage (decreased from 88).
 - The MP5 primary fire now deals 10 damage per bullet (decreased from 13).
 - The RPG now deals 240 splash damage (decreased from 300).
+- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 
 Bitterman (Quake II):
 
@@ -310,8 +310,8 @@ B.J. Blazkowicz (Return to Castle Wolfenstein):
 
 - The Panzerfaust rocket now does 200 direct damage (decreased from 250).
 - The Panzerfaust rocket now does 250 splash damage (decreased from 300).
-- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 - Headshot damage is now a 2x multiplier (decreased from 3x).
+- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 
 Sarge (Quake III Arena):
 
@@ -326,8 +326,8 @@ JC Denton (Deus Ex):
 - The GEP gun's WP rockets now burn enemies at a radius of 256 map units (decreased from 384).
 - The LAMs now deal 40 base splash damage (decreased from 50 base splash damage).
 - The LAMs now explode starting with a radius of 51 map units and ending at 256 map units (decreased from 77, ending at 384).
-- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 - Headshot damage is now a 2x multiplier (decreased from 3x).
+- Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 
 -Settings-
 
