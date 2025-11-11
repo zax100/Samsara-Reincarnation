@@ -8804,9 +8804,15 @@ StatusBar Automap, ForceScaled
         DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Intelligence, FillZeros, -24, 163;
         DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Strength, FillZeros, 5, 163;
         DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Wisdom, FillZeros, -24, 167;
-        DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Level, FillZeros, 5, 167;
+
+        InInventory Hexen2Level, 100 { DrawNumber 3, HEX2SNUMS, Untranslated, Hexen2Level, FillZeros, 9, 167; }
+        else { DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Level, FillZeros, 5, 167; }
+
         DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Dexterity, FillZeros, -24, 171;
-        DrawNumber 6, HEX2SNUMS, Untranslated, Hexen2Experience, FillZeros, 21, 171;
+
+        InInventory Hexen2Experience, 10000000 { DrawNumber 8, HEX2SNUMS, Untranslated, Hexen2Experience, FillZeros, 29, 171; } // breaks past hud slightly, but then again, that was how it looked
+        else InInventory Hexen2Experience, 1000000 { DrawNumber 7, HEX2SNUMS, Untranslated, Hexen2Experience, FillZeros, 25, 171; }
+        else { DrawNumber 6, HEX2SNUMS, Untranslated, Hexen2Experience, FillZeros, 21, 171; }
 
         DrawNumber 3, HEX2NUMS, Untranslated, Health, 88, 176;
         DrawNumber 3, HEX2NUMS, Untranslated, Armor, 143, 176;
