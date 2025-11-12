@@ -306,6 +306,7 @@ GoldenEye 007:
 
 -All-
 
+! Weapon reload animations have been modified.
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 - Golden bullet ammo capacity has been lowered to 10 (decreased from 25).
 - James Bond now gets 1 golden bullet from big Ammo 4 pickups (decreased from 5).
