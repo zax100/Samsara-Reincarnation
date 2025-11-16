@@ -546,7 +546,7 @@ actor Q2QuadDamage : PowerupGiver
     }
 }
 
-actor PowerQ2QuadDamage : PowerDamage { Damagefactor "Normal", 4 }
+actor PowerQ2QuadDamage : PowerDamage { DamageFactor "Normal", 4 }
 
 actor Q2DualFireDamage : PowerupGiver
 {
