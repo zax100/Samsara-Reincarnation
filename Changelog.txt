@@ -104,6 +104,10 @@ Hexen I:
 
 - The Bloodscourge now only deals 7-56 direct damage in multiples of 7 (decreased from 14-112 in multiples of 14), to compensate for ripping all enemies that aren't bosses (see Daedolon's section).
 
+-Parias (Reincarnation)-
+
+! Updated Crusader's Longbow pickup sprite to use blue fletchings on arrows.
+
 -Daedolon-
 
 + The Bloodscourge now has its special ripper properties from Hexen, meaning that it rips all enemies that are not boss monsters. This also applies to Classic Parias' Bloodscourge.
@@ -113,6 +117,10 @@ Hexen I:
 -Baratus-
 
 + The Hammer of Retribution's projectile now deals 20-160 direct damage in multiples of 20 (increased from 10-80 in multiples of 10).
+
+-All-
+
+! Updated offset and weapon outlines for hybrid pickup sprites.
 
 Duke Nukem 3D:
 
