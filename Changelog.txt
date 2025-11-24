@@ -154,6 +154,11 @@ Rise of the Triad:
 * Fixed the landing attack taking effect when dead.
 * Fixed Dog Mode not being properly counted towards invulnerability checks.
 
+Caleb (Blood):
+
+! In Strife, the Guns Akimbo is now distributed through an inventory item regardless of the "Blood: Guns Akimbo Behavior" setting.
+! If the player has a Guns Akimbo inventory item, and "Blood: Guns Akimbo Behavior" is set to "Toggle", it will now give quad damage on use instead of switching between single and dual wielding.
+
 Strifeguy (Strife):
 
 * Fixed Blackbird talking earlier than intended when playing Strife in GZDoom.
@@ -471,8 +476,6 @@ Blake Stone (Blake Stone):
 Caleb (Blood):
 
 ! The pitchfork and revolver now have Compendium sprites.
-! In Strife, the Guns Akimbo is now distributed through an inventory item regardless of the "Blood: Guns Akimbo Behavior" setting.
-! If the player has a Guns Akimbo inventory item, and "Blood: Guns Akimbo Behavior" is set to "Toggle", it will now give quad damage on use instead of switching between single and dual wielding.
 * Fixed a sprite name conflict with one of the blood spot actors.
 
 Strifeguy (Strife):
