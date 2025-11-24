@@ -481,6 +481,21 @@ actor ROTTStrifeUnique3 : Trigger
     }
 }
 
+actor CalebStrifeUnique2 : Trigger
+{
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_GiveInventory("SamsaraBloodGunsAkimboInventory")
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 59) == 2, 1)
+        stop
+        TNT1 A 0 A_JumpIfInventory("SamsaraBloodGunsAkimboCooldown",1,1)
+        stop
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraBloodGunsAkimboCooldownDecrement")
+        stop
+    }
+}
+
 actor CalebStrifeUnique3 : Trigger
 {
     States

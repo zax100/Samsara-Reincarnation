@@ -471,6 +471,8 @@ Blake Stone (Blake Stone):
 Caleb (Blood):
 
 ! The pitchfork and revolver now have Compendium sprites.
+! In Strife, the Guns Akimbo is now distributed through an inventory item regardless of the "Blood: Guns Akimbo Behavior" setting.
+! If the player has a Guns Akimbo inventory item, and "Blood: Guns Akimbo Behavior" is set to "Toggle", it will now give quad damage on use instead of switching between single and dual wielding.
 * Fixed a sprite name conflict with one of the blood spot actors.
 
 Strifeguy (Strife):

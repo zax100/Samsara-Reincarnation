@@ -2556,7 +2556,6 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("BloodFlamethrower", INTMAX);
 			TakeInventory("LifeLeech", INTMAX);
 			TakeInventory("BloodNaturomDemonto", INTMAX);
-			TakeInventory("PowerSamsaraBloodGunsAkimboHub", INTMAX);
 			TakeInventory("SamsaraBloodGunsAkimboInventory", INTMAX);
 			TakeInventory("SamsaraBloodGunsAkimboToggleMemory", INTMAX);
 			TakeInventory("SamsaraBloodGunsAkimboToggled", INTMAX);
@@ -3227,9 +3226,13 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Catacomb_BoltsQuickSpell", INTMAX);
 			TakeInventory("Catacomb_AtomicQuickspell", INTMAX);
 			TakeInventory("PowerCatacomb_SpreadShot", INTMAX);
+			TakeInventory("PowerCatacomb_SpreadShotInventoryItem", INTMAX);
 			TakeInventory("PowerCatacomb_FireRing", INTMAX);
+			TakeInventory("PowerCatacomb_FireRingInventoryItem", INTMAX);
 			TakeInventory("PowerCatacomb_BounceShot", INTMAX);
+			TakeInventory("PowerCatacomb_BounceShotInventoryItem", INTMAX);
 			TakeInventory("PowerCatacomb_RapidFire", INTMAX);
+			TakeInventory("PowerCatacomb_RapidFireInventoryItem", INTMAX);
 			TakeInventory("Catacomb_Hourglass", INTMAX);
 			TakeInventory("Catacomb_HourglassCooldown", INTMAX);
 
@@ -17081,7 +17084,7 @@ script "SamsaraPowerupTimerActiveChecker" (int category, int powerup)
         switch (powerup)
         {
           case 0: powerupname = "PowerSamsaraBloodGunsAkimbo"; break;
-          case 1: powerupname = "PowerSamsaraBloodGunsAkimboHub"; break;
+          case 1: powerupname = "PowerSamsaraBloodGunsAkimboQuadDamage"; break;
         }
         break;
 
