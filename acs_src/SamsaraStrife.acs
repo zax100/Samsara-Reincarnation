@@ -90,7 +90,7 @@ str AccuracyUniques[CLASSCOUNT][UNIQUECOUNT] =
     {"BittermanStrifeUnique1",        "BittermanStrifeUnique2",       "BittermanStrifeUnique3"},
     {"Hexen2TomeOfPower",             "Hexen2ForceCube",              ""},
     {"BondStrifeUnique1",             "BondStrifeUnique2",            "BondStrifeUnique3"},
-    {"Catacomb_RandomGem",            "",                             ""},
+    {"Catacomb_RandomGemStrife",      "",                             ""},
     {"Painkiller_Tarot_SilverGiver",  "",                             ""},
     {"UnrealStrifeUnique1",           "UnrealStrifeUnique2",          "UnrealStrifeUnique3"},
     {"RTCWStrifeUnique1",             "RTCWStrifeUnique2",            "RTCWStrifeUnique3"},

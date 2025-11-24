@@ -612,6 +612,7 @@ RMRJETPACKDISABLED3 = "The jetpack is disabled. Received 100 Health instead.";
 WITCHAVENSPELLNOAMMO = "You don't have enough ammo to cast this spell!";
 WITCHAVENSPELLDISABLED = "This spell is disabled!";
 LEONARDDEADMESSAGE = "Mash Activator Key To Kill Again!";
+C3DRINGALREADYEQUIPPED = "You already have this ring equipped.";
 
 // DECORATE EXTERNALIZATIONS
 STRWEAPONPOWERUPKITPPW = "The Weapon Powerup Kit can't be used when \"Permanent Powered Weapons\" is on.";

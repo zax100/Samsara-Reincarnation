@@ -754,6 +754,10 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
         if (a1 >= 1) { Print(l:"WITCHAVENSPELLDISABLED"); }
         else { Print(l:"WITCHAVENSPELLNOAMMO"); }
         break;
+
+	case 20:
+		Print(l:"C3DRINGALREADYEQUIPPED");
+		break;
 	}
 
 	SetResultValue(result);
