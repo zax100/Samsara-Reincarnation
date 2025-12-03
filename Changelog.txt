@@ -241,6 +241,8 @@ Kyle Katarn (Star Wars: Dark Forces):
 
 + All explosive weapons now deal only the amount of splash damage the original explosion did to Katarn as self-damage in Star Wars: Dark Forces.
 ! As per Star Wars: Dark Forces logic, there is now zero random damage in Kyle Katarn's kit.
+! The Modified Bryar Pistol, Stormtrooper Blaster Rifle, DLT-19 Heavy Blaster Rifle, and Czerka Adventurer projectiles now use models instead of sprites.
+- The Modified Bryar Pistol projectiles now now move at speed 64 (decreased from 100).
 + The Thermal Detonator damage is now 180 (increased from 140), and up to 45 of that damage is dealt back to Katarn.
 - The Stormtrooper Blaster Rifle and DLT-19 Heavy Blaster Rifle projectiles now move at speed 64 (decreased from 100).
 + The Stormtrooper Blaster Rifle and DLT-19 Heavy Blaster Rifle projectiles now do 20 damage (increased from 15).
