@@ -28,6 +28,7 @@ Actor DukeBloodPool
 }
 
 Actor DukeBloodPool_Duke : DukeBloodPool {}
+Actor DukeBloodPool_Yellow : DukeBloodPool {}
 
 ACTOR DukeBlood : Blood
 {
