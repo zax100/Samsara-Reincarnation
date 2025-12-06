@@ -58,7 +58,7 @@ Doom:
 - The railgun (powered) now does 20 damage per zoomed rail attack in PVP, totaling 80 (decreased from 30, totaling 120).
 - The railgun (powered) now fires twice as slowly when zoomed.
 - With improved weapon balance, the B.F.G. 9000 (unpowered) no longer has the extra explosion damage or additional weaker BFG sprays from Stronghold Rejuvenated, since the context makes it unneeded here.
-! The B.F.G. 9000 (powered) now deals 20-160 direct damage in multiples of 20 (average 90, changed from 100).
+! The B.F.G. 9000 (powered) now deals 20-160 direct damage in multiples of 20 (average 90; changed from 100).
 - The B.F.G. 9000 (powered) now only deals 128 splash damage in a consistent radius (decreased from 192), has no smaller BFG spray, and deals self-damage.
 - With improved weapon balance, the pyro cannon lingering fire now deals 4 splash damage (decreased from 5). It also cannot put actors in their Pain state in every frame except the first.
 - The pyro cannon (powered) now mushrooms into 3 pyro shots (decreased from 4).
@@ -77,7 +77,7 @@ Fred Chexter (Chex Quest):
 * Fixed the Super Large Zorcher projectiles not having lights in PVP.
 * Fixed the Super Large Zorcher projectiles losing their lights upon first collision with map geometry in PVE.
 * Fixed the LAZ Device projectile and tracers not having lights when "Chex Quest: LAZ Device Mode" is set to "Classic".
-+ When "Doom/Chex: Weapon Balance" is set to "Improved" and "Chex Quest: LAZ Device Mode" is set to "Classic", the LAZ Device projectile now deals 800 direct damage (increased from 100-800 in multiples of 100).
++ When "Doom/Chex: Weapon Balance" is set to "Improved", and "Chex Quest: LAZ Device Mode" is set to "Classic", the LAZ Device projectile now deals 800 direct damage (increased from 100-800 in multiples of 100).
 ! The Liquid Zorcher puff now has lights.
 * Fixed lights being called incorrectly for the Chain-Lightning Zorcher projectile.
 
