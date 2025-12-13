@@ -132,6 +132,10 @@ Hexen I:
 
 Duke Nukem 3D:
 
+-Duke Nukem (Original)-
+
+! Updated offset and weapon outlines for hybrid pickup sprites.
+
 -Duke Nukem (Original/Life's a Beach)-
 
 - Pipebombs/pineapples now have a splash radius of 210 map units (decreased from 250).
