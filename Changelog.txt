@@ -72,7 +72,7 @@ Doom:
 
 -All-
 
-! Align offsets of hybrid unique sprites to with other hybrid sprites.
+! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 
 Fred Chexter (Chex Quest):
 
@@ -84,12 +84,12 @@ Fred Chexter (Chex Quest):
 + When "Doom/Chex: Weapon Balance" is set to "Improved", and "Chex Quest: LAZ Device Mode" is set to "Classic", the LAZ Device projectile now deals 800 direct damage (increased from 100-800 in multiples of 100).
 ! The Liquid Zorcher puff now has lights.
 * Fixed lights being called incorrectly for the Chain-Lightning Zorcher projectile.
-! Align offsets of hybrid unique sprites to with other hybrid sprites.
+! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 
 Corvus (Heretic):
 
 ! The hellstaff now deals 3-48 damage in multiples of 3 (changed from 5-40 in multiples of 5).
-! Align offsets of hybrid unique sprites to with other hybrid sprites.
+! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 
 Wolfenstein 3D:
 
