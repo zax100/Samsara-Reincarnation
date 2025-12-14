@@ -2416,7 +2416,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Duke64UsingShrinker", INTMAX);
 
 			GiveInventory("Glock 17", 1);
-			GiveInventory("DukeM16Reload", 40);
+			GiveInventory("DukeM16ReloadAmmo", 40);
 			GiveInventory("DukeGoldEagleReload", 8);
 			GiveInventory("Mighty Boot", 1);
 			GiveInventory("DukeClass", 1);

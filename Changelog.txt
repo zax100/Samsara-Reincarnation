@@ -138,6 +138,7 @@ Duke Nukem 3D:
 - Pipebombs/pineapples now have a splash radius of 210 map units (decreased from 250).
 ! The M16 sprites have been extended, and a new pickup sprite has been added.
 + The M16 now holds 40 rounds before needing to reload (increased from 30).
+* Fixed the M16 magazine not being properly reset with pistol start enabled.
 + The M16 now has a horizontal spread of 4 (decreased from 4.5).
 - The RPG/coconut launcher's explosion's splash damage on a direct hit is now 70 (decreased from 140), with the total being 210 (decreased from 280).
 - The RPG/coconut launcher's explosion now has a splash radius of 140 (decreased from 178).
