@@ -4899,15 +4899,15 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
             for (i = 0; i < CheckInventory("RMRJetPack"); i++)
             {
                 if (CheckInventory("RMROxygenRecycler") < oxyrecmax ||
-                    (GetCVar("samsara_cl_maxedinventoryhealthpickup") >= 2 && (GetActorProperty(0, APROP_Health) < ACS_NamedExecuteWithResult("SamsaraPlayerHealer", -1) || ACS_NamedExecuteWithResult("SamsaraPlayerOxygenAdjuster", 0, -1))) ||
+                    (GetCVar("samsara_cl_maxedinventoryhealthpickup") >= 2 && (GetActorProperty(0, APROP_Health) < ACS_NamedExecuteWithResult("SamsaraPlayerHealer", -1) || ACS_NamedExecuteWithResult("SamsaraPlayerOxygenAdjuster", 0, -1, 0))) ||
                     GetCVar("samsara_nohealthcap"))
                 {
-                    if ((CheckInventory("RMROxygenRecycler") >= oxyrecmax && GetCVar("samsara_cl_maxedinventoryhealthpickup") >= 2 && (GetActorProperty(0, APROP_Health) < ACS_NamedExecuteWithResult("SamsaraPlayerHealer", -1) || ACS_NamedExecuteWithResult("SamsaraPlayerOxygenAdjuster", 0, -1))) ||
+                    if ((CheckInventory("RMROxygenRecycler") >= oxyrecmax && GetCVar("samsara_cl_maxedinventoryhealthpickup") >= 2 && (GetActorProperty(0, APROP_Health) < ACS_NamedExecuteWithResult("SamsaraPlayerHealer", -1) || ACS_NamedExecuteWithResult("SamsaraPlayerOxygenAdjuster", 0, -1, 0))) ||
                         GetCVar("samsara_nohealthcap"))
                     {
                         Print(l:"RMRJETPACKDISABLED3");
                         ACS_NamedExecuteWithResult("SamsaraPlayerHealer", 100);
-                        ACS_NamedExecuteWithResult("SamsaraPlayerOxygenAdjuster", 1, -1);
+                        ACS_NamedExecuteWithResult("SamsaraPlayerOxygenAdjuster", 1, -1, 1);
                     } else {
                         Print(l:"RMRJETPACKDISABLED2");
                         GiveInventory("RMROxygenRecycler", 1);
@@ -6098,12 +6098,16 @@ script "SamsaraPlayerOxygenFakeInvulnCheck" ENTER
 {
     while (true)
     {
+        int pln = PlayerNumber();
         int aircapacity = 35 * 20; // usually the maximum
 
         if (CheckInventory("PowerFakeInvulnerable") || CheckInventory("PowerFakeInvulnerableCleric") || CheckInventory("PowerFakeInvulnerableMage") ||
             CheckInventory("PowerFakeInvulnerableFighter") || CheckInventory("QuakePentagram") || CheckInventory("PowerGodProtection") ||
             CheckInventory("PowerDoggyMorph") || CheckInventory("Painkiller_IronWill_Protection") || CheckInventory("PainkillerDemonMorphInvulnerability"))
-        { SetAirSupply(PlayerNumber(), aircapacity); }
+        {
+            if (GetAirSupply(pln) <= 0) { PlaySound(0, "*gasp", CHAN_VOICE); }
+            SetAirSupply(pln, aircapacity);
+        }
 
         Delay(1);
     }
