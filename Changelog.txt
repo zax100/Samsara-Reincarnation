@@ -186,6 +186,7 @@ Strifeguy (Strife):
 
 * Fixed Blackbird talking earlier than intended when playing Strife in GZDoom.
 - High explosive grenades no longer have +FORCERADIUSDMG, because the projectile didn't have that flag in Strife while some enemies had +NORADIUSDMG, meaning it's an intended weakness.
+! The Dark Side version now uses the additional gibs and blood splatters when gibbed by Strife weapons.
 
 Eradicator:
 
@@ -388,11 +389,12 @@ JC Denton (Deus Ex):
 
 Strife: Quest for the Sigil:
 
+* Fixed the blue acolytes not using the additional gibs and blood splatters when gibbed by Strife weapons.
 + The environmental suit's fire immunity now takes all fire-based damage types into account instead of just Fire.
 
 -Settings-
 
-! Bloody hell effects will no longer spawn from enemies killed by the Massacre damage type (used for the massacre/"kill monsters" cheat).
+! Bloody hell effects will no longer spawn from enemies killed by the Massacre damage type (used for the massacre/"kill monsters" cheat, as well as D'Sparil (second phase)'s death sequence).
 ! The "Brutal" bloody hell setting has been renamed to "Chunky".
 - samsara_extraweapons has been removed.
 

@@ -278,6 +278,8 @@ actor FlemoidusStridicus2_Shrink : FlemoidusStridicus2
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)

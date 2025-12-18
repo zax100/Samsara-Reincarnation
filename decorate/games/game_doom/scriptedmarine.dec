@@ -44,6 +44,7 @@ ACTOR ScriptedMarine2 : ScriptedMarine replaces ScriptedMarine
 		Goto See
 	Death:
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		Goto Super::Death
 	Death.CalebFire:
@@ -57,6 +58,7 @@ ACTOR ScriptedMarine2 : ScriptedMarine replaces ScriptedMarine
 		Stop
 	XDeath:
 		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	XDeath.Massacre:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		Goto Super::XDeath
 	Raise:
