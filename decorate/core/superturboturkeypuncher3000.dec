@@ -120,9 +120,10 @@ Actor SuperCoopChicken
         TNT1 A 0 A_GiveToTarget("DukeBootTaunt",1)
         goto Death
     Death:
+        TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+    Death.Massacre:
         TNT1 A 0 A_GiveToTarget("ChickenKillCount",1)
         TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-        TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
         CHKN E 6 A_Scream
         TNT1 AAAAA 0 A_Feathers
         CHKN F 6 A_Feathers
@@ -612,9 +613,10 @@ actor AssaultChicken : SuperCoopChicken
         TNT1 A 0 A_GiveToTarget("DukeBootTaunt",1)
         goto Death
     Death:
+        TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+    Death.Massacre:
         TNT1 A 0 A_GiveToTarget("ChickenKillCount",1)
         TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-        TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
 		TNT1 A 0 A_Gravity
         ZHK2 E 6 A_Scream
         ZHK2 F 6
@@ -749,9 +751,10 @@ actor ExplosiveChicken : SuperCoopChicken
         TNT1 A 0 A_GiveToTarget("DukeBootTaunt",1)
         goto Death
     Death:
+        TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+    Death.Massacre:
         TNT1 A 0 A_GiveToTarget("ChickenKillCount",1)
         TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-        TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
         ZHK3 E 6 A_Scream
         ZHK3 F 6
         ZHK3 G 6

@@ -565,15 +565,15 @@ Actor SamsaraPlayerPawnNormalRedBlood : PlayerPawn
 			TNT1 A -1
 			Stop
 		Death.BittermanDamage:
-			"####" A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			"####" A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			"####" A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			"####" A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			"####" A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			"####" A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			"####" A 0 A_SpawnItem("UniversalBloodyHellGoreXDeathEffect")
 			"####" A 0 A_SpawnItem("Q2GibSpawner")
 			"####" A 1 A_CheckPlayerDone
@@ -1306,15 +1306,15 @@ Actor SamsaraPlayerPawnNormalColoredBlood : PlayerPawn
 			TNT1 A -1
 			Stop
 		Death.BittermanDamage:
-			"####" A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			"####" A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			"####" A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			"####" A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			"####" A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			"####" A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			"####" A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
 			"####" A 0 A_SpawnItemEx("Q2GibSpawner",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_SETMASTER|SXF_USEBLOODCOLOR)
 			"####" A 1 A_CheckPlayerDone

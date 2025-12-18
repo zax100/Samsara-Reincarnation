@@ -18,6 +18,10 @@ Doom:
 
 ! Changed the Perkristan altsounds for hitting a wall with the brass knuckles as well as punching an enemy while berserked.
 
+-Doomguy (Doom 64)-
+
+* Fixed the shrinking animation not showing properly.
+
 -Doomguy (Stronghold)-
 
 ! The status bar HUD has been improved and now shows the other weapons.
@@ -143,6 +147,10 @@ Duke Nukem 3D:
 - The RPG/coconut launcher's explosion's splash damage on a direct hit is now 70 (decreased from 140), with the total being 210 (decreased from 280).
 - The RPG/coconut launcher's explosion now has a splash radius of 140 (decreased from 178).
 
+-Duke Nukem (Duke Nukem 64)-
+
+* Fixed the pain and shrinking animations not showing properly.
+
 Security Officer (Marathon):
 
 + The KKV-7 SMG Flechette bullets now do 8-12 damage in PVE outside of water (increased from 8-10).
@@ -172,6 +180,7 @@ Caleb (Blood):
 ! In Strife, the Guns Akimbo is now distributed through an inventory item regardless of the "Blood: Guns Akimbo Behavior" setting.
 ! If the player has a Guns Akimbo inventory item, and "Blood: Guns Akimbo Behavior" is set to "Toggle", it will now give quad damage on use instead of switching between single and dual wielding.
 - The Guns Akimbo's effect (instant use version only) no longer carries over between levels in a hub, since Strife now handles giving it differently.
+* Fixed the Dark Side version having a 0% chance of using the alternate death state instead of 50%.
 
 Strifeguy (Strife):
 
@@ -383,6 +392,7 @@ Strife: Quest for the Sigil:
 
 -Settings-
 
+! Bloody hell effects will no longer spawn from enemies killed by the Massacre damage type (used for the massacre/"kill monsters" cheat).
 ! The "Brutal" bloody hell setting has been renamed to "Chunky".
 - samsara_extraweapons has been removed.
 

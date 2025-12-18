@@ -374,15 +374,15 @@ Actor SamsaraMonsterReincPainElemental : SamsaraMonsterDemonicTotalGib
 			TNT1 A -1 A_Jump(256, "SpawnTheLostSoul")
 			Wait
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -1128,15 +1128,15 @@ Actor SamsaraMonsterReincHereticImp : HereticImp
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -1900,15 +1900,15 @@ Actor SamsaraMonsterReincHereticImp2 : HereticImpLeader
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -2720,15 +2720,15 @@ Actor SamsaraMonsterReincWizard : Wizard
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -3491,15 +3491,15 @@ Actor SamsaraMonsterReincWizardFriend : Wizard
 			TNT1 A -1 A_NoBlocking
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
 			TNT1 A 0 A_SpawnItemEx("Q2ColorGibSpawner",0,0,0,0,0,0,0,SXF_USEBLOODCOLOR|SXF_NOCHECKPOSITION|1048576)
@@ -4300,15 +4300,15 @@ Actor SamsaraMonsterReincKnight : Knight
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -5120,15 +5120,15 @@ Actor SamsaraMonsterReincKnight2 : KnightGhost
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -7494,15 +7494,15 @@ Actor SamsaraMonsterReincChicken : Chicken
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -8266,15 +8266,15 @@ Actor SamsaraMonsterReincAfrit : FireDemon
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -10128,15 +10128,15 @@ Actor SamsaraMonsterReincWraith : Wraith
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -10900,15 +10900,15 @@ Actor SamsaraMonsterReincWraithBuried : WraithBuried
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -11672,15 +11672,15 @@ Actor SamsaraMonsterReincSerpent : Serpent
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -12444,15 +12444,15 @@ Actor SamsaraMonsterReincSerpentLeader : SerpentLeader
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -15075,15 +15075,15 @@ Actor SamsaraMonsterReincPig : Pig
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -15905,15 +15905,15 @@ Actor SamsaraMonsterReincAcolyte : Acolyte
 			TNT1 A -1 A_Jump(256,"KillTheAcolyte")
 			Wait
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -16736,15 +16736,15 @@ Actor SamsaraMonsterReincAcolyteBlue : AcolyteBlue
 			TNT1 A -1 A_Jump(256,"KillTheAcolyte")
 			Wait
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -17566,15 +17566,15 @@ Actor SamsaraMonsterReincStrifeHumanoid : StrifeHumanoid
 			TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 			Stop
 		Death.BittermanDamage:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
 		Death.BittermanFire:
-			TNT1 A 0 A_JumpIfHealthLower(-50, "XdeathForBitterman")
+			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForBitterman")
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
 		Death.BittermanTrap:
-		XdeathForBitterman:
+		XDeathForBitterman:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)

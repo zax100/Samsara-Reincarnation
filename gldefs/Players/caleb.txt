@@ -1490,7 +1490,7 @@ object BloodBurningCorpse_Silent
 	frame CAFDC { light BLOOD_BURN_DEATH_X6 }
 }
 
-object BloodBurningCorpse_Genericcolor
+object BloodBurningCorpse_GenericColor
 {
 	frame DKBRA { light BLOOD_BURN_DEATH_X1 }
 	frame DKBRB { light BLOOD_BURN_DEATH_X1 }
@@ -1514,7 +1514,7 @@ object BloodBurningCorpse_Genericcolor
 	frame CAFDC { light BLOOD_BURN_DEATH_X6 }
 }
 
-object BloodBurningCorpse_NoPaincolor
+object BloodBurningCorpse_NoPainColor
 {
 	frame DKBRA { light BLOOD_BURN_DEATH_X1 }
 	frame DKBRB { light BLOOD_BURN_DEATH_X1 }
@@ -1538,7 +1538,7 @@ object BloodBurningCorpse_NoPaincolor
 	frame CAFDC { light BLOOD_BURN_DEATH_X6 }
 }
 
-object BloodBurningCorpse_ScreamOnlycolor
+object BloodBurningCorpse_ScreamOnlyColor
 {
 	frame DKBRA { light BLOOD_BURN_DEATH_X1 }
 	frame DKBRB { light BLOOD_BURN_DEATH_X1 }
@@ -1562,7 +1562,7 @@ object BloodBurningCorpse_ScreamOnlycolor
 	frame CAFDC { light BLOOD_BURN_DEATH_X6 }
 }
 
-object BloodBurningCorpse_Silentcolor
+object BloodBurningCorpse_SilentColor
 {
 	frame DKBRA { light BLOOD_BURN_DEATH_X1 }
 	frame DKBRB { light BLOOD_BURN_DEATH_X1 }
