@@ -5340,6 +5340,15 @@ Model "MP5"
    FrameIndex HW40 Z 0 0
 }
 
+Model "HLUzi"
+{
+   Path "models/uzi"
+   Model 0 "wuzi.md3"
+   Scale 1.0 1.0 1.0
+
+   FrameIndex HW40 Z 0 0
+}
+
 Model " RPG "
 {
    Path "models/rpg"
@@ -12446,7 +12455,6 @@ Model HLOPBarnacleTongue4
 	FrameIndex HL00 A 0 0
 }
 
-/*
 Model "HLUzi"
 {
    Path "models/uzip"
@@ -12635,9 +12643,9 @@ Model "HLUzi"
 	FrameIndex HW05 ] 0 274
 	FrameIndex HW06 A 0 275
 	FrameIndex HW06 B 0 276
-	FrameIndex HW06 C 0 277
 
 	// Reload
+	FrameIndex HW06 C 0 277
 	FrameIndex HW06 D 0 278
 	FrameIndex HW06 E 0 279
 	FrameIndex HW06 F 0 280
@@ -12870,7 +12878,8 @@ Model "HLUzi"
 	FrameIndex HW0E A 0 507
 	FrameIndex HW0E B 0 508
 
-	// ??? (probably not needed)
+	// Deploy (not needed)
+	/*
 	FrameIndex HW0E C 0 509
 	FrameIndex HW0E D 0 510
 	FrameIndex HW0E E 0 511
@@ -12934,6 +12943,7 @@ Model "HLUzi"
 	FrameIndex HW10 E 0 569
 	FrameIndex HW10 F 0 570
 	FrameIndex HW10 G 0 571
+	*/
 
 	// In-between frame
 	FrameIndex HW10 H 0 572
@@ -12965,9 +12975,9 @@ Model "HLUzi"
 	FrameIndex HW11 C 0 596
 	FrameIndex HW11 D 0 597
 	FrameIndex HW11 E 0 598
-	FrameIndex HW11 F 0 599
 
 	// Weapon Select
+	FrameIndex HW11 F 0 599
 	FrameIndex HW11 G 0 600
 	FrameIndex HW11 H 0 601
 	FrameIndex HW11 I 0 602
@@ -13021,7 +13031,6 @@ Model "HLUzi"
 	FrameIndex HW12 \ 0 650
 	FrameIndex HW12 ] 0 651
 }
-*/
 
 Model HLScientist1
 {
@@ -20382,6 +20391,28 @@ Model HLMP5Bullet
 }
 
 Model HLMP5BulletCoop
+{
+   Path "Models\Freeman\Effects"
+   MODEL 0 "Projectile02.md3"
+   SKIN 0 "dot1.png"
+   Scale 5 0.2 0.2
+   PITCHFROMMOMENTUM
+
+   FrameIndex HL00 A 0 0
+}
+
+Model HLUziBullet
+{
+   Path "Models\Freeman\Effects"
+   MODEL 0 "Projectile02.md3"
+   SKIN 0 "dot1.png"
+   Scale 5 0.2 0.2
+   PITCHFROMMOMENTUM
+
+   FrameIndex HL00 A 0 0
+}
+
+Model HLUziBulletCoop
 {
    Path "Models\Freeman\Effects"
    MODEL 0 "Projectile02.md3"

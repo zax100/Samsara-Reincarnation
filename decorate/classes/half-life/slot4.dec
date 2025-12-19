@@ -5,6 +5,7 @@ Actor "MP5" : HLWeapon
 {
     Inventory.PickupMessage "You got the MP5!"
     Weapon.SlotNumber 4
+    Weapon.SlotPriority 0
     Weapon.SelectionOrder 2250
     Weapon.AmmoType1 "HLMP5Counter"
     Weapon.AmmoUse1 1
