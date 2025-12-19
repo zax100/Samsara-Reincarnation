@@ -148,15 +148,7 @@ Actor "HLUzi" : HLWeapon
         HW00 A 0 //A_JumpIfInventory("HalfLifeOpposingForce",1,"HoldDry1Shephard")
         HW00 A 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         HW10 J 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 L 0 A_ReFire HW10 L 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 N 0 A_ReFire HW10 N 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 P 0 A_ReFire HW10 P 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 R 0 A_ReFire HW10 R 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 T 0 A_ReFire HW10 T 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 V 0 A_ReFire HW10 V 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 X 0 A_ReFire HW10 X 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 Z 0 A_ReFire HW10 Z 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        HW10 "\" 0 A_ReFire HW10 "\" 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        HW10 "LNPRTVXZ\" 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         goto ReadyActualAmmoCheck
 
       FireStart:
