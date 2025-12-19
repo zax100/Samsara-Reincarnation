@@ -321,6 +321,7 @@ Half-Life:
 - The .357 Python now deals 80 damage (decreased from 100).
 - The Desert Eagle now deals 70 damage (decreased from 88).
 - The MP5 primary fire now deals 10 damage per bullet (decreased from 13).
++ The Uzi from Sven Co-op 3.0 has been added as the slot 4S weapon! However, due to the size of the converted model, the ability to dual wield is currently not available.
 - The RPG now deals 240 splash damage (decreased from 300).
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 
