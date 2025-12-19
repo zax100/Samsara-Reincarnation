@@ -1,6 +1,4 @@
 /*
-actor SamsaraHalfLifeUziCanDualWield : Boolean {}
-actor SamsaraHalfLifeUziDualWielding : Boolean {}
 actor SamsaraHalfLifeUziFireState : Counter { Inventory.MaxAmount 3 }
 
 Actor "HLUzi" : HLWeapon
@@ -431,14 +429,7 @@ actor SamsaraHalfLifeUziPrimaryAttackHandler : Trigger
 actor HLUziCounter : Ammo
 {
     Inventory.MaxAmount 32
-    Tag "Uzi Magazine (Right)"
-    +IGNORESKILL
-}
-
-actor HLUziDualCounter : Ammo
-{
-    Inventory.MaxAmount 32
-    Tag "Uzi Magazine (Left)"
+    Tag "Uzi Magazine"
     +IGNORESKILL
 }
 
