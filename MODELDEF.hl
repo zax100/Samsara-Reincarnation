@@ -7150,16 +7150,17 @@ Model SamsaraSlotFourDropStanding
 
 Model SamsaraSlotFourSkulltagPickup
 {
-   Path "models/mp5"
-   Model 0 "w9mm.md3"
-   Scale 1.0 1.0 1.0
+	Path "Models/uzi"
+	Model 0 "wuzi.md3"
+	Scale 1.0 1.0 1.0
 
-   FrameIndex HW40 Z 0 0
+	FrameIndex HW40 Z 0 0
 
-   Model 0 "w9mm2.md3"
-   Model 1 "hybrid.md2"
-   Skin 1 "slot4y.png"
-   Scale 0.8 0.8 0.8
+	Model 0 "wuzi2.md3"
+	Path "Models/Slots"
+	Model 1 "hybrid.md2"
+	Skin 1 "slot4y.png"
+	Scale 0.8 0.8 0.8
 
    FrameIndex PHL4 A 0 0
    FrameIndex PHL4 A 1 0
@@ -7177,16 +7178,17 @@ Model SamsaraSlotFourSkulltagPickup
 
 Model SamsaraSlotFourSkulltagNoStay
 {
-   Path "models/mp5"
-   Model 0 "w9mm.md3"
-   Scale 1.0 1.0 1.0
+	Path "Models/uzi"
+	Model 0 "wuzi.md3"
+	Scale 1.0 1.0 1.0
 
-   FrameIndex HW40 Z 0 0
+	FrameIndex HW40 Z 0 0
 
-   Model 0 "w9mm2.md3"
-   Model 1 "hybrid.md2"
-   Skin 1 "slot4y.png"
-   Scale 0.8 0.8 0.8
+	Model 0 "wuzi2.md3"
+	Path "Models/Slots"
+	Model 1 "hybrid.md2"
+	Skin 1 "slot4y.png"
+	Scale 0.8 0.8 0.8
 
    FrameIndex PHL4 A 0 0
    FrameIndex PHL4 A 1 0
@@ -7204,16 +7206,17 @@ Model SamsaraSlotFourSkulltagNoStay
 
 Model SamsaraSlotFourSkulltagDrop
 {
-   Path "models/mp5"
-   Model 0 "w9mm.md3"
-   Scale 1.0 1.0 1.0
+	Path "Models/uzi"
+	Model 0 "wuzi.md3"
+	Scale 1.0 1.0 1.0
 
-   FrameIndex HW40 Z 0 0
+	FrameIndex HW40 Z 0 0
 
-   Model 0 "w9mm2.md3"
-   Model 1 "hybrid.md2"
-   Skin 1 "slot4y.png"
-   Scale 0.8 0.8 0.8
+	Model 0 "wuzi2.md3"
+	Path "Models/Slots"
+	Model 1 "hybrid.md2"
+	Skin 1 "slot4y.png"
+	Scale 0.8 0.8 0.8
 
    FrameIndex PHL4 A 0 0
    FrameIndex PHL4 A 1 0
@@ -12442,6 +12445,583 @@ Model HLOPBarnacleTongue4
 
 	FrameIndex HL00 A 0 0
 }
+
+/*
+Model "HLUzi"
+{
+   Path "models/uzip"
+   Model 0 "v_uzi.md3"
+   Scale -1.0 1.0 1.0
+   Offset 0.0 0.16 0.0
+
+	// Ready
+	FrameIndex HW00 A 0 101
+
+	// Idle 1
+	FrameIndex HW00 B 0 102
+	FrameIndex HW00 C 0 103
+	FrameIndex HW00 D 0 104
+	FrameIndex HW00 E 0 105
+	FrameIndex HW00 F 0 106
+	FrameIndex HW00 G 0 107
+	FrameIndex HW00 H 0 108
+	FrameIndex HW00 I 0 109
+	FrameIndex HW00 J 0 110
+	FrameIndex HW00 K 0 111
+	FrameIndex HW00 L 0 112
+	FrameIndex HW00 M 0 113
+	FrameIndex HW00 N 0 114
+	FrameIndex HW00 O 0 115
+	FrameIndex HW00 P 0 116
+	FrameIndex HW00 Q 0 117
+	FrameIndex HW00 R 0 118
+	FrameIndex HW00 S 0 119
+	FrameIndex HW00 T 0 120
+	FrameIndex HW00 U 0 121
+	FrameIndex HW00 V 0 122
+	FrameIndex HW00 W 0 123
+	FrameIndex HW00 X 0 124
+	FrameIndex HW00 Y 0 125
+	FrameIndex HW00 Z 0 126
+	FrameIndex HW00 [ 0 127
+	FrameIndex HW00 \ 0 128
+	FrameIndex HW00 ] 0 129
+	FrameIndex HW01 A 0 130
+	FrameIndex HW01 B 0 131
+	FrameIndex HW01 C 0 132
+	FrameIndex HW01 D 0 133
+	FrameIndex HW01 E 0 134
+	FrameIndex HW01 F 0 135
+	FrameIndex HW01 G 0 136
+	FrameIndex HW01 H 0 137
+	FrameIndex HW01 I 0 138
+	FrameIndex HW01 J 0 139
+	FrameIndex HW01 K 0 140
+	FrameIndex HW01 L 0 141
+	FrameIndex HW01 M 0 142
+	FrameIndex HW01 N 0 143
+	FrameIndex HW01 O 0 144
+	FrameIndex HW01 P 0 145
+	FrameIndex HW01 Q 0 146
+	FrameIndex HW01 R 0 147
+	FrameIndex HW01 S 0 148
+	FrameIndex HW01 T 0 149
+	FrameIndex HW01 U 0 150
+	FrameIndex HW01 V 0 151
+	FrameIndex HW01 W 0 152
+	FrameIndex HW01 X 0 153
+	FrameIndex HW01 Y 0 154
+	FrameIndex HW01 Z 0 155
+	FrameIndex HW01 [ 0 156
+	FrameIndex HW01 \ 0 157
+	FrameIndex HW01 ] 0 158
+	FrameIndex HW02 A 0 159
+	FrameIndex HW02 B 0 160
+	FrameIndex HW02 C 0 161
+	FrameIndex HW02 D 0 162
+	FrameIndex HW02 E 0 163
+	FrameIndex HW02 F 0 164
+	FrameIndex HW02 G 0 165
+	FrameIndex HW02 H 0 166
+	FrameIndex HW02 I 0 167
+	FrameIndex HW02 J 0 168
+	FrameIndex HW02 K 0 169
+	FrameIndex HW02 L 0 170
+	FrameIndex HW02 M 0 171
+	FrameIndex HW02 N 0 172
+	FrameIndex HW02 O 0 173
+	FrameIndex HW02 P 0 174
+	FrameIndex HW02 Q 0 175
+	FrameIndex HW02 R 0 176
+	FrameIndex HW02 S 0 177
+	FrameIndex HW02 T 0 178
+	FrameIndex HW02 U 0 179
+	FrameIndex HW02 V 0 180
+	FrameIndex HW02 W 0 181
+	FrameIndex HW02 X 0 182
+	FrameIndex HW02 Y 0 183
+	FrameIndex HW02 Z 0 184
+	FrameIndex HW02 [ 0 185
+	FrameIndex HW02 \ 0 186
+	FrameIndex HW02 ] 0 187
+	FrameIndex HW03 A 0 188
+	FrameIndex HW03 B 0 189
+	FrameIndex HW03 C 0 190
+	FrameIndex HW03 D 0 191
+	FrameIndex HW03 E 0 192
+	FrameIndex HW03 F 0 193
+	FrameIndex HW03 G 0 194
+	FrameIndex HW03 H 0 195
+	FrameIndex HW03 I 0 196
+	FrameIndex HW03 J 0 197
+	FrameIndex HW03 K 0 198
+	FrameIndex HW03 L 0 199
+	FrameIndex HW03 M 0 200
+
+	// Idle 2
+	FrameIndex HW03 N 0 201
+	FrameIndex HW03 O 0 202
+	FrameIndex HW03 P 0 203
+	FrameIndex HW03 Q 0 204
+	FrameIndex HW03 R 0 205
+	FrameIndex HW03 S 0 206
+	FrameIndex HW03 T 0 207
+	FrameIndex HW03 U 0 208
+	FrameIndex HW03 V 0 209
+	FrameIndex HW03 W 0 210
+	FrameIndex HW03 X 0 211
+	FrameIndex HW03 Y 0 212
+	FrameIndex HW03 Z 0 213
+	FrameIndex HW03 [ 0 214
+	FrameIndex HW03 \ 0 215
+	FrameIndex HW03 ] 0 216
+	FrameIndex HW04 A 0 217
+	FrameIndex HW04 B 0 218
+	FrameIndex HW04 C 0 219
+	FrameIndex HW04 D 0 220
+	FrameIndex HW04 E 0 221
+	FrameIndex HW04 F 0 222
+	FrameIndex HW04 G 0 223
+	FrameIndex HW04 H 0 224
+	FrameIndex HW04 I 0 225
+	FrameIndex HW04 J 0 226
+	FrameIndex HW04 K 0 227
+	FrameIndex HW04 L 0 228
+	FrameIndex HW04 M 0 229
+	FrameIndex HW04 N 0 230
+	FrameIndex HW04 O 0 231
+	FrameIndex HW04 P 0 232
+	FrameIndex HW04 Q 0 233
+	FrameIndex HW04 R 0 234
+	FrameIndex HW04 S 0 235
+	FrameIndex HW04 T 0 236
+	FrameIndex HW04 U 0 237
+	FrameIndex HW04 V 0 238
+	FrameIndex HW04 W 0 239
+	FrameIndex HW04 X 0 240
+	FrameIndex HW04 Y 0 241
+	FrameIndex HW04 Z 0 242
+	FrameIndex HW04 [ 0 243
+	FrameIndex HW04 \ 0 244
+	FrameIndex HW04 ] 0 245
+	FrameIndex HW05 A 0 246
+	FrameIndex HW05 B 0 247
+	FrameIndex HW05 C 0 248
+	FrameIndex HW05 D 0 249
+	FrameIndex HW05 E 0 250
+	FrameIndex HW05 F 0 251
+	FrameIndex HW05 G 0 252
+	FrameIndex HW05 H 0 253
+	FrameIndex HW05 I 0 254
+	FrameIndex HW05 J 0 255
+	FrameIndex HW05 K 0 256
+	FrameIndex HW05 L 0 257
+	FrameIndex HW05 M 0 258
+	FrameIndex HW05 N 0 259
+	FrameIndex HW05 O 0 260
+	FrameIndex HW05 P 0 261
+	FrameIndex HW05 Q 0 262
+	FrameIndex HW05 R 0 263
+	FrameIndex HW05 S 0 264
+	FrameIndex HW05 T 0 265
+	FrameIndex HW05 U 0 266
+	FrameIndex HW05 V 0 267
+	FrameIndex HW05 W 0 268
+	FrameIndex HW05 X 0 269
+	FrameIndex HW05 Y 0 270
+	FrameIndex HW05 Z 0 271
+	FrameIndex HW05 [ 0 272
+	FrameIndex HW05 \ 0 273
+	FrameIndex HW05 ] 0 274
+	FrameIndex HW06 A 0 275
+	FrameIndex HW06 B 0 276
+	FrameIndex HW06 C 0 277
+
+	// Reload
+	FrameIndex HW06 D 0 278
+	FrameIndex HW06 E 0 279
+	FrameIndex HW06 F 0 280
+	FrameIndex HW06 G 0 281
+	FrameIndex HW06 H 0 282
+	FrameIndex HW06 I 0 283
+	FrameIndex HW06 J 0 284
+	FrameIndex HW06 K 0 285
+	FrameIndex HW06 L 0 286
+	FrameIndex HW06 M 0 287
+	FrameIndex HW06 N 0 288
+	FrameIndex HW06 O 0 289
+	FrameIndex HW06 P 0 290
+	FrameIndex HW06 Q 0 291
+	FrameIndex HW06 R 0 292
+	FrameIndex HW06 S 0 293
+	FrameIndex HW06 T 0 294
+	FrameIndex HW06 U 0 295
+	FrameIndex HW06 V 0 296
+	FrameIndex HW06 W 0 297
+	FrameIndex HW06 X 0 298
+	FrameIndex HW06 Y 0 299
+	FrameIndex HW06 Z 0 300
+	FrameIndex HW06 [ 0 301
+	FrameIndex HW06 \ 0 302
+	FrameIndex HW06 ] 0 303
+	FrameIndex HW07 A 0 304
+	FrameIndex HW07 B 0 305
+	FrameIndex HW07 C 0 306
+	FrameIndex HW07 D 0 307
+	FrameIndex HW07 E 0 308
+	FrameIndex HW07 F 0 309
+	FrameIndex HW07 G 0 310
+	FrameIndex HW07 H 0 311
+	FrameIndex HW07 I 0 312
+	FrameIndex HW07 J 0 313
+	FrameIndex HW07 K 0 314
+	FrameIndex HW07 L 0 315
+	FrameIndex HW07 M 0 316
+	FrameIndex HW07 N 0 317
+	FrameIndex HW07 O 0 318
+	FrameIndex HW07 P 0 319
+	FrameIndex HW07 Q 0 320
+	FrameIndex HW07 R 0 321
+	FrameIndex HW07 S 0 322
+	FrameIndex HW07 T 0 323
+	FrameIndex HW07 U 0 324
+	FrameIndex HW07 V 0 325
+	FrameIndex HW07 W 0 326
+	FrameIndex HW07 X 0 327
+	FrameIndex HW07 Y 0 328
+	FrameIndex HW07 Z 0 329
+	FrameIndex HW07 [ 0 330
+	FrameIndex HW07 \ 0 331
+	FrameIndex HW07 ] 0 332
+	FrameIndex HW08 A 0 333
+	FrameIndex HW08 B 0 334
+	FrameIndex HW08 C 0 335
+	FrameIndex HW08 D 0 336
+	FrameIndex HW08 E 0 337
+	FrameIndex HW08 F 0 338
+	FrameIndex HW08 G 0 339
+	FrameIndex HW08 H 0 340
+	FrameIndex HW08 I 0 341
+	FrameIndex HW08 J 0 342
+	FrameIndex HW08 K 0 343
+	FrameIndex HW08 L 0 344
+	FrameIndex HW08 M 0 345
+	FrameIndex HW08 N 0 346
+	FrameIndex HW08 O 0 347
+	FrameIndex HW08 P 0 348
+	FrameIndex HW08 Q 0 349
+	FrameIndex HW08 R 0 350
+	FrameIndex HW08 S 0 351
+	FrameIndex HW08 T 0 352
+	FrameIndex HW08 U 0 353
+	FrameIndex HW08 V 0 354
+	FrameIndex HW08 W 0 355
+	FrameIndex HW08 X 0 356
+	FrameIndex HW08 Y 0 357
+	FrameIndex HW08 Z 0 358
+	FrameIndex HW08 [ 0 359
+	FrameIndex HW08 \ 0 360
+	FrameIndex HW08 ] 0 361
+	FrameIndex HW09 A 0 362
+	FrameIndex HW09 B 0 363
+	FrameIndex HW09 C 0 364
+	FrameIndex HW09 D 0 365
+	FrameIndex HW09 E 0 366
+	FrameIndex HW09 F 0 367
+	FrameIndex HW09 G 0 368
+	FrameIndex HW09 H 0 369
+	FrameIndex HW09 I 0 370
+	FrameIndex HW09 J 0 371
+	FrameIndex HW09 K 0 372
+	FrameIndex HW09 L 0 373
+	FrameIndex HW09 M 0 374
+	FrameIndex HW09 N 0 375
+	FrameIndex HW09 O 0 376
+	FrameIndex HW09 P 0 377
+	FrameIndex HW09 Q 0 378
+	FrameIndex HW09 R 0 379
+	FrameIndex HW09 S 0 380
+	FrameIndex HW09 T 0 381
+	FrameIndex HW09 U 0 382
+	FrameIndex HW09 V 0 383
+	FrameIndex HW09 W 0 384
+	FrameIndex HW09 X 0 385
+	FrameIndex HW09 Y 0 386
+	FrameIndex HW09 Z 0 387
+	FrameIndex HW09 [ 0 388
+	FrameIndex HW09 \ 0 389
+	FrameIndex HW09 ] 0 390
+	FrameIndex HW0A A 0 391
+	FrameIndex HW0A B 0 392
+	FrameIndex HW0A C 0 393
+	FrameIndex HW0A D 0 394
+	FrameIndex HW0A E 0 395
+	FrameIndex HW0A F 0 396
+	FrameIndex HW0A G 0 397
+	FrameIndex HW0A H 0 398
+	FrameIndex HW0A I 0 399
+	FrameIndex HW0A J 0 400
+	FrameIndex HW0A K 0 401
+	FrameIndex HW0A L 0 402
+	FrameIndex HW0A M 0 403
+	FrameIndex HW0A N 0 404
+	FrameIndex HW0A O 0 405
+	FrameIndex HW0A P 0 406
+	FrameIndex HW0A Q 0 407
+	FrameIndex HW0A R 0 408
+	FrameIndex HW0A S 0 409
+	FrameIndex HW0A T 0 410
+	FrameIndex HW0A U 0 411
+	FrameIndex HW0A V 0 412
+	FrameIndex HW0A W 0 413
+	FrameIndex HW0A X 0 414
+	FrameIndex HW0A Y 0 415
+	FrameIndex HW0A Z 0 416
+	FrameIndex HW0A [ 0 417
+	FrameIndex HW0A \ 0 418
+	FrameIndex HW0A ] 0 419
+	FrameIndex HW0B A 0 420
+	FrameIndex HW0B B 0 421
+	FrameIndex HW0B C 0 422
+	FrameIndex HW0B D 0 423
+	FrameIndex HW0B E 0 424
+	FrameIndex HW0B F 0 425
+	FrameIndex HW0B G 0 426
+	FrameIndex HW0B H 0 427
+	FrameIndex HW0B I 0 428
+	FrameIndex HW0B J 0 429
+	FrameIndex HW0B K 0 430
+	FrameIndex HW0B L 0 431
+	FrameIndex HW0B M 0 432
+	FrameIndex HW0B N 0 433
+	FrameIndex HW0B O 0 434
+	FrameIndex HW0B P 0 435
+	FrameIndex HW0B Q 0 436
+	FrameIndex HW0B R 0 437
+	FrameIndex HW0B S 0 438
+	FrameIndex HW0B T 0 439
+	FrameIndex HW0B U 0 440
+	FrameIndex HW0B V 0 441
+	FrameIndex HW0B W 0 442
+	FrameIndex HW0B X 0 443
+	FrameIndex HW0B Y 0 444
+	FrameIndex HW0B Z 0 445
+	FrameIndex HW0B [ 0 446
+	FrameIndex HW0B \ 0 447
+	FrameIndex HW0B ] 0 448
+	FrameIndex HW0C A 0 449
+	FrameIndex HW0C B 0 450
+	FrameIndex HW0C C 0 451
+	FrameIndex HW0C D 0 452
+	FrameIndex HW0C E 0 453
+	FrameIndex HW0C F 0 454
+	FrameIndex HW0C G 0 455
+	FrameIndex HW0C H 0 456
+	FrameIndex HW0C I 0 457
+	FrameIndex HW0C J 0 458
+	FrameIndex HW0C K 0 459
+	FrameIndex HW0C L 0 460
+	FrameIndex HW0C M 0 461
+	FrameIndex HW0C N 0 462
+	FrameIndex HW0C O 0 463
+	FrameIndex HW0C P 0 464
+	FrameIndex HW0C Q 0 465
+	FrameIndex HW0C R 0 466
+	FrameIndex HW0C S 0 467
+	FrameIndex HW0C T 0 468
+	FrameIndex HW0C U 0 469
+	FrameIndex HW0C V 0 470
+	FrameIndex HW0C W 0 471
+	FrameIndex HW0C X 0 472
+	FrameIndex HW0C Y 0 473
+	FrameIndex HW0C Z 0 474
+	FrameIndex HW0C [ 0 475
+	FrameIndex HW0C \ 0 476
+	FrameIndex HW0C ] 0 477
+	FrameIndex HW0D A 0 478
+	FrameIndex HW0D B 0 479
+	FrameIndex HW0D C 0 480
+	FrameIndex HW0D D 0 481
+	FrameIndex HW0D E 0 482
+	FrameIndex HW0D F 0 483
+	FrameIndex HW0D G 0 484
+	FrameIndex HW0D H 0 485
+	FrameIndex HW0D I 0 486
+	FrameIndex HW0D J 0 487
+	FrameIndex HW0D K 0 488
+	FrameIndex HW0D L 0 489
+	FrameIndex HW0D M 0 490
+	FrameIndex HW0D N 0 491
+	FrameIndex HW0D O 0 492
+	FrameIndex HW0D P 0 493
+	FrameIndex HW0D Q 0 494
+	FrameIndex HW0D R 0 495
+	FrameIndex HW0D S 0 496
+	FrameIndex HW0D T 0 497
+	FrameIndex HW0D U 0 498
+	FrameIndex HW0D V 0 499
+	FrameIndex HW0D W 0 500
+	FrameIndex HW0D X 0 501
+	FrameIndex HW0D Y 0 502
+	FrameIndex HW0D Z 0 503
+	FrameIndex HW0D [ 0 504
+	FrameIndex HW0D \ 0 505
+	FrameIndex HW0D ] 0 506
+	FrameIndex HW0E A 0 507
+	FrameIndex HW0E B 0 508
+
+	// ??? (probably not needed)
+	FrameIndex HW0E C 0 509
+	FrameIndex HW0E D 0 510
+	FrameIndex HW0E E 0 511
+	FrameIndex HW0E F 0 512
+	FrameIndex HW0E G 0 513
+	FrameIndex HW0E H 0 514
+	FrameIndex HW0E I 0 515
+	FrameIndex HW0E J 0 516
+	FrameIndex HW0E K 0 517
+	FrameIndex HW0E L 0 518
+	FrameIndex HW0E M 0 519
+	FrameIndex HW0E N 0 520
+	FrameIndex HW0E O 0 521
+	FrameIndex HW0E P 0 522
+	FrameIndex HW0E Q 0 523
+	FrameIndex HW0E R 0 524
+	FrameIndex HW0E S 0 525
+	FrameIndex HW0E T 0 526
+	FrameIndex HW0E U 0 527
+	FrameIndex HW0E V 0 528
+	FrameIndex HW0E W 0 529
+	FrameIndex HW0E X 0 530
+	FrameIndex HW0E Y 0 531
+	FrameIndex HW0E Z 0 532
+	FrameIndex HW0E [ 0 533
+	FrameIndex HW0E \ 0 534
+	FrameIndex HW0E ] 0 535
+	FrameIndex HW0F A 0 536
+	FrameIndex HW0F B 0 537
+	FrameIndex HW0F C 0 538
+	FrameIndex HW0F D 0 539
+	FrameIndex HW0F E 0 540
+	FrameIndex HW0F F 0 541
+	FrameIndex HW0F G 0 542
+	FrameIndex HW0F H 0 543
+	FrameIndex HW0F I 0 544
+	FrameIndex HW0F J 0 545
+	FrameIndex HW0F K 0 546
+	FrameIndex HW0F L 0 547
+	FrameIndex HW0F M 0 548
+	FrameIndex HW0F N 0 549
+	FrameIndex HW0F O 0 550
+	FrameIndex HW0F P 0 551
+	FrameIndex HW0F Q 0 552
+	FrameIndex HW0F R 0 553
+	FrameIndex HW0F S 0 554
+	FrameIndex HW0F T 0 555
+	FrameIndex HW0F U 0 556
+	FrameIndex HW0F V 0 557
+	FrameIndex HW0F W 0 558
+	FrameIndex HW0F X 0 559
+	FrameIndex HW0F Y 0 560
+	FrameIndex HW0F Z 0 561
+	FrameIndex HW0F [ 0 562
+	FrameIndex HW0F \ 0 563
+	FrameIndex HW0F ] 0 564
+	FrameIndex HW10 A 0 565
+	FrameIndex HW10 B 0 566
+	FrameIndex HW10 C 0 567
+	FrameIndex HW10 D 0 568
+	FrameIndex HW10 E 0 569
+	FrameIndex HW10 F 0 570
+	FrameIndex HW10 G 0 571
+
+	// In-between frame
+	FrameIndex HW10 H 0 572
+
+	// Fire
+	FrameIndex HW10 I 0 573
+	FrameIndex HW10 J 0 574
+	FrameIndex HW10 K 0 575
+	FrameIndex HW10 L 0 576
+	FrameIndex HW10 M 0 577
+	FrameIndex HW10 N 0 578
+	FrameIndex HW10 O 0 579
+	FrameIndex HW10 P 0 580
+	FrameIndex HW10 Q 0 581
+	FrameIndex HW10 R 0 582
+	FrameIndex HW10 S 0 583
+	FrameIndex HW10 T 0 584
+	FrameIndex HW10 U 0 585
+	FrameIndex HW10 V 0 586
+	FrameIndex HW10 W 0 587
+	FrameIndex HW10 X 0 588
+	FrameIndex HW10 Y 0 589
+	FrameIndex HW10 Z 0 590
+	FrameIndex HW10 [ 0 591
+	FrameIndex HW10 \ 0 592
+	FrameIndex HW10 ] 0 593
+	FrameIndex HW11 A 0 594
+	FrameIndex HW11 B 0 595
+	FrameIndex HW11 C 0 596
+	FrameIndex HW11 D 0 597
+	FrameIndex HW11 E 0 598
+	FrameIndex HW11 F 0 599
+
+	// Weapon Select
+	FrameIndex HW11 G 0 600
+	FrameIndex HW11 H 0 601
+	FrameIndex HW11 I 0 602
+	FrameIndex HW11 J 0 603
+	FrameIndex HW11 K 0 604
+	FrameIndex HW11 L 0 605
+	FrameIndex HW11 M 0 606
+	FrameIndex HW11 N 0 607
+	FrameIndex HW11 O 0 608
+	FrameIndex HW11 P 0 609
+	FrameIndex HW11 Q 0 610
+	FrameIndex HW11 R 0 611
+	FrameIndex HW11 S 0 612
+	FrameIndex HW11 T 0 613
+	FrameIndex HW11 U 0 614
+	FrameIndex HW11 V 0 615
+	FrameIndex HW11 W 0 616
+	FrameIndex HW11 X 0 617
+	FrameIndex HW11 Y 0 618
+	FrameIndex HW11 Z 0 619
+	FrameIndex HW11 [ 0 620
+	FrameIndex HW11 \ 0 621
+	FrameIndex HW11 ] 0 622
+	FrameIndex HW12 A 0 623
+	FrameIndex HW12 B 0 624
+	FrameIndex HW12 C 0 625
+	FrameIndex HW12 D 0 626
+	FrameIndex HW12 E 0 627
+	FrameIndex HW12 F 0 628
+	FrameIndex HW12 G 0 629
+	FrameIndex HW12 H 0 630
+	FrameIndex HW12 I 0 631
+	FrameIndex HW12 J 0 632
+	FrameIndex HW12 K 0 633
+	FrameIndex HW12 L 0 634
+	FrameIndex HW12 M 0 635
+	FrameIndex HW12 N 0 636
+	FrameIndex HW12 O 0 637
+	FrameIndex HW12 P 0 638
+	FrameIndex HW12 Q 0 639
+	FrameIndex HW12 R 0 640
+	FrameIndex HW12 S 0 641
+	FrameIndex HW12 T 0 642
+	FrameIndex HW12 U 0 643
+	FrameIndex HW12 V 0 644
+	FrameIndex HW12 W 0 645
+	FrameIndex HW12 X 0 646
+	FrameIndex HW12 Y 0 647
+	FrameIndex HW12 Z 0 648
+	FrameIndex HW12 [ 0 649
+	FrameIndex HW12 \ 0 650
+	FrameIndex HW12 ] 0 651
+}
+*/
 
 Model HLScientist1
 {
