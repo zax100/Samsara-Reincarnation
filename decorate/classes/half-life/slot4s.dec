@@ -47,7 +47,7 @@ Actor HLUzi : HLWeapon
         goto ReadyActual
 
       ReadyActualIdle1Reloadable:
-        HW00 B 0 A_JumpIfInventory("HalfLifeOpposingForce",1,"ReadyActualIdleReloadableShephard")
+        HW00 B 0 A_JumpIfInventory("HalfLifeOpposingForce",1,"ReadyActualIdle1ReloadableShephard")
         HW00 "BCDEFGHIJKLMNOPQRSTUVWXYZ[\]" 1 A_WeaponReady(WRF_ALLOWRELOAD)
         HW01 "ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]" 1 A_WeaponReady(WRF_ALLOWRELOAD)
         HW02 "ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]" 1 A_WeaponReady(WRF_ALLOWRELOAD)
