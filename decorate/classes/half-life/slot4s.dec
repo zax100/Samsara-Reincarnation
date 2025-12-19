@@ -97,8 +97,11 @@ Actor HLUzi : HLWeapon
         goto Super::Select
 
       Ready: // our "Select" state
+        // deploy sound played every time uzi (single or dual) is brought up in sc 3.0, let's not do that for this state
         TNT1 A 0 A_JumpIfInventory("HalfLifeOpposingForce",1,"ReadyShephard")
-        HW11 "GIKMOQSUWY[]" 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE)
+        HW11 GIKMO 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE)
+        HW11 Q 0 A_PlaySound("halflife/uzi_deploy1")
+        HW11 "QSUWY[]" 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE)
         HW12 "BDFHJLNPRTVXZ\" 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE)
         goto ReadyActual
 
@@ -250,7 +253,9 @@ Actor HLUzi : HLWeapon
         goto ReadyActual
 
       ReadyShephard:
-        0P11 "GIKMOQSUWY[]" 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE)
+        0P11 GIKMO 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE)
+        0P11 Q 0 A_PlaySound("halflife/uzi_deploy1")
+        0P11 "QSUWY[]" 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE)
         0P12 "BDFHJLNPRTVXZ\" 1 A_WeaponReady(WRF_NOBOB|WRF_NOFIRE)
         goto ReadyActual
 

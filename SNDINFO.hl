@@ -115,6 +115,7 @@ halflife/mp5_clipeject	HW40COUT
 halflife/mp5_clipinsert	HW40CIN
 
 // * UZI
+halflife/uzi_deploy1 "Sounds/HalfLife/Weapons/uzi_deploy1.wav"
 $random halflife/uzi_shoot { halflife/uzi_shoot1 halflife/uzi_shoot2 halflife/uzi_shoot3 }
 halflife/uzi_shoot1 "Sounds/HalfLife/Weapons/uzi_shoot1.wav"
 halflife/uzi_shoot2 "Sounds/HalfLife/Weapons/uzi_shoot2.wav"
