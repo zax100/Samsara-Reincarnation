@@ -345,6 +345,7 @@ GoldenEye 007:
 -James Bond (Goldfinger 64)-
 
 - Golden bullets are now given only if James Bond has the Golden Magnum.
+! The M14's Compendium description has been changed.
 
 -All-
 
