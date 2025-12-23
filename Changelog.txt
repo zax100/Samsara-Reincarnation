@@ -188,6 +188,7 @@ Rise of the Triad:
 - Hexen combined ammo pickups now give 3 split missiles (decreased from 5).
 - Strife small ammo combo pickups now give 2 split missiles (decreased from 3).
 - Strife large ammo combo pickups now give 3 split missiles (decreased from 5).
+- God Mode can no longer affect the alien spectres in Strife.
 * Fixed Dog Mode not being properly counted towards invulnerability checks.
 
 Caleb (Blood):
