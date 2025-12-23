@@ -177,7 +177,7 @@ Rise of the Triad:
 - The M60 now deals 10 damage (decreased from 15).
 - The Doomstick's secondary attack now deals 10 damage per pellet in PVE (decreased from 15).
 - Drunk missile ammo capacity is now 50 (without backpack)/100 (with backpack) (decreased from 60 (without backpack)/120 (with backpack)).
-- Bosses now have a RottFire DamageFactor of 0.33.
+- Bosses now take 0.33x damage from the flamewall's flames.
 - The Excalibat and dark staff no longer regenerate their ammo.
 - Split missile ammo capacity is now 25 (without backpack)/50 (with backpack) (decreased from 100 (without backpack)/200 (with backpack)).
 - The split missile now gives 5 split missiles on pickup (decreased from 10).
