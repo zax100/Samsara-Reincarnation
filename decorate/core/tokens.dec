@@ -323,6 +323,7 @@ Actor SamsaraCurrentTeamIndicator : Counter { Inventory.MaxAmount 8 }
 Actor SamsaraBloodGeneratorBleedAngle : Inventory { Inventory.MaxAmount 131072 }
 Actor SamsaraBloodGeneratorAngle : Inventory { Inventory.MaxAmount 131072 }
 Actor SamsaraBloodGeneratorZ : Inventory { Inventory.MaxAmount 131072 }
+Actor SamsaraKilledByMassacre : Boolean {}
 
 Actor TranslationDummy
 {
