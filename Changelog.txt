@@ -80,6 +80,7 @@ Doom:
 
 Fred Chexter (Chex Quest):
 
+! Chex bits spawned from being gibbed now fade after one minute, though they can remain indefinitely with "Gib Persistence" enabled.
 * Fixed fallback and non-+THRUGHOST zorch puffs not having lights in PVE.
 * Fixed +THRUGHOST zorch puffs not having lights at all.
 * Fixed the Super Large Zorcher projectiles not having lights in PVP.
@@ -417,6 +418,7 @@ Strife: Quest for the Sigil:
 
 ! Bloody hell effects will no longer spawn from enemies killed by the Massacre damage type (used for the massacre/"kill monsters" cheat, as well as D'Sparil (second phase)'s death sequence).
 ! The "Brutal" bloody hell setting has been renamed to "Chunky".
+* Fixed item replacment settings not taking effect on non-unique equipment pickups (3 to 6S) spawned by the Pinata Party mode.
 - samsara_extraweapons has been removed.
 
 -Other-
