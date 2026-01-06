@@ -180,7 +180,7 @@ actor CorvusTempestWandBomb
     Projectile
     +WINDTHRUST
     +NOTELEPORT
-    DeathSound "heretic/staffcrackle"
+    DeathSound "dsparil/attack"
     DamageType "Electric"
     States
     {
