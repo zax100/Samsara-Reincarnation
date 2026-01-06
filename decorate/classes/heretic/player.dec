@@ -1,5 +1,5 @@
 actor CorvusClass : Boolean {}
-actor CorvusHoldingSlot : Counter { Inventory.MaxAmount 7 }
+actor CorvusHoldingSlot : Counter { Inventory.MaxAmount 8 }
 actor CorvusShootCloneTrigger : Boolean {}
 
 actor CorvusPlayer : SamsaraPlayerPawnNormalRedBlood

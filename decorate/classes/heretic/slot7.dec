@@ -24,7 +24,7 @@ actor DSparilStaff : Weapon
 
       Ready:
         TNT1 A 0 A_TakeInventory("CorvusHoldingSlot")
-        TNT1 A 0 A_GiveInventory("CorvusHoldingSlot",6)
+        TNT1 A 0 A_GiveInventory("CorvusHoldingSlot",7)
         TNT1 A 0 A_JumpIfInventory("DSparilStaffMinion",1,2)
         DSPS A 1 A_WeaponReady(WRF_NOSECONDARY)
         loop
@@ -278,7 +278,7 @@ actor DSparilStaffMinion : DSparilStaff
     {
       Ready:
         TNT1 A 0 A_TakeInventory("CorvusHoldingSlot")
-        TNT1 A 0 A_GiveInventory("CorvusHoldingSlot",6)
+        TNT1 A 0 A_GiveInventory("CorvusHoldingSlot",7)
         TNT1 A 0 A_JumpIfInventory("DSparilStaff",1,2)
         DSPS A 1 A_WeaponReady(WRF_NOSECONDARY)
         loop
@@ -753,7 +753,8 @@ actor HereticCorvusClone : SamsaraMiscCharHumanoidStatic
         TNT1 A 0 A_SetUserVar("user_attack_amount", 0) // reset
         TNT1 A 0 A_FaceTarget(360,180)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",0,"MissileUseGrimBallista",AAPTR_MASTER)
-        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",6,"MissileUseDSparilStaff",AAPTR_MASTER)
+        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",7,"MissileUseDSparilStaff",AAPTR_MASTER)
+        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",6,"MissileUseTempestWand",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",5,"MissileUseHellstaff",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",4,"MissileUsePhoenixRod",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",3,"MissileUseDragonClaw",AAPTR_MASTER)
@@ -765,7 +766,8 @@ actor HereticCorvusClone : SamsaraMiscCharHumanoidStatic
         TNT1 A 0 A_AlertMonsters(1024,AMF_TARGETEMITTER)
         TNT1 A 0 A_SetUserVar("user_attack_amount", 0) // reset
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",0,"MissileUseGrimBallistaAim",AAPTR_MASTER)
-        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",6,"MissileUseDSparilStaffAim",AAPTR_MASTER)
+        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",7,"MissileUseDSparilStaffAim",AAPTR_MASTER)
+        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",6,"MissileUseTempestWandAim",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",5,"MissileUseHellstaffAim",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",4,"MissileUsePhoenixRodAim",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",3,"MissileUseDragonClawAim",AAPTR_MASTER)
@@ -831,6 +833,17 @@ actor HereticCorvusClone : SamsaraMiscCharHumanoidStatic
       MissileUseHellstaff:
         TNT1 A 0 A_SetUserVar("user_attack_amount", user_attack_amount + 1)
         CORV F 4 Bright A_CustomMissile("HellstaffShot",32,0,angle,CMF_AIMDIRECTION|CMF_ABSOLUTEANGLE,pitch)
+        TNT1 A 0 A_JumpIf(user_attack_amount >= 6, 1)
+        loop
+        CORV E 4
+        goto MissileFinish
+
+      MissileUseTempestWandAim:
+        TNT1 A 0 ACS_NamedExecuteWithResult("HereticTurnTowardTarget",0)
+      MissileUseTempestWand:
+        TNT1 A 0 A_SetUserVar("user_attack_amount", user_attack_amount + 1)
+        CORV F 0 A_PlaySound("dsparil/attack",CHAN_WEAPON)
+        CORV F 4 Bright A_CustomRailgun(random(50,100),0,None,None,RGF_SILENT|RGF_FULLBRIGHT,1,50,"CorvusTempestWandPuff",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
         TNT1 A 0 A_JumpIf(user_attack_amount >= 6, 1)
         loop
         CORV E 4
@@ -1244,7 +1257,8 @@ actor HereticCorvusCloneCoop : HereticCorvusClone
         TNT1 A 0 A_SetUserVar("user_attack_amount", 0) // reset
         TNT1 A 0 A_FaceTarget(360,180)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",0,"MissileUseGrimBallista",AAPTR_MASTER)
-        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",6,"MissileUseDSparilStaff",AAPTR_MASTER)
+        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",7,"MissileUseDSparilStaff",AAPTR_MASTER)
+        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",6,"MissileUseTempestWand",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",5,"MissileUseHellstaff",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",4,"MissileUsePhoenixRod",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",3,"MissileUseDragonClaw",AAPTR_MASTER)
@@ -1256,7 +1270,8 @@ actor HereticCorvusCloneCoop : HereticCorvusClone
         TNT1 A 0 A_AlertMonsters(1024,AMF_TARGETEMITTER)
         TNT1 A 0 A_SetUserVar("user_attack_amount", 0) // reset
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",0,"MissileUseGrimBallistaAim",AAPTR_MASTER)
-        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",6,"MissileUseDSparilStaffAim",AAPTR_MASTER)
+        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",7,"MissileUseDSparilStaffAim",AAPTR_MASTER)
+        TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",6,"MissileUseTempestWandAim",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",5,"MissileUseHellstaffAim",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",4,"MissileUsePhoenixRodAim",AAPTR_MASTER)
         TNT1 A 0 A_JumpIfInventory("CorvusHoldingSlot",3,"MissileUseDragonClawAim",AAPTR_MASTER)
@@ -1322,6 +1337,17 @@ actor HereticCorvusCloneCoop : HereticCorvusClone
       MissileUseHellstaff:
         TNT1 A 0 A_SetUserVar("user_attack_amount", user_attack_amount + 1)
         CORV F 4 Bright A_CustomMissile("HellstaffShot2",32,0,angle,CMF_AIMDIRECTION|CMF_ABSOLUTEANGLE,pitch)
+        TNT1 A 0 A_JumpIf(user_attack_amount >= 6, 1)
+        loop
+        CORV E 4
+        goto MissileFinish
+
+      MissileUseTempestWandAim:
+        TNT1 A 0 ACS_NamedExecuteWithResult("HereticTurnTowardTarget",0)
+      MissileUseTempestWand:
+        TNT1 A 0 A_SetUserVar("user_attack_amount", user_attack_amount + 1)
+        CORV F 0 A_PlaySound("dsparil/attack",CHAN_WEAPON)
+        CORV F 4 Bright A_CustomRailgun(random(100,200),0,None,None,RGF_SILENT|RGF_FULLBRIGHT,1,50,"CorvusTempestWandPuffCoop",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
         TNT1 A 0 A_JumpIf(user_attack_amount >= 6, 1)
         loop
         CORV E 4

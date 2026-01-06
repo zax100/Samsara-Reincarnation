@@ -21,8 +21,8 @@ actor CorvusTempestWand : Weapon
         stop
 
       Ready:
-		//TNT1 A 0 A_TakeInventory("CorvusHoldingSlot")
-		//TNT1 A 0 A_GiveInventory("CorvusHoldingSlot",6)
+		TNT1 A 0 A_TakeInventory("CorvusHoldingSlot")
+		TNT1 A 0 A_GiveInventory("CorvusHoldingSlot",6)
         GWND E 1 A_WeaponReady
         loop
 
@@ -40,6 +40,7 @@ actor CorvusTempestWand : Weapon
 		TNT1 A 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"FirePowered")
       FireUnpowered:
         TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 ACS_NamedExecuteWithResult("HereticTriggerCloneAttack")
         GWND F 4 Bright A_PlaySound("heretic/tempestfire",CHAN_WEAPON)
         GWND H 4 Bright A_GiveInventory("SamsaraHereticTempestRodAttackHandler")
         GWND G 4 Bright
@@ -54,6 +55,7 @@ actor CorvusTempestWand : Weapon
         TNT1 A 0 A_JumpIfInventory("Cell",25,1)
         goto NoAmmoSwitch
         TNT1 A 0 A_AlertMonsters
+		TNT1 A 0 ACS_NamedExecuteWithResult("HereticTriggerCloneAttack")
         GWND E 10 Bright A_PlaySound("heretic/tempestcharge",CHAN_WEAPON)
         GWND F 5 Bright
         GWND G 5 Bright
@@ -99,7 +101,7 @@ actor SamsaraHereticTempestRodAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
-        TNT1 A 0 A_RailAttack(random(100,200),0,false,None,None,RGF_SILENT|RGF_FULLBRIGHT,50,"CorvusTempestWandPuff",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
+        TNT1 A 0 A_RailAttack(random(100,200),0,false,None,None,RGF_SILENT|RGF_FULLBRIGHT,50,"CorvusTempestWandPuffCoop",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
         stop
     }
 }
@@ -134,6 +136,11 @@ actor CorvusTempestWandPuff
         FX18 OPQRS 4 Bright
         stop
     }
+}
+
+actor CorvusTempestWandPuffCoop : CorvusTempestWandPuff 
+{
+    +MTHRUSPECIES
 }
 
 // Powered
