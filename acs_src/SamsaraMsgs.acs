@@ -434,7 +434,7 @@ str ClassPickupMessages[CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT][MSGCOUNT]
                 "Duck season! Fire!",
                 "Tape two side by side, still not as good as the SSG.",
                 "I think I saw this in the toy aisle...",
-                "The UAC has forgone auto-shotguns in favor of...uh. This.",
+                "The UAC has forgone auto-shotguns in favor of...well, actually...",
             }},
             {{
                 "You got the super shotgun!",
@@ -826,6 +826,42 @@ str ClassPickupMessages[CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT][MSGCOUNT]
             "No, this staff won't let you create your own worlds like D'Sparil.",
             "Have you tried poking enemies with it? Might be useful...",
             "Picked up the Staff of D'Sparil, like a boss.",
+        }},
+        {{
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+        }},
+        {{
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+        }},
+        {{
+            "Tempest Wand",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
         }},
     }},
     {
@@ -10399,4 +10435,4 @@ str MiscPickupMessages[MISCPICKUPCOUNT][LOADOUTCOUNT][MSGCOUNT] =
     }},
 };
 
-// jesus fucking christ, 10400 lines
+// jesus fucking christ, 10440 lines
