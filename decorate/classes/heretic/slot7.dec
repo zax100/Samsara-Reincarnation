@@ -841,12 +841,9 @@ actor HereticCorvusClone : SamsaraMiscCharHumanoidStatic
       MissileUseTempestWandAim:
         TNT1 A 0 ACS_NamedExecuteWithResult("HereticTurnTowardTarget",0)
       MissileUseTempestWand:
-        TNT1 A 0 A_SetUserVar("user_attack_amount", user_attack_amount + 1)
         CORV F 0 A_PlaySound("dsparil/attack",CHAN_WEAPON)
         CORV F 4 Bright A_CustomRailgun(random(50,100),0,None,None,RGF_SILENT|RGF_FULLBRIGHT,1,50,"CorvusTempestWandPuff",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
-        TNT1 A 0 A_JumpIf(user_attack_amount >= 6, 1)
-        loop
-        CORV E 4
+        CORV E 8
         goto MissileFinish
 
       MissileUseDSparilStaffAim:
@@ -1345,12 +1342,9 @@ actor HereticCorvusCloneCoop : HereticCorvusClone
       MissileUseTempestWandAim:
         TNT1 A 0 ACS_NamedExecuteWithResult("HereticTurnTowardTarget",0)
       MissileUseTempestWand:
-        TNT1 A 0 A_SetUserVar("user_attack_amount", user_attack_amount + 1)
         CORV F 0 A_PlaySound("dsparil/attack",CHAN_WEAPON)
         CORV F 4 Bright A_CustomRailgun(random(100,200),0,None,None,RGF_SILENT|RGF_FULLBRIGHT,1,50,"CorvusTempestWandPuffCoop",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
-        TNT1 A 0 A_JumpIf(user_attack_amount >= 6, 1)
-        loop
-        CORV E 4
+        CORV E 8
         goto MissileFinish
 
       MissileUseDSparilStaffAim:
