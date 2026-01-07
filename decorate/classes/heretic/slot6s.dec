@@ -181,9 +181,11 @@ actor CorvusTempestWandBomb
     Projectile
     +WINDTHRUST
     +NOTELEPORT
+    +FORCERADIUSDMG
     SeeSound "dsparil/zap"
     DeathSound "heretic/tempestbomb"
     DamageType "Electric"
+    Decal Scorch
     States
     {
     Spawn:
@@ -192,7 +194,7 @@ actor CorvusTempestWandBomb
         loop
     Death:
         FX18 T 5 Bright Light("DSPARILBALL_X1")
-        FX18 U 5 Bright Light("DSPARILBALL_X2") A_Explode(600,196,0)
+        FX18 U 5 Bright Light("DSPARILBALL_X2") A_Explode(800,196,0)
         FX18 V 5 Bright Light("DSPARILBALL_X3")
         FX18 W 5 Bright Light("DSPARILBALL_X4")
         FX18 XY 5 Bright Light("DSPARILBALL_X5")
