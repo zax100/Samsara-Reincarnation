@@ -412,7 +412,7 @@ JC Denton (Deus Ex):
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 + The environmental protection powerup and Strife's environmental suit now give the player an augmentation upgrade canister.
 * Fixed being able to lift and throw enemies of any height using the second level of the Microfibral Muscle augmentation.
-+ The maximum actor height required to lift and throw an enemy using the thid level of the Microfibral Muscle augmentation is now 40 (increased from 32).
++ The maximum actor height required to lift and throw an enemy using the third level of the Microfibral Muscle augmentation is now 40 (increased from 32).
 
 -Games-
 
