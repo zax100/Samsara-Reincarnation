@@ -403,6 +403,7 @@ Sarge (Quake III Arena):
 
 JC Denton (Deus Ex):
 
++ The Environmental Protection powerup now gives the player an augmentation upgrade cannister.
 - The GEP gun's standard rockets now deal 90 base splash damage (decreased from 120 base splash damage).
 - The GEP gun's WP rockets now explode starting with a radius of 38 map units and ending at 192 map units (decreased from 48, ending at 384).
 - The GEP gun's WP rockets now burn enemies at a radius of 256 map units (decreased from 384).

@@ -1334,6 +1334,7 @@ actor BioSuit : SamsaraPowerupPickup
         stop
 
       PickupSuccessDeusEx:
+        TNT1 A 0 A_GiveInventory("DeusEx_AugmentationUpgradeCannister")
         TNT1 A 0 A_JumpIfInventory("DeusEx_EnviroSkill",0,"PickupSuccessDeusExMaster")
         TNT1 A 0 A_JumpIfInventory("DeusEx_EnviroSkill",3,"PickupSuccessDeusExAdvanced")
         TNT1 A 0 A_JumpIfInventory("DeusEx_EnviroSkill",2,"PickupSuccessDeusExProficient")
