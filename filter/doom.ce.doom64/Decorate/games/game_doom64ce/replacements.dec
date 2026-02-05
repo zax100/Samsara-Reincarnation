@@ -1,9 +1,35 @@
-actor D64LaserRifle_Samsara : RandomSpawner replaces D64LaserRifle { DropItem "SamsaraSlotSevenSkulltagPickup" }
+actor D64LaserRifle_Samsara : RandomSpawner replaces D64LaserRifle { DropItem "SamsaraSlotSevenPickup" SpawnID 168 }
 actor D64HellPotion_Samsara : HealPack0Dump replaces D64HellPotion {}
 actor D64Radar_Samsara : SamsaraAllmap replaces D64Radar {}
 actor D64UnmakerUpgrade1_Samsara : MegaPack replaces D64UnmakerUpgrade1 {}
-actor D64UnmakerUpgrade2_Samsara : MegaPack replaces D64UnmakerUpgrade2 {}
-actor D64UnmakerUpgrade3_Samsara : MegaPack replaces D64UnmakerUpgrade3 {}
+actor D64UnmakerUpgrade2_Samsara : MegaPack replaces D64UnmakerUpgrade2 { SpawnID 163 }
+actor D64UnmakerUpgrade3_Samsara : MegaPack replaces D64UnmakerUpgrade3 { SpawnID 164 }
 actor D64UnmakerUpgrade5_Samsara : MegaPack replaces D64UnmakerUpgrade5 {}
 actor D64UnseerSphere_Samsara : SamsaraFullInvisibility replaces D64UnseerSphere {}
 actor D64DoomsdaySphere_Samsara : InvulnPowerup replaces D64DoomsdaySphere {}
+
+actor D64UnmakerUpgrade4_Samsara : CustomInventory replaces D64UnmakerUpgrade4
+{
+	Radius 20
+	Height 16
+	SpawnID 222
+	Inventory.PickupMessage "$GOTPOWERUP4"
+	Inventory.PickupSound "misc/d_pkup"
+	Inventory.Icon "POW4Z0"
+	Inventory.MaxAmount 1
+	Tag "$CC_ARTIFACT4"
+	+DONTGIB
+	+COUNTITEM
+	+MOVEWITHSECTOR
+	+INVBAR
+	States
+	{
+	Spawn:
+		POW4 ABCDEDCB 4 Bright
+		Loop
+	Use:
+		TNT1 A 0 A_StartSound("laser/float", CHAN_AUTO)
+		TNT1 A 0 A_SpawnItemEx("D64Floater", 80, 0, 0, 0, 0, 1)
+		Fail
+	}
+}

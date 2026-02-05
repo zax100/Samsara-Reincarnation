@@ -261,7 +261,7 @@ actor PsxFatso_Samsara_Shrink : PsxFatso_Samsara
 			FATT J 10
 			Goto See
 		SpawnLoop:
-			FATT AB 10 A_Look
+			FATT AB 14 A_Look
 			Loop
 		See:
 			"####" "#" 0 A_JumpIfInTargetInventory("ChexClass", 1, 5) // this is supposed to be child friendly

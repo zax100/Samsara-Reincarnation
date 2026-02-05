@@ -365,6 +365,7 @@ Actor D64NightmareImp_Samsara : D64DoomImp_Samsara replaces D64NightmareImp
 	Speed 16
 	PainChance 128
 	MeleeRange 60
+	SpawnID 155
 	Monster
 	+FLOORCLIP
 	+NOICEDEATH

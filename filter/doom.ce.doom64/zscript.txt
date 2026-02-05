@@ -1,5 +1,6 @@
 version "4.10"
 
+// Do we need this if the title map is getting skipped? Let's keep it anyway.
 class D64TitlemapCyberdemon_Samsara : D64TitlemapCyberdemon replaces D64TitlemapCyberdemon
 {
 	States
@@ -14,6 +15,30 @@ class D64TitlemapCyberdemon_Samsara : D64TitlemapCyberdemon replaces D64Titlemap
 			SCYB E 3 Bright;
             CYBR F 18 A_FaceTarget;
 		    Loop;
+	}
+}
+
+class D64BigFire_Samsara : D64BigFire replaces D64BigFire
+{
+	States
+	{
+        Spawn:
+            TNT1 A 0 nodelay a_jumpif(hq_torches, "HQSpawn");
+            TNT1 A 0 a_jumpif(IsSmooth(), "SmoothSpawn");
+			FIRE ABCDE 3 BRIGHT;
+            Loop;
+        SmoothSpawn:
+            FIRE A 2 BRIGHT;
+            SFIR V 2 BRIGHT;
+            FIRE B 2 BRIGHT;
+            SFIR W 2 BRIGHT;
+            FIRE C 2 BRIGHT;
+            SFIR X 2 BRIGHT;
+            FIRE D 2 BRIGHT;
+            SFIR Y 2 BRIGHT;
+            FIRE E 2 BRIGHT;
+            SFIR Z 2 BRIGHT;
+            Loop;
 	}
 }
 
