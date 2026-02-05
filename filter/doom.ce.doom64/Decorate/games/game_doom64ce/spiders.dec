@@ -65,6 +65,9 @@ Actor D64Arachnotron_Samsara : SamsaraMonsterCyberneticTotalGib replaces Arachno
 		"####" "#" 0 A_JumpIfInventory("EnemyZorched",1,"ZorchRaise")
 		BSPI LKJIHG 5
 		Goto See+1
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
+		Stop
 	Pain.ShrinkerDMG:
 		BSPI F 0
 		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)

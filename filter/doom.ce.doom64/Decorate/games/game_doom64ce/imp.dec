@@ -87,6 +87,9 @@ Actor D64DoomImp_Samsara : SamsaraMonsterHumanoid replaces DoomImpTwo
 		TROO PON 8
 		TROO ML 6
 		Goto See
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
+		Stop
 	Pain.ShrinkerDMG:
 		TROO G 0
 		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)

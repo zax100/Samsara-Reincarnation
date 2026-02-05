@@ -76,6 +76,9 @@ Actor D64Revenant_Samsara : SamsaraMonsterDemonicTotalGib replaces RevenantTwo
 		SKEL Q 6
 		SKEL PONML 6
 		Goto See
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
+		Stop
 	Pain.ShrinkerDMG:
 		SKEL L 0
 		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)

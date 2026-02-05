@@ -69,6 +69,9 @@ actor D64Archvile_Samsara : SamsaraMonsterDemonicTotalGib replaces D64Archvile
 		VILE VW 7
 		VILE X -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler") // Needed for ReMixer
 		Stop
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
+		Stop
 	Pain.ShrinkerDMG:
 		VILE R 0
 		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)

@@ -17647,6 +17647,9 @@ Actor SamsaraDropItemKeenDie
 // The Harmony enemies will need the Duke3D gib states
 // for their special blood color.
 
+// Doom 64 CE
+// Acid Demon - SamsaraMonsterDemonicTotalGib
+
 // Other
 // ZDoom Scripted Marine - SamsaraMonsterHumanoid
 

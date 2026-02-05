@@ -70,6 +70,9 @@ actor D64SpiderMastermind_Samsara : SamsaraMonsterCyberneticBoss replaces Spider
 		SPID SSSS 5
 		SPID S -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 		Stop
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
+		Stop
 
 		// SamsaraMonsterCyberneticBoss states
 		Death.ZorchPistol:
@@ -278,6 +281,9 @@ actor D64Cyberdemon_Samsara : SamsaraMonsterCyberneticBoss replaces Cyberdemon2
 		CYBR L 4 A_NoBlocking
 		CYBR MN 4
 		CYBR O -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
+		Stop
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
 		Stop
 
 		// SamsaraMonsterCyberneticBoss states
@@ -500,6 +506,9 @@ actor D64Resurrector_Samsara : SamsaraMonsterDemonicBoss replaces D64Resurrector
 		RECT N 3 A_NoBlocking
 		RECT O 2
 		TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
+		Stop
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
 		Stop
 	}
 }

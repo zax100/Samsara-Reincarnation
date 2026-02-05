@@ -63,6 +63,9 @@ Actor D64LostSoul_Samsara : SamsaraMonsterGhost replaces LostSoul2
 		SKUL MN 2 bright
 		SKUL OP 1 bright
 		Stop
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
+		Stop
 
 		// SamsaraMonsterGhost states
 		Death.ZorchPistol:
@@ -235,6 +238,9 @@ Actor D64PainElemental_Samsara : SamsaraMonsterReincPainElemental replaces PainE
 		PAIN LKJI 5
 		PAIN HGFE 8
 		Goto See
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
+		Stop
 	Pain.ShrinkerDMG:
 		PAIN D 0
 		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)

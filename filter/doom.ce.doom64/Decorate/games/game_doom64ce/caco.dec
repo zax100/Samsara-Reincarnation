@@ -65,6 +65,9 @@ Actor D64Cacodemon_Samsara : SamsaraMonsterDemonicTotalGib replaces CacodemonTwo
 		HEAD L 8 A_UnSetFloorClip
 		HEAD KJIH 8
 		Goto See
+	Crush:
+		A027 A -1 A_PlaySound("misc/gibbed")
+		Stop
 	Pain.ShrinkerDMG:
 		HEAD B 0
 		"####" "#" 0 A_SetUserVar("user_scalex", scalex*65536.0)

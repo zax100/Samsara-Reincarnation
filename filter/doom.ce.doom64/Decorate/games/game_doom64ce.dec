@@ -37,6 +37,16 @@ Actor D64ExplosiveBarrel_Samsara : ExplosiveBarrel replaces DoomExplosiveBarrel
 	}
 }
 
+actor D64RocketSmokeTrail2 : D64RocketSmokeTrail replaces D64RocketSmokeTrail
+{
+	States
+	{
+	Spawn:
+		ACIP EFGHI 2
+		Stop
+	}
+}
+
 Actor CXNashGoreBlood_Samsara : SamsaraBloodyHellBlood replaces CXNashGoreBlood {}
 Actor CXNashGoreClassicBlood_Samsara : SamsaraBloodyHellBlood replaces CXNashGoreClassicBlood {}
 Actor CXNashGoreGibs_Samsara : Actor replaces CXNashGoreGibs {}
