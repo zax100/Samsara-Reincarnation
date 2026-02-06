@@ -1,5 +1,6 @@
 actor D64Archvile_Samsara : SamsaraMonsterDemonicTotalGib replaces D64Archvile
 {
+	SpawnID 111
 	Health 700
 	Radius 32
 	Height 104
@@ -42,7 +43,7 @@ actor D64Archvile_Samsara : SamsaraMonsterDemonicTotalGib replaces D64Archvile
 		VILE Q 12
 		Goto See
 	Heal:
-		VILE "YZ[" 10 BRIGHT
+		VILE "Z[\" 10 BRIGHT
 		Goto See
 	Pain:
 		VILE R 5
@@ -66,8 +67,8 @@ actor D64Archvile_Samsara : SamsaraMonsterDemonicTotalGib replaces D64Archvile
 		VILE S 7 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		VILE T 7 A_Scream
 		VILE U 7 A_NoBlocking
-		VILE VW 7
-		VILE X -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler") // Needed for ReMixer
+		VILE VWX 7
+		VILE Y -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler") // Needed for ReMixer
 		Stop
 	Crush:
 		A027 A -1 A_PlaySound("misc/gibbed")

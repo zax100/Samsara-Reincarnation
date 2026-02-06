@@ -331,6 +331,8 @@ actor D64Cacodemon_Samsara_ShrinkEffect : D64Cacodemon_Samsara
 	}
 }
 
+Actor Trail_CacodemonBall_Samsara : Actor replaces Trail_CacodemonBall {}
+
 Actor D64NightmareCacodemon_Samsara : D64Cacodemon_Samsara replaces D64NightmareCacodemon
 {
 	Health 700

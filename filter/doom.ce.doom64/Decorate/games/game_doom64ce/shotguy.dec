@@ -15,7 +15,7 @@ Actor D64Shotgunguy_Samsara : SamsaraMonsterHumanoid replaces Shotgunguy2
 	ActiveSound "shotguy/active"
 	Obituary "$OB_SHOTGUY"
 	DropItem "ShotgunDrop"
-	Tag "Former Sargeant"
+	Tag "Former Sergeant"
 	Species "SamsaraShotgunGuy"
 	States
 	{
