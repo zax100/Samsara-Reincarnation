@@ -47,6 +47,16 @@ actor D64RocketSmokeTrail2 : D64RocketSmokeTrail replaces D64RocketSmokeTrail
 	}
 }
 
+actor D64TeleportFog2 : D64TeleportFog replaces D64TeleportFog
+{
+	States
+	{
+	Spawn:
+		TFOG EDCBABCDEFGH 3 BRIGHT
+		Stop
+	}
+}
+
 Actor CXNashGoreBlood_Samsara : SamsaraBloodyHellBlood replaces CXNashGoreBlood {}
 Actor CXNashGoreClassicBlood_Samsara : SamsaraBloodyHellBlood replaces CXNashGoreClassicBlood {}
 Actor CXNashGoreGibs_Samsara : Actor replaces CXNashGoreGibs {}

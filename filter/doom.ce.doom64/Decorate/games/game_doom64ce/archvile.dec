@@ -1,4 +1,4 @@
-actor D64Archvile_Samsara : SamsaraMonsterDemonicTotalGib replaces D64Archvile
+actor D64Archvile_Samsara : SamsaraMonsterDemonicTotalGib replaces Archvile2
 {
 	SpawnID 111
 	Health 700

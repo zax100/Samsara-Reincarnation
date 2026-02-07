@@ -16,7 +16,7 @@ Actor D64Demon_Samsara : SamsaraMonsterDemonicTotalGib replaces DoomDemon2
 	DeathSound "demon/death"
 	ActiveSound "demon/active"
 	Obituary "$OB_DEMONHIT"
-	Tag "Demon"
+	Tag "Bull Demon"
 	Species "SamsaraDemon"
 	States
 	{

@@ -47,6 +47,18 @@ object D64BigFire_Samsara
 	frame SFIR { light BIGFIRE }
 }
 
+object D64TeleportFog2
+{
+	frame TFOGA { light DTFOG1 }
+	frame TFOGB { light DTFOG1 }
+	frame TFOGC { light DTFOG2 }
+	frame TFOGD { light DTFOG2 }
+	frame TFOGE { light DTFOG3 }
+	frame TFOGF { light DTFOG3 }
+	frame TFOGG { light DTFOG4 }
+	frame TFOGH { light DTFOG4 }
+}
+
 lightsizefactor 1.5
 
 object D64Zombieman_Samsara

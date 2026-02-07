@@ -1,23 +1,5 @@
 version "4.10"
 
-// Do we need this if the title map is getting skipped? Let's keep it anyway.
-class D64TitlemapCyberdemon_Samsara : D64TitlemapCyberdemon replaces D64TitlemapCyberdemon
-{
-	States
-	{
-		Missile:
-            TNT1 A 0 a_jumpif(IsSmooth(), "SmoothMissile");
-			CYBR E 18 Bright A_SpawnProjectile("D64Rocket", 88, -31, 0, CMF_BADPITCH);
-			CYBR F 18 A_FaceTarget;
-			Loop;
-        SmoothMissile:
-            CYBR E 15 Bright A_SpawnProjectile("D64Rocket", 88, -31, 0, CMF_BADPITCH);
-			SCYB E 3 Bright;
-            CYBR F 18 A_FaceTarget;
-		    Loop;
-	}
-}
-
 class D64BigFire_Samsara : D64BigFire replaces D64BigFire
 {
 	States
@@ -62,4 +44,17 @@ Class SamsaraDoom64CEHandler : EventHandler
             Players[e.PlayerNumber].Mo.A_SetSize(19, 64, True);
         }
     }
+}
+
+class SamsaraDoom64CEPostProcessor : LevelPostProcessor
+{
+    protected void Apply(Name checksum, String mapname)
+    {
+		// For some reason, the rocket launcher in MAP22 doesn't trigger
+		// the macro, so a brute-force hack was needed to manually activate it.
+		if(mapname == "MAP22")
+		{
+			AddThing(254, (-160.0, -736.0, 0.0));
+		}
+	}
 }

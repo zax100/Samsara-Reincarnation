@@ -450,7 +450,7 @@ actor D64Resurrector_Samsara : SamsaraMonsterDemonicBoss replaces D64Resurrector
 	DeathSound "mother/death"
 	ActiveSound "mother/active"
 	Obituary "$OB_MOTH"
-	Tag "Mother Demon"
+	Tag "The Mother Demon"
 	Species "SamsaraResurrector"
 	States
 	{

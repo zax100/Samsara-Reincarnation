@@ -1,3 +1,4 @@
+// The missile state was borrowed from ReMixer to make the firing more like the original game
 Actor D64Arachnotron_Samsara : SamsaraMonsterCyberneticTotalGib replaces Arachnotron2
 {
 	Health 500
@@ -32,9 +33,24 @@ Actor D64Arachnotron_Samsara : SamsaraMonsterCyberneticTotalGib replaces Arachno
 		TNT1 A 0 A_ChangeFlag("NOPAIN",0)
 		BSPI A 15 A_FaceTarget
 		TNT1 A 0 A_SpawnProjectile("D64ArachnotronPlasma2", 28,-14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
-		BSPI E 6 BRIGHT A_SpawnProjectile("D64ArachnotronPlasma2", 28, 14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
-		BSPI E 1 BRIGHT A_SpidRefire
-		Goto Missile+2
+		BSPI E 6 bright A_SpawnProjectile("D64ArachnotronPlasma2", 28, 14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 1 bright A_SpidRefire
+		TNT1 A 0 A_SpawnProjectile("D64ArachnotronPlasma2", 28,-14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 6 bright A_SpawnProjectile("D64ArachnotronPlasma2", 28, 14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 1 bright A_SpidRefire
+		TNT1 A 0 A_SpawnProjectile("D64ArachnotronPlasma2", 28,-14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 6 bright A_SpawnProjectile("D64ArachnotronPlasma2", 28, 14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 1 bright A_SpidRefire
+		TNT1 A 0 A_SpawnProjectile("D64ArachnotronPlasma2", 28,-14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 6 bright A_SpawnProjectile("D64ArachnotronPlasma2", 28, 14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 1 bright A_SpidRefire
+		Goto MissileLoop
+	MissileLoop:
+		TNT1 A 0 A_SpawnProjectile("D64ArachnotronPlasma2", 28,-14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 6 bright A_SpawnProjectile("D64ArachnotronPlasma2", 28, 14, 0, CMF_AIMOFFSET|CMF_BADPITCH)
+		BSPI E 1 bright A_SpidRefire
+		TNT1 A 0 A_Jump(9, "MissileLoop")
+		Goto Missile
 	Pain:
 		BSPI F 3
 		BSPI F 3 A_Pain
@@ -460,7 +476,7 @@ Actor D64Nightcrawler_Samsara : D64Arachnotron_Samsara replaces D64Nightcrawler
 	Height 64
 	Speed 10
 	Obituary "$OB_NIGHTCRAWL"
-	Tag "Nightcrawler"
+	Tag "Night Crawler"
 	SpawnID 214
 	States
 	{

@@ -8,6 +8,25 @@ actor D64PlasmaRifle_Samsara : RandomSpawner replaces D64PlasmaRifle { DropItem 
 actor D64BFG9000_Samsara : RandomSpawner replaces D64BFG9000 { DropItem "SamsaraSlotSevenPickup" }
 actor D64LaserRifle_Samsara : RandomSpawner replaces D64LaserRifle { DropItem "SamsaraSlotSevenPickup" SpawnID 168 }
 
+actor D64MAP22Hack : CustomInventory 254
+{
+	Game Doom
+	+INVENTORY.ALWAYSPICKUP
+	+INVENTORY.QUIET
+	Inventory.PickupMessage ""
+	Inventory.PickupSound ""
+	States
+	{
+	Spawn:
+		TNT1 A -1
+		Stop
+	Pickup:
+		TNT1 A 0
+		TNT1 A 1 ACS_NamedExecuteAlways("Macro_1")
+		Stop
+	}
+}
+
 actor D64HellPotion_Samsara : HealPack0Dump replaces D64HellPotion { SpawnID 221 }
 actor D64Radar_Samsara : SamsaraAllmap replaces D64Radar { SpawnID 220 }
 actor D64UnmakerUpgrade1_Samsara : MegaPack replaces D64UnmakerUpgrade1 {}
