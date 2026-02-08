@@ -165,6 +165,7 @@ Security Officer (Marathon):
 + When fired underwater, the fusion pistol now deals only the amount of splash damage the original attacks did to Security Officer as self-damage in the Marathon games.
 ! The Talon Ceramic Combat Blade is now selected through weapon slot 0 instead of weapon slot 1.
 ! The Tech.50 Pacifier is now selected through weapon slot 9 instead of weapon slot 1.
+! Updated offset and weapon outlines for Security Officer's hybrid pickup sprites.
 
 Ranger (Quake I):
 
