@@ -6245,10 +6245,10 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                     if (!hasweapon)
                     {
                         GiveInventory("Duke3D_M16", 1);
-                        GiveInventory("Clip", dmextraammo ? 30 / tossedammo * 5 / 2 : 30 / tossedammo);
+                        GiveInventory("Clip", dmextraammo ? 40 / tossedammo * 5 / 2 : 40 / tossedammo);
                         result = 1;
                     } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                        GiveInventory("Clip", 30 / tossedammo);
+                        GiveInventory("Clip", 40 / tossedammo);
                         result = 1;
                     }
 

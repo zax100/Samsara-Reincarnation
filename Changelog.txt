@@ -143,6 +143,7 @@ Duke Nukem 3D:
 - Pipebombs/pineapples now have a splash radius of 210 map units (decreased from 250).
 + Added hybrid pickup sprites for the Uber Soak'em.
 ! The M16 sprites have been extended, and a new pickup sprite has been added.
++ The M16 now gives 40 rounds of Ammo 1 on pickup (increased from 30).
 + The M16 now holds 40 rounds before needing to reload (increased from 30).
 * Fixed the M16 magazine not being properly reset with pistol start enabled.
 + The M16 now has a horizontal spread of 4 (decreased from 4.5).
