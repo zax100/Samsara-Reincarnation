@@ -843,7 +843,7 @@ actor HereticCorvusClone : SamsaraMiscCharHumanoidStatic
         TNT1 A 0 ACS_NamedExecuteWithResult("HereticTurnTowardTarget",0)
       MissileUseTempestWand:
         CORV F 0 A_PlaySound("heretic/tempestfire",CHAN_WEAPON)
-        CORV F 4 Bright A_CustomRailgun(25*random(2,4),0,None,None,RGF_SILENT|RGF_FULLBRIGHT,0,50,"CorvusTempestWandPuff",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
+        CORV F 4 Bright A_CustomRailgun(25*random(2,4),0,None,None,RGF_SILENT|RGF_FULLBRIGHT,0,10,"CorvusTempestWandPuff",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
         CORV E 8
         goto MissileFinish
 
@@ -1344,7 +1344,7 @@ actor HereticCorvusCloneCoop : HereticCorvusClone
         TNT1 A 0 ACS_NamedExecuteWithResult("HereticTurnTowardTarget",0)
       MissileUseTempestWand:
         CORV F 0 A_PlaySound("heretic/tempestfire",CHAN_WEAPON)
-        CORV F 4 Bright A_CustomRailgun(50*random(1,4),0,None,None,RGF_SILENT|RGF_FULLBRIGHT,0,50,"CorvusTempestWandPuffCoop",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
+        CORV F 4 Bright A_CustomRailgun(50*random(1,4),0,None,None,RGF_SILENT|RGF_FULLBRIGHT,0,10,"CorvusTempestWandPuffCoop",0,0,0,0,24.0,1.0,"CorvusTempestWandTrail")
         CORV E 8
         goto MissileFinish
 

@@ -139,10 +139,7 @@ actor CorvusTempestWandPuff
     }
 }
 
-actor CorvusTempestWandPuffCoop : CorvusTempestWandPuff 
-{
-    +MTHRUSPECIES
-}
+actor CorvusTempestWandPuffCoop : CorvusTempestWandPuff { +MTHRUSPECIES }
 
 // Powered
 
