@@ -435,6 +435,7 @@ JC Denton (Deus Ex):
 Doom:
 
 * Fixed the pain elemental using the wrong sprite when hit by Duke's mighty boot.
++ Added Samsara stuff to the MBF helper dog, because why not?
 
 Strife: Quest for the Sigil:
 

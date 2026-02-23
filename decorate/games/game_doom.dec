@@ -117,4 +117,5 @@ actor BulletPuffThruGhost : BulletPuff { +THRUGHOST }
 #include "decorate/games/game_doom/zombieman.dec"
 
 #include "decorate/games/game_doom/scriptedmarine.dec"
+#include "decorate/games/game_doom/mbfhelperdog.dec"
 #include "decorate/games/game_doom/stealth.dec"
