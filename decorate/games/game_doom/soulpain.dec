@@ -550,3 +550,46 @@ actor PainElemental_ShrinkEffect : PainElemental2
 			Stop
 	}
 }
+
+actor BetaSkull2 : LostSoul2 replaces BetaSkull
+{
+	States
+	{
+	Spawn:
+		SKUL A 10 A_Look
+		Loop
+	See:
+		SKUL BCDA 5 A_Chase
+		Loop
+	Missile:
+		SKUL E 4 A_FaceTarget
+		SKUL F 5 A_BetaSkullAttack
+		SKUL F 4
+		Goto See
+	Pain:
+		SKUL G 4
+		SKUL H 2 A_Pain
+		Goto See
+		SKUL I 4
+		Goto See
+	Pain.DoomDamageTypeStunner:
+		SKUL G 2 A_ChangeFlag("NOPAIN",true)
+		SKUL G 300 A_Pain
+		TNT1 A 0 A_ChangeFlag("NOPAIN",false)
+		Goto See
+	Pain.MightyBoot:
+		TNT1 A 0 A_PlaySound("duke/kickhit",CHAN_BODY)
+		SKUL G 2 A_FaceTarget
+		TNT1 A 0 A_Recoil(14)
+		SKUL G 16 A_Pain
+		Goto See
+	Death:
+		SKUL J 5 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+		SKUL KLM 5
+		SKUL N 5 A_Scream
+		SKUL O 5
+		SKUL P 5 A_Fall
+		SKUL Q 5 A_Stop
+		Wait
+	}
+}

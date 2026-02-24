@@ -61,8 +61,8 @@ Doom:
 - The railgun (powered) now does 20 damage per unzoomed rail attack in PVP, totaling 40, and 30 damage per unzoomed rail attack in PVE, totaling 60 (decreased from 45, totaling 90).
 - The railgun (powered) now does 20 damage per zoomed rail attack in PVP, totaling 80 (decreased from 30, totaling 120).
 - The railgun (powered) now fires twice as slowly when zoomed.
-- With improved weapon balance, the B.F.G. 9000 (unpowered) no longer has the extra explosion damage or additional weaker BFG sprays from Stronghold Rejuvenated, since the context makes it unneeded here.
 + With improved weapon balance, the B.F.G. 9000 (unpowered) now deals 800 direct damage (increased from 100-800 in multiples of 100).
+- With improved weapon balance, the B.F.G. 9000 (unpowered) no longer has the extra explosion damage or additional weaker BFG sprays from Stronghold Rejuvenated, since the context makes it unneeded here.
 ! The B.F.G. 9000 (powered) now deals 20-160 direct damage in multiples of 20 (average 90; changed from 100).
 - The B.F.G. 9000 (powered) now only deals 128 splash damage in a consistent radius (decreased from 192), has no smaller BFG spray, and deals self-damage.
 - With improved weapon balance, the pyro cannon lingering fire now deals 4 splash damage (decreased from 5). It also cannot put actors in their Pain state in every frame except the first.
@@ -436,7 +436,7 @@ JC Denton (Deus Ex):
 Doom:
 
 * Fixed the pain elemental using the wrong sprite when hit by Duke's mighty boot.
-+ Added Samsara stuff to the MBF helper dog, because why not?
++ Added Samsara stuff to the beta lost soul and MBF helper dog, because why not?
 
 Strife: Quest for the Sigil:
 
