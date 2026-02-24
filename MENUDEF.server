@@ -154,7 +154,7 @@ OptionMenu "SamsaraServerSideOptions"
     Option "Custom Gravity",                 "samsara_nocustomgravity",   "OffOn"
     Option "Force Weapon Recoil",            "samsara_forcerecoil",       "OnOff"
     Option "Proximity Explosive Behavior",   "samsara_proximitybehavior", "ProximityBehavior"
-    Option "Improved Weapon Balance",        "samsara_improvedbalance",   "ImprovedBalanceOptions"
+    Option "Weapon Balance",                 "samsara_weaponbalance",     "WeaponBalanceOptions"
     StaticText ""
     Submenu "Item Replacement Options", "SamsaraItemReplacementOptions"
     StaticText ""
@@ -413,7 +413,7 @@ OptionValue "MiscCharHLMode"
     4, "Combined"
 }
 
-OptionValue "ImprovedBalanceOptions"
+OptionValue "WeaponBalanceOptions"
 {
     0, "Vanilla"
     1, "Improved"

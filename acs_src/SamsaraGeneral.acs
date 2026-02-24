@@ -13596,7 +13596,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", true);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", true);
-		SetCVar("samsara_improvedbalance", 0);
+		SetCVar("samsara_weaponbalance", 0);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -14003,7 +14003,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
-		SetCVar("samsara_improvedbalance", 0);
+		SetCVar("samsara_weaponbalance", 0);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -14410,7 +14410,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
-		SetCVar("samsara_improvedbalance", 1);
+		SetCVar("samsara_weaponbalance", 1);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -14818,7 +14818,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", true);
-		SetCVar("samsara_improvedbalance", 2);
+		SetCVar("samsara_weaponbalance", 2);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -15231,7 +15231,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
-		SetCVar("samsara_improvedbalance", 2);
+		SetCVar("samsara_weaponbalance", 2);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);

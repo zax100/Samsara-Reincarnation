@@ -148,7 +148,7 @@ server bool samsara_banallies = false;
 server bool samsara_nocustomgravity = false;
 server bool samsara_forcerecoil = false;
 server bool samsara_proximitybehavior = false;
-server int samsara_improvedbalance = 1;
+server int samsara_weaponbalance = 1;
 
 // Character Ban Options
 server bool samsara_bandoomguy = false;

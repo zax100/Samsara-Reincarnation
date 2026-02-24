@@ -4791,7 +4791,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
         SetInventory("DoomNoBFGAim", (GetCVar("sv_nobfgaim") && isZDoom()) || (!GetCVar("sv_bfgfreeaim") && !isZDoom()));
 
-        SetInventory("SamsaraImprovedBalance", GetCVar("samsara_improvedbalance") == 1 || (GetCVar("samsara_improvedbalance") >= 2 && GetCVar("samsara_mixerloaded")));
+        SetInventory("SamsaraImprovedBalance", GetCVar("samsara_weaponbalance") == 1 || (GetCVar("samsara_weaponbalance") >= 2 && GetCVar("samsara_mixerloaded")));
 
         SetInventory("SamsaraUsingAbsolutionUnmaker", GetCVar("samsara_absolutionunmaker"));
 
