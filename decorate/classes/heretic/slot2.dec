@@ -179,8 +179,14 @@ actor SamsaraHereticMaceAttackHandler1 : Trigger
         stop
 
       PickupAttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
+        TNT1 A 0 A_FireCustomMissile("MaceFX1Coop",random(-5,5),false,0,0,0,2)
         TNT1 A 0 A_FireCustomMissile("MaceFX1Coop",random(-5,5),false,0,0,0,2)
         stop
+	
+      PickupAttackCoopImproved:
+        TNT1 A 0 A_FireCustomMissile("MaceFX12",random(-5,5),false,0,0,0,2) //A_FireMacePL1
+		stop
     }
 }
 
@@ -209,8 +215,14 @@ actor SamsaraHereticMaceAttackHandler2 : Trigger
         stop
 
       PickupAttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireCustomMissile("MaceFX2Coop",0,false,0,2,0,10)
-        stop
+        stop	
+      PickupAttackCoopImproved:
+        TNT1 A 0 A_FireCustomMissile("MaceFX2CoopImproved",0,false,0,2,0,10)
+		stop
+		stop
+
     }
 }
 
@@ -266,11 +278,14 @@ actor MaceFX22 : MaceFX2 replaces MaceFX2
         stop
     }
 }
-
 actor MaceFX2Coop : MaceFX22
 {
     Species "Player"
     +THRUSPECIES
+}
+actor MaceFX2CoopImproved : MaceFX2Coop
+{
+    Damage 6
 }
 
 actor MaceFX32 : MaceFX3 replaces MaceFX3

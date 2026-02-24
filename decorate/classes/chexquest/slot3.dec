@@ -157,12 +157,21 @@ actor SamsaraChexSuperLargeZorcherAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
+
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireCustomMissile("SLZorcherBoltCoop",0,false,4,4)
         TNT1 A 0 A_FireCustomMissile("SLZorcherBoltCoop",0,false,4,-4)
         TNT1 A 0 A_FireCustomMissile("SLZorcherBoltCoop",0,false,-4,4)
         TNT1 A 0 A_FireCustomMissile("SLZorcherBoltCoop",0,false,-4,-4)
         stop
-    }
+
+
+      PickupAttackCoopImproved:
+        TNT1 A 0 A_FireCustomMissile("SLZorcherBoltCoopImproved",0,false,4,4)
+        TNT1 A 0 A_FireCustomMissile("SLZorcherBoltCoopImproved",0,false,4,-4)
+        TNT1 A 0 A_FireCustomMissile("SLZorcherBoltCoopImproved",0,false,-4,4)
+        TNT1 A 0 A_FireCustomMissile("SLZorcherBoltCoopImproved",0,false,-4,-4)
+ }
 }
 
 actor SLZorcherBolt// : FastProjectile
@@ -341,7 +350,10 @@ actor SLZorcherBoltCoop : SLZorcherBolt
         goto CrashFinish
     }
 }
-
+actor SLZorcherBoltCoopImproved : SLZorcherBoltCoop
+{
+    Damage (random(20,50))
+}
 actor SLZorcherBoltCoop2 : SLZorcherBoltCoop
 {
     Speed 125

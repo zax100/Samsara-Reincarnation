@@ -65,20 +65,20 @@ actor SamsaraCyberMageDarklightFoilAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupCoop")
       PickupDM:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupDMSpread")
-        TNT1 A 0 A_CustomPunch(random(3,4)*12,true,0,"CyberSaberPuff",100)
+        TNT1 A 0 A_CustomPunch(random(6,8)*6,true,0,"CyberSaberPuff",112)
         stop
 
       PickupDMSpread:
-        TNT1 A 0 A_CustomPunch((random(3,4)*12)*3,true,0,"CyberSaberPuff",100)
+        TNT1 A 0 A_CustomPunch((random(6,8)*6)*3,true,0,"CyberSaberPuff",112)
         stop
 
       PickupCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupCoopSpread")
-        TNT1 A 0 A_CustomPunch(random(3,4)*12,true,0,"CyberSaberPuffCoop",100)
+        TNT1 A 0 A_CustomPunch(random(6,8)*6,true,0,"CyberSaberPuffCoop",128)
         stop
 
       PickupCoopSpread:
-        TNT1 A 0 A_CustomPunch((random(3,4)*12)*3,true,0,"CyberSaberPuffCoop",100)
+        TNT1 A 0 A_CustomPunch((random(6,8)*6)*3,true,0,"CyberSaberPuffCoop",128)
         stop
     }
 }

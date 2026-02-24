@@ -139,7 +139,6 @@ actor PhoenixShot : PhoenixFX1
 	Decal Scorch
 	Obituary "$SAMSARA_CORVUS_OB_SLOT5"
     //SelfObituary "%o was too close to %p exploding fireball."
-	//Damage 100
     +BLOODSPLATTER
     States
     {
@@ -162,6 +161,7 @@ actor PhoenixShot2 : PhoenixShot
 {
     Species "Player"
     +THRUSPECIES
+	Damage (10*random(1,20)
 }
 
 // Powered
@@ -262,7 +262,7 @@ actor PhoenixFX2DM //: PhoenixFX2 // inheritance caused players to be temporaril
 
 actor PhoenixFX2A : PhoenixFX2DM
 {
-	Damage 2
+	Damage (random(1,35))
 	Species "Player"
 	+THRUSPECIES
 }

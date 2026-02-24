@@ -202,8 +202,13 @@ actor SamsaraHexenSerpentStaffRangedAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireCustomMissile("SamsaraHexenCStaffMissileCoop",-3,false)
         TNT1 A 0 A_FireCustomMissile("SamsaraHexenCStaffMissile2Coop",3,false)
+        stop
+      PickupAttackCoopImproved:
+        TNT1 A 0 A_FireCustomMissile("SamsaraHexenCStaffMissileCoopImproved",-3,false)
+        TNT1 A 0 A_FireCustomMissile("SamsaraHexenCStaffMissile2CoopImproved",3,false)
         stop
     }
 }
@@ -221,12 +226,26 @@ actor SamsaraHexenCStaffMissile2 : SamsaraHexenCStaffMissile { WeaveIndexXY 0 }
 
 actor SamsaraHexenCStaffMissileCoop : SamsaraHexenCStaffMissile
 {
+    Damage (random(1,5)*5) // 5
+    Species "Player"
+    +THRUSPECIES
+}
+actor SamsaraHexenCStaffMissileCoopImproved : SamsaraHexenCStaffMissileCoop
+{
+    Damage (random(1,7)*5) // 5
     Species "Player"
     +THRUSPECIES
 }
 
 actor SamsaraHexenCStaffMissile2Coop : SamsaraHexenCStaffMissile2
 {
+    Species "Player"
+    +THRUSPECIES
+}
+
+actor SamsaraHexenCStaffMissile2CoopImproved : SamsaraHexenCStaffMissile2
+{
+    Damage (random(1,7)*5) // 5
     Species "Player"
     +THRUSPECIES
 }
@@ -294,8 +313,13 @@ actor SamsaraHexenBlightShockAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
         TNT1 AAAA 0 A_FireCustomMissile("BlightShockShot1Coop",frandom(-12,12),false,0,0,1,frandom(-4,4))
         TNT1 A 0 A_FireCustomMissile("BlightShockShot1Coop",0,false)
+        stop
+      PickupAttackCoopImproved:
+        TNT1 AAAA 0 A_FireCustomMissile("BlightShockShot1CoopImproved",frandom(-12,12),false,0,0,1,frandom(-4,4))
+        TNT1 A 0 A_FireCustomMissile("BlightShockShot1CoopImproved",0,false)
         stop
     }
 }
@@ -305,7 +329,7 @@ actor BlightShockShot1
     Projectile
     Radius 6
     Speed 35
-    Damage 1 // was 1,6
+    Damage (random(1,6)) // was 1,6
     DamageType "HexenPoison"
     PoisonDamage 2, 4
     PoisonDamageType "HexenPoison"
@@ -370,6 +394,10 @@ actor BlightShockShot1Coop : BlightShockShot1
 {
     Species "Player"
     +THRUSPECIES
+}
+actor BlightShockShot1CoopImproved : BlightShockShot1Coop
+{
+	Damage (random(1,8))
 }
 
 // Baratus

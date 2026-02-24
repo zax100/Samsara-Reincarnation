@@ -136,9 +136,18 @@ actor SamsaraWolfenLugerAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuff2Coop",FBF_NOFLASH)
         TNT1 A 0 A_FireBullets(0,0,1,2,"BlankPuff2BloodlessCoop",FBF_NOFLASH,256)
         TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuff2BloodlessCoop",FBF_NOFLASH,128)
+        stop
+      PickupAttackCoopImproved:
+        TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuff2Coop",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuff2BloodlessCoop",FBF_NOFLASH,320)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuff2BloodlessCoop",FBF_NOFLASH,256)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuff2BloodlessCoop",FBF_NOFLASH,192)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuff2BloodlessCoop",FBF_NOFLASH,128)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuff2BloodlessCoop",FBF_NOFLASH,64)
         stop
     }
 }

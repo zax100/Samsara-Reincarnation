@@ -482,11 +482,11 @@ Actor RTCW_MG42Tracer : RTCW_Tracer
 	{
 		Crash:
 		Death:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 18, 0),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 14, 0),8,!XF_HURTSOURCE,0,8)
 			Goto Super::Death
 
 		XDeath:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 18, 0),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 14, 0),8,!XF_HURTSOURCE,0,8)
 			Goto Super::XDeath
 	}
 }
@@ -500,11 +500,11 @@ Actor RTCW_MG42TracerSoundConsole : RTCW_TracerSoundConsole
 	{
 		Crash:
 		Death:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 18, 1),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 14, 1),8,!XF_HURTSOURCE,0,8)
 			Goto Super::Death
 
 		XDeath:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 18, 1),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 14, 1),8,!XF_HURTSOURCE,0,8)
 			Goto Super::XDeath
 	}
 }
@@ -518,11 +518,11 @@ Actor RTCW_MG42TracerSoundET : RTCW_TracerSoundET
 	{
 		Crash:
 		Death:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 18, 2),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 14, 2),8,!XF_HURTSOURCE,0,8)
 			Goto Super::Death
 
 		XDeath:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 18, 2),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 14, 2),8,!XF_HURTSOURCE,0,8)
 			Goto Super::XDeath
 	}
 }

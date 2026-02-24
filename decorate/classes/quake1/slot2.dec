@@ -78,7 +78,12 @@ actor SamsaraQuakeDoubleShotgunAttackHandler : Trigger
         goto PickupFinish
 
       PickupAttackQuakeICoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackQuakeICoopImproved")
         TNT1 A 0 A_FireBullets(7,5,14,5,"QuakeBulletPuffThruGhostCoop",FBF_NORANDOM|FBF_NOFLASH)
+        goto PickupFinish
+	
+	  PickupAttackQuakeICoopImproved:
+        TNT1 A 0 A_FireBullets(7,5,16,5,"QuakeBulletPuffThruGhostCoop",FBF_NORANDOM|FBF_NOFLASH)
         goto PickupFinish
 
       // Deathmatch Classic sounds
@@ -91,7 +96,11 @@ actor SamsaraQuakeDoubleShotgunAttackHandler : Trigger
         goto PickupFinish
 
       PickupAttackDMCCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,PickupAttackDMCCoopImproved")
         TNT1 A 0 A_FireBullets(7,5,14,5,"QuakeBulletPuffThruGhostCoopSoundDMC",FBF_NORANDOM|FBF_NOFLASH)
+        goto PickupFinish
+      PickupAttackDMCCoop:
+        TNT1 A 0 A_FireBullets(7,5,16,5,"QuakeBulletPuffThruGhostCoopSoundDMC",FBF_NORANDOM|FBF_NOFLASH)
         goto PickupFinish
 
       // Finishing stuff

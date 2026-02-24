@@ -54,7 +54,7 @@ ACTOR CMRocket
 	Radius 11
 	Height 6
 	Speed 32
-    Damage (Random(20,30))
+    Damage (Random(40,50))
 	Projectile
 	+RANDOMIZE
 	+FORCERADIUSDMG
@@ -67,7 +67,7 @@ ACTOR CMRocket
 		Loop
 	Death:
 		CMX2 B 4 Bright
-		CMX2 C 4 Bright A_Explode(100, 104, 1, 1)
+		CMX2 C 4 Bright A_Explode(128, 128, 1, 1)
 		CMX2 D 4 Bright
 		CMX2 E 4 Bright
 		CMX2 F 4 Bright

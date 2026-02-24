@@ -434,10 +434,10 @@ Actor RTCW_MauserTracer : RTCW_Tracer
 	{
 		Crash:
 		Death:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 200, 0),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 150, 0),8,!XF_HURTSOURCE,0,8)
 			Goto Super::Death
 		XDeath:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 200, 0),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 150, 0),8,!XF_HURTSOURCE,0,8)
 			Goto Super::XDeath
 	}
 }

@@ -76,6 +76,7 @@ actor SamsaraHereticCrossbowAttackHandler : Trigger
       PickupAttack:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
       PickupAttackDM:
         TNT1 A 0 A_FireCustomMissile("CrossbowFX1B",0,false)
         TNT1 A 0 A_FireCustomMissile("CrossbowFX3B",-4.5,false)
@@ -87,6 +88,10 @@ actor SamsaraHereticCrossbowAttackHandler : Trigger
         TNT1 A 0 A_FireCustomMissile("CrossbowFX32",-4.5,false)
         TNT1 A 0 A_FireCustomMissile("CrossbowFX32",4.5,false)
         stop
+	  PickupAttackCoopImproved:
+        TNT1 A 0 A_FireCustomMissile("CrossbowFX12Improved",0,false)
+        TNT1 A 0 A_FireCustomMissile("CrossbowFX32Improved",-4.5,false)
+        TNT1 A 0 A_FireCustomMissile("CrossbowFX32Improved",4.5,false)
     }
 }
 
@@ -136,6 +141,11 @@ actor CrossbowFX12 : CrossbowFX1
         stop
     }
 }
+actor CrossbowFX12Improved: CrossbowFX12
+{
+	Damage 14
+	Speed 40
+}
 
 actor CrossbowFX3B : CrossbowFX3
 {
@@ -162,7 +172,7 @@ actor CrossbowFX3B : CrossbowFX3
 actor CrossbowFX32 : CrossbowFX3
 {
     DamageType "CorvusCrossbow"
-    Damage 3
+    Damage 4
     DeathSound "heretic/bowhit"
     Decal CrossbowScorch2
     Species "Player"
@@ -181,7 +191,10 @@ actor CrossbowFX32 : CrossbowFX3
         stop
     }
 }
-
+actor CrossbowFX32Improved : CrossbowFX32
+{
+	Damage 5
+}
 // Powered
 
 actor SamsaraHereticCrossbowPoweredAttackHandler : Trigger

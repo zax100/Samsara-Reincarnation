@@ -186,6 +186,7 @@ actor SamsaraHexenBishopsShortswordAttackHandler : Trigger
         stop
 
       PickupAttackStrongCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackStrongCoopImproved")
         TNT1 A 0 A_FireBullets(-32,-16,-1,10,"ClericSwordPuffCoop",FBF_EXPLICITANGLE|FBF_NOFLASH|FBF_NORANDOMPUFFZ,120)
         TNT1 A 0 A_FireBullets(-16,-12,-1,10,"ClericSwordPuffCoop",FBF_EXPLICITANGLE|FBF_NOFLASH|FBF_NORANDOMPUFFZ,120)
         TNT1 A 0 A_FireBullets(0,-8,-1,10,"ClericSwordWallPuffCoop",FBF_EXPLICITANGLE|FBF_NOFLASH|FBF_NORANDOMPUFFZ,120)
@@ -194,6 +195,17 @@ actor SamsaraHexenBishopsShortswordAttackHandler : Trigger
         TNT1 A 0 A_FireCustomMissile("ClericSwordSlashCoop",0,false)
         TNT1 A 0 A_FireCustomMissile("ClericSwordSlashCoop",0,false,-16)
         TNT1 A 0 A_FireCustomMissile("ClericSwordSlashCoop",0,false,16)
+        stop
+
+	PickupAttackStrongCoopImproved:
+        TNT1 A 0 A_FireBullets(-32,-16,-1,13,"ClericSwordPuffCoop",FBF_EXPLICITANGLE|FBF_NOFLASH|FBF_NORANDOMPUFFZ,120)
+        TNT1 A 0 A_FireBullets(-16,-12,-1,13,"ClericSwordPuffCoop",FBF_EXPLICITANGLE|FBF_NOFLASH|FBF_NORANDOMPUFFZ,120)
+        TNT1 A 0 A_FireBullets(0,-8,-1,13,"ClericSwordWallPuffCoop",FBF_EXPLICITANGLE|FBF_NOFLASH|FBF_NORANDOMPUFFZ,120)
+        TNT1 A 0 A_FireBullets(16,-12,-1,13,"ClericSwordPuffCoop",FBF_EXPLICITANGLE|FBF_NOFLASH|FBF_NORANDOMPUFFZ,120)
+        TNT1 A 0 A_FireBullets(32,0,-1,13,"ClericSwordPuffCoop",FBF_EXPLICITANGLE|FBF_NOFLASH|FBF_NORANDOMPUFFZ,120)
+        TNT1 A 0 A_FireCustomMissile("ClericSwordSlashCoopImproved",0,false)
+        TNT1 A 0 A_FireCustomMissile("ClericSwordSlashCoopImproved",0,false,-16)
+        TNT1 A 0 A_FireCustomMissile("ClericSwordSlashCoopImproved",0,false,16)
         stop
     }
 }
@@ -301,7 +313,12 @@ actor ClericSwordSlashCoop : ClericSwordSlash
     Species "Player"
     +THRUSPECIES
 }
-
+actor ClericSwordSlashCoopImproved : ClericSwordSlash
+{
+    Damage (10)
+    Species "Player"
+    +THRUSPECIES
+}
 actor ClericSwordSlashTrail
 {
     Radius 16
