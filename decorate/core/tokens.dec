@@ -60,7 +60,7 @@ Actor DMModeOn : Boolean {}
 Actor InstagibModeOn : Boolean {}
 Actor RJingModeOn : Boolean {}
 Actor PistolModeOn : Boolean { Inventory.ForbiddenTo "HexenPlayer", "IPFreeley", "BlakeStone", "Corridor7Player", "GrondovalPlayer", "Bitterman", "Demoness", "PettonEverhail", "DanielGarner" }
-actor SamsaraImprovedDoomguyBalance : Boolean {}
+actor SamsaraImprovedBalance : Boolean {}
 Actor QuakeModeOn : Boolean { Inventory.RestrictedTo "QuakePlayer" }
 Actor SamsaraUsingSmoothAnims : Boolean {}
 Actor ExpandedHud : Boolean {}

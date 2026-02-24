@@ -13570,7 +13570,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", false);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 0);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -13597,6 +13596,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", true);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", true);
+		SetCVar("samsara_improvedbalance", 0);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -13977,7 +13977,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", false);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 0);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -14004,6 +14003,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
+		SetCVar("samsara_improvedbalance", 0);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -14384,7 +14384,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", true);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 1);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -14411,6 +14410,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
+		SetCVar("samsara_improvedbalance", 1);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -14792,7 +14792,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", false);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 2);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -14819,6 +14818,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", true);
+		SetCVar("samsara_improvedbalance", 2);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -15205,7 +15205,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", isZDoom() ? true : false);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 2);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -15232,6 +15231,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
+		SetCVar("samsara_improvedbalance", 2);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);

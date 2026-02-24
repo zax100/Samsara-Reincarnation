@@ -176,7 +176,7 @@ actor " Chainsaw " : Chainsaw
 	FireStr:
 		TNT1 A 0 A_JumpIfInventory("PowerSamsaraDoomguyStrWeaponPower",1,"FireStrPowered")
 		TNT1 A 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"FireStrPowered")
-		TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"FireStr1Improved")
+		TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"FireStr1Improved")
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 28), "FireStr1Improved")
 	FireStrVanilla:
 		TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"FireStrVanillaBerserk")
@@ -237,7 +237,7 @@ actor SamsaraDoomguyChainsawAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"PickupBerserk")
       // Normal
       PickupNormal:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupNormalImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupNormalImproved")
       // Normal (vanilla)
       PickupNormalVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupNormalVanillaCoop")
@@ -304,7 +304,7 @@ actor SamsaraDoomguyChainsawAttackHandler : Trigger
 
       // Berserk
       PickupBerserk:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupBerserkImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupBerserkImproved")
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 28), "PickupBerserkImproved")
       // Berserk (vanilla)
       PickupBerserkVanilla:
@@ -422,7 +422,7 @@ actor SamsaraDoomguy64ChainsawAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"PickupBerserk")
       // Normal
       PickupNormal:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupNormalImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupNormalImproved")
       // Normal (vanilla)
       PickupNormalVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupNormalVanillaCoop")
@@ -449,7 +449,7 @@ actor SamsaraDoomguy64ChainsawAttackHandler : Trigger
 
       // Berserk
       PickupBerserk:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupBerserkImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupBerserkImproved")
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 28), "PickupBerserkImproved")
       // Berserk (vanilla)
       PickupBerserkVanilla:

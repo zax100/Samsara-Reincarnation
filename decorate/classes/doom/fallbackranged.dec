@@ -237,7 +237,7 @@ actor " Pistol " : Weapon
 	FireStr:
 		TNT1 A 0 A_JumpIfInventory("PowerSamsaraDoomguyStrWeaponPower",1,"FireStrPowered")
 		TNT1 A 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"FireStrPowered")
-		TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"FireStrImproved")
+		TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"FireStrImproved")
 	FireStrVanilla:
 		DPIS I 4
 		TNT1 A 0 A_JumpIfInventory("PistolModeOn",1,1)
@@ -433,7 +433,7 @@ actor SamsaraDoomguyPistolAttackHandler : Trigger
 
       // Attack stuff
       PickupAttack:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackImproved")
       // Vanilla
       PickupAttackVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackVanillaCoop")
@@ -492,7 +492,7 @@ actor SamsaraDoomguy64PistolAttackHandler : Trigger
       // Attack stuff
       PickupAttack:
         TNT1 A 0 A_PlaySound("doom64guy/pistol",CHAN_WEAPON)
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackImproved")
       // Vanilla
       PickupAttackVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackVanillaCoop")
@@ -785,7 +785,7 @@ actor SamsaraDoomguyRifleAttackHandler : Trigger
 
       // Attack stuff
       PickupAttack:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackImproved")
       // Vanilla
       PickupAttackVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackVanillaCoop")

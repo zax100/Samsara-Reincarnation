@@ -202,7 +202,7 @@ actor SamsaraHexenSerpentStaffRangedAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireCustomMissile("SamsaraHexenCStaffMissileCoop",-3,false)
         TNT1 A 0 A_FireCustomMissile("SamsaraHexenCStaffMissile2Coop",3,false)
         stop
@@ -313,7 +313,7 @@ actor SamsaraHexenBlightShockAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 AAAA 0 A_FireCustomMissile("BlightShockShot1Coop",frandom(-12,12),false,0,0,1,frandom(-4,4))
         TNT1 A 0 A_FireCustomMissile("BlightShockShot1Coop",0,false)
         stop
