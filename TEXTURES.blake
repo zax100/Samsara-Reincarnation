@@ -621,12 +621,68 @@ Sprite "BRIFE0", 64, 64
 	Patch "SPR00736", 10, 0
 }
 
+Sprite "BRIFF0", 64, 64
+{
+	XScale 0.500
+	YScale 0.500
+	Offset -42, -15
+	Patch "SPR00987", 11, 0
+}
+
 Sprite "BRIFG0", 64, 64
 {
 	XScale 0.500
 	YScale 0.500
-	Offset -48, -15
-	Patch "SPR00987", 11, 0
+	Offset -42, -15
+	Patch "SPR00988", 11, 0
+}
+
+Sprite "BRIFH0", 64, 64
+{
+	XScale 0.500
+	YScale 0.500
+	Offset -42, -15
+	Patch "SPR00989", 11, 0
+}
+
+Sprite "BRIFI0", 64, 64
+{
+	XScale 0.500
+	YScale 0.500
+	Offset -42, -15
+	Patch "SPR00990", 11, 0
+}
+
+Sprite "BRIFJ0", 64, 64
+{
+	XScale 0.500
+	YScale 0.500
+	Offset -42, -15
+	Patch "SPR00991", 11, 0
+}
+
+Sprite "BRIFK0", 64, 64
+{
+	XScale 0.500
+	YScale 0.500
+	Offset -42, -15
+	Patch "SPR00992", 11, 0
+}
+
+Sprite "BRIFL0", 64, 64
+{
+	XScale 0.500
+	YScale 0.500
+	Offset -42, -15
+	Patch "SPR00993", 11, 0
+}
+
+Sprite "BRIFM0", 64, 64
+{
+	XScale 0.500
+	YScale 0.500
+	Offset -42, -15
+	Patch "SPR00994", 11, 0
 }
 
 Sprite "SRF5A0", 64, 64
