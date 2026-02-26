@@ -382,7 +382,7 @@ GoldenEye 007:
 -James Bond (GoldenEye 007)-
 
 * Fixed the throwing knives not doing any damage to enemies that aren't moving.
-! The throwing knifes no longer deal additional headshot damage.
+- The throwing knives no longer deal additional headshot damage.
 - Golden bullets are now given only if James Bond has the Golden Gun or Gold PP7 Special Issue.
 
 -James Bond (Goldfinger 64)-
