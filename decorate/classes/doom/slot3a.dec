@@ -415,11 +415,11 @@ actor SamsaraDoomguySuperShotgunAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackImprovedCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackImprovedCoop")
       PickupAttackImprovedDM:
-        TNT1 A 0 A_FireBullets(11.2,7.1,20,random(2,3)*5,"DoomBulletPuffPlayerThruGhost",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(11.2,7.1,20,random(2,3)*5,"DoomBulletPuffPlayerThruGhost",FBF_NORANDOM|FBF_NOFLASH)
         stop
 
       PickupAttackImprovedCoop:
-        TNT1 A 0 A_FireBullets(11.2,7.1,20,random(2,3)*5,"DoomBulletPuffPlayerThruGhost_Coop",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(11.2,7.1,20,random(2,3)*5,"DoomBulletPuffPlayerThruGhost_Coop",FBF_NORANDOM|FBF_NOFLASH)
         stop
     }
 }
