@@ -415,13 +415,11 @@ actor SamsaraDoomguySuperShotgunAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackImprovedCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackImprovedCoop")
       PickupAttackImprovedDM:
-        TNT1 A 0 A_FireBullets(11.2,7.1,10,7,"DoomBulletPuffPlayerThruGhost",FBF_NOFLASH)
-        TNT1 A 0 A_FireBullets(11.2,7.1,10,7,"DoomBulletPuffPlayerThruGhost",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(11.2,7.1,20,random(2,3)*5,"DoomBulletPuffPlayerThruGhost",FBF_NOFLASH)
         stop
 
       PickupAttackImprovedCoop:
-        TNT1 A 0 A_FireBullets(11.2,7.1,10,7,"DoomBulletPuffPlayerThruGhost_Coop",FBF_NOFLASH)
-        TNT1 A 0 A_FireBullets(11.2,7.1,10,7,"DoomBulletPuffPlayerThruGhost_Coop",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(11.2,7.1,20,random(2,3)*5,"DoomBulletPuffPlayerThruGhost_Coop",FBF_NOFLASH)
         stop
     }
 }
@@ -569,11 +567,11 @@ actor SamsaraDoomguyStrSuperShotgunAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackVanillaCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackVanillaCoop")
       PickupAttackVanillaDM:
-        TNT1 A 0 A_FireBullets(11.2,7.1,20,random(2,3)*5,"SamsaraDoomguyStrBulletPuffBallisticThruGhost",FBF_NORANDOM|FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(11.2,7.1,20,5,"SamsaraDoomguyStrBulletPuffBallisticThruGhost",FBF_NORANDOM|FBF_NOFLASH)
         stop
 
       PickupAttackVanillaCoop:
-        TNT1 A 0 A_FireBullets(11.2,7.1,20,random(2,3)*5,"SamsaraDoomguyStrBulletPuffBallisticThruGhostCoop",FBF_NORANDOM|FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(11.2,7.1,20,5,"SamsaraDoomguyStrBulletPuffBallisticThruGhostCoop",FBF_NORANDOM|FBF_NOFLASH)
         stop
 
       // Improved
