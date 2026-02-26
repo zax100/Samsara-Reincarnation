@@ -83,6 +83,7 @@ Corvus (Heretic):
 
 ! The hellstaff now deals 3-48 damage in multiples of 3 (changed from 5-40 in multiples of 5).
 + The Staff of D'Sparil lightning bolt now does 240 splash damage (increased from 200) with a radius of 192 (increased from 128).
++ Each of the lingering Explosions from the LAZ Device after the main blast has its damage doubled and radius increased by 32.
 
 
 Wolfenstein 3D:
@@ -121,9 +122,11 @@ Duke Nukem 3D:
 -Duke Nukem (Original/Life's a Beach)-
 
 - Pipebombs now have a splash radius of 210 map units (decreased from 250).
++ with improved balance active, The shotgun now fire 7 pellets of 12 damage each (increased from 10 damage each).
 ! The M16 sprites have been extended, and a new pickup sprite has been added.
 - The RPG's explosion now deals 70 splash damage (decreased from 140), with the total being 210 on a direct hit (decreased from 280).
 - The RPG's explosion now has a splash radius of 140 (decreased from 178).
++ the Freezethower's projectiles do 24 damage per dhot (increased from 22).
 
 Security Officer (Marathon):
 
@@ -141,8 +144,8 @@ Ranger (Quake I):
 + with improved balance active and in coop, the Nailgun now deals 12 damage (increased from 10), and Lava nails do 18 (increased from 15).
 + Each cluster tiny grenade now deals 51 splash damage in PVP and 64 splash damage in PVE (increased from 50).
 - Multi rockets now deal 64 splash damage in PVP and 80 splash damage in PVE (decreased from 100). This is because it adds up to doing twice as much damage as a primary shot over four multi rockets.
-- The thunderbolt (lightning mode) now deals 40 damage in PVE (decreased from 50).
-- The thunderbolt (plasma mode)'s lightning bolts now deal 40 damage (decreased from 50).
+- The thunderbolt (lightning mode) now deals 45damage in PVE (decreased from 50).
+- The thunderbolt (plasma mode)'s lightning bolts now deal 45samage (decreased from 50).
 - Ranger now gets 2 rounds of Ammo 3 from medium Ammo 2 pickups (decreased from 3) and 3 rounds of Ammo 3 from large Ammo 2 pickups (decreased from 4).
 - Ranger now receives the normal amount of Ammo 3 rounds from ammo pickups instead of getting more rounds.
 + with improved balance active, The double-barreled shotgun fires 16 pellets of 5 damage each (increased from 14)

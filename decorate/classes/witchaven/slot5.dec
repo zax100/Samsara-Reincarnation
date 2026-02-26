@@ -228,7 +228,7 @@ Actor WTFireMaceBall : FastProjectile
 		WP61 A 0 A_SpawnItemEx("WTFireMaceTrail",0,0,0,random(-1,1),random(-1,1),random(-1,1),SXF_CLIENTSIDE)
 		loop
 	Death:
-		WP50 A 0 A_Explode(random(20,40),128,0)
+		WP50 A 0 A_Explode(random(30,60),128,0)
 		TNT1 A 1 A_SpawnItemEx("WTFireMaceDeath")//,0,0,0,0,0,0,0,0,SXF_CLIENTSIDE) SOMETIMES THE PROJECTILE DOESNT SPAWN ITS DEATH ANIMATION WELL OKAY THEN
 		stop
 	}

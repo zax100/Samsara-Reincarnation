@@ -45,7 +45,7 @@ actor DSparilStaff : Weapon
         TNT1 A 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"FirePowered")
       FireUnpowered:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
-        TNT1 A 0 A_JumpIfInventory("Cell",5,1)
+        TNT1 A 0 A_JumpIfInventory("Cell",10,1)
         goto NoAmmoSwitch
         TNT1 A 0 A_AlertMonsters
         DSPS A 4 ACS_NamedExecuteWithResult("HereticTriggerCloneAttack")
@@ -57,7 +57,7 @@ actor DSparilStaff : Weapon
         DSPS A 8
         TNT1 A 0 A_CheckReload // normal switch if we have exactly 0 cells. otherwise, do the alternate switch check
         TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
-        TNT1 A 0 A_JumpIfInventory("Cell",5,1)
+        TNT1 A 0 A_JumpIfInventory("Cell",10,1)
         goto NoAmmoSwitch
         DSPS A 4 A_ReFire
         goto Ready
@@ -122,9 +122,9 @@ actor SamsaraHereticDSparilStaffLightningAttackHandler : Trigger
       // Ammo checking/taking stuff
       Pickup:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"PickupAttack")
-        TNT1 A 0 A_JumpIfInventory("Cell",5,1)
+        TNT1 A 0 A_JumpIfInventory("Cell",10,1)
         stop
-        TNT1 A 0 A_TakeInventory("Cell",5)
+        TNT1 A 0 A_TakeInventory("Cell",10)
         goto PickupAttack
 
       // Attack stuff
@@ -147,6 +147,7 @@ actor Sorcerer2FX4 : Sorcerer2FX1
     FastSpeed 30
     Damage 50
     DamageType "Electric"
+	Scale 2.0
     +BLOODSPLATTER
     States
     {
@@ -155,7 +156,7 @@ actor Sorcerer2FX4 : Sorcerer2FX1
         loop
 
       Death:
-        FX16 G 5 Bright Light("DSPARILBALL_X1") A_Explode(200,128)
+        FX16 G 5 Bright Light("DSPARILBALL_X1") A_Explode(256,192)
         FX16 H 5 Bright Light("DSPARILBALL_X2")
         FX16 I 5 Bright Light("DSPARILBALL_X3")
         FX16 J 5 Bright Light("DSPARILBALL_X4")
@@ -170,6 +171,7 @@ actor Sorcerer2FX4_Coop : Sorcerer2FX4
     +DONTHARMCLASS
     +DONTHARMSPECIES
     +THRUSPECIES
+	+FORCERADIUSDMG
 }
 
 // Powered

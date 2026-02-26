@@ -693,7 +693,7 @@ actor FreezethrowerBolt
 	Radius 13
 	Height 9
 	Speed 35
-	Damage (22)//Original was 20.
+	Damage (24)//Original was 20.
 	DamageType "DukeIce"
 	Projectile
 	Obituary "$SAMSARA_DUKE_OB_SLOT6"

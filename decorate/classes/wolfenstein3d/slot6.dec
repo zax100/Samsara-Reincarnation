@@ -121,7 +121,7 @@ actor WolfenFire
     Radius 12
     Height 8
     Speed 35 // Normal Doom plasma speed is 25
-    Damage (10*Random(1,4)) // Typical Plasma Rifle damage is 5-40
+    Damage (12*Random(1,4)) // Typical Plasma Rifle damage is 5-40
     Projectile
     +RANDOMIZE
 	+NOEXTREMEDEATH
@@ -242,7 +242,7 @@ actor SamsaraTotenkopfChaingunAttackHandler : Trigger
 
 actor Totenkopf_Tracer_Chaingun : Totenkopf_Tracer 
 { 
-	Damage (10 + (random(0,30)))
+	Damage (10 * random(1,4)))
 	DamageType "TotenkopfChaingun" 
 	Speed 8
 	States
