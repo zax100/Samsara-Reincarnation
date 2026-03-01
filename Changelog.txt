@@ -1408,7 +1408,7 @@ Kyle Katarn (Star Wars: Dark Forces):
 ! The Assault Cannon secondary fast firing animation tics have been adjusted (from 21 to 23 passing refire, 22-26 depending on refires failed to 24 failing refire).
 - The Assault Cannon's primary and secondary projectiles now have a slight spread.
 + The Assault Cannon's secondary projectile now deals 192-256 direct damage in increments of 64 (increased from 30).
-+ The Assault Cannon's secondary projectile now deals 500 splash damage (increased from 400).
++ The Assault Cannon's secondary projectile now deals 600 splash damage (increased from 400).
 - The Assault Cannon's secondary projectile now deals its splash damage across 196 map units (decreased from 200).
 + The Wookie Bowcaster has been added as the slot 7S weapon! The bowcaster fires an explosive projectile that breaks into twelve smaller shots.
 ! Lowered the flashing intensity for several weapons.

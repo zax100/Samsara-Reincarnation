@@ -538,7 +538,7 @@ actor SamsaraMarathonFusionShotCoop : SamsaraMarathonFusionShot
 
 actor SamsaraMarathonFusionShotCoopImproved : SamsaraMarathonFusionShotCoop
 {
-    Damage (random(48,60))
+    Damage (random(45,60))
 }
 
 actor SamsaraMarathonFusionShotIgnoreWater : SamsaraMarathonFusionShot
@@ -653,7 +653,7 @@ actor SamsaraMarathonFusionSuperCoop : SamsaraMarathonFusionSuper
 }
 actor SamsaraMarathonFusionSuperCoopImproved: SamsaraMarathonFusionSuperCoop
 {
-    Damage (random(120, 160))
+    Damage (random(120, 150))
 }
 
 actor SamsaraMarathonFusionSuperIgnoreWater : SamsaraMarathonFusionSuper

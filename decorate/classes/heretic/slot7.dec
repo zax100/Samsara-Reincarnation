@@ -147,8 +147,8 @@ actor Sorcerer2FX4 : Sorcerer2FX1
     FastSpeed 30
     Damage 50
     DamageType "Electric"
-	Scale 2.0
     +BLOODSPLATTER
+    +FORCERADIUSDMG
     States
     {
       Spawn:
@@ -156,7 +156,7 @@ actor Sorcerer2FX4 : Sorcerer2FX1
         loop
 
       Death:
-        FX16 G 5 Bright Light("DSPARILBALL_X1") A_Explode(256,192)
+        FX16 G 5 Bright Light("DSPARILBALL_X1") A_Explode(240,192)
         FX16 H 5 Bright Light("DSPARILBALL_X2")
         FX16 I 5 Bright Light("DSPARILBALL_X3")
         FX16 J 5 Bright Light("DSPARILBALL_X4")
@@ -171,7 +171,6 @@ actor Sorcerer2FX4_Coop : Sorcerer2FX4
     +DONTHARMCLASS
     +DONTHARMSPECIES
     +THRUSPECIES
-	+FORCERADIUSDMG
 }
 
 // Powered
