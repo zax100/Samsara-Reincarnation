@@ -109,7 +109,7 @@ actor HellstaffShot
     Radius 12
     Height 8
     Speed 22
-    Damage (3*random(1,16)) //original was 3, then 5
+    Damage (4*random(1,13)) //original was 3, then 5
     Projectile
     +BLOODSPLATTER
     +WINDTHRUST
