@@ -25,23 +25,23 @@ actor "Slow Fire Protector" : SamsaraBStoneWeapon
       Fire:
         TNT1 A 0 A_JumpIfInventory("BlakeAOGToken",1,"FireAOG")
       FirePS:
-		TNT1 A 0 A_JumpIfInventory("SamsaraUsingSmoothAnims",1,"FirePSSmooth")
+        TNT1 A 0 A_JumpIfInventory("SamsaraUsingSmoothAnims",1,"FirePSSmooth")
         BPI2 B 3
         BPI2 C 3 Bright A_GiveInventory("SamsaraBStoneSlowFireProtectorAttackHandler")
         BPI2 DEA 3
       FireFinish:
         TNT1 A 0 A_ReFire
         goto Ready
-		
-	  FirePSSmooth:
+
+      FirePSSmooth:
         BPI2 B 3
         BPI2 C 2 Bright A_GiveInventory("SamsaraBStoneSlowFireProtectorAttackHandler")
-		9381 P 2
+        9381 P 2
         BPI2 D 2
-		9381 Q 2
-		BPI2 E 2
-		BPI2 A 2
-		goto FireFinish
+        9381 Q 2
+        BPI2 E 2
+        BPI2 A 2
+        goto FireFinish
 
       // Aliens Of Gold
       ReadyAOG:
@@ -49,20 +49,20 @@ actor "Slow Fire Protector" : SamsaraBStoneWeapon
         goto Ready
 
       FireAOG:
-		TNT1 A 0 A_JumpIfInventory("SamsaraUsingSmoothAnims",1,"FireAOGSmooth")
+        TNT1 A 0 A_JumpIfInventory("SamsaraUsingSmoothAnims",1,"FireAOGSmooth")
         BPI2 G 3
         BPI2 H 3 Bright A_GiveInventory("SamsaraBStoneSlowFireProtectorAttackHandler")
         BPI2 IJF 3
         goto FireFinish
-		
+
       FireAOGSmooth:
         BPI2 G 3
         BPI2 H 2 Bright A_GiveInventory("SamsaraBStoneSlowFireProtectorAttackHandler")
-		9381 C 2
+        9381 C 2
         BPI2 I 2
-		9381 D 2
-		BPI2 J 2
-		BPI2 F 2
+        9381 D 2
+        BPI2 J 2
+        BPI2 F 2
         goto FireFinish
     }
 }

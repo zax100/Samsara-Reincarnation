@@ -116,21 +116,59 @@ actor SamsaraChexLAZDeviceClassicAttackHandler : Trigger
       // Attack stuff
       PickupAttack:
         TNT1 A 0 A_JumpIfInventory("DoomNoBFGAim",1,"PickupAttackNoAim")
-        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
-        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
-      PickupAttackDM:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackImproved")
+      // Vanilla
+      PickupAttackVanilla:
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackVanillaCoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackVanillaCoop")
+      PickupAttackVanillaDM:
+        TNT1 A 0 A_FireCustomMissile("ChexLAZBallVanilla",0,false)
+        stop
+
+      PickupAttackVanillaCoop:
+        TNT1 A 0 A_FireCustomMissile("ChexLAZBallVanillaCoop",0,false)
+        stop
+
+      // Improved
+      PickupAttackImproved:
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackImprovedCoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackImprovedCoop")
+      PickupAttackImprovedDM:
         TNT1 A 0 A_FireCustomMissile("ChexLAZBall",0,false)
         stop
 
-      PickupAttackCoop:
+      PickupAttackImprovedCoop:
         TNT1 A 0 A_FireCustomMissile("ChexLAZBallCoop",0,false)
         stop
 
       // No aiming attack stuff
       PickupAttackNoAim:
-        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackNoAimCoop")
-        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackNoAimCoop")
-      PickupAttackNoAimDM:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackNoAimImproved")
+      // Vanilla
+      PickupAttackNoAimVanilla:
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackNoAimVanillaCoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackNoAimVanillaCoop")
+      PickupAttackNoAimVanillaDM:
+        TNT1 A 0 A_SpawnItemEx("ChexLAZBallVanilla",0,0,32,25)
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,1)
+        stop
+        TNT1 A 0 A_SpawnItemEx("ChexLAZBallVanilla",0,0,32,25,0,0,-15)
+        TNT1 A 0 A_SpawnItemEx("ChexLAZBallVanilla",0,0,32,25,0,0,15)
+        stop
+
+      PickupAttackNoAimVanillaCoop:
+        TNT1 A 0 A_SpawnItemEx("ChexLAZBallVanillaCoop",0,0,32,25)
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,1)
+        stop
+        TNT1 A 0 A_SpawnItemEx("ChexLAZBallVanillaCoop",0,0,32,25,0,0,-15)
+        TNT1 A 0 A_SpawnItemEx("ChexLAZBallVanillaCoop",0,0,32,25,0,0,15)
+        stop
+
+      // Improved
+      PickupAttackNoAimImproved:
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackNoAimImprovedCoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackNoAimImprovedCoop")
+      PickupAttackNoAimImprovedDM:
         TNT1 A 0 A_SpawnItemEx("ChexLAZBall",0,0,32,25)
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,1)
         stop
@@ -138,7 +176,7 @@ actor SamsaraChexLAZDeviceClassicAttackHandler : Trigger
         TNT1 A 0 A_SpawnItemEx("ChexLAZBall",0,0,32,25,0,0,15)
         stop
 
-      PickupAttackNoAimCoop:
+      PickupAttackNoAimImprovedCoop:
         TNT1 A 0 A_SpawnItemEx("ChexLAZBallCoop",0,0,32,25)
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,1)
         stop
@@ -156,6 +194,7 @@ actor ChexLAZBall : BFGBall
     +DONTREFLECT
 	+NOEXTREMEDEATH
 	+BLOODLESSIMPACT
+	Damage (800)
     DeathSound "chex/bfgx"
     Obituary "$SAMSARA_CHEX_OB_SLOT7_2"
     States
@@ -178,6 +217,22 @@ actor ChexLAZBall : BFGBall
 }
 
 actor ChexLAZBallCoop : ChexLAZBall
+{
+    Species "Player"
+    +THRUSPECIES
+    States
+    {
+      Death:
+        CFE1 A 8 Bright Light("LAZBALL_X1")
+        CFE1 B 8 Bright Light("LAZBALL_X2")
+        TNT1 A 0 A_BFGSpray("ChexLAZSplashCoop")
+        goto DeathFinish
+    }
+}
+
+actor ChexLAZBallVanilla : ChexLAZBall { Damage 100 }
+
+actor ChexLAZBallVanillaCoop : ChexLAZBallVanilla
 {
     Species "Player"
     +THRUSPECIES

@@ -60,6 +60,7 @@ Actor DMModeOn : Boolean {}
 Actor InstagibModeOn : Boolean {}
 Actor RJingModeOn : Boolean {}
 Actor PistolModeOn : Boolean { Inventory.ForbiddenTo "HexenPlayer", "IPFreeley", "BlakeStone", "Corridor7Player", "GrondovalPlayer", "Bitterman", "Demoness", "PettonEverhail", "DanielGarner" }
+actor SamsaraImprovedBalance : Boolean {}
 Actor QuakeModeOn : Boolean { Inventory.RestrictedTo "QuakePlayer" }
 Actor SamsaraUsingSmoothAnims : Boolean {}
 Actor ExpandedHud : Boolean {}
@@ -114,7 +115,6 @@ Actor IsNarakaClass : Boolean {} // Used in ReMixer
 Actor SamsaraOriginalKeySwitcheroo : TemporaryBoolean {}
 Actor SamsaraOriginalSlotCounter : Counter { Inventory.InterHubAmount 10 }
 Actor SamsaraOriginalKeyCounter : Counter { Inventory.InterHubAmount 10 }
-Actor SamsaraSkulltagWeaponsAreEnabled : Boolean {}
 Actor SamsaraSlotIGiven : Boolean {}
 Actor SamsaraSlotIIGiven : Boolean {}
 Actor SamsaraSlotIIIGiven : Boolean {}
@@ -323,6 +323,7 @@ Actor SamsaraCurrentTeamIndicator : Counter { Inventory.MaxAmount 8 }
 Actor SamsaraBloodGeneratorBleedAngle : Inventory { Inventory.MaxAmount 131072 }
 Actor SamsaraBloodGeneratorAngle : Inventory { Inventory.MaxAmount 131072 }
 Actor SamsaraBloodGeneratorZ : Inventory { Inventory.MaxAmount 131072 }
+Actor SamsaraKilledByMassacre : Boolean {}
 
 Actor TranslationDummy
 {
@@ -647,3 +648,9 @@ Actor SamsaraPlayerXDeathSoundTrigger : Trigger
 // Hero OST stuff
 
 Actor SamsaraOST_IgnoreTarget : Boolean {}
+
+// Dummy HUD stuff
+
+Actor SamsaraDoom64UnmakerArtifact1Icon : Boolean {}
+Actor SamsaraDoom64UnmakerArtifact2Icon : Boolean {}
+Actor SamsaraDoom64UnmakerArtifact3Icon : Boolean {}

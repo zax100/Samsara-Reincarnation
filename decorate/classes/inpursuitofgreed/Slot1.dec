@@ -14,7 +14,7 @@ Actor PGPoisonBall
 	+ADDITIVEPOISONDURATION
 	+BLOODLESSIMPACT
 	+HITTRACER
-	Damage (17)
+	Damage (20)
 	renderstyle add
 	DamageType "PGPlasma"
 	DeathSound "DSNONE"
@@ -54,7 +54,14 @@ Actor PGPoisonBallPuff
 	}
 }
 
-Actor PGPoisonBallCoop : PGPoisonBall { +THRUSPECIES Species "Player" }
+Actor PGPoisonBallCoop : PGPoisonBall
+{
+    +ADDITIVEPOISONDAMAGE
+    +THRUSPECIES
+    Species "Player"
+    PoisonDamage 5,6,7
+    Damage (35)
+}
 
 Actor IPOGGrenadeThrower : CustomInventory
 {

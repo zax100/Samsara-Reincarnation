@@ -1,5 +1,7 @@
 actor "Talon Ceramic Combat Blade" : SamsaraMarathonWeapon
 {
+    Weapon.SlotNumber 0
+    Weapon.SlotPriority 1
     Weapon.SelectionOrder 3700
     Weapon.Kickback 300
     Weapon.AmmoType "KnifeAmmo"

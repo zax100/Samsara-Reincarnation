@@ -87,7 +87,7 @@ Actor PGShotgunPlasmaBall
 	+THRUGHOST
 	+HITTRACER
 	+BLOODLESSIMPACT
-	Damage (25)	
+	Damage (28)
 	//renderstyle add
 	DamageType "PGPlasma"
 	states

@@ -957,11 +957,11 @@ function void HandleAmmoCapacities (int pickedup)
     SetAmmoCapacity("PlasmaCell", noAmmoCap ? INTMAXSAFE : (maxCell * hasBackPack) / 20);
 
     // RoTT Ammo
-    SetAmmoCapacity("RottMissiles", noAmmoCap ? INTMAXSAFE : ((maxClip * hasBackPack) + increasingClip) / 2);
+    SetAmmoCapacity("RottMissiles", noAmmoCap ? INTMAXSAFE : ((maxClip * hasBackPack) + increasingClip) / 4);
     SetAmmoCapacity("HSMissiles", noAmmoCap ? INTMAXSAFE : ((maxShell * hasBackPack) + increasingShell) / 2);
     SetAmmoCapacity("FBMissiles", noAmmoCap ? INTMAXSAFE : ((maxRocket * hasBackPack) + increasingRockets) / 2);
-    SetAmmoCapacity("DMissiles", noAmmoCap ? INTMAXSAFE : ((maxCell * hasBackPack) + increasingCell) / 5);
-    SetAmmoCapacity("SMissiles", noAmmoCap ? INTMAXSAFE : ((maxCell * hasBackPack) + increasingCell) / 3);
+    SetAmmoCapacity("DMissiles", noAmmoCap ? INTMAXSAFE : ((maxCell * hasBackPack) + increasingCell) / 6);
+    SetAmmoCapacity("SMissiles", noAmmoCap ? INTMAXSAFE : ((maxCell * hasBackPack) + increasingCell) / 12);
     SetAmmoCapacity("DMMissiles", noAmmoCap ? INTMAXSAFE : ((maxRocket * hasBackPack) + increasingRockets) / 2);
     SetAmmoCapacity("FWMissiles", noAmmoCap ? INTMAXSAFE : ((maxCell * hasBackPack) + increasingCell) / 30);
     SetAmmoCapacity("BMissiles", noAmmoCap ? INTMAXSAFE : (maxCell + increasingCell) / 30);
@@ -1092,7 +1092,6 @@ function int ExecuteClassScripts (int player, int client)
         switch (pClass)
         {
             case CLASS_HERETIC:      ACS_NamedExecuteWithResult("TomeOfPowerStartCheck");  break;
-            case CLASS_ROTT:         ACS_NamedExecuteWithResult("RoTT453");                break;
             case CLASS_C7:           ACS_NamedExecuteWithResult("Corridor7Loop");          break;
             case CLASS_ERAD:         ACS_NamedExecuteWithResult("EradicatorPipCameraHud"); break;
             case CLASS_WITCHAVEN:    ACS_NamedExecuteWithResult("GrondovalLoop");          break;

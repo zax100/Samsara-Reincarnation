@@ -734,7 +734,7 @@ actor SamsaraDoomguyStrPyroCannonAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"PickupAttackPowered")
       // Unpowered
       PickupAttackUnpowered:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackUnpoweredImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackUnpoweredImproved")
       // Vanilla
       PickupAttackUnpoweredVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackUnpoweredVanillaCoop")
@@ -761,7 +761,7 @@ actor SamsaraDoomguyStrPyroCannonAttackHandler : Trigger
 
       // Powered
       PickupAttackPowered:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackPoweredImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackPoweredImproved")
       // Vanilla
       PickupAttackPoweredVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackPoweredVanillaCoop")

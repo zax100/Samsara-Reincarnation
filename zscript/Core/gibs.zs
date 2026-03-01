@@ -1,4 +1,4 @@
-Class Brutal_WallBlood_ZScript : Actor
+Class Chunky_WallBlood_ZScript : Actor
 {
 	Default
 	{

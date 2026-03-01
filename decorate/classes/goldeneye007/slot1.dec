@@ -594,7 +594,7 @@ actor Goldeneye_KnifeProjectile
     Radius 6
     Height 8
     Speed 20
-    Damage (0)
+    Damage (50)
     Gravity 0.33
     BounceType "Doom"
     BounceFactor 0.1
@@ -630,8 +630,6 @@ actor Goldeneye_KnifeProjectile
         GE00 A 0 A_PlaySound("silence",CHAN_VOICE)
         GE00 A 0 A_StopSound(CHAN_VOICE)
         GE00 A 0 A_PlaySound("Goldeneye/HitBody",CHAN_VOICE)
-        GE00 A 0 A_SetUserVar("user_damage",50)
-        GE00 A 0 A_Explode(CallACS("BondHitBox", user_damage),8,0,false,8)
         goto SpawnLoop
 
       Death:

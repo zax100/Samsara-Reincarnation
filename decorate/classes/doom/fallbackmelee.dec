@@ -184,7 +184,7 @@ actor SamsaraDoomguyFistAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"PickupBerserk")
       // Normal
       PickupNormal:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupNormalImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupNormalImproved")
       // Normal (vanilla)
       PickupNormalVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupNormalVanillaCoop")
@@ -313,7 +313,7 @@ actor SamsaraDoomguyFistAttackHandler : Trigger
 
       // Berserk
       PickupBerserk:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupBerserkImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupBerserkImproved")
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 28), "PickupBerserkImproved")
       // Berserk (vanilla)
       PickupBerserkVanilla:
@@ -654,7 +654,7 @@ actor SamsaraDoomguy64FistAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"PickupBerserk")
       // Normal
       PickupNormal:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupNormalImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupNormalImproved")
       // Normal (vanilla)
       PickupNormalVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupNormalVanillaCoop")
@@ -701,7 +701,7 @@ actor SamsaraDoomguy64FistAttackHandler : Trigger
 
       // Berserk
       PickupBerserk:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupBerserkImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupBerserkImproved")
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 28), "PickupBerserkImproved")
       // Berserk (vanilla)
       PickupBerserkVanilla:
@@ -809,7 +809,7 @@ actor SamsaraDoomguyStrFistAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"PickupUnpoweredBerserk")
       // Normal
       PickupUnpoweredNormal:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupUnpoweredNormalImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupUnpoweredNormalImproved")
       // Normal (vanilla)
       PickupUnpoweredNormalVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupUnpoweredNormalVanillaCoop")
@@ -896,7 +896,7 @@ actor SamsaraDoomguyStrFistAttackHandler : Trigger
 
       // Berserk
       PickupUnpoweredBerserk:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupUnpoweredBerserkImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupUnpoweredBerserkImproved")
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 28), "PickupUnpoweredBerserkImproved")
       // Berserk (vanilla)
       PickupUnpoweredBerserkVanilla:
@@ -987,7 +987,7 @@ actor SamsaraDoomguyStrFistAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("PowerStrength",1,"PickupPoweredBerserk")
       // Normal
       PickupPoweredNormal:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupPoweredNormalImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupPoweredNormalImproved")
       // Normal (vanilla)
       PickupPoweredNormalVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupPoweredNormalVanillaCoop")
@@ -1074,7 +1074,7 @@ actor SamsaraDoomguyStrFistAttackHandler : Trigger
 
       // Berserk
       PickupPoweredBerserk:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupPoweredBerserkImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupPoweredBerserkImproved")
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 28), "PickupPoweredBerserkImproved")
       // Berserk (vanilla)
       PickupPoweredBerserkVanilla:

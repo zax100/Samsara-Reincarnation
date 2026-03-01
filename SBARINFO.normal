@@ -393,13 +393,35 @@ StatusBar Normal, ForceScaled
 
             DrawSelectedInventory AlwaysShowCounter, DM64HUDF, 290, 22, 293, 30, Untranslated;
 
-            InInventory SamsaraDoom64UnmakerArtifact
+            InInventory SamsaraDoomguyInDoom64CE
             {
-                InInventory SamsaraDoom64UnmakerArtifact, 3 { DrawImage "DM64UAR3", 290, 48; }
-                else InInventory SamsaraDoom64UnmakerArtifact, 2 { DrawImage "DM64UAR2", 290, 48; }
-                else { DrawImage "DM64UAR1", 290, 48; }
+                InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR1", 290, 48; }
 
-                DrawNumber 3, DM64HUDF, Untranslated, SamsaraDoom64UnmakerArtifact, 293, 56;
+                InInventory SamsaraDoom64UnmakerArtifact2Icon
+                {
+                    InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR2", 290, 74; }
+                    else { DrawImage "DM64UAR2", 290, 48; }
+                }
+
+                InInventory SamsaraDoom64UnmakerArtifact3Icon
+                {
+                    InInventory SamsaraDoom64UnmakerArtifact2Icon
+                    {
+                        InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR3", 290, 100; }
+                        else { DrawImage "DM64UAR3", 290, 74; }
+                    }
+                    else InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR3", 290, 74; }
+                    else { DrawImage "DM64UAR3", 290, 48; }
+                }
+            } else {
+                InInventory SamsaraDoom64UnmakerArtifact
+                {
+                    InInventory SamsaraDoom64UnmakerArtifact, 3 { DrawImage "DM64UAR3", 290, 48; }
+                    else InInventory SamsaraDoom64UnmakerArtifact, 2 { DrawImage "DM64UAR2", 290, 48; }
+                    else { DrawImage "DM64UAR1", 290, 48; }
+
+                    DrawNumber 3, DM64HUDF, Untranslated, SamsaraDoom64UnmakerArtifact, 293, 56;
+                }
             }
 
             GameMode TeamGame, CTF, OneFlagCTF, Skulltag, TeamPossession, TeamLMS, Domination
@@ -3721,26 +3743,26 @@ StatusBar Normal, ForceScaled
             InInventory GotWeapon0
             {
                 DrawImage "RTTWF1N", 28, 14;
-                DrawImage "RTTWPN4", 19, 26;
+                DrawImage "RTTWPN1", 19, 26;
             }
 
-            IsSelected Bazooka
+            IsSelected "Double Pistols"
             {
                 DrawImage "RTTWF1Y", 28, 14;
-                DrawImage "RTTWPY4", 19, 26;
+                DrawImage "RTTWPY1", 19, 26;
             }
 
             // Slot 2
             InInventory GotWeapon2
             {
                 DrawImage "RTTWF2N", 70, 14;
-                DrawImage "RTTWPN1", 62, 26;
+                DrawImage "RTTWPN3", 62, 26;
             }
 
-            IsSelected "Double Pistols"
+            IsSelected MP40
             {
                 DrawImage "RTTWF2Y", 70, 14;
-                DrawImage "RTTWPY1", 62, 26;
+                DrawImage "RTTWPY3", 62, 26;
             }
 
             // Slot 3
@@ -3760,13 +3782,13 @@ StatusBar Normal, ForceScaled
             InInventory GotWeapon4
             {
                 DrawImage "RTTWF4N", 155, 14;
-                DrawImage "RTTWPN3", 150, 26;
+                DrawImage "RTTWPN4", 150, 26;
             }
 
-            IsSelected MP40
+            IsSelected Bazooka
             {
                 DrawImage "RTTWF4Y", 155, 14;
-                DrawImage "RTTWPY3", 150, 26;
+                DrawImage "RTTWPY4", 150, 26;
             }
 
             // Slot 5
@@ -4169,10 +4191,10 @@ StatusBar Normal, ForceScaled
         InInventory SamsaraBloodGunsAkimboHUDDisplay, 3
         {
             InInventory SamsaraBloodGunsAkimboToggled { DrawImage "AKIMBO", 153, 181; }
-            else InInventory PowerSamsaraBloodGunsAkimbo || PowerSamsaraBloodGunsAkimboHub { DrawImage "AKIMBO", 153, 181; }
+            else InInventory PowerSamsaraBloodGunsAkimbo { DrawImage "AKIMBO", 153, 181; }
             else { DrawImage "AKIMBNO", 153, 181; }
         } else {
-            InInventory PowerSamsaraBloodGunsAkimbo || PowerSamsaraBloodGunsAkimboHub { DrawImage "AKIMBO", 153, 181; }
+            InInventory PowerSamsaraBloodGunsAkimbo { DrawImage "AKIMBO", 153, 181; }
             else
             {
                 InInventory SamsaraBloodGunsAkimboInventory { DrawImage "AKIMBNO", 153, 181; }
@@ -6898,13 +6920,13 @@ StatusBar Normal, ForceScaled
             } else IsSelected "Desert Eagle", MP5 {
                 InInventory SamsaraReloadMode, 2 { DrawNumber 3, HLLFONT, Green, Ammo1, 28, 176; }
                 else { DrawNumber 3, HLLFONT, Green, Ammo2, 28, 176; }
-            } else IsSelected " RPG ", "Spore Launcher" {
+            } else IsSelected HLUzi, " RPG " {
                 InInventory SamsaraReloadMode, 2 { DrawNumber 3, HLLFONT, Green, Ammo1, 28, 176; }
                 else { DrawNumber 3, HLLFONT, Green, Ammo2, 28, 176; }
-            } else IsSelected "M249 Squad Automatic Weapon", "HL Crossbow" {
+            } else IsSelected "Spore Launcher", "M249 Squad Automatic Weapon" {
                 InInventory SamsaraReloadMode, 2 { DrawNumber 3, HLLFONT, Green, Ammo1, 28, 176; }
                 else { DrawNumber 3, HLLFONT, Green, Ammo2, 28, 176; }
-            } else IsSelected "M40A1 Sniper Rifle" {
+            } else IsSelected "HL Crossbow", "M40A1 Sniper Rifle" {
                 InInventory SamsaraReloadMode, 2 { DrawNumber 3, HLLFONT, Green, Ammo1, 28, 176; }
                 else { DrawNumber 3, HLLFONT, Green, Ammo2, 28, 176; }
             }
@@ -7175,13 +7197,13 @@ StatusBar Normal, ForceScaled
             } else IsSelected "Desert Eagle", MP5 {
                 InInventory SamsaraReloadMode, 2 { DrawNumber 3, HLLFONT, Untranslated, Ammo1, 28, 178; }
                 else { DrawNumber 3, HLLFONT, Untranslated, Ammo2, 28, 178; }
-            } else IsSelected " RPG ", "Spore Launcher" {
+            } else IsSelected HLUzi, " RPG " {
                 InInventory SamsaraReloadMode, 2 { DrawNumber 3, HLLFONT, Untranslated, Ammo1, 28, 178; }
                 else { DrawNumber 3, HLLFONT, Untranslated, Ammo2, 28, 178; }
-            } else IsSelected "M249 Squad Automatic Weapon", "HL Crossbow" {
+            } else IsSelected "Spore Launcher", "M249 Squad Automatic Weapon" {
                 InInventory SamsaraReloadMode, 2 { DrawNumber 3, HLLFONT, Untranslated, Ammo1, 28, 178; }
                 else { DrawNumber 3, HLLFONT, Untranslated, Ammo2, 28, 178; }
-            } else IsSelected "M40A1 Sniper Rifle" {
+            } else IsSelected "HL Crossbow", "M40A1 Sniper Rifle" {
                 InInventory SamsaraReloadMode, 2 { DrawNumber 3, HLLFONT, Untranslated, Ammo1, 28, 178; }
                 else { DrawNumber 3, HLLFONT, Untranslated, Ammo2, 28, 178; }
             }
@@ -8804,9 +8826,15 @@ StatusBar Normal, ForceScaled
         DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Intelligence, FillZeros, -24, 163;
         DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Strength, FillZeros, 5, 163;
         DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Wisdom, FillZeros, -24, 167;
-        DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Level, FillZeros, 5, 167;
+
+        InInventory Hexen2Level, 100 { DrawNumber 3, HEX2SNUMS, Untranslated, Hexen2Level, FillZeros, 9, 167; }
+        else { DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Level, FillZeros, 5, 167; }
+
         DrawNumber 2, HEX2SNUMS, Untranslated, Hexen2Dexterity, FillZeros, -24, 171;
-        DrawNumber 6, HEX2SNUMS, Untranslated, Hexen2Experience, FillZeros, 21, 171;
+
+        InInventory Hexen2Experience, 10000000 { DrawNumber 8, HEX2SNUMS, Untranslated, Hexen2Experience, FillZeros, 29, 171; } // breaks past hud slightly, but then again, that was how it looked
+        else InInventory Hexen2Experience, 1000000 { DrawNumber 7, HEX2SNUMS, Untranslated, Hexen2Experience, FillZeros, 25, 171; }
+        else { DrawNumber 6, HEX2SNUMS, Untranslated, Hexen2Experience, FillZeros, 21, 171; }
 
         DrawNumber 3, HEX2NUMS, Untranslated, Health, 88, 176;
         DrawNumber 3, HEX2NUMS, Untranslated, Armor, 143, 176;

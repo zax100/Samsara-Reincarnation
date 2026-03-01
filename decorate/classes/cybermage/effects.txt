@@ -16,7 +16,7 @@ ACTOR CMBRPuff
 	Melee:
 	XDeath:
 	Crash:
-		CMX1 B 0 BRIGHT A_Explode(24, 40)
+		CMX1 B 0 BRIGHT A_Explode(8, 32)
 		CMX1 BCDEFG 3 BRIGHT
 		Stop
 	}
@@ -85,7 +85,7 @@ ACTOR CMBLASTRTRACER : FastProjectile
 {
 	Projectile
 	Damage 0
-	Speed 100
+	Speed 160
 	Scale 0.35
 	+NOINTERACTION
 	Species "CBullets"

@@ -104,7 +104,7 @@ actor C7DisintCoop : C7Disint
     States
     {
       Death:
-        TNT1 A 1 A_BFGSpray("BlankPuffCoop",100,16)
+        TNT1 A 1 A_BFGSpray("BlankPuffCoop",100,10)
         stop
     }
 }

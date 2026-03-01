@@ -64,8 +64,9 @@ actor Dragon2 : SamsaraMonsterReincDragon replaces Dragon
 			DRAG BCCDDCCBBAA 3 A_DragonFlight
 			Goto See2+3
 		Death:
-			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffectForBosses",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		Death.Massacre:
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			Goto Super::Death
 		Death.DukeIce:
 			DRAG N 0 A_GiveToTarget("DukeBossKillTaunt",1)

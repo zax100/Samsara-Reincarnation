@@ -1102,11 +1102,11 @@ Actor RTCW_VenomTracer : RTCW_Tracer
 	{
 		Crash:
 		Death:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 24, 0),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 16, 0),8,!XF_HURTSOURCE,0,8)
 			Goto Super::Death
 
 		XDeath:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 24, 0),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 16, 0),8,!XF_HURTSOURCE,0,8)
 			Goto Super::XDeath
 	}
 }
@@ -1120,11 +1120,11 @@ Actor RTCW_VenomTracerSoundConsole : RTCW_TracerSoundConsole
 	{
 		Crash:
 		Death:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 24, 1),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 16, 1),8,!XF_HURTSOURCE,0,8)
 			Goto Super::Death
 
 		XDeath:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 24, 1),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 16, 1),8,!XF_HURTSOURCE,0,8)
 			Goto Super::XDeath
 	}
 }
@@ -1138,11 +1138,11 @@ Actor RTCW_VenomTracerSoundET : RTCW_TracerSoundET
 	{
 		Crash:
 		Death:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 24, 2),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 16, 2),8,!XF_HURTSOURCE,0,8)
 			Goto Super::Death
 
 		XDeath:
-			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 24, 2),8,!XF_HURTSOURCE,0,8)
+			TNT1 A 0 A_Explode(CallACS("RTCW_BulletDamage", 16, 2),8,!XF_HURTSOURCE,0,8)
 			Goto Super::XDeath
 	}
 }

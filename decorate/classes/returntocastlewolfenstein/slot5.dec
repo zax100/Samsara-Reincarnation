@@ -388,7 +388,7 @@ Actor RTCW_PanzerfaustRocket
 {
 	Height 10
 	Radius 5
-	Damage (200)
+	Damage (160)
 	Speed 32
 	Projectile
 	+SKYEXPLODE
@@ -411,7 +411,7 @@ Actor RTCW_PanzerfaustRocket
 			RW00 AAAA 0 A_SpawnItemEx("RTCW_ExplosionSmokeDebris")
 			RW00 A 0 A_Quake(3,15,0,128,"nosoundforyoubitch")
 			RW00 A 0 A_GiveInventory("RTCW_BlazkoWeaponAlert",1,AAPTR_Target)
-			RW00 A 0 A_Explode(250,120,XF_HURTSOURCE,1,0)
+			RW00 A 0 A_Explode(240,128,XF_HURTSOURCE,1,0)
 			TNT1 A 15 A_SpawnItemEx("RTCW_PanzerfaustRocketExplosion")
 			Stop
 	}

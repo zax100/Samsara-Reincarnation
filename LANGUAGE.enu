@@ -90,6 +90,7 @@ SAMSARA_CORVUS_OB_SLOT3 = "%k turned %o into an ethereal pincushion.";
 SAMSARA_CORVUS_OB_SLOT4 = "%k clawed %o wide open.";
 SAMSARA_CORVUS_OB_SLOT5 = "%k gave %o the bird.";
 SAMSARA_CORVUS_OB_SLOT6 = "%k sent %o to the depths of Hell.";
+SAMSARA_CORVUS_OB_SLOT6S = "%k split %o apart.";
 SAMSARA_CORVUS_OB_SLOT7 = "%k gave %o a shocking revelation.";
 SAMSARA_CORVUS_OB_UNIQUE1 = "%k brought %o a grim fate.";
 SAMSARA_CORVUS_OB_UNIQUE2 = "%k threw eggs at %o's face.";
@@ -181,10 +182,10 @@ SAMSARA_RANGER_OB_UNIQUE = "%k tazed %o with the Laser Cannon.";
 
 SAMSARA_ROTT_OB_FALLBACKMELEE = "%k cut %o down with a knife.";
 SAMSARA_ROTT_OB_FALLBACKRANGED = "%k one-tapped %o with the pistol.";
-SAMSARA_ROTT_OB_SLOT1 = "%k bazooka'd %o.";
-SAMSARA_ROTT_OB_SLOT2 = "%k showed %o that two pistols are better than one.";
+SAMSARA_ROTT_OB_SLOT1 = "%k showed %o that two pistols are better than one.";
+SAMSARA_ROTT_OB_SLOT2 = "%k bulletwhored %o.";
 SAMSARA_ROTT_OB_SLOT3 = "%k launched a heat seeking missile at %o.";
-SAMSARA_ROTT_OB_SLOT4 = "%k bulletwhored %o.";
+SAMSARA_ROTT_OB_SLOT4 = "%k bazooka'd %o.";
 SAMSARA_ROTT_OB_SLOT4S = "%k went full Rambo on %o.";
 SAMSARA_ROTT_OB_SLOT5 = "%k firebombed %o home into ludicrous gibs.";
 SAMSARA_ROTT_OB_SLOT5S_1 = "%k gave %o a heap of buckshot from the Doomstick.";
@@ -612,6 +613,7 @@ RMRJETPACKDISABLED3 = "The jetpack is disabled. Received 100 Health instead.";
 WITCHAVENSPELLNOAMMO = "You don't have enough ammo to cast this spell!";
 WITCHAVENSPELLDISABLED = "This spell is disabled!";
 LEONARDDEADMESSAGE = "Mash Activator Key To Kill Again!";
+C3DRINGALREADYEQUIPPED = "You already have this ring equipped.";
 
 // DECORATE EXTERNALIZATIONS
 STRWEAPONPOWERUPKITPPW = "The Weapon Powerup Kit can't be used when \"Permanent Powered Weapons\" is on.";

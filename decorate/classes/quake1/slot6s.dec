@@ -13,7 +13,7 @@ actor "Rocket Powered Impaler" : SamsaraQuakeWeapon
     States
     {
       Spawn:
-        QDBS Z -1
+        QRPL Z -1
         stop
 
       Ready:

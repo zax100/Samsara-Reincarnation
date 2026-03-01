@@ -162,13 +162,35 @@ StatusBar Fullscreen, ForceScaled
                 DrawSelectedInventory AlwaysShowCounter, DM65HUDF, 290, 22, 293, 30, Untranslated;
 
                 // Unmaker artifacts
-                InInventory SamsaraDoom64UnmakerArtifact
+                InInventory SamsaraDoomguyInDoom64CE
                 {
-                    InInventory SamsaraDoom64UnmakerArtifact, 3 { DrawImage "DM64UAR3", 290, 48; }
-                    else InInventory SamsaraDoom64UnmakerArtifact, 2 { DrawImage "DM64UAR2", 290, 48; }
-                    else { DrawImage "DM64UAR1", 290, 48; }
+                    InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR1", 290, 48; }
 
-                    DrawNumber 3, DM65HUDF, Untranslated, SamsaraDoom64UnmakerArtifact, 293, 56;
+                    InInventory SamsaraDoom64UnmakerArtifact2Icon
+                    {
+                        InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR2", 290, 74; }
+                        else { DrawImage "DM64UAR2", 290, 48; }
+                    }
+
+                    InInventory SamsaraDoom64UnmakerArtifact3Icon
+                    {
+                        InInventory SamsaraDoom64UnmakerArtifact2Icon
+                        {
+                            InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR3", 290, 100; }
+                            else { DrawImage "DM64UAR3", 290, 74; }
+                        }
+                        else InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR3", 290, 74; }
+                        else { DrawImage "DM64UAR3", 290, 48; }
+                    }
+                } else {
+                    InInventory SamsaraDoom64UnmakerArtifact
+                    {
+                        InInventory SamsaraDoom64UnmakerArtifact, 3 { DrawImage "DM64UAR3", 290, 48; }
+                        else InInventory SamsaraDoom64UnmakerArtifact, 2 { DrawImage "DM64UAR2", 290, 48; }
+                        else { DrawImage "DM64UAR1", 290, 48; }
+
+                        DrawNumber 3, DM65HUDF, Untranslated, SamsaraDoom64UnmakerArtifact, 293, 56;
+                    }
                 }
 
                 // Equipment
@@ -3086,56 +3108,57 @@ StatusBar Fullscreen, ForceScaled
                     IsSelected not "Pike Axe", "9mm Pistol" {
                     IsSelected not "Assault Shotgun", ".357 Python" {
                     IsSelected not "Desert Eagle", MP5 {
-                    IsSelected not " RPG ", "Spore Launcher" {
-                    IsSelected not "M249 Squad Automatic Weapon", "HL Crossbow" {
-                    IsSelected not "M40A1 Sniper Rifle", SWUzi {
-                    IsSelected not PSMagnum, ExShotgun {
-                    IsSelected not PSM60, " .454 Casull Pistol " {
-                    IsSelected not " RR Hunting Crossbow ", " RR Dynomite Crossbow " {
-                    IsSelected not " Chicken Crossbow ", Goldeneye_PP7Silenced {
-                    IsSelected not Goldeneye_Klobb, Goldeneye_PP7SpecialIssue {
-                    IsSelected not Goldeneye_DD44, Goldfinger_PPKSilenced {
-                    IsSelected not Goldfinger_PPK, Goldfinger_ColtM1911 {
-                    IsSelected not Goldfinger_LugerP08, Goldfinger_WaltherP38 {
-                    IsSelected not Goldeneye_KF7Soviet, Goldfinger_MP40 {
-                    IsSelected not Goldeneye_AutoShotgun, Goldeneye_Shotgun {
-                    IsSelected not Goldfinger_Shotgun, Goldfinger_OverUnder {
-                    IsSelected not Goldeneye_AR33, Goldfinger_AK47 {
-                    IsSelected not Goldeneye_Phantom, Goldfinger_ThompsonDrum {
-                    IsSelected not Goldfinger_Thompson, Goldeneye_RocketLauncher {
-                    IsSelected not Goldfinger_SuperBazooka, Goldeneye_GrenadeLauncher {
-                    IsSelected not Goldfinger_M79, Goldeneye_RCP90 {
-                    IsSelected not Goldfinger_M1Carbine, Goldeneye_Cougar {
-                    IsSelected not Goldeneye_SilverPP7, Goldeneye_ArabahViper {
-                    IsSelected not Goldfinger_M1Garand, Goldfinger_Kar98k {
-                    IsSelected not Goldeneye_GoldenGun, Goldfinger_M14 {
-                    IsSelected not Goldeneye_SniperRifle, Goldfinger_AR7 {
-                    IsSelected not Goldeneye_SilencedD5K, Goldeneye_ZMG {
-                    IsSelected not Goldeneye_D5KDeutsche, Goldfinger_UZI {
-                    IsSelected not Goldfinger_SmithWesson22, Goldfinger_SmithWesson36 {
-                    IsSelected not Goldeneye_GoldPP7, Goldfinger_GoldMagnum {
-                    IsSelected not Goldeneye_TankWeapon, Unreal_AutoMag {
-                    IsSelected not RTCW_Luger, RTCW_Colt {
-                    IsSelected not RTCW_MP40, RTCW_Thompson {
-                    IsSelected not RTCW_Mauser, RTCW_Snooper {
-                    IsSelected not RTCW_FG42, RTCW_StG44 {
-                    IsSelected not RTCW_BAR, RTCW_Panzerfaust {
-                    IsSelected not RTCW_K43, RTCW_M1Garand {
-                    IsSelected not RTCW_Venom, RTCW_MG42 {
-                    IsSelected not RTCW_Browning, RTCW_Sten {
-                    IsSelected not RTCW_Winchester, DeusEx_10mmPistol {
-                    IsSelected not DeusEx_MiniCrossbow, DeusEx_Shotgun {
-                    IsSelected not DeusEx_AssaultShotgun, DeusEx_AssaultRifle {
-                    IsSelected not DeusEx_GEPGun, DeusEx_FlameThrower {
-                    IsSelected not DeusEx_MJ12PlasmaRifle, DeusEx_SniperRifle {
-                    IsSelected not DeusEx_StealthPistol, DeusEx_RiotProd
+                    IsSelected not HLUzi, " RPG " {
+                    IsSelected not "Spore Launcher", "M249 Squad Automatic Weapon" {
+                    IsSelected not "HL Crossbow", "M40A1 Sniper Rifle" {
+                    IsSelected not SWUzi, PSMagnum {
+                    IsSelected not ExShotgun, PSM60 {
+                    IsSelected not " .454 Casull Pistol ", " RR Hunting Crossbow " {
+                    IsSelected not " RR Dynomite Crossbow ", " Chicken Crossbow " {
+                    IsSelected not Goldeneye_PP7Silenced, Goldeneye_Klobb {
+                    IsSelected not Goldeneye_PP7SpecialIssue, Goldeneye_DD44 {
+                    IsSelected not Goldfinger_PPKSilenced, Goldfinger_PPK {
+                    IsSelected not Goldfinger_ColtM1911, Goldfinger_LugerP08 {
+                    IsSelected not Goldfinger_WaltherP38, Goldeneye_KF7Soviet {
+                    IsSelected not Goldfinger_MP40, Goldeneye_AutoShotgun {
+                    IsSelected not Goldeneye_Shotgun, Goldfinger_Shotgun {
+                    IsSelected not Goldfinger_OverUnder, Goldeneye_AR33 {
+                    IsSelected not Goldfinger_AK47, Goldeneye_Phantom {
+                    IsSelected not Goldfinger_ThompsonDrum, Goldfinger_Thompson {
+                    IsSelected not Goldeneye_RocketLauncher, Goldfinger_SuperBazooka {
+                    IsSelected not Goldeneye_GrenadeLauncher, Goldfinger_M79 {
+                    IsSelected not Goldeneye_RCP90, Goldfinger_M1Carbine {
+                    IsSelected not Goldeneye_Cougar, Goldeneye_SilverPP7 {
+                    IsSelected not Goldeneye_ArabahViper, Goldfinger_M1Garand {
+                    IsSelected not Goldfinger_Kar98k, Goldeneye_GoldenGun {
+                    IsSelected not Goldfinger_M14, Goldeneye_SniperRifle {
+                    IsSelected not Goldfinger_AR7, Goldeneye_SilencedD5K {
+                    IsSelected not Goldeneye_ZMG, Goldeneye_D5KDeutsche {
+                    IsSelected not Goldfinger_UZI, Goldfinger_SmithWesson22 {
+                    IsSelected not Goldfinger_SmithWesson36, Goldeneye_GoldPP7 {
+                    IsSelected not Goldfinger_GoldMagnum, Goldeneye_TankWeapon {
+                    IsSelected not Unreal_AutoMag, RTCW_Luger {
+                    IsSelected not RTCW_Colt, RTCW_MP40 {
+                    IsSelected not RTCW_Thompson, RTCW_Mauser {
+                    IsSelected not RTCW_Snooper, RTCW_FG42 {
+                    IsSelected not RTCW_StG44, RTCW_BAR {
+                    IsSelected not RTCW_Panzerfaust, RTCW_K43 {
+                    IsSelected not RTCW_M1Garand, RTCW_Venom {
+                    IsSelected not RTCW_MG42, RTCW_Browning {
+                    IsSelected not RTCW_Sten, RTCW_Winchester {
+                    IsSelected not DeusEx_10mmPistol, DeusEx_MiniCrossbow {
+                    IsSelected not DeusEx_Shotgun, DeusEx_AssaultShotgun {
+                    IsSelected not DeusEx_AssaultRifle, DeusEx_GEPGun {
+                    IsSelected not DeusEx_FlameThrower, DeusEx_MJ12PlasmaRifle {
+                    IsSelected not DeusEx_SniperRifle, DeusEx_StealthPistol {
+                    IsSelected not DeusEx_RiotProd
                     {
                         DrawImage "HUDBAR", 250, 180;
                         DrawBar "HAMBAR", "HEMPTY", Ammo1, Horizontal, Reverse, 251, 181;
                         DrawNumber 4, INDEXFONT, White, Ammo1, 298, 185;
 
                         DrawImage AmmoIcon1, 238, 185, Center;
-                    }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+                    }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
                     // Doom Characters
                     IsSelected "Automatic Shotgun"
@@ -3922,7 +3945,7 @@ StatusBar Fullscreen, ForceScaled
                         DrawImage "AMSMC0", 228, 192, Center;
                     }
 
-                    IsSelected " RPG ", "Spore Launcher"
+                    IsSelected HLUzi, " RPG "
                     {
                         DrawImage "HUDBAR", 250, 180;
                         InInventory SamsaraReloadMode, 2
@@ -3941,7 +3964,7 @@ StatusBar Fullscreen, ForceScaled
                         DrawImage AmmoIcon2, 238, 185, Center;
                     }
 
-                    IsSelected "M249 Squad Automatic Weapon", "HL Crossbow"
+                    IsSelected "Spore Launcher", "M249 Squad Automatic Weapon"
                     {
                         DrawImage "HUDBAR", 250, 180;
                         InInventory SamsaraReloadMode, 2
@@ -3960,7 +3983,7 @@ StatusBar Fullscreen, ForceScaled
                         DrawImage AmmoIcon2, 238, 185, Center;
                     }
 
-                    IsSelected "M40A1 Sniper Rifle"
+                    IsSelected "HL Crossbow", "M40A1 Sniper Rifle"
                     {
                         DrawImage "HUDBAR", 250, 180;
                         InInventory SamsaraReloadMode, 2
@@ -5673,7 +5696,7 @@ StatusBar Fullscreen, ForceScaled
                     InInventory UsingDualPistols { DrawImage "STY2NUM1", 126, 10; }
                 }
                 IsSelected Mjolnir { DrawImage "STY2NUM1", 126, 10; }
-                IsSelected Bazooka { DrawImage "STY2NUM1", 126, 10; }
+                IsSelected "Double Pistols" { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected "Auto Charge Pistol"
                 {
                     InInventory BlakeSuperAutoCharge { DrawImage "STY2NUM1", 126, 10; }
@@ -5756,7 +5779,7 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected "  Shotgun  " { DrawImage "STY2NUM2", 136, 10; }
                 IsSelected "WSTE-M5 Combat Shotgun" { DrawImage "STY2NUM2", 136, 10; }
                 IsSelected "Double Shotgun" { DrawImage "STY2NUM2", 136, 10; } // Need to change
-                IsSelected "Double Pistols" { DrawImage "STY2NUM2", 136, 10; }
+                IsSelected MP40 { DrawImage "STY2NUM2", 136, 10; }
                 IsSelected "Slow Fire Protector" { DrawImage "STY2NUM2", 136, 10; }
                 IsSelected Flaregun { DrawImage "STY2NUM2", 136, 10; }
                 IsSelected "  Crossbow  ", "  Crossbow Poison  " { DrawImage "STY2NUM2", 136, 10; }
@@ -5870,6 +5893,8 @@ StatusBar Fullscreen, ForceScaled
                     }
                 } else InInventory RottClass {
                     InInventory GotWeapon4 || RoTTM60 { DrawImage "STYSNUM4", 156, 10; }
+                } else InInventory BlakeClass {
+                    InInventory GotWeapon4 || "Gatling Fusion Devastator" { DrawImage "STYSNUM4", 156, 10; }
                 } else InInventory CalebClass {
                     InInventory GotWeapon4 || BloodGreaseGun { DrawImage "STYSNUM4", 156, 10; }
                 } else InInventory EradClass {
@@ -5883,6 +5908,8 @@ StatusBar Fullscreen, ForceScaled
                     }
                 } else InInventory KatarnClass {
                     InInventory GotWeapon4 || "DLT-19 Heavy Blaster Rifle" { DrawImage "STYSNUM4", 156, 10; }
+                } else InInventory HalfLifeClass {
+                    InInventory GotWeapon4 || HLUzi { DrawImage "STYSNUM4", 156, 10; }
                 } else InInventory BittermanClass {
                     InInventory GotWeapon4 || Q2ETFRifle { DrawImage "STYSNUM4", 156, 10; }
                 } else InInventory BondClass {
@@ -5915,7 +5942,7 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected "Chaingun Cannon", Duke3D_M16 { DrawImage "STY2NUM4", 156, 10; }
                 IsSelected "MA-75B Assault Rifle" { DrawImage "STY2NUM4", 156, 10; }
                 IsSelected Nailgun, "Nailgun DOE" { DrawImage "STY2NUM4", 156, 10; } // Need to change
-                IsSelected MP40 { DrawImage "STY2NUM4", 156, 10; }
+                IsSelected Bazooka { DrawImage "STY2NUM4", 156, 10; }
                 IsSelected "Rapid Assault Weapon" { DrawImage "STY2NUM4", 156, 10; }
                 IsSelected Tommygun { DrawImage "STY2NUM4", 156, 10; }
                 IsSelected "Assault Gun" { DrawImage "STY2NUM4", 156, 10; }
@@ -5955,10 +5982,12 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected "  Dual Chainguns  " { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected "Golden Desert Eagle" { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected RoTTM60 { DrawImage "STY3NUM4", 156, 10; }
+                IsSelected "Gatling Fusion Devastator" { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected BloodGreaseGun { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected EradEnergywhip, EradNitrofogger { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected EradFlamethrower { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected "DLT-19 Heavy Blaster Rifle" { DrawImage "STY3NUM4", 156, 10; }
+                IsSelected HLUzi { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected Q2ETFRifle { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected Goldeneye_Phantom { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected Goldfinger_ThompsonDrum, Goldfinger_Thompson { DrawImage "STY3NUM4", 156, 10; }
@@ -6061,6 +6090,8 @@ StatusBar Fullscreen, ForceScaled
                     InInventory GotWeapon6 || " RailGun " { DrawImage "STYSNUM6", 176, 10; }
                 } else InInventory ChexClass {
                     InInventory GotWeapon6 || "Gigazorcher 2100" { DrawImage "STYSNUM6", 176, 10; }
+                } else InInventory CorvusClass {
+                    InInventory GotWeapon6 || CorvusTempestWand { DrawImage "STYSNUM6", 176, 10; }
                 } else InInventory MarathonClass {
                     InInventory GotWeapon6 || "SPNKR-25 Auto Cannon" { DrawImage "STYSNUM6", 176, 10; }
                 } else InInventory QuakeClass {
@@ -6142,6 +6173,7 @@ StatusBar Fullscreen, ForceScaled
 
                 IsSelected " RailGun " { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected "Gigazorcher 2100" { DrawImage "STY3NUM6", 176, 10; }
+                IsSelected CorvusTempestWand { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected "SPNKR-25 Auto Cannon" { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected "Rocket Powered Impaler" { DrawImage "STY3NUM6", 176, 10; }
                 IsSelected BloodFlamethrower { DrawImage "STY3NUM6", 176, 10; }
@@ -6493,13 +6525,35 @@ StatusBar Fullscreen, ForceScaled
                 InInventory DoomClassMode, 2 {} // Stronghold
                 else InInventory DoomClassMode, 1 // Doom 64
                 {
-                    InInventory SamsaraDoom64UnmakerArtifact
+                    InInventory SamsaraDoomguyInDoom64CE
                     {
-                        InInventory SamsaraDoom64UnmakerArtifact, 3 { DrawImage "DM64UAR3", 290, 48; }
-                        else InInventory SamsaraDoom64UnmakerArtifact, 2 { DrawImage "DM64UAR2", 290, 48; }
-                        else { DrawImage "DM64UAR1", 290, 48; }
+                        InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR1", 290, 48; }
 
-                        DrawNumber 3, HUDFONT_DOOM, Untranslated, SamsaraDoom64UnmakerArtifact, 293, 56;
+                        InInventory SamsaraDoom64UnmakerArtifact2Icon
+                        {
+                            InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR2", 290, 74; }
+                            else { DrawImage "DM64UAR2", 290, 48; }
+                        }
+
+                        InInventory SamsaraDoom64UnmakerArtifact3Icon
+                        {
+                            InInventory SamsaraDoom64UnmakerArtifact2Icon
+                            {
+                                InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR3", 290, 100; }
+                                else { DrawImage "DM64UAR3", 290, 74; }
+                            }
+                            else InInventory SamsaraDoom64UnmakerArtifact1Icon { DrawImage "DM64UAR3", 290, 74; }
+                            else { DrawImage "DM64UAR3", 290, 48; }
+                        }
+                    } else {
+                        InInventory SamsaraDoom64UnmakerArtifact
+                        {
+                            InInventory SamsaraDoom64UnmakerArtifact, 3 { DrawImage "DM64UAR3", 290, 48; }
+                            else InInventory SamsaraDoom64UnmakerArtifact, 2 { DrawImage "DM64UAR2", 290, 48; }
+                            else { DrawImage "DM64UAR1", 290, 48; }
+
+                            DrawNumber 3, HUDFONT_DOOM, Untranslated, SamsaraDoom64UnmakerArtifact, 293, 56;
+                        }
                     }
                 }
             }

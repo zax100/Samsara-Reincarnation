@@ -11,7 +11,6 @@ Actor "Pike Axe" : WTWeapon
 	Weapon.Ammogive 40
 	+WEAPON.AMMO_OPTIONAL
 	+Weapon.MELEEWEAPON
-	+THRUGHOST
 	+WEAPON.NOALERT	
     Inventory.PickupSound "gpickup/gen"
     Inventory.PickupMessage "You got the Pike Axe!"
@@ -158,7 +157,6 @@ Actor WTThrowAxeProjectile : WTMegaMeleeProjectile
 	Speed 192
 	Damage (random(220,320))	
 	Obituary "$SAMSARA_WITCHAVEN_OB_SLOT_III"
-    +THRUGHOST
 }
 
 Actor WTThrowAxeProjectile_2 : WTThrowAxeProjectile { Species "Player" +THRUSPECIES +DONTHARMCLASS +DONTHARMSPECIES +MTHRUSPECIES +FORCEPAIN }
@@ -168,7 +166,6 @@ Actor WTThrowAxeProjectile_Weak : WTMegaMeleeProjectile
 	Speed 192
 	Damage (random(120,190))	
 	Obituary "$SAMSARA_WITCHAVEN_OB_SLOT_III"
-    +THRUGHOST
 }
 
 Actor WTThrowAxeProjectile_Weak_2 : WTThrowAxeProjectile_Weak { Species "Player" +THRUSPECIES +DONTHARMCLASS +DONTHARMSPECIES +MTHRUSPECIES +FORCEPAIN  }
@@ -178,7 +175,6 @@ Actor WTThrownAxe
 	PROJECTILE
 	+BLOODSPLATTER
 	+SEEKERMISSILE
-//    +THRUGHOST
 	+FORCEPAIN
 	+HITTRACER
 //	+SCREENSEEKER 

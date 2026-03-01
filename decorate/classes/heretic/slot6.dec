@@ -6,6 +6,7 @@ actor Hellstaff : Weapon
     Weapon.YAdjust 16
     Weapon.AmmoType1 "Cell"
     Weapon.SlotNumber 6
+    Weapon.SlotPriority 0
     //+AMMO_OPTIONAL
     +INVENTORY.UNDROPPABLE
     +NOALERT

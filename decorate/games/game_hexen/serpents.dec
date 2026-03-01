@@ -102,8 +102,9 @@ actor Demon1B : SamsaraMonsterBeast replaces Demon1
 		DEMN G 5 A_CustomMissile("Demon1FX2", 62, 0)
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		DEMN H 6 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		DEMN H 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		DEMN I 6
 		DEMN J 6 A_Scream
 		DEMN K 6 A_NoBlocking
@@ -115,8 +116,9 @@ actor Demon1B : SamsaraMonsterBeast replaces Demon1
 		DEMN E 2
 		Loop
 	XDeath:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		DEMN H 6 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	XDeath.Massacre:
+		DEMN H 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		DEMN I 0 A_SpawnItemEx("Demon1Chunk1", 0,0,45, frandom[DemonChunks](1,4.984375)*cos(Angle+90), frandom[DemonChunks](1,4.984375)*sin(Angle+90), 8, 90, ChunkFlags)
 		DEMN I 0 A_SpawnItemEx("Demon1Chunk2", 0,0,45, frandom[DemonChunks](1,4.984375)*cos(Angle-90), frandom[DemonChunks](1,4.984375)*sin(Angle-90), 8, 270, ChunkFlags)
 		DEMN I 0 A_SpawnItemEx("Demon1Chunk3", 0,0,45, frandom[DemonChunks](1,4.984375)*cos(Angle-90), frandom[DemonChunks](1,4.984375)*sin(Angle-90), 8, 270, ChunkFlags)
@@ -432,6 +434,8 @@ actor Demon1B_Shrink : Demon1B
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)
@@ -597,8 +601,9 @@ actor Demon2B : SamsaraMonsterBeast replaces Demon2
 		DEM2 G 5 A_CustomMissile("Demon2FX2", 62, 0)
 		Goto See
 	Death:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		DEM2 H 6 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	Death.Massacre:
+		DEM2 H 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		DEM2 I 6
 		DEM2 J 6 A_Scream
 		DEM2 K 6 A_NoBlocking
@@ -610,8 +615,9 @@ actor Demon2B : SamsaraMonsterBeast replaces Demon2
 		DEM2 E 2
 		Loop
 	XDeath:
-		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-		DEM2 H 6 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+	XDeath.Massacre:
+		DEM2 H 6 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		DEM2 I 0 A_SpawnItemEx("Demon2Chunk1", 0,0,45, frandom[DemonChunks](1,4.984375)*cos(Angle+90), frandom[DemonChunks](1,4.984375)*sin(Angle+90), 8, 90, ChunkFlags)
 		DEM2 I 0 A_SpawnItemEx("Demon2Chunk2", 0,0,45, frandom[DemonChunks](1,4.984375)*cos(Angle-90), frandom[DemonChunks](1,4.984375)*sin(Angle-90), 8, 270, ChunkFlags)
 		DEM2 I 0 A_SpawnItemEx("Demon2Chunk3", 0,0,45, frandom[DemonChunks](1,4.984375)*cos(Angle-90), frandom[DemonChunks](1,4.984375)*sin(Angle-90), 8, 270, ChunkFlags)
@@ -927,6 +933,8 @@ actor Demon2B_Shrink : Demon2B
 			Loop
 		Death:
 		XDeath:
+		Death.Massacre:
+		XDeath.Massacre:
 		Death.Squish:
 		XDeath.Squish:
 			TNT1 A 0 A_Jump(64,2)

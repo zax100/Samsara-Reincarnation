@@ -101,7 +101,7 @@ actor SamsaraSlotThreePickup : SamsaraSlotPickup replaces SuperShotgun
       HexenMageFull:        HMS3 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HexenFighterFull:     goto HexenClassicFull
       DukeFull:             PXSG B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      BeachDukeFull:        PXSG B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+      BeachDukeFull:        PXSG D 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Duke64Full:           PDGL B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       MarathonFull:         PFSP B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       QuakeFull:            PGRL B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -154,7 +154,7 @@ actor SamsaraSlotThreePickup : SamsaraSlotPickup replaces SuperShotgun
       HexenMageEmpty:        HMS3 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HexenFighterEmpty:     goto HexenClassicEmpty
       DukeEmpty:             PXSG A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      BeachDukeEmpty:        PXSG A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+      BeachDukeEmpty:        PXSG C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Duke64Empty:           PDGL A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       MarathonEmpty:         PFSP A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       QuakeEmpty:            PGRL A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -208,7 +208,7 @@ actor SamsaraSlotThreeNoStay : SamsaraSlotThreePickup
     States
     {
       Spawn:
-        WEPG C 0 Bright
+        WEPG C 0 Bright NoDelay ACS_NamedExecuteWithResult("Samsara_SwitchableObject", 36)
         goto SpawnGameModeCheck
 
       PickupDefault:

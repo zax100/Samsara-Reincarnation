@@ -82,6 +82,7 @@ OptionMenu "SamsaraClientOptions"
     Option "Quake I Sounds",                      "samsara_cl_quake1sounds",          "Quake1Sounds"
     Option "Rise of the Triad Sounds",            "samsara_cl_rottsounds",            "ROTTSounds"
     Option "Rebel Moon Rising Sounds",            "samsara_cl_rebelmoonrisingsounds", "RebelMoonRisingSounds"
+    Option "Half-Life Sounds",                    "samsara_cl_halflifesounds",        "HalfLifeSounds"
     Option "Quake II Sounds",                     "samsara_cl_quake2sounds",          "Quake2Sounds"
     Option "GoldenEye 007 Sounds",                "samsara_cl_goldeneyesounds",       "GoldenEyeSounds"
     Option "Unreal Sounds",                       "samsara_cl_unrealsounds",          "UnrealSounds"
@@ -343,6 +344,12 @@ OptionValue "RebelMoonRisingSounds"
     1, "Rebel Moon"
 }
 
+OptionValue "HalfLifeSounds"
+{
+    0, "Original"
+    1, "High Definition Pack"
+}
+
 OptionValue "Quake2Sounds"
 {
     0, "Original"
@@ -384,8 +391,8 @@ OptionValue "BHellLevel"
     0,  "Vanilla"
     1,  "Nashgore"
     2,  "Nashgore (2D)"
-    3,  "Brutal"
-    4,  "Brutal (2D)"
+    3,  "Chunky"
+    4,  "Chunky (2D)"
     5,  "Nightmare"
     6,  "Nightmare (2D)"
     7,  "Bolognese"

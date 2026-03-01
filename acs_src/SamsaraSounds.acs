@@ -73,6 +73,9 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
             {"heretic/weaponget"},
             {"heretic/weaponget"},
             {"heretic/weaponget"},
+            {""},
+            {""},
+            {"heretic/weaponget"},
         }},
         {
             {
@@ -318,6 +321,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"Bstone/wep4get"},
                 {"Bstone/wep5get"},
                 {"Bstone/wep4get"},
+                {"Bstone/wep5get"},
             },
             {
                 {"Bstone/wep1get"},
@@ -329,6 +333,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"Bstone/wep4get"},
                 {"Bstone/wep5get"},
                 {"Bstone/wep4get"},
+                {"Bstone/wep5get"},
             },
         },
         {{
@@ -542,6 +547,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"halflife/weaponpickup", "halflife/weaponpickup"},
                 {"halflife/weaponpickup", "halflife/weaponpickup"},
                 {"halflife/egon_pickup", "halflife/egon_pickup"},
+                {"halflife/weaponpickup"},
             },
             {
                 {"halflife/weaponpickup", "halflife/weaponpickup"},
@@ -553,6 +559,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"halflife/weaponpickup", "halflife/weaponpickup"},
                 {"halflife/weaponpickup", "halflife/weaponpickup"},
                 {"halflife/egon_pickup", "halflife/egon_pickup"},
+                {"halflife/weaponpickup"},
             },
         },
         {{
@@ -817,6 +824,9 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
             {"heretic/ammoget"},
             {"heretic/ammoget"},
             {"heretic/ammoget"},
+            {""},
+            {""},
+            {"heretic/ammoget"},
         }},
         {
             {
@@ -1062,8 +1072,10 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"Bstone/ammoget"},
                 {"Bstone/ammoget"},
                 {"Bstone/ammoget"},
+                {"Bstone/ammoget"},
             },
             {
+                {"Bstone/ammoget"},
                 {"Bstone/ammoget"},
                 {"Bstone/ammoget"},
                 {"Bstone/ammoget"},
@@ -1286,6 +1298,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"halflife/ammopickup", "halflife/ammopickup"},
                 {"halflife/ammopickup", "halflife/ammopickup"},
                 {"halflife/egon_pickup", "halflife/egon_pickup"},
+                {"halflife/ammopickup"},
             },
             {
                 {"halflife/ammopickup", "halflife/ammopickup"},
@@ -1297,6 +1310,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"halflife/ammopickup", "halflife/ammopickup"},
                 {"halflife/ammopickup", "halflife/ammopickup"},
                 {"halflife/egon_pickup", "halflife/egon_pickup"},
+                {"halflife/ammopickup"},
             },
         },
         {{

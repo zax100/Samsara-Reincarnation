@@ -97,6 +97,7 @@ actor DoomStrifeUnique1 : Trigger
         goto PickupMessageInitDone
 
       PickupMessageInitDoom64:
+        TNT1 A 0 A_JumpIfInventory("SamsaraDoomguyInDoom64CE",1,"PickupMessageInitDone")
         TNT1 A 0 A_JumpIfInventory("SamsaraDoom64UnmakerArtifact",0,"PickupMessageInitDone")
         TNT1 A 0 A_JumpIfInventory("SamsaraDoom64UnmakerArtifact",2,"PickupMessageInitDoom64_Artifact3")
         TNT1 A 0 A_JumpIfInventory("SamsaraDoom64UnmakerArtifact",1,"PickupMessageInitDoom64_Artifact2")
@@ -134,6 +135,7 @@ actor DoomStrifeUnique1 : Trigger
 
       PickupStart:
         TNT1 A 0 A_GiveInventory("DoomZerkCounter")
+        TNT1 A 0 A_JumpIfInventory("SamsaraDoomguyInDoom64CE",1,2)
         TNT1 A 0 A_GiveInventory("SamsaraDoom64UnmakerArtifact")
         TNT1 A 0 A_JumpIfInventory("DoomClassMode",2,"PickupStronghold")
         TNT1 A 0 A_Jump(256,"PickupNotStronghold") // for inheriting actors
@@ -477,6 +479,21 @@ actor ROTTStrifeUnique3 : Trigger
 
       PickupFill:
         TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraStrifeAccuracyAmmoFiller", 9)
+        stop
+    }
+}
+
+actor CalebStrifeUnique2 : Trigger
+{
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_GiveInventory("SamsaraBloodGunsAkimboInventory")
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 59) == 2, 1)
+        stop
+        TNT1 A 0 A_JumpIfInventory("SamsaraBloodGunsAkimboCooldown",1,1)
+        stop
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraBloodGunsAkimboCooldownDecrement")
         stop
     }
 }

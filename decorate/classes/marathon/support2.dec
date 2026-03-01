@@ -3,6 +3,7 @@ actor UsingPacifier: Boolean {}
 actor "Tech.50 Pacifier" : SamsaraMarathonWeapon
 {
     Inventory.PickupMessage "You picked up a Tech.50 Pacifier Security Handgun!"
+    Weapon.SlotNumber 9
     Weapon.SelectionOrder 4000
     Weapon.AmmoType "Tech50Ammo"
     Weapon.AmmoUse 1

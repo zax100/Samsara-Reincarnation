@@ -934,6 +934,22 @@ object LifeLeechShotCoop
 	frame LLSXK { light BLOOD_SMALL_FLARE_EXPLOSION_X11 }
 }
 
+object LifeLeechShotCoopWeaker
+{
+	frame LLSSA { light BLOOD_LIFE_LEECH_SHOT }
+	frame LLSXA { light BLOOD_SMALL_FLARE_EXPLOSION_X1 }
+	frame LLSXB { light BLOOD_SMALL_FLARE_EXPLOSION_X2 }
+	frame LLSXC { light BLOOD_SMALL_FLARE_EXPLOSION_X3 }
+	frame LLSXD { light BLOOD_SMALL_FLARE_EXPLOSION_X4 }
+	frame LLSXE { light BLOOD_SMALL_FLARE_EXPLOSION_X5 }
+	frame LLSXF { light BLOOD_SMALL_FLARE_EXPLOSION_X6 }
+	frame LLSXG { light BLOOD_SMALL_FLARE_EXPLOSION_X7 }
+	frame LLSXH { light BLOOD_SMALL_FLARE_EXPLOSION_X8 }
+	frame LLSXI { light BLOOD_SMALL_FLARE_EXPLOSION_X9 }
+	frame LLSXJ { light BLOOD_SMALL_FLARE_EXPLOSION_X10 }
+	frame LLSXK { light BLOOD_SMALL_FLARE_EXPLOSION_X11 }
+}
+
 flickerlight2 BLOOD_LIFE_LEECH_SMALL_FLASH
 {
 	color 0.9 0.75 0.1
@@ -972,6 +988,11 @@ object LifeLeechSentryShot
 }
 
 object LifeLeechSentryShotCoop
+{
+	frame EYEB { light BLOOD_LIFE_LEECH_SENTRY_SHOT }
+}
+
+object LifeLeechSentryShotCoopWeaker
 {
 	frame EYEB { light BLOOD_LIFE_LEECH_SENTRY_SHOT }
 }
@@ -1490,7 +1511,7 @@ object BloodBurningCorpse_Silent
 	frame CAFDC { light BLOOD_BURN_DEATH_X6 }
 }
 
-object BloodBurningCorpse_Genericcolor
+object BloodBurningCorpse_GenericColor
 {
 	frame DKBRA { light BLOOD_BURN_DEATH_X1 }
 	frame DKBRB { light BLOOD_BURN_DEATH_X1 }
@@ -1514,7 +1535,7 @@ object BloodBurningCorpse_Genericcolor
 	frame CAFDC { light BLOOD_BURN_DEATH_X6 }
 }
 
-object BloodBurningCorpse_NoPaincolor
+object BloodBurningCorpse_NoPainColor
 {
 	frame DKBRA { light BLOOD_BURN_DEATH_X1 }
 	frame DKBRB { light BLOOD_BURN_DEATH_X1 }
@@ -1538,7 +1559,7 @@ object BloodBurningCorpse_NoPaincolor
 	frame CAFDC { light BLOOD_BURN_DEATH_X6 }
 }
 
-object BloodBurningCorpse_ScreamOnlycolor
+object BloodBurningCorpse_ScreamOnlyColor
 {
 	frame DKBRA { light BLOOD_BURN_DEATH_X1 }
 	frame DKBRB { light BLOOD_BURN_DEATH_X1 }
@@ -1562,7 +1583,7 @@ object BloodBurningCorpse_ScreamOnlycolor
 	frame CAFDC { light BLOOD_BURN_DEATH_X6 }
 }
 
-object BloodBurningCorpse_Silentcolor
+object BloodBurningCorpse_SilentColor
 {
 	frame DKBRA { light BLOOD_BURN_DEATH_X1 }
 	frame DKBRB { light BLOOD_BURN_DEATH_X1 }

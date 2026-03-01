@@ -263,7 +263,7 @@ LISTMENU "RekkrOptionsMenu"
 	TextItem "controls", "c", "RekkrControlsMenu"
 	TextItem "player", "p", "NewPlayerMenu"
 	TextItem "gameplay","m",			"rGameplayOptions"
-	TextItem "Other", "o",	"OptionsMenu"
+	TextItem "other", "o",	"OptionsMenu"
 	Font "Smallfont"
 	Position 120, 144
 

@@ -195,5 +195,13 @@ actor Echida_Samsara : SamsaraMonsterBeastBoss replaces SpiderMastermind
 			SPID S 30
 			SPID S -1 //A_KeenDie
 			stop
+		Death.Massacre:
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+			SPID J 20 A_Scream
+			SPID K 10 A_Fall
+			SPID LMNOPQR 10
+			SPID S 30
+			SPID S -1 //A_KeenDie
+			stop
 	}
 }

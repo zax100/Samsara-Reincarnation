@@ -1072,7 +1072,7 @@ Script "DeusEx_Decorate" (int funct, int arg1, int arg2, int arg3)
 			Thing_ChangeTid(selectionTid,previousSelectionTid);
 			int afraid = GetActorProperty(0,APROP_Frightened);
 			int objectGravity = GetActorProperty(0,APROP_Gravity);
-			if(!((ClassifyActor(0) & ACTOR_MONSTER) && (musclestrength < 2 || (musclestrength == 4 && GetActorProperty(0,APROP_Height) > 56.0) || (musclestrength == 3 && GetActorProperty(0,APROP_Height) > 32.0))
+			if(!((ClassifyActor(0) & ACTOR_MONSTER) && (musclestrength < 3 || (musclestrength == 4 && GetActorProperty(0,APROP_Height) > 56.0) || (musclestrength == 3 && GetActorProperty(0,APROP_Height) > 40.0))
 			|| (ClassifyActor(0) & ACTOR_GENERIC) && (GetActorProperty(0,APROP_Mass) > 100 * musclestrength)))
 			{
 				SetActorProperty(0,APROP_Frightened,1);

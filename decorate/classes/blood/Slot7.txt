@@ -165,7 +165,11 @@ Actor SamsaraBloodLifeLeechPrimaryAttackHandler : Trigger
 			TNT1 A 0 A_FireCustomMissile("LifeLeechShot", random(-80,80)/10.0, false, 0, 3, 0, random(-40,40)/10.0)
 			Stop
 		PickupAttackCoop:
+		TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 61), "PickupAttackCoopWeaker")
 			TNT1 A 0 A_FireCustomMissile("LifeLeechShotCoop", random(-80,80)/10.0, false, 0, 3, 0, random(-40,40)/10.0)
+			Stop
+		PickupAttackCoopWeaker:
+			TNT1 A 0 A_FireCustomMissile("LifeLeechShotCoopWeaker", random(-80,80)/10.0, false, 0, 3, 0, random(-40,40)/10.0)
 			Stop
 	}
 }
@@ -339,6 +343,24 @@ Actor LifeLeechShotCoop : LifeLeechShot
 	}
 }
 
+actor LifeLeechShotCoopWeaker : LifeLeechShotCoop
+{
+	Damage (Random(6,12))
+
+	States
+	{
+	Spawn:
+		LLSS A 4 A_SpawnItemEx("LifeLeechTrail",0,0,0,random(-40,40)/10.0,random(-40,40)/10.0,random(-40,40)/10.0,random(1,360))
+		Loop
+	Death:
+		TNT1 A 0 ACS_NamedExecuteWithResult("CalebBurner")
+		TNT1 A 0 A_RadiusGive("BloodBurnVFXTrigger",112,RGF_MONSTERS|RGF_PLAYERS)
+		LLSX ABCDEFGHIJK 2 A_Explode(10, 112, 0)
+		Stop
+	}
+
+}
+
 Actor LifeLeechTrail
 {
 	Radius 12
@@ -385,7 +407,6 @@ Actor SamsaraBloodLifeLeechHealthDrain : Trigger
     States
     {
 		Pickup:
-			TNT1 A 0 A_JumpIf(!CallACS("SamsaraDecorate", 61), "PickupStop")
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraPlayerHealer", random(1,2))
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraPlayerHealer", 1, 200)
 			Stop
@@ -477,8 +498,13 @@ Actor LifeLeechTurretCoop : LifeLeechTurret
 	{
 	Missile:
 		TNT1 A 0 A_FaceTarget
+		TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 61), "WeakerShot")
 		TNT1 A 0 A_CustomMissile("LifeLeechSentryShotCoop", 48, 8)
 		TNT1 A 0 A_CustomMissile("LifeLeechSentryShotCoop", 48, -8)
+		Goto Super::MissileEnd
+	WeakerShot:
+		TNT1 A 0 A_CustomMissile("LifeLeechSentryShotCoopWeaker", 48, 8)
+		TNT1 A 0 A_CustomMissile("LifeLeechSentryShotCoopWeaker", 48, -8)
 		Goto Super::MissileEnd
 	}
 }
@@ -535,7 +561,7 @@ Actor LifeLeechSentryShot
 	Height 8
 	Speed 56
 	Scale 0.25
-	Damage (Random(20,39))
+	Damage (Random(20,40))
 	DamageType "Vodoo"
 	SeeSound "LifeLeech/AltSpawn"
 	DeathSound "LifeLeech/AltBlast"
@@ -557,4 +583,8 @@ Actor LifeLeechSentryShot
 
 Actor LifeLeechSentryShotCoop : LifeLeechSentryShot { Species "Player" +THRUSPECIES	}
 
-Actor LifeLeechSentryShotDM : LifeLeechSentryShot { Damage (Random(10,19)) }
+Actor LifeLeechSentryShotCoopWeaker : LifeLeechSentryShotCoop
+{
+	Damage (Random(20,30))
+}
+Actor LifeLeechSentryShotDM : LifeLeechSentryShot { Damage (Random(10,20)) }

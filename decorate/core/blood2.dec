@@ -1,4 +1,4 @@
-// LEVEL 2: BRUTAL GORE
+// LEVEL 2: CHUNKY GORE
 // =====================
 
 Actor RedMist : SamsaraEffectBase
@@ -77,7 +77,7 @@ Actor RedMistIntenseTrail : RedMistTrail
 	}
 }
 
-Actor BrutalSkull : GenericGoreActorFadeOut
+Actor ChunkySkull : GenericGoreActorFadeOut
 {
 	Radius 6
 	Height 6
@@ -86,8 +86,8 @@ Actor BrutalSkull : GenericGoreActorFadeOut
 	Scale 0.25
 	BounceFactor 0.5
 	BounceCount 3
-	SeeSound "brutal/bounce"
-	DeathSound "brutal/thud"
+	SeeSound "chunky/bounce"
+	DeathSound "chunky/thud"
 	+MISSILE
 	+DOOMBOUNCE
 	States
@@ -113,7 +113,7 @@ Actor BrutalSkull : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalRedOrgan : GenericGoreActorFadeOut
+Actor ChunkyRedOrgan : GenericGoreActorFadeOut
 {
 	Radius 5
 	Height 5
@@ -122,7 +122,7 @@ Actor BrutalRedOrgan : GenericGoreActorFadeOut
 	Scale 0.2
 	BounceFactor 0.6
 	BounceCount 5
-	SeeSound "brutal/bounce"
+	SeeSound "chunky/bounce"
 	+MISSILE
 	+DOOMBOUNCE
 	States
@@ -148,7 +148,7 @@ Actor BrutalRedOrgan : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalBrownOrgan : GenericGoreActorFadeOut
+Actor ChunkyBrownOrgan : GenericGoreActorFadeOut
 {
 	Radius 4
 	Height 4
@@ -157,7 +157,7 @@ Actor BrutalBrownOrgan : GenericGoreActorFadeOut
 	Scale 0.2
 	BounceFactor 0.6
 	BounceCount 5
-	SeeSound "brutal/bounce"
+	SeeSound "chunky/bounce"
 	+MISSILE
 	+DOOMBOUNCE
 	States
@@ -183,7 +183,7 @@ Actor BrutalBrownOrgan : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalBloodSpatter : GenericGoreActor
+Actor ChunkyBloodSpatter : GenericGoreActor
 {
 	Speed 2
 	Mass 0
@@ -202,9 +202,9 @@ Actor BrutalBloodSpatter : GenericGoreActor
 	}
 }
 
-Actor BrutalBloodSpatter2 : BrutalBloodSpatter { Scale 0.6 }
+Actor ChunkyBloodSpatter2 : ChunkyBloodSpatter { Scale 0.6 }
 
-Actor BrutalFlyingBloodTrail
+Actor ChunkyFlyingBloodTrail
 {
 	-NOGRAVITY
 	-NOCLIP
@@ -221,18 +221,18 @@ Actor BrutalFlyingBloodTrail
 		TNT1 A 0 A_Jump(256, "Spawn1", "Spawn2", "Spawn3")
 		Goto Spawn1
 	Spawn1:
-		BH2B ABCDEFGH 1 A_SpawnItemEx("BrutalBloodSpatter",0,0,0,random(-200,200)/100.00,random(-200,200)/100.00,random(-200,200)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
+		BH2B ABCDEFGH 1 A_SpawnItemEx("ChunkyBloodSpatter",0,0,0,random(-200,200)/100.00,random(-200,200)/100.00,random(-200,200)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
 		Stop
 	Spawn2:
-		BH2C ABCDEFGH 1 A_SpawnItemEx("BrutalBloodSpatter",0,0,0,random(-200,200)/100.00,random(-200,200)/100.00,random(-200,200)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
+		BH2C ABCDEFGH 1 A_SpawnItemEx("ChunkyBloodSpatter",0,0,0,random(-200,200)/100.00,random(-200,200)/100.00,random(-200,200)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
 		Stop
 	Spawn3:
-		BH2D ABCDEFGH 1 A_SpawnItemEx("BrutalBloodSpatter",0,0,0,random(-200,200)/100.00,random(-200,200)/100.00,random(-200,200)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
+		BH2D ABCDEFGH 1 A_SpawnItemEx("ChunkyBloodSpatter",0,0,0,random(-200,200)/100.00,random(-200,200)/100.00,random(-200,200)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
 		Stop
 	}
 }
 
-Actor BrutalFlyingBloodTrail2 : GenericGoreActor // By Bloax
+Actor ChunkyFlyingBloodTrail2 : GenericGoreActor // By Bloax
 {
 	Speed 2
 	Gravity 0.666
@@ -247,29 +247,29 @@ Actor BrutalFlyingBloodTrail2 : GenericGoreActor // By Bloax
 		TNT1 A 0 A_Jump(255,"Fly","Fly2","Fly3")
 		Goto Fly
 	Fly:
-		BTRL C 0 A_SpawnItemEx("BrutalBloodSpatter2",-1,0,1.5,momx*0.8,momy*0.8,momz*0.85,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
-		BTRL C 0 A_SpawnItemEx("BrutalBloodSpatter2",-2,0,3,momx*0.75,momy*0.75,momz*0.8,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
-		BTRL C 0 A_SpawnItemEx("BrutalBloodSpatter2",-3,0,5,momx*0.7,momy*0.7,momz*0.75,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
-		BTRL C 0 A_SpawnItemEx("BrutalBloodSpatter2",-4.5,0,3.5,momx*0.65,momy*0.65,momz*0.7,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
-		BTRL C 1 A_SpawnItemEx("BrutalBloodSpatter2",-6,0,1,momx*0.6,momy*0.6,momz*0.65,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 0 A_SpawnItemEx("ChunkyBloodSpatter2",-1,0,1.5,momx*0.8,momy*0.8,momz*0.85,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 0 A_SpawnItemEx("ChunkyBloodSpatter2",-2,0,3,momx*0.75,momy*0.75,momz*0.8,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 0 A_SpawnItemEx("ChunkyBloodSpatter2",-3,0,5,momx*0.7,momy*0.7,momz*0.75,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 0 A_SpawnItemEx("ChunkyBloodSpatter2",-4.5,0,3.5,momx*0.65,momy*0.65,momz*0.7,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 1 A_SpawnItemEx("ChunkyBloodSpatter2",-6,0,1,momx*0.6,momy*0.6,momz*0.65,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
 		Loop
 	Fly2:
-		BTRL C 0 A_SpawnItemEx("BrutalBloodSpatter2",-1,0,1.5,momx*0.8,momy*0.8,momz*0.85,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
-		BTRL C 0 A_SpawnItemEx("BrutalBloodSpatter2",-3,0,3,momx*0.75,momy*0.75,momz*0.8,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
-		BTRL C 1 A_SpawnItemEx("BrutalBloodSpatter2",-6,0,1,momx*0.6,momy*0.6,momz*0.65,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 0 A_SpawnItemEx("ChunkyBloodSpatter2",-1,0,1.5,momx*0.8,momy*0.8,momz*0.85,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 0 A_SpawnItemEx("ChunkyBloodSpatter2",-3,0,3,momx*0.75,momy*0.75,momz*0.8,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 1 A_SpawnItemEx("ChunkyBloodSpatter2",-6,0,1,momx*0.6,momy*0.6,momz*0.65,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
 		Loop
 	Fly3:
-		BTRL C 0 A_SpawnItemEx("BrutalBloodSpatter2",-1,0,1.5,momx*0.8,momy*0.8,momz*0.85,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
-		BTRL C 1 A_SpawnItemEx("BrutalBloodSpatter2",-2,0,3,momx*0.75,momy*0.75,momz*0.8,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 0 A_SpawnItemEx("ChunkyBloodSpatter2",-1,0,1.5,momx*0.8,momy*0.8,momz*0.85,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL C 1 A_SpawnItemEx("ChunkyBloodSpatter2",-2,0,3,momx*0.75,momy*0.75,momz*0.8,0,SAMSARA_UNBLOCKED_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
 		Loop
 	Death:
-		BTRL B 0 A_SpawnItemEx("BrutalOnlineSound3",0,0,0,0,0,0,0,SAMSARA_UNBLOCKED_CLIENTSIDE_FLAGS,48)
-		BTRL BBBBAAAA 1 A_SpawnItemEx("BrutalBloodSpatter",0,0,0,random(-700,700)/100.00,random(-700,700)/100.00,random(300,700)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
+		BTRL B 0 A_SpawnItemEx("ChunkyOnlineSound3",0,0,0,0,0,0,0,SAMSARA_UNBLOCKED_CLIENTSIDE_FLAGS,48)
+		BTRL BBBBAAAA 1 A_SpawnItemEx("ChunkyBloodSpatter",0,0,0,random(-700,700)/100.00,random(-700,700)/100.00,random(300,700)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS|SXF_ABSOLUTEVELOCITY)
 		Stop
 	}
 }
 
-Actor BrutalLittlePuddle : GenericGoreActorFadeOut
+Actor ChunkyLittlePuddle : GenericGoreActorFadeOut
 {
 	Radius 12
 	Height 2
@@ -280,7 +280,7 @@ Actor BrutalLittlePuddle : GenericGoreActorFadeOut
 	{
 	Spawn:
 		TNT1 A 0
-		B_SP A 1 A_PlaySound("brutal/bounce")
+		B_SP A 1 A_PlaySound("chunky/bounce")
 		B_SP BCDEFG 1
 		Goto Death
 	Death:
@@ -301,7 +301,7 @@ Actor BrutalLittlePuddle : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalTinyBouncyBone : GenericGoreActorFadeOut
+Actor ChunkyTinyBouncyBone : GenericGoreActorFadeOut
 {
 	Radius 1
 	Height 1
@@ -340,7 +340,7 @@ Actor BrutalTinyBouncyBone : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalTinyBone : GenericGoreActorFadeOut
+Actor ChunkyTinyBone : GenericGoreActorFadeOut
 {
 	Radius 1
 	Height 1
@@ -373,7 +373,7 @@ Actor BrutalTinyBone : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalChunk : GenericGoreActorFadeOut
+Actor ChunkyChunk : GenericGoreActorFadeOut
 {
 	Radius 4
 	Height 4
@@ -406,27 +406,27 @@ Actor BrutalChunk : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalChunkHuge : GenericGoreActor
+Actor ChunkyChunkHuge : GenericGoreActor
 {
 	Radius 6
 	Height 6
 	Mass 6
 	Scale 0.5
-	DeathSound "brutal/thud"
+	DeathSound "chunky/thud"
 	+MISSILE
 	States
 	{
 	Spawn:
-		BBLD ABCDEFGHIJKLMO 1 A_SpawnItemEx("BrutalFlyingBloodTrail",0,0,0,0,0,0,0,SXF_TRANSFERTRANSLATION|SXF_CLIENTSIDE)
+		BBLD ABCDEFGHIJKLMO 1 A_SpawnItemEx("ChunkyFlyingBloodTrail",0,0,0,0,0,0,0,SXF_TRANSFERTRANSLATION|SXF_CLIENTSIDE)
 		Loop
 	Death:
-		TNT1 AAAA 0 A_SpawnItemEx("BrutalChunkTiny",random(-10,10),random(-10,10),0,random(-700,700)/100.00,random(-700,700)/100.00,random(100,900)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
-		TNT1 AAAA 0 A_SpawnItemEx("BrutalChunk",random(-10,10),random(-10,10),0,random(-700,700)/100.00,random(-700,700)/100.00,random(100,900)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
+		TNT1 AAAA 0 A_SpawnItemEx("ChunkyChunkTiny",random(-10,10),random(-10,10),0,random(-700,700)/100.00,random(-700,700)/100.00,random(100,900)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
+		TNT1 AAAA 0 A_SpawnItemEx("ChunkyChunk",random(-10,10),random(-10,10),0,random(-700,700)/100.00,random(-700,700)/100.00,random(100,900)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
 		Stop
 	}
 }
 
-Actor BrutalChunkBouncy1 : GenericGoreActorFadeOut
+Actor ChunkyChunkBouncy1 : GenericGoreActorFadeOut
 {
 	Radius 3
 	Height 3
@@ -435,7 +435,7 @@ Actor BrutalChunkBouncy1 : GenericGoreActorFadeOut
 	Scale 0.5
 	BounceFactor 0.6
 	BounceCount 5
-	SeeSound "brutal/bounce"
+	SeeSound "chunky/bounce"
 	+MISSILE
 	+DOOMBOUNCE
 	States
@@ -449,7 +449,7 @@ Actor BrutalChunkBouncy1 : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalChunkBouncy2 : GenericGoreActorFadeOut
+Actor ChunkyChunkBouncy2 : GenericGoreActorFadeOut
 {
 	Radius 3
 	Height 3
@@ -458,7 +458,7 @@ Actor BrutalChunkBouncy2 : GenericGoreActorFadeOut
 	Scale 0.5
 	BounceFactor 0.6
 	BounceCount 5
-	SeeSound "brutal/bounce"
+	SeeSound "chunky/bounce"
 	+MISSILE
 	+DOOMBOUNCE
 	States
@@ -472,7 +472,7 @@ Actor BrutalChunkBouncy2 : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalChunkBouncy3 : GenericGoreActorFadeOut
+Actor ChunkyChunkBouncy3 : GenericGoreActorFadeOut
 {
 	Radius 3
 	Height 3
@@ -481,7 +481,7 @@ Actor BrutalChunkBouncy3 : GenericGoreActorFadeOut
 	Scale 0.5
 	BounceFactor 0.6
 	BounceCount 5
-	SeeSound "brutal/bounce"
+	SeeSound "chunky/bounce"
 	+MISSILE
 	+DOOMBOUNCE
 	States
@@ -495,7 +495,7 @@ Actor BrutalChunkBouncy3 : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalChunkTiny : GenericGoreActorFadeOut
+Actor ChunkyChunkTiny : GenericGoreActorFadeOut
 {
 	Radius 1
 	Height 1
@@ -526,9 +526,9 @@ Actor BrutalChunkTiny : GenericGoreActorFadeOut
 	}
 }
 
-Actor BrutalChunkTinier : BrutalChunkTiny { Scale 0.35 }
+Actor ChunkyChunkTinier : ChunkyChunkTiny { Scale 0.35 }
 
-Actor BrutalOnlineSound
+Actor ChunkyOnlineSound
 {
 	+NOCLIP
 	-SOLID
@@ -538,12 +538,12 @@ Actor BrutalOnlineSound
 	{
 	Spawn:
 		TNT1 A 0
-		TNT1 A 1 A_PlaySound("brutal/splatter",CHAN_5)
+		TNT1 A 1 A_PlaySound("chunky/splatter",CHAN_5)
 		Stop
 	}
 }
 
-Actor BrutalOnlineSound2
+Actor ChunkyOnlineSound2
 {
 	+NOCLIP
 	-SOLID
@@ -553,12 +553,12 @@ Actor BrutalOnlineSound2
 	{
 	Spawn:
 		TNT1 A 0
-		TNT1 A 1 A_PlaySound("brutal/death",CHAN_5)
+		TNT1 A 1 A_PlaySound("chunky/death",CHAN_5)
 		Stop
 	}
 }
 
-Actor BrutalOnlineSound3
+Actor ChunkyOnlineSound3
 {
 	+NOCLIP
 	-SOLID
@@ -568,12 +568,12 @@ Actor BrutalOnlineSound3
 	{
 	Spawn:
 		TNT1 A 0
-		TNT1 A 1 A_PlaySound("brutal/splash",CHAN_5)
+		TNT1 A 1 A_PlaySound("chunky/splash",CHAN_5)
 		Stop
 	}
 }
 
-Actor BrutalGibExplosionSmall1 : GenericGoreActor
+Actor ChunkyGibExplosionSmall1 : GenericGoreActor
 {
 	Scale 0.3
 	RenderStyle Translucent
@@ -588,7 +588,7 @@ Actor BrutalGibExplosionSmall1 : GenericGoreActor
 	}
 }
 
-Actor BrutalGibExplosionSmall2 : GenericGoreActor
+Actor ChunkyGibExplosionSmall2 : GenericGoreActor
 {
 	Scale 0.45
 	RenderStyle Translucent
@@ -604,10 +604,10 @@ Actor BrutalGibExplosionSmall2 : GenericGoreActor
 	}
 }
 
-// LEVEL 2.5: 2D BRUTAL BLOOD
+// LEVEL 2.5: 2D CHUNKY BLOOD
 // ========================
 
-Actor BrutalFlyingBloodTrail2D
+Actor ChunkyFlyingBloodTrail2D
 {
 	-NOGRAVITY
 	-NOCLIP
@@ -617,12 +617,12 @@ Actor BrutalFlyingBloodTrail2D
 	{
 	Spawn:
 		TNT1 A 0
-		BLDT AABBCC 2 A_SpawnItemEx("BrutalBloodSpatter",0,0,0,random(-200,200)/100.00,random(-200,200)/100.00,random(-200,200)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
+		BLDT AABBCC 2 A_SpawnItemEx("ChunkyBloodSpatter",0,0,0,random(-200,200)/100.00,random(-200,200)/100.00,random(-200,200)/100.00,random(-180,180),SAMSARA_UNBLOCKED_CLIENTSIDE_RECOLOR_FLAGS)
 		Stop
 	}
 }
 
-Actor BrutalLittlePuddle2D : BrutalLittlePuddle { RenderStyle Normal Alpha 1.0 Scale 0.75 }
+Actor ChunkyLittlePuddle2D : ChunkyLittlePuddle { RenderStyle Normal Alpha 1.0 Scale 0.75 }
 
 // For as much as I perfer Bolognese, there's something about the sprites of the blood
 // for this setting that I enjoy seeing

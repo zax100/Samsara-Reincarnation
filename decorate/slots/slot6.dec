@@ -209,7 +209,7 @@ actor SamsaraSlotSixNoStay : SamsaraSlotSixPickup
     States
     {
       Spawn:
-        WEPG F 0 Bright
+        WEPG F 0 Bright NoDelay ACS_NamedExecuteWithResult("Samsara_SwitchableObject", 41)
         goto SpawnGameModeCheck
 
       SpawnActual:

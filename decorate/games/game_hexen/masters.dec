@@ -49,8 +49,10 @@ actor FighterBoss2 : SamsaraMonsterReincFighterBoss replaces FighterBoss
 			Loop
 		Death:
 		XDeath:
-			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		Death.Massacre:
+		XDeath.Massacre:
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			Goto Super::XDeath
 		Death.DukeIce:
 			PLAY X 0 A_GiveToTarget("DukeBossKillTaunt",1)
@@ -287,8 +289,10 @@ actor ClericBoss2 : SamsaraMonsterReincClericBoss replaces ClericBoss
 			Goto See2
 		Death:
 		XDeath:
-			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		Death.Massacre:
+		XDeath.Massacre:
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			Goto Super::XDeath
 		Death.DukeIce:
 			CLFR Z 0 A_GiveToTarget("DukeBossKillTaunt",1)
@@ -673,8 +677,10 @@ actor MageBoss2 : SamsaraMonsterReincMageBoss replaces MageBoss
 			Loop
 		Death:
 		XDeath:
-			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			TNT1 A 0 A_SpawnItemEx("UniversalBloodyHellGoreXDeathEffect",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_USEBLOODCOLOR)
+		Death.Massacre:
+		XDeath.Massacre:
+			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 			Goto Super::XDeath
 		Death.DukeIce:
 			MAGE Y 0 A_GiveToTarget("DukeBossKillTaunt",1)

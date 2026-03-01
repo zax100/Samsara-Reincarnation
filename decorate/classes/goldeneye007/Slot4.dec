@@ -642,10 +642,10 @@ actor Goldeneye_AR33Tracer : Goldeneye_BulletTracerThruGhost
     States
     {
       XDeath:
-        TNT1 A 0 A_SetUserVar("user_damage",14)
+        TNT1 A 0 A_SetUserVar("user_damage",12)
         goto Super::XDeath
 	  Crash:
-        TNT1 A 0 A_SetUserVar("user_damage",14)
+        TNT1 A 0 A_SetUserVar("user_damage",12)
         goto Super::Crash
     }
 }
@@ -661,10 +661,10 @@ actor Goldeneye_AR33TracerSoundSource : Goldeneye_BulletTracerThruGhostSoundSour
     States
     {
       XDeath:
-        TNT1 A 0 A_SetUserVar("user_damage",14)
+        TNT1 A 0 A_SetUserVar("user_damage",12)
         goto Super::XDeath
 	  Crash:
-        TNT1 A 0 A_SetUserVar("user_damage",14)
+        TNT1 A 0 A_SetUserVar("user_damage",12)
         goto Super::Crash
     }
 }
@@ -1279,10 +1279,10 @@ actor Goldfinger_AK47Tracer : Goldeneye_BulletTracerThruGhost
     States
     {
       XDeath:
-        TNT1 A 0 A_SetUserVar("user_damage",15)
+        TNT1 A 0 A_SetUserVar("user_damage",12)
         goto Super::XDeath
 	  Crash:
-        TNT1 A 0 A_SetUserVar("user_damage",15)
+        TNT1 A 0 A_SetUserVar("user_damage",12)
         goto Super::Crash
     }
 }

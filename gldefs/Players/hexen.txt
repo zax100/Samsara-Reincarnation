@@ -319,6 +319,15 @@ object BlightShockShot1Coop
 	frame H111E { light MBLIGHTSHOCKSHOT_X1 }
 }
 
+object BlightShockShot1CoopImproved
+{
+	frame H111A { light MBLIGHTSHOCKSHOT }
+	frame H111B { light MBLIGHTSHOCKSHOT }
+	frame H111C { light MBLIGHTSHOCKSHOT }
+	frame H111D { light MBLIGHTSHOCKSHOT }
+	frame H111E { light MBLIGHTSHOCKSHOT_X1 }
+}
+
 // Blood Scepter
 flickerlight BLOODSCEPTERBALL
 {
@@ -1238,6 +1247,11 @@ object ClericSwordSlashCoop
 	frame SPIR { light CBISHOPSWORD }
 }
 
+object ClericSwordSlashCoopImproved
+{
+	frame SPIR { light CBISHOPSWORD }
+}
+
 object ClericSwordWallPuff
 {
 	frame SPIRK { light CBISHOPSWORD_X1 }
@@ -1328,7 +1342,29 @@ object SamsaraHexenCStaffMissileCoop
 	frame CSSFI { light CSTAFFBALL_X4 }
 }
 
+object SamsaraHexenCStaffMissileCoopImproved
+{
+	frame CSSFD { light CSTAFFBALL }
+	frame CSSFE { light CSTAFFBALL }
+
+	frame CSSFF { light CSTAFFBALL_X1 }
+	frame CSSFG { light CSTAFFBALL_X2 }
+	frame CSSFH { light CSTAFFBALL_X3 }
+	frame CSSFI { light CSTAFFBALL_X4 }
+}
+
 object SamsaraHexenCStaffMissile2Coop
+{
+	frame CSSFD { light CSTAFFBALL }
+	frame CSSFE { light CSTAFFBALL }
+
+	frame CSSFF { light CSTAFFBALL_X1 }
+	frame CSSFG { light CSTAFFBALL_X2 }
+	frame CSSFH { light CSTAFFBALL_X3 }
+	frame CSSFI { light CSTAFFBALL_X4 }
+}
+
+object SamsaraHexenCStaffMissile2CoopImproved
 {
 	frame CSSFD { light CSTAFFBALL }
 	frame CSSFE { light CSTAFFBALL }

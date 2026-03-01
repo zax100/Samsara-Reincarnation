@@ -1363,6 +1363,18 @@ Script "BondHitBox" (int damage)
 	Thing_ChangeTID(newtid,oldTID);
 }
 
+Script "Goldeneye_SlapperDamage" (void)
+{
+	int slapperX = GetActorX(0);
+	int slapperY = GetActorY(0);
+	SetActivator(0,AAPTR_Tracer);
+
+	int relativeAngle = abs(relativeAngleToXY(0, slapperX, slapperY) - 0.5);
+
+	if (relativeAngle < 0.6 && relativeAngle > 0.4) { SetResultValue(160); }
+	else { SetResultValue(20); }
+}
+
 Script "Goldeneye_BuildTank" (int goldfinger)
 {
 	int x = GetActorX(0);

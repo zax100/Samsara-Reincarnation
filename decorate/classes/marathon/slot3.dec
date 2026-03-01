@@ -282,16 +282,20 @@ actor SamsaraMarathonFusionPistolPrimaryAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_JumpIfInventory("SamsaraCurrentWaterLevel",0,"PickupAttackCoopUnderwater")
         TNT1 A 0 A_FireCustomMissile("SamsaraMarathonFusionShotCoop",random(-1,1),false,0,6,0,random(-1,1))
-        stop
 	  PickupAttackCoopImproved:
+	  PickupAttackCoopUnderwater:
+        TNT1 A 0 A_JumpIfInventory("SamsaraCurrentWaterLevel",0,"PickupAttackCoopUnderwaterImproved")
         TNT1 A 0 A_FireCustomMissile("SamsaraMarathonFusionShotCoopImproved",random(-1,1),false,0,6,0,random(-1,1))
         stop
 
       PickupAttackCoopUnderwater:
         TNT1 A 0 A_FireCustomMissile("SamsaraMarathonFusionShotWaterCoop",0,false)
+        stop
+	  PickupAttackCoopUnderwaterImproved:
+        TNT1 A 0 A_FireCustomMissile("SamsaraMarathonFusionShotWaterCoop",0,false) // do this later
         stop
 
       // Underwater ignoring attack stuff
@@ -333,7 +337,6 @@ actor SamsaraMarathonFusionPistolSecondaryAttackHandler : Trigger
       PickupAttack:
         TNT1 A 0 A_PlaySound("marathon/fusion/super",CHAN_WEAPON)
         TNT1 A 0 A_JumpIfInventory("SamsaraCanFireWeaponsUnderwater",0,"PickupAttackIgnoreWater")
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedDoomguyBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
       PickupAttackDM:
@@ -347,9 +350,8 @@ actor SamsaraMarathonFusionPistolSecondaryAttackHandler : Trigger
 
       PickupAttackCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraCurrentWaterLevel",0,"PickupAttackCoopUnderwater")
-        TNT1 A 0 A_FireCustomMissile("SamsaraMarathonFusionSuperCoopImproved",random(-1,1),false,0,6,0,random(-1,1))
-        stop
-      PickupAttackCoopImproved:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
+	  PickupAttackCoopImproved:
         TNT1 A 0 A_FireCustomMissile("SamsaraMarathonFusionSuperCoopImproved",random(-1,1),false,0,6,0,random(-1,1))
         stop
 
@@ -534,15 +536,11 @@ actor SamsaraMarathonFusionShotCoop : SamsaraMarathonFusionShot
     +THRUSPECIES
 }
 
-actor SamsaraMarathonFusionShotCoopImproved : SamsaraMarathonFusionShot
+actor SamsaraMarathonFusionShotCoopImproved : SamsaraMarathonFusionShotCoop
 {
-    Radius 6
-    Height 8
-    Speed 20
-    Species "Player"
-    +THRUSPECIES
-	Damage (random(45, 60)
+    Damage (random(48,60))
 }
+
 actor SamsaraMarathonFusionShotIgnoreWater : SamsaraMarathonFusionShot
 {
 	States
@@ -586,22 +584,17 @@ actor SamsaraMarathonFusionShotWater : SamsaraMarathonFusionShot
 
       Death:
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 47), "DeathFullRadius")
-        TNT1 A 0 A_Explode(random(15,20),128,0)
+        TNT1 A 0 A_Explode(random(18,20),128,0)
         TNT1 A 1 A_Explode(random(30,40),128)
         stop
 
       DeathFullRadius:
-        TNT1 A 0 A_Explode(random(15,20),128,0,false,128)
+        TNT1 A 0 A_Explode(random(18,20),128,0,false,128)
         TNT1 A 1 A_Explode(random(30,40),128,XF_HURTSOURCE,false,128)
         stop
     }
 }
 
-actor SamsaraMarathonFusionShotWaterCoop : SamsaraMarathonFusionShotWater
-{
-    Species "Player"
-    +THRUSPECIES
-}
 actor SamsaraMarathonFusionShotWaterCoop : SamsaraMarathonFusionShotWater
 {
     Species "Player"
@@ -613,7 +606,7 @@ actor SamsaraMarathonFusionSuper : SamsaraMarathonFusionShot
     Radius 20
     Height 24
     Speed 35
-    Damage (random(104,140))
+    Damage (random(105,140))
     Scale 0.75
     Decal "Scorch"
     States
@@ -658,15 +651,9 @@ actor SamsaraMarathonFusionSuperCoop : SamsaraMarathonFusionSuper
     Species "Player"
     +THRUSPECIES
 }
-
-actor SamsaraMarathonFusionSuperCoopImproved : SamsaraMarathonFusionSuper
+actor SamsaraMarathonFusionSuperCoopImproved: SamsaraMarathonFusionSuperCoop
 {
-    Radius 10
-    Height 12
-    Speed 30
-    Species "Player"
-    +THRUSPECIES
-	Damage (random(120, 160))
+    Damage (random(120, 160))
 }
 
 actor SamsaraMarathonFusionSuperIgnoreWater : SamsaraMarathonFusionSuper
@@ -712,12 +699,12 @@ actor SamsaraMarathonFusionShotWater2 : SamsaraMarathonFusionSuper
 
       Death:
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 47), "DeathFullRadius")
-        TNT1 A 0 A_Explode(random(40,60),128,0)
+        TNT1 A 0 A_Explode(random(40,50),128,0)
         TNT1 A 1 A_Explode(random(80,100),128)
         stop
 
       DeathFullRadius:
-        TNT1 A 0 A_Explode(random(40,60),128,0,false,128)
+        TNT1 A 0 A_Explode(random(40,50),128,0,false,128)
         TNT1 A 1 A_Explode(random(80,100),128,XF_HURTSOURCE,false,128)
         stop
     }

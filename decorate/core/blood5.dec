@@ -1,4 +1,4 @@
-// LEVEL 5: KETCHUP GIBS (also actual brutal gibs)
+// LEVEL 5: KETCHUP GIBS (also brutal gibs)
 // ========================
 
 Actor Ketchup_FlyingBloodTrail : GenericGoreActor

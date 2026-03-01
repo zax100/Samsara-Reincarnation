@@ -62,7 +62,7 @@ actor CMFusionBall
     Radius 8
     Height 6
     Speed 25
-    Damage (Random(40, 56))
+    Damage (Random(56, 72))
     PROJECTILE
     RENDERSTYLE ADD
     ALPHA 0.90

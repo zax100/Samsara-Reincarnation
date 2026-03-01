@@ -566,9 +566,10 @@ ACTOR FriendlyGrunt
 		GNT6 M 0 A_ChangeFlag("NOPAIN", 0)
 		Goto See
 	Death:
+		TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
+	Death.Massacre:
 		TNT1 A 0 A_GiveToTarget("KillCount",1)
 		TNT1 A 0 A_ChangeFlag("NOPAIN", 1)
-		TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreDeathEffect")
 		GNT7 A 0 A_Jump(256,"Death1","Death2")
 	Death1:
 		GNT7 A 4
@@ -585,8 +586,9 @@ ACTOR FriendlyGrunt
 		GNT8 K -1
 		Stop
 	XDeath:
-		TNT1 A 0 A_GiveToTarget("KillCount",1)
 		TNT1 A 0 A_SpawnItem("UniversalBloodyHellGoreXDeathEffect")
+	XDeath.Massacre:
+		TNT1 A 0 A_GiveToTarget("KillCount",1)
 		QZUM A 0 A_SpawnDebris("Quake_GIB12")
 		QZUM A 0 A_SpawnDebris("Quake_GIB2")
 		QZUM A 0 A_SpawnDebris("Quake_GIB3")

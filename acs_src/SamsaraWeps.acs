@@ -194,6 +194,9 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
         {"Phoenix Rod",                  "RocketAmmo", "", "", ""},
         {"Hellstaff",                    "Cell",       "", "", ""},
         {"DSparilStaff",                 "Cell",       "", "", ""},
+        {"",                             "",           "", "", ""},
+        {"",                             "",           "", "", ""},
+        {"CorvusTempestWand",            "Cell",       "", "", ""},
     },
     { // Wolfenstein 3D
         {"Knife",                   "",           "", "ForceCheck", ""},
@@ -264,11 +267,11 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
     },
     { // Rise of the Triad
         {"RottKnife",      "",             "", "",           ""},
-        {"Bazooka",        "RottMissiles", "", "",           ""},
-        {"RPistol",        "",             "", "",           ""},
         {"Double Pistols", "",             "", "ForceCheck", ""},
-        {"HeatSeeker",     "HSMissiles",   "", "",           ""},
+        {"RPistol",        "",             "", "",           ""},
         {"MP40",           "",             "", "ForceCheck", ""},
+        {"HeatSeeker",     "HSMissiles",   "", "",           ""},
+        {"Bazooka",        "RottMissiles", "", "",           ""},
         {" Firebomb ",     "FBMissiles",   "", "",           ""},
         {"DrunkMissiles",  "DMissiles",    "", "",           ""},
         {"FlameWall",      "FWMissiles",   "", "",           ""},
@@ -276,15 +279,16 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
         {"Doomstick",      "DMMissiles",   "", "",           ""},
     },
     { // Blake Stone
-        {"Auto Charge Pistol",     "",           "", "", ""},
-        {"BlakeSuperAutoCharge",   "",           "", "", ""},
-        {"Auto Charge Pistol",     "",           "", "", ""},
-        {"Slow Fire Protector",    "Shell",      "", "", ""},
-        {"Heavy Assault Weapon",   "Shell",      "", "", ""},
-        {"Rapid Assault Weapon",   "Clip",       "", "", ""},
-        {"Plasma Discharge Unit",  "RocketAmmo", "", "", ""},
-        {"Dual Neutron Disruptor", "Cell",       "", "", ""},
-        {"Anti-Plasma Cannon",     "Cell",       "", "", ""},
+        {"Auto Charge Pistol",        "",           "", "", ""},
+        {"BlakeSuperAutoCharge",      "",           "", "", ""},
+        {"Auto Charge Pistol",        "",           "", "", ""},
+        {"Slow Fire Protector",       "Shell",      "", "", ""},
+        {"Heavy Assault Weapon",      "Shell",      "", "", ""},
+        {"Rapid Assault Weapon",      "Clip",       "", "", ""},
+        {"Plasma Discharge Unit",     "RocketAmmo", "", "", ""},
+        {"Dual Neutron Disruptor",    "Cell",       "", "", ""},
+        {"Anti-Plasma Cannon",        "Cell",       "", "", ""},
+        {"Gatling Fusion Devastator", "Clip",       "", "", ""},
     },
     { // Blood
         {"Pitchfork",           "",           "", "",           ""},
@@ -412,6 +416,7 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
         {" RPG ",           "",           "",           "ForceCheck", ""}, // can give multiple weapons that use the same ammo type, uses script for proper ammo calculations
         {"Gauss Cannon",    "",           "",           "ForceCheck", ""}, // can give multiple weapons that use the same ammo type, uses script for proper ammo calculations
         {"E.G.O.N.",        "",           "",           "ForceCheck", ""}, // can give multiple weapons that use the same ammo type, uses script for proper ammo calculations
+        {"HLUzi",           "Clip",       "",           "",           ""},
     },
     { // Shadow Warrior
         {"SWFists",           "",           "", "",               ""},
@@ -683,7 +688,7 @@ str ClassHotKeyWeapon[CLASSCOUNT][MAXMODES][SLOTCOUNT + UNIQUECOUNT][LOADOUTCOUN
         {" Bootspoon "}, {"Super Bootspork"}, {"Mini-Zorcher", "Micro-Zorcher"}, {"Large Zorcher"}, {"Super Large Zorcher"}, {"Rapid Zorcher"}, {"Zorch Propulsor"}, {"Phasing Zorcher"}, {"LAZ Device"}, {""}, {"Chain-Lightning Zorcher"}, {""}, {"Ultra Rapid Zorcher"}, {"Zorch Launcher"}, {"Gigazorcher 2100"}, {"Liquid Zorcher"},
     }},
     {{
-        {" Staff "}, {"Gauntlets of the Necromancer"}, {"Elven Wand"}, {" Firemace "}, {"Ethereal Crossbow"}, {"Dragon Claw"}, {"Phoenix Rod"}, {"Hellstaff"}, {"DSparilStaff"}, {"Grim Ballista"}, {"SamsaraCorvusArtiEgg"},
+        {" Staff "}, {"Gauntlets of the Necromancer"}, {"Elven Wand"}, {" Firemace "}, {"Ethereal Crossbow"}, {"Dragon Claw"}, {"Phoenix Rod"}, {"Hellstaff"}, {"DSparilStaff"}, {"Grim Ballista"}, {"SamsaraCorvusArtiEgg"}, {""}, {""}, {""}, {"CorvusTempestWand"},
     }},
     {
         {
@@ -729,27 +734,27 @@ str ClassHotKeyWeapon[CLASSCOUNT][MAXMODES][SLOTCOUNT + UNIQUECOUNT][LOADOUTCOUN
     }},
     {
         {
-            {"RottKnife"}, {"Bazooka"}, {"RPistol"}, {"Double Pistols"}, {"HeatSeeker"}, {"MP40"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
+            {"RottKnife"}, {"Double Pistols"}, {"RPistol"}, {"MP40"}, {"HeatSeeker"}, {"Bazooka"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
         },
         {
-            {"RottKnife"}, {"Bazooka"}, {"RPistol"}, {"Double Pistols"}, {"HeatSeeker"}, {"MP40"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
+            {"RottKnife"}, {"Double Pistols"}, {"RPistol"}, {"MP40"}, {"HeatSeeker"}, {"Bazooka"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
         },
         {
-            {"RottKnife"}, {"Bazooka"}, {"RPistol"}, {"Double Pistols"}, {"HeatSeeker"}, {"MP40"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
+            {"RottKnife"}, {"Double Pistols"}, {"RPistol"}, {"MP40"}, {"HeatSeeker"}, {"Bazooka"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
         },
         {
-            {"RottKnife"}, {"Bazooka"}, {"RPistol"}, {"Double Pistols"}, {"HeatSeeker"}, {"MP40"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
+            {"RottKnife"}, {"Double Pistols"}, {"RPistol"}, {"MP40"}, {"HeatSeeker"}, {"Bazooka"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
         },
         {
-            {"RottKnife"}, {"Bazooka"}, {"RPistol"}, {"Double Pistols"}, {"HeatSeeker"}, {"MP40"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
+            {"RottKnife"}, {"Double Pistols"}, {"RPistol"}, {"MP40"}, {"HeatSeeker"}, {"Bazooka"}, {" Firebomb "}, {"DrunkMissiles"}, {"FlameWall"}, {"Excalibat"}, {"Split Missile"}, {"Dark Staff"}, {"RoTTM60"}, {"Doomstick"},
         },
     },
     {
         {
-            {""}, {""}, {"Auto Charge Pistol"}, {"Slow Fire Protector"}, {"Heavy Assault Weapon"}, {"Rapid Assault Weapon"}, {"Plasma Discharge Unit"}, {"Dual Neutron Disruptor"}, {"Anti-Plasma Cannon"}, {"BlakeRefill"},
+            {""}, {""}, {"Auto Charge Pistol"}, {"Slow Fire Protector"}, {"Heavy Assault Weapon"}, {"Rapid Assault Weapon"}, {"Plasma Discharge Unit"}, {"Dual Neutron Disruptor"}, {"Anti-Plasma Cannon"}, {"BlakeRefill"}, {""}, {""}, {"Gatling Fusion Devastator"},
         },
         {
-            {""}, {""}, {"Auto Charge Pistol"}, {"Slow Fire Protector"}, {"Heavy Assault Weapon"}, {"Rapid Assault Weapon"}, {"Plasma Discharge Unit"}, {"Dual Neutron Disruptor"}, {"Anti-Plasma Cannon"}, {"BlakeRefill"},
+            {""}, {""}, {"Auto Charge Pistol"}, {"Slow Fire Protector"}, {"Heavy Assault Weapon"}, {"Rapid Assault Weapon"}, {"Plasma Discharge Unit"}, {"Dual Neutron Disruptor"}, {"Anti-Plasma Cannon"}, {"BlakeRefill"}, {""}, {""}, {"Gatling Fusion Devastator"},
         },
     },
     {{
@@ -806,10 +811,10 @@ str ClassHotKeyWeapon[CLASSCOUNT][MAXMODES][SLOTCOUNT + UNIQUECOUNT][LOADOUTCOUN
     }},
     {
         {
-            {"Crowbar", "Combat Knife"}, {"Hornetgun", "Shock Roach"}, {"9mm Pistol"}, {"Assault Shotgun"}, {".357 Python", "Desert Eagle"}, {"MP5"}, {" RPG ", "Spore Launcher"}, {"Gauss Cannon", "M249 Squad Automatic Weapon"}, {"E.G.O.N.", "Displacer Cannon"}, {"HL Squeaks", "Mk 2 Grenades"}, {"HL Crossbow", "M40A1 Sniper Rifle"}, {"", "HLOPBarnacle"},
+            {"Crowbar", "Combat Knife"}, {"Hornetgun", "Shock Roach"}, {"9mm Pistol"}, {"Assault Shotgun"}, {".357 Python", "Desert Eagle"}, {"MP5"}, {" RPG ", "Spore Launcher"}, {"Gauss Cannon", "M249 Squad Automatic Weapon"}, {"E.G.O.N.", "Displacer Cannon"}, {"HL Squeaks", "Mk 2 Grenades"}, {"HL Crossbow", "M40A1 Sniper Rifle"}, {"", "HLOPBarnacle"}, {"HLUzi"},
         },
         {
-            {"Crowbar", "Combat Knife"}, {"Hornetgun", "Shock Roach"}, {"9mm Pistol"}, {"Assault Shotgun"}, {".357 Python", "Desert Eagle"}, {"MP5"}, {" RPG ", "Spore Launcher"}, {"Gauss Cannon", "M249 Squad Automatic Weapon"}, {"E.G.O.N.", "Displacer Cannon"}, {"HL Squeaks", "Mk 2 Grenades"}, {"HL Crossbow", "M40A1 Sniper Rifle"}, {"", "HLOPBarnacle"},
+            {"Crowbar", "Combat Knife"}, {"Hornetgun", "Shock Roach"}, {"9mm Pistol"}, {"Assault Shotgun"}, {".357 Python", "Desert Eagle"}, {"MP5"}, {" RPG ", "Spore Launcher"}, {"Gauss Cannon", "M249 Squad Automatic Weapon"}, {"E.G.O.N.", "Displacer Cannon"}, {"HL Squeaks", "Mk 2 Grenades"}, {"HL Crossbow", "M40A1 Sniper Rifle"}, {"", "HLOPBarnacle"}, {"HLUzi"},
         },
     },
     {{
@@ -918,7 +923,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 	{ //Heretic
 		{
 			{ "Gauntlets of the Necromancer", " Staff ", "", "", "", "", "", "", "", "" },
-			{ "Elven Wand", "", "", "", "", "", "", "", "", "" },
+			{ "CorvusTempestWand", "Elven Wand", "", "", "", "", "", "", "", "" },
 			{ "Ethereal Crossbow", "", "", "", "", "", "", "", "", "" },
 			{ "Dragon Claw", "", "", "", "", "", "", "", "", "" },
 			{ "Hellstaff", "", "", "", "", "", "", "", "", "" },
@@ -1154,7 +1159,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 			{ "Plasma Discharge Unit", "", "", "", "", "", "", "", "", "" },
 			{ "Anti-Plasma Cannon", "", "", "", "", "", "", "", "", "" },
 			{ "Heavy Assault Weapon", "", "", "", "", "", "", "", "", "" },
-			{ "", "", "", "", "", "", "", "", "", "" },
+			{ "Gatling Fusion Devastator", "", "", "", "", "", "", "", "", "" },
 			{ "", "", "", "", "", "", "", "", "", "" },
 			{ "", "", "", "", "", "", "", "", "", "" },
 		},
@@ -1166,7 +1171,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 			{ "Plasma Discharge Unit", "", "", "", "", "", "", "", "", "" },
 			{ "Anti-Plasma Cannon", "", "", "", "", "", "", "", "", "" },
 			{ "Heavy Assault Weapon", "", "", "", "", "", "", "", "", "" },
-			{ "", "", "", "", "", "", "", "", "", "" },
+			{ "Gatling Fusion Devastator", "", "", "", "", "", "", "", "", "" },
 			{ "", "", "", "", "", "", "", "", "", "" },
 			{ "", "", "", "", "", "", "", "", "", "" },
 		},
@@ -1384,7 +1389,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 	{ //Half Life
 		{
 			{ "Crowbar", "Combat Knife", "HLOPBarnacle", "", "", "", "", "", "", "" },
-			{ "9mm Pistol", ".357 Python", "Desert Eagle", "", "", "", "", "", "", "" },
+			{ "9mm Pistol", ".357 Python", "Desert Eagle", "HLUzi", "", "", "", "", "", "" },
 			{ "MP5", "Assault Shotgun", "HL Crossbow", "", "", "", "", "", "", "" },
 			{ " RPG ", "Gauss Cannon", "E.G.O.N.", "Hornetgun", "", "", "", "", "", "" },
 			{ "Mk 2 Grenades", "HL Squeaks", "", "", "", "", "", "", "", "" },
@@ -1396,7 +1401,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 		},
 		{
 			{ "Crowbar", "Combat Knife", "HLOPBarnacle", "", "", "", "", "", "", "" },
-			{ "9mm Pistol", ".357 Python", "Desert Eagle", "", "", "", "", "", "", "" },
+			{ "9mm Pistol", ".357 Python", "Desert Eagle", "HLUzi", "", "", "", "", "", "" },
 			{ "MP5", "Assault Shotgun", "HL Crossbow", "", "", "", "", "", "", "" },
 			{ " RPG ", "Gauss Cannon", "E.G.O.N.", "Hornetgun", "", "", "", "", "", "" },
 			{ "Mk 2 Grenades", "HL Squeaks", "", "", "", "", "", "", "", "" },

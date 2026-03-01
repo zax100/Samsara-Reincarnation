@@ -123,9 +123,9 @@ actor SamsaraROTTDrunkMissileAttackHandler : Trigger
 
 actor DMissiles : Ammo
 {
-    Inventory.MaxAmount 60
+    Inventory.MaxAmount 50
     Ammo.BackpackAmount 8 // skills with different AmmoFactor values and sv_doubleammo can still give extra regardless of +IGNORESKILL
-    Ammo.BackpackMaxAmount 120
+    Ammo.BackpackMaxAmount 100
     Inventory.Icon "AMSMD0"
     Tag "Drunk Missiles"
     +IGNORESKILL

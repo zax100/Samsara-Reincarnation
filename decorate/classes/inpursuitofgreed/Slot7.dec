@@ -260,7 +260,6 @@ Actor PGSuperPlasmaTrail
 	Damage (0)
 	+CLIENTSIDEONLY
 	+NOINTERACTION
-	+THRUGHOST
 	+THRUSPECIES
 	Species "Player"
 	//renderstyle add

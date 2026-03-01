@@ -564,8 +564,8 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
 			case BLOODYHELL_VANILLA:		break;
 			case BLOODYHELL_NASHGORE:		SetActorState(0,"XDeathNashgore"); break;
 			case BLOODYHELL_NASHGORE2D:		SetActorState(0,"XDeathNashgore2D"); break;
-			case BLOODYHELL_BRUTAL:			SetActorState(0,"XDeathBrutal"); break;
-			case BLOODYHELL_BRUTAL2D:		SetActorState(0,"XDeathBrutal2D"); break;
+			case BLOODYHELL_CHUNKY:			SetActorState(0,"XDeathChunky"); break;
+			case BLOODYHELL_CHUNKY2D:		SetActorState(0,"XDeathChunky2D"); break;
 			case BLOODYHELL_NIGHTMARE:		SetActorState(0,StrParam(s: "XDeathNightmare", d: random(1,2))); break;
 			case BLOODYHELL_NIGHTMARE2D:	SetActorState(0,StrParam(s: "XDeathNightmare2D", d: random(1,2))); break;
 			case BLOODYHELL_BOLOGNESE:		SetActorState(0,"XDeathBolognese"); break;
@@ -594,8 +594,8 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
 			case BLOODYHELL_VANILLA:		break;
 			case BLOODYHELL_NASHGORE:		SetActorState(0,"DeathNashgore"); break;
 			case BLOODYHELL_NASHGORE2D:		SetActorState(0,"DeathNashgore2D"); break;
-			case BLOODYHELL_BRUTAL:			SetActorState(0,"DeathBrutal"); break;
-			case BLOODYHELL_BRUTAL2D:		SetActorState(0,"DeathBrutal2D"); break;
+			case BLOODYHELL_CHUNKY:			SetActorState(0,"DeathChunky"); break;
+			case BLOODYHELL_CHUNKY2D:		SetActorState(0,"DeathChunky2D"); break;
 			case BLOODYHELL_NIGHTMARE:		SetActorState(0,StrParam(s: "DeathNightmare", d: random(1,6))); break;
 			case BLOODYHELL_NIGHTMARE2D:	SetActorState(0,StrParam(s: "DeathNightmare2D", d: random(1,6))); break;
 			case BLOODYHELL_BOLOGNESE:		SetActorState(0,"DeathBolognese"); break;
@@ -638,8 +638,8 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
 				case BLOODYHELL_VANILLA:		SetActorState(0,GetBloodStateModifier("SpawnNormal", a1)); break;
 				case BLOODYHELL_NASHGORE:		SetActorState(0,GetBloodStateModifier("SpawnNashgore", a1)); break;
 				case BLOODYHELL_NASHGORE2D:		SetActorState(0,GetBloodStateModifier("SpawnNashgore2D", a1)); break;
-				case BLOODYHELL_BRUTAL:			SetActorState(0,"SpawnBrutal"); break;
-				case BLOODYHELL_BRUTAL2D:		SetActorState(0,"SpawnBrutal2D"); break;
+				case BLOODYHELL_CHUNKY:			SetActorState(0,"SpawnChunky"); break;
+				case BLOODYHELL_CHUNKY2D:		SetActorState(0,"SpawnChunky2D"); break;
 				case BLOODYHELL_NIGHTMARE:		SetActorState(0,GetBloodStateModifier("SpawnNightmare", a1)); break;
 				case BLOODYHELL_NIGHTMARE2D:	SetActorState(0,GetBloodStateModifier("SpawnNightmare2D", a1)); break;
 				case BLOODYHELL_BOLOGNESE:		SetActorState(0,"SpawnBolognese"); break;
@@ -686,8 +686,8 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
 			case BLOODYHELL_VANILLA:		break;
 			case BLOODYHELL_NASHGORE:		SetActorState(0,"CrashNashgore"); break;
 			case BLOODYHELL_NASHGORE2D:		SetActorState(0,"CrashNashgore2D"); break;
-			case BLOODYHELL_BRUTAL:			SetActorState(0,"CrashBrutal"); break;
-			case BLOODYHELL_BRUTAL2D:		SetActorState(0,"CrashBrutal2D"); break;
+			case BLOODYHELL_CHUNKY:			SetActorState(0,"CrashChunky"); break;
+			case BLOODYHELL_CHUNKY2D:		SetActorState(0,"CrashChunky2D"); break;
 			case BLOODYHELL_NIGHTMARE:		SetActorState(0,"CrashNightmare"); break;
 			case BLOODYHELL_NIGHTMARE2D:	SetActorState(0,"CrashNightmare2D"); break;
 			case BLOODYHELL_BOLOGNESE:		SetActorState(0,"CrashBolognese"); break;
@@ -715,8 +715,8 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
 			case BLOODYHELL_VANILLA:		SetActorState(0,"DeathVanilla"); break;
 			case BLOODYHELL_NASHGORE:		SetActorState(0,"DeathNashgore"); break;
 			case BLOODYHELL_NASHGORE2D:		SetActorState(0,"DeathNashgore2D"); break;
-			case BLOODYHELL_BRUTAL:			SetActorState(0,"DeathBrutal"); break;
-			case BLOODYHELL_BRUTAL2D:		SetActorState(0,"DeathBrutal2D"); break;
+			case BLOODYHELL_CHUNKY:			SetActorState(0,"DeathChunky"); break;
+			case BLOODYHELL_CHUNKY2D:		SetActorState(0,"DeathChunky2D"); break;
 			case BLOODYHELL_NIGHTMARE:		SetActorState(0,StrParam(s: "DeathNightmare", d: random(1,6))); break;
 			case BLOODYHELL_NIGHTMARE2D:	SetActorState(0,StrParam(s: "DeathNightmare2D", d: random(1,6))); break;
 			case BLOODYHELL_BOLOGNESE:		SetActorState(0,"DeathBolognese"); break;
@@ -754,6 +754,10 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
         if (a1 >= 1) { Print(l:"WITCHAVENSPELLDISABLED"); }
         else { Print(l:"WITCHAVENSPELLNOAMMO"); }
         break;
+
+	case 20:
+		Print(l:"C3DRINGALREADYEQUIPPED");
+		break;
 	}
 
 	SetResultValue(result);
@@ -902,7 +906,7 @@ str HLWeaponGraphics[2][10][10] =
 {
 	{
 		{ "HPKUP00", "HPKUP22", "HPKUP16", "", "", "", "", "", "", "" },
-		{ "HPKUP01", "HPKUP02", "HPKUP17", "", "", "", "", "", "", "" },
+		{ "HPKUP01", "HPKUP02", "HPKUP17", "HPKUP03", "", "", "", "", "", "" },
 		{ "HPKUP03", "HPKUP04", "HPKUP09", "", "", "", "", "", "", "" },
 		{ "HPKUP10", "HPKUP11", "HPKUP12", "HPKUP13", "", "", "", "", "", "" },
 		{ "HPKUP05", "HPKUP08", "", "", "", "", "", "", "", "" },
@@ -914,7 +918,7 @@ str HLWeaponGraphics[2][10][10] =
 	},
 	{
 		{ "OPFSL00", "OPFSL22", "OPFSL16", "", "", "", "", "", "", "" },
-		{ "OPFSL01", "OPFSL02", "OPFSL17", "", "", "", "", "", "", "" },
+		{ "OPFSL01", "OPFSL02", "OPFSL17", "OPFSL03", "", "", "", "", "", "" },
 		{ "OPFSL03", "OPFSL04", "OPFSL09", "", "", "", "", "", "", "" },
 		{ "OPFSL10", "OPFSL11", "OPFSL12", "OPFSL13", "", "", "", "", "", "" },
 		{ "OPFSL05", "OPFSL08", "", "", "", "", "", "", "", "" },
@@ -2175,7 +2179,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Pyro Cannon", INTMAX);
 			TakeInventory(" BFG10K ", INTMAX);
 			TakeInventory("PowerStrength", 1);
-			TakeInventory("SamsaraDoom64UnmakerArtifact", INTMAX);
+			if (!CheckInventory("SamsaraDoomguyInDoom64CE")) { TakeInventory("SamsaraDoom64UnmakerArtifact", INTMAX); }
 			TakeInventory("Homing Rocket Launcher", INTMAX);
 			TakeInventory("Plasma Repeater", INTMAX);
 			TakeInventory("SamsaraDoomguyStrWeaponPowerItem", INTMAX);
@@ -2240,6 +2244,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Dragon Claw", INTMAX);
 			TakeInventory("Phoenix Rod", INTMAX);
 			TakeInventory("Hellstaff", INTMAX);
+			TakeInventory("CorvusTempestWand", INTMAX);
 			TakeInventory("DSparilStaff", INTMAX);
 			TakeInventory("DSparilStaffMinion", INTMAX);
 			TakeInventory("Grim Ballista", INTMAX);
@@ -2412,7 +2417,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Duke64UsingShrinker", INTMAX);
 
 			GiveInventory("Glock 17", 1);
-			GiveInventory("DukeM16Reload", 30);
+			GiveInventory("DukeM16ReloadAmmo", 40);
 			GiveInventory("DukeGoldEagleReload", 8);
 			GiveInventory("Mighty Boot", 1);
 			GiveInventory("DukeClass", 1);
@@ -2495,17 +2500,17 @@ Script "Samsara_ResetInventory" (void)
 			break;
 
 		case CLASS_ROTT:
-			TakeInventory("HeatSeeker", INTMAX);
 			TakeInventory("Double Pistols", INTMAX);
-			TakeInventory("Bazooka", INTMAX);
 			TakeInventory("MP40", INTMAX);
+			TakeInventory("HeatSeeker", INTMAX);
+			TakeInventory("Bazooka", INTMAX);
 			TakeInventory("RoTTM60", INTMAX);
 			TakeInventory(" Firebomb ", INTMAX);
 			TakeInventory("Doomstick", INTMAX);
 			TakeInventory("DrunkMissiles", INTMAX);
 			TakeInventory("FlameWall", INTMAX);
-			TakeInventory("Split Missile", INTMAX);
 			TakeInventory("Excalibat", INTMAX);
+			TakeInventory("Split Missile", INTMAX);
 			TakeInventory("Dark Staff", INTMAX);
             SetInventory("SamsaraROTTDarkStaffSecondaryFiredCount", 0);
 			TakeInventory("God Hand", INTMAX);
@@ -2525,7 +2530,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Slow Fire Protector", INTMAX);
 			TakeInventory("Heavy Assault Weapon", INTMAX);
 			TakeInventory("Rapid Assault Weapon", INTMAX);
-			//TakeInventory("Gatling Fusion Devastator", INTMAX);
+			TakeInventory("Gatling Fusion Devastator", INTMAX);
 			TakeInventory("Plasma Discharge Unit", INTMAX);
 			TakeInventory("Dual Neutron Disruptor", INTMAX);
 			TakeInventory("Anti-Plasma Cannon", INTMAX);
@@ -2552,7 +2557,6 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("BloodFlamethrower", INTMAX);
 			TakeInventory("LifeLeech", INTMAX);
 			TakeInventory("BloodNaturomDemonto", INTMAX);
-			TakeInventory("PowerSamsaraBloodGunsAkimboHub", INTMAX);
 			TakeInventory("SamsaraBloodGunsAkimboInventory", INTMAX);
 			TakeInventory("SamsaraBloodGunsAkimboToggleMemory", INTMAX);
 			TakeInventory("SamsaraBloodGunsAkimboToggled", INTMAX);
@@ -2820,6 +2824,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("HLDeagleLaserActivated", 1);
 			TakeInventory("HLDeagleLaserMemory", 1);
 			TakeInventory("MP5", 1);
+			TakeInventory("HLUzi", 1);
 			TakeInventory(" RPG ", 1);
 			TakeInventory("SamsaraHalfLifeRPGLaserActivated", 1);
 			TakeInventory("SamsaraHalfLifeRPGNotLoaded", 1);
@@ -2859,6 +2864,7 @@ Script "Samsara_ResetInventory" (void)
 			GiveInventory("HLPythonCounter", 6);
 			GiveInventory("HLDeagleCounter", 7);
 			GiveInventory("HLMP5Counter", 50);
+			GiveInventory("HLUziCounter", 32);
 			GiveInventory("HLRPGCounter", 1);
 			GiveInventory("HLSporeCounter", 10);
 			GiveInventory("HLSAWCounter", 100);
@@ -3223,9 +3229,13 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Catacomb_BoltsQuickSpell", INTMAX);
 			TakeInventory("Catacomb_AtomicQuickspell", INTMAX);
 			TakeInventory("PowerCatacomb_SpreadShot", INTMAX);
+			TakeInventory("PowerCatacomb_SpreadShotInventoryItem", INTMAX);
 			TakeInventory("PowerCatacomb_FireRing", INTMAX);
+			TakeInventory("PowerCatacomb_FireRingInventoryItem", INTMAX);
 			TakeInventory("PowerCatacomb_BounceShot", INTMAX);
+			TakeInventory("PowerCatacomb_BounceShotInventoryItem", INTMAX);
 			TakeInventory("PowerCatacomb_RapidFire", INTMAX);
+			TakeInventory("PowerCatacomb_RapidFireInventoryItem", INTMAX);
 			TakeInventory("Catacomb_Hourglass", INTMAX);
 			TakeInventory("Catacomb_HourglassCooldown", INTMAX);
 
@@ -3610,7 +3620,7 @@ script "Samsara_FillInventory" (void)
 		default: break;
 
 		case CLASS_DOOM:
-			GiveInventory("SamsaraDoom64UnmakerArtifact",3);
+			if (!CheckInventory("SamsaraDoomguyInDoom64CE")) { GiveInventory("SamsaraDoom64UnmakerArtifact",3); }
 			GiveInventory("DGStrHasAutoShotgun",1);
 			GiveInventory("DGHasChaingun",1);
 			GiveInventory("DGStrHasFlamethrower",1);
@@ -3668,7 +3678,7 @@ script "Samsara_FillInventory" (void)
 			break;
 
 		case CLASS_HEXEN:
-			GiveInventory("AllyCellphone",1);
+			if (!GetCVar("samsara_banallies")) { GiveInventory("AllyCellphone",1); }
             SetInventory("SamsaraHexenHasLMSPistolDisabled", 0);
 			GiveInventory("SamsaraHexenHasSlot7", 1);
 			GiveInventory("SamsaraClassicPariasHasBloodscourge", 1);
@@ -3718,7 +3728,7 @@ script "Samsara_FillInventory" (void)
 			break;
 
 		case CLASS_ROTT:
-			GiveInventory("AllyCellphone",1);
+			if (!GetCVar("samsara_banallies")) { GiveInventory("AllyCellphone",1); }
 			break;
 
 		case CLASS_CALEB:
@@ -3758,7 +3768,7 @@ script "Samsara_FillInventory" (void)
 			break;
 
 		case CLASS_ERAD:
-			GiveInventory("AllyCellphone",1);
+			if (!GetCVar("samsara_banallies")) { GiveInventory("AllyCellphone",1); }
 			break;
 
 		case CLASS_RMR:
@@ -3766,7 +3776,7 @@ script "Samsara_FillInventory" (void)
 			break;
 
 		case CLASS_POGREED:
-			GiveInventory("AllyCellphone",1);
+			if (!GetCVar("samsara_banallies")) { GiveInventory("AllyCellphone",1); }
 			GiveInventory("Medtube",20);
 			GiveInventory("IPOGReversoPill",1);
 			break;
@@ -3813,7 +3823,7 @@ script "Samsara_FillInventory" (void)
 			GiveInventory("RRCowPie",6);
 			GiveInventory("RRBubbaBeer",6);
 			GiveInventory("RRCheapasswhiskey",100);
-			GiveInventory("AllyCellphone",1);
+			if (!GetCVar("samsara_banallies")) { GiveInventory("AllyCellphone",1); }
 			break;
 
 		case CLASS_BITTERMAN:
@@ -3857,7 +3867,7 @@ script "Samsara_FillInventory" (void)
 			GiveInventory("Goldfinger_GoldMagnumDualToken",1);
 			GiveInventory("SamsaraGoldfingerHasGoldMagnum",1);
 			GiveInventory("SamsaraGoldenEyePermanentTankCannon", 1);
-			GiveInventory("AllyCellphone",1);
+			if (!GetCVar("samsara_banallies")) { GiveInventory("AllyCellphone",1); }
 			break;
 
 		case CLASS_CATACOMB:
@@ -6235,10 +6245,10 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                     if (!hasweapon)
                     {
                         GiveInventory("Duke3D_M16", 1);
-                        GiveInventory("Clip", dmextraammo ? 30 / tossedammo * 5 / 2 : 30 / tossedammo);
+                        GiveInventory("Clip", dmextraammo ? 40 / tossedammo * 5 / 2 : 40 / tossedammo);
                         result = 1;
                     } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                        GiveInventory("Clip", 30 / tossedammo);
+                        GiveInventory("Clip", 40 / tossedammo);
                         result = 1;
                     }
 
@@ -6570,24 +6580,24 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             result = -1;
             break;
 
-          case SLOT_SHOTGUN:
+          case SLOT_CHAINSAW:
             if (!CheckInventory("Double Pistols"))
             {
                 GiveInventory("Double Pistols", 1);
                 result = 1;
-            } else if (CheckInventory("HSMissiles") < GetAmmoCapacity("HSMissiles") && (dropped >= 1 || startmode != 0 || !weaponstay)) { // subsequents give heat seeker ammo
-                GiveInventory("HSMissiles", 10 / tossedammo);
+            } else if (CheckInventory("RottMissiles") < GetAmmoCapacity("RottMissiles") && (dropped >= 1 || startmode != 0 || !weaponstay)) { // subsequents give bazooka ammo
+                GiveInventory("RottMissiles", 10 / tossedammo);
                 result = 1;
             }
             break;
 
-          case SLOT_CHAINGUN:
+          case SLOT_SHOTGUN:
             if (!CheckInventory("MP40"))
             {
                 GiveInventory("MP40", 1);
                 result = 1;
-            } else if (CheckInventory("RottMissiles") < GetAmmoCapacity("RottMissiles") && (dropped >= 1 || startmode != 0 || !weaponstay)) { // subsequents give bazooka ammo
-                GiveInventory("RottMissiles", 6 / tossedammo);
+            } else if (CheckInventory("HSMissiles") < GetAmmoCapacity("HSMissiles") && (dropped >= 1 || startmode != 0 || !weaponstay)) { // subsequents give heat seeker ammo
+                GiveInventory("HSMissiles", 6 / tossedammo);
                 result = 1;
             }
             break;
@@ -7461,6 +7471,21 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             }
 
             if (result == 1 && startmode == 0 && !hasweapon) { ACS_NamedExecuteAlways("HL2685", 0, 20); }
+            break;
+
+          case SLOT_MINIGUN:
+            hasweapon = CheckInventory("HLUzi");
+
+            if (!hasweapon)
+            {
+                GiveInventory("HLUzi", 1);
+                result = 1;
+            } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
+                GiveInventory("HLUzi", 1);
+                result = 1;
+            }
+
+            if (result == 1 && startmode == 0 && !hasweapon) { ACS_NamedExecuteAlways("HL2685", 0, 24); }
             break;
         }
         break;
@@ -9860,7 +9885,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (unum == SLOT_UNIQUE1 || startmode == 0 || startmode == 1 || startmode == 3) // do not give again if giving all uniques on spawn
                 {
                     GiveInventory("DoomguyBerserker", 1);
-                    GiveInventory("SamsaraDoom64UnmakerArtifact", 1);
+                    if (!CheckInventory("SamsaraDoomguyInDoom64CE")) { GiveInventory("SamsaraDoom64UnmakerArtifact", 1); }
                     result = 1;
                 }
 
@@ -9902,7 +9927,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (unum == SLOT_UNIQUE1 || startmode == 0 || startmode == 1 || startmode == 3) // do not give again if giving all uniques on spawn
                 {
                     GiveInventory("DoomguyBerserker", 1);
-                    GiveInventory("SamsaraDoom64UnmakerArtifact", 1);
+                    if (!CheckInventory("SamsaraDoomguyInDoom64CE")) { GiveInventory("SamsaraDoom64UnmakerArtifact", 1); }
                     result = 1;
                 }
 
@@ -9925,7 +9950,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                         break;
                     }
 
-                    if (startmode == 0 && hasweapon < 3)
+                    if (startmode == 0 && hasweapon < 3 && !CheckInventory("SamsaraDoomguyInDoom64CE"))
                     {
                         SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 2 + hasweapon);
                         SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
@@ -9945,7 +9970,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
 
               case SLOT_UNIQUE1:
                 GiveInventory("DoomguyBerserker", 1);
-                GiveInventory("SamsaraDoom64UnmakerArtifact", 1);
+                if (!CheckInventory("SamsaraDoomguyInDoom64CE")) { GiveInventory("SamsaraDoom64UnmakerArtifact", 1); }
                 result = 1;
 
                 if (!CheckInventory("Homing Rocket Launcher"))
@@ -9987,7 +10012,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (startmode == 0 || startmode == 1 || startmode == 3) // do not give again if giving all uniques on spawn
                 {
                     GiveInventory("DoomguyBerserker", 1);
-                    GiveInventory("SamsaraDoom64UnmakerArtifact", 1);
+                    if (!CheckInventory("SamsaraDoomguyInDoom64CE")) { GiveInventory("SamsaraDoom64UnmakerArtifact", 1); }
                     result = 1;
                 }
 
@@ -10031,7 +10056,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (startmode == 0 || startmode == 1 || startmode == 3) // do not give again if giving all uniques on spawn
                 {
                     GiveInventory("DoomguyBerserker", 1);
-                    GiveInventory("SamsaraDoom64UnmakerArtifact", 1);
+                    if (!CheckInventory("SamsaraDoomguyInDoom64CE")) { GiveInventory("SamsaraDoom64UnmakerArtifact", 1); }
                     result = 1;
                 }
 
@@ -10466,7 +10491,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 // if banjetpack is on, and we have the max amount of oxygen recyclers (and full health/oxygen, depending on settings), fail the pickup
                 if (!GetCVar("samsara_banjetpack") ||
                     CheckInventory("RMROxygenRecycler") < oxyrecmax ||
-                    (GetCVar("samsara_cl_maxedinventoryhealthpickup") >= 2 && (GetActorProperty(0, APROP_Health) < ACS_NamedExecuteWithResult("SamsaraPlayerHealer", -1) || ACS_NamedExecuteWithResult("SamsaraPlayerOxygenAdjuster", 0, -1))) ||
+                    (GetCVar("samsara_cl_maxedinventoryhealthpickup") >= 2 && (GetActorProperty(0, APROP_Health) < ACS_NamedExecuteWithResult("SamsaraPlayerHealer", -1) || ACS_NamedExecuteWithResult("SamsaraPlayerOxygenAdjuster", 0, -1, 0))) ||
                     GetCVar("samsara_nohealthcap"))
                 {
                     GiveInventory("RMRJetPack", startmode <= -1 ? 3 : 1);
@@ -11813,7 +11838,8 @@ script "Samsara_SpawnSlotSkulltag" (int slot, int toss)
 {
     if (CheckInventory("SamsaraSlotSkulltagSpawnChecked") || CheckInventory("SamsaraItemReplaced")) { terminate; }
 
-	int newTid = UniqueTid();
+	int origTID = ActivatorTID();
+	int newTID = UniqueTID();
 	int skulltagSpawned = 0;
 	str slotweapon;
 	switch(slot)
@@ -11827,11 +11853,11 @@ script "Samsara_SpawnSlotSkulltag" (int slot, int toss)
 	if(random(1,100) <= (GetCvar("samsara_skulltagspawn")))
 	{
 		skulltagSpawned = 1;
-		SpawnSpotFacingForced(slotweapon,0,newTid);
-		SetActorFlag(newTid, "DROPPED", false);
+		SpawnSpotFacingForced(slotweapon,0,newTID);
+		SetActorFlag(newTID, "DROPPED", false);
 	}
 
-	SetActorProperty(newTid,APROP_Dropped,GetActorProperty(0,APROP_Dropped));
+	SetActorProperty(newTID,APROP_Dropped,GetActorProperty(0,APROP_Dropped));
 
     GiveInventory("SamsaraSlotSkulltagSpawnChecked", 1);
 
@@ -11843,10 +11869,10 @@ script "Samsara_SpawnSlotSkulltag" (int slot, int toss)
 		}
 		else
 		{
-			if(toss) SetActorVelocity(newTid,random(-4.0,4.0),random(-4.0,4.0),0,0,0);
+			if(toss) SetActorVelocity(newTID,random(-4.0,4.0),random(-4.0,4.0),0,0,0);
 		}
 
-		Thing_ChangeTid(newTid,0);
+		Thing_ChangeTID(newTID,origTID);
 	}
 }
 
@@ -11856,6 +11882,7 @@ script "Samsara_SpawnSlotSkulltag" (int slot, int toss)
 
 script "Samsara_SpawnSlotDropped" (int slot, int droptype, int standing)
 {
+    int origTID = ActivatorTID();
     int newTID = UniqueTID();
     str slotweapon = "Placeholder";
 
@@ -11929,7 +11956,7 @@ script "Samsara_SpawnSlotDropped" (int slot, int droptype, int standing)
 
     GiveInventory("SamsaraCountItemDisabler", 1); // precautionary
     Thing_Remove(0);
-    Thing_ChangeTid(newTID, 0);
+    Thing_ChangeTid(newTID, origTID);
 }
 
 //======================================================================================================================
@@ -12404,6 +12431,7 @@ script "Samsara_SwitchableObject" (int type)
         Thing_Remove(0);
     } else {
         str itemActor = itemReplacements[replacer - 1][0];
+        int origTID = ActivatorTID();
         int itemTID = UniqueTID();
 
         bool canCountItem = !StrCmp(itemReplacements[replacer - 1][2], "CanCountItem") || (!StrCmp(itemReplacements[replacer - 1][2], "CanCountItemNotHexen") && GetCVar("samsara_currentgame") != GAME_HEXEN);
@@ -12438,7 +12466,7 @@ script "Samsara_SwitchableObject" (int type)
 
         GiveInventory("SamsaraCountItemDisabler", 1); // precautionary
         Thing_Remove(0);
-        Thing_ChangeTID(itemTID, 0);
+        Thing_ChangeTID(itemTID, origTID);
     }
 }
 
@@ -12703,6 +12731,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_quake1sounds", 0);
 		SetCVar("samsara_cl_rottsounds", false);
 		SetCVar("samsara_cl_rebelmoonrisingsounds", false);
+		SetCVar("samsara_cl_halflifesounds", false);
 		SetCVar("samsara_cl_quake2sounds", false);
 		SetCVar("samsara_cl_goldeneyesounds", false);
 		SetCVar("samsara_cl_unrealsounds", false);
@@ -12867,6 +12896,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_quake1sounds", 0);
 		SetCVar("samsara_cl_rottsounds", false);
 		SetCVar("samsara_cl_rebelmoonrisingsounds", false);
+		SetCVar("samsara_cl_halflifesounds", false);
 		SetCVar("samsara_cl_quake2sounds", false);
 		SetCVar("samsara_cl_goldeneyesounds", false);
 		SetCVar("samsara_cl_unrealsounds", false);
@@ -13031,6 +13061,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_quake1sounds", 0);
 		SetCVar("samsara_cl_rottsounds", false);
 		SetCVar("samsara_cl_rebelmoonrisingsounds", false);
+		SetCVar("samsara_cl_halflifesounds", false);
 		SetCVar("samsara_cl_quake2sounds", false);
 		SetCVar("samsara_cl_goldeneyesounds", false);
 		SetCVar("samsara_cl_unrealsounds", false);
@@ -13196,6 +13227,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_quake1sounds", 0);
 		SetCVar("samsara_cl_rottsounds", false);
 		SetCVar("samsara_cl_rebelmoonrisingsounds", false);
+		SetCVar("samsara_cl_halflifesounds", false);
 		SetCVar("samsara_cl_quake2sounds", false);
 		SetCVar("samsara_cl_goldeneyesounds", false);
 		SetCVar("samsara_cl_unrealsounds", false);
@@ -13360,6 +13392,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_quake1sounds", 0);
 		SetCVar("samsara_cl_rottsounds", false);
 		SetCVar("samsara_cl_rebelmoonrisingsounds", true);
+		SetCVar("samsara_cl_halflifesounds", false);
 		SetCVar("samsara_cl_quake2sounds", true);
 		SetCVar("samsara_cl_goldeneyesounds", false);
 		SetCVar("samsara_cl_unrealsounds", true);
@@ -13537,7 +13570,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", false);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 0);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -13564,6 +13596,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", true);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", true);
+		SetCVar("samsara_weaponbalance", 0);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -13944,7 +13977,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", false);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 0);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -13971,6 +14003,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
+		SetCVar("samsara_weaponbalance", 0);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -14351,7 +14384,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", true);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 1);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -14378,6 +14410,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
+		SetCVar("samsara_weaponbalance", 1);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -14759,7 +14792,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", false);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 2);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -14786,6 +14818,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", true);
+		SetCVar("samsara_weaponbalance", 2);
 
 		// Item Replacement Options
 		SetCVar("samsara_replace_backpack", 0);
@@ -15172,7 +15205,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_misccharspawn_hexen2", isZDoom() ? true : false);
 
 		// Class-Based Ability Options
-		SetCVar("samsara_doomguybalance", 2);
 		SetCVar("samsara_absolutionunmaker", false);
 		SetCVar("samsara_classiclaz", false);
 		SetCVar("samsara_bombwalls", false);
@@ -15199,6 +15231,53 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_nocustomgravity", false);
 		SetCVar("samsara_forcerecoil", false);
 		SetCVar("samsara_proximitybehavior", false);
+		SetCVar("samsara_weaponbalance", 2);
+
+		// Item Replacement Options
+		SetCVar("samsara_replace_backpack", 0);
+		SetCVar("samsara_replace_computermap", 0);
+		SetCVar("samsara_replace_berserk", currentiwad == GAME_STRIFE ? 13 : 0);
+		SetCVar("samsara_replace_blursphere", 0);
+		SetCVar("samsara_replace_invulnerability", 0);
+		SetCVar("samsara_replace_lightamplifier", 0);
+		SetCVar("samsara_replace_teleport", 0);
+		SetCVar("samsara_replace_banishment", 0);
+		SetCVar("samsara_replace_invisibilitysphere", 0);
+		SetCVar("samsara_replace_timefreeze", isZDoom() ? 0 : 20);
+		SetCVar("samsara_replace_randompowerup", isZDoom() ? 0 : 20);
+		SetCVar("samsara_replace_chainsaw", 0);
+		SetCVar("samsara_replace_shotgun", 0);
+		SetCVar("samsara_replace_supershotgun", 0);
+		SetCVar("samsara_replace_chaingun", 0);
+		SetCVar("samsara_replace_minigun", 0);
+		SetCVar("samsara_replace_rocketlauncher", 0);
+		SetCVar("samsara_replace_grenadelauncher", 0);
+		SetCVar("samsara_replace_plasmarifle", 0);
+		SetCVar("samsara_replace_railgun", 0);
+		SetCVar("samsara_replace_bfg9000", 0);
+		SetCVar("samsara_replace_bfg10k", 0);
+		SetCVar("samsara_replace_backpack_chance", 100);
+		SetCVar("samsara_replace_computermap_chance", 100);
+		SetCVar("samsara_replace_berserk_chance", 100);
+		SetCVar("samsara_replace_blursphere_chance", 100);
+		SetCVar("samsara_replace_invulnerability_chance", 100);
+		SetCVar("samsara_replace_lightamplifier_chance", 100);
+		SetCVar("samsara_replace_teleport_chance", 100);
+		SetCVar("samsara_replace_banishment_chance", 100);
+		SetCVar("samsara_replace_invisibility_chance", 100);
+		SetCVar("samsara_replace_timefreeze_chance", 100);
+		SetCVar("samsara_replace_randompowerup_chance", 100);
+		SetCVar("samsara_replace_chainsaw_chance", 100);
+		SetCVar("samsara_replace_shotgun_chance", 100);
+		SetCVar("samsara_replace_supershotgun_chance", 100);
+		SetCVar("samsara_replace_chaingun_chance", 100);
+		SetCVar("samsara_replace_minigun_chance", 100);
+		SetCVar("samsara_replace_rocketlauncher_chance", 100);
+		SetCVar("samsara_replace_grenadelauncher_chance", 100);
+		SetCVar("samsara_replace_plasmarifle_chance", 100);
+		SetCVar("samsara_replace_railgun_chance", 100);
+		SetCVar("samsara_replace_bfg9000_chance", 100);
+		SetCVar("samsara_replace_bfg10k_chance", 100);
 
 		// Character Ban Options
 		SetCVar("samsara_bandoomguy", false);
@@ -15257,52 +15336,6 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_bansarge", false);
 		SetCVar("samsara_banpyrogx", false);
 		SetCVar("samsara_banjcdenton", false);
-
-		// Item Replacement Options
-		SetCVar("samsara_replace_backpack", 0);
-		SetCVar("samsara_replace_computermap", 0);
-		SetCVar("samsara_replace_berserk", currentiwad == GAME_STRIFE ? 13 : 0);
-		SetCVar("samsara_replace_blursphere", 0);
-		SetCVar("samsara_replace_invulnerability", 0);
-		SetCVar("samsara_replace_lightamplifier", 0);
-		SetCVar("samsara_replace_teleport", 0);
-		SetCVar("samsara_replace_banishment", 0);
-		SetCVar("samsara_replace_invisibilitysphere", 0);
-		SetCVar("samsara_replace_timefreeze", isZDoom() ? 0 : 20);
-		SetCVar("samsara_replace_randompowerup", isZDoom() ? 0 : 20);
-		SetCVar("samsara_replace_chainsaw", 0);
-		SetCVar("samsara_replace_shotgun", 0);
-		SetCVar("samsara_replace_supershotgun", 0);
-		SetCVar("samsara_replace_chaingun", 0);
-		SetCVar("samsara_replace_minigun", 0);
-		SetCVar("samsara_replace_rocketlauncher", 0);
-		SetCVar("samsara_replace_grenadelauncher", 0);
-		SetCVar("samsara_replace_plasmarifle", 0);
-		SetCVar("samsara_replace_railgun", 0);
-		SetCVar("samsara_replace_bfg9000", 0);
-		SetCVar("samsara_replace_bfg10k", 0);
-		SetCVar("samsara_replace_backpack_chance", 100);
-		SetCVar("samsara_replace_computermap_chance", 100);
-		SetCVar("samsara_replace_berserk_chance", 100);
-		SetCVar("samsara_replace_blursphere_chance", 100);
-		SetCVar("samsara_replace_invulnerability_chance", 100);
-		SetCVar("samsara_replace_lightamplifier_chance", 100);
-		SetCVar("samsara_replace_teleport_chance", 100);
-		SetCVar("samsara_replace_banishment_chance", 100);
-		SetCVar("samsara_replace_invisibility_chance", 100);
-		SetCVar("samsara_replace_timefreeze_chance", 100);
-		SetCVar("samsara_replace_randompowerup_chance", 100);
-		SetCVar("samsara_replace_chainsaw_chance", 100);
-		SetCVar("samsara_replace_shotgun_chance", 100);
-		SetCVar("samsara_replace_supershotgun_chance", 100);
-		SetCVar("samsara_replace_chaingun_chance", 100);
-		SetCVar("samsara_replace_minigun_chance", 100);
-		SetCVar("samsara_replace_rocketlauncher_chance", 100);
-		SetCVar("samsara_replace_grenadelauncher_chance", 100);
-		SetCVar("samsara_replace_plasmarifle_chance", 100);
-		SetCVar("samsara_replace_railgun_chance", 100);
-		SetCVar("samsara_replace_bfg9000_chance", 100);
-		SetCVar("samsara_replace_bfg10k_chance", 100);
 
 		// Character Multiplier Options
 		SetCVar("samsara_generaldamage", 0);
@@ -16893,7 +16926,7 @@ script "SamsaraPlayerMaxArmorAdjust" (int armortype, int maxbonusadd, int maxbon
     }
 }
 
-script "SamsaraPlayerOxygenAdjuster" (int mode, int amount)
+script "SamsaraPlayerOxygenAdjuster" (int mode, int amount, int playgasp)
 {
     bool radsuitcheck = CheckInventory("PowerIronFeet") || CheckInventory("PowerIronFeetNoColor") || CheckInventory("PowerMask") ||
                         CheckInventory("QuakeBiosuit");
@@ -16919,10 +16952,12 @@ script "SamsaraPlayerOxygenAdjuster" (int mode, int amount)
         {
             if (GetAirSupply(pln) < aircapacity)
             {
+                if (playgasp && GetAirSupply(pln) <= 0) { PlaySound(0, "*gasp", CHAN_VOICE); }
                 SetAirSupply(pln, aircapacity);
                 result = 1;
             }
         } else {
+            if (playgasp && GetAirSupply(pln) <= 0) { PlaySound(0, "*gasp", CHAN_VOICE); }
             SetAirSupply(pln, amount);
             result = 1;
         }
@@ -17077,7 +17112,7 @@ script "SamsaraPowerupTimerActiveChecker" (int category, int powerup)
         switch (powerup)
         {
           case 0: powerupname = "PowerSamsaraBloodGunsAkimbo"; break;
-          case 1: powerupname = "PowerSamsaraBloodGunsAkimboHub"; break;
+          case 1: powerupname = "PowerSamsaraBloodGunsAkimboQuadDamage"; break;
         }
         break;
 

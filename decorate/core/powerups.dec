@@ -1334,6 +1334,7 @@ actor BioSuit : SamsaraPowerupPickup
         stop
 
       PickupSuccessDeusEx:
+        TNT1 A 0 A_GiveInventory("DeusEx_AugmentationUpgradeCannister")
         TNT1 A 0 A_JumpIfInventory("DeusEx_EnviroSkill",0,"PickupSuccessDeusExMaster")
         TNT1 A 0 A_JumpIfInventory("DeusEx_EnviroSkill",3,"PickupSuccessDeusExAdvanced")
         TNT1 A 0 A_JumpIfInventory("DeusEx_EnviroSkill",2,"PickupSuccessDeusExProficient")
@@ -1464,9 +1465,9 @@ actor PowerWTFireProof : PowerProtection
     DamageFactor "DoomDamageTypeFireExplosive", 0
     DamageFactor "RottFire", 0
     DamageFactor "WTRangedFire", 0
+    DamageFactor "DeusExPistolFire", 0
     DamageFactor "DeusExFlamed", 0
     DamageFactor "PSFire", 0
-    DamageFactor "SWFlame", 0
     DamageFactor "PGFire", 0
     DamageFactor "PainkillerFire", 0
     DamageFactor "QuakeFire", 0
@@ -1481,6 +1482,7 @@ actor PowerWTFireProof : PowerProtection
     DamageFactor "SWFlame2", 0
     DamageFactor "SWFlame2Coop", 0
     DamageFactor "SWFlame3", 0
+    DamageFactor "BittermanFire", 0
 }
 
 actor SamsaraPowerIronFeetGiverDeusEx1 : SamsaraPowerIronFeetGiver {}
@@ -4617,7 +4619,7 @@ actor SamsaraRandomPowerup : SamsaraPowerupPickup
 
       PickupSoulsphereRMRInstant:
         TNT1 A 0 A_JumpIfHealthLower(CallACS("SamsaraPlayerHealer", -1), "PickupSoulsphereSuccess")
-        TNT1 A 0 A_JumpIf(CallACS("SamsaraPlayerOxygenAdjuster", 0, -1), "PickupSoulsphereSuccess")
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraPlayerOxygenAdjuster", 0, -1, 0), "PickupSoulsphereSuccess")
         goto PickupJump
 
       PickupSoulsphereHexen2:

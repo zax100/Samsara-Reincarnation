@@ -114,7 +114,7 @@ actor GodMissile
     +FORCERADIUSDMG
     +NODAMAGETHRUST
     +SEEKERMISSILE
-    +SPECTRAL // hmm
+    //+SPECTRAL
     +THRUACTORS
     States
     {

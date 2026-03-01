@@ -45,7 +45,7 @@ actor SamsaraSlotTwoPickup : SamsaraSlotPickup replaces Shotgun
       Duke64guy:    PDWP C 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Marathon:     SHTY A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Quake:        QDBS Z 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      Rott:         PPST A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+      Rott:         PM40 A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Blake:        BWP2 A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       AOG:          goto Blake
       Caleb:        FGRN A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

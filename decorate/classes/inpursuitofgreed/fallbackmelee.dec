@@ -144,20 +144,20 @@ actor SamsaraIPOGMeleeAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupCoop")
       PickupDM:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupDMSpread")
-        TNT1 A 0 A_CustomPunch(25,true,CPF_NORANDOMPUFFZ,"PGBulletPuff",70)
+        TNT1 A 0 A_CustomPunch(30,true,CPF_NORANDOMPUFFZ,"PGBulletPuff",72)
         stop
 
       PickupDMSpread:
-        TNT1 A 0 A_CustomPunch(25*3,true,CPF_NORANDOMPUFFZ,"PGBulletPuff",70)
+        TNT1 A 0 A_CustomPunch(30*3,true,CPF_NORANDOMPUFFZ,"PGBulletPuff",72)
         stop
 
       PickupCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupCoopSpread")
-        TNT1 A 0 A_CustomPunch(25,true,CPF_NORANDOMPUFFZ,"PGBulletPuffCoop",70)
+        TNT1 A 0 A_CustomPunch(30,true,CPF_NORANDOMPUFFZ,"PGBulletPuffCoop",72)
         stop
 
       PickupCoopSpread:
-        TNT1 A 0 A_CustomPunch(25*3,true,CPF_NORANDOMPUFFZ,"PGBulletPuffCoop",70)
+        TNT1 A 0 A_CustomPunch(30*3,true,CPF_NORANDOMPUFFZ,"PGBulletPuffCoop",72)
         stop
     }
 }

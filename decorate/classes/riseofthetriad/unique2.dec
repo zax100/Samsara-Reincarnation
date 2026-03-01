@@ -7,7 +7,7 @@ actor "Split Missile" : SamsaraROTTWeapon
     Weapon.SlotNumber 8
     Weapon.SelectionOrder 1200
     Weapon.AmmoType "SMissiles"
-    Weapon.AmmoGive 10
+    Weapon.AmmoGive 5
     Weapon.AmmoUse 1
     Obituary "%o was snagged by %k's Split Missile."
     Tag "Split Missile Launcher"
@@ -143,9 +143,9 @@ actor SamsaraROTTSplitMissileAttackHandler : Trigger
 
 actor SMissiles : Ammo
 {
-    Inventory.MaxAmount 100
+    Inventory.MaxAmount 25
     Ammo.BackpackAmount 5 // skills with different AmmoFactor values and sv_doubleammo can still give extra regardless of +IGNORESKILL
-    Ammo.BackpackMaxAmount 200
+    Ammo.BackpackMaxAmount 50
     Inventory.Icon "AMSMO0"
     Tag "Split Missiles"
     +IGNORESKILL
