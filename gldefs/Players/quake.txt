@@ -266,12 +266,22 @@ object QuakeRocketCoop
 	frame QRKT { light QUAKE_1_ROCKET }
 }
 
+object QuakeRocketCoopImproved
+{
+	frame QRKT { light QUAKE_1_ROCKET }
+}
+
 object QuakeClusterRocket
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
 
 object QuakeClusterRkCoop
+{
+	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
+}
+
+object QuakeClusterRkCoopImproved
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
@@ -286,12 +296,22 @@ object QuakeRocketCoopQuad
 	frame QRKT { light QUAKE_1_ROCKET }
 }
 
+object QuakeRocketCoopQuadImproved
+{
+	frame QRKT { light QUAKE_1_ROCKET }
+}
+
 object QuadClusterRocket
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
 
 object QuadClusterRkCoop
+{
+	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
+}
+
+object QuadClusterRkCoopImproved
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
@@ -306,12 +326,22 @@ object QuakeRocketCoopSoundRerelease
 	frame QRKT { light QUAKE_1_ROCKET }
 }
 
+object QuakeRocketCoopSoundRereleaseImproved
+{
+	frame QRKT { light QUAKE_1_ROCKET }
+}
+
 object QuakeClusterRocketSoundRerelease
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
 
 object QuakeClusterRkCoopSoundRerelease
+{
+	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
+}
+
+object QuakeClusterRkCoopSoundRereleaseImproved
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
@@ -326,12 +356,22 @@ object QuakeRocketCoopQuadSoundRerelease
 	frame QRKT { light QUAKE_1_ROCKET }
 }
 
+object QuakeRocketCoopQuadSoundRereleaseImproved
+{
+	frame QRKT { light QUAKE_1_ROCKET }
+}
+
 object QuadClusterRocketSoundRerelease
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
 
 object QuadClusterRkCoopSoundRerelease
+{
+	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
+}
+
+object QuadClusterRkCoopSoundRereleaseImproved
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
@@ -346,12 +386,22 @@ object QuakeRocketCoopSoundDMC
 	frame QRKT { light QUAKE_1_ROCKET }
 }
 
+object QuakeRocketCoopSoundDMCImproved
+{
+	frame QRKT { light QUAKE_1_ROCKET }
+}
+
 object QuakeClusterRocketSoundDMC
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
 
 object QuakeClusterRkCoopSoundDMC
+{
+	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
+}
+
+object QuakeClusterRkCoopSoundDMCImproved
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
@@ -366,12 +416,22 @@ object QuakeRocketCoopQuadSoundDMC
 	frame QRKT { light QUAKE_1_ROCKET }
 }
 
+object QuakeRocketCoopQuadSoundDMCImproved
+{
+	frame QRKT { light QUAKE_1_ROCKET }
+}
+
 object QuadClusterRocketSoundDMC
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }
 
 object QuadClusterRkCoopSoundDMC
+{
+	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
+}
+
+object QuadClusterRkCoopSoundDMCImproved
 {
 	frame QRKT { light QUAKE_1_CLUSTER_ROCKET }
 }

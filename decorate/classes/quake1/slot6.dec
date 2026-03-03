@@ -161,7 +161,7 @@ actor SamsaraQuakeSuperNailgunNormalAttackHandler : SamsaraQuakeNailgunNormalAtt
 
       PickupAttackSNGRereleaseCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackSNGRereleaseCoopImproved")
-        TNT1 A 0 A_FireCustomMissile("PickupAttackSNGRereleaseCoopImproved",0,false)
+        TNT1 A 0 A_FireCustomMissile("QuakeSuperNailCoopSoundRerelease",0,false)
         goto PickupFinishSNG
       PickupAttackSNGRereleaseCoopImproved:
         TNT1 A 0 A_FireCustomMissile("QuakeSuperNailCoopSoundRereleaseImproved",0,false)
