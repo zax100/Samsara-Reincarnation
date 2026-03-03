@@ -94,7 +94,7 @@ actor SpawnFire2
 	States
 	{
 	Spawn:
-		FIRE ABCDEFGH 4 bright
+		DMP2 HIJKLMNO 4 bright
 		Stop
 	}
 }
