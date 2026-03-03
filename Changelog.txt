@@ -619,6 +619,10 @@ JC Denton (Deus Ex):
 
 -Games-
 
+Doom:
+
+! Changed the sprites used for the Arch-vile resurrection flame. This has the side-effect of fixing the flame not appearing correctly outside Doom.
+
 Heretic:
 
 * Fixed some of D'Sparil's sounds not being played globally.
