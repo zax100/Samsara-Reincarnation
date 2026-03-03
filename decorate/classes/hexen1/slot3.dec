@@ -647,15 +647,26 @@ actor SamsaraHexenTimonsAxeAttackHandler : Trigger
 
       PickupAttackWeakCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupAttackWeakCoopSpread")
-        TNT1 A 0 A_CustomPunch(random(50,78),true,0,"AxePuffCoop",144)
-        TNT1 A 0 A_CustomPunch(2,true,0,"BlankPuffAxeCoop",144)
-        TNT1 A 0 A_CustomPunch(3,true,0,"BlankPuffAxeCoop",84)
+        TNT1 A 0 A_CustomPunch(random(35,50),true,0,"AxePuffGlow2InfiniteCoop",144)
+        TNT1 A 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",128)
+        TNT1 A 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",112)
+        TNT1 A 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",96)
+        TNT1 A 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",80)
+        TNT1 A 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",64)
+        TNT1 AA 0 A_CustomPunch(5,true,0,"BlankPuffAxeGlowCoop",84)
+
         stop
 
       PickupAttackWeakCoopSpread:
-        TNT1 A 0 A_CustomPunch(random(50,78)*3,true,0,"AxePuffCoop",144)
-        TNT1 A 0 A_CustomPunch(2*3,true,0,"BlankPuffAxeCoop",144)
-        TNT1 A 0 A_CustomPunch(3*3,true,0,"BlankPuffAxeCoop",84)
+
+        TNT1 AAA 0 A_CustomPunch(random(35,50),true,0,"AxePuffGlow2InfiniteCoop",144)
+        TNT1 AAA 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",128)
+        TNT1 AAA 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",112)
+        TNT1 AAA 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",96)
+        TNT1 AAA 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",80)
+        TNT1 AAA 0 A_CustomPunch(random(3,6),true,0,"BlankPuffAxeGlowCoop",64)
+        TNT1 AAA 0 A_CustomPunch(2,true,0,"BlankPuffAxeGlowCoop",84)
+        TNT1 AAA 0 A_CustomPunch(3,true,0,"BlankPuffAxeGlowCoop",84)
         stop
 
       // Strong
@@ -674,15 +685,19 @@ actor SamsaraHexenTimonsAxeAttackHandler : Trigger
 
       PickupAttackStrongCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupAttackStrongCoopSpread")
-        TNT1 A 0 A_CustomPunch(random(120,195),true,0,"AxePuffGlow2Coop",144)
-        TNT1 A 0 A_CustomPunch(3,true,0,"BlankPuffAxeGlowCoop",144)
-        TNT1 AA 0 A_CustomPunch(5,true,0,"BlankPuffAxeGlowCoop",84)
+        TNT1 A 0 A_CustomPunch(random(80,130),true,0,"AxePuffGlow2InfiniteCoop",144)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",128)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",112)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",96)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",80)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",64)
+        TNT1 AAA 0 A_CustomPunch(5,true,0,"BlankPuffAxeGlowCoop",84)
         stop
 
       PickupAttackStrongCoopSpread:
         TNT1 A 0 A_CustomPunch(random(120,195)*3,true,0,"AxePuffGlow2Coop",144)
-        TNT1 A 0 A_CustomPunch(3*3,true,0,"BlankPuffAxeGlowCoop",144)
-        TNT1 AA 0 A_CustomPunch(5*3,true,0,"BlankPuffAxeGlowCoop",84)
+        TNT1 AAA 0 A_CustomPunch(3,true,0,"BlankPuffAxeGlowCoop",144)
+        TNT1 AAAAAAA 0 A_CustomPunch(5,true,0,"BlankPuffAxeGlowCoop",84)
         stop
 
       PickupAttackStrongInfinite:
@@ -699,15 +714,24 @@ actor SamsaraHexenTimonsAxeAttackHandler : Trigger
 
       PickupAttackStrongInfiniteCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupAttackStrongInfiniteCoopSpread")
-        TNT1 A 0 A_CustomPunch(random(120,195),true,0,"AxePuffGlow2InfiniteCoop",144)
-        TNT1 A 0 A_CustomPunch(3,true,0,"BlankPuffAxeGlowCoop",144)
-        TNT1 AA 0 A_CustomPunch(5,true,0,"BlankPuffAxeGlowCoop",84)
+        TNT1 A 0 A_CustomPunch(random(80,130),true,0,"AxePuffGlow2InfiniteCoop",144)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",128)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",112)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",96)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",80)
+        TNT1 A 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",64)
+        TNT1 AAA 0 A_CustomPunch(5,true,0,"BlankPuffAxeGlowCoop",84)
         stop
 
       PickupAttackStrongInfiniteCoopSpread:
-        TNT1 A 0 A_CustomPunch(random(120,195)*3,true,0,"AxePuffGlow2InfiniteCoop",144)
-        TNT1 A 0 A_CustomPunch(3*3,true,0,"BlankPuffAxeGlowCoop",144)
-        TNT1 AA 0 A_CustomPunch(5*3,true,0,"BlankPuffAxeGlowCoop",84)
+        TNT1 AAsA 0 A_CustomPunch(random(80,130),true,0,"AxePuffGlow2InfiniteCoop",144)
+        TNT1 AAA 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",128)
+        TNT1 AAA 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",112)
+        TNT1 AAA 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",96)
+        TNT1 AAA 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",80)
+        TNT1 AAA 0 A_CustomPunch(random(8,13),true,0,"BlankPuffAxeGlowCoop",64)
+        TNT1 AA 0 A_CustomPunch(5,true,0,"BlankPuffAxeGlowCoop",84)
+
         stop
     }
 }

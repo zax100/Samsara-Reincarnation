@@ -234,7 +234,7 @@ actor EnforcerShot
     Radius 6
     Height 8
     Speed 15
-    Damage (random(30,38)) // Formerly 20,28
+    Damage (random(30,38)) // originally 20,28
     DamageType "MarathonPlasmaFire"
     Scale 0.35
     DeathSound "enforcer/hit"
@@ -259,5 +259,4 @@ actor EnforcerShotCoop : EnforcerShot
     Damage (random(30,42)) // Formerly 20,28
     Species "Player"
     +THRUSPECIES
-    Damage (random(28, 42))
 }
