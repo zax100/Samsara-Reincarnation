@@ -114,7 +114,7 @@ Actor "Broad Sword" : WTWeapon
 		WW10 G 1 /*offset(0,32)*/ A_Refire(1)
 		goto WIdle
 		TNT1 A 0 A_JumpIfInventory("WTShieldCounter",1,"WIdle")
-		TNT1 A 0 A_JumpIfInventory("Fire Mace",1,"CoopAttack2Mace")
+		TNT1 A 0 A_JumpIfInventory("Fire Mace",1,"Attack2Mace")
 		goto WIdle
 	Attack2Mace:
 		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAttack2Mace")
