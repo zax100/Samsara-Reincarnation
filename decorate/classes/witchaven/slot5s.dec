@@ -68,7 +68,8 @@ Actor "Broad Sword" : WTWeapon
 		goto MegaAttack1
 		WW54 A 0 A_TakeInventory("WTAttackClip",1)
 		goto MegaAttack2
-	Attack1: 
+	Attack1:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAttack1")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack1")
 		WW54 ABC 3
 		WW54 D 0 A_PlayWeaponSound("ggen/swing4")
@@ -88,7 +89,8 @@ Actor "Broad Sword" : WTWeapon
 		WW54 G 1 /*offset(0,32)*/ A_Refire
 		goto WIdle
 	Attack2:
-		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack2")	
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAttack2")
+		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack2")
 		WW55 ABC 3
 		WW55 D 0 A_PlayWeaponSound("ggen/swing4")
 		WW55 D 3 A_GiveInventory("WTShieldDisable",1) //Disable shield, else the projectile gets blocked
@@ -109,10 +111,14 @@ Actor "Broad Sword" : WTWeapon
 		WW55 F 3 A_TakeInventory("WTShieldDisable",999)
 		WW55 G 3
 		TNT1 A 6
-		WW10 G 1 /*offset(0,32)*/ A_Refire
-		goto WIdle	
+		WW10 G 1 /*offset(0,32)*/ A_Refire(1)
+		goto WIdle
+		TNT1 A 0 A_JumpIfInventory("WTShieldCounter",1,"WIdle")
+		TNT1 A 0 A_JumpIfInventory("Fire Mace",1,"CoopAttack2Mace")
+		goto WIdle
 	Attack2Mace:
-		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack2Mace")	
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAttack2Mace")
+		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack2Mace")
 		WW56 A 3
 		WW56 B 3 A_PlayWeaponSound("ggen/swing3")
 		WW56 C 3 A_GiveInventory("WTShieldDisable",1) //Disable shield, else the projectile gets blocked
@@ -129,7 +135,8 @@ Actor "Broad Sword" : WTWeapon
 		TNT1 A 6
 		goto WIdle
 	MegaAttack1:
-		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack1")		
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopMegaAttack1")
+		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack1")
 		WW54 ABC 3 bright
 		WW54 D 0 bright A_PlayWeaponSound("ggen/insect")
 		WW54 D 3 bright A_GiveInventory("WTShieldDisable",1) //Disable shield, else the projectile gets blocked
@@ -148,7 +155,8 @@ Actor "Broad Sword" : WTWeapon
 		WW54 G 1 bright /*offset(0,32)*/ A_Refire
 		goto MegaWIdle	
 	MegaAttack2:
-		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack2")			
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopMegaAttack2")
+		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack2")
 		WW55 ABC 3 bright
 		WW55 D 0 bright A_PlayWeaponSound("ggen/insect")
 		WW55 D 3 bright A_GiveInventory("WTShieldDisable",1) //Disable shield, else the projectile gets blocked
@@ -179,16 +187,16 @@ Actor "Broad Sword" : WTWeapon
 		TNT1 A 0 A_JumpIfInventory("Fire Mace",1,"MegaAttack2Mace")	
 		goto MegaWIdle
 	MegaAttack2Mace:
-		TNT1 A 0 A_JumpIfInventory("DMModeOn",1,"DMMegaAttack2Mace")
-		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack2Mace")	
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopMegaAttack2Mace")
+		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack2Mace")
 		TNT1 A 0 A_AlertMonsters	
 		WW57 A 3
 		WW57 B 0 A_PlayWeaponSound("gspell/fire")
 		WW57 B 3 A_GiveInventory("WTShieldDisable",1) //Disable shield, else the projectile gets blocked
 		WW57 C 0 A_TakeInventory("RocketAmmo",1,TIF_NOTAKEINFINITE)
-		WW57 C 3 bright A_FireCustomMissile("WTFireMaceBall",0,0,4,6)
-		WW57 D 3 bright A_FireCustomMissile("WTFireMaceBall",0,0,4,6)
-		WW57 E 3 bright A_FireCustomMissile("WTFireMaceBall",0,0,4,6)
+		WW57 C 3 bright A_FireCustomMissile("WTFireMaceBallDM",0,0,4,6)
+		WW57 D 3 bright A_FireCustomMissile("WTFireMaceBallDM",0,0,4,6)
+		WW57 E 3 bright A_FireCustomMissile("WTFireMaceBallDM",0,0,4,6)
         TNT1 A 0 A_TakeInventory("WTShieldDisable",1)
 		goto MegaWIdle
 	CoopMegaAttack2Mace:
@@ -200,17 +208,6 @@ Actor "Broad Sword" : WTWeapon
 		WW57 C 3 bright A_FireCustomMissile("WTFireMaceBall_2",0,0,4,6)
 		WW57 D 3 bright A_FireCustomMissile("WTFireMaceBall_2",0,0,4,6)
 		WW57 E 3 bright A_FireCustomMissile("WTFireMaceBall_2",0,0,4,6)
-        TNT1 A 0 A_TakeInventory("WTShieldDisable",1)
-		goto MegaWIdle
-	DMMegaAttack2Mace:
-		TNT1 A 0 A_AlertMonsters	
-		WW57 A 3
-		WW57 B 0 A_PlayWeaponSound("gspell/fire")
-		WW57 B 3 A_GiveInventory("WTShieldDisable",1) //Disable shield, else the projectile gets blocked
-		WW57 C 0 A_TakeInventory("RocketAmmo",1,TIF_NOTAKEINFINITE)
-		WW57 C 3 bright A_FireCustomMissile("WTFireMaceBallDM",0,0,4,6)
-		WW57 D 3 bright A_FireCustomMissile("WTFireMaceBallDM",0,0,4,6)
-		WW57 E 3 bright A_FireCustomMissile("WTFireMaceBallDM",0,0,4,6)
         TNT1 A 0 A_TakeInventory("WTShieldDisable",1)
 		goto MegaWIdle
 	Altfire:

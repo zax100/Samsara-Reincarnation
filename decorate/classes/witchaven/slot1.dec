@@ -90,6 +90,7 @@ Actor WTWeapon : Weapon
 		goto ShieldLoop
 		
 	ShieldLoop:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"ShieldLoop_Coop")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"ShieldLoop_Coop")
 		TNT1 A 0 A_JumpIfInventory("WTWeaponActive",1,1)
 		goto ShieldStop
@@ -552,6 +553,7 @@ Actor "OnyxRing" : CustomInventory
 		stop*/
     Use:
         TNT1 A 0 A_PlaySoundEx("guse/onyxring","body",0,0)
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopUse")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopUse")
 		TNT1 A 0 A_Print("! 15 seconds protection from all ranged attacks !")
 		TNT1 A 0 A_GiveInventory("WTSuperProtection_Coop",1)

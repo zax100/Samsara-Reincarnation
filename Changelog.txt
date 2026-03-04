@@ -416,7 +416,12 @@ In Pursuit of Greed:
 Grondoval (Witchaven):
 
 + Most melee attacks have +50% range. This buff includes the dagger, shortsword, battle axe, ice halberd, fire mace, broad sword, and frozen two-hand sword.
-+ A lot of melee attacks have +33% damage. This buff includes the dagger (strong), shortsword (unenchanted), battle axe, ice halberd, fire mace, broad sword (unenchanted), and frozen two-hand sword.
++ A lot of melee attacks have +33% damage. This buff includes the dagger (strong), shortsword (unenchanted), battle axe, ice halberd, fire mace (weak), broad sword (unenchanted), and frozen two-hand sword.
+* Fixed the dagger and fists not going through allies in PVE.
++ The fire mace's strong melee attack now deals 80-120 damage (increased from 45-69).
++ The fire mace's projectiles now do 30-50 direct damage in PVE (increased from 25).
++ The fire mace's projectiles now do 20-40 splash damage (increased from 15-30).
+* Fixed the broad sword (unenchanted) not following up with a fire mace melee attack in PVE.
 - The pike axe now takes 10 rounds of Ammo 4 to fire (increased from 8).
 + The pike axe's melee attacks now have 192 range (increased from 64).
 + The pike axe's weak melee attack now deals 120-190 damage (increased from 60-95).

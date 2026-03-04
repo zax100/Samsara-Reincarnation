@@ -78,6 +78,7 @@ Actor "Pike Axe" : WTWeapon
 	MegaFire:
 		goto MegaAttack1		
 	Attack1:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAtt1")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAtt1")
 		WW30 GH 4 offset(0,32)
 		WW30 I 3 A_PlayWeaponSound("ggen/swing5")
@@ -97,7 +98,8 @@ Actor "Pike Axe" : WTWeapon
 		WW30 F 4
 		goto WIdle	
 	Attack2:
-		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAtt2")	
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAtt2")
+		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAtt2")
 		WW30 M 3 A_PlayWeaponSound("ggen/swing5")
 		WW30 N 3 A_FireCustomMissile("WTThrowAxeProjectile_Weak",0,0,4,6)
 		WW30 OPQ 3
@@ -127,23 +129,18 @@ Actor "Pike Axe" : WTWeapon
 		WW31 K 4 bright offset(0,32)
 		WW31 I 0 A_PlaySoundEx("voice","ggen/swing5",0,0)
 		WW31 L 3 bright A_PlayWeaponSound("ggen/insect")
-		WW31 M 3 bright			
+		WW31 M 3 bright
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopMegaAttack1")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack1")
-		TNT1 A 0 A_JumpIfInventory("DMModeOn",1,"DMMegaAttack1")
-		WW31 K 0 bright A_FireCustomMissile("WTThrownAxe",-15,0,2,5)
-		WW31 K 0 bright A_FireCustomMissile("WTThrownAxe",0,0,2,5)
-		WW31 N 3 bright A_FireCustomMissile("WTThrownAxe",15,1,2,5)
+		WW31 K 0 bright A_FireCustomMissile("WTThrownAxe_3",-15,0,2,5)
+		WW31 K 0 bright A_FireCustomMissile("WTThrownAxe_3",0,0,2,5)
+		WW31 N 3 bright A_FireCustomMissile("WTThrownAxe_3",15,1,2,5)
 		goto MA1_Done
 	CoopMegaAttack1:
 		WW31 K 0 bright A_FireCustomMissile("WTThrownAxe_2",-15,0,2,5)
 		WW31 K 0 bright A_FireCustomMissile("WTThrownAxe_2",0,0,2,5)
 		WW31 N 3 bright A_FireCustomMissile("WTThrownAxe_2",15,1,2,5)
-		goto MA1_Done		
-	DMMegaAttack1:
-		WW31 K 0 bright A_FireCustomMissile("WTThrownAxe_3",-15,0,2,5)
-		WW31 K 0 bright A_FireCustomMissile("WTThrownAxe_3",0,0,2,5)
-		WW31 N 3 bright A_FireCustomMissile("WTThrownAxe_3",15,1,2,5)
-		goto MA1_Done	
+		goto MA1_Done
 	MA1_Done:
 		WW31 O 3 bright
 		TNT1 A 8
@@ -207,7 +204,7 @@ Actor WTThrownAxe
 
 Actor WTThrownAxe_2 : WTThrownAxe { Species "Player" +THRUSPECIES +DONTHARMCLASS +DONTHARMSPECIES +MTHRUSPECIES  }
 
-Actor WTThrownAxe_3 : WTThrownAxe
+Actor WTThrownAxe_3 : WTThrownAxe // dm
 {
 	-SEEKERMISSILE
 	Speed 36

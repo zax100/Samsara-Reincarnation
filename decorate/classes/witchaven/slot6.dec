@@ -80,6 +80,7 @@ Actor "Frozen Two-Hand Sword" : WTWeapon
 		WW92 A 0 A_TakeInventory("WTAttackClip",1)
 		goto MegaAttack2		
 	Attack1:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAttack1")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack1")
 		WW90 OPQR 3
 		WW90 S 3 A_PlayWeaponSound("ggen/swing4")
@@ -105,7 +106,8 @@ Actor "Frozen Two-Hand Sword" : WTWeapon
 		WW90 N 0 A_Refire
 		goto WIdle		
 	Attack2:
-		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack2")	
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAttack2")
+		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack2")
 		WW90 XYZ 3
 		WW91 A 3 A_PlayWeaponSound("ggen/swing4")
 		WW91 B 3
@@ -130,6 +132,7 @@ Actor "Frozen Two-Hand Sword" : WTWeapon
 		WW90 N 0 A_Refire
 		goto WIdle	
 	MegaAttack1:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopMegaAttack1")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack1")
 		TNT1 A 0 A_AlertMonsters
 		WW90 NO 2 //Display extra animation
@@ -159,6 +162,7 @@ Actor "Frozen Two-Hand Sword" : WTWeapon
 		WW90 N 0 A_Refire
 		goto WIdle	
 	MegaAttack2:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopMegaAttack2")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack2")
 		TNT1 A 0 A_AlertMonsters		
 		WW93 ABC 3 bright

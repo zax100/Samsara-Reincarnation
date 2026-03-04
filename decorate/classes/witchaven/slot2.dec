@@ -66,7 +66,8 @@ Actor "Shortsword" : WTWeapon
 		goto MegaAttack1
 		WW11 A 0 A_TakeInventory("WTAttackClip",1)
 		goto MegaAttack2
-	Attack1: 
+	Attack1:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAttack1")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack1")
 		WW10 IJK 3
 		WW10 L 0 A_PlayWeaponSound("ggen/swing4")
@@ -86,6 +87,7 @@ Actor "Shortsword" : WTWeapon
 		WW10 H 1 /*offset(0,32)*/ A_Refire
 		goto WIdle
 	Attack2:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAttack2")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAttack2")	
 		WW10 OPQ 3
 		WW10 R 0 A_PlayWeaponSound("ggen/swing4")
@@ -107,6 +109,7 @@ Actor "Shortsword" : WTWeapon
 		WW10 H 1 /*offset(0,32)*/ A_Refire
 		goto WIdle		
 	MegaAttack1:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopMegaAttack1")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack1")		
 		WW11 K 3 bright
 		WW11 LMN 3 bright
@@ -128,6 +131,7 @@ Actor "Shortsword" : WTWeapon
 		WW11 J 1 bright /*offset(0,32)*/ A_Refire
 		goto MegaWIdle	
 	MegaAttack2:
+		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopMegaAttack2")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopMegaAttack2")			
 		WW11 RST 3 bright
 		WW11 U 0 bright A_PlayWeaponSound("gspell/fire")
