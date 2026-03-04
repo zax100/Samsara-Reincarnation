@@ -18,6 +18,10 @@ Doom:
 
 ! Changed the Perkristan altsounds for hitting a wall with the brass knuckles as well as punching an enemy while berserked.
 
+-Doomguy (Doom 64)-
+
+* Fixed the shrinking animation not showing properly.
+
 -Doomguy (Stronghold)-
 
 ! The status bar HUD has been improved and now shows the other weapons.
@@ -57,8 +61,10 @@ Doom:
 - The railgun (powered) now does 20 damage per unzoomed rail attack in PVP, totaling 40, and 30 damage per unzoomed rail attack in PVE, totaling 60 (decreased from 45, totaling 90).
 - The railgun (powered) now does 20 damage per zoomed rail attack in PVP, totaling 80 (decreased from 30, totaling 120).
 - The railgun (powered) now fires twice as slowly when zoomed.
++ With improved weapon balance, the B.F.G. 9000 (unpowered) now deals 800 direct damage (increased from 100-800 in multiples of 100).
 - With improved weapon balance, the B.F.G. 9000 (unpowered) no longer has the extra explosion damage or additional weaker BFG sprays from Stronghold Rejuvenated, since the context makes it unneeded here.
-- The B.F.G. 9000 (powered) now deals 20-160 damage (average 90, changed from 100), only deals 128 splash damage in a consistent radius (decreased from 192), has no smaller BFG spray, and deals self-damage.
+! The B.F.G. 9000 (powered) now deals 20-160 direct damage in multiples of 20 (average 90; changed from 100).
+- The B.F.G. 9000 (powered) now only deals 128 splash damage in a consistent radius (decreased from 192), has no smaller BFG spray, and deals self-damage.
 - With improved weapon balance, the pyro cannon lingering fire now deals 4 splash damage (decreased from 5). It also cannot put actors in their Pain state in every frame except the first.
 - The pyro cannon (powered) now mushrooms into 3 pyro shots (decreased from 4).
 - The devastator (powered) now deals 300-400 direct hit damage (decreased from 400-800), and deals a total of 576 splash damage on impact (decreased from 800).
@@ -66,28 +72,37 @@ Doom:
 ! The homing rocket launcher (powered) has been reworked; it now fires clusters of six rockets that do 8-64 damage in multiples of 8 each with an explosion of 64 splash damage across 96 map units.
 - The plasma repeater (powered) now deals 9-27 direct damage in multiples of 9 (decreased from 20-60 in multiples of 20 for the first sequence and 10-30 in multiples of 10 for the second sequence).
 - The plasma repeater (powered) now deals self-damage. In the second sequence, the self-damage only applies to half of the pellets.
-- Gas ammo has been generally halved; small ammo 4 pickups give 12 and big ammo 4 pickups give 48, to make it less viable to spam the flame weapons.
-- Mine ammo has also been reduced; big ammo 3 pickups only give 1 mine instead of 2.
+- Gas ammo has been generally halved; small Ammo 4 pickups give 12 and big Ammo 4 pickups give 48, to make it less viable to spam the flame weapons.
+- Mine ammo has also been reduced; big Ammo 3 pickups only give 1 mine instead of 2.
+
+-All-
+
+! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 
 Fred Chexter (Chex Quest):
 
+! Chex bits spawned from being gibbed now fade after one minute, though they can remain indefinitely with "Gib Persistence" enabled.
 * Fixed fallback and non-+THRUGHOST zorch puffs not having lights in PVE.
 * Fixed +THRUGHOST zorch puffs not having lights at all.
-* Fixed the super large zorcher projectiles not having lights in PVP.
-* Fixed the super large zorcher projectiles losing their lights upon first collision with map geometry in PVE.
-+ with Improved Balance, the Super Large Zorcher's projectiles do 20-50 in coop (increased from 10-35).
++ With improved weapon balance, the Super Large Zorcher's projectiles do 20-50 in PVE (increased from 15-35).
+* Fixed the Super Large Zorcher projectiles not having lights in PVP.
+* Fixed the Super Large Zorcher projectiles losing their lights upon first collision with map geometry in PVE.
 * Fixed the LAZ Device projectile and tracers not having lights when "Chex Quest: LAZ Device Mode" is set to "Classic".
++ When "Chex Quest: LAZ Device Mode" is set to "Modern", each of the lingering explosions from the projectile after the main blast have had their splash damage doubled and splash radius increased.
++ When "Chex Quest: LAZ Device Mode" is set to "Classic", and improved weapon balance is active, the LAZ Device projectile now deals 800 direct damage (increased from 100-800 in multiples of 100).
 ! The Liquid Zorcher puff now has lights.
+! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 * Fixed lights being called incorrectly for the Chain-Lightning Zorcher projectile.
-+ Each of the lingering Explosions from the LAZ Device after the main blast has its damage doubled and radius increased by 32.
 
 Corvus (Heretic):
 
-+ with Improved Balance active, the Dragon Claw now deals 4-48 in increments of 4 (increased from 4-32 in multiples of 4
++ With improved weapon balance, the dragon claw now deals 4-48 damage in multiples of 4 in PVE (increased from 4-32 in multiples of 4).
 ! The hellstaff now deals 4-52 damage in multiples of 4 (changed from 5-40 in multiples of 5).
-+ The Staff of D'Sparil lightning bolt now does 240 splash damage (increased from 200) with a radius of 192 (increased from 128).
-+ The Staff of D'Sparil lightning bolt now has +FORCERADIUSDMG to make it more powerful its primary use cases as an ultimate weapon against boss monsters.
-
++ The tempest wand from Heretic + Hexen's Faith Renewed episode has been added as the slot 6S weapon! However, due to the lack of documentation for how the weapon internally worked in Heretic + Hexen, the weapon behavior is different, working more like a conventional railgun in Samsara.
++ The Staff of D'Sparil (unpowered)'s lightning bolt now does 240 splash damage (increased from 200) with a radius of 192 map units (increased from 128).
++ The Staff of D'Sparil (unpowered)'s lightning bolt now forces splash damage against enemies to make it more useful against bosses.
+! Ally wizards' projectiles now have +BLOODSPLATTER outside of Heretic and Hexen.
+! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 
 Wolfenstein 3D:
 
@@ -106,6 +121,10 @@ Wolfenstein 3D:
 
 Hexen I:
 
+-Parias (Reincarnation)-
+
+! Updated crusader's longbow pickup sprite to use blue fletchings on arrows.
+
 -Parias (Classic)-
 
 - The Bloodscourge now only deals 7-56 direct damage in multiples of 7 (decreased from 14-112 in multiples of 14), to compensate for ripping all enemies that aren't bosses (see Daedolon's section).
@@ -120,63 +139,121 @@ Hexen I:
 
 + The Hammer of Retribution's projectile now deals 20-160 direct damage in multiples of 20 (increased from 10-80 in multiples of 10).
 
+-All-
+
+! Updated offset and weapon outlines for hybrid pickup sprites.
+
 Duke Nukem 3D:
 
 -Duke Nukem (Original/Life's a Beach)-
 
-- Pipebombs now have a splash radius of 210 map units (decreased from 250).
-+ with improved balance active, The shotgun now fires 7 pellets of 12 damage each (increased from 10 damage each).
+- Pipebombs/pineapples now have a splash radius of 210 map units (decreased from 250).
++ With improved weapon balance, the shotgun/Super Soak'em's pellets now deal 12 damage each in PVE (increased from 10 damage each).
++ Added hybrid pickup sprites for the Uber Soak'em.
 ! The M16 sprites have been extended, and a new pickup sprite has been added.
-- The RPG's explosion now deals 70 splash damage (decreased from 140), with the total being 210 on a direct hit (decreased from 280).
-- The RPG's explosion now has a splash radius of 140 (decreased from 178).
-+ the Freezethower's projectiles do 24 damage per shot (increased from 22).
++ The M16 now gives 40 rounds of Ammo 1 on pickup (increased from 30).
++ The M16 now holds 40 rounds before needing to reload (increased from 30).
+* Fixed the M16 magazine not being properly reset with pistol start enabled.
++ The M16 now has a horizontal spread of 4 (decreased from 4.5).
+* Fixed the M16 not taking ammo with "Fallback Ranged Weapon Ammo Usage" disabled while reloading is disabled as well.
+- The RPG/coconut launcher's explosion's splash damage on a direct hit is now 70 (decreased from 140), with the total being 210 (decreased from 280).
+- The RPG/coconut launcher's explosion now has a splash radius of 140 (decreased from 178).
++ The freezethower/ice crusher's projectiles now do 24 damage (increased from 22).
+
+-Duke Nukem (Duke Nukem 64)-
+
+* Fixed the pain and shrinking animations not showing properly.
+
+-All-
+
+! Updated offset and weapon outlines for Duke's hybrid pickup sprites.
 
 Security Officer (Marathon):
 
-+ The KKV-7 SMG Flechette bullets now do 8-12 damage in PVE outside of water (increased from 8-10). with improved balance active, they do 9-15.
-+ with improved balance active and in coop, the WSTE-M5 shotgun pellets do 9-15 damage (increased from 10-12).
-+ The fusion pistol secondary fire bolts now deal 42-56 damage (increased from 40-50).
-+ The fusion pistol secondary fire bolts now deal 104-140 damage (increased from 90-120).
-+ with improved balance active, The fusion pistol secondary fire bolts now deal 45-60 damage (increased from 40-50).
-+ with improved balance active, The fusion pistol secondary fire bolts now deal 120-150 damage (increased from 90-120).
-+ with improved balance active, The MA-75B assault rifle bullets deal 10-16 damage (increased from 9-15).
++ The KKV-7 SMG Flechette bullets now do 8-12 damage (vanilla) or 9-15 damage (improved) in PVE outside of water (increased from 8-10).
+! With improved weapon balance, the WSTE-M5 Combat Shotgun's pellets now do 9-15 damage in PVE (changed from 10-12).
++ The fusion pistol primary fire bolts now deal 42-56 damage (vanilla) or 45-60 damage (improved; PVE only) (increased from 40-50).
++ The fusion pistol secondary fire bolts now deal 105-140 damage (vanilla) or 120-150 damage (improved; PVE only) (increased from 90-120).
 + When fired underwater, the fusion pistol now deals only the amount of splash damage the original attacks did to Security Officer as self-damage in the Marathon games.
-+ the main beams from the WMC Level 1/2/3 primary fire now deal 210-280 damage (increased from 150-200).
++ With improved weapon balance, the MA-75B Assault Rifle primary bullets now deal 10-16 damage in PVE (increased from 9-15).
++ The main beams from the ONI-71 Wave Motion Cannon primary fire (all levels) now deal 210-280 damage (increased from 150-200).
+! The Talon Ceramic Combat Blade is now selected through weapon slot 0 instead of weapon slot 1.
+! The Tech.50 Pacifier is now selected through weapon slot 9 instead of weapon slot 1.
+! Updated offset and weapon outlines for Security Officer's hybrid pickup sprites.
 
 Ranger (Quake I):
 
-- with improved balance NOT active, The grenade launcher and rocket launcher now deal 160 splash damage in PVE (decreased from 192). With Improved balance, it's still 192.
-+ with improved balance active and in coop, the Nailgun now deals 12 damage (increased from 10), and Lava nails do 18 (increased from 15).
-+ with improved balance active and in coop, the uper Nailgun now deals 24 damage (increased from 20), and Super Lava nails do 32 (increased from 30).
++ With improved weapon balance, the double-barreled shotgun now fires 16 pellets in PVE (increased from 14).
+- With vanilla weapon balance, the grenade launcher and rocket launcher now deal 160 splash damage in PVE (decreased from 192).
 + Each cluster tiny grenade now deals 51 splash damage in PVP and 64 splash damage in PVE (increased from 50).
-- with improved balance NOT active, Multi rockets now deal 64 splash damage in PVP and 80 splash damage in PVE (decreased from 100). This is because it adds up to doing twice as much damage as a primary shot over four multi rockets. With improved balance, it's 96 damage with a radius of 96 (increased from 91).
++ With improved weapon balance, the nailgun's normal nails now deal 12 damage in PVE (increased from 10), and its lava nails now do 18 damage in PVE (increased from 15).
+- Multi rockets now deal 64 splash damage (PVP only), 80 splash damage (vanilla; PVE only), or 96 splash damage (improved; PVE only) (decreased from 100). This is because it adds up to doing twice as much damage as a primary shot over four multi rockets.
++ With improved weapon balance, multi rockets now deal their splash damage across 96 map units in PVE (increased from 91).
++ With improved weapon balance, the super nailgun's normal nails now deal 24 damage in PVE (increased from 20), and its super lava nails now do 36 damage in PVE (increased from 30).
+! The rocket powered impaler now has a sprite for the Compendium and the alternate HUD.
++ The thunderbolt (lightning mode) now deals 45 damage in PVP (increased from 30).
 - The thunderbolt (lightning mode) now deals 45 damage in PVE (decreased from 50).
 - The thunderbolt (plasma mode)'s lightning bolts now deal 45 damage (decreased from 50).
 - Ranger now gets 2 rounds of Ammo 3 from medium Ammo 2 pickups (decreased from 3) and 3 rounds of Ammo 3 from large Ammo 2 pickups (decreased from 4).
-- Ranger now receives the normal amount of Ammo 3 rounds from ammo 3  pickups instead of getting more rounds.
-+ with improved balance active, The double-barreled shotgun fires 16 pellets of 5 damage each (increased from 14).
+- Ranger now receives the normal amount of Ammo 3 rounds from Ammo 3 pickups instead of getting more rounds.
+! The Pentagram of Protection's icon on the legacy fullscreen HUD is now red.
 
 Rise of the Triad:
 
 -All-
 
 * Fixed the landing attack taking effect when dead.
+! The double pistols have been moved from a slot 2 weapon to a slot 1 weapon. Subsequent pickups also now give 10 bazooka missiles instead of 10 heat seeker missiles.
+! The MP40 has been moved from a slot 4 weapon to a slot 2 weapon. Subsequent pickups also now give 6 heat seeker missiles instead of 6 bazooka missiles.
++ With improved weapon balance, the MP40 now does 11 damage per bullet (increased from 10).
+! The bazooka has been moved from a slot 1 weapon to a slot 4 weapon.
+- Bazooka ammo capacity is now 50 (without backpack)/100 (with backpack) (decreased from 100 (without backpack)/200 (with backpack)).
+- The M60 now deals 10 damage (decreased from 15).
+- The Doomstick's secondary attack now deals 10 damage per pellet in PVE (decreased from 15).
+- Drunk missile ammo capacity is now 50 (without backpack)/100 (with backpack) (decreased from 60 (without backpack)/120 (with backpack)).
+- The flamewall's flames now deal 0.5x damage to bosses.
+- The Excalibat and dark staff no longer regenerate their ammo.
+- Split missile ammo capacity is now 25 (without backpack)/50 (with backpack) (decreased from 100 (without backpack)/200 (with backpack)).
+- The split missile now gives 5 split missiles on pickup (decreased from 10).
+* Fixed the dark staff secondary being able to refire when picking up God Mode.
+! The dark staff is now removed from the player's inventory when depleted.
+- Ammo expansion packs now give 3 bazooka missiles (decreased from 5).
+- Hexen Ammo 1/2 pickups now give 3 heat seeker missiles (decreased from 5).
+- Hexen combined ammo pickups now give 3 split missiles (decreased from 5).
+- Strife small ammo combo pickups now give 2 split missiles (decreased from 3).
+- Strife large ammo combo pickups now give 3 split missiles (decreased from 5).
+- God Mode can no longer damage bosses or actors with the +SPECTRAL flag.
 * Fixed Dog Mode not being properly counted towards invulnerability checks.
-+ with improved balance active, the MP-40 does 11 damage per bullet (increased from 10).
+
+Blake Stone (Blake Stone):
+
++ Originally planned as a new slot 6 weapon during Samsara Reincarnation's development (which would've moved and removed some equipment in the process), the Gatling Fusion Devastator has been added as the slot 4S weapon!
+! The Ammo Recharge Pack now gives ammo for vanilla Doom and Chex Quest weapons if they are selected, since custom maps can use ACS to give and/or select them.
+
+Caleb (Blood):
+
+! In Strife, the Guns Akimbo is now distributed through an inventory item regardless of the "Blood: Guns Akimbo Behavior" setting.
+! If the player has a Guns Akimbo inventory item, and "Blood: Guns Akimbo Behavior" is set to "Toggle", it will now give quad damage on use instead of switching between single and dual wielding.
+- The Guns Akimbo's effect (instant use version only) no longer carries over between levels in a hub, since Strife now handles giving it differently.
+* Fixed the Dark Side version having a 0% chance of using the alternate death state instead of 50%.
 
 Strifeguy (Strife):
 
-+ the Electric crossbow bolts now do 40-80 damage in increments of 10 (increased from 20-80 in multiples of 20).
-+ the Poison crossbow bolts now do 100 explosive damage in a radius of 16 (increased from a radius of 8). This should make the extra poison damage more consistent.
-! mini-missles now do 64 explosion damage in a radius of 96vuits (changed from 96 damage in a radius of 64)
-+ the Assault Rifle now deala 5-15 damage in multiples of 5 per bullet (increased from 4-12 in multiples of 4).
+* Fixed Blackbird talking earlier than intended when playing Strife in GZDoom.
++ The crossbow (electric bolts) now does 40-80 damage in increments of 10 (increased from 20-80 in multiples of 20).
++ The crossbow (poison bolts) now does 100-200 direct damage in increments of 50 (increased from 50-200 in increments of 50).
++ The crossbow (poison bolts) now does its extra poison damage across 16 map units (increased from 10). This should make it more consistent.
+- The mini missile launcher now deals 64 splash damage (decreased from 96).
++ The mini missile launcher now deals its splash damage across 96 map units (increased from 64).
++ The assault gun now deals 5-15 damage in multiples of 5 per bullet (increased from 4-12 in multiples of 4).
 - High explosive grenades no longer have +FORCERADIUSDMG, because the projectile didn't have that flag in Strife while some enemies had +NORADIUSDMG, meaning it's an intended weakness.
+! The Dark Side version now uses the additional gibs and blood splatters when gibbed by Strife weapons.
 
 Eradicator:
 
 -Eleena Brynstaarl-
 
-+ The claw now deals 12-24 damage in increments of 4 (increased from 9-18 damage in increments of 3).
++ The claw now deals 36-72 damage in increments of 12 (increased from 27-54 damage in increments of 9).
 + The ripper disc now deals 10-18 damage (increased from 10-15).
 + The arachnicator now deals 60 direct damage (increased from 75).
 - The arachnicator now deals 160 splash damage (decreased from 175).
@@ -193,7 +270,7 @@ Eradicator:
 
 -Kamchak-
 
-+ The fist now deals 12-24 damage in increments of 4 (increased from 9-18 damage in increments of 3).
++ The fist now deals 36-72 damage in increments of 12 (increased from 27-54 damage in increments of 9).
 + The roving mine now deals 60 direct damage (increased from 75).
 - The roving mine now deals 160 splash damage (decreased from 175).
 + The roving mine now deals its splash damage across 80 map units (increased from 55).
@@ -210,12 +287,13 @@ Eradicator:
 
 -Dan Blaze-
 
-+ The pickaxe now deals 12-24 damage in increments of 4 (increased from 9-18 damage in increments of 3).
++ The pickaxe now deals 36-72 damage in increments of 12 (increased from 27-54 damage in increments of 9).
 + The mini-tank detonator now deals 60 direct damage (increased from 75).
 - The mini-tank detonator now deals 160 splash damage (decreased from 175).
 + The mini-tank detonator now deals its splash damage across 80 map units (increased from 55).
 + The pellet bomb now deals 15-20 direct damage per bomb (increased from 12-14).
 + The pellet bomb now deals 10 splash damage across 32 map units (increased from 8 splash damage across 27 map units).
+* Fixed being able to keep the pellet bomb's secondary fire going after the weapon enhancement chip expires.
 + The flamethrower projectiles now last for an additional 3 tics in the air and move at speed 40 (increased from 32).
 + The flamethrower projectiles now deal 12 damage in PVE (increased from 10).
 - The ion sphere now takes 4 rounds of Ammo 4 to fire (increased from 2).
@@ -224,7 +302,7 @@ Eradicator:
 
 -Alliance Commando-
 
-+ The boot now deals 12-24 damage in increments of 4 (increased from 9-18 damage in increments of 3).
++ The boot now deals 36-72 damage in increments of 12 (increased from 27-54 damage in increments of 9).
 
 -All-
 
@@ -236,8 +314,8 @@ Eradicator:
 + The missile launcher primary projectiles now deal 80 direct damage (increased from 75), as well as 128 splash damage across 128 map units (increased from 120 splash damage across 120 map units).
 + The missile launcher secondary projectiles now deal 144 splash damage across 128 map units (increased from 140 splash damage across 120 map units).
 - The death sphere now has a ReactionTime of 28 (decreased from 36), meaning it lasts roughly 12 seconds (decreased from roughly 15.4).
-- In PVP, the death sphere now deals 384-512 splash damage across 192 map units (decreased from 650-800 splash damage across 211 map units).
-- In PVE, the death sphere's three A_Explode calls now deal 128-256 splash damage across 192 map units (decreased from 142-284 splash damage in multiples of 142 across 211 map units).
+- In PVP, the death sphere now deals 384-512 splash damage (decreased from 650-800).
+- In PVE, the death sphere's three A_Explode calls now deal 128-256 splash damage in multiples of 128 (decreased from 142-284 splash damage in multiples of 142).
 
 LDF Commando (Rebel Moon Rising):
 
@@ -247,6 +325,8 @@ Kyle Katarn (Star Wars: Dark Forces):
 
 + All explosive weapons now deal only the amount of splash damage the original explosion did to Katarn as self-damage in Star Wars: Dark Forces.
 ! As per Star Wars: Dark Forces logic, there is now zero random damage in Kyle Katarn's kit.
+! The Modified Bryar Pistol, Stormtrooper Blaster Rifle, DLT-19 Heavy Blaster Rifle, and Czerka Adventurer projectiles now use models instead of sprites.
+- The Modified Bryar Pistol projectiles now move at speed 64 (decreased from 100).
 + The Thermal Detonator damage is now 180 (increased from 140), and up to 45 of that damage is dealt back to Katarn.
 - The Stormtrooper Blaster Rifle and DLT-19 Heavy Blaster Rifle projectiles now move at speed 64 (decreased from 100).
 + The Stormtrooper Blaster Rifle and DLT-19 Heavy Blaster Rifle projectiles now do 20 damage (increased from 15).
@@ -282,13 +362,15 @@ Grondoval (Witchaven):
 
 + Most melee attacks have +50% range. This buff includes the dagger, shortsword, battle axe, ice halberd, fire mace, broad sword, and frozen two-hand sword.
 + A lot of melee attacks have +33% damage. This buff includes the dagger (strong), shortsword (unenchanted), battle axe, ice halberd, fire mace, broad sword (unenchanted), and frozen two-hand sword.
-- The Pike Axe now takes 10 rounds of Ammo 4 to fire (increased from 8).
-+ The Pike Axe's melee attacks now have 192 range (increased from 64).
-+ The Pike Axe's weak melee attack now deals 120-190 damage (increased from 60-95).
-+ The Pike Axe's strong melee attack now deals 220-320 damage (increased from 110-160).
-+ The Pike Axe's projectiles now deal 200 damage in PVP (increased from 100), and 300-480 damage in PVE (increased from 100-160).
-+ The Pike Axe's projectiles now move at speed 36 in PVP (increased from 30), and speed 48 in PVE (increased from 40).
-+ The Pike Axe's projectiles now have a weak form of homing in PVP.
+- The pike axe now takes 10 rounds of Ammo 4 to fire (increased from 8).
++ The pike axe's melee attacks now have 192 range (increased from 64).
++ The pike axe's weak melee attack now deals 120-190 damage (increased from 60-95).
++ The pike axe's strong melee attack now deals 220-320 damage (increased from 110-160).
+* Fixed the pike axe's melee attacks not hitting ghosts.
++ The pike axe's projectiles now deal 200 damage in PVP (increased from 100), and 300-480 damage in PVE (increased from 100-160).
++ The pike axe's projectiles now move at speed 36 in PVP (increased from 30), and speed 48 in PVE (increased from 40).
++ The pike axe's projectiles now have a weak form of homing in PVP.
+* Fixed the fire immunity potion not providing immunity against Bitterman's plasma beam and JC Denton's mini-crossbow (flare darts).
 
 Half-Life:
 
@@ -302,6 +384,7 @@ Half-Life:
 - The .357 Python now deals 80 damage (decreased from 100).
 - The Desert Eagle now deals 70 damage (decreased from 88).
 - The MP5 primary fire now deals 10 damage per bullet (decreased from 13).
++ The Uzi from Sven Co-op 3.0 has been added as the slot 4S weapon! However, due to the size of the converted model, the ability to dual wield is currently not available.
 - The RPG now deals 240 splash damage (decreased from 300).
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
 
@@ -311,24 +394,39 @@ Bitterman (Quake II):
 * Fixed a possible crash when getting crushed as Bitterman.
 ! Instead of a convoluted layered explosion, the BFG10K projectile now deals 200 splash damage in a radius of 200 map units, as per Quake II. However, it now deals self-damage, also as per Quake II.
 + The BFG10K projectile now calls a second explosion when the player is in line of sight of the projectile as it explodes, similar to how the original game's super explosion worked. This explosion deals 200 splash damage (PVP) or 500 splash damage (PVE) in a radius of 1000 map units.
+* Fixed shrunk Strogg prisoners counting for kills.
+
+Demoness (Hexen II):
+
+* Fixed Demoness requiring an additional experience point to level up. The level cap is also properly set to 100.
 
 GoldenEye 007:
 
 -James Bond (GoldenEye 007)-
 
-- The AR33 now deals 12 damage (decreased from 14).
+* Fixed the throwing knives not doing any damage to enemies that aren't moving.
+- The throwing knives no longer deal additional headshot damage.
+- The US AR33 assault rifle now deals 12 damage (decreased from 14).
 - The Phantom now deals 14 damage (decreased from 16).
 - Golden bullets are now given only if James Bond has the Golden Gun or Gold PP7 Special Issue.
 
 -James Bond (Goldfinger 64)-
 
+! The M14's Compendium description has been changed.
 - Golden bullets are now given only if James Bond has the Golden Magnum.
 
 -All-
 
+! Weapon reload animations have been modified.
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
-- Golden bullet ammo capacity has been lowered to 10 (decreased from 25).
++ The slappers now deal 160 damage when attacking monsters from behind.
+- Golden bullet ammo capacity is now 10 (without backpack)/20 (with backpack) (decreased from 25 (without backpack)/50 (with backpack)).
 - James Bond now gets 1 golden bullet from big Ammo 4 pickups (decreased from 5).
+
+Petton Everhail (Catacomb 3D):
+
+! In Strife, the Rings are now distributed through inventory items.
+- The Rings' effects no longer carry over between levels in a hub, since Strife now handles giving them differently.
 
 Prisoner 849 (Unreal):
 
@@ -349,6 +447,7 @@ Sarge (Quake III Arena):
 
 JC Denton (Deus Ex):
 
+- The 10mm pistol now deals 18 base damage (decreased from 28).
 - The GEP gun's standard rockets now deal 90 base splash damage (decreased from 120 base splash damage).
 - The GEP gun's WP rockets now explode starting with a radius of 38 map units and ending at 192 map units (decreased from 48, ending at 384).
 - The GEP gun's WP rockets now burn enemies at a radius of 256 map units (decreased from 384).
@@ -356,10 +455,49 @@ JC Denton (Deus Ex):
 - The LAMs now explode starting with a radius of 51 map units and ending at 256 map units (decreased from 77, ending at 384).
 - Headshot damage is now a 2x multiplier (decreased from 3x).
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
++ The environmental protection powerup and Strife's environmental suit now give the player an augmentation upgrade canister.
+* Fixed being able to lift and throw enemies of any height using the second level of the Microfibral Muscle augmentation.
++ The maximum actor height required to lift and throw an enemy using the third level of the Microfibral Muscle augmentation is now 40 (increased from 32).
+
+-Games-
+
+Doom:
+
+* Fixed the pain elemental using the wrong sprite when hit by Duke's mighty boot.
+! Changed the sprites used for the Arch-vile resurrection flame. This has the side effect of fixing the flame not appearing correctly outside Doom.
++ Added Samsara stuff to the beta lost soul and MBF helper dog, because why not?
+
+Strife: Quest for the Sigil:
+
+* Fixed the blue acolytes not using the additional gibs and blood splatters when gibbed by Strife weapons.
+* Fixed a frame lasting longer than normal for gibbed reavers.
++ The environmental suit's fire immunity now takes all fire-based damage types into account instead of just Fire.
+
+Doom 64 CE:
+
++ The realm of Doom 64 CE has opened up to the Wheel! Note that support is currently exclusive to GZDoom only.
+
+Legacy of Rust/WadFusion:
+
+* Fixed the mindweaver not leaving bullet decals.
+* Fixed the Tyrant going to the wrong See state meant for giving boss taunt tokens to the player.
 
 -Settings-
 
++ samsara_cl_halflifesounds, which determines the weapon sounds for the Half-Life characters. It can be found in the "Samsara Clientside Options" menu, under "Alternative Weapon Sounds", with the label "Half-Life Sounds".
+! Bloody hell effects will no longer spawn from enemies killed by the Massacre damage type (used for the massacre/"kill monsters" cheat, as well as D'Sparil (second phase)'s death sequence).
+! The "Brutal" bloody hell setting has been renamed to "Chunky".
 - samsara_extraweapons has been removed.
+! "Doom/Chex: Weapon Balance" has been renamed to "Weapon Balance" and moved to "Serverside Ability Options". The CVar name itself has also been renamed from "samsara_doomguybalance" to "samsara_weaponbalance".
+! Added new sprites and sounds for the MDWTAK explosions.
+* Fixed item replacement settings not taking effect on non-unique equipment pickups (3 to 6S) spawned by the Pinata Party mode.
+
+-Other-
+
+* Fixed random characters that can be interacted with not having their USESPECIAL flag cleared on death.
+! The ally cell phone is no longer granted with keyboard cheats if allies are disabled.
+! The Christmas snow effect now spawns at 2048 map units around players and the snow density is halved.
+* Fixed *gasp not playing when acquiring invulnerability underwater while out of oxygen.
 
 --------------------------------------------------------------------------
 -----------------------------Reincarnation 2.2----------------------------
@@ -623,10 +761,6 @@ JC Denton (Deus Ex):
 
 -Games-
 
-Doom:
-
-! Changed the sprites used for the Arch-vile resurrection flame. This has the side-effect of fixing the flame not appearing correctly outside Doom.
-
 Heretic:
 
 * Fixed some of D'Sparil's sounds not being played globally.
@@ -652,7 +786,6 @@ Legacy of Rust/WadFusion:
 + samsara_underwaterweapons has been added, determining if every weapon should be usable underwater or obey their source games' behavior apart from the fallback equipment. It can be found in the "Samsara Serverside Options" menu, under "Weapon Options", with the label "All Weapons Fire Underwater".
 ! Moved the item replacement settings into their own submenu. They can be found in the "Samsara Serverside Options" menu, under the submenu "Item Replacement Options".
 + Added new item replacer settings for the ammo expansion pack (samsara_replace_backpack), slot 3 equipment (samsara_replace_supershotgun), slot 4 equipment (samsara_replace_chaingun), slot 4S equipment (samsara_replace_minigun), slot 5 equipment (samsara_replace_rocketlauncher), slot 5S equipment (samsara_replace_grenadelauncher), slot 6 equipment (samsara_replace_plasmarifle), and slot 6S equipment (samsara_replace_railgun). They can be found in the "Samsara Serverside Options" menu, under the submenu "Item Replacement Options", with the labels "Replace Ammo Expansion Pack/Slot 3 Equipment/Slot 4 Equipment/Slot 4S Equipment/Slot 5 Equipment/Slot 5S Equipment/Slot 6 Equipment/Slot 6S Equipment".
-! Added new sprites and sounds for the MDWTAK explosions.
 
 -Other-
 
@@ -1309,12 +1442,9 @@ Eradicator:
 * Fixed homing behavior of the missile launcher secondary.
 ! The death sphere now has new weapon sprites.
 - The death sphere now deals less damage overall, especially against tankier enemies.
-exception of the missile launcher, so as to still make unguided missiles possible) at no extra ammo cost.
+! Instead of adding alternate fires that take twice the ammo, the weapon enhancement chip now replaces the primary fires with the alternate fires (with the exception of the missile launcher, so as to still make unguided missiles possible) at no extra ammo cost.
 * Fixed the megasphere pickup message to show the correct amounts.
 * Fixed the death taunt not respecting the taunt cooldown.
-- In PVP, the death sphere now deals 384-512 splash damage across 211 map units (decreased from 650-800 splash damage)
-- In PVP, the death sphere now deals 384-512 splash damage across 192 map units (decreased from 650-800 splash damage).
-- In PVE, the death sphere's three A_Explode calls now deal 128-256 splash damage across 211 map units (decreased from 142-284 splash damage in multiples of 142).
 
 Space Seal (Corridor 7):
 
@@ -1427,7 +1557,7 @@ Kyle Katarn (Star Wars: Dark Forces):
 ! The Assault Cannon secondary fast firing animation tics have been adjusted (from 21 to 23 passing refire, 22-26 depending on refires failed to 24 failing refire).
 - The Assault Cannon's primary and secondary projectiles now have a slight spread.
 + The Assault Cannon's secondary projectile now deals 192-256 direct damage in increments of 64 (increased from 30).
-+ The Assault Cannon's secondary projectile now deals 600 splash damage (increased from 400).
++ The Assault Cannon's secondary projectile now deals 500 splash damage (increased from 400).
 - The Assault Cannon's secondary projectile now deals its splash damage across 196 map units (decreased from 200).
 + The Wookie Bowcaster has been added as the slot 7S weapon! The bowcaster fires an explosive projectile that breaks into twelve smaller shots.
 ! Lowered the flashing intensity for several weapons.
@@ -1858,7 +1988,6 @@ JC Denton (Deus Ex):
 + When leveling up skills, excess skill points are now carried over to the next level instead of being reset to nothing.
 ! The bioelectrical energy display in the fullscreen HUD is shown differently.
 * Fixed weapons not having icons in the alternate HUD.
-- th 10mm pistol now deals base d=unlevelled damage of 18 (decreased from 28)
 ! Most weapon reload animations are now fixed to the Advanced skill animations instead of being tied to the current weapon skill. The assault shotgun, flamethrower, Majestic 12 plasma rifle, and LAW's reload animations are fixed to the Proficient skill animations.
 ! The combat knife's attack animations are now fixed to the Proficient skill animations instead of being tied to the current weapon skill.
 ! The mini-crossbow and Dragon's Tooth Sword's attack animations are now fixed to the Trained skill animations instead of being tied to the current weapon skill.

@@ -390,19 +390,6 @@ actor QuakeRocketCoopQuadSoundRereleaseImproved : QuakeRocketCoopQuadSoundRerele
     }
 }
 
-actor QuakeRocketCoopQuadSoundRereleaseImprove : QuakeRocketCoopQuadSoundRerelease
-{
-    States
-    {
-      Death:
-        TNT1 A 0 A_Explode(384,128,0)
-        TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",1)
-        TNT1 A 0 A_Explode(384,128)
-        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
-        stop
-    }
-}
-
 actor QuakeRocketSoundDMC : QuakeRocket
 {
     States
@@ -758,9 +745,9 @@ actor QuakeClusterRkCoopImproved: QuakeClusterRkCoop
     States
     {
       Death:
-        TNT1 A 0 A_Explode(48, 91, 0)
+        TNT1 A 0 A_Explode(48, 96, 0)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",1)
-        TNT1 A 0 A_Explode(48, 91)
+        TNT1 A 0 A_Explode(48, 96)
         TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosion")
         stop
     }
@@ -934,9 +921,9 @@ actor QuakeClusterRkCoopSoundDMCImproved : QuakeClusterRocketSoundDMC
     States
     {
       Death:
-        TNT1 A 0 A_Explode(40, 91, 0)
+        TNT1 A 0 A_Explode(48, 96, 0)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",1)
-        TNT1 A 0 A_Explode(40, 91)
+        TNT1 A 0 A_Explode(48, 96)
         TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundDMC")
         stop
     }

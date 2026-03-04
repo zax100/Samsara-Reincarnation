@@ -72,7 +72,7 @@ str HeroInformation[CLASSCOUNT][MAXMODES][25][3] =
 			
 			{ "Traits", "...And I Feel Mighty: Doomguy holds the Super Shotgun, one of the most devastating shotguns in the game as well as the BFG9000, one of the strongest ultimate weapons giving him quite the firepower. It's very hard for most other classes to match or exceed the damage on those 2 in their own weapons tier.
 			\n\nTo Hell With Respect!: Doomguy is the most unchanged in his function and his abilities. Playing with him is just like playing Doom II, so show these newcomers who they better call granddaddy.
-			\n\nA Touch Of Hellish Fantasy: Doom always had inspirations from D&D, from monster designs and even gameplay, Doomguy's damage is factored with a roll, though it's skewed towards the higher end.", ""},
+			\n\nA Touch Of Hellish Fantasy: Doom always had inspirations from D&D, from monster designs and even gameplay. Doomguy's damage is factored with a roll, though it's skewed towards the higher end.", ""},
 			
 			{ "Changes", "- The Berserk operates off the Chainsaw as well as the Fist, allowing Doomguy to have a DPS alternative rather than focusing on only Burst.
 			\n	^- : When in Berserk, the Chainsaw deals 7-70 damage every 3 tics.
@@ -97,7 +97,7 @@ str HeroInformation[CLASSCOUNT][MAXMODES][25][3] =
 			
 			{ "Traits", "...And I Feel Mighty: Doomguy holds the Super Shotgun, one of the most devastating shotguns in the game as well as the BFG9000, one of the strongest ultimate weapons giving him quite the firepower. It's very hard for most other classes to match or exceed the damage on those 2 in their own weapons tier.
 			\n\nTo Hell With Respect!: Doomguy is the most unchanged in his function and his abilities. Playing with him is just like playing Doom II, so show these newcomers who they better call granddaddy.
-			\n\nA Touch Of Hellish Fantasy: Doom always had inspirations from D&D, from monster designs and even gameplay, Doomguy's damage is factored with a roll, though it's skewd towards the higher end.", ""},
+			\n\nA Touch Of Hellish Fantasy: Doom always had inspirations from D&D, from monster designs and even gameplay. Doomguy's damage is factored with a roll, though it's skewed towards the higher end.", ""},
 			
 			{ "Changes", "- The Berserk operates off the Chainsaw as well as the Fist, allowing Doomguy to have a DPS alternative rather than focusing on only Burst.
 			\n	^- : When in Berserk, the Chainsaw deals 7-70 damage every 3 tics.
@@ -218,7 +218,7 @@ str HeroInformation[CLASSCOUNT][MAXMODES][25][3] =
 			\n\n- All three Hexen classes are now selectable, rather than having Parias use nearly all the games' weapons. This means the classes now have a lot of weapons that weren't actually in Hexen, but care was taken to ensure they are similar to weapons that would have appeared in Hexen had the number of weapons per class match Doom more closely.
 			\n\n- The Mace of Contrition no longer alerts monsters.
 			\n\n- The Firestorm's surrounding fireballs do more damage, having their A_Explode increased from radius 20/explosive damage 20 to 64/32, so as to match the power of the Plasma Rifle.
-			\n\n- The Serpent Staff's poison bolts were reduced in damage from 5-30 to 4-16 per shot, so as to match Chaingun power.
+			\n\n- The Serpent Staff's poison bolts were reduced in damage from 5-40 to 5-30 per shot, so as to match Chaingun power.
 			\n\n- The heal of the Serpent Staff's melee has been increased and quickened, and can now heal for beyond 100 health, so as to give it an extra use.
 			\n\n- The Wraithverge takes 20 of each ammo now, rather than 17, to match the costliness of other ultimate weapons.
 			\n\n- The Wraithverge's rate of fire has been slightly decreased by adding a 20-tic hang time at the end, to match the slow rate of fire of other ultimate weapons.

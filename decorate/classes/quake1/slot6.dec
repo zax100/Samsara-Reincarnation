@@ -519,7 +519,7 @@ actor QuakeSLNailCoopSoundRereleaseImproved : QuakeSLNailSoundRerelease
 {
     +THRUSPECIES
     Species "Player"
-    Damage (32)
+    Damage (36)
 }
 
 actor QuakeSLNailSoundDMC : QuakeSLNail
