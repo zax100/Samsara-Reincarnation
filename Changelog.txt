@@ -387,6 +387,28 @@ Kyle Katarn (Star Wars: Dark Forces):
 ! The Wookie Bowcaster's main projectile now deals 96 splash damage (changed from 84-108).
 ! The Wookie Bowcaster's cluster projectiles now deal 80 damage (changed from 70-85).
 
+In Pursuit of Greed:
+
+-Specimen 7-
+
++ The toxic mutant gun now deals 20 direct damage in PVP, and 35 direct damage in PVE (increased from a shared 17).
++ The toxic mutant gun now deals 5 poison damage up to 6 stackable times across 7 tics in PVE (increased from 2 poison damage up to 5 stackable times across 15 tics).
++ The toxic mutant gun's poison damage now stacks in PVE.
+
+-Theola Nom-
+
++ The fireball gun's projectiles now deal 25 damage (increased from 22).
+
+-All-
+
++ The fallback melee weapons now deal 30 damage at a maximum range of 72 map units (increased from 25 damage at a maximum range of 70 map units).
++ The flamethrower now deals 18 damage (increased from 15).
++ The plasma shotgun's projectiles now deal 28 damage (increased from 25).
++ The chaingun now deals 25 damage (increased from 20).
++ The rocket launcher now deals 30 direct damage (increased from 25).
++ The laser cannon's fire rate is now 7 tics (decreased from 8) to bring it more in line with In Pursuit of Greed.
++ The laser cannon's projectiles now deal 20 damage in PVP (increased from 17).
+
 Grondoval (Witchaven):
 
 + Most melee attacks have +50% range. This buff includes the dagger, shortsword, battle axe, ice halberd, fire mace, broad sword, and frozen two-hand sword.
