@@ -168,6 +168,10 @@ Hexen I:
 
 -Baratus-
 
+- Timon's Axe's weak attack now does 35-50 damage at the furthest range of 144 map units in PVE (decreased from 52-80).
++ Timon's Axe's weak attack can now do up to 60-90 damage at the closest range of 64 map units in PVE (increased from 55-83 at the closest range of 84 map units).
+- Timon's Axe's strong attack now does 80-130 damage at the furtheset range of 144 map units in PVE (decreased from 123-198).
++ Timon's Axe's strong attack can now do up to 135-210 damage at the closest range of 64 map units in PVE (increased from 133-208 at the closest range of 84 map units).
 + The Hammer of Retribution's projectile now deals 20-160 direct damage in multiples of 20 (increased from 10-80 in multiples of 10).
 
 -All-
@@ -255,14 +259,21 @@ Rise of the Triad:
 -All-
 
 * Fixed the landing attack taking effect when dead.
++ With improved weapon balance, the pistol now does 15 damage in PVE (increased from 13).
 ! The double pistols have been moved from a slot 2 weapon to a slot 1 weapon. Subsequent pickups also now give 10 bazooka missiles instead of 10 heat seeker missiles.
 ! The MP40 has been moved from a slot 4 weapon to a slot 2 weapon. Subsequent pickups also now give 6 heat seeker missiles instead of 6 bazooka missiles.
-+ With improved weapon balance, the MP40 now does 11 damage per bullet (increased from 10).
++ With improved weapon balance, the MP40 now does 12 damage in PVE (increased from 10).
++ The seeking behavior of heat seeker missiles has been slightly improved.
+- The heat seeker now deals 48 splash damage (decreased from 50).
++ The heat seeker and bazooka now deal their splash damage across 64 map units (increased from 48).
 ! The bazooka has been moved from a slot 1 weapon to a slot 4 weapon.
 - Bazooka ammo capacity is now 50 (without backpack)/100 (with backpack) (decreased from 100 (without backpack)/200 (with backpack)).
++ The bazooka now deals 56 splash damage (increased from 55).
 - The M60 now deals 10 damage (decreased from 15).
 - The Doomstick's secondary attack now deals 10 damage per pellet in PVE (decreased from 15).
 - Drunk missile ammo capacity is now 50 (without backpack)/100 (with backpack) (decreased from 60 (without backpack)/120 (with backpack)).
++ The drunk missile launcher now deals 32 splash damage (increased from 30).
++ The drunk missile launcher now deals its splash damage across 48 map units (increased from 40).
 - The flamewall's flames now deal 0.5x damage to bosses.
 - The Excalibat and dark staff no longer regenerate their ammo.
 - Split missile ammo capacity is now 25 (without backpack)/50 (with backpack) (decreased from 100 (without backpack)/200 (with backpack)).
@@ -303,6 +314,7 @@ Strifeguy (Strife):
 + The mini missile launcher now deals its splash damage across 96 map units (increased from 64).
 + The assault gun now deals 5-15 damage in multiples of 5 per bullet (increased from 4-12 in multiples of 4).
 - High explosive grenades no longer have +FORCERADIUSDMG, because the projectile didn't have that flag in Strife while some enemies had +NORADIUSDMG, meaning it's an intended weakness.
++ With improved weapon balance, the mauler (scatter mode) now deals 15-45 damage in multiples of 15 per puff (increased from 10-30 in multiples of 10).
 ! The Dark Side version now uses the additional gibs and blood splatters when gibbed by Strife weapons.
 
 Eradicator:
@@ -437,7 +449,7 @@ Kyle Katarn (Star Wars: Dark Forces):
 + The Czerka Adventurer now deals 120 damage (increased from 75-80 in PVP and 110-120 in PVE).
 - The Assault Cannon primary normal firing animation tics have been increased (from 7 to 8 passing refire, 9 to 10 failing refire).
 + The Assault Cannon's primary projectile now deals 135 damage (increased from 90-110, average 100).
-+ The Assault Cannon's secondary projectile now deals 360 direct damage (increased from 192-256 in increments of 64, average 240)
++ The Assault Cannon's secondary projectile now deals 300 direct damage (increased from 192-256 in increments of 64, average 240)
 + The Assault Cannon's secondary projectile now deals 600 splash damage (increased from 500), and up to 60 of that damage is dealt back to Katarn. Not harmless in melee, but usable now.
 ! The Wookie Bowcaster's main projectile now deals 260 direct damage (changed from 240-275).
 ! The Wookie Bowcaster's main projectile now deals 96 splash damage (changed from 84-108).

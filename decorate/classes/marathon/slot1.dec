@@ -181,11 +181,8 @@ actor SamsaraMarathonSMGAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireCustomMissile("MarathonSMGBulletOverwater",random(-10,10)/10.0,false,0,0,0,random(-10,10)/10.0)
         goto PickupFinish
-	
-	PickupAttackCoopImproved:
-        TNT1 A 0 A_FireCustomMissile("MarathonSMGBulletOverwaterImproved",random(-10,10)/10.0,false,0,0,0,random(-10,10)/10.0)
-        goto PickupFinish
 
+      PickupAttackCoopImproved:
       PickupAttackCoopUnderwater:
         TNT1 A 0 A_FireCustomMissile("MarathonSMGBulletCoop",random(-10,10)/10.0,false,0,0,0,random(-10,10)/10.0)
         goto PickupFinish
@@ -265,7 +262,7 @@ actor MarathonSMGBulletCoop : MarathonSMGBullet
 }
 
 actor MarathonSMGBulletOverwater : MarathonSMGBulletCoop { Damage (random(8,12)) }
-actor MarathonSMGBulletOverwaterImproved : MarathonSMGBulletOverwater { Damage (random(9,15)) }
+
 actor FlechetteCasingSpawner : SamsaraMarathonCasingSpawner
 {
     States

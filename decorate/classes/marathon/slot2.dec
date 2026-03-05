@@ -506,7 +506,8 @@ actor SamsaraMarathonShotgunLeftAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 AAAAA 0 A_FireCustomMissile("MarathonShotgunBulletCoop",random(-4,4),false,0,0,0,random(-4,4))
         goto PickupFinish
-	  PickupAttackCoopImproved:
+
+      PickupAttackCoopImproved:
         TNT1 AAAAA 0 A_FireCustomMissile("MarathonShotgunBulletCoopImproved",random(-4,4),false,0,0,0,random(-4,4))
         goto PickupFinish
 
@@ -558,9 +559,11 @@ actor SamsaraMarathonShotgunRightAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 AAAAA 0 A_FireCustomMissile("MarathonShotgunBulletCoop",random(-4,4),false,0,0,0,random(-4,4))
         goto PickupFinish
-	  PickupAttackCoopImproved:
+
+      PickupAttackCoopImproved:
         TNT1 AAAAA 0 A_FireCustomMissile("MarathonShotgunBulletCoopImproved",random(-4,4),false,0,0,0,random(-4,4))
         goto PickupFinish
+
       // Finishing stuff
       PickupFinish:
         TNT1 A 0 A_JumpIfInventory("SamsaraMarathonShotgunAttackAmount",0,"PickupStop")
@@ -599,11 +602,8 @@ actor MarathonShotgunBulletCoop: MarathonShotgunBullet
     Species "Player"
     +THRUSPECIES
 }
-actor MarathonShotgunBulletCoopImproved : MarathonShotgunBulletCoop
-{
-    Damage (random(9,15))
 
-}
+actor MarathonShotgunBulletCoopImproved : MarathonShotgunBulletCoop { Damage (random(9,15)) }
 
 Actor MarathonShotgunPickedUpX : MapCoordinate {}
 Actor MarathonShotgunPickedUpY : MapCoordinate {}
