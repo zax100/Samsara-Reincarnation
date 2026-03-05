@@ -295,6 +295,10 @@ Blake Stone (Blake Stone):
 
 Caleb (Blood):
 
++ With improved weapon balance, the revolver now deals 14 damage in PVE (increased from 12).
++ With improved weapon balance, the sawed-off now deals 6 damage per pellet in PVE (increased from 5).
++ With improved weapon balance, the tommy gun now deals 10 damage in PVE (increased from 9).
++ With improved weapon balance, the grease gun now deals 14 damage in PVE (increased from 13).
 - The life leech primary projectiles now do 6-12 direct damage in PVE if "Blood: Life Leech Drain" is enabled (decreased from 7-14).
 - The life leech primary projectiles now do 10 splash damage in PVE if "Blood: Life Leech Drain" is enabled (decreased from 15).
 + The life leech secondary projectiles now do 10-20 damage in PVP (increased from 10-19), and 20-40 damage in PVE if "Blood: Life Leech Drain" is disabled (increased from 20-39).
@@ -314,7 +318,7 @@ Strifeguy (Strife):
 + The mini missile launcher now deals its splash damage across 96 map units (increased from 64).
 + The assault gun now deals 5-15 damage in multiples of 5 per bullet (increased from 4-12 in multiples of 4).
 - High explosive grenades no longer have +FORCERADIUSDMG, because the projectile didn't have that flag in Strife while some enemies had +NORADIUSDMG, meaning it's an intended weakness.
-+ With improved weapon balance, the mauler (scatter mode) now deals 15-45 damage in multiples of 15 per puff (increased from 10-30 in multiples of 10).
++ With improved weapon balance, the mauler (scatter mode) now deals 15-45 damage in multiples of 15 per puff in PVE (increased from 10-30 in multiples of 10).
 ! The Dark Side version now uses the additional gibs and blood splatters when gibbed by Strife weapons.
 
 Eradicator:
@@ -376,9 +380,10 @@ Eradicator:
 
 - All of the Eradicator classes no longer have higher ForwardMove and SideMove properties, making them slower.
 ! The fallback weapons now have Compendium sprites.
-+ The sonic shock now does 9-15 damage per individual bullet (increased from 9-12).
-+ The sonic shock (enhanced) now fires 9 bullets (increased from 8).
-+ Death darts now move at speed 50 (increased from 40), and their damage is now 8 (increased from 7).
++ The sonic shock now does 9-15 damage (vanilla) or 12-16 damage (improved; PVE only) per individual bullet (increased from 9-12).
++ The sonic shock (enhanced) now fires 9 bullets (vanilla) or 10 bullets (improved; PVE only) (increased from 8).
++ The death dart's projectiles now move at speed 50 (increased from 40), and their damage is now 8 (increased from 7).
++ With improved weapon balance, the death dart (enhanced)'s projectiles now deal 10 damage in PVE (increased from 7).
 + The missile launcher primary projectiles now deal 80 direct damage (increased from 75), as well as 128 splash damage across 128 map units (increased from 120 splash damage across 120 map units).
 + The missile launcher secondary projectiles now deal 144 splash damage across 128 map units (increased from 140 splash damage across 120 map units).
 - The death sphere now has a ReactionTime of 28 (decreased from 36), meaning it lasts roughly 12 seconds (decreased from roughly 15.4).
