@@ -330,7 +330,8 @@ actor SamsaraDukeShotgunAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireBullets(3.5,2.5,7,10,"DukeBulletPuffCoop",FBF_NORANDOM|FBF_NOFLASH)
         stop
-	  PickupAttackCoopImproved:
+
+      PickupAttackCoopImproved:
         TNT1 A 0 A_FireBullets(3.5,2.5,7,12,"DukeBulletPuffCoop",FBF_NORANDOM|FBF_NOFLASH)
         stop
     }
@@ -405,7 +406,12 @@ actor SamsaraDukeLABShotgunAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireBullets(3.5,2.5,7,10,"DukeBulletPuffBeachCoop",FBF_NORANDOM|FBF_NOFLASH)
+        stop
+
+      PickupAttackCoopImproved:
+        TNT1 A 0 A_FireBullets(3.5,2.5,7,12,"DukeBulletPuffBeachCoop",FBF_NORANDOM|FBF_NOFLASH)
         stop
     }
 }

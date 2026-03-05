@@ -17,6 +17,11 @@ Doom:
 -Doomguy (Original)-
 
 ! Changed the Perkristan altsounds for hitting a wall with the brass knuckles as well as punching an enemy while berserked.
+- With improved weapon balance, the pistol and rifle now deal 8-16 damage in increments of 4 (decreased from 12-16 in increments of 2).
+! With improved weapon balance, the shotgun now deals 10-15 damage in increments of 5 per pellet (changed from 7-21 in multiples of 7).
++ With improved weapon balance, the first ten pellets from the super shotgun now deal 10-15 damage in increments of 5 (increased from 5-15 in multiples of 5).
+! With improved weapon balance, the remaining ten pellets from the super shotgun now deal 10-15 damage in increments of 5 (changed from 7-21 in multiples of 7).
+- With improved weapon balance, the chaingun, machine gun, and minigun now deal 10-15 damage in increments of 5 (decreased from 16-20 in increments of 2).
 
 -Doomguy (Doom 64)-
 
@@ -84,7 +89,7 @@ Fred Chexter (Chex Quest):
 ! Chex bits spawned from being gibbed now fade after one minute, though they can remain indefinitely with "Gib Persistence" enabled.
 * Fixed fallback and non-+THRUGHOST zorch puffs not having lights in PVE.
 * Fixed +THRUGHOST zorch puffs not having lights at all.
-+ With improved weapon balance, the Super Large Zorcher's projectiles do 20-50 in PVE (increased from 15-35).
++ With improved weapon balance, the Super Large Zorcher's projectiles now do 20-50 in PVE (increased from 15-35).
 * Fixed the Super Large Zorcher projectiles not having lights in PVP.
 * Fixed the Super Large Zorcher projectiles losing their lights upon first collision with map geometry in PVE.
 * Fixed the LAZ Device projectile and tracers not having lights when "Chex Quest: LAZ Device Mode" is set to "Classic".
@@ -96,8 +101,11 @@ Fred Chexter (Chex Quest):
 
 Corvus (Heretic):
 
-+ With improved weapon balance, the dragon claw now deals 4-48 damage in multiples of 4 in PVE (increased from 4-32 in multiples of 4).
-! The hellstaff now deals 4-52 damage in multiples of 4 (changed from 5-40 in multiples of 5).
++ With improved weapon balance, the firemace (unpowered)'s larger projectile now deals 6-48 damage in multiples of 6 in PVE (increased from 4-32 in multiples of 4).
+- With vanilla weapon balance, the dragon claw (unpowered) now deals 4-32 damage in multiples of 4 in PVE (decreased from 4-11 multiplied between 1 and 3).
++ With improved weapon balance, the dragon claw (unpowered) now deals 4-48 damage in multiples of 4 in PVE (increased from 4-11 multiplied between 1 and 3).
+! The phoenix rod (unpowered) now deals 10-200 direct damage in multiples of 10 in PVE (changed from 20-160 in multiples of 20).
+! The hellstaff (unpowered) now deals 4-52 damage in multiples of 4 (changed from 5-40 in multiples of 5).
 + The tempest wand from Heretic + Hexen's Faith Renewed episode has been added as the slot 6S weapon! However, due to the lack of documentation for how the weapon internally worked in Heretic + Hexen, the weapon behavior is different, working more like a conventional railgun in Samsara.
 + The Staff of D'Sparil (unpowered)'s lightning bolt now does 240 splash damage (increased from 200) with a radius of 192 map units (increased from 128).
 + The Staff of D'Sparil (unpowered)'s lightning bolt now forces splash damage against enemies to make it more useful against bosses.
@@ -149,6 +157,9 @@ Duke Nukem 3D:
 
 - Pipebombs/pineapples now have a splash radius of 210 map units (decreased from 250).
 + With improved weapon balance, the shotgun/Super Soak'em's pellets now deal 12 damage each in PVE (increased from 10 damage each).
++ The explosive shotgun/Uber Soak'em's pellets now deal 9 direct damage (PVP), 10 direct damage (PVE; vanilla), or 8 direct damage (PVE; improved) (increased from 6).
+- With vanilla weapon balance, the explosive shotgun/Uber Soak'em's pellets now deal 28 splash damage in PVE (decreased from 35).
++ The explosive shotgun/Uber Soak'em's pellets now deal their splash damage across 96 map units in PVP (increased from 64).
 + Added hybrid pickup sprites for the Uber Soak'em.
 ! The M16 sprites have been extended, and a new pickup sprite has been added.
 + The M16 now gives 40 rounds of Ammo 1 on pickup (increased from 30).

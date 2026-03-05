@@ -349,10 +349,9 @@ actor SLZorcherBoltCoop : SLZorcherBolt
         goto CrashFinish
     }
 }
-actor SLZorcherBoltCoopImproved : SLZorcherBoltCoop
-{
-    Damage (random(20,50))
-}
+
+actor SLZorcherBoltCoopImproved : SLZorcherBoltCoop { Damage (random(20,50)) }
+
 actor SLZorcherBoltCoop2 : SLZorcherBoltCoop
 {
     Speed 125
