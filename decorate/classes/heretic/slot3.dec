@@ -76,7 +76,6 @@ actor SamsaraHereticCrossbowAttackHandler : Trigger
       PickupAttack:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
       PickupAttackDM:
         TNT1 A 0 A_FireCustomMissile("CrossbowFX1B",0,false)
         TNT1 A 0 A_FireCustomMissile("CrossbowFX3B",-4.5,false)
@@ -84,6 +83,7 @@ actor SamsaraHereticCrossbowAttackHandler : Trigger
         stop
 
       PickupAttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackCoopImproved")
         TNT1 A 0 A_FireCustomMissile("CrossbowFX12",0,false)
         TNT1 A 0 A_FireCustomMissile("CrossbowFX32",-4.5,false)
         TNT1 A 0 A_FireCustomMissile("CrossbowFX32",4.5,false)
