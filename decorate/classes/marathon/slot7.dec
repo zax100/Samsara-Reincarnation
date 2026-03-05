@@ -1064,7 +1064,7 @@ actor WMCRailLevel3DM : WMCRailLevel3
         TNT1 A 0 A_Explode(random(490,560),196,0)
 		TNT1 A 0 A_Explode(random(70,140),196)
         goto DeathContinue
-		TNT1 A 0 A_Explode(random(90,560),196,0,false,196)
+		TNT1 A 0 A_Explode(random(320,490),196,0,false,196)
         TNT1 A 0 A_Explode(random(70,140),196,XF_HURTSOURCE,false,196)
         goto DeathContinue
 
@@ -1113,10 +1113,10 @@ actor WMCRailLevel3Coop : WMCRailLevel3
     {
       Death:
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 47), 3)
-        TNT1 A 0 A_Explode(random(490, 560),196,0)
+        TNT1 A 0 A_Explode(random(490,560),196,0)
 		TNT1 A 0 A_Explode(random(70,140),196)
         goto DeathContinue
-		TNT1 A 0 A_Explode(random(320,490),196,0,false,196)
+		TNT1 A 0 A_Explode(random(490,560),196,0,false,196)
         TNT1 A 0 A_Explode(random(70,140),196,XF_HURTSOURCE,false,196)
         goto DeathContinue
 

@@ -26,6 +26,11 @@ Doom:
 -Doomguy (Doom 64)-
 
 * Fixed the shrinking animation not showing properly.
+- With improved weapon balance, the pistol now deals 8-16 damage in increments of 4 (decreased from 14-22 in increments of 2).
+! With improved weapon balance, the shotgun now deals 8-16 damage in increments of 4 per pellet (changed from 7-21 in multiples of 7).
++ With improved weapon balance, the first ten pellets from the super shotgun now deal 8-16 damage in increments of 4 (increased from 5-15 in multiples of 5).
+! With improved weapon balance, the remaining ten pellets from the super shotgun now deal 8-16 damage in increments of 4 (changed from 7-21 in multiples of 7).
+- With improved weapon balance, the chaingun and minigun now deal 8-16 damage in increments of 4 (decreased from 12-18 in increments of 2).
 
 -Doomguy (Stronghold)-
 
@@ -40,17 +45,20 @@ Doom:
 - The shotgun (powered) firing animation tics have been increased (from 16 to 18 passing refire, 17 to 19 failing refire).
 + The shotgun (powered) now has a horizontal spread of 1.5 (decreased from 3) and a vertical spread of 0.5 (decreased from 2.5).
 - The shotgun (powered) now deals 5-15 damage in multiples of 5 per pellet (decreased from 12-36 in multiples of 12).
++ With improved weapon balance, the first ten pellets from the super shotgun (unpowered) now deal 10-15 damage in increments of 5 (increased from 5-15 in multiples of 5).
+! With improved weapon balance, the remaining ten pellets from the super shotgun (unpowered) now deal 10-15 damage in increments of 5 (changed from 7-21 in multiples of 7).
 + The super shotgun (powered) now has a horizontal spread of 7.3 (decreased from 14.6) and a vertical spread of 4.7 (decreased from 9.4).
-- The super shotgun (powered) now deals 6-18 damage in multiples of 6 per pellet (decreased from 12-36 in multiples of 12).
+- The super shotgun (powered) now deals 9-27 damage in multiples of 9 per pellet (decreased from 12-36 in multiples of 12).
 - The auto shotgun (powered) now fires 7 pellets (decreased from 8).
 - The auto shotgun (powered) now deals 3-9 damage in multiples of 3 per pellet (decreased from 5-15 in multiples of 5).
 + The chaingun (powered) now fires in bursts of 2 tics, totaling 8 tics (decreased from 3 tics, totaling 12 tics).
 - The chaingun (powered) now has a horizontal spread of 3 (increased from 0.75) and a vertical spread of 2.1 (increased from 0.75).
 - The chaingun (powered) now deals 10-30 damage in multiples of 10 (decreased from 20-60 in multiples of 20).
 - The flamethrower (powered) no longer has +RIPPER.
+- With improved weapon balance, the minigun (unpowered) now deals 10-15 damage in increments of 5 (decreased from 16-20 in increments of 2).
 - The minigun (powered) now has a horizontal spread of 14.6 (increased from 4) and a vertical spread of 9.4 (increased from 2.3).
 + The minigun (powered) now fires 3 pellets (increased from 2).
-- The minigun (powered) now deals 5-15 damage in multiples of 5 (decreased from 10-30 in multiples of 10).
+- The minigun (powered) now deals 5-15 damage in multiples of 5 per pellet (decreased from 10-30 in multiples of 10).
 - The rocket launcher (powered) now deals 70 direct damage (decreased from 96).
 - The rocket launcher (powered) now deals its splash damage within a radius of 128 map units (decreased from 192).
 - The grenade launcher (powered)'s tiny grenades now deal 4-32 damage in multiples of 4 (decreased from 5-40 in multiples of 5).
@@ -89,11 +97,14 @@ Fred Chexter (Chex Quest):
 ! Chex bits spawned from being gibbed now fade after one minute, though they can remain indefinitely with "Gib Persistence" enabled.
 * Fixed fallback and non-+THRUGHOST zorch puffs not having lights in PVE.
 * Fixed +THRUGHOST zorch puffs not having lights at all.
+- With improved weapon balance, the Mini-Zorcher(s) and Micro-Zorcher(s) now deal 8-16 damage in increments of 4 (decreased from 12-16 in increments of 2).
+! With improved weapon balance, the Large Zorcher now deals 10-15 damage in increments of 5 per puff (changed from 7-21 in multiples of 7).
 + With improved weapon balance, the Super Large Zorcher's projectiles now do 20-50 in PVE (increased from 15-35).
 * Fixed the Super Large Zorcher projectiles not having lights in PVP.
 * Fixed the Super Large Zorcher projectiles losing their lights upon first collision with map geometry in PVE.
-* Fixed the LAZ Device projectile and tracers not having lights when "Chex Quest: LAZ Device Mode" is set to "Classic".
+- With improved weapon balance, the Rapid Zorcher and Ultra Rapid Zorcher now deal 10-15 damage in increments of 5 (decreased from 16-20 in increments of 2).
 + When "Chex Quest: LAZ Device Mode" is set to "Modern", each of the lingering explosions from the projectile after the main blast have had their splash damage doubled and splash radius increased.
+* Fixed the LAZ Device projectile and tracers not having lights when "Chex Quest: LAZ Device Mode" is set to "Classic".
 + When "Chex Quest: LAZ Device Mode" is set to "Classic", and improved weapon balance is active, the LAZ Device projectile now deals 800 direct damage (increased from 100-800 in multiples of 100).
 ! The Liquid Zorcher puff now has lights.
 ! Aligned offsets of hybrid unique sprites with other hybrid sprites.
@@ -122,10 +133,13 @@ Wolfenstein 3D:
 + With improved weapon balance, the Luger and machine gun now fire three extra bullets in PVE that deal 1-3 damage while having a maximum range of 320 map units, 192 map units, and 64 map units, respectively.
 + Added hybrid pickup sprites for the Lost Episodes Mauser rifle and Spear of Destiny.
 + The flamethrower now deals 10-40 damage in multiples of 10 (increased from 8-32 in multiples of 8).
++ The Spear of Destiny's main projectile now deals 160 splash damage across 224 map units in PVP (increased from 120 splash damage over 198 map units), and 128 splash damage across 256 map units in PVE (increased from 120 splash damage over 240 map units).
++ The Spear of Destiny's smaller projectiles now deal their splash damage across 96 map units in PVE (increased from 64).
 
 -B.J. Blazkowicz (Castle Totenkopf SDL)-
 
 - The Panzerschreck rocket now does 175 splash damage in PVP (decreased from 200), and 250 splash damage in PVE (decreased from 400).
++ The chaingun's damage is now dealt in multiples of 4 in PVE (changed from a completely random result).
 
 -All-
 
@@ -139,6 +153,7 @@ Hexen I:
 + With improved weapon balance, the bishop's shortsword's strong melee attack now deals 13-39 damage in multiples of 13 per puff in PVE (increased from 10-30 in multiples of 10).
 + With improved weapon balance, the bishop's shortsword's strong projectiles now deal 10 damage in PVE (increased from 8).
 + In PVE, the serpent staff's projectiles now deal 6-30 damage in multiples of 6 (vanilla) or 5-35 damage in multiples of 5 (improved) (increased from 5-25).
+- The Wraithverge now takes 30 rounds of both Ammo 1 and Ammo 4 to fire (increased from 20).
 
 -Parias (Classic)-
 
@@ -178,6 +193,7 @@ Duke Nukem 3D:
 - The RPG/coconut launcher's explosion's splash damage on a direct hit is now 70 (decreased from 140), with the total being 210 (decreased from 280).
 - The RPG/coconut launcher's explosion now has a splash radius of 140 (decreased from 178).
 + The freezethower/ice crusher's projectiles now do 24 damage (increased from 22).
++ The devastators/conchanators now deal 48 splash damage across 96 map units (increased from 38 splash damage over 90 map units).
 
 -Duke Nukem (Duke Nukem 64)-
 
@@ -196,7 +212,19 @@ Security Officer (Marathon):
 + When fired underwater, the fusion pistol now deals only the amount of splash damage the original attacks did to Security Officer as self-damage in the Marathon games.
 + With improved weapon balance, the MA-75B Assault Rifle primary bullets now deal 10-16 damage in PVE (increased from 9-15).
 + With improved weapon balance, the MA-75B Assault Rifle secondary grenades now deal 90-110 splash damage in PVE (increased from 80-100).
++ The SPNKR-25 Auto Cannon now deals 140-168 damage in increments of 7 (increased from 130-150).
 + The main beams from the ONI-71 Wave Motion Cannon primary fire (all levels) now deal 210-280 damage (increased from 150-200).
++ In PVP, the explosion from the ONI-71 Wave Motion Cannon primary beam (level 2) now deals 175-245 splash damage if "Marathon: Full Radius Explosions" is disabled (increased from 125-200), and 105-210 splash damage if "Marathon: Full Radius Explosions" is enabled (increased from 100-150).
++ The explosion from the ONI-71 Wave Motion Cannon primary beam (level 2) now deals 525-630 splash damage in PVE (increased from 450-600).
+- The explosion from the ONI-71 Wave Motion Cannon primary beam (level 2) now deals 35-70 of its splash damage back to Security Officer (increased from 25-50).
++ The main explosion from the ONI-71 Wave Motion Cannon primary beam (level 3) now deals 560-700 splash damage in PVP (if "Marathon: Full Radius Explosions" is disabled) and PVE (regardless of that setting) (increased from 500-600).
+! The main explosion from the ONI-71 Wave Motion Cannon primary beam (level 3) now deals 390-630 splash damage in PVP if "Marathon: Full Radius Explosions" is enabled (changed from 500-600).
+- The main explosion from the ONI-71 Wave Motion Cannon primary beam (level 3) now deals 70-140 of its splash damage back to Security Officer (increased from 50-100).
++ The smaller beams from the ONI-71 Wave Motion Cannon primary beam (level 3) now deal 14-21 direct damage in PVP (increased from 5-10), and 105-175 direct damage in PVE (increased from 100-150).
++ The ONI-71 Wave Motion Cannon secondary mortar now deals 140-280 splash damage (increased from 100-200).
+- The ONI-71 Wave Motion Cannon secondary mortar now deals 70-140 of its splash damage back to Security Officer (increased from 50-100).
++ The Marathon 2/Infinity alien weapon's projectiles now deal 30-42 damage in PVE (increased from 30-38).
++ The Marathon 1 alien weapon's bullets now deal 10-18 damage (increased from 10-15).
 ! The Talon Ceramic Combat Blade is now selected through weapon slot 0 instead of weapon slot 1.
 ! The Tech.50 Pacifier is now selected through weapon slot 9 instead of weapon slot 1.
 ! Updated offset and weapon outlines for Security Officer's hybrid pickup sprites.
@@ -216,7 +244,7 @@ Ranger (Quake I):
 ! The rocket powered impaler now has a sprite for the Compendium and the alternate HUD.
 * Fixed the thunderbolt hybrid pickup not being bright.
 + The thunderbolt (lightning mode) now deals 45 damage in PVP (increased from 30).
-- The thunderbolt (lightning mode) now deals 45 damage in PVE (decreased from 50).
+- The thunderbolt (lightning mode) now deals 40 damage in PVE (decreased from 50).
 - The thunderbolt (plasma mode)'s lightning bolts now deal 45 damage (decreased from 50).
 - Ranger now gets 2 rounds of Ammo 3 from medium Ammo 2 pickups (decreased from 3) and 3 rounds of Ammo 3 from large Ammo 2 pickups (decreased from 4).
 - Ranger now receives the normal amount of Ammo 3 rounds from Ammo 3 pickups instead of getting more rounds.
