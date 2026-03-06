@@ -77,7 +77,7 @@ actor "Gatling Fusion Devastator" : SamsaraBStoneWeapon
         goto Ready
 
       FireAOG:
-        WCHN B 8
+        WCHN BBB 2
         TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
         TNT1 A 0 A_JumpIfInventory("Clip",1,1)
         goto HoldAOG
@@ -86,7 +86,8 @@ actor "Gatling Fusion Devastator" : SamsaraBStoneWeapon
 
       HoldAOG:
         TNT1 A 0 A_JumpIfInventory("SamsaraUsingSmoothAnims",1,"HoldAOGSmooth")
-        WCHN C 3 Bright A_GiveInventory("SamsaraBStoneGatlingFusionDevastatorAttackHandler")
+        WCHN C 2 Bright A_GiveInventory("SamsaraBStoneGatlingFusionDevastatorAttackHandler")
+        WCHN C 1 Bright
         TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
         TNT1 A 0 A_JumpIfInventory("Clip",1,1)
         goto Hold2AOG
@@ -95,8 +96,10 @@ actor "Gatling Fusion Devastator" : SamsaraBStoneWeapon
 
       Hold2AOG:
         TNT1 A 0 A_JumpIfInventory("SamsaraUsingSmoothAnims",1,"Hold2AOGSmooth")
-        WCHN D 3 Bright A_GiveInventory("SamsaraBStoneGatlingFusionDevastatorAttackHandler")
-        WCHN E 12 A_ReFire
+        WCHN D 2 Bright A_GiveInventory("SamsaraBStoneGatlingFusionDevastatorAttackHandler")
+        WCHN D 1 Bright
+        WCHN E 6 A_ReFire
+        WCHN E 6
         goto Ready
 
       HoldAOGSmooth:
@@ -111,7 +114,8 @@ actor "Gatling Fusion Devastator" : SamsaraBStoneWeapon
       Hold2AOGSmooth:
         WCHN D 2 Bright Bright A_GiveInventory("SamsaraBStoneGatlingFusionDevastatorAttackHandler")
         9382 G 1 Bright
-        WCHN E 12 A_ReFire
+        WCHN E 6 A_ReFire
+        WCHN E 6
         goto Ready
     }
 }
