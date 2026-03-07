@@ -136,7 +136,7 @@ object DoomRocket2
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomRocketVanilla
+object DoomRocketImproved
 {
 	frame DMSLA { light DOOMROCKET    }
 
@@ -145,7 +145,7 @@ object DoomRocketVanilla
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomRocketVanilla2
+object DoomRocketImproved2
 {
 	frame DMSLA { light DOOMROCKET    }
 
@@ -172,7 +172,7 @@ object DoomRocket2SoundPSX
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomRocketVanillaSoundPSX
+object DoomRocketImprovedSoundPSX
 {
 	frame DMSLA { light DOOMROCKET    }
 
@@ -181,7 +181,7 @@ object DoomRocketVanillaSoundPSX
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomRocketVanilla2SoundPSX
+object DoomRocketImproved2SoundPSX
 {
 	frame DMSLA { light DOOMROCKET    }
 
@@ -208,7 +208,7 @@ object DoomRocket2SoundPerkristan
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomRocketVanillaSoundPerkristan
+object DoomRocketImprovedSoundPerkristan
 {
 	frame DMSLA { light DOOMROCKET    }
 
@@ -217,7 +217,7 @@ object DoomRocketVanillaSoundPerkristan
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomRocketVanilla2SoundPerkristan
+object DoomRocketImproved2SoundPerkristan
 {
 	frame DMSLA { light DOOMROCKET    }
 
@@ -251,7 +251,7 @@ object DoomGrenadeCoop
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomGrenadeVanilla
+object DoomGrenadeImproved
 {
 	frame DGRN { light DOOMGRENADE    }
 
@@ -260,7 +260,7 @@ object DoomGrenadeVanilla
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomGrenadeVanillaCoop
+object DoomGrenadeImprovedCoop
 {
 	frame DGRN { light DOOMGRENADE    }
 
@@ -287,7 +287,7 @@ object DoomGrenadeCoopSoundPSX
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomGrenadeVanillaSoundPSX
+object DoomGrenadeImprovedSoundPSX
 {
 	frame DGRN { light DOOMGRENADE    }
 
@@ -296,7 +296,7 @@ object DoomGrenadeVanillaSoundPSX
 	frame DMSLD { light DOOMROCKET_X3 }
 }
 
-object DoomGrenadeVanillaCoopSoundPSX
+object DoomGrenadeImprovedCoopSoundPSX
 {
 	frame DGRN { light DOOMGRENADE    }
 
@@ -562,7 +562,7 @@ object DoomBFGBall2
 	frame DBFEF { light DOOMBFGBALL_X5 }
 }
 
-object DoomBFGBallVanilla
+object DoomBFGBallImproved
 {
 	frame DBFSA { light DOOMBFGBALL }
 	frame DBFSB { light DOOMBFGBALL }
@@ -575,7 +575,7 @@ object DoomBFGBallVanilla
 	frame DBFEF { light DOOMBFGBALL_X5 }
 }
 
-object DoomBFGBallVanilla2
+object DoomBFGBallImproved2
 {
 	frame DBFSA { light DOOMBFGBALL }
 	frame DBFSB { light DOOMBFGBALL }
@@ -614,7 +614,7 @@ object DoomBFGBall2SoundPSX
 	frame DBFEF { light DOOMBFGBALL_X5 }
 }
 
-object DoomBFGBallVanillaSoundPSX
+object DoomBFGBallImprovedSoundPSX
 {
 	frame DBFSA { light DOOMBFGBALL }
 	frame DBFSB { light DOOMBFGBALL }
@@ -627,7 +627,7 @@ object DoomBFGBallVanillaSoundPSX
 	frame DBFEF { light DOOMBFGBALL_X5 }
 }
 
-object DoomBFGBallVanilla2SoundPSX
+object DoomBFGBallImproved2SoundPSX
 {
 	frame DBFSA { light DOOMBFGBALL }
 	frame DBFSB { light DOOMBFGBALL }
@@ -666,7 +666,7 @@ object DoomBFGBall2SoundPerkristan
 	frame DBFEF { light DOOMBFGBALL_X5 }
 }
 
-object DoomBFGBallVanillaSoundPerkristan
+object DoomBFGBallImprovedSoundPerkristan
 {
 	frame DBFSA { light DOOMBFGBALL }
 	frame DBFSB { light DOOMBFGBALL }
@@ -679,7 +679,7 @@ object DoomBFGBallVanillaSoundPerkristan
 	frame DBFEF { light DOOMBFGBALL_X5 }
 }
 
-object DoomBFGBallVanilla2SoundPerkristan
+object DoomBFGBallImproved2SoundPerkristan
 {
 	frame DBFSA { light DOOMBFGBALL }
 	frame DBFSB { light DOOMBFGBALL }
@@ -799,7 +799,7 @@ object DoomBFGPlasmaBall2
     frame DBXBL { light DOOMPLASMA2_X3 }
 }
 
-object DoomBFGPlasmaBall1Vanilla
+object DoomBFGPlasmaBall1Improved
 {
     frame DBXBA { light DOOMPLASMABALL1 }
     frame DBXBB { light DOOMPLASMABALL1 }
@@ -811,7 +811,7 @@ object DoomBFGPlasmaBall1Vanilla
     frame DBXBG { light DOOMPLASMA1_X4 }
 }
 
-object DoomBFGPlasmaBall2Vanilla
+object DoomBFGPlasmaBall2Improved
 {
     frame DBXBH { light DOOMPLASMABALL2 }
     frame DBXBI { light DOOMPLASMABALL2 }
@@ -843,7 +843,7 @@ object DoomBFGPlasmaBall2Coop
     frame DBXBL { light DOOMPLASMA2_X3 }
 }
 
-object DoomBFGPlasmaBall1VanillaCoop
+object DoomBFGPlasmaBall1ImprovedCoop
 {
     frame DBXBA { light DOOMPLASMABALL1 }
     frame DBXBB { light DOOMPLASMABALL1 }
@@ -855,7 +855,7 @@ object DoomBFGPlasmaBall1VanillaCoop
     frame DBXBG { light DOOMPLASMA1_X4 }
 }
 
-object DoomBFGPlasmaBall2VanillaCoop
+object DoomBFGPlasmaBall2ImprovedCoop
 {
     frame DBXBH { light DOOMPLASMABALL2 }
     frame DBXBI { light DOOMPLASMABALL2 }
@@ -887,7 +887,7 @@ object DoomBFGPlasmaBall2SoundPSX
     frame DBXBL { light DOOMPLASMA2_X3 }
 }
 
-object DoomBFGPlasmaBall1VanillaSoundPSX
+object DoomBFGPlasmaBall1ImprovedSoundPSX
 {
     frame DBXBA { light DOOMPLASMABALL1 }
     frame DBXBB { light DOOMPLASMABALL1 }
@@ -899,7 +899,7 @@ object DoomBFGPlasmaBall1VanillaSoundPSX
     frame DBXBG { light DOOMPLASMA1_X4 }
 }
 
-object DoomBFGPlasmaBall2VanillaSoundPSX
+object DoomBFGPlasmaBall2ImprovedSoundPSX
 {
     frame DBXBH { light DOOMPLASMABALL2 }
     frame DBXBI { light DOOMPLASMABALL2 }
@@ -931,7 +931,7 @@ object DoomBFGPlasmaBall2CoopSoundPSX
     frame DBXBL { light DOOMPLASMA2_X3 }
 }
 
-object DoomBFGPlasmaBall1VanillaCoopSoundPSX
+object DoomBFGPlasmaBall1ImprovedCoopSoundPSX
 {
     frame DBXBA { light DOOMPLASMABALL1 }
     frame DBXBB { light DOOMPLASMABALL1 }
@@ -943,7 +943,7 @@ object DoomBFGPlasmaBall1VanillaCoopSoundPSX
     frame DBXBG { light DOOMPLASMA1_X4 }
 }
 
-object DoomBFGPlasmaBall2VanillaCoopSoundPSX
+object DoomBFGPlasmaBall2ImprovedCoopSoundPSX
 {
     frame DBXBH { light DOOMPLASMABALL2 }
     frame DBXBI { light DOOMPLASMABALL2 }
@@ -975,7 +975,7 @@ object DoomBFGPlasmaBall2SoundPerkristan
     frame DBXBL { light DOOMPLASMA2_X3 }
 }
 
-object DoomBFGPlasmaBall1VanillaSoundPerkristan
+object DoomBFGPlasmaBall1ImprovedSoundPerkristan
 {
     frame DBXBA { light DOOMPLASMABALL1 }
     frame DBXBB { light DOOMPLASMABALL1 }
@@ -987,7 +987,7 @@ object DoomBFGPlasmaBall1VanillaSoundPerkristan
     frame DBXBG { light DOOMPLASMA1_X4 }
 }
 
-object DoomBFGPlasmaBall2VanillaSoundPerkristan
+object DoomBFGPlasmaBall2ImprovedSoundPerkristan
 {
     frame DBXBH { light DOOMPLASMABALL2 }
     frame DBXBI { light DOOMPLASMABALL2 }
@@ -1019,7 +1019,7 @@ object DoomBFGPlasmaBall2CoopSoundPerkristan
     frame DBXBL { light DOOMPLASMA2_X3 }
 }
 
-object DoomBFGPlasmaBall1VanillaCoopSoundPerkristan
+object DoomBFGPlasmaBall1ImprovedCoopSoundPerkristan
 {
     frame DBXBA { light DOOMPLASMABALL1 }
     frame DBXBB { light DOOMPLASMABALL1 }
@@ -1031,7 +1031,7 @@ object DoomBFGPlasmaBall1VanillaCoopSoundPerkristan
     frame DBXBG { light DOOMPLASMA1_X4 }
 }
 
-object DoomBFGPlasmaBall2VanillaCoopSoundPerkristan
+object DoomBFGPlasmaBall2ImprovedCoopSoundPerkristan
 {
     frame DBXBH { light DOOMPLASMABALL2 }
     frame DBXBI { light DOOMPLASMABALL2 }

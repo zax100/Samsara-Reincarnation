@@ -137,7 +137,7 @@ object Doom64Rocket2
 	frame 64MIF { light ROCKET64_X5 }
 }
 
-object Doom64RocketVanilla
+object Doom64RocketImproved
 {
 	frame 64MIA { light ROCKET64  }
 
@@ -148,7 +148,7 @@ object Doom64RocketVanilla
 	frame 64MIF { light ROCKET64_X5 }
 }
 
-object Doom64RocketVanilla2
+object Doom64RocketImproved2
 {
 	frame 64MIA { light ROCKET64  }
 
@@ -257,7 +257,7 @@ object Doom64BFGBall2
 	frame 64BBH { light DOOMBFGBALL_X5 }
 }
 
-object Doom64BFGBallVanilla
+object Doom64BFGBallImproved
 {
 	frame 64BBA { light DOOMBFGBALL }
 	frame 64BBB { light DOOMBFGBALL }
@@ -270,7 +270,7 @@ object Doom64BFGBallVanilla
 	frame 64BBH { light DOOMBFGBALL_X5 }
 }
 
-object Doom64BFGBallVanilla2
+object Doom64BFGBallImproved2
 {
 	frame 64BBA { light DOOMBFGBALL }
 	frame 64BBB { light DOOMBFGBALL }
