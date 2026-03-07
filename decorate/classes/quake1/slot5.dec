@@ -224,12 +224,12 @@ actor QuakeRocket
     States
     {
       Spawn:
-        QRKT A 0
-		QRKT A 0 A_Jump(32,2)
-		QRKT A 0 A_ChangeFlag(EXTREMEDEATH, true)
+        QRKT A 0 Light("QUAKE_1_ROCKET")
+		TNT1 A 0 A_Jump(32,2)
+		TNT1 A 0 A_ChangeFlag(EXTREMEDEATH, true)
       SpawnLoop:
-		QRKT AAAA 0 A_SpawnItemEx(QuakeSmokeTrail2,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
-        QRKT A 1 A_SpawnItemEx(QuakeSmokeTrail2,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+		TNT1 AAAA 0 A_SpawnItemEx(QuakeSmokeTrail2,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QRKT A 1 Light("QUAKE_1_ROCKET") A_SpawnItemEx(QuakeSmokeTrail2,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         loop
         
       Death:
@@ -728,6 +728,15 @@ actor QuakeClusterRocket: QuakeRocket
     Obituary "$SAMSARA_RANGER_OB_SLOT5_2"
     States
     {
+      Spawn:
+        QRKT A 0 Light("QUAKE_1_CLUSTER_ROCKET")
+		TNT1 A 0 A_Jump(32,2)
+		TNT1 A 0 A_ChangeFlag(EXTREMEDEATH, true)
+      SpawnLoop:
+		TNT1 AAAA 0 A_SpawnItemEx(QuakeSmokeTrail2,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QRKT A 1 Light("QUAKE_1_CLUSTER_ROCKET") A_SpawnItemEx(QuakeSmokeTrail2,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        loop
+
       Death:
         TNT1 A 0 A_Explode(32, 91, 0)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",1)

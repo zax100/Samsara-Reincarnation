@@ -239,9 +239,9 @@ actor LaserCannonBolt
     States
     {
       Spawn:
-        LSCL A 0 Bright
+        LSCL A 0 Bright Light("QUAKE_1_LASER_CANNON_BOLT")
         TNT1 A 0 A_Jump(16,"Spawn2")
-        LSCL A 1 Bright A_Explode(2,1,1)
+        LSCL A 1 Bright Light("QUAKE_1_LASER_CANNON_BOLT") A_Explode(2,1,1)
         loop
 
       Spawn2:
@@ -252,11 +252,11 @@ actor LaserCannonBolt
         TNT1 A 0 A_ChangeFlag("BOUNCEONWALLS",false)
         TNT1 A 0 A_ChangeFlag("USEBOUNCESTATE",false)
       Spawn3:
-        LSCL A 1 Bright A_Explode(2,1,1)
+        LSCL A 1 Bright Light("QUAKE_1_LASER_CANNON_BOLT") A_Explode(2,1,1)
         loop
 
       Death:
-        LSCL A 1 Bright
+        LSCL A 1 Bright Light("QUAKE_1_LASER_CANNON_BOLT")
       Crash:
         TNT1 A 1 A_SpawnItemEx("QuakeBulletPuff")
         stop
@@ -280,9 +280,9 @@ actor LaserCannonBoltSecond : LaserCannonBolt
     States
     {
       Spawn:
-        LSCL A 0 Bright
+        LSCL A 0 Bright Light("QUAKE_1_LASER_CANNON_BOLT")
         TNT1 A 0 A_Jump(16,"Spawn2")
-        LSCL A 1 Bright A_Explode(4,1,1)
+        LSCL A 1 Bright Light("QUAKE_1_LASER_CANNON_BOLT") A_Explode(4,1,1)
         loop
 
       Spawn2:
@@ -293,7 +293,7 @@ actor LaserCannonBoltSecond : LaserCannonBolt
         TNT1 A 0 A_ChangeFlag("BOUNCEONWALLS",false)
         TNT1 A 0 A_ChangeFlag("USEBOUNCESTATE",false)
       Spawn3:
-        LSCL A 1 Bright A_Explode(4,1,1)
+        LSCL A 1 Bright Light("QUAKE_1_LASER_CANNON_BOLT") A_Explode(4,1,1)
         loop
     }
 }

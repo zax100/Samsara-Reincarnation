@@ -391,22 +391,22 @@ actor LGBeam
         TNT1 A 0
         TNT1 A 0 A_Jump(256,"A","B","C","D","E","F")
     A:
-        _BLT A 3
+        _BLT A 3 Light("QUAKE_1_THUNDERBOLT_BEAM")
         stop
     B:
-        _BLT B 3
+        _BLT B 3 Light("QUAKE_1_THUNDERBOLT_BEAM")
         stop
     C:
-        _BLT C 3
+        _BLT C 3 Light("QUAKE_1_THUNDERBOLT_BEAM")
         stop
     D:
-        _BLT D 3
+        _BLT D 3 Light("QUAKE_1_THUNDERBOLT_BEAM")
         stop
     E:
-        _BLT E 3
+        _BLT E 3 Light("QUAKE_1_THUNDERBOLT_BEAM")
         stop
     F:
-        _BLT F 3
+        _BLT F 3 Light("QUAKE_1_THUNDERBOLT_BEAM")
         stop
     }
 }
@@ -432,22 +432,22 @@ actor LGPuff: BulletPuffSettingless
         TNT1 A 0
         TNT1 A 0 A_Jump(128,"A","B","C","D","E","F")
     A:
-        SPKW A 3
+        SPKW A 3 Light("QUAKE_1_THUNDERBOLT_PUFF")
         stop
     B:
-        SPKW B 3
+        SPKW B 3 Light("QUAKE_1_THUNDERBOLT_PUFF")
         Stop
     C:
-        SPKW C 3
+        SPKW C 3 Light("QUAKE_1_THUNDERBOLT_PUFF")
         Stop
     D:
-        SPKW D 3
+        SPKW D 3 Light("QUAKE_1_THUNDERBOLT_PUFF")
         Stop
     E:
-        SPKW E 3
+        SPKW E 3 Light("QUAKE_1_THUNDERBOLT_PUFF")
         Stop
     F:
-        SPKW F 3
+        SPKW F 3 Light("QUAKE_1_THUNDERBOLT_PUFF")
         Stop
     }
 }
@@ -627,9 +627,9 @@ Actor PlasmaCellBall
     States
     {
     Spawn:
-        BAL7 A 0 NoDelay A_PlaySound("plasmacell/fly",CHAN_ITEM,1.0,true,ATTN_NORM)
+        BAL7 A 0 Light("QUAKE_1_PLASMA_BALL") NoDelay A_PlaySound("plasmacell/fly",CHAN_ITEM,1.0,true,ATTN_NORM)
     SpawnLoop:
-        BAL7 A 2
+        BAL7 A 2 Light("QUAKE_1_PLASMA_BALL")
         Loop
     Death:
         BAL7 A 0 A_StopSound(CHAN_ITEM)
@@ -654,7 +654,7 @@ Actor PlasmaCellBall
         BAL7 AAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("PlasmaDebris",Random(-3,3)+1,Random(-3,3)+1,Random(-3,3)+1,Random(-3,3)+1,Random(-3,3)+1,Random(-3,3)+1)
         BAL7 AAAAAAAAAAAAAAAAA 0 A_SpawnItemEx("PlasmaDebris",Random(-3,3)+1,Random(-3,3)+1,Random(-3,3)+1,Random(-3,3)+1,Random(-3,3)+1,Random(-3,3)+1)
         TNT1 A 0 A_Explode(350,150,0)
-        BAL7 A 5 A_Explode(150,150)
+        BAL7 A 5 Light("QUAKE_1_PLASMA_BALL") A_Explode(150,150)
         Stop
     }
 }
@@ -674,7 +674,7 @@ Actor PlasmaCellBallSoundRerelease : PlasmaCellBall
     States
     {
     Spawn:
-        BAL7 A 0 NoDelay A_PlaySound("plasmacell/rerelease/fly",CHAN_ITEM,1.0,true,ATTN_NORM)
+        BAL7 A 0 Light("QUAKE_1_PLASMA_BALL") NoDelay A_PlaySound("plasmacell/rerelease/fly",CHAN_ITEM,1.0,true,ATTN_NORM)
         goto SpawnLoop
     }
 }
@@ -694,7 +694,7 @@ Actor PlasmaCellBallSoundDMC : PlasmaCellBall
     States
     {
     Spawn:
-        BAL7 A 0 NoDelay A_PlaySound("plasmacell/dmc/fly",CHAN_ITEM,1.0,true,ATTN_NORM)
+        BAL7 A 0 Light("QUAKE_1_PLASMA_BALL") NoDelay A_PlaySound("plasmacell/dmc/fly",CHAN_ITEM,1.0,true,ATTN_NORM)
         goto SpawnLoop
     }
 }

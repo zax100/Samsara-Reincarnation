@@ -2,61 +2,66 @@ actor QuakeExplosionCounter: Counter {}
 
 actor QuakeExplosion
 {
-    +NOINTERACTION
+    RenderStyle Add
     +CLIENTSIDEONLY
     +FORCEXYBILLBOARD
-    
-    RenderStyle Add
-    
+    +NOINTERACTION
     States
     {
       Spawn:
-        QEXP A 0 bright
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8)
+        QEXP A 0 Bright Light("QUAKE_1_EXPLOSION_X1")
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8)
         goto SpawnLoop
 
       SpawnLoop:
-        QEXP A 0 A_JumpIfInventory("QuakeExplosionCounter", 1, 1)
+        TNT1 A 0 A_JumpIfInventory("QuakeExplosionCounter",1,1)
         goto Death
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle2", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle3", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle", 0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle2",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle3",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
         loop
-        
+
       Death:
-        QEXP A 4 bright A_PlaySound("quakeweps/explode")
-        QEXP B 4 bright
-        QEXP CD 3 bright
-        QEXP EF 2 bright
+        TNT1 A 0 A_PlaySound("quakeweps/explode")
+      DeathFinish:
+        QEXP A 4 Bright Light("QUAKE_1_EXPLOSION_X1")
+        QEXP B 4 Bright Light("QUAKE_1_EXPLOSION_X2")
+        QEXP C 3 Bright Light("QUAKE_1_EXPLOSION_X3")
+        QEXP D 3 Bright Light("QUAKE_1_EXPLOSION_X4")
+        QEXP E 2 Bright Light("QUAKE_1_EXPLOSION_X5")
+        QEXP F 2 Bright Light("QUAKE_1_EXPLOSION_X6")
         stop
     }
 }
 
 actor QuakeTinyExplosion: QuakeExplosion
 {
-    
     States
     {
       Spawn:
-        QEXP A 0 bright
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8, 1, 2)
+        QEXP A 0 Bright Light("QUAKE_1_EXPLOSION_TINY_X1")
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8, 1, 2)
         goto SpawnLoop
 
       SpawnLoop:
-        QEXP A 0 A_JumpIfInventory("QuakeExplosionCounter", 1, 1)
+        TNT1 A 0 A_JumpIfInventory("QuakeExplosionCounter",1,1)
         goto Death
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle2", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle3", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle", 0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle2",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle3",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
         loop
-        
+
       Death:
-        QEXP A 4 bright A_PlaySound("quakeweps/explode", CHAN_AUTO, 0.5)
-        QEXP B 4 bright
-        QEXP CD 3 bright
-        QEXP EF 2 bright
+        TNT1 A 0 A_PlaySound("quakeweps/explode",CHAN_AUTO,0.5)
+      DeathFinish:
+        QEXP A 4 Bright Light("QUAKE_1_EXPLOSION_TINY_X1")
+        QEXP B 4 Bright Light("QUAKE_1_EXPLOSION_TINY_X2")
+        QEXP C 3 Bright Light("QUAKE_1_EXPLOSION_TINY_X3")
+        QEXP D 3 Bright Light("QUAKE_1_EXPLOSION_TINY_X4")
+        QEXP E 2 Bright Light("QUAKE_1_EXPLOSION_TINY_X5")
+        QEXP F 2 Bright Light("QUAKE_1_EXPLOSION_TINY_X6")
         stop
     }
 }
@@ -66,53 +71,46 @@ actor QuakeExplosionSoundRerelease : QuakeExplosion
     States
     {
       Spawn:
-        QEXP A 0 bright
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8)
+        QEXP A 0 Bright Light("QUAKE_1_EXPLOSION_X1")
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8)
         goto SpawnLoop
 
       SpawnLoop:
-        QEXP A 0 A_JumpIfInventory("QuakeExplosionCounter", 1, 1)
+        TNT1 A 0 A_JumpIfInventory("QuakeExplosionCounter",1,1)
         goto Death
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle2", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle3", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle", 0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle2",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle3",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
         loop
-        
+
       Death:
-        QEXP A 4 bright A_PlaySound("quakeweps/rerelease/explode")
-        QEXP B 4 bright
-        QEXP CD 3 bright
-        QEXP EF 2 bright
-        stop
+        TNT1 A 0 A_PlaySound("quakeweps/rerelease/explode")
+        goto DeathFinish
     }
 }
 
-actor QuakeTinyExplosionSoundRerelease: QuakeExplosionSoundRerelease
+actor QuakeTinyExplosionSoundRerelease: QuakeTinyExplosion
 {
-    
     States
     {
       Spawn:
-        QEXP A 0 bright
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8, 1, 2)
+        QEXP A 0 Bright Light("QUAKE_1_EXPLOSION_TINY_X1")
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8, 1, 2)
         goto SpawnLoop
 
       SpawnLoop:
-        QEXP A 0 A_JumpIfInventory("QuakeExplosionCounter", 1, 1)
+        TNT1 A 0 A_JumpIfInventory("QuakeExplosionCounter",1,1)
         goto Death
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle2", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle3", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle", 0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle2",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle3",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
         loop
-        
+
       Death:
-        QEXP A 4 bright A_PlaySound("quakeweps/rerelease/explode", CHAN_AUTO, 0.5)
-        QEXP B 4 bright
-        QEXP CD 3 bright
-        QEXP EF 2 bright
-        stop
+        TNT1 A 0 A_PlaySound("quakeweps/rerelease/explode",CHAN_AUTO,0.5)
+        goto DeathFinish
     }
 }
 
@@ -121,53 +119,46 @@ actor QuakeExplosionSoundDMC : QuakeExplosion
     States
     {
       Spawn:
-        QEXP A 0 bright
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8)
+        QEXP A 0 Bright Light("QUAKE_1_EXPLOSION_X1")
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8)
         goto SpawnLoop
 
       SpawnLoop:
-        QEXP A 0 A_JumpIfInventory("QuakeExplosionCounter", 1, 1)
+        TNT1 A 0 A_JumpIfInventory("QuakeExplosionCounter",1,1)
         goto Death
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle2", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle3", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle", 0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle2",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle3",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
         loop
-        
+
       Death:
-        QEXP A 4 bright A_PlaySound("quakeweps/dmc/explode")
-        QEXP B 4 bright
-        QEXP CD 3 bright
-        QEXP EF 2 bright
-        stop
+        TNT1 A 0 A_PlaySound("quakeweps/dmc/explode")
+        goto DeathFinish
     }
 }
 
-actor QuakeTinyExplosionSoundDMC: QuakeExplosionSoundDMC
+actor QuakeTinyExplosionSoundDMC: QuakeTinyExplosion
 {
-    
     States
     {
       Spawn:
-        QEXP A 0 bright
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8, 1, 2)
+        QEXP A 0 Bright Light("QUAKE_1_EXPLOSION_TINY_X1")
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8, 1, 2)
         goto SpawnLoop
 
       SpawnLoop:
-        QEXP A 0 A_JumpIfInventory("QuakeExplosionCounter", 1, 1)
+        TNT1 A 0 A_JumpIfInventory("QuakeExplosionCounter",1,1)
         goto Death
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle2", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeTinyParticle3", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle", 0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle2",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeTinyParticle3",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
         loop
-        
+
       Death:
-        QEXP A 4 bright A_PlaySound("quakeweps/dmc/explode", CHAN_AUTO, 0.5)
-        QEXP B 4 bright
-        QEXP CD 3 bright
-        QEXP EF 2 bright
-        stop
+        TNT1 A 0 A_PlaySound("quakeweps/dmc/explode",CHAN_AUTO,0.5)
+        goto DeathFinish
     }
 }
 

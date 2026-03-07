@@ -806,11 +806,11 @@ actor QuakeLavaNail: QuakeNail
     States
     {
       Spawn:
-        QKNL A 0
+        QKNL A 0 Bright Light("QUAKE_1_LAVA_NAIL_X1")
         goto SpawnLoop
 
       SpawnLoop:
-        QKNL A 1 Bright //A_SpawnItemEx("QuakeLavaTrail", 0,0,0, random(-3,3)/10.0,random(-3,3)/10.0,random(-3, 3)/10.0)
+        QKNL A 1 Bright Light("QUAKE_1_LAVA_NAIL_X1") //A_SpawnItemEx("QuakeLavaTrail", 0,0,0, random(-3,3)/10.0,random(-3,3)/10.0,random(-3, 3)/10.0)
         loop
 
       Crash:
@@ -927,7 +927,10 @@ actor LavaNailBounce
     States
     {
       Spawn:
-        CFCF ACEGIKNOP 2 bright
+        CFCF ACEGIK 2 Bright Light("QUAKE_1_LAVA_NAIL_FLICKER")
+        CFCF N 2 Bright Light("QUAKE_1_LAVA_NAIL_X3")
+        CFCF O 2 Bright Light("QUAKE_1_LAVA_NAIL_X4")
+        CFCF P 2 Bright
         stop
     }
 }
@@ -942,7 +945,9 @@ actor QuakeLavaTrail
     States
     {
       Spawn:
-        CFFX NOP 2 bright
+        CFFX N 2 Bright Light("QUAKE_1_LAVA_NAIL_X2")
+        CFFX O 2 Bright Light("QUAKE_1_LAVA_NAIL_X1")
+        CFFX P 2 Bright Light("QUAKE_1_LAVA_NAIL_X3")
         stop
     }
 }

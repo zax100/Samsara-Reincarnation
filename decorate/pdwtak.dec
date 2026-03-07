@@ -328,27 +328,32 @@ actor RangerDiesWhenHeIsKilled: QuakeExplosion
 {
     Alpha 0.8
     Scale 2.5
-
     States
     {
+      Spawn:
+        QEXP A 0 Bright
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 8)
+        goto SpawnLoop
+
       SpawnLoop:
-        QEXP A 0 A_JumpIfInventory("QuakeExplosionCounter", 1, 1)
+        TNT1 A 0 A_JumpIfInventory("QuakeExplosionCounter",1,1)
         goto Death
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle4",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle",  0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle2", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle2", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle3", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 A_CustomMissile("QuakeExplosionParticle3", 0, 0, random(-180, 180), 2, random(-180, 180))
-        QEXP A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle4",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle", 0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle", 0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle2",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle2",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle3",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 A_CustomMissile("QuakeExplosionParticle3",0,0,random(-180,180),2,random(-180,180))
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 10, 1)
         loop
-        
+
       Death:
-        QEXP A 4 bright A_PlaySound("quakeweps/explode", CHAN_BODY, 1.0, 0, ATTN_NONE)
-        QEXP B 4 bright
-        QEXP CD 3 bright
-        QEXP EF 2 bright
+        TNT1 A 0 A_PlaySound("quakeweps/explode",CHAN_BODY,1.0,0,ATTN_NONE)
+      DeathFinish:
+        QEXP AB 4 Bright
+        QEXP CD 3 Bright
+        QEXP EF 2 Bright
         stop
     }
 }
