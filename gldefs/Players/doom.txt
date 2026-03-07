@@ -700,6 +700,14 @@ object DoomBFGSplash
 	frame DBFPD { light DOOMBFGBALL_X5 }
 }
 
+object DoomBFGSplashCoop
+{
+	frame DBFPA { light DOOMBFGBALL    }
+	frame DBFPB { light DOOMBFGBALL_X1 }
+	frame DBFPC { light DOOMBFGBALL_X4 }
+	frame DBFPD { light DOOMBFGBALL_X5 }
+}
+
 // BFG2704
 pointlight DOOMPLASMABALL1
 {
@@ -1134,7 +1142,16 @@ object ST_BFG10kShot_CoopSoundPerkristan
 	frame DBFEF { light DOOMBFG10KSHOT_X5 }
 }
 
+flickerlight2 DOOMZOMBIEATK
+{
+    color 1.0 0.8 0.2
+    size 48
+    secondarySize 56
+    interval 1
+    offset 0 40 0
+}
+
 object DoomguyPlayer
 {
-	frame DGUYF { light ZOMBIEATK }
+	frame DGUYF { light DOOMZOMBIEATK }
 }

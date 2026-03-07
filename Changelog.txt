@@ -91,6 +91,7 @@ Doom:
 -All-
 
 ! Aligned offsets of hybrid unique sprites with other hybrid sprites.
+* Fixed some attacks not having lights outside of Doom.
 
 Fred Chexter (Chex Quest):
 

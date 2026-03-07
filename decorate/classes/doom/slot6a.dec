@@ -653,14 +653,14 @@ actor SamsaraDoomguyStrPlasmaBall : PlasmaBall
 	States
 	{
 	Spawn:
-		DPLM CD 6 Bright Light("PLASMABALL")
+		DPLM CD 6 Bright Light("DOOMPLASMABALL")
 		loop
 
 	Death:
-		DPLE F 4 Bright Light("PLASMA_X1")
-		DPLE GH 4 Bright Light("PLASMA_X2")
-		DPLE I 4 Bright Light("PLASMA_X3")
-		DPLE J 4 Bright Light("PLASMA_X4")
+		DPLE F 4 Bright Light("DOOMPLASMA_X1")
+		DPLE GH 4 Bright Light("DOOMPLASMA_X2")
+		DPLE I 4 Bright Light("DOOMPLASMA_X3")
+		DPLE J 4 Bright Light("DOOMPLASMA_X4")
 		stop
 	}
 }

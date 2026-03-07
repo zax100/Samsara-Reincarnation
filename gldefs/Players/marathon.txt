@@ -28,7 +28,7 @@ flickerlight SOBURN3
 
 object MarathonPlayer
 {
-	frame SOPLG { light ZOMBIEATK } // Not much that can be done, weapon skins cannot have their own lights.
+	frame SOPLG { light DOOMZOMBIEATK } // Not much that can be done, weapon skins cannot have their own lights.
 
 	frame SOPLU { light SOBURN1 } // Going down the spritelist alphabetically. Each weapon skin has its own burning
 	frame SOPLV { light SOBURN2 } // frames. For some reason most omit a certain frame, and one is standing alone.

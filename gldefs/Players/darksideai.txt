@@ -1,17 +1,16 @@
 object Doom_AI
 {
-	frame DGUYF { light ZOMBIEATK }
+	frame DGUYF { light DOOMZOMBIEATK }
 }
 
 object Doom64_AI
 {
-	frame 64DCF { light ZOMBIEATK }
-	frame 64DGF { light ZOMBIEATK }
+	frame DGUYM { light DOOMZOMBIEATK }
 }
 
 object DoomStronghold_AI
 {
-	frame DGUYF { light ZOMBIEATK }
+	frame DGUYF { light DOOMZOMBIEATK }
 }
 
 object Chex_AI
@@ -21,24 +20,24 @@ object Chex_AI
 
 object Duke_AI
 {
-	frame DUKEF { light ZOMBIEATK }
+	frame DUKEF { light DOOMZOMBIEATK }
 }
 
 object Duke_LAB_AI
 {
-	frame DUKEN { light ZOMBIEATK }
+	frame DUKEN { light DOOMZOMBIEATK }
 }
 
 object Duke_64_AI
 {
-	frame 64DUF { light ZOMBIEATK }
+	frame 64DUF { light DOOMZOMBIEATK }
 }
 
 object SecurityOfficer_AI
 {
-	frame SDSGF { light ZOMBIEATK }
-	frame SDSGG { light ZOMBIEATK }
-	frame SOPLG { light ZOMBIEATK }
+	frame SDSGF { light DOOMZOMBIEATK }
+	frame SDSGG { light DOOMZOMBIEATK }
+	frame SOPLG { light DOOMZOMBIEATK }
 	
 	frame SOPLU { light SOBURN1 }
 	frame SOPLV { light SOBURN2 }
@@ -52,37 +51,37 @@ object Ranger_AI
 
 object IPFreeley_AI
 {
-	frame IPFSC { light ZOMBIEATK }
+	frame IPFSC { light DOOMZOMBIEATK }
 }
 
 object TaradinoCassatt_AI
 {
-	frame AL15P { light ZOMBIEATK }
+	frame AL15P { light DOOMZOMBIEATK }
 }
 
 object DougWendt_AI
 {
-	frame AL18G { light ZOMBIEATK }
+	frame AL18G { light DOOMZOMBIEATK }
 }
 
 object LoreleiNi_AI
 {
-	frame AL17G { light ZOMBIEATK }
+	frame AL17G { light DOOMZOMBIEATK }
 }
 
 object ThiBarret_AI
 {
-	frame AL16G { light ZOMBIEATK }
+	frame AL16G { light DOOMZOMBIEATK }
 }
 
 object Blake_AI
 {
-	frame BSTNH { light ZOMBIEATK }
+	frame BSTNH { light DOOMZOMBIEATK }
 }
 
 object Caleb_AI
 {
-	frame CALEN { light ZOMBIEATK }
+	frame CALEN { light DOOMZOMBIEATK }
 }
 
 object StrifeGuy_AI
@@ -114,17 +113,17 @@ object StrifeGuy_AI
 
 object Eleena_AI
 {
-	frame ELEEL { light ZOMBIEATK }
+	frame ELEEL { light DOOMZOMBIEATK }
 }
 
 object Corridor7_AI
 {
-	frame C7PYG { light ZOMBIEATK }
+	frame C7PYG { light DOOMZOMBIEATK }
 }
 
 object Katarn_AI
 {
-	frame 69DGT { light ZOMBIEATK }
+	frame 69DGT { light DOOMZOMBIEATK }
 }
 
 object POGreed_AI
@@ -154,12 +153,12 @@ object POGreed5_AI
 
 object Freeman_AI
 {
-	frame VL31O { light ZOMBIEATK }
+	frame VL31O { light DOOMZOMBIEATK }
 }
 
 object Shephard_AI
 {
-	frame OL41O { light ZOMBIEATK }
+	frame OL41O { light DOOMZOMBIEATK }
 }
 
 object LoWang_AI
@@ -169,25 +168,25 @@ object LoWang_AI
 
 object Cybermage_AI
 {
-	frame CMPLP { light ZOMBIEATK }
+	frame CMPLP { light DOOMZOMBIEATK }
 }
 
 object Jon_AI
 {
-	frame _EXRH { light ZOMBIEATK }
+	frame _EXRH { light DOOMZOMBIEATK }
 }
 
 object Leonard_AI
 {
-	frame LEO_V { light ZOMBIEATK }
+	frame LEO_V { light DOOMZOMBIEATK }
 }
 
 object Bitterman_AI
 {
-	frame PB02G { light ZOMBIEATK }
+	frame PB02G { light DOOMZOMBIEATK }
 }
 
 object JamesBond_AI
 {
-	frame GEBIB { light ZOMBIEATK }
+	frame GEBIB { light DOOMZOMBIEATK }
 }
