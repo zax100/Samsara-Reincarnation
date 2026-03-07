@@ -913,9 +913,9 @@ actor Hexen_FSpearFX5Spawner
         TNT1 A 0 Light("CSPEARPROJECTILE2")
         TNT1 AAAAAAAAA 0 A_SpawnItemEx("Hexen_FSpearFX5",0,0,2,frandom(-4,4),frandom(-4,4),random(-2,6),0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
         TNT1 A 2 Light("CSPEARPROJECTILE2")
-        TNT1 B 2 Light("CSPEARPROJECTILE3")
-        TNT1 C 2 Light("CSPEARPROJECTILE4")
-        TNT1 D 2 Light("CSPEARPROJECTILE5")
+        TNT1 A 2 Light("CSPEARPROJECTILE3")
+        TNT1 A 2 Light("CSPEARPROJECTILE4")
+        TNT1 A 2 Light("CSPEARPROJECTILE5")
         stop
     }
 }
