@@ -1318,7 +1318,7 @@ actor HereticCorvusCloneCoop : HereticCorvusClone
       MissileUseDragonClaw:
         TNT1 A 0 A_SetUserVar("user_attack_amount", user_attack_amount + 1)
         TNT1 A 0 A_PlaySound("heretic/dragonclaw",CHAN_WEAPON)
-        CORV F 6 Bright A_CustomBulletAttack(5.6,0,1,random(4,11),"BlasterPuff2Coop",0,CBAF_AIMFACING)
+        CORV F 6 Bright A_CustomBulletAttack(5.6,0,1,random(1,8)*4,"BlasterPuff2Coop",0,CBAF_NORANDOM|CBAF_AIMFACING)
         TNT1 A 0 A_JumpIf(user_attack_amount >= 5, 1)
         loop
         CORV E 6
