@@ -135,7 +135,6 @@ Actor Q3Rocket
 
 Actor Q3RocketCoop : Q3Rocket
 {
-	Damage (100)
     +THRUSPECIES
 	Species "Player"
 	States

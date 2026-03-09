@@ -135,7 +135,8 @@ Actor Q3NailProjectile
 	}
 }
 
-Actor Q3NailProjectileCoop : Q3NailProjectile {
+Actor Q3NailProjectileCoop : Q3NailProjectile
+{
 	+THRUSPECIES
 	Species "Player"
 	Damage (20)
