@@ -335,11 +335,13 @@ Strifeguy (Strife):
 
 * Fixed Blackbird talking earlier than intended when playing Strife in GZDoom.
 + The crossbow (electric bolts) now does 40-80 damage in increments of 10 (increased from 20-80 in multiples of 20).
-+ The crossbow (poison bolts) now does 100-200 direct damage in increments of 50 (increased from 50-200 in multiples of 50).
+! The crossbow (poison bolts) now does 80-160 direct damage in increments of 20 (changed from 50-200 in multiples of 50).
+- The crossbow (poison bolts) now deals 50 extra poison damage (decreased from 100).
 + The crossbow (poison bolts) now does its extra poison damage across 16 map units (increased from 10). This should make it more consistent.
++ The mini missile launcher now deals 60 direct damage (increased from 40).
 - The mini missile launcher now deals 64 splash damage (decreased from 96).
 + The mini missile launcher now deals its splash damage across 96 map units (increased from 64).
-+ The assault gun now deals 5-15 damage in multiples of 5 per bullet (increased from 4-12 in multiples of 4).
++ The assault gun now deals 8-12 damage in increments of 4 per bullet (increased from 4-12 in multiples of 4).
 - High explosive grenades no longer have +FORCERADIUSDMG, because the projectile didn't have that flag in Strife while some enemies had +NORADIUSDMG, meaning it's an intended weakness.
 + With improved weapon balance, the mauler (scatter mode) now deals 15-45 damage in multiples of 15 per puff in PVE (increased from 10-30 in multiples of 10).
 ! The Dark Side version now uses the additional gibs and blood splatters when gibbed by Strife weapons.

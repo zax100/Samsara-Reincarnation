@@ -137,7 +137,7 @@ actor SamsaraStrifeMiniMissileLauncherAttackHandler : Trigger
 actor StrifeMiniMissile : MiniMissile
 {
     Speed 22
-    Damage (40)
+    Damage (60)
     DamageType "StrifeExplosive"
     SeeSound "strife/minifire"
     DeathSound "strife/miniexplode"
