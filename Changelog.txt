@@ -125,6 +125,7 @@ Corvus (Heretic):
 + The Staff of D'Sparil (unpowered)'s lightning bolt now does 240 splash damage (increased from 200) with a radius of 192 map units (increased from 128).
 + The Staff of D'Sparil (unpowered)'s lightning bolt now forces splash damage against enemies to make it more useful against bosses.
 ! Ally wizards' projectiles now have +BLOODSPLATTER outside of Heretic and Hexen.
+* Fixed ally wizards' projectiles not leaving decals in PVE.
 ! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 
 Wolfenstein 3D:
@@ -668,6 +669,10 @@ Doom:
 * Fixed the pain elemental using the wrong sprite when hit by Duke's mighty boot.
 ! Changed the sprites used for the Arch-vile resurrection flame. This has the side effect of fixing the flame not appearing correctly outside Doom.
 + Added Samsara stuff to the beta lost soul and MBF helper dog, because why not?
+
+Heretic:
+
+* Fixed the undead warriors' projectiles not leaving decals.
 
 Strife: Quest for the Sigil:
 
