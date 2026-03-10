@@ -5786,7 +5786,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 {
                     GiveInventory("Wraithverge", 1);
                     GiveInventory("Clip", dmextraammo ? 25 * 5 / 2 : 25);
-                    GiveInventory("Cell", dmextraammo ? 35 * 5 / 2 : 25);
+                    GiveInventory("Cell", dmextraammo ? 35 * 5 / 2 : 35);
                     result = 1;
                 } else if ((CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv || CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv) && (dropped >= 1 || startmode != 0 || !weaponstay)) {
                     GiveInventory("Clip", 25);
@@ -5914,7 +5914,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 {
                     GiveInventory("Wraithverge", 1);
                     GiveInventory("Clip", dmextraammo ? 25 * 5 / 2 : 25);
-                    GiveInventory("Cell", dmextraammo ? 35 * 5 / 2 : 25);
+                    GiveInventory("Cell", dmextraammo ? 35 * 5 / 2 : 35);
                     result = 1;
                 } else if ((CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv || CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv) && (dropped >= 1 || startmode != 0 || !weaponstay)) {
                     GiveInventory("Clip", 25);
