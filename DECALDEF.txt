@@ -393,7 +393,6 @@ generator MummyFX2					MummyScorch
 generator KnightAxe2				AxeScorch
 generator RedAxe2					BloodSmear
 generator WizardFX2					WizardScorch
-generator FWizardFX2				WizardScorch
 
 generator SerpentFX2				DoomImpScorch
 generator CentaurFX2				CentaurScorch

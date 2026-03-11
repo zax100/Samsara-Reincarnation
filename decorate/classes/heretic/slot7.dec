@@ -636,6 +636,7 @@ actor FWizardCoop : FWizard
 actor FWizardFX2 : WizardFX1
 {
     DamageType "HereWizard"
+    Decal "WizardScorch"
     Species "Player"
     +BLOODSPLATTER
     +THRUGHOST
