@@ -323,58 +323,58 @@ actor SamsaraDoomguyFistAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupBerserkVanillaDMSoundPSX")
       PickupBerserkVanillaDM:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupBerserkVanillaDMSpread")
-        TNT1 A 0 A_CustomPunch(random(1,10)*20,true,0,"DoomPunchPuff2")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"DoomPunchPuff2") // Technically should be random(1,10)*20, but oh well.
         stop
 
       PickupBerserkVanillaDMSoundPSX:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupBerserkVanillaDMSpreadSoundPSX")
-        TNT1 A 0 A_CustomPunch(random(1,10)*20,true,0,"DoomPunchPuff2SoundPSX")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"DoomPunchPuff2SoundPSX")
         stop
 
       PickupBerserkVanillaDMSoundPerkristan:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupBerserkVanillaDMSpreadSoundPerkristan")
-        TNT1 A 0 A_CustomPunch(random(1,10)*20,true,0,"DoomPunchPuff2SoundPerkristan")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"DoomPunchPuff2SoundPerkristan")
         stop
 
       PickupBerserkVanillaDMSpread:
-        TNT1 A 0 A_CustomPunch((random(1,10)*20)*3,true,0,"DoomPunchPuff2")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"DoomPunchPuff2")
         stop
 
       PickupBerserkVanillaDMSpreadSoundPSX:
-        TNT1 A 0 A_CustomPunch((random(1,10)*20)*3,true,0,"DoomPunchPuff2SoundPSX")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"DoomPunchPuff2SoundPSX")
         stop
 
       PickupBerserkVanillaDMSpreadSoundPerkristan:
-        TNT1 A 0 A_CustomPunch((random(1,10)*20)*3,true,0,"DoomPunchPuff2SoundPerkristan")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"DoomPunchPuff2SoundPerkristan")
         stop
 
       PickupBerserkVanillaCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",2,"PickupBerserkVanillaCoopSoundPerkristan")
         TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupBerserkVanillaCoopSoundPSX")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupBerserkVanillaCoopSpread")
-        TNT1 A 0 A_CustomPunch(random(1,10)*20,true,0,"DoomPunchPuff2_Coop")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"DoomPunchPuff2_Coop")
         stop
 
       PickupBerserkVanillaCoopSoundPSX:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupBerserkVanillaCoopSpreadSoundPSX")
-        TNT1 A 0 A_CustomPunch(random(1,10)*20,true,0,"DoomPunchPuff2_CoopSoundPSX")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"DoomPunchPuff2_CoopSoundPSX")
         stop
 
       PickupBerserkVanillaCoopSoundPerkristan:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupBerserkVanillaCoopSpreadSoundPerkristan")
-        TNT1 A 0 A_CustomPunch(random(1,10)*20,true,0,"DoomPunchPuff2_CoopSoundPerkristan")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"DoomPunchPuff2_CoopSoundPerkristan")
         stop
 
       PickupBerserkVanillaCoopSpread:
-        TNT1 A 0 A_CustomPunch((random(1,10)*20)*3,true,0,"DoomPunchPuff2_Coop")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"DoomPunchPuff2_Coop")
         stop
 
       PickupBerserkVanillaCoopSpreadSoundPSX:
-        TNT1 A 0 A_CustomPunch((random(1,10)*20)*3,true,0,"DoomPunchPuff2_CoopSoundPSX")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"DoomPunchPuff2_CoopSoundPSX")
         stop
 
       PickupBerserkVanillaCoopSpreadSoundPerkristan:
-        TNT1 A 0 A_CustomPunch((random(1,10)*20)*3,true,0,"DoomPunchPuff2_CoopSoundPerkristan")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"DoomPunchPuff2_CoopSoundPerkristan")
         stop
 
       // Berserk (improved)
@@ -709,20 +709,20 @@ actor SamsaraDoomguy64FistAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupBerserkVanillaCoop")
       PickupBerserkVanillaDM:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupBerserkVanillaDMSpread")
-        TNT1 A 0 A_CustomPunch(random(1,10)*20,true,0,"Doom64PunchPuff2")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"Doom64PunchPuff2")
         stop
 
       PickupBerserkVanillaDMSpread:
-        TNT1 A 0 A_CustomPunch((random(1,10)*20)*3,true,0,"Doom64PunchPuff2")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"Doom64PunchPuff2")
         stop
 
       PickupBerserkVanillaCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupBerserkVanillaCoopSpread")
-        TNT1 A 0 A_CustomPunch(random(1,10)*20,true,0,"Doom64PunchPuff2_Coop")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"Doom64PunchPuff2_Coop")
         stop
 
       PickupBerserkVanillaCoopSpread:
-        TNT1 A 0 A_CustomPunch((random(1,10)*20)*3,true,0,"Doom64PunchPuff2_Coop")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"Doom64PunchPuff2_Coop")
         stop
 
       // Berserk (improved)
@@ -905,39 +905,39 @@ actor SamsaraDoomguyStrFistAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupUnpoweredBerserkVanillaDMSoundDE")
       PickupUnpoweredBerserkVanillaDM:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupUnpoweredBerserkVanillaDMSpread")
-        TNT1 A 0 A_CustomPunch((random(1,10)*2)*10,true,0,"SamsaraDoomguyStrFistPuff2")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"SamsaraDoomguyStrFistPuff2")
         stop
 
       PickupUnpoweredBerserkVanillaDMSoundDE:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupUnpoweredBerserkVanillaDMSpreadSoundDE")
-        TNT1 A 0 A_CustomPunch((random(1,10)*2)*10,true,0,"SamsaraDoomguyStrFistPuff2SoundDE")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"SamsaraDoomguyStrFistPuff2SoundDE")
         stop
 
       PickupUnpoweredBerserkVanillaDMSpread:
-        TNT1 A 0 A_CustomPunch(((random(1,10)*2)*10)*3,true,0,"SamsaraDoomguyStrFistPuff2")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"SamsaraDoomguyStrFistPuff2")
         stop
 
       PickupUnpoweredBerserkVanillaDMSpreadSoundDE:
-        TNT1 A 0 A_CustomPunch(((random(1,10)*2)*10)*3,true,0,"SamsaraDoomguyStrFistPuff2SoundDE")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"SamsaraDoomguyStrFistPuff2SoundDE")
         stop
 
       PickupUnpoweredBerserkVanillaCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupUnpoweredBerserkVanillaCoopSoundDE")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupUnpoweredBerserkVanillaCoopSpread")
-        TNT1 A 0 A_CustomPunch((random(1,10)*2)*10,true,0,"SamsaraDoomguyStrFistPuff2Coop")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"SamsaraDoomguyStrFistPuff2Coop")
         stop
 
       PickupUnpoweredBerserkVanillaCoopSoundDE:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupUnpoweredBerserkVanillaCoopSpreadSoundDE")
-        TNT1 A 0 A_CustomPunch((random(1,10)*2)*10,true,0,"SamsaraDoomguyStrFistPuff2CoopSoundDE")
+        TNT1 A 0 A_CustomPunch(random(10,20)*12,true,0,"SamsaraDoomguyStrFistPuff2CoopSoundDE")
         stop
 
       PickupUnpoweredBerserkVanillaCoopSpread:
-        TNT1 A 0 A_CustomPunch(((random(1,10)*2)*10)*3,true,0,"SamsaraDoomguyStrFistPuff2Coop")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"SamsaraDoomguyStrFistPuff2Coop")
         stop
 
       PickupUnpoweredBerserkVanillaCoopSpreadSoundDE:
-        TNT1 A 0 A_CustomPunch(((random(1,10)*2)*10)*3,true,0,"SamsaraDoomguyStrFistPuff2CoopSoundDE")
+        TNT1 A 0 A_CustomPunch((random(10,20)*12)*3,true,0,"SamsaraDoomguyStrFistPuff2CoopSoundDE")
         stop
 
       // Berserk (improved)
@@ -1083,39 +1083,39 @@ actor SamsaraDoomguyStrFistAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupPoweredBerserkVanillaDMSoundDE")
       PickupPoweredBerserkVanillaDM:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupPoweredBerserkVanillaDMSpread")
-        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch((random(1,10)*2)*10,true,0,"SamsaraDoomguyStrFistPuff2")
+        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch(random(10,20)*12,true,0,"SamsaraDoomguyStrFistPuff2")
         stop
 
       PickupPoweredBerserkVanillaDMSoundDE:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupPoweredBerserkVanillaDMSpreadSoundDE")
-        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch((random(1,10)*2)*10,true,0,"SamsaraDoomguyStrFistPuff2SoundDE")
+        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch(random(10,20)*12,true,0,"SamsaraDoomguyStrFistPuff2SoundDE")
         stop
 
       PickupPoweredBerserkVanillaDMSpread:
-        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch(((random(1,10)*2)*10)*3,true,0,"SamsaraDoomguyStrFistPuff2")
+        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch((random(10,20)*12)*3,true,0,"SamsaraDoomguyStrFistPuff2")
         stop
 
       PickupPoweredBerserkVanillaDMSpreadSoundDE:
-        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch(((random(1,10)*2)*10)*3,true,0,"SamsaraDoomguyStrFistPuff2SoundDE")
+        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch((random(10,20)*12)*3,true,0,"SamsaraDoomguyStrFistPuff2SoundDE")
         stop
 
       PickupPoweredBerserkVanillaCoop:
         TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupPoweredBerserkVanillaCoopSoundDE")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupPoweredBerserkVanillaCoopSpread")
-        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch((random(1,10)*2)*10,true,0,"SamsaraDoomguyStrFistPuff2Coop")
+        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch(random(10,20)*12,true,0,"SamsaraDoomguyStrFistPuff2Coop")
         stop
 
       PickupPoweredBerserkVanillaCoopSoundDE:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasSpread",1,"PickupPoweredBerserkVanillaCoopSpreadSoundDE")
-        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch((random(1,10)*2)*10,true,0,"SamsaraDoomguyStrFistPuff2CoopSoundDE")
+        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch(random(10,20)*12,true,0,"SamsaraDoomguyStrFistPuff2CoopSoundDE")
         stop
 
       PickupPoweredBerserkVanillaCoopSpread:
-        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch(((random(1,10)*2)*10)*3,true,0,"SamsaraDoomguyStrFistPuff2Coop")
+        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch((random(10,20)*12)*3,true,0,"SamsaraDoomguyStrFistPuff2Coop")
         stop
 
       PickupPoweredBerserkVanillaCoopSpreadSoundDE:
-        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch(((random(1,10)*2)*10)*3,true,0,"SamsaraDoomguyStrFistPuff2CoopSoundDE")
+        TNT1 AAAAAAAAAAAAAAAA 0 A_CustomPunch((random(10,20)*12)*3,true,0,"SamsaraDoomguyStrFistPuff2CoopSoundDE")
         stop
 
       // Berserk (improved)

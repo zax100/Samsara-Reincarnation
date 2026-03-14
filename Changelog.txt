@@ -92,6 +92,7 @@ Doom:
 
 -All-
 
++ With vanilla weapon balance, the brass knuckles now deal 120-240 damage in increments of 12 while berserk again, as per older Samsara versions (increased from 20-200 in multiples of 20).
 ! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 * Fixed some attacks not having lights outside of Doom.
 
@@ -100,6 +101,7 @@ Fred Chexter (Chex Quest):
 ! Chex bits spawned from being gibbed now fade after one minute, though they can remain indefinitely with "Gib Persistence" enabled.
 * Fixed fallback and non-+THRUGHOST zorch puffs not having lights in PVE.
 * Fixed +THRUGHOST zorch puffs not having lights at all.
++ With vanilla weapon balance, the Bootspoon now deals 120-240 damage in increments of 12 while under the effects of a berserk powerup given by ACS or a custom item (increased from 20-200 in multiples of 20).
 - With improved weapon balance, the Mini-Zorcher(s) and Micro-Zorcher(s) now deal 8-16 damage in increments of 4 (decreased from 12-16 in increments of 2).
 ! With improved weapon balance, the Large Zorcher now deals 10-15 damage in increments of 5 per puff (changed from 7-21 in multiples of 7).
 + With improved weapon balance, the Super Large Zorcher's projectiles now do 20-50 in PVE (increased from 15-35).
