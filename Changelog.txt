@@ -93,6 +93,7 @@ Doom:
 -All-
 
 + With vanilla weapon balance, the brass knuckles now deal 120-240 damage in increments of 12 while berserk again, as per older Samsara versions (increased from 20-200 in multiples of 20).
+! When berserked and playing a non-Doom IWAD, the brass knuckles and chainsaw are no longer forced to use improved damage values regardless of the "Weapon Balance" setting.
 ! Aligned offsets of hybrid unique sprites with other hybrid sprites.
 * Fixed some attacks not having lights outside of Doom.
 
