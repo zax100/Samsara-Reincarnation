@@ -5224,7 +5224,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
         else { i = JumpZFromHeight(32 + GetCVar("samsara_jumpmod"), GetActorProperty(0, APROP_Gravity)); }
 
 		// Hexen and The Adventures of Square require an increased jumping height
-		if (isZDoom() && GetCvar("samsara_currentgame") == (GAME_HEXEN || GAME_SQUARE) && samsaraClassNum() != CLASS_HEXEN) { GiveInventory("SamsaraIncreasedJumpHeightForHexen", 1); }
+		if (isZDoom() && (GetCvar("samsara_currentgame") == GAME_HEXEN || GAME_SQUARE) && samsaraClassNum() != CLASS_HEXEN) { GiveInventory("SamsaraIncreasedJumpHeightForHexen", 1); }
 		else { TakeInventory("SamsaraIncreasedJumpHeightForHexen", 0x7FFFFFFF); }
 
 		// Strife requires a decreased step height
