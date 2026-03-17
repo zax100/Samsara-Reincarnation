@@ -126,3 +126,27 @@ class Gib6_Samsara : Gib6 replaces Gib6
 		Loop;
 	}
 }
+
+class BeaconRed_Samsara : SquareActor replaces BeaconRed
+{
+	Default
+	{
+		+SOLID;
+		+DONTBLAST;
+		+RANDOMIZE;
+		Height 64;
+		Radius 5;
+	}
+	States
+	{
+	Spawn:
+		BEAC ZBCB 4 Bright;
+		Loop;
+	}
+}
+
+class BeaconOrange_Samsara : BeaconRed_Samsara replaces BeaconOrange { Default { Translation "192:207=144:159"; } }
+class BeaconYellow_Samsara : BeaconRed_Samsara replaces BeaconYellow { Default { Translation "192:207=240:254"; } }
+class BeaconGreen_Samsara  : BeaconRed_Samsara replaces BeaconGreen { Default { Translation "192:207=112:127"; } }
+class BeaconBlue_Samsara   : BeaconRed_Samsara replaces BeaconBlue { Default { Translation "192:207=65:79"; } }
+class BeaconViolet_Samsara : BeaconRed_Samsara replaces BeaconViolet { Default { Translation "192:207=32:47"; } }
