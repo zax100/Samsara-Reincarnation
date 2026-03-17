@@ -690,6 +690,10 @@ Strife: Quest for the Sigil:
 * Fixed a frame lasting longer than normal for gibbed reavers.
 + The environmental suit's fire immunity now takes all fire-based damage types into account instead of just Fire.
 
+The Adventures of Square:
+
++ The realm of The Adventures of Square has opened up to the Wheel! Note that support is currently exclusive to GZDoom only.
+
 Doom 64 CE:
 
 + The realm of Doom 64 CE has opened up to the Wheel! Note that support is currently exclusive to GZDoom only.
