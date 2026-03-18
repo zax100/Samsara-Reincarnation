@@ -359,7 +359,7 @@ actor FactoryDisc_Samsara : CustomInventory replaces FactoryDisc
 	states
 	{
 		Spawn:
-			DISC A -1
+			DISC Z -1
 			stop
 		Pickup:
 			TNT1 A 0 A_GiveInventory("RedCrystalKey")
