@@ -5224,11 +5224,11 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
         else { i = JumpZFromHeight(32 + GetCVar("samsara_jumpmod"), GetActorProperty(0, APROP_Gravity)); }
 
 		// Hexen and The Adventures of Square require an increased jumping height
-		if (isZDoom() && (GetCvar("samsara_currentgame") == GAME_HEXEN || GAME_SQUARE) && samsaraClassNum() != CLASS_HEXEN) { GiveInventory("SamsaraIncreasedJumpHeightForHexen", 1); }
+		if (isZDoom() && (GetCVar("samsara_currentgame") == GAME_HEXEN || GetCVar("samsara_currentgame") == GAME_SQUARE) && samsaraClassNum() != CLASS_HEXEN) { GiveInventory("SamsaraIncreasedJumpHeightForHexen", 1); }
 		else { TakeInventory("SamsaraIncreasedJumpHeightForHexen", 0x7FFFFFFF); }
 
 		// Strife and The Adventures of Square require a decreased step height
-		if (GetCvar("samsara_currentgame") == GAME_STRIFE || GAME_SQUARE) { SetActorProperty(0, APROP_MaxStepHeight, 16.0); }
+		if (GetCVar("samsara_currentgame") == GAME_STRIFE || GetCVar("samsara_currentgame") == GAME_SQUARE) { SetActorProperty(0, APROP_MaxStepHeight, 16.0); }
 
         if (CheckInventory("PowerHighJump1") && !GetCVar("LockHighJumpHeightChanges")) { SetActorProperty(0, APROP_JumpZ, max(FixedMul(i, FixedDiv(GetUserCVar(pln, "HighJumpRuneHeight"), 8.0)), 0)); } // multi runes compatibility
         else { SetActorProperty(0, APROP_JumpZ, max(i, 0)); }
