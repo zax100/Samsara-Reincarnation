@@ -299,6 +299,8 @@ script "SamsaraDecorate" (int choice, int arg1, int arg2) //215 - SAMSARA_DECORA
 		break;
 
 	case 38:
+        if (GetCVar("samsara_currentgame") == GAME_SQUARE) { GiveInventory("SamsaraMonsterSquareVacuumProtectionTrigger", 1); }
+
 		if(CheckInventory("GeneratedMonsterToken") == 1)
 		{
 			if (GetCVar("samsara_zscriptready") >= 1) { GiveInventory("SamsaraCountKillDisablerZS", 1); }
