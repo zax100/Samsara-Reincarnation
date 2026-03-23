@@ -212,7 +212,7 @@ actor FriendlyTriangleWorker_Samsara : FriendlyShape_Samsara replaces FriendlyTr
   }
 }
 
-actor FrightenedTriangleWorker_Samsara : FriendlyTriangleWorker_Samsara replaces FriendlyTriangleWorker
+actor FrightenedTriangleWorker_Samsara : FriendlyTriangleWorker_Samsara replaces FrightenedTriangleWorker
 {
   SpawnID 30
   +FRIGHTENED
