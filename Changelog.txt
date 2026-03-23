@@ -691,18 +691,26 @@ Strife: Quest for the Sigil:
 * Fixed a frame lasting longer than normal for gibbed reavers.
 + The environmental suit's fire immunity now takes all fire-based damage types into account instead of just Fire.
 
-The Adventures of Square:
+Legacy of Rust/WadFusion:
 
-+ The realm of The Adventures of Square has opened up to the Wheel! Note that support is currently exclusive to GZDoom only.
+* Fixed the mindweaver not leaving bullet decals.
+* Fixed the Tyrant going to the wrong See state meant for giving boss taunt tokens to the player.
+
+PSX Doom CE:
+
++ Added support for Corruption Cards in PSX Doom CE.
+
+PSX Final Doom CE:
+
++ Added support for Corruption Cards in PSX Final Doom CE.
 
 Doom 64 CE:
 
 + The realm of Doom 64 CE has opened up to the Wheel! Note that support is currently exclusive to GZDoom only.
 
-Legacy of Rust/WadFusion:
+The Adventures of Square:
 
-* Fixed the mindweaver not leaving bullet decals.
-* Fixed the Tyrant going to the wrong See state meant for giving boss taunt tokens to the player.
++ The realm of The Adventures of Square has opened up to the Wheel! Note that support is currently exclusive to GZDoom only.
 
 -Settings-
 
