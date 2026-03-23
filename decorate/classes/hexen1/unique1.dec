@@ -101,39 +101,39 @@ actor SamsaraHexenMysticAmbitIncantHealthCheckGameModeCheck : Trigger
         stop
 
       PickupDMTeam1:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam1",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam1",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam2:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam2",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam2",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam3:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam3",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam3",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam4:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam4",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam4",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam5:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam5",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam5",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam6:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam6",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam6",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam7:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam7",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam7",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam8:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam8",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheckTeam8",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupCoop:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheck",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthCheck",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
     }
 }
@@ -149,7 +149,7 @@ actor SamsaraHexenMysticAmbitIncantHealthCheck : Trigger
         stop
 
       PickupSuccess:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantFoundEligible",255,RGF_GIVESELF|RGF_PLAYERS|RGF_NOSIGHT) // kinda hacky
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantFoundEligible",512,RGF_GIVESELF|RGF_PLAYERS|RGF_NOSIGHT) // kinda hacky
         stop
     }
 }
@@ -261,39 +261,39 @@ actor SamsaraHexenMysticAmbitIncantHealthGiverGameModeCheck : Trigger
         stop
 
       PickupDMTeam1:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam1",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam1",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam2:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam2",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam2",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam3:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam3",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam3",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam4:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam4",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam4",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam5:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam5",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam5",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam6:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam6",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam6",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam7:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam7",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam7",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam8:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam8",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiverTeam8",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupCoop:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiver",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthGiver",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
     }
 }
@@ -436,39 +436,39 @@ actor SamsaraHexenMysticAmbitIncantHealthArmorGiverGameModeCheck : Trigger
         stop
 
       PickupDMTeam1:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam1",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam1",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam2:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam2",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam2",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam3:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam3",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam3",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam4:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam4",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam4",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam5:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam5",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam5",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam6:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam6",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam6",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam7:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam7",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam7",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam8:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam8",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiverTeam8",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupCoop:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiver",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantHealthArmorGiver",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
     }
 }
@@ -615,39 +615,39 @@ actor SamsaraHexenMysticAmbitIncantAmmoCheckGameModeCheck : Trigger
         stop
 
       PickupDMTeam1:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam1",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam1",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam2:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam2",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam2",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam3:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam3",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam3",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam4:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam4",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam4",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam5:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam5",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam5",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam6:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam6",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam6",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam7:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam7",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam7",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam8:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam8",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheckTeam8",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupCoop:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheck",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoCheck",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
     }
 }
@@ -735,7 +735,7 @@ actor SamsaraHexenMysticAmbitIncantAmmoCheck : Trigger
         goto PickupSuccess
 
       PickupSuccess:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantFoundEligible",255,RGF_GIVESELF|RGF_PLAYERS|RGF_NOSIGHT) // kinda hacky
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantFoundEligible",512,RGF_GIVESELF|RGF_PLAYERS|RGF_NOSIGHT) // kinda hacky
         stop
     }
 }
@@ -847,39 +847,39 @@ actor SamsaraHexenMysticAmbitIncantAmmoGiverGameModeCheck : Trigger
         stop
 
       PickupDMTeam1:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam1",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam1",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam2:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam2",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam2",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam3:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam3",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam3",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam4:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam4",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam4",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam5:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam5",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam5",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam6:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam6",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam6",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam7:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam7",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam7",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam8:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam8",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiverTeam8",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupCoop:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiver",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantAmmoGiver",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
     }
 }
@@ -1152,39 +1152,39 @@ actor SamsaraHexenMysticAmbitIncantArmorCheckGameModeCheck : Trigger
         stop
 
       PickupDMTeam1:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam1",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam1",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam2:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam2",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam2",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam3:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam3",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam3",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam4:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam4",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam4",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam5:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam5",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam5",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam6:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam6",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam6",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam7:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam7",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam7",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam8:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam8",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheckTeam8",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupCoop:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheck",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorCheck",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
     }
 }
@@ -1200,7 +1200,7 @@ actor SamsaraHexenMysticAmbitIncantArmorCheck : Trigger
         goto PickupSuccess
 
       PickupSuccess:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantFoundEligible",255,RGF_GIVESELF|RGF_PLAYERS|RGF_NOSIGHT) // kinda hacky
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantFoundEligible",512,RGF_GIVESELF|RGF_PLAYERS|RGF_NOSIGHT) // kinda hacky
         stop
     }
 }
@@ -1312,39 +1312,39 @@ actor SamsaraHexenMysticAmbitIncantArmorGiverGameModeCheck : Trigger
         stop
 
       PickupDMTeam1:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam1",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam1",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam2:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam2",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam2",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam3:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam3",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam3",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam4:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam4",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam4",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam5:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam5",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam5",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam6:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam6",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam6",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam7:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam7",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam7",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupDMTeam8:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam8",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiverTeam8",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
 
       PickupCoop:
-        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiver",255,RGF_GIVESELF|RGF_PLAYERS)
+        TNT1 A 0 A_RadiusGive("SamsaraHexenMysticAmbitIncantArmorGiver",512,RGF_GIVESELF|RGF_PLAYERS)
         stop
     }
 }

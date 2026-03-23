@@ -201,6 +201,7 @@ Hexen I:
 
 -All-
 
++ The mystic ambit incant now affects allies in a radius of 512 map units (increased from 255).
 ! Updated offset and weapon outlines for hybrid pickup sprites.
 
 Duke Nukem 3D:
