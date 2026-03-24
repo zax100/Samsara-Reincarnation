@@ -705,10 +705,10 @@ actor FreezethrowerBolt
 	States
 	{
 		Spawn:
-			FRZX AAABBBCCC 1 Bright A_Explode(3,1,1)
+			FRZX AAABBBCCC 1 Bright Light("DUKE3D_FREEZETHROWER_BOLT") A_Explode(3,1)
 			loop
 		Death:
-			FRZX A 1 A_SpawnItemEx("FreezethrowerDeath",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
+			FRZX A 1 Light("DUKE3D_FREEZETHROWER_BOLT") A_SpawnItemEx("FreezethrowerDeath",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
 			stop
 		Crash:
 		XDeath:
@@ -735,9 +735,13 @@ actor FreezethrowerDeath
 	{
 	Spawn:
 		TNT1 A 1
-		FRZX D 2 Bright
-		FRZX EFGHI 2 Bright
-		Stop
+		FRZX D 2 Bright Light("DUKE3D_FREEZETHROWER_DEATH_X1")
+		FRZX E 2 Bright Light("DUKE3D_FREEZETHROWER_DEATH_X2")
+		FRZX F 2 Bright Light("DUKE3D_FREEZETHROWER_DEATH_X3")
+		FRZX G 2 Bright Light("DUKE3D_FREEZETHROWER_DEATH_X4")
+		FRZX H 2 Bright Light("DUKE3D_FREEZETHROWER_DEATH_X5")
+		FRZX I 2 Bright Light("DUKE3D_FREEZETHROWER_DEATH_X6")
+		stop
 	}
 }
 
@@ -777,7 +781,7 @@ actor FreezethrowerBoltBeach : FreezeThrowerBolt
 	States
 	{
 	Spawn:
-		FRZX JJJKKKLLL 1 Bright A_Explode(3,1,1)
+		FRZX JJJKKKLLL 1 Bright A_Explode(3,1)
 		loop
 	Death:
 		FRZX L 1 A_SpawnItemEx("FreezethrowerDeath",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
@@ -949,13 +953,16 @@ Actor ShrinkMissile64
 	States
 	{
 		Spawn:
-			D6XP EFGH 1 Bright
-			Loop
+			D6XP EFGH 1 Bright Light("DUKE64_SHRINKER_MISSILE_X1")
+			loop
 		Crash:
 		Death:
 			TNT1 A 0 A_PlaySound("duke/thud")
 			TNT1 A 0 A_SpawnItemEx("ShrinkMissile64FireBall",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
-			D6XP IJKL 4 Bright
+			D6XP I 4 Bright Light("DUKE64_SHRINKER_MISSILE_X2")
+			D6XP J 4 Bright Light("DUKE64_SHRINKER_MISSILE_X3")
+			D6XP K 4 Bright Light("DUKE64_SHRINKER_MISSILE_X4")
+			D6XP L 4 Bright Light("DUKE64_SHRINKER_MISSILE_X5")
 			Stop
 		XDeath:
 			TNT1 A 0 A_Explode(1,68,0)

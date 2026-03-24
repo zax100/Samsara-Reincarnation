@@ -527,9 +527,22 @@ actor Duke64ExplosiveShotgunPuff : BulletPuffSettingless
 	   TNT1 A 0
 	   TNT1 A 1 A_PlaySound("duke/xshotgunxplod")
 	   TNT1 A 0 A_Explode(175,128) // Seven x 20 = 140 damage. 140+35 = 175 damage total.
-	   TNT1 A 0 A_SpawnItemEx("Duke64ExplosiveShotgunSmoke")
-	   DKSX ABCDEFGH 2 BRIGHT
-	   DKSX IJKLMNOPQ 2 BRIGHT
+    SpawnFinish:
+	   DKSX A 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X1") A_SpawnItemEx("Duke64ExplosiveShotgunSmoke")
+	   DKSX B 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X2")
+	   DKSX C 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X3")
+	   DKSX D 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X4")
+	   DKSX E 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X5")
+	   DKSX F 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X6")
+	   DKSX G 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X7")
+	   DKSX HIJ 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X8")
+	   DKSX K 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X9")
+	   DKSX L 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X10")
+	   DKSX M 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X11")
+	   DKSX N 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X12")
+	   DKSX O 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X13")
+	   DKSX P 2 Bright Light("DUKE64_EXPLOSIVESHOTGUN_PUFF_X14")
+	   DKSX Q 2 Bright
 	   stop
    }
 }

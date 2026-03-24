@@ -402,11 +402,14 @@ ACTOR ShrinkMissile
 	States
 	{
 		Spawn:
-			DKSR JKLM 1 Bright
-			Loop
+			DKSR JKLM 1 Bright Light("DUKE3D_SHRINKER_MISSILE_X1")
+			loop
 		Crash:
 		Death:
-			DKSR NOPQ 4 Bright
+			DKSR N 4 Bright Light("DUKE3D_SHRINKER_MISSILE_X2")
+			DKSR O 4 Bright Light("DUKE3D_SHRINKER_MISSILE_X3")
+			DKSR P 4 Bright Light("DUKE3D_SHRINKER_MISSILE_X4")
+			DKSR Q 4 Bright Light("DUKE3D_SHRINKER_MISSILE_X5")
 			Stop
 		XDeath:
 			TNT1 A 0 A_Explode(1,68,0)
