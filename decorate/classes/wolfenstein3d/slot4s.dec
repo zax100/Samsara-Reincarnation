@@ -163,9 +163,19 @@ actor SamsaraWolfenDualChaingunsAttackHandler : Trigger
         goto Pickup2
 
       Pickup1AttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"Pickup1AttackCoopImproved")
         TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuffThruGhostCoop",FBF_NOFLASH)
         TNT1 A 0 A_FireBullets(0,0,1,2,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,256)
         TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,128)
+        goto Pickup2
+
+      Pickup1AttackCoopImproved:
+        TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuffThruGhostCoop",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,320)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,256)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,192)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,128)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,64)
         goto Pickup2
 
       // Ammo checking/taking stuff (left)
@@ -188,9 +198,19 @@ actor SamsaraWolfenDualChaingunsAttackHandler : Trigger
         stop
 
       Pickup2AttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"Pickup2AttackCoopImproved")
         TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuffThruGhostCoop",FBF_NOFLASH)
         TNT1 A 0 A_FireBullets(0,0,1,2,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,256)
         TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,128)
+        stop
+
+      Pickup1AttackCoopImproved:
+        TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuffThruGhostCoop",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,320)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,256)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,192)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,128)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,64)
         stop
     }
 }
@@ -222,9 +242,19 @@ actor SamsaraWolfenLostDualChaingunsAttackHandler : Trigger
         goto Pickup2
 
       Pickup1AttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"Pickup1AttackCoopImproved")
         TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuffThruGhostCoop",FBF_NOFLASH)
         TNT1 A 0 A_FireBullets(0,0,1,2,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,256)
         TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,128)
+        goto Pickup2
+
+      Pickup1AttackCoopImproved:
+        TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuffThruGhostCoop",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,320)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,256)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,192)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,128)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,64)
         goto Pickup2
 
       // Ammo checking/taking stuff (left)
@@ -247,9 +277,19 @@ actor SamsaraWolfenLostDualChaingunsAttackHandler : Trigger
         stop
 
       Pickup2AttackCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"Pickup2AttackCoopImproved")
         TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuffThruGhostCoop",FBF_NOFLASH)
         TNT1 A 0 A_FireBullets(0,0,1,2,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,256)
         TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,128)
+        stop
+
+      Pickup1AttackCoopImproved:
+        TNT1 A 0 A_FireBullets(0,0,1,7,"BlankPuffThruGhostCoop",FBF_NOFLASH)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,320)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,256)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,192)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,128)
+        TNT1 A 0 A_FireBullets(0,0,1,1,"BlankPuffThruGhostBloodlessCoop",FBF_NOFLASH,64)
         stop
     }
 }

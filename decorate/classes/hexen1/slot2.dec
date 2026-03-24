@@ -110,7 +110,7 @@ actor HexenShockArrow2 : HexenShockArrow
     +THRUSPECIES
 }
 
-actor HexenShockArrow2Improved : HexenShockArrow2 {} // dunno what this is supposed to be
+actor HexenShockArrow2Improved : HexenShockArrow2 { Damage 24 }
 
 actor HexenElectroTrail
 {

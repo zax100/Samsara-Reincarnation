@@ -137,7 +137,7 @@ Wolfenstein 3D:
 -B.J. Blazkowicz (Original/Lost Episodes)-
 
 - With improved weapon balance, the Luger and machine gun's medium range bullet now deals 1-3 damage in PVE (decreased from 2-6 in multiples of 2).
-+ With improved weapon balance, the Luger and machine gun now fire three extra bullets in PVE that deal 1-3 damage while having a maximum range of 320 map units, 192 map units, and 64 map units, respectively.
++ With improved weapon balance, the Luger, machine gun, chaingun, and dual chainguns now fire three extra bullets in PVE that deal 1-3 damage while having a maximum range of 320 map units, 192 map units, and 64 map units, respectively.
 + Added hybrid pickup sprites for the Lost Episodes Mauser rifle and Spear of Destiny.
 * Fixed the Lost Episodes version of the rocket launcher projectile not having lights.
 + The flamethrower now deals 10-40 damage in multiples of 10 (increased from 8-32 in multiples of 8).
@@ -158,6 +158,7 @@ Hexen I:
 -Parias (Reincarnation)-
 
 ! Updated crusader's longbow pickup sprite to use blue fletchings on arrows.
++ With improved weapon balance, the crusader's longbow's projectiles now deal 24-192 damage in multiples of 25 (increased from 21-168).
 + With improved weapon balance, the bishop's shortsword's strong melee attack now deals 13-39 damage in multiples of 13 per puff in PVE (increased from 10-30 in multiples of 10).
 + With improved weapon balance, the bishop's shortsword's strong projectiles now deal 10 damage in PVE (increased from 8).
 + In PVE, the serpent staff's projectiles now deal 6-30 damage in multiples of 6 (vanilla) or 5-35 damage in multiples of 5 (improved) (increased from 5-25).
