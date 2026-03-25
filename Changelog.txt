@@ -740,7 +740,7 @@ The Adventures of Square:
 ! The ally cell phone is no longer granted with keyboard cheats if allies are disabled.
 ! The Christmas snow effect now spawns at 2048 map units around players and the snow density is halved.
 * Fixed *gasp not playing when acquiring invulnerability underwater while out of oxygen.
-! The map revealer pickup now has a new pickup sound.
+! The map revealer item now has a new pickup sound.
 
 --------------------------------------------------------------------------
 -----------------------------Reincarnation 2.2----------------------------
