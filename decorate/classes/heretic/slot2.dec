@@ -253,7 +253,7 @@ actor MaceFX1Coop : MaceFX12
     +THRUSPECIES
 }
 
-actor MaceFX1CoopImproved : MaceFX1Coop { Damage 4 }
+actor MaceFX1CoopImproved : MaceFX1Coop { Damage (random(3,8)*3) }
 
 actor MaceFX22 : MaceFX2 replaces MaceFX2
 {
@@ -285,7 +285,7 @@ actor MaceFX2Coop : MaceFX22
     +THRUSPECIES
 }
 
-actor MaceFX2CoopImproved : MaceFX2Coop { Damage 6 }
+actor MaceFX2CoopImproved : MaceFX2Coop { Damage (random(3,8)*4) }
 
 actor MaceFX32 : MaceFX3 replaces MaceFX3
 {

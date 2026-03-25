@@ -118,8 +118,8 @@ Fred Chexter (Chex Quest):
 
 Corvus (Heretic):
 
-+ With improved weapon balance, the firemace (unpowered)'s smaller projectile now deals 4-32 damage in multiples of 4 in PVE (increased from 3-24 in multiples of 3).
-+ With improved weapon balance, the firemace (unpowered)'s larger projectile now deals 6-48 damage in multiples of 6 in PVE (increased from 4-32 in multiples of 4).
++ With improved weapon balance, the firemace (unpowered)'s smaller projectile now deals 9-24 damage in multiples of 3 in PVE (increased from 3-24 in multiples of 3).
++ With improved weapon balance, the firemace (unpowered)'s larger projectile now deals 12-32 damage in multiples of 4 in PVE (increased from 4-32 in multiples of 4).
 + With improved weapon balance, the ethereal crossbow (unpowered)'s main projectile in PVE now moves at speed 40 (increased from 30), and it also now does 14-112 damage in multiples of 14 (increased from 12-96 in multiples of 12).
 + With improved weapon balance, the ethereal crossbow (unpowered)'s side projectiles now do 5-40 damage in multiples of 5 in PVE (increased from 4-32 in multiples of 4).
 - With vanilla weapon balance, the dragon claw (unpowered) now deals 4-32 damage in multiples of 4 in PVE (decreased from 4-11 multiplied between 1 and 3).
