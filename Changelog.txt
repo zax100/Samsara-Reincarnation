@@ -237,6 +237,8 @@ Duke Nukem 3D:
 
 Security Officer (Marathon):
 
+! Most of the Security Officer's Melee (and a few Missile) states now have lights that correspond to the different weapons used.
+* Fixed the bullet puff lights being overridden by Strifeguy's mauler (scatter mode) puff lights.
 + The KKV-7 SMG Flechette bullets now do 8-12 damage (vanilla) or 9-15 damage (improved) in PVE outside of water (increased from 8-10).
 ! With improved weapon balance, the WSTE-M5 Combat Shotgun's pellets now do 9-15 damage in PVE (changed from 10-12).
 + The fusion pistol primary fire bolts now deal 42-56 damage (vanilla) or 45-60 damage (improved; PVE only) (increased from 40-50).
@@ -244,6 +246,7 @@ Security Officer (Marathon):
 + When fired underwater, the fusion pistol now deals only the amount of splash damage the original attacks did to Security Officer as self-damage in the Marathon games.
 + With improved weapon balance, the MA-75B Assault Rifle primary bullets now deal 10-16 damage in PVE (increased from 9-15).
 + With improved weapon balance, the MA-75B Assault Rifle secondary grenades now deal 90-110 splash damage in PVE (increased from 80-100).
+* Fixed the SPNKR-XP SSM Launcher projectile and ONI-71 Wave Motion Cannon main secondary projectile not having a light outside of Doom.
 + The SPNKR-25 Auto Cannon now deals 140-168 damage in increments of 7 (increased from 130-150).
 + The main beams from the ONI-71 Wave Motion Cannon primary fire (all levels) now deal 210-280 damage (increased from 150-200).
 + In PVP, the explosion from the ONI-71 Wave Motion Cannon primary beam (level 2) now deals 175-245 splash damage if "Marathon: Full Radius Explosions" is disabled (increased from 125-200), and 105-210 splash damage if "Marathon: Full Radius Explosions" is enabled (increased from 100-150).

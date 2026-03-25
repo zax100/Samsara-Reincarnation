@@ -462,8 +462,8 @@ actor MarathonGrenade
     States
     {
       Spawn:
-        NADE AAAAAAAAAAAAAAA 1 Bright A_SpawnItemEx("MarathonGrenadeSmoke")
-        NADE A -1 Bright
+        NADE AAAAAAAAAAAAAAA 1 Bright Light("MNADE") A_SpawnItemEx("MarathonGrenadeSmoke")
+        NADE A -1 Bright Light("MNADE")
         stop
 
       Death:
@@ -475,7 +475,12 @@ actor MarathonGrenade
         goto DeathFinish
 
       DeathFinish:
-        XPLD ABCDEF 4 Bright
+        XPLD A 4 Bright Light("MNADE_X1")
+        XPLD B 4 Bright Light("MNADE_X2")
+        XPLD C 4 Bright Light("MNADE_X3")
+        XPLD D 4 Bright Light("MNADE_X4")
+        XPLD E 4 Bright //Light("MNADE_X5") // light doesn't exist
+        XPLD F 4 Bright //Light("MNADE_X6") // light doesn't exist
         stop
     }
 }

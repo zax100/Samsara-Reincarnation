@@ -183,7 +183,11 @@ actor MarathonAlienPuff
       Spawn:
       Death:
       Crash:
-        APUF ABCDE 2 Bright
+        APUF A 2 Bright Light("M1APUFF1")
+        APUF B 2 Bright Light("M1APUFF2")
+        APUF C 2 Bright Light("M1APUFF3")
+        APUF D 2 Bright Light("M1APUFF4")
+        APUF E 2 Bright
         stop
     }
 }

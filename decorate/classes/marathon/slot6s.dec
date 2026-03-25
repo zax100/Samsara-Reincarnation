@@ -232,8 +232,8 @@ actor SpnkrBeam
     States
     {
       Spawn:
-        RBPL L 4
-        RBPL L 1 //A_FadeOut(0.05)
+        RBPL L 4 Light("SPNKRBEAM")
+        RBPL L 1 Light("SPNKRBEAM") //A_FadeOut(0.05)
         stop
     }
 }

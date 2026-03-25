@@ -931,8 +931,12 @@ actor WMCRailLevel1 : FastProjectile
 
       Death:
         WCHT A 1 Bright A_ChangeFlag("NOTIMEFREEZE",false)
-        WCHT BCDEFGHIJK 1 Bright
-        WCHT LMNOPQR 2 Bright
+        WCHT BCDE 1 Bright Light("WMCGR_X1")
+        WCHT FGHI 1 Bright Light("WMCGR_X2")
+        WCHT JK 1 Bright Light("WMCGR_X3")
+        WCHT LM 2 Bright Light("WMCGR_X3")
+        WCHT NOPQ 2 Bright Light("WMCGR_X4")
+        WCHT R 2 Bright Light("WMCGR_X5")
         stop
     }
 }
@@ -1299,19 +1303,35 @@ actor WMCRailLevel3Baby : WMCRailLevel1
         TNT1 A 0 A_ChangeFlag("NOTIMEFREEZE",false)
         TNT1 A 0 A_Jump(256,"DeathFinish1","DeathFinish2","DeathFinish3","DeathFinish4")
       DeathFinish1:
-        WMCN BCDEF 3 Bright
+        WMCN B 3 Bright Light("WMCGR_X1")
+        WMCN C 3 Bright Light("WMCGR_X2")
+        WMCN D 3 Bright Light("WMCGR_X3")
+        WMCN E 3 Bright Light("WMCGR_X4")
+        WMCN F 3 Bright Light("WMCGR_X5")
         stop
 
       DeathFinish2:
-        WMCN GHIJK 3 Bright
+        WMCN G 3 Bright Light("WMCGR_X1")
+        WMCN H 3 Bright Light("WMCGR_X2")
+        WMCN I 3 Bright Light("WMCGR_X3")
+        WMCN J 3 Bright Light("WMCGR_X4")
+        WMCN K 3 Bright Light("WMCGR_X5")
         stop
 
       DeathFinish3:
-        WMCN LMNOP 3 Bright
+        WMCN L 3 Bright Light("WMCGR_X1")
+        WMCN M 3 Bright Light("WMCGR_X2")
+        WMCN N 3 Bright Light("WMCGR_X3")
+        WMCN O 3 Bright Light("WMCGR_X4")
+        WMCN P 3 Bright Light("WMCGR_X5")
         stop
 
       DeathFinish4:
-        WMCN QRSTU 3 Bright
+        WMCN Q 3 Bright Light("WMCGR_X1")
+        WMCN R 3 Bright Light("WMCGR_X2")
+        WMCN S 3 Bright Light("WMCGR_X3")
+        WMCN T 3 Bright Light("WMCGR_X4")
+        WMCN U 3 Bright Light("WMCGR_X5")
         stop
     }
 }
@@ -1454,8 +1474,8 @@ actor WMCGrenade
     States
     {
       Spawn:
-        WMCN AAAAAAAAAAAAAAA 1 Bright A_SpawnItemEx("MarathonGrenadeSmoke")
-        WMCN A -1 Bright
+        WMCN AAAAAAAAAAAAAAA 1 Bright Light("DOOMROCKET") A_SpawnItemEx("MarathonGrenadeSmoke")
+        WMCN A -1 Bright Light("DOOMROCKET")
         stop
 
       Death:
@@ -1517,19 +1537,35 @@ actor WMCGrenadeExplosion
       Spawn:
         TNT1 A 0 A_Jump(256,"Spawn1","Spawn2","Spawn3","Spawn4")
       Spawn1:
-        WMCN BCDEF 3 Bright
+        WMCN B 3 Bright Light("WMCGR_X1")
+        WMCN C 3 Bright Light("WMCGR_X2")
+        WMCN D 3 Bright Light("WMCGR_X3")
+        WMCN E 3 Bright Light("WMCGR_X4")
+        WMCN F 3 Bright Light("WMCGR_X5")
         stop
 
       Spawn2:
-        WMCN GHIJK 3 Bright
+        WMCN G 3 Bright Light("WMCGR_X1")
+        WMCN H 3 Bright Light("WMCGR_X2")
+        WMCN I 3 Bright Light("WMCGR_X3")
+        WMCN J 3 Bright Light("WMCGR_X4")
+        WMCN K 3 Bright Light("WMCGR_X5")
         stop
 
       Spawn3:
-        WMCN LMNOP 3 Bright
+        WMCN L 3 Bright Light("WMCGR_X1")
+        WMCN M 3 Bright Light("WMCGR_X2")
+        WMCN N 3 Bright Light("WMCGR_X3")
+        WMCN O 3 Bright Light("WMCGR_X4")
+        WMCN P 3 Bright Light("WMCGR_X5")
         stop
 
       Spawn4:
-        WMCN QRSTU 3 Bright
+        WMCN Q 3 Bright Light("WMCGR_X1")
+        WMCN R 3 Bright Light("WMCGR_X2")
+        WMCN S 3 Bright Light("WMCGR_X3")
+        WMCN T 3 Bright Light("WMCGR_X4")
+        WMCN U 3 Bright Light("WMCGR_X5")
         stop
     }
 }
@@ -1544,7 +1580,7 @@ actor WMCGrenade2 : WMCGrenade
     States
     {
       Spawn:
-        WMCN A -1 Bright
+        WMCN A -1 Bright Light("MNADE")
         stop
 
       Death:

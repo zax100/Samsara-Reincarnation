@@ -586,7 +586,7 @@ actor LauncherRocket
     States
     {
       Spawn:
-        RKET A 1 Bright A_SpawnItem("MarathonRocketSmoke")
+        RKET A 1 Bright Light("DOOMROCKET") A_SpawnItem("MarathonRocketSmoke")
         loop
 
       Death:
@@ -597,7 +597,10 @@ actor LauncherRocket
         goto DeathFinish
 
       DeathFinish:
-        RHIT ABCD 5 Bright
+        RHIT A 5 Bright Light("SPNKR_X1")
+        RHIT B 5 Bright Light("SPNKR_X2")
+        RHIT C 5 Bright Light("SPNKR_X3")
+        RHIT D 5 Bright Light("SPNKR_X4")
         stop
     }
 }

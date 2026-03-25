@@ -245,11 +245,14 @@ actor EnforcerShot
     States
     {
       Spawn:
-        PLAS ABCDEF 2 Bright
+        PLAS ABCDEF 2 Bright Light("M2AWSHOT")
         loop
 
       Death:
-        PHIT ABCD 2 Bright
+        PHIT A 2 Bright Light("M2AWH_X1")
+        PHIT B 2 Bright Light("M2AWH_X2")
+        PHIT C 2 Bright Light("M2AWH_X3")
+        PHIT D 2 Bright Light("M2AWH_X4")
         stop
     }
 }

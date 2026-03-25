@@ -197,18 +197,36 @@ actor MaraFlameShot
     States
     {
       Spawn:
-        MFLS A 1 Bright
-        MFLS BCDEFG 1 Bright A_GiveInventory("ToztCounter")
+        MFLS A 1 Bright Light("TOZT1")
+        MFLS B 1 Bright /*Light("TOZT2")*/ A_GiveInventory("ToztCounter")
+        MFLS C 1 Bright Light("TOZT3") A_GiveInventory("ToztCounter")
+        MFLS D 1 Bright /*Light("TOZT4")*/ A_GiveInventory("ToztCounter")
+        MFLS E 1 Bright Light("TOZT5") A_GiveInventory("ToztCounter")
+        MFLS F 1 Bright /*Light("TOZT6")*/ A_GiveInventory("ToztCounter")
+        MFLS G 1 Bright Light("TOZT7") A_GiveInventory("ToztCounter")
         stop
 
       Death:
-        TNT1 A 0 A_JumpIfInventory("ToztCounter",0,12)
-        TNT1 A 0 A_JumpIfInventory("ToztCounter",5,10)
-        TNT1 A 0 A_JumpIfInventory("ToztCounter",4,8)
-        TNT1 A 0 A_JumpIfInventory("ToztCounter",3,6)
-        TNT1 A 0 A_JumpIfInventory("ToztCounter",2,4)
-        TNT1 A 0 A_JumpIfInventory("ToztCounter",1,2)
-        MFLS ABCDEFG 1 Bright
+        TNT1 A 0 A_JumpIfInventory("ToztCounter",0,"Death7")
+        TNT1 A 0 A_JumpIfInventory("ToztCounter",5,"Death6")
+        TNT1 A 0 A_JumpIfInventory("ToztCounter",4,"Death5")
+        TNT1 A 0 A_JumpIfInventory("ToztCounter",3,"Death4")
+        TNT1 A 0 A_JumpIfInventory("ToztCounter",2,"Death3")
+        TNT1 A 0 A_JumpIfInventory("ToztCounter",1,"Death2")
+      Death1:
+        MFLS A 1 Bright Light("TOZT1")
+      Death2:
+        MFLS B 1 Bright //Light("TOZT2")
+      Death3:
+        MFLS C 1 Bright Light("TOZT3")
+      Death4:
+        MFLS D 1 Bright //Light("TOZT4")
+      Death5:
+        MFLS E 1 Bright Light("TOZT5")
+      Death6:
+        MFLS F 1 Bright //Light("TOZT6")
+      Death7:
+        MFLS G 1 Bright Light("TOZT7")
         stop
     }
 }
