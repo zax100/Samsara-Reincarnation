@@ -18,12 +18,22 @@ Actor SamsaraHealPack1_Square3 : HealPack1 replaces BadPie { }
 Actor SamsaraHealPack2_Square : HealPack2 replaces Lemonade { }
 Actor SamsaraHealPack2_Square2 : HealPack2 replaces Pie { }
 Actor SamsaraHealPack3_Square2 : HealPack2 replaces BadFizzoPop { }
-Actor SamsaraSuperHealth_Square : SuperHealth replaces CircoolAid { }
-Actor SamsaraSuperHealth_Square2 : SuperHealth replaces HappySphere { }
-Actor SamsaraMegaPack_Square : MegaPack replaces SillySphere { }
+Actor SamsaraSuperHealth_Square : SuperHealth replaces CircoolAid { } // original item did not have +COUNTITEM
+Actor SamsaraSuperHealth_Square2 : SuperHealth replaces HappySphere { +COUNTITEM }
+Actor SamsaraMegaPack_Square : MegaPack replaces SillySphere { +COUNTITEM }
 Actor SamsaraMegaPack_Square2 : MegaPack replaces SillySphereNotItem { }
-Actor BadCircoolAid_Samsara : RandomSpawner replaces BadCircoolAid { DropItem "HealPack1", 2, 256 }
-Actor FizzoPop_Samsara : RandomSpawner replaces FizzoPop { DropItem "HealPack1", 2, 256 }
+
+Actor BadCircoolAid_Samsara replaces BadCircoolAid
+{
+    States
+    {
+      Spawn:
+        TNT1 AA 0 NoDelay A_DropItem("HealPack1")
+        stop
+    }
+}
+
+Actor FizzoPop_Samsara : BadCircoolAid_Samsara replaces FizzoPop { }
 
 Actor SamsaraArmorPack1_Square : ArmorPack1 replaces ArmorCardboard { }
 Actor SamsaraArmorPack2_Square : ArmorPack2 replaces ArmorWood { }
@@ -72,13 +82,13 @@ Actor SamsaraSmallAmmoCombo_Square2 : SamsaraSmallAmmoCombo_Square replaces Ammo
 
 Actor SamsaraAmmoBackpack_Square : AmmoBackpack replaces SquareBackpack { }
 
-Actor SamsaraFlightPickup_Square : SamsaraFlightPickup replaces HolySphere { }
-Actor SamsaraLesserTome_Square : SamsaraLesserTome replaces DevilSphere { }
-Actor SamsaraSpeedBooster_Square : SamsaraSpeedBooster replaces Powerzade { }
+Actor SamsaraFlightPickup_Square : SamsaraFlightPickup replaces HolySphere { +COUNTITEM }
+Actor SamsaraLesserTome_Square : SamsaraLesserTome replaces DevilSphere { +COUNTITEM }
+Actor SamsaraSpeedBooster_Square : SamsaraSpeedBooster replaces Powerzade { +COUNTITEM }
 Actor SamsaraSpeedBooster_Square2 : SamsaraSpeedBooster replaces PowerzadeNotItem { }
 Actor SamsaraBioSuit_Square : BioSuit replaces EnviroSuit { }
-Actor SamsaraInvulnPowerup_Square : InvulnPowerup replaces HotSauce { }
-Actor SamsaraAllmap_Square : SamsaraAllmap replaces Locationator { }
+Actor SamsaraInvulnPowerup_Square : InvulnPowerup replaces HotSauce { +COUNTITEM }
+Actor SamsaraAllmap_Square : SamsaraAllmap replaces Locationator { +COUNTITEM }
 
 // Until a new powerup can be made for this specific case, I'll just re-use the fish tanks
 actor FishTank_Samsara : FishTank replaces FishTank 2030 { Powerup.Color "b0 b0 b0" 0.2 SpawnID 78 }

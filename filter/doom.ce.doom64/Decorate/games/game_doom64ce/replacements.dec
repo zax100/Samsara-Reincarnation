@@ -160,11 +160,11 @@ actor D64REC09Hack : CustomInventory 261
 	}
 }
 
-actor D64Soulsphere_Samsara : SuperHealth replaces D64Soulsphere { SpawnID 25 }
+actor D64Soulsphere_Samsara : SuperHealth replaces D64Soulsphere { SpawnID 25 +COUNTITEM }
 actor D64HellPotion_Samsara : HealPack0Dump replaces D64HellPotion { SpawnID 221 }
-actor D64Radar_Samsara : SamsaraAllmap replaces D64Radar { SpawnID 220 }
-actor D64UnseerSphere_Samsara : SamsaraFullInvisibility replaces D64UnseerSphere {}
-actor D64DoomsdaySphere_Samsara : InvulnPowerup replaces D64DoomsdaySphere {}
+actor D64Radar_Samsara : SamsaraAllmap replaces D64Radar { SpawnID 220 +COUNTITEM }
+actor D64UnseerSphere_Samsara : SamsaraFullInvisibility replaces D64UnseerSphere { +COUNTITEM }
+actor D64DoomsdaySphere_Samsara : InvulnPowerup replaces D64DoomsdaySphere { +COUNTITEM }
 
 actor D64UnmakerUpgrade1_Samsara : CustomInventory replaces D64UnmakerUpgrade1
 {
@@ -323,4 +323,4 @@ actor D64UnmakerUpgrade4_Samsara : CustomInventory replaces D64UnmakerUpgrade4
 	}
 }
 
-actor D64UnmakerUpgrade5_Samsara : MegaPack replaces D64UnmakerUpgrade5 {}
+actor D64UnmakerUpgrade5_Samsara : MegaPack replaces D64UnmakerUpgrade5 { +COUNTITEM }
