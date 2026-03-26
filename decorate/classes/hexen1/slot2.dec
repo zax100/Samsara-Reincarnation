@@ -384,26 +384,9 @@ actor FrostMissile2 : FrostMissile
     }
 }
 
-actor FrostMissile2_2 : FrostMissileDM2
-{
-    Damage (random(1,4))
-    Species "Player"
-    +THRUSPECIES
-}
-
-actor FrostMissile2_3 : FrostMissileDM3
-{
-    Damage (random(1,4))
-    Species "Player"
-    +THRUSPECIES
-}
-
-actor FrostMissile2_4 : FrostMissileDM4
-{
-    Damage (random(1,4))
-    Species "Player"
-    +THRUSPECIES
-}
+actor FrostMissile2_2 : FrostMissile2 { Speed 23 }
+actor FrostMissile2_3 : FrostMissile2 { Speed 21 }
+actor FrostMissile2_4 : FrostMissile2 { Speed 19 }
 
 actor FrostMissileEnemy : FrostMissile // dark side version
 {
@@ -430,9 +413,9 @@ actor FrostMissileEnemy : FrostMissile // dark side version
     }
 }
 
-actor FrostMissileEnemy_2 : FrostMissileDM2 { Damage (random(1,4)) }
-actor FrostMissileEnemy_3 : FrostMissileDM3 { Damage (random(1,4)) }
-actor FrostMissileEnemy_4 : FrostMissileDM4 { Damage (random(1,4)) }
+actor FrostMissileEnemy_2 : FrostMissileEnemy { Speed 23 }
+actor FrostMissileEnemy_3 : FrostMissileEnemy { Speed 21 }
+actor FrostMissileEnemy_4 : FrostMissileEnemy { Speed 19 }
 
 // Baratus
 
