@@ -80,6 +80,7 @@ heretic/hornrodpowshoot		hrnpow
 heretic/hornrodpowhit		ramphit
 heretic/hornrodpowrain      ramrain
 weapons/maceshoot			lobsht
+$alias weapons/macepowshoot weapons/maceshoot
 weapons/macebounce			lobbnce
 weapons/macestop			lobpow
 weapons/maceexplode			phohit
