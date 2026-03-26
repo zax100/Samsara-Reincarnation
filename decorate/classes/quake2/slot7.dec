@@ -278,8 +278,8 @@ actor BFG10KBall : BFGBall
         goto DeathFinish
 
       DeathExplodeBig:
-        BGE1 C 0 Bright A_Explode(500,1000,0)
         BGE1 C 0 Bright A_RadiusGive("BFG10KExtraSpawnerCoop",1000,RGF_MONSTERS|RGF_OBJECTS)
+        BGE1 C 0 Bright A_Explode(500,1000,0)
         //BGE1 C 0 Bright A_BFGSpray("BFG10KExtra",40,20)
         goto DeathFinish
 
@@ -408,8 +408,8 @@ actor BFG10KBallDM : BFG10KBall
         goto DeathFinish
 
       DeathExplodeBig:
+        BGE1 C 0 Bright A_RadiusGive("BFG10KExtraSpawner",1000,RGF_PLAYERS|RGF_MONSTERS|RGF_OBJECTS|RGF_NOTARGET)
         BGE1 C 0 Bright A_Explode(200,1000,0)
-        BGE1 C 0 Bright A_RadiusGive("BFG10KExtraSpawner",1000,RGF_PLAYERS|RGF_MONSTERS|RGF_OBJECTS)
         //BGE1 C 0 Bright A_BFGSpray("BFG10KExtra",40,20)
         goto DeathFinish
     }

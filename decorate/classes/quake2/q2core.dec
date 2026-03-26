@@ -545,7 +545,7 @@ actor Q2WeaponFlash : Q2EffectBase
     States
     {
       Spawn:
-        TNT1 A 2
+        TNT1 A 2 Light("Q2WeaponFlash")
         stop
     }
 }

@@ -6,8 +6,6 @@ FlickerLight Q2WeaponFlash
 	Chance 0.5
 }
 
-Object Q2WeaponFlash { Frame TNT1A { Light Q2WeaponFlash } }
-
 FlickerLight BlasterProjectile
 {
 	Color 0.75 0.75 0.0
@@ -84,55 +82,62 @@ object BFG10kBall
     frame BGS1A { light Q2BFGBALL }
     frame BGS1B { light Q2BFGBALL }
 
-    frame BFE1A { light Q2BFGBALL_X1 }
-    frame BFE1B { light Q2BFGBALL_X2 }
-    frame BFE1C { light Q2BFGBALL_X3 }
-    frame BFE1D { light Q2BFGBALL_X1 }
-    frame BFE1E { light Q2BFGBALL_X4 }
-    frame BFE1F { light Q2BFGBALL_X5 }
+    frame BGE1A { light Q2BFGBALL_X1 }
+    frame BGE1B { light Q2BFGBALL_X2 }
+    frame BGE1C { light Q2BFGBALL_X3 }
+    frame BGE1D { light Q2BFGBALL_X1 }
+    frame BGE1E { light Q2BFGBALL_X4 }
+    frame BGE1F { light Q2BFGBALL_X5 }
 }
 /*object BFG10kBall2
 {
     frame BGS1A { light Q2BFGBALL }
     frame BGS1B { light Q2BFGBALL }
 
-    frame BFE1A { light Q2BFGBALL_X1 }
-    frame BFE1B { light Q2BFGBALL_X2 }
-    frame BFE1C { light Q2BFGBALL_X3 }
-    frame BFE1D { light Q2BFGBALL_X1 }
-    frame BFE1E { light Q2BFGBALL_X4 }
-    frame BFE1F { light Q2BFGBALL_X5 }
+    frame BGE1A { light Q2BFGBALL_X1 }
+    frame BGE1B { light Q2BFGBALL_X2 }
+    frame BGE1C { light Q2BFGBALL_X3 }
+    frame BGE1D { light Q2BFGBALL_X1 }
+    frame BGE1E { light Q2BFGBALL_X4 }
+    frame BGE1F { light Q2BFGBALL_X5 }
 }*/
 object BFG10kBall_Coop
 {
     frame BGS1A { light Q2BFGBALL }
     frame BGS1B { light Q2BFGBALL }
 
-    frame BFE1A { light Q2BFGBALL_X1 }
-    frame BFE1B { light Q2BFGBALL_X2 }
-    frame BFE1C { light Q2BFGBALL_X3 }
-    frame BFE1D { light Q2BFGBALL_X1 }
-    frame BFE1E { light Q2BFGBALL_X4 }
-    frame BFE1F { light Q2BFGBALL_X5 }
+    frame BGE1A { light Q2BFGBALL_X1 }
+    frame BGE1B { light Q2BFGBALL_X2 }
+    frame BGE1C { light Q2BFGBALL_X3 }
+    frame BGE1D { light Q2BFGBALL_X1 }
+    frame BGE1E { light Q2BFGBALL_X4 }
+    frame BGE1F { light Q2BFGBALL_X5 }
 }
 object BFG10kBallDM
 {
     frame BGS1A { light Q2BFGBALL }
     frame BGS1B { light Q2BFGBALL }
 
-    frame BFE1A { light Q2BFGBALL_X1 }
-    frame BFE1B { light Q2BFGBALL_X2 }
-    frame BFE1C { light Q2BFGBALL_X3 }
-    frame BFE1D { light Q2BFGBALL_X1 }
-    frame BFE1E { light Q2BFGBALL_X4 }
-    frame BFE1F { light Q2BFGBALL_X5 }
+    frame BGE1A { light Q2BFGBALL_X1 }
+    frame BGE1B { light Q2BFGBALL_X2 }
+    frame BGE1C { light Q2BFGBALL_X3 }
+    frame BGE1D { light Q2BFGBALL_X1 }
+    frame BGE1E { light Q2BFGBALL_X4 }
+    frame BGE1F { light Q2BFGBALL_X5 }
 }
-object BFGExtra
+object BFG10KExtra
 {
-    frame BFE2A { light Q2BFGBALL    }
-    frame BFE2B { light Q2BFGBALL_X1 }
-    frame BFE2C { light Q2BFGBALL_X4 }
-    frame BFE2D { light Q2BFGBALL_X5 }
+    frame BGE2A { light Q2BFGBALL    }
+    frame BGE2B { light Q2BFGBALL_X1 }
+    frame BGE2C { light Q2BFGBALL_X4 }
+    frame BGE2D { light Q2BFGBALL_X5 }
+}
+object BFG10KExtraCoop
+{
+    frame BGE2A { light Q2BFGBALL    }
+    frame BGE2B { light Q2BFGBALL_X1 }
+    frame BGE2C { light Q2BFGBALL_X4 }
+    frame BGE2D { light Q2BFGBALL_X5 }
 }
 FlickerLight GreenBlaster
 {
