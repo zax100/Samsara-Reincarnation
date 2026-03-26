@@ -175,7 +175,7 @@ Hexen I:
 + The frost shards' melee attack now deals 90-115 damage (increased from 70-95).
 * Fixed the frost shards' melee attack being affected by time freeze.
 + The frost shards' frost crystals now do 1-6 damage in PVP (increased from 1-4).
-* Fixed the frost shards' supplemental frost crystals doing the wrong amount of damage; they should now deal the same amount of damage as the centermost frost crystal.
+* Fixed the frost shards' slower frost crystals doing the wrong amount of damage; they should now deal the same amount of damage as the fastest frost crystals.
 - In PVP or PVE (vanilla), the blight shock's projectiles now deal 1-6 direct damage (decreased from 1-8).
 + The Bloodscourge's projectiles now home in more aggressively.
 + The Bloodscourge now has its special ripper properties from Hexen, meaning that it rips all enemies that are not boss monsters. This also applies to Classic Parias' Bloodscourge.
