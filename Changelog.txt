@@ -597,6 +597,7 @@ Bitterman (Quake II):
 ! Bitterman now has a new Compendium portrait.
 * Fixed Bitterman playing the wrong sound when getting crushed.
 * Fixed a possible crash when getting crushed as Bitterman.
+* Fixed the BFG10K projectile not animating correctly.
 ! Instead of a convoluted layered explosion, the BFG10K projectile now deals 200 splash damage in a radius of 200 map units, as per Quake II. However, it now deals self-damage, also as per Quake II.
 + The BFG10K projectile now calls a second explosion when the player is in line of sight of the projectile as it explodes, similar to how the original game's super explosion worked. This explosion deals 200 splash damage (PVP) or 500 splash damage (PVE) in a radius of 1000 map units.
 * Fixed lights being called incorrectly for the BFG10K projectile.
