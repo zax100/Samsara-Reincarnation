@@ -1,4 +1,0 @@
-object StrifeEnergyPod2
-{
-    frame BRY1B { light ENERGY1 }
-}
