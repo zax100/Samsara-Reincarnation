@@ -275,7 +275,7 @@ actor DestructinatorBrain_Samsara : SquareMonster_Samsara2 replaces Destructinat
 
 ACTOR MiniDestructinator_Samsara : SquareMonster_Samsara2 replaces MiniDestructinator
 {
-	Health 1500
+	Health 1000 // was 1500
 	Height 88
 	Mass 2000
 	Radius 24

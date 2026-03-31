@@ -57,7 +57,7 @@ actor Pyramine_Samsara : SquareMonster_Samsara2 replaces Pyramine
 		PYRM B 4 A_Chase
 		Loop
 	Melee:
-		PYRM C -1 A_Die
+		PYRM C -1 A_Die("Massacre")
 		Loop
 	Missile:
 		PYRM B 0 A_FaceTarget
@@ -95,6 +95,7 @@ actor Pyramine_Samsara : SquareMonster_Samsara2 replaces Pyramine
 		Goto SeeLoop
 	Death:
 		PYRM C 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
+	Death.Massacre:
 		PYRM C 0 A_Scream
 		PYRM C 0 Bright A_SpawnItemEx("CrystalGibSpawner")
 		PYRM C 0 Bright A_SpawnItemEx("PyramineExplosion")
