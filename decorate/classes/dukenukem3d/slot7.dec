@@ -3,6 +3,7 @@ actor Duke64HoldFlash : Boolean {}
 actor Duke64PlasmaCharge : Counter { Inventory.MaxAmount 150 }
 actor SamsaraDuke64PlasmaCannonLoopSoundCheck : Boolean {}
 actor SamsaraDuke64PlasmaCannonHoldState : Counter { Inventory.MaxAmount 4 }
+actor SamsaraDuke64PlasmaCannonChargedFlashTargetHack : Boolean {}
 
 actor "Devastator Weapon" : DukeWeapon
 {
@@ -2665,10 +2666,9 @@ actor Duke64PlasmaChargedCoop : Duke64PlasmaShotCoop
 		TNT1 A 0 A_Explode(878,330,0,0,165)
 	DeathEffects:
 		TNT1 A 0 A_PlaySound("duke64/plasmaexplode", 6, 1.0, 0, ATTN_NONE)
-		TNT1 A 0 A_JumpIfCloser(15000,1)
-		goto DeathFinish
-		TNT1 A 0 A_GiveToTarget("Duke64PlasmaChargedFlash")
-		goto DeathFinish
+        TNT1 A 0 A_GiveInventory("SamsaraDuke64PlasmaCannonChargedFlashTargetHack",1,AAPTR_TARGET)
+		TNT1 A 0 A_RadiusGive("Duke64PlasmaChargedFlashCoop",15000,RGF_PLAYERS)
+        TNT1 A 0 A_TakeInventory("SamsaraDuke64PlasmaCannonChargedFlashTargetHack",0x7FFFFFFF,0,AAPTR_TARGET)
 	DeathFinish:
 		TNT1 A 0 A_SpawnItemEx("Duke64PlasmaChargedFireRing",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
 		TNT1 A 0 A_SpawnItemEx("Duke64PlasmaChargedFireBall",0,0,0,0,0,0,0,SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
@@ -2817,6 +2817,16 @@ actor Duke64PlasmaChargedFlash : Trigger
     {
       Pickup:
 		TNT1 A 0 A_SetBlend("White",1,75)
+		stop
+    }
+}
+
+actor Duke64PlasmaChargedFlashCoop : Duke64PlasmaChargedFlash
+{
+    States
+    {
+      Pickup:
+        TNT1 A 0 A_JumpIfInventory("SamsaraDuke64PlasmaCannonChargedFlashTargetHack",1,"Super::Pickup")
 		stop
     }
 }

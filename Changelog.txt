@@ -231,6 +231,7 @@ Duke Nukem 3D:
 -Duke Nukem (Duke Nukem 64)-
 
 * Fixed the pain and shrinking animations not showing properly.
+* Fixed the plasma cannon charged projectile flash effect affecting the user behind cover in PVE.
 
 -All-
 
@@ -676,6 +677,10 @@ Sarge (Quake III Arena):
 + The plasma gun bolts now force splash damage against enemies.
 - The BFG10K now takes 5 rounds of Ammo 4 to fire (increased from 3).
 + The BFG10K blasts now deal their splash damage across 160 map units (increased from 100).
+
+Pyro-GX (Descent):
+
+* Fixed the flash missiles flash effect affecting the user behind cover in PVE.
 
 JC Denton (Deus Ex):
 
