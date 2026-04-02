@@ -81,7 +81,7 @@ Doom:
 ! The B.F.G. 9000 (powered) now deals 20-160 direct damage in multiples of 20 (average 90; changed from 100).
 - The B.F.G. 9000 (powered) now only deals 128 splash damage in a consistent radius (decreased from 192), has no smaller BFG spray, and deals self-damage.
 - With improved weapon balance, the pyro cannon lingering fire now deals 4 splash damage (decreased from 5). It also cannot put actors in their Pain state in every frame except the first.
-- The pyro cannon (powered) now mushrooms into 3 pyro shots (decreased from 4).
+- The pyro cannon (powered) now mushrooms into 3 pyro shots (decreased from 4). (KNOWN ISSUE: It actually mushrooms into 1 due to A_Mushroom's strange handling.)
 - The devastator (powered) now deals 300-400 direct hit damage (decreased from 400-800), and deals a total of 576 splash damage on impact (decreased from 800).
 - The devastator (powered)'s damaging trail now deals 96 splash damage (decreased from 112).
 ! The homing rocket launcher (powered) has been reworked; it now fires clusters of six rockets that do 8-64 damage in multiples of 8 each with an explosion of 64 splash damage across 96 map units.
@@ -242,8 +242,8 @@ Security Officer (Marathon):
 * Fixed the bullet puff lights being overridden by Strifeguy's mauler (scatter mode) puff lights.
 + The KKV-7 SMG Flechette bullets now do 8-12 damage (vanilla) or 9-15 damage (improved) in PVE outside of water (increased from 8-10).
 ! With improved weapon balance, the WSTE-M5 Combat Shotgun's pellets now do 9-15 damage in PVE (changed from 10-12).
-+ The fusion pistol primary fire bolts now deal 42-56 damage (vanilla) or 45-60 damage (improved; PVE only) (increased from 40-50).
-+ The fusion pistol secondary fire bolts now deal 105-140 damage (vanilla) or 120-150 damage (improved; PVE only) (increased from 90-120).
++ The fusion pistol primary fire bolts now deal 42-56 damage (vanilla) or 45-60 damage (improved; PVE only) (increased from 40-50). (KNOWN ISSUE: Improved weapon balance currently does not apply to the underwater projectile.)
++ The fusion pistol secondary fire bolts now deal 105-140 damage (vanilla) or 120-150 damage (improved; PVE only) (increased from 90-120). (KNOWN ISSUE: Improved weapon balance currently does not apply to the underwater projectile.)
 + When fired underwater, the fusion pistol now deals only the amount of splash damage the original attacks did to Security Officer as self-damage in the Marathon games.
 + With improved weapon balance, the MA-75B Assault Rifle primary bullets now deal 10-16 damage in PVE (increased from 9-15).
 + With improved weapon balance, the MA-75B Assault Rifle secondary grenades now deal 90-110 splash damage in PVE (increased from 80-100).
@@ -295,14 +295,14 @@ Rise of the Triad:
 
 * Fixed the landing attack taking effect when dead.
 + With improved weapon balance, the pistol now does 15 damage in PVE (increased from 13).
-! The double pistols have been moved from a slot 2 weapon to a slot 1 weapon. Subsequent pickups also now give 10 bazooka missiles instead of 10 heat seeker missiles.
+! The double pistols have been moved from a slot 2 weapon to a slot 1 weapon. Subsequent pickups also now give 10 bazooka missiles instead of 10 heat seeker missiles. (KNOWN ISSUE: The hybrid pickup sprites have not been updated yet.)
 + With improved weapon balance, the double pistols now does 15 damage in PVE (increased from 13).
-! The MP40 has been moved from a slot 4 weapon to a slot 2 weapon. Subsequent pickups also now give 6 heat seeker missiles instead of 6 bazooka missiles.
+! The MP40 has been moved from a slot 4 weapon to a slot 2 weapon. Subsequent pickups also now give 6 heat seeker missiles instead of 6 bazooka missiles. (KNOWN ISSUE: The hybrid pickup sprites have not been updated yet.)
 + With improved weapon balance, the MP40 now does 12 damage in PVE (increased from 10).
 + The seeking behavior of heat seeker missiles has been slightly improved.
 - The heat seeker now deals 48 splash damage (decreased from 50).
 + The heat seeker and bazooka now deal their splash damage across 64 map units (increased from 48).
-! The bazooka has been moved from a slot 1 weapon to a slot 4 weapon.
+! The bazooka has been moved from a slot 1 weapon to a slot 4 weapon. (KNOWN ISSUE: The hybrid pickup sprites have not been updated yet.)
 - Bazooka ammo capacity is now 50 (without backpack)/100 (with backpack) (decreased from 100 (without backpack)/200 (with backpack)).
 + The bazooka now deals 56 splash damage (increased from 55).
 - The M60 now deals 10 damage (decreased from 15).
@@ -310,7 +310,7 @@ Rise of the Triad:
 - Drunk missile ammo capacity is now 50 (without backpack)/100 (with backpack) (decreased from 60 (without backpack)/120 (with backpack)).
 + The drunk missile launcher now deals 32 splash damage (increased from 30).
 + The drunk missile launcher now deals its splash damage across 48 map units (increased from 40).
-! The split missile has been moved from the second unique weapon to a slot 6S weapon.
+! The split missile has been moved from the second unique weapon to a slot 6S weapon. (KNOWN ISSUE: The hybrid pickup sprites have not been updated yet. This also applies to the unique pickup hybrid sprites.)
 - Split missile ammo capacity is now 25 (without backpack)/50 (with backpack) (decreased from 100 (without backpack)/200 (with backpack)).
 - The split missile now gives 5 split missiles on pickup (decreased from 10).
 - The flamewall's flames now deal 0.5x damage to bosses.
@@ -346,7 +346,7 @@ Blake Stone (Blake Stone):
 + With improved weapon balance, the Rapid Assault Weapon's long range bullet in PVE now deals 8-24 damage in multiples of 8 (increased from 6-18 in multiples of 6).
 - With improved weapon balance, the Rapid Assault Weapon's medium range bullet in PVE now deals 4-12 damage in multiples of 4 (decreased from 12-36 in multiples of 12).
 + With improved weapon balance, the Rapid Assault Weapon now fires four extra bullets in PVE that deal 4-12 damage in multiples of 4 while having a maximum range of 384 map units, 192 map units, 128 map units, and 64 map units, respectively.
-+ Originally planned as a new slot 6 weapon during Samsara Reincarnation's development (which would've moved and removed some equipment in the process), the Gatling Fusion Devastator has been added as the slot 4S weapon!
++ Originally planned as a new slot 6 weapon during Samsara Reincarnation's development (which would've moved and removed some equipment in the process), the Gatling Fusion Devastator has been added as the slot 4S weapon! (KNOWN ISSUE: The Aliens of Gold version currently has no sprites, using Wolfenstein 3D's chaingun sprites as a placeholder.)
 ! The Ammo Recharge Pack now gives ammo for vanilla Doom and Chex Quest weapons if they are selected, since custom maps can use ACS to give and/or select them.
 
 Caleb (Blood):
@@ -510,7 +510,7 @@ Kyle Katarn (Star Wars: Dark Forces):
 + The Concussion Rifle projectile's full splash damage now extends all the way to the edge of the radius.
 - The Concussion Rifle's tracers are now called in a radius of 196 map units in PVE (decreased from 256).
 - The Concussion Rifle's tracers now hit for 30 splash damage (decreased from 39-51).
-* Fixed the Concussion Rifle's tracers spawning on the user in PVP.
+* Fixed the Concussion Rifle's tracers spawning on the user in PVP. (KNOWN ISSUE: The projectile itself still detonates under the user when fired in PVP.)
 + The Czerka Adventurer now deals 120 damage (increased from 75-80 in PVP and 110-120 in PVE).
 - The Assault Cannon primary normal firing animation tics have been increased (from 7 to 8 passing refire, 9 to 10 failing refire).
 + The Assault Cannon's primary projectile now deals 135 damage (increased from 90-110, average 100).
@@ -573,7 +573,7 @@ Half-Life:
 - The .357 Python now deals 80 damage (decreased from 100).
 - The Desert Eagle now deals 70 damage (decreased from 88).
 - The MP5 primary fire now deals 10 damage per bullet (decreased from 13).
-+ The Uzi from Sven Co-op 3.0 has been added as the slot 4S weapon! However, due to the size of the converted model, the ability to dual wield is currently not available.
++ The Uzi from Sven Co-op 3.0 has been added as the slot 4S weapon! However, due to the size of the converted model, the ability to dual wield is currently not available. (KNOWN ISSUE: The weapon icons for the class-based fullscreen HUDs and original hotkey system are not implemented at this time, using the MP5 icons as placeholders.)
 - The RPG now deals 240 splash damage (decreased from 300).
 * Fixed Ammo 3 not being refilled for acquiring subsequent hand grenades in Strife.
 - Headshots no longer deal additional damage towards monsters that have 1000 or more health.
