@@ -332,7 +332,10 @@ actor MarathonKnifePuff : BulletPuffSettingless
     States
     {
       Crash:
-        MPFF ABCDEFG 2 Bright
+        MPFF A 2 Bright Light("MBPUFF1")
+        MPFF B 2 Bright Light("MBPUFF2")
+        MPFF C 2 Bright Light("MBPUFF3")
+        MPFF DEFG 2 Bright
         stop
 
       Melee:

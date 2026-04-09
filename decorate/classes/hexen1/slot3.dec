@@ -305,6 +305,7 @@ actor ClericSwordSlash
 
       Death:
         TNT1 A 0 A_Explode(24,52,0,false,24)
+      DeathFinish:
         TNT1 A 0 A_SpawnItemEx("ClericSwordWallPuff")
         TNT1 A 0 A_PlaySound("SpiritAttack",CHAN_VOICE)
         SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.15)
@@ -318,7 +319,39 @@ actor ClericSwordSlashCoop : ClericSwordSlash
     +THRUSPECIES
 }
 
-actor ClericSwordSlashCoopImproved : ClericSwordSlashCoop { Damage (10) }
+actor ClericSwordSlashCoopImproved : ClericSwordSlashCoop
+{
+    Damage (10)
+    States
+    {
+      Spawn:
+        //Gonna have to do this the ugly way, huh?
+        SPIR P 0 Bright Light("CBISHOPSWORD")
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail2",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail3",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail4",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail5",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail6",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail7",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail8",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail9",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail10",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(10,24,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        TNT1 A 0 A_SpawnItemEx("ClericSwordSlashTrail11",cos(velx)*-8,0,sin(velz)*-8,0,0,0,0,SXF_NOCHECKPOSITION) TNT1 A 0 A_Explode(20,52,0,false,24) SPIR P 1 Bright Light("CBISHOPSWORD") A_FadeOut(0.075)
+        stop
+
+      Death:
+        TNT1 A 0 A_Explode(30,52,0,false,24)
+        goto DeathFinish
+    }
+}
 
 actor ClericSwordSlashTrail
 {

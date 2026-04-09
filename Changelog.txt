@@ -1,4 +1,28 @@
 ----------------------------------------------------------------------------
+-----------------------------Reincarnation 2.2.1----------------------------
+----------------------------------------------------------------------------
+
+-Legend-
+
++: Buff/Addition
+-: Nerf/Removal
+!: Change
+*: Bugfix
+?: ???
+
+-Characters-
+
+Hexen I:
+
+-Parias (Reincarnation)-
+
+* Fixed the improved PVE damage values not properly applying to the bishop's shortsword strong projectiles.
+
+Security Officer (Marathon):
+
+* Fixed the Talon Ceramic Combat Blade melee puff not having lights.
+
+----------------------------------------------------------------------------
 ----------------------Reincarnation 2.2.1 Public Beta-----------------------
 ----------------------------------------------------------------------------
 
