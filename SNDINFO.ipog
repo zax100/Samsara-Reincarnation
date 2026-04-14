@@ -25,6 +25,9 @@ greed/flamehit	GWPBOOM2
 // * Chaingun:
 greed/chaingun	GWPCHAIN
 
+// * Gatling Gun:
+greed/minigun	GWPMINI
+
 // * Rocketlauncher:
 greed/rocket	GWPROCKT
 greed/rockboom	GWPBOOM1

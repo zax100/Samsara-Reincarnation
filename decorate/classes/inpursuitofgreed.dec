@@ -6,6 +6,7 @@
 #include "decorate/classes/inpursuitofgreed/Slot2.dec"
 #include "decorate/classes/inpursuitofgreed/Slot3.dec"
 #include "decorate/classes/inpursuitofgreed/Slot4.dec"
+#include "decorate/classes/inpursuitofgreed/Slot4s.dec"
 #include "decorate/classes/inpursuitofgreed/Slot5.dec"
 #include "decorate/classes/inpursuitofgreed/Slot6.dec"
 #include "decorate/classes/inpursuitofgreed/Slot7.dec"

@@ -13,7 +13,7 @@ Actor " Fast Chaingun " : Weapon
     Weapon.AmmoGive 20
 	+THRUGHOST
 	+WEAPON.NOALERT
-	Obituary "$SAMSARA_GREED_OB_SLOT_IV"
+	Obituary "$SAMSARA_IPOG_OB_SLOT4"
     Inventory.RestrictedTo "POGreedPlayer"
     Tag "Vulcan"
 	states

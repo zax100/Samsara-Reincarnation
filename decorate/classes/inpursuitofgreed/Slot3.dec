@@ -12,7 +12,7 @@ Actor " Plasma Shotgun " : Weapon
     Weapon.AmmoUse 1
     Weapon.AmmoGive 8
 	scale 0.65
-	Obituary "$SAMSARA_GREED_OB_SLOT_II"
+	Obituary "$SAMSARA_IPOG_OB_SLOT3"
     Inventory.RestrictedTo "POGreedPlayer"
     Tag "Plasma Shotgun"
 	+WEAPON.NOALERT

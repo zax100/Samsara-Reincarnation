@@ -13,7 +13,7 @@ Actor " Aldus Flamethrower " : Weapon
     Weapon.AmmoGive 30
 	scale 0.65
 	Tag "Flamer"
-	Obituary "$SAMSARA_GREED_OB_SLOT_III"
+	Obituary "$SAMSARA_IPOG_OB_SLOT2"
     Inventory.RestrictedTo "POGreedPlayer"
 	+WEAPON.NOALERT
 	states

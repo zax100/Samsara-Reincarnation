@@ -13,7 +13,7 @@ Actor " Fast Rocket Launcher " : Weapon
     Weapon.AmmoGive 5
 	scale 0.9
 	Tag "Rocket Launcher"
-	Obituary "$SAMSARA_GREED_OB_SLOT_V"
+	Obituary "$SAMSARA_IPOG_OB_SLOT5"
     Inventory.RestrictedTo "POGreedPlayer"
 	+WEAPON.NOALERT
 	states

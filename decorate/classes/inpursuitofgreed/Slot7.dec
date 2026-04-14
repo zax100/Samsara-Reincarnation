@@ -17,7 +17,7 @@ Actor " Super Plasma Annihilator " : Weapon
 	+WEAPON.NOAUTOFIRE
 	+WEAPON.NOALERT
 	scale 0.85
-	Obituary "$SAMSARA_GREED_OB_SLOT_VII"
+	Obituary "$SAMSARA_IPOG_OB_SLOT7"
     Inventory.RestrictedTo "POGreedPlayer"
     Tag "Super Plasma Annihilator"
 	states

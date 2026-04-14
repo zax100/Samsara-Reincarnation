@@ -12,7 +12,7 @@ Actor " Laser Cannon " : Weapon
     Weapon.AmmoUse 1 //Each laser projectile
     Weapon.AmmoGive 30
 	scale 0.6
-	Obituary "$SAMSARA_GREED_OB_SLOT_VI"
+	Obituary "$SAMSARA_IPOG_OB_SLOT6"
     Inventory.RestrictedTo "POGreedPlayer"
     Tag "Laser Cannon"
 	+WEAPON.NOALERT
