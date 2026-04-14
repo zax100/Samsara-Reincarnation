@@ -1,6 +1,7 @@
 Actor " Fast Chaingun " : Weapon
 {
 	Weapon.Slotnumber 4
+    Weapon.SlotPriority 0
 	Weapon.SelectionOrder 2500
 	Weapon.BobStyle Inverse
 	Weapon.BobSpeed 0.58

@@ -2717,6 +2717,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory(" Plasma Shotgun ", INTMAX);
 			TakeInventory(" Aldus Flamethrower ", INTMAX);
 			TakeInventory(" Fast Chaingun ", INTMAX);
+			TakeInventory(" Gatling Gun ", INTMAX);
 			TakeInventory(" Fast Rocket Launcher ", INTMAX);
 			TakeInventory(" Laser Cannon ", INTMAX);
 			TakeInventory(" Super Plasma Annihilator ", INTMAX);

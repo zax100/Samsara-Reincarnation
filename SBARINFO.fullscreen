@@ -3728,7 +3728,19 @@ StatusBar Fullscreen, ForceScaled
                         }
                     }
 
-                    IsSelected " Fast Chaingun ", " Laser Cannon "
+                    IsSelected " Fast Chaingun ", " Gatling Gun "
+                    {
+                        InInventory IPOGGrenadeToken
+                        {
+                            DrawImage "HUDBAR", 250, 192;
+                            DrawBar "HAMBAR", "HEMPTY", Ammo RocketAmmo, Horizontal, Reverse, 251, 193;
+                            DrawNumber 4, INDEXFONT, White, Ammo RocketAmmo, 270, 186;
+
+                            DrawImage "AMSMC0", 228, 192, Center;
+                        }
+                    }
+
+                    IsSelected " Laser Cannon "
                     {
                         InInventory IPOGGrenadeToken
                         {
@@ -5908,6 +5920,8 @@ StatusBar Fullscreen, ForceScaled
                     }
                 } else InInventory KatarnClass {
                     InInventory GotWeapon4 || "DLT-19 Heavy Blaster Rifle" { DrawImage "STYSNUM4", 156, 10; }
+                } else InInventory POGreedClass {
+                    InInventory GotWeapon4 || " Gatling Gun " { DrawImage "STYSNUM4", 156, 10; }
                 } else InInventory HalfLifeClass {
                     InInventory GotWeapon4 || HLUzi { DrawImage "STYSNUM4", 156, 10; }
                 } else InInventory BittermanClass {
@@ -5987,6 +6001,7 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected EradEnergywhip, EradNitrofogger { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected EradFlamethrower { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected "DLT-19 Heavy Blaster Rifle" { DrawImage "STY3NUM4", 156, 10; }
+                IsSelected " Gatling Gun " { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected HLUzi { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected Q2ETFRifle { DrawImage "STY3NUM4", 156, 10; }
                 IsSelected Goldeneye_Phantom { DrawImage "STY3NUM4", 156, 10; }

@@ -22,6 +22,12 @@ Security Officer (Marathon):
 
 * Fixed the Talon Ceramic Combat Blade melee puff not having lights.
 
+In Pursuit of Greed:
+
+-All-
+
++ The gatling gun has been added as the slot 4S weapon!
+
 -Settings-
 
 ! The "Boss Monologues" setting has caused some issues when ReMixer's "Performance Mode" setting is enabled, so the former has been forcibly disabled in that scenario for the time being.

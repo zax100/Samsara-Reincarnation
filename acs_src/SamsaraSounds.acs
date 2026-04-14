@@ -468,6 +468,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"greed/pickup"},
                 {"greed/pickup"},
                 {"greed/megapick"},
+                {"greed/pickup"},
             },
             {
                 {"greed/pickup"},
@@ -479,6 +480,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"greed/pickup"},
                 {"greed/pickup"},
                 {"greed/megapick"},
+                {"greed/pickup"},
             },
             {
                 {"greed/pickup"},
@@ -490,6 +492,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"greed/pickup"},
                 {"greed/pickup"},
                 {"greed/megapick"},
+                {"greed/pickup"},
             },
             {
                 {"greed/pickup"},
@@ -501,6 +504,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"greed/pickup"},
                 {"greed/pickup"},
                 {"greed/megapick"},
+                {"greed/pickup"},
             },
             {
                 {"greed/pickup"},
@@ -512,6 +516,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"greed/pickup"},
                 {"greed/pickup"},
                 {"greed/megapick"},
+                {"greed/pickup"},
             },
         },
         {{
