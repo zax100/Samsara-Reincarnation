@@ -120,9 +120,9 @@ Actor BloodNaturomDemonto : CalebWeapon
 		BLBK PQRSTU 1 A_WeaponReady(WRF_NOFIRE|WRF_NOSWITCH)
 		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,3)
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,2)
-		TNT1 A 0 A_FireCustomMissile("TeslaBallBig",0,0)
+		TNT1 A 0 A_FireCustomMissile("SamsaraTeslaBallBig",0,0)
 		Goto AltFireStrongContinue
-		TNT1 A 0 A_FireCustomMissile("TeslaBallBigCoop",0,0)
+		TNT1 A 0 A_FireCustomMissile("SamsaraTeslaBallBigCoop",0,0)
 		Goto AltFireStrongContinue
 	AltFireStrongContinue:
 		TNT1 A 0 A_TakeInventory("Cell", 12, TIF_NOTAKEINFINITE)

@@ -352,7 +352,7 @@ script "CalebBeastVisionDrain" (void)
 		}
 	}
 
-	if (!CheckInventory("CalebVisionFuel") && !CheckInventory("SamsaraHasInfiniteInventory")) { SetInventory("BeastVision", 0); }
+	if (!CheckInventory("CalebVisionFuel") && !CheckInventory("SamsaraHasInfiniteInventory")) { SetInventory("SamsaraBeastVision", 0); }
 }
 
 script "CalebTetheredEffect" (int type) clientside

@@ -317,7 +317,7 @@ pointlight BLOOD_SMALL_FLARE_EXPLOSION_X11
 	offset 0 35 0
 }
 
-object FlareKaboom
+object SamsaraFlareKaboom
 {
 	frame LLSXA { light BLOOD_SMALL_FLARE_EXPLOSION_X1 }
 	frame LLSXB { light BLOOD_SMALL_FLARE_EXPLOSION_X2 }
@@ -409,7 +409,7 @@ pointlight BLOOD_FLARE_EXPLOSION_X11
 	offset 0 46 0
 }
 
-object FlareKaboom2
+object SamsaraFlareKaboom2
 {
 	frame LLSXA { light BLOOD_FLARE_EXPLOSION_X1 }
 	frame LLSXB { light BLOOD_FLARE_EXPLOSION_X2 }
@@ -695,7 +695,7 @@ pointlight BLOOD_NAPALM_X13
 	offset 0 78 0
 }
 
-object Kaboom
+object SamsaraBloodKaboom
 {
 	frame LLSPB { light BLOOD_NAPALM_X1 }
 	frame LLSPC { light BLOOD_NAPALM_X2 }
@@ -806,7 +806,7 @@ pointlight BLOOD_TINY_FLARE_EXPLOSION_X11
 	offset 0 15 0
 }
 
-object NapalmKaboom
+object SamsaraNapalmKaboom
 {
 	frame LLSXA { light BLOOD_TINY_FLARE_EXPLOSION_X1 }
 	frame LLSXB { light BLOOD_TINY_FLARE_EXPLOSION_X2 }
@@ -828,12 +828,12 @@ pointlight BLOOD_TESLA_PROJECTILE
 	size 48
 }
 
-object TeslaProjectile
+object SamsaraTeslaProjectile
 {
 	frame BTESE { light BLOOD_TESLA_PROJECTILE }
 }
 
-object TeslaProjectileCoop
+object SamsaraTeslaProjectileCoop
 {
 	frame BTESE { light BLOOD_TESLA_PROJECTILE }
 }
@@ -846,12 +846,12 @@ flickerlight2 BLOOD_BIG_TESLA_PROJECTILE
 	interval 0.003
 }
 
-object TeslaBallBig
+object SamsaraTeslaBallBig
 {
 	frame BTES { light BLOOD_BIG_TESLA_PROJECTILE }
 }
 
-object TeslaBallBigCoop
+object SamsaraTeslaBallBigCoop
 {
 	frame BTES { light BLOOD_BIG_TESLA_PROJECTILE }
 }
@@ -902,7 +902,7 @@ pointlight BLOOD_LIFE_LEECH_SHOT
 	size 40
 }
 
-object LifeLeechShot
+object SamsaraLifeLeechShot
 {
 	frame LLSSA { light BLOOD_LIFE_LEECH_SHOT }
 	frame LLSXA { light BLOOD_SMALL_FLARE_EXPLOSION_X1 }
@@ -918,7 +918,7 @@ object LifeLeechShot
 	frame LLSXK { light BLOOD_SMALL_FLARE_EXPLOSION_X11 }
 }
 
-object LifeLeechShotCoop
+object SamsaraLifeLeechShotCoop
 {
 	frame LLSSA { light BLOOD_LIFE_LEECH_SHOT }
 	frame LLSXA { light BLOOD_SMALL_FLARE_EXPLOSION_X1 }
@@ -934,7 +934,7 @@ object LifeLeechShotCoop
 	frame LLSXK { light BLOOD_SMALL_FLARE_EXPLOSION_X11 }
 }
 
-object LifeLeechShotCoopWeaker
+object SamsaraLifeLeechShotCoopWeaker
 {
 	frame LLSSA { light BLOOD_LIFE_LEECH_SHOT }
 	frame LLSXA { light BLOOD_SMALL_FLARE_EXPLOSION_X1 }
@@ -1043,7 +1043,7 @@ flickerlight BLOOD_SPRAY_CAN_FIRE_X5
 	chance 0.4
 }
 
-object SprayCanFire
+object SamsaraSprayCanFire
 {
 	frame SPFIA { light BLOOD_SPRAY_CAN_FIRE_X1 }
 	frame SPFIB { light BLOOD_SPRAY_CAN_FIRE_X1 }
@@ -1070,7 +1070,7 @@ object SprayCanFire
 	frame SFIRO { light BLOOD_SPRAY_CAN_FIRE_X5 }
 }
 
-object SprayCanFireCoop
+object SamsaraSprayCanFireCoop
 {
 	frame SPFIA { light BLOOD_SPRAY_CAN_FIRE_X1 }
 	frame SPFIB { light BLOOD_SPRAY_CAN_FIRE_X1 }

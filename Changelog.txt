@@ -22,11 +22,16 @@ Security Officer (Marathon):
 
 * Fixed the Talon Ceramic Combat Blade melee puff not having lights.
 
+Caleb (Blood):
+
+! Renamed some actor names to avoid name conflicts with other mods.
+
 In Pursuit of Greed:
 
 -All-
 
 + The gatling gun has been added as the slot 4S weapon!
+! The IPOG blood splatters are no longer affected by the "Gib Persistence" setting, and now disappear after 150 tics.
 
 -Settings-
 

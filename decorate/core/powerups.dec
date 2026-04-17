@@ -1560,7 +1560,7 @@ actor Visor : SamsaraPowerupPickup
         goto PickupDisplay
 
       PickupBlood:
-        TNT1 A 0 A_JumpIfInventory("BeastVision",1,1)
+        TNT1 A 0 A_JumpIfInventory("SamsaraBeastVision",1,1)
         goto PickupDisplay
         TNT1 A 0 A_JumpIfInventory("CalebVisionFuel",0,"PickupFail")
         goto PickupDisplay
@@ -1700,7 +1700,7 @@ actor Visor : SamsaraPowerupPickup
 
       PickupSuccessBlood:
         TNT1 A 0 A_GiveInventory("CalebVisionFuel",100)
-        TNT1 A 0 A_GiveInventory("BeastVision")
+        TNT1 A 0 A_GiveInventory("SamsaraBeastVision")
         stop
 
       PickupSuccessDarkForces:

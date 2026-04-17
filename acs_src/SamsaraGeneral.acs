@@ -2565,7 +2565,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("VoodooDoll", INTMAX);
 			TakeInventory("SprayCan", INTMAX);
 			TakeInventory("Flaregun2", INTMAX);
-			TakeInventory("BeastVision", INTMAX);
+			TakeInventory("SamsaraBeastVision", INTMAX);
 			SetInventory("CalebVisionFuel", 0);
 			TakeInventory("CalebDoctorsBag",INTMAX);
 
@@ -3735,7 +3735,7 @@ script "Samsara_FillInventory" (void)
 			break;
 
 		case CLASS_CALEB:
-			GiveInventory("BeastVision",1);
+			GiveInventory("SamsaraBeastVision",1);
 			GiveInventory("CalebVisionFuel", 100);
 			GiveInventory("CalebDoctorsBag",100);
 			TakeInventory("ThrowPower",65536);

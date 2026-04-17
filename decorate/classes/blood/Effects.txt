@@ -73,7 +73,7 @@ actor SamsaraZBBulletPuff : BulletPuff
 
 Actor SamsaraZBBulletPuffCoop : SamsaraZBBulletPuff { +MTHRUSPECIES +THRUSPECIES Species "Player" }
 
-actor PitchforkPuff : SamsaraZBBulletPuff
+actor SamsaraPitchforkPuff : SamsaraZBBulletPuff
 {
 	SeeSound "Vodoo/stab"
 	States
@@ -347,7 +347,7 @@ actor BlowerDM : Blower
 
 Actor BlowerCoop : Blower { Species "Player" +THRUSPECIES +DONTHARMCLASS +DONTHARMSPECIES +MTHRUSPECIES DamageType "DynamiteCoop" }
 
-actor BFireTrail
+actor SamsaraBFireTrail
 {
 	VSpeed 1
 	Scale 0.3
@@ -368,7 +368,7 @@ actor BFireTrail
 	}
 }
 
-Actor BFireTrail2 : BFireTrail
+Actor SamsaraBFireTrail2 : SamsaraBFireTrail
 {
 	States
 	{
@@ -378,7 +378,7 @@ Actor BFireTrail2 : BFireTrail
 	}
 }
 
-Actor TFireTrail : BFireTrail
+Actor SamsaraTFireTrail : SamsaraBFireTrail
 {
 	States
 	{
@@ -388,7 +388,7 @@ Actor TFireTrail : BFireTrail
 	}
 }
 
-Actor TFireTrail2 : BFireTrail
+Actor SamsaraTFireTrail2 : SamsaraBFireTrail
 {
 	States
 	{
@@ -413,7 +413,7 @@ ACTOR BloodSmokeTrailIn4OutSlow : BloodSmokeTrail
 	}
 }
 
-actor BSmokeTrail
+actor SamsaraBSmokeTrail
 {
 	Radius 13
 	Height 8
@@ -437,7 +437,7 @@ actor BSmokeTrail
 	}
 }
 
-Actor Kaboom
+Actor SamsaraBloodKaboom
 {
 	RenderStyle Normal
 	+BRIGHT
@@ -473,7 +473,7 @@ Actor Kaboom
 	}
 }
 
-actor BloodStrongKaboom : Kaboom
+actor BloodStrongKaboom : SamsaraBloodKaboom
 {
 	States
 	{
@@ -496,7 +496,7 @@ actor BloodStrongKaboom : Kaboom
 	}
 }
 
-actor SamsaraBloodFloorKaboom : Kaboom
+actor SamsaraBloodFloorKaboom : SamsaraBloodKaboom
 {
 	States
 	{

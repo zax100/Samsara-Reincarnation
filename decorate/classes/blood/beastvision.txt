@@ -1,7 +1,7 @@
 actor CalebVision: Boolean {}
 actor CalebVisionFuel: Counter { Inventory.MaxAmount 100 }
 
-actor BeastVision : CustomInventory
+actor SamsaraBeastVision : CustomInventory
 {
     Inventory.UseSound ""
     Inventory.Icon "INBEAST"

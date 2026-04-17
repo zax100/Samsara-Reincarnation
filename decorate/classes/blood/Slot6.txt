@@ -258,10 +258,10 @@ Actor TeslaCannon : CalebWeapon
 		TNT1 A 0 A_GunFlash
 		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"CoopAltFire")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"CoopAltFire")
-		TNT1 A 0 A_FireCustomMissile("TeslaBallBig",0,true,5)
+		TNT1 A 0 A_FireCustomMissile("SamsaraTeslaBallBig",0,true,5)
 		Goto AltFireEnd
 	CoopAltFire:
-		TNT1 A 0 A_FireCustomMissile("TeslaBallBigCoop",0,true,5)
+		TNT1 A 0 A_FireCustomMissile("SamsaraTeslaBallBigCoop",0,true,5)
 		Goto AltFireEnd
 	AltFireEnd:
 		TES3 GHIJKLMN 1 A_WeaponReady(WRF_NOFIRE|WRF_NOSWITCH)
@@ -567,12 +567,12 @@ Actor TeslaCannon : CalebWeapon
 		TNT1 A 0 A_GunFlash("AkimboAltFlash")
 		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"AkimboCoopAltFire")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"AkimboCoopAltFire")
-		TNT1 A 0 A_FireCustomMissile("TeslaBallBig",0,0,-5)
-		TNT1 A 0 A_FireCustomMissile("TeslaBallBig",0,0,5)
+		TNT1 A 0 A_FireCustomMissile("SamsaraTeslaBallBig",0,0,-5)
+		TNT1 A 0 A_FireCustomMissile("SamsaraTeslaBallBig",0,0,5)
 		Goto AkimboAltFireEnd
 	AkimboCoopAltFire:
-		TNT1 A 0 A_FireCustomMissile("TeslaBallBigCoop",0,0,-5)
-		TNT1 A 0 A_FireCustomMissile("TeslaBallBigCoop",0,0,5)
+		TNT1 A 0 A_FireCustomMissile("SamsaraTeslaBallBigCoop",0,0,-5)
+		TNT1 A 0 A_FireCustomMissile("SamsaraTeslaBallBigCoop",0,0,5)
 		Goto AkimboAltFireEnd
 	AkimboAltFireEnd:
 		TNT1 A 0 A_TakeInventory("Cell", 24, TIF_NOTAKEINFINITE)
@@ -608,10 +608,10 @@ Actor SamsaraBloodTeslaCannonAttackHandler : Trigger
 		Pickup:
 			TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
 			TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
-			TNT1 A 0 A_FireCustomMissile("TeslaProjectile",0,false,5)
+			TNT1 A 0 A_FireCustomMissile("SamsaraTeslaProjectile",0,false,5)
 			Goto PickupEnd
 		PickupAttackCoop:
-			TNT1 A 0 A_FireCustomMissile("TeslaProjectileCoop",0,false,5)
+			TNT1 A 0 A_FireCustomMissile("SamsaraTeslaProjectileCoop",0,false,5)
 			Goto PickupEnd
 		PickupEnd:
 			TNT1 A 0 A_PlayWeaponSound("Tesla/Fire")
@@ -627,10 +627,10 @@ Actor SamsaraBloodTeslaCannonLeftAttackHandler : SamsaraBloodTeslaCannonAttackHa
 		Pickup:
 			TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
 			TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
-			TNT1 A 0 A_FireCustomMissile("TeslaProjectile",0,false,-20)
+			TNT1 A 0 A_FireCustomMissile("SamsaraTeslaProjectile",0,false,-20)
 			Goto Super::PickupEnd
 		PickupAttackCoop:
-			TNT1 A 0 A_FireCustomMissile("TeslaProjectileCoop",0,false,-20)
+			TNT1 A 0 A_FireCustomMissile("SamsaraTeslaProjectileCoop",0,false,-20)
 			Goto Super::PickupEnd
 	}
 }
@@ -642,15 +642,15 @@ Actor SamsaraBloodTeslaCannonRightAttackHandler : SamsaraBloodTeslaCannonAttackH
 		Pickup:
 			TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
 			TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
-			TNT1 A 0 A_FireCustomMissile("TeslaProjectile",0,false,20)
+			TNT1 A 0 A_FireCustomMissile("SamsaraTeslaProjectile",0,false,20)
 			Goto Super::PickupEnd
 		PickupAttackCoop:
-			TNT1 A 0 A_FireCustomMissile("TeslaProjectileCoop",0,false,20)
+			TNT1 A 0 A_FireCustomMissile("SamsaraTeslaProjectileCoop",0,false,20)
 			Goto Super::PickupEnd
 	}
 }
 
-Actor TeslaProjectile : FastProjectile
+Actor SamsaraTeslaProjectile : FastProjectile
 {
 	Speed 72
 	Radius 8
@@ -677,7 +677,7 @@ Actor TeslaProjectile : FastProjectile
 		BTES E 1
 		Loop
 	Death:
-		TNT1 AAAAA 1 A_SpawnItemEx("TeslaFX", random(-8,8), random(-8,8), random(0,3), random(-12,12), random(-12,12), random(0,3), 0, SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
+		TNT1 AAAAA 1 A_SpawnItemEx("SamsaraTeslaFX", random(-8,8), random(-8,8), random(0,3), random(-12,12), random(-12,12), random(0,3), 0, SXF_NOCHECKPOSITION|SXF_CLIENTSIDE)
 		Stop
 	}
 }
@@ -698,7 +698,7 @@ Actor TeslaProjectileBall : FlareFireStar
 	}
 }
 
-Actor TeslaProjectileCoop : TeslaProjectile { Species "Player" +THRUSPECIES }
+Actor SamsaraTeslaProjectileCoop : SamsaraTeslaProjectile { Species "Player" +THRUSPECIES }
 
 Actor TeslaSmoke
 {
@@ -723,7 +723,7 @@ Actor TeslaSmoke
 	}
 }
 
-Actor TeslaFX
+Actor SamsaraTeslaFX
 {
 	+NOINTERACTION
 	+CLIENTSIDEONLY
@@ -745,7 +745,7 @@ Actor TeslaFX
 	}
 }
 
-Actor TeslaBallBig
+Actor SamsaraTeslaBallBig
 {
 	Radius 14
 	Height 16
@@ -788,14 +788,14 @@ Actor TeslaBallBig
 	DeathEffect:
 		TNT1 AAAAAAAAAAA 0 A_SpawnItemEx("BloodTeslaDebris",random(-15,15),random(-15,15),random(-15,15),random(-1,1),random(-3,3),random(0,1),0,SXF_CLIENTSIDE)
 		TNT1 AAAAAAAAAAAAAAAAAAAAA 0 A_SpawnDebris("BloodTeslaSparkDebris")
-		TNT1 A 0 A_SpawnItemEx("TeslaExplosion", 0, 64)
-		TNT1 A 0 A_SpawnItemEx("TeslaExplosion", 0, -64)
+		TNT1 A 0 A_SpawnItemEx("SamsaraTeslaExplosion", 0, 64)
+		TNT1 A 0 A_SpawnItemEx("SamsaraTeslaExplosion", 0, -64)
 		TNT1 A 5 A_PlaySound("Tesla/Boom2")
 		Stop
 	}
 }
 
-Actor TeslaBallBigCoop : TeslaBallBig
+Actor SamsaraTeslaBallBigCoop : SamsaraTeslaBallBig
 {
 	Species "Player"
 	+THRUSPECIES
@@ -805,7 +805,7 @@ Actor TeslaBallBigCoop : TeslaBallBig
 	Damage (Random(200,350)+Random(0,Random(0,100)))
 }
 
-Actor TeslaExplosion
+Actor SamsaraTeslaExplosion
 {
 	DamageType "Shock"
 	+BLOODLESSIMPACT
