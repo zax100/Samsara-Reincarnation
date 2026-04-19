@@ -141,6 +141,8 @@ Quake3/Items/BioSuitProtect			"Sounds/Quake3/Items/quake3_protect3.flac"
 Quake3/Items/QuadDamage				"Sounds/Quake3/Items/quake3_quaddamage.flac"
 Quake3/Items/QuadDamageActive		"Sounds/Quake3/Items/quake3_damage3.flac"
 Quake3/Items/QuadDamageWearOff		"Sounds/Quake3/Items/quake3_damage2.flac"
+Quake3/Items/QuadDamageFail			"Sounds/Quake3/Items/quake3_use_nothing.wav"
+$alias Quake3/Items/QuadDamageReady	Quake3/Items/BioSuit
 $limit Quake3/Items/QuadDamageActive 32
 Quake3/Items/Haste					"Sounds/Quake3/Items/quake3_haste.flac"
 Quake3/Items/Regeneration			"Sounds/Quake3/Items/quake3_regeneration.flac"

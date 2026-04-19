@@ -11485,6 +11485,12 @@ StatusBar Automap, ForceScaled
             // Slot 7
             IsSelected Q3BFG10K { DrawImage "Q3WBARY7", 297, 16; }
             else { DrawImage "Q3WBARN7", 297, 16; }
+
+            // Damage Booster
+            InInventory not PowerQ3QuadDamageFactor
+            {
+                InInventory SamsaraQuake3QuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Gold, SamsaraQuake3QuadDamageCooldownDisplay, 8, 160; }
+            }
         }*/
     }
 

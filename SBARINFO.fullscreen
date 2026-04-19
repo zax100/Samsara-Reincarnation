@@ -2028,6 +2028,16 @@ StatusBar Fullscreen, ForceScaled
 
             // Inventory
             DrawSelectedInventory AlwaysShowCounter, HUDFONT_DOOM, 290, 22, 293, 30, Untranslated;
+
+            // Equipment
+            InInventory ExpandedHud
+            {
+                // Damage Booster
+                InInventory not PowerQ3QuadDamageFactor
+                {
+                    InInventory SamsaraQuake3QuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Red, SamsaraQuake3QuadDamageCooldownDisplay, 293, 48; }
+                }
+            }
         } else InInventory DescentClass {
             InInventory not DescentThirdPerson
             {
@@ -6394,6 +6404,10 @@ StatusBar Fullscreen, ForceScaled
                 }
                 InInventory Hexen2TomeOfPowerCooldown { DrawNumber 3, INDEXFONT, Red, Hexen2TomeOfPowerCooldown, 293, 48; }
                 InInventory Catacomb_HourglassCooldown { DrawNumber 3, INDEXFONT, Red, Catacomb_HourglassCooldown, 293, 48; }
+                InInventory not PowerQ3QuadDamageFactor
+                {
+                    InInventory SamsaraQuake3QuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Red, SamsaraQuake3QuadDamageCooldownDisplay, 293, 48; }
+                }
             }
 
             // Ally cell phone progress

@@ -55,6 +55,9 @@ Actor Q3BattleSuitGlow
 	}
 }
 
+actor SamsaraQuake3QuadDamageCooldown : Counter {}
+actor SamsaraQuake3QuadDamageCooldownDisplay : Counter {}
+
 Actor Q3QuadDamage : CustomInventory
 {
 	Inventory.PickupMessage "Quad Damage"
@@ -73,6 +76,46 @@ Actor Q3QuadDamage : CustomInventory
 			TNT1 A 0 A_PlaySound("Quake3/Items/QuadDamage",CHAN_6)
 			Stop
 	}
+}
+
+actor Q3QuadDamageItem : CustomInventory
+{
+    Inventory.UseSound ""
+    Inventory.Icon "QUADICON" // placeholder
+    Inventory.MaxAmount 1
+    Inventory.InterHubAmount 1
+    Inventory.RestrictedTo "Q3Sarge"
+    Tag "Quad Damage"
+    +INVBAR
+    +UNDROPPABLE
+    States
+    {
+      Use:
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 64), 1)
+        goto UseDurationCheck
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasDisabledInventoryCooldown",1,"UseDurationCheck")
+        TNT1 A 0 A_JumpIfInventory("SamsaraQuake3QuadDamageCooldown",1,"NoU")
+        goto UseDurationCheck
+
+      UseDurationCheck:
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraPowerupTimerActiveChecker", 22, 0), "UseFail")
+        goto UseSuccess
+
+      UseSuccess:
+        TNT1 A 0 ACS_NamedExecuteAlways("Q3_Announcer", 0, 1) //A_PlaySound("Quake3/Items/QuadDamage",CHAN_6)
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraQuake3QuadDamageInit", 2100)
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 64), "UseFail")
+        stop
+
+      UseFail:
+        TNT1 A 0
+        fail
+
+      NoU:
+        TNT1 A 0 A_PlaySound("Quake3/Items/QuadDamageFail",CHAN_ITEM)
+        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraClientDecorate", 0, 17, 13)
+        fail
+    }
 }
 
 actor Q3QuadDamageFactor : SamsaraPowerupGiver

@@ -9,6 +9,10 @@ actor QuadDamagePickup : Trigger
 {
     States
     {
+      Spawn:
+        QUDD A -1
+        stop
+
       Pickup:
         TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraDecorate", 7, 1050, 1)
         stop

@@ -3407,6 +3407,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Q3ProximityLauncher", INTMAX);
 			TakeInventory("Q3GrenadeLauncherAmmo", INTMAX);
 			TakeInventory("Q3ChaingunAmmo", INTMAX);
+			TakeInventory("Q3QuadDamageItem", INTMAX);
 
 			GiveInventory("Q3Gauntlet", 1);
 			GiveInventory("Q3Machinegun", 1);
@@ -3894,6 +3895,10 @@ script "Samsara_FillInventory" (void)
                 GiveInventory("UnrealRevertDirection", 1);
             }
             break;
+
+		case CLASS_QUAKE3:
+			if (GetCVar("samsara_permaquad")) { GiveInventory("Q3QuadDamageItem", 1); }
+			break;
 
 		case CLASS_DESCENT:
 			PlaySound(0, "Descent/Cheater", CHAN_ITEM);
@@ -17183,6 +17188,14 @@ script "SamsaraPowerupTimerActiveChecker" (int category, int powerup)
         switch (powerup)
         {
           case 0: powerupname = "PowerCatacomb_TimeFreeze"; break;
+        }
+        break;
+
+      // Sarge Powerups
+      case 22:
+        switch (powerup)
+        {
+          case 0: powerupname = "PowerQ3QuadDamageFactor"; break;
         }
         break;
     }

@@ -579,7 +579,7 @@ script "SamsaraQuake2QuadDamageInit" (int cooldowntimer)
 
     while (CheckInventory("PowerQ2QuadDamage"))
     {
-        if (!CheckInventory("SamsaraQuake2QuadDamageCooldownStored") || CheckInventory("SamsaraHasDisabledInventoryCooldown"))
+        if (!CheckInventory("SamsaraQuake2QuadDamageCooldownStored") || CheckInventory("SamsaraHasDisabledInventoryCooldown") || UnloadingNow)
         {
             SetInventory("SamsaraQuake2QuadDamageCooldown", 0);
             SetInventory("SamsaraQuake2QuadDamageCooldownDisplay", 0);
@@ -606,7 +606,9 @@ script "SamsaraQuake2QuadDamageInit" (int cooldowntimer)
 
         if (!isDead(0)) { TakeInventory("SamsaraQuake2QuadDamageCooldown", 1); }
         SetInventory("SamsaraQuake2QuadDamageCooldownDisplay", CheckInventory("SamsaraHasDisabledInventoryCooldown") || !GetCVar("samsara_permaquad") ? 0 : CheckInventory("SamsaraQuake2QuadDamageCooldown") / 35 + 1);
-    } until (!CheckInventory("SamsaraQuake2QuadDamageCooldown") || CheckInventory("SamsaraHasDisabledInventoryCooldown"));
+    } until (CheckInventory("PowerQ2QuadDamage") || !CheckInventory("SamsaraQuake2QuadDamageCooldown") || CheckInventory("SamsaraHasDisabledInventoryCooldown"));
+
+    if (CheckInventory("PowerQ2QuadDamage")) { terminate; }
 
     if (CheckInventory("Q2QuadDamage") && CheckInventory("SamsaraQuake2QuadDamageCooldownStored") && GetCVar("samsara_permaquad") && !CheckInventory("SamsaraHasDisabledInventoryCooldown") && !UnloadingNow)
     {
@@ -618,4 +620,60 @@ script "SamsaraQuake2QuadDamageInit" (int cooldowntimer)
     SetInventory("SamsaraQuake2QuadDamageCooldown", 0);
     SetInventory("SamsaraQuake2QuadDamageCooldownDisplay", 0);
     SetInventory("SamsaraQuake2QuadDamageCooldownStored", 0);
+}
+
+script "SamsaraQuake3QuadDamageInit" (int cooldowntimer)
+{
+    if (CheckInventory("PowerQ3QuadDamageFactor"))
+    {
+        GiveInventory("Q3QuadDamageFactor", 1);
+        terminate; // don't execute the upcoming cooldown more than once
+    }
+    else { GiveInventory("Q3QuadDamageFactor", 1); }
+
+    if (cooldowntimer < 0) { cooldowntimer = 0; }
+
+    while (CheckInventory("PowerQ3QuadDamageFactor"))
+    {
+        if (CheckInventory("SamsaraHasDisabledInventoryCooldown") || UnloadingNow)
+        {
+            SetInventory("SamsaraQuake3QuadDamageCooldown", 0);
+            SetInventory("SamsaraQuake3QuadDamageCooldownDisplay", 0);
+        } else {
+            SetInventory("SamsaraQuake3QuadDamageCooldown", cooldowntimer);
+            SetInventory("SamsaraQuake3QuadDamageCooldownDisplay", !GetCVar("samsara_permaquad") ? 0 : CheckInventory("SamsaraQuake3QuadDamageCooldown") / 35 + 1);
+        }
+
+        Delay(1);
+    }
+
+    // just in case
+    if (!CheckInventory("SamsaraQuake3QuadDamageCooldown") || CheckInventory("SamsaraHasDisabledInventoryCooldown"))
+    {
+        SetInventory("SamsaraQuake3QuadDamageCooldown", 0);
+        SetInventory("SamsaraQuake3QuadDamageCooldownDisplay", 0);
+        terminate;
+    }
+
+    do
+    {
+        Delay(1);
+
+        if (!isDead(0)) { TakeInventory("SamsaraQuake3QuadDamageCooldown", 1); }
+        SetInventory("SamsaraQuake3QuadDamageCooldownDisplay", CheckInventory("SamsaraHasDisabledInventoryCooldown") || !GetCVar("samsara_permaquad") ? 0 : CheckInventory("SamsaraQuake3QuadDamageCooldown") / 35 + 1);
+    } until (CheckInventory("PowerQ3QuadDamageFactor") || !CheckInventory("SamsaraQuake3QuadDamageCooldown") || CheckInventory("SamsaraHasDisabledInventoryCooldown"));
+
+    if (CheckInventory("PowerQ3QuadDamageFactor")) { terminate; }
+
+    if (CheckInventory("Q3QuadDamageItem") && GetCVar("samsara_permaquad") && !CheckInventory("SamsaraHasDisabledInventoryCooldown") && !UnloadingNow)
+    {
+        LocalAmbientSound("Quake3/Items/QuadDamageReady", 96);
+        SetHudSize(240, 180, 1);
+        SetFont("Q3QUAD");
+        HudMessage(s:"A"; HUDMSG_FADEOUT, 0, CR_UNTRANSLATED, 215.4, 102.0, 0.0, 1.0);
+    }
+
+    // also precautionary
+    SetInventory("SamsaraQuake3QuadDamageCooldown", 0);
+    SetInventory("SamsaraQuake3QuadDamageCooldownDisplay", 0);
 }

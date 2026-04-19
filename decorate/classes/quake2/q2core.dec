@@ -635,6 +635,10 @@ actor Q2QuadDamage : CustomInventory
     +UNDROPPABLE
     States
     {
+      Spawn:
+        POWR A -1
+        stop
+
       Use:
         TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 64), 1)
         goto UseDurationCheck

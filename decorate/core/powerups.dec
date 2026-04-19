@@ -4354,7 +4354,10 @@ actor SamsaraDamageBooster : SamsaraPowerupPickup
         stop
 
       PickupSuccessQuake3:
-        TNT1 A 0 A_GiveInventory("Q3QuadDamageFactor")
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraQuake3QuadDamageInit", 2100)
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 64), 1)
+        stop
+        TNT1 A 0 A_GiveInventory("Q3QuadDamageItem")
         stop
 
       PickupSuccessDeusEx:
