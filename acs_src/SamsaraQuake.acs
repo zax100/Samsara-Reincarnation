@@ -481,3 +481,59 @@ script "SamsaraQPowers" (int startTime, int respawning) //636 -- SAMSARA_QPOWERS
         Delay(1);
     }
 }
+
+script "SamsaraQuake2QuadDamageInit" (int cooldowntimer)
+{
+    GiveInventory("SamsaraQuake2QuadDamageCooldownStored", 1);
+
+    if (CheckInventory("PowerQ2QuadDamage"))
+    {
+        GiveInventory("PowerQ2QuadDamageGiver", 1);
+        terminate; // don't execute the upcoming cooldown more than once
+    }
+    else { GiveInventory("PowerQ2QuadDamageGiver", 1); }
+
+    if (cooldowntimer < 0) { cooldowntimer = 0; }
+
+    while (CheckInventory("PowerQ2QuadDamage"))
+    {
+        if (!CheckInventory("SamsaraQuake2QuadDamageCooldownStored") || CheckInventory("SamsaraHasDisabledInventoryCooldown"))
+        {
+            SetInventory("SamsaraQuake2QuadDamageCooldown", 0);
+            SetInventory("SamsaraQuake2QuadDamageCooldownDisplay", 0);
+        } else {
+            SetInventory("SamsaraQuake2QuadDamageCooldown", cooldowntimer);
+            SetInventory("SamsaraQuake2QuadDamageCooldownDisplay", !GetCVar("samsara_permaquad") ? 0 : CheckInventory("SamsaraQuake2QuadDamageCooldown") / 35 + 1);
+        }
+
+        Delay(1);
+    }
+
+    // just in case
+    if (!CheckInventory("SamsaraQuake2QuadDamageCooldown") || CheckInventory("SamsaraHasDisabledInventoryCooldown"))
+    {
+        SetInventory("SamsaraQuake2QuadDamageCooldown", 0);
+        SetInventory("SamsaraQuake2QuadDamageCooldownDisplay", 0);
+        SetInventory("SamsaraQuake2QuadDamageCooldownStored", 0);
+        terminate;
+    }
+
+    do
+    {
+        Delay(1);
+
+        if (!isDead(0)) { TakeInventory("SamsaraQuake2QuadDamageCooldown", 1); }
+        SetInventory("SamsaraQuake2QuadDamageCooldownDisplay", CheckInventory("SamsaraHasDisabledInventoryCooldown") || !GetCVar("samsara_permaquad") ? 0 : CheckInventory("SamsaraQuake2QuadDamageCooldown") / 35 + 1);
+    } until (!CheckInventory("SamsaraQuake2QuadDamageCooldown") || CheckInventory("SamsaraHasDisabledInventoryCooldown"));
+
+    if (CheckInventory("Q2QuadDamage") && CheckInventory("SamsaraQuake2QuadDamageCooldownStored") && GetCVar("samsara_permaquad") && !CheckInventory("SamsaraHasDisabledInventoryCooldown") && !UnloadingNow)
+    {
+        LocalAmbientSound("Q2Misc/QuadDamage/Ready", 96);
+        FadeRange(0, 64, 255, 0.25, 0, 64, 255, 0, 0.33);
+    }
+
+    // also precautionary
+    SetInventory("SamsaraQuake2QuadDamageCooldown", 0);
+    SetInventory("SamsaraQuake2QuadDamageCooldownDisplay", 0);
+    SetInventory("SamsaraQuake2QuadDamageCooldownStored", 0);
+}

@@ -4264,8 +4264,15 @@ actor SamsaraDamageBooster : SamsaraPowerupPickup
         goto PickupDisplay
 
       PickupQuake2:
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 64), "PickupQuake2Perma")
         TNT1 A 0 A_JumpIfInventory("Q2QuadDamage",0,"PickupFail")
         goto PickupDisplay
+
+      PickupQuake2Perma:
+        TNT1 A 0 A_JumpIfInventory("Q2QuadDamage",1,1)
+        goto PickupDisplay
+        TNT1 A 0 A_JumpIfInventory("SamsaraQuake2QuadDamageCooldown",1,"PickupDisplay")
+        goto PickupFail
 
       PickupDisplay:
         TNT1 A 0 A_JumpIfInventory("CorvusClass",1,"PickupDisplayHeretic")
@@ -4341,6 +4348,9 @@ actor SamsaraDamageBooster : SamsaraPowerupPickup
 
       PickupSuccessQuake2:
         TNT1 A 0 A_GiveInventory("Q2QuadDamage")
+        TNT1 A 0 A_TakeInventory("SamsaraQuake2QuadDamageCooldown")
+        TNT1 A 0 A_TakeInventory("SamsaraQuake2QuadDamageCooldownDisplay")
+        TNT1 A 0 A_TakeInventory("SamsaraQuake2QuadDamageCooldownStored")
         stop
 
       PickupSuccessQuake3:

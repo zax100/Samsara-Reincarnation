@@ -8797,6 +8797,12 @@ StatusBar Normal, ForceScaled
                 DrawImage "Q2WP2Y9", 269, 0;
                 DrawImage "Q2YLFNT9", 277, 27;
             }
+
+            // Damage Booster
+            InInventory not PowerQ2QuadDamage
+            {
+                InInventory SamsaraQuake2QuadDamageCooldownDisplay { DrawNumber 3, Q2SMALLFONT, Untranslated, SamsaraQuake2QuadDamageCooldownDisplay, 354, 191; }
+            }
         }
     }
 

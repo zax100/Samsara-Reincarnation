@@ -619,30 +619,60 @@ actor Q2Invulnerability : PowerupGiver
     }
 }
 
-actor Q2QuadDamage : PowerupGiver
+actor SamsaraQuake2QuadDamageCooldown : Counter {}
+actor SamsaraQuake2QuadDamageCooldownDisplay : Counter {}
+actor SamsaraQuake2QuadDamageCooldownStored : Boolean {}
+
+actor Q2QuadDamage : CustomInventory
 {
-    Inventory.PickupMessage "Quad Damage"
-    Inventory.PickupSound "Q2Misc/Pickup"
-    Inventory.UseSound "Q2Misc/QuadDamage/Use"
+    Inventory.UseSound ""
     Inventory.Icon "Q2IHD1"
     Inventory.MaxAmount 1
     Inventory.InterHubAmount 1
     Inventory.RestrictedTo "Bitterman"
-    Powerup.Type "Q2QuadDamage"
-    Powerup.Duration -30
-    Powerup.Color "Blue", 0.1
     Tag "Quad Damage"
     +INVBAR
     +UNDROPPABLE
     States
     {
-      Spawn:
-        POWR A -1
+      Use:
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 64), 1)
+        goto UseDurationCheck
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasDisabledInventoryCooldown",1,"UseDurationCheck")
+        TNT1 A 0 A_JumpIfInventory("SamsaraQuake2QuadDamageCooldown",1,"NoU")
+        goto UseDurationCheck
+
+      UseDurationCheck:
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraPowerupTimerActiveChecker", 19, 0), "UseFail")
+        goto UseSuccess
+
+      UseSuccess:
+        TNT1 A 0 A_PlaySound("Q2Misc/QuadDamage/Use",CHAN_ITEM)
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraQuake2QuadDamageInit", 2100)
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 64), "UseFail")
         stop
+
+      UseFail:
+        TNT1 A 0
+        fail
+
+      NoU:
+        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraClientDecorate", 0, 17, 10)
+        fail
     }
 }
 
-actor PowerQ2QuadDamage : PowerDamage { DamageFactor "Normal", 4 }
+actor PowerQ2QuadDamageGiver : SamsaraPowerupGiver
+{
+    Powerup.Type "PowerQ2QuadDamage"
+    Powerup.Color "Blue", 0.1
+}
+
+actor PowerQ2QuadDamage : PowerDamage
+{
+    Powerup.Duration -30
+    DamageFactor "Normal", 4
+}
 
 actor Q2DualFireDamage : PowerupGiver
 {

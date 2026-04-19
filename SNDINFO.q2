@@ -91,6 +91,7 @@ $random Q2Misc/WorP_Pkup			{ Q2Misc/W_Pkup Q2Misc/Pickup }
 Q2Misc/QuadDamage/Use				"Sounds/Quake2/Misc/quake2_damage.flac"
 Q2Misc/QuadDamage/Attack			"Sounds/Quake2/Misc/quake2_damage3.flac"
 Q2Misc/QuadDamage/Empty				"Sounds/Quake2/Misc/quake2_damage2.flac"
+$alias Q2Misc/QuadDamage/Ready      Q2Misc/Invulnerability/Use
 Q2Misc/DoubleDamage/Use				"Sounds/Quake2/Misc/quake2_ddamage1.flac"
 Q2Misc/DoubleDamage/Attack			"Sounds/Quake2/Misc/quake2_ddamage3.flac"
 Q2Misc/DoubleDamage/Empty			"Sounds/Quake2/Misc/quake2_ddamage2.flac"

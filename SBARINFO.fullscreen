@@ -1165,6 +1165,12 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected Q2BFG10K { DrawImage "STY2NUM7", 186, 10; }
 
                 IsSelected Q2Trap { DrawImage "STY3NUM7", 186, 10; }
+
+                // Damage Booster
+                InInventory not PowerQ2QuadDamage
+                {
+                    InInventory SamsaraQuake2QuadDamageCooldownDisplay { DrawNumber 3, Q2SMALLFONT, Untranslated, SamsaraQuake2QuadDamageCooldownDisplay, 312, 166; }
+                }
             }
 
             // Rune icon
@@ -6381,6 +6387,10 @@ StatusBar Fullscreen, ForceScaled
                     else InInventory DisruptorPsionicSelected, 2 { DrawNumber 3, INDEXFONT, Red, DisruptorPSICooldown, 293, 78; }
                     else InInventory DisruptorPsionicSelected, 1 {} // doesn't run off a cooldown
                     else { DrawNumber 3, INDEXFONT, Red, DisruptorPSICooldown, 293, 78; }
+                }
+                InInventory not PowerQ2QuadDamage
+                {
+                    InInventory SamsaraQuake2QuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, Red, SamsaraQuake2QuadDamageCooldownDisplay, 293, 48; }
                 }
                 InInventory Hexen2TomeOfPowerCooldown { DrawNumber 3, INDEXFONT, Red, Hexen2TomeOfPowerCooldown, 293, 48; }
                 InInventory Catacomb_HourglassCooldown { DrawNumber 3, INDEXFONT, Red, Catacomb_HourglassCooldown, 293, 48; }

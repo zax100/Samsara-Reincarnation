@@ -730,8 +730,10 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
 		break;
 
     case 17:
-        if (a1 >= 11) { Print(l:"HOURGLASSCOOLDOWN"); }
-        else if (a1 == 10) { Print(l:"HEXEN2TOMECOOLDOWN"); }
+        if (a1 >= 13) { Print(l:"QUAD3COOLDOWN"); }
+        else if (a1 == 12) { Print(l:"HOURGLASSCOOLDOWN"); }
+        else if (a1 == 11) { Print(l:"HEXEN2TOMECOOLDOWN"); }
+        else if (a1 == 10) { Print(l:"QUAD2COOLDOWN"); }
         else if (a1 == 9) { Print(l:"BEACONCOOLDOWN"); }
         else if (a1 == 8) { Print(l:"GUNSAKIMBOCOOLDOWN"); }
         else if (a1 == 7) { Print(l:"QUADCOOLDOWN"); }
@@ -17160,8 +17162,16 @@ script "SamsaraPowerupTimerActiveChecker" (int category, int powerup)
         }
         break;
 
-      // Demoness Powerups
+      // Bitterman Powerups
       case 19:
+        switch (powerup)
+        {
+          case 0: powerupname = "PowerQ2QuadDamage"; break;
+        }
+        break;
+
+      // Demoness Powerups
+      case 20:
         switch (powerup)
         {
           case 0: powerupname = "PowerHexen2WeaponLevel2"; break;
@@ -17169,7 +17179,7 @@ script "SamsaraPowerupTimerActiveChecker" (int category, int powerup)
         break;
 
       // Petton Everhail Powerups
-      case 20:
+      case 21:
         switch (powerup)
         {
           case 0: powerupname = "PowerCatacomb_TimeFreeze"; break;
