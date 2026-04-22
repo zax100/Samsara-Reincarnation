@@ -76,10 +76,10 @@ actor SamsaraPainkillerShotgunPrimaryAttackHandler : Trigger
 		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackNormalCoop")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackNormalCoop")
 	PickupAttackNormalDM:
-		TNT1 A 0 A_FireBullets(8,8,15,8,"Painkiller_Shotgun_Puff",FBF_NORANDOM|FBF_NOFLASH) // unused dm state was 24 bullet count with 4 damage, adjust if needed or remove this comment
+		TNT1 A 0 A_FireBullets(8,8,15,6,"Painkiller_Shotgun_Puff",FBF_NORANDOM|FBF_NOFLASH) // unused dm state was 24 bullet count with 4 damage, adjust if needed or remove this comment
 		goto PickupFinish
 	PickupAttackNormalCoop:
-		TNT1 A 0 A_FireBullets(8,8,15,8,"Painkiller_Shotgun_PuffCoop",FBF_NORANDOM|FBF_NOFLASH)
+		TNT1 A 0 A_FireBullets(8,8,15,6,"Painkiller_Shotgun_PuffCoop",FBF_NORANDOM|FBF_NOFLASH)
 		goto PickupFinish
 
 	// Weapon Modifier
@@ -87,10 +87,10 @@ actor SamsaraPainkillerShotgunPrimaryAttackHandler : Trigger
 		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackModCoop")
 		TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackModCoop")
 	PickupAttackModDM:
-		TNT1 A 0 A_FireBullets(2.5,2.5,24,8,"Painkiller_Shotgun_Puff",FBF_NORANDOM|FBF_NOFLASH) // unused dm state was 5 damage, adjust if needed or remove this comment
+		TNT1 A 0 A_FireBullets(2.5,2.5,24,5,"Painkiller_Shotgun_Puff",FBF_NORANDOM|FBF_NOFLASH) // unused dm state was 5 damage, adjust if needed or remove this comment
 		goto PickupFinish
 	PickupAttackModCoop:
-		TNT1 A 0 A_FireBullets(2.5,2.5,24,8,"Painkiller_Shotgun_PuffCoop",FBF_NORANDOM|FBF_NOFLASH)
+		TNT1 A 0 A_FireBullets(2.5,2.5,24,5,"Painkiller_Shotgun_PuffCoop",FBF_NORANDOM|FBF_NOFLASH)
 		goto PickupFinish
 
 	// Finishing stuff

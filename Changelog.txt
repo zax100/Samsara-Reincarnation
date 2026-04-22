@@ -702,8 +702,12 @@ Petton Everhail (Catacomb 3D):
 - The Rings' effects no longer carry over between levels in a hub, since Strife now handles giving them differently.
 
 Daniel Garner (Painkiller):
-
 * Fixed enemies with the flemoid monster base not spawning souls when killed.
+- The Shotgun now deals 6 damage per pellet (reduced from 8).
+- The Bolt Driver now deals 25 damage per bolt projectile (reduced from 45).
+- The Sub Machine gun now deals 20 damage per bullet in coop (reduced from 30).
++ The rocket launcher now deals 128 splash damage across 128 map units (increased from 120 splash damage across 102 map units).
+- The rocket lsuncher now deals 80 direct damage (decreased from 120).
 
 Prisoner 849 (Unreal):
 
