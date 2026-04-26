@@ -48,6 +48,11 @@ Bitterman (Quake II):
 
 ! Bitterman's quad damage powerup is now affected by the "Quake Quad Damage Behavior" setting.
 
+Petton Everhail (Catacomb 3D):
+
+* Fixed the holdable Rings in Strife not taking the blink threshold into account when trying to use them again.
+* Fixed the holdable Ring of Water and Ring of Lightning in Strife not properly clearing the Ring of Earth's effect on use.
+
 Daniel Garner (Painkiller):
 
 - The shotgun primary now deals 6 damage per pellet without Weapon Modifier active, and 5 damage per pellet with Weapon Modifier active (decreased from a shared 8).

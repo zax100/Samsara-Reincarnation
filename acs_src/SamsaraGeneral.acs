@@ -17192,7 +17192,11 @@ script "SamsaraPowerupTimerActiveChecker" (int category, int powerup)
       case 21:
         switch (powerup)
         {
-          case 0: powerupname = "PowerCatacomb_TimeFreeze"; break;
+          case 0: powerupname = "PowerCatacomb_FireRing"; break;
+          case 1: powerupname = "PowerCatacomb_SpreadShot"; break;
+          case 2: powerupname = "PowerCatacomb_RapidFire"; break;
+          case 3: powerupname = "PowerCatacomb_BounceShot"; break;
+          case 4: powerupname = "PowerCatacomb_TimeFreeze"; break;
         }
         break;
 
