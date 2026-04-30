@@ -2429,9 +2429,9 @@ str ClassPickupMessages[CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT][MSGCOUNT]
             "So, uh, whose bone is that anyway?",
             "It makes a terrible letter-opener.",
             "Aiming at the floor is actually more effective.",
-            "This doesn't use ammo, you poo-poo bums. My immersion is now ruined forever.",
             "Don't buy your Norse hammers from Wal-Mart, people.",
             "Get out of here, you Parias wannabe!",
+            "Hammer time.",
         }},
         {{
             "You got the Single-Barreled Shotgun. This one feels inferior, somehow.",

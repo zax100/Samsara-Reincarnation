@@ -54,7 +54,7 @@ script "SamsaraDecorate" (int choice, int arg1, int arg2) //215 - SAMSARA_DECORA
         } else { // set discharge amount
             switch (arg2)
             {
-              case 0: // Thunderbolt (Lightning Mode)
+              case 0: // Mjolnir/Thunderbolt (Lightning Mode)
                 ammotype = "Cell";
                 break;
 

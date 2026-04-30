@@ -253,7 +253,7 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
     },
     { // Quake I
         {"Axe",                    "",           "", "", ""},
-        {"Mjolnir",                "",           "", "", ""},
+        {"Mjolnir",                "Cell",       "", "", ""},
         {"Single Shotgun",         "",           "", "", ""},
         {"Double Shotgun",         "Shell",      "", "", ""},
         {"Grenade Launcher",       "RocketAmmo", "", "", ""},

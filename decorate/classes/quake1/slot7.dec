@@ -314,6 +314,7 @@ actor SamsaraQuakeThunderboltLightningFiringQuadSoundStopper : Trigger
 
 actor LGDischarge : MjolnirDischarge
 {
+    /*
     States
     {
       Death:
@@ -321,6 +322,7 @@ actor LGDischarge : MjolnirDischarge
         TNT1 A 1 A_Explode(17*(ACS_NamedExecuteWithResult("SamsaraDecorate", 5, 1)),4096)
         stop
     }
+    */
 }
 
 actor LGDischargeCoop : LGDischarge

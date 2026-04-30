@@ -37,6 +37,8 @@ Security Officer (Marathon):
 Ranger (Quake I):
 
 ! The Mjolnir and thunderbolt now have +NOAUTOFIRE to prevent accidental discharges and the latter's use of the plasma mode's explosive projectile when running out of ammo for other weapons.
++ The Mjolnir now gives 160 rounds of Ammo 4 on pickup.
+- The Mjolnir now uses 20 rounds of Ammo 4 for each use of its lightning attack.
 ! Splash damage from Ranger's own explosives now thrusts him away further to help with his rocket jumping game while keeping the damage amounts unchanged.
 
 Caleb (Blood):
