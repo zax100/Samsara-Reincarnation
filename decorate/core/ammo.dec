@@ -19,6 +19,7 @@ actor Ammo4IgnoreSkill : Cell { +IGNORESKILL }
 // Ammo Pickup Base
 actor SamsaraAmmoPickup : CustomInventory
 {
+    +DONTGIB //adding this flag, because ammo being crushed by doors is frickin stupid
     +NOTIMEFREEZE // allow the checks and sprite to process during time freeze
     +QUIET
     +THRUACTORS // don't allow picking up until the checks are done
@@ -4962,7 +4963,7 @@ actor MultiAmmoComboBig : AmmoComboBig
 // Enemy Ammo Drop Base
 actor SamsaraEnemyAmmoPickup : SamsaraAmmoPickup
 {
-    +DONTGIB
+    //+DONTGIB // already defined in inherited actor
     +DROPPED
     +NEVERRESPAWN
 }

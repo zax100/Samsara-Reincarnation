@@ -100,6 +100,10 @@ PSX Doom CE/PSX Final Doom CE:
 * Fixed "Pistol Start" taking effect in PVP and invasion; having it active in those cases is redundant.
 ! "Quake I: Quad Damage Behavior" has been renamed to "Quake Quad Damage Behavior" and moved to "Serverside Ability Options". The CVar name itself remains unchanged.
 
+-Other-
+
+! Ammo pickups dropped by the Pinata Party mode and custom enemies outside of Samsara can no longer be crushed out of existence.
+
 ----------------------------------------------------------------------------
 ----------------------Reincarnation 2.2.1 Public Beta-----------------------
 ----------------------------------------------------------------------------
