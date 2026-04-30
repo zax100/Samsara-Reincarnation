@@ -3,7 +3,7 @@ actor SamsaraQuake2ChainfistLoopSoundCheck : Boolean {}
 actor Q2Chainfist : Q2Weapon
 {
     Inventory.PickupMessage "Chainfist"
-    Inventory.Icon "Q2CMPW01" // placeholder
+    Inventory.Icon "Q2CMPW15"
     Weapon.SlotNumber 0
     Weapon.SelectionOrder 1000
     Tag "Chainsaw"

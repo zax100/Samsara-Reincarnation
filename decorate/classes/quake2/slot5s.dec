@@ -4,7 +4,7 @@ actor SamsaraQuake2PhalanxAttackSilentSound : Boolean {}
 actor Q2Phalanx : Q2Weapon
 {
     Inventory.PickupMessage "Phalanx"
-    Inventory.Icon "Q2CMPW06" // placeholder
+    Inventory.Icon "Q2CMPW14"
     Weapon.SlotNumber 5
     Weapon.SlotPriority 1
     Weapon.SelectionOrder 500
