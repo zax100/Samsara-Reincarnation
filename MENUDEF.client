@@ -464,6 +464,9 @@ OptionMenu "SamsaraClientCharacterEquipmentLoadoutOptions"
     StaticText "Duke Nukem (Life's a Beach)", 1
     Option "Slot 4", "samsara_cl_dukelab_slot4", "DukeLABSlot4ClientOptions"
     StaticText ""
+    StaticText "Ranger", 1
+    Option "Slot 1", "samsara_cl_ranger_slot1", "Quake1Slot1ClientOptions"
+    StaticText ""
     StaticText "Gordon Freeman", 1
     Option "Fallback Melee", "samsara_cl_freeman_fallbackmelee", "HalfLifeFallbackMeleeClientOptions"
     Option "Slot 1",         "samsara_cl_freeman_slot1",         "HalfLifeSlot1ClientOptions"
@@ -541,6 +544,12 @@ OptionValue "DukeLABSlot4ClientOptions"
 {
     0, "Water Repeater"
     1, "M16"
+}
+
+OptionValue "Quake1Slot1ClientOptions"
+{
+    0, "Mjolnir"
+    1, "Gauntlet"
 }
 
 OptionValue "HalfLifeFallbackMeleeClientOptions"

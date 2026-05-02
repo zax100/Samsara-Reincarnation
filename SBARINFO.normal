@@ -3362,10 +3362,11 @@ StatusBar Normal, ForceScaled
          IsSelected "Nailgun DOE", "Super Nailgun DOE" { DrawImage "Q1DAMMO2", 224, 176; }
         //Rockets
         IsSelected "Grenade Launcher", "  Rocket Launcher  " { DrawImage "Q1_AMMO3", 224, 176; }
-        IsSelected "Grenade Launcher DOE", "  Rocket Launcher DOE  " { DrawImage "Q1DAMMO3", 224, 176; }
         IsSelected "Rocket Powered Impaler" { DrawImage "Q1_AMMO3", 224, 176; }
+        IsSelected "Grenade Launcher DOE", "  Rocket Launcher DOE  " { DrawImage "Q1DAMMO3", 224, 176; }
         //Cells
-        IsSelected Thunderbolt, "Laser Cannon" {  DrawImage "Q1_AMMO4", 224, 176; }
+        IsSelected Mjolnir, Thunderbolt {  DrawImage "Q1_AMMO4", 224, 176; }
+        IsSelected "Laser Cannon" {  DrawImage "Q1_AMMO4", 224, 176; }
         IsSelected "Thunderbolt DOE" {  DrawImage "Q1DAMMO4", 224, 176; }
 
         DrawNumber 3, QUAKHUDF, QuakeYellow, Health, 208, 176, 0, QuakeRed, 24, Untranslated, 50;
@@ -3524,16 +3525,31 @@ StatusBar Normal, ForceScaled
             DrawImage "QUAKBART", 0, 0;
 
             // Slot 1
-            InInventory GotWeapon0
+            InInventory SamsaraQuake1LoadoutSlot1 // Gauntlet
             {
-                DrawImage "WEPSELN1", 54, 0;
-                DrawImage "WPQUAK1N", 49, 11;
-            }
+                InInventory GotWeapon0
+                {
+                    DrawImage "WEPSELN1", 54, 0;
+                    DrawImage "WPQUAK1N", 49, 11;
+                }
 
-            IsSelected Mjolnir
-            {
-                DrawImage "WEPSELY1", 54, 0;
-                DrawImage "WPQUAK1Y", 49, 11;
+                IsSelected Gauntlet
+                {
+                    DrawImage "WEPSELY1", 54, 0;
+                    DrawImage "WPQUAK1Y", 49, 11;
+                }
+            } else { // Mjolnir
+                InInventory GotWeapon0
+                {
+                    DrawImage "WEPSELN1", 54, 0;
+                    DrawImage "WPQUAK1N", 49, 11;
+                }
+
+                IsSelected Mjolnir
+                {
+                    DrawImage "WEPSELY1", 54, 0;
+                    DrawImage "WPQUAK1Y", 49, 11;
+                }
             }
 
             // Slot 2

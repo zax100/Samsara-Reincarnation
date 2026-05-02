@@ -252,18 +252,18 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
         {"SPNKR-25 Auto Cannon",      "Cell",       "",           "",                ""},
     },
     { // Quake I
-        {"Axe",                    "",           "", "", ""},
-        {"Mjolnir",                "Cell",       "", "", ""},
-        {"Single Shotgun",         "",           "", "", ""},
-        {"Double Shotgun",         "Shell",      "", "", ""},
-        {"Grenade Launcher",       "RocketAmmo", "", "", ""},
-        {"Nailgun",                "Clip",       "", "", ""},
-        {"  Rocket Launcher  ",    "RocketAmmo", "", "", ""},
-        {"Super Nailgun",          "Clip",       "", "", ""},
-        {"Thunderbolt",            "Cell",       "", "", ""},
-        {"",                       "",           "", "", ""},
-        {"",                       "",           "", "", ""},
-        {"Rocket Powered Impaler", "RocketAmmo", "", "", ""},
+        {"Axe",                    "",           "", "",           ""},
+        {"Mjolnir",                "",           "", "ForceCheck", ""}, // a loadout weapon uses a different ammo type or no ammo at all, uses script for proper ammo handling for equipmentstart 2
+        {"Single Shotgun",         "",           "", "",           ""},
+        {"Double Shotgun",         "Shell",      "", "",           ""},
+        {"Grenade Launcher",       "RocketAmmo", "", "",           ""},
+        {"Nailgun",                "Clip",       "", "",           ""},
+        {"  Rocket Launcher  ",    "RocketAmmo", "", "",           ""},
+        {"Super Nailgun",          "Clip",       "", "",           ""},
+        {"Thunderbolt",            "Cell",       "", "",           ""},
+        {"",                       "",           "", "",           ""},
+        {"",                       "",           "", "",           ""},
+        {"Rocket Powered Impaler", "RocketAmmo", "", "",           ""},
     },
     { // Rise of the Triad
         {"RottKnife",      "",             "", "",           ""},
@@ -732,7 +732,7 @@ str ClassHotKeyWeapon[CLASSCOUNT][MAXMODES][SLOTCOUNT + UNIQUECOUNT][LOADOUTCOUN
         {"Steel Knuckles"}, {"KKV-7 SMG Flechette"}, {".44 Magnum Mega Class A1"}, {"WSTE-M5 Combat Shotgun"}, {"Fusion Pistol"}, {"MA-75B Assault Rifle"}, {"SPNKR-XP SSM Launcher"}, {"TOZT-7 Napalm Unit"}, {"ONI-71 Wave Motion Cannon"}, {"Alien Weapon"}, {" Alien Weapon "}, {""}, {""}, {""}, {"SPNKR-25 Auto Cannon"},
     }},
     {{
-        {"Axe"}, {"Mjolnir"}, {"Single Shotgun"}, {"Double Shotgun"}, {"Grenade Launcher"}, {"Nailgun"}, {"  Rocket Launcher  "}, {"Super Nailgun"}, {"Thunderbolt"}, {"Laser Cannon"}, {""}, {""}, {""}, {""}, {"Rocket Powered Impaler"},
+        {"Axe"}, {"Mjolnir", "Gauntlet"}, {"Single Shotgun"}, {"Double Shotgun"}, {"Grenade Launcher"}, {"Nailgun"}, {"  Rocket Launcher  "}, {"Super Nailgun"}, {"Thunderbolt"}, {"Laser Cannon"}, {""}, {""}, {""}, {""}, {"Rocket Powered Impaler"},
     }},
     {
         {
@@ -1078,7 +1078,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 	},
 	{ //Quake
 		{
-			{ "Axe", "", "", "", "", "", "", "", "", "" },
+			{ "Axe", "Gauntlet", "", "", "", "", "", "", "", "" },
 			{ "Single Shotgun", "", "", "", "", "", "", "", "", "" },
 			{ "Double Shotgun", "", "", "", "", "", "", "", "", "" },
 			{ "Nailgun", "Nailgun DOE", "", "", "", "", "", "", "", "" },

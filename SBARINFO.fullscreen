@@ -941,10 +941,11 @@ StatusBar Fullscreen, ForceScaled
             IsSelected "Nailgun DOE", "Super Nailgun DOE" { DrawImage "Q1DAMMO2", 295, 176; }
             //Rockets
             IsSelected "Grenade Launcher", "  Rocket Launcher  " { DrawImage "Q1_AMMO3", 295, 176; }
-            IsSelected "Grenade Launcher DOE", "  Rocket Launcher DOE  " { DrawImage "Q1DAMMO3", 295, 176; }
             IsSelected "Rocket Powered Impaler" { DrawImage "Q1_AMMO3", 295, 176; }
+            IsSelected "Grenade Launcher DOE", "  Rocket Launcher DOE  " { DrawImage "Q1DAMMO3", 295, 176; }
             //Cells
-            IsSelected Thunderbolt, "Laser Cannon" {  DrawImage "Q1_AMMO4", 295, 176; }
+            IsSelected Mjolnir, Thunderbolt {  DrawImage "Q1_AMMO4", 295, 176; }
+            IsSelected "Laser Cannon" {  DrawImage "Q1_AMMO4", 295, 176; }
             IsSelected "Thunderbolt DOE" {  DrawImage "Q1DAMMO4", 295, 176; }
 
             //Inventory
@@ -999,7 +1000,7 @@ StatusBar Fullscreen, ForceScaled
                 // Slot 1
                 InInventory GotWeapon0 { DrawImage "STYSNUM1", 126, 10; }
 
-                IsSelected Mjolnir { DrawImage "STY2NUM1", 126, 10; }
+                IsSelected Mjolnir, Gauntlet { DrawImage "STY2NUM1", 126, 10; }
 
                 // Slot 2
                 InInventory GotWeapon2 { DrawImage "STYSNUM2", 136, 10; }
@@ -5723,7 +5724,7 @@ StatusBar Fullscreen, ForceScaled
                 {
                     InInventory UsingDualPistols { DrawImage "STY2NUM1", 126, 10; }
                 }
-                IsSelected Mjolnir { DrawImage "STY2NUM1", 126, 10; }
+                IsSelected Mjolnir, Gauntlet { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected "Double Pistols" { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected "Auto Charge Pistol"
                 {

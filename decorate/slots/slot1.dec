@@ -48,6 +48,7 @@ actor SamsaraSlotOnePickup : SamsaraSlotPickup replaces Chainsaw
         FSMG A 35 A_SpawnItemEx("SamsaraMarathonMagnumDummy",0.1,0.1)
         goto SpawnLoop
       Quake:            UNIQ P 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+      QuakeLoadout1:    QGNT Z 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Rott:             PPST A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Blake:            BWP1 A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       AOG:              goto Blake
@@ -103,6 +104,7 @@ actor SamsaraSlotOnePickup : SamsaraSlotPickup replaces Chainsaw
       Duke64Full:           PDPB B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       MarathonFull:         PSMG B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       QuakeFull:            PMJL B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+      QuakeFullLoadout1:    PGNT D 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RottFull:             PWE1 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BlakeFull:            BWP1 C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       AOGFull:              goto BlakeFull
@@ -154,6 +156,7 @@ actor SamsaraSlotOnePickup : SamsaraSlotPickup replaces Chainsaw
       Duke64Empty:           PDPB A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       MarathonEmpty:         PSMG A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       QuakeEmpty:            PMJL A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+      QuakeEmptyLoadout1:    PGNT C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RottEmpty:             PWE1 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BlakeEmpty:            BWP1 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       AOGEmpty:              goto BlakeEmpty

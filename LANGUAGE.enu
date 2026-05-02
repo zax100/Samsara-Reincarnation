@@ -164,6 +164,7 @@ SAMSARA_RANGER_OB_FALLBACKMELEE = "%k met %o, and %g met the axe.";
 SAMSARA_RANGER_OB_FALLBACKRANGED = "%k gave %o a boomstick to chew on.";
 SAMSARA_RANGER_OB_SLOT1_1 = "%k hammered %o without %p consent.";
 SAMSARA_RANGER_OB_SLOT1_2 = "%k shocked %o with a purple wand.";
+SAMSARA_RANGER_OB_SLOT1_LOADOUT1 = "%k made %o talk to the hand.";
 SAMSARA_RANGER_OB_SLOT2 = "%k gave %o two loads of buckshot.";
 SAMSARA_RANGER_OB_SLOT3_1 = "%k fed %o a pineapple.";
 SAMSARA_RANGER_OB_SLOT3_2 = "%k fed %o a cluster of pineapples.";
