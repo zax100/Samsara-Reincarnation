@@ -7,7 +7,7 @@ actor "Crusader's Longbow" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1700
     Weapon.YAdjust 20
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 3
     Obituary "$SAMSARA_HEXEN_OB_SLOT2"
     Tag "Crusader's Longbow"
@@ -135,7 +135,7 @@ actor "Frost Shards" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1700
     Weapon.YAdjust 20
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 2
     Obituary "$SAMSARA_HEXEN_OB_SLOT2"
     Tag "Frost Shards"
@@ -426,7 +426,7 @@ actor "Javelin of Zeal" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1700
     Weapon.YAdjust 20
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 3
     Obituary "$SAMSARA_HEXEN_OB_SLOT2"
     Tag "Javelin of Zeal"

@@ -1674,7 +1674,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Crusader's Longbow") || CheckInventory("Javelin of Zeal"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Frost Shards", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Crusader's Longbow") || CheckWeapon("Javelin of Zeal")) { SetWeapon("Frost Shards"); }
 
@@ -1684,7 +1686,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Bishop's Shortsword") || CheckInventory("Fire Blast"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Timon's Axe", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Bishop's Shortsword") || CheckWeapon("Fire Blast")) { SetWeapon("Timon's Axe"); }
 
@@ -1694,7 +1698,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Blight Shock") || CheckInventory("Jotunn's Flail"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Serpent Staff", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Blight Shock") || CheckWeapon("Jotunn's Flail")) { SetWeapon("Serpent Staff"); }
 
@@ -1704,7 +1710,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Ice Fang") || CheckInventory("Viscerelagh"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Hammer of Retribution", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Ice Fang") || CheckWeapon("Viscerelagh")) { SetWeapon("Hammer of Retribution"); }
 
@@ -1714,7 +1722,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Arc of Death") || CheckInventory("Quickspell Gauntlets"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Firestorm", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Arc of Death") || CheckWeapon("Quickspell Gauntlets")) { SetWeapon("Firestorm"); }
 
@@ -1722,11 +1732,22 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory("Quickspell Gauntlets", 0);
                             }
 
-                            if (CheckInventory("SamsaraClassicPariasHasBloodscourge")) { SetInventory(" Bloodscourge ", 1); }
+                            if (CheckInventory("SamsaraClassicPariasHasBloodscourge"))
+                            {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
+                                SetInventory(" Bloodscourge ", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                                SetInventory(storedammosecname, storedammosec);
+                            }
 
                             if (CheckInventory("SamsaraHexenHasSlot7"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
                                 SetInventory("Wraithverge", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                                SetInventory(storedammosecname, storedammosec);
 
                                 if (CheckWeapon("Bloodscourge") || CheckWeapon("Quietus")) { SetWeapon("Wraithverge"); }
                             } else {
@@ -1781,7 +1802,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Crusader's Longbow") || CheckInventory("Javelin of Zeal"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Frost Shards", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Crusader's Longbow") || CheckWeapon("Javelin of Zeal")) { SetWeapon("Frost Shards"); }
 
@@ -1791,7 +1814,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Bishop's Shortsword") || CheckInventory("Timon's Axe"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Fire Blast", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Bishop's Shortsword") || CheckWeapon("Timon's Axe")) { SetWeapon("Fire Blast"); }
 
@@ -1801,7 +1826,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Serpent Staff") || CheckInventory("Jotunn's Flail"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Blight Shock", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Serpent Staff") || CheckWeapon("Jotunn's Flail")) { SetWeapon("Blight Shock"); }
 
@@ -1811,7 +1838,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Ice Fang") || CheckInventory("Hammer of Retribution"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Viscerelagh", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Ice Fang") || CheckWeapon("Hammer of Retribution")) { SetWeapon("Viscerelagh"); }
 
@@ -1821,7 +1850,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Firestorm") || CheckInventory("Quickspell Gauntlets"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Arc of Death", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Firestorm") || CheckWeapon("Quickspell Gauntlets")) { SetWeapon("Arc of Death"); }
 
@@ -1831,14 +1862,22 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("SamsaraHexenHasSlot7"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
                                 SetInventory("Bloodscourge", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                                SetInventory(storedammosecname, storedammosec);
 
                                 if (CheckWeapon("Wraithverge") || CheckWeapon("Quietus")) { SetWeapon("Bloodscourge"); }
                             }
 
                             if (CheckInventory("SamsaraClassicPariasHasBloodscourge"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
                                 SetInventory("Bloodscourge", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                                SetInventory(storedammosecname, storedammosec);
 
                                 if (CheckWeapon(" Bloodscourge ")) { SetWeapon("Bloodscourge"); }
                             }
@@ -1931,7 +1970,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Crusader's Longbow") || CheckInventory("Frost Shards"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Javelin of Zeal", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Crusader's Longbow") || CheckWeapon("Frost Shards")) { SetWeapon("Javelin of Zeal"); }
 
@@ -1941,7 +1982,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Bishop's Shortsword") || CheckInventory("Fire Blast"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Timon's Axe", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Bishop's Shortsword") || CheckWeapon("Fire Blast")) { SetWeapon("Timon's Axe"); }
 
@@ -1951,7 +1994,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Serpent Staff") || CheckInventory("Blight Shock"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Jotunn's Flail", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Serpent Staff") || CheckWeapon("Blight Shock")) { SetWeapon("Jotunn's Flail"); }
 
@@ -1961,7 +2006,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Ice Fang") || CheckInventory("Viscerelagh"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Hammer of Retribution", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Ice Fang") || CheckWeapon("Viscerelagh")) { SetWeapon("Hammer of Retribution"); }
 
@@ -1971,7 +2018,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Firestorm") || CheckInventory("Arc of Death"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Quickspell Gauntlets", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Firestorm") || CheckWeapon("Arc of Death")) { SetWeapon("Quickspell Gauntlets"); }
 
@@ -1981,14 +2030,22 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("SamsaraHexenHasSlot7"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
                                 SetInventory("Quietus", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                                SetInventory(storedammosecname, storedammosec);
 
                                 if (CheckWeapon("Wraithverge") || CheckWeapon("Bloodscourge")) { SetWeapon("Quietus"); }
                             }
 
                             if (CheckInventory("SamsaraClassicPariasHasBloodscourge"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
                                 SetInventory("Quietus", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                                SetInventory(storedammosecname, storedammosec);
 
                                 if (CheckWeapon(" Bloodscourge ")) { SetWeapon("Quietus"); }
                             }
@@ -2085,7 +2142,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                         if (CheckInventory("Frost Shards") || CheckInventory("Javelin of Zeal"))
                         {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Crusader's Longbow", 1);
+                            SetInventory(storedammopriname, storedammopri);
 
                             if (CheckWeapon("Frost Shards") || CheckWeapon("Javelin of Zeal")) { SetWeapon("Crusader's Longbow"); }
 
@@ -2095,7 +2154,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                         if (CheckInventory("Fire Blast") || CheckInventory("Timon's Axe"))
                         {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Bishop's Shortsword", 1);
+                            SetInventory(storedammopriname, storedammopri);
 
                             if (CheckWeapon("Fire Blast") || CheckWeapon("Timon's Axe")) { SetWeapon("Bishop's Shortsword"); }
 
@@ -2105,7 +2166,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                         if (CheckInventory("Blight Shock") || CheckInventory("Jotunn's Flail"))
                         {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Serpent Staff", 1);
+                            SetInventory(storedammopriname, storedammopri);
 
                             if (CheckWeapon("Blight Shock") || CheckWeapon("Jotunn's Flail")) { SetWeapon("Serpent Staff"); }
 
@@ -2115,7 +2178,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                         if (CheckInventory("Viscerelagh") || CheckInventory("Hammer of Retribution"))
                         {
+                            storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Ice Fang", 1);
+                            SetInventory(storedammopriname, storedammopri);
 
                             if (CheckWeapon("Viscerelagh") || CheckWeapon("Hammer of Retribution")) { SetWeapon("Ice Fang"); }
 
@@ -2125,7 +2190,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                         if (CheckInventory("Arc of Death") || CheckInventory("Quickspell Gauntlets"))
                         {
+                            storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Firestorm", 1);
+                            SetInventory(storedammopriname, storedammopri);
 
                             if (CheckWeapon("Arc of Death") || CheckWeapon("Quickspell Gauntlets")) { SetWeapon("Firestorm"); }
 
@@ -2135,14 +2202,22 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                         if (CheckInventory("SamsaraHexenHasSlot7"))
                         {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                            storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
                             SetInventory("Wraithverge", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                            SetInventory(storedammosecname, storedammosec);
 
                             if (CheckWeapon("Bloodscourge") || CheckWeapon("Quietus")) { SetWeapon("Wraithverge"); }
                         }
 
                         if (CheckInventory("SamsaraClassicPariasHasBloodscourge"))
                         {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                            storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
                             SetInventory("Wraithverge", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                            SetInventory(storedammosecname, storedammosec);
 
                             if (CheckWeapon(" Bloodscourge ")) { SetWeapon("Wraithverge"); }
                         }

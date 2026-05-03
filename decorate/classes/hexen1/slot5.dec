@@ -7,7 +7,7 @@ actor "Ice Fang" : SamsaraHexenWeapon
     Weapon.SelectionOrder 900
     Weapon.YAdjust -10
     Weapon.AmmoType "Cell"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 3
     Obituary "$SAMSARA_HEXEN_OB_SLOT5_1"
     Tag "Ice Fang"
@@ -170,7 +170,7 @@ actor "Hammer of Retribution" : SamsaraHexenWeapon
     Weapon.SelectionOrder 900
     Weapon.YAdjust -10
     Weapon.AmmoType "Cell"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 3
     Obituary "$SAMSARA_HEXEN_OB_SLOT5_1"
     Tag "Hammer of Retribution"
@@ -400,7 +400,7 @@ actor Viscerelagh : SamsaraHexenWeapon
     Weapon.SelectionOrder 900
     //Weapon.YAdjust 20
     Weapon.AmmoType "Cell"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 3
     Obituary "$SAMSARA_HEXEN_OB_SLOT5_1"
     Tag "Viscerelagh"

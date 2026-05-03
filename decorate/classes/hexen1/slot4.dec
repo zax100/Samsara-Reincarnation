@@ -10,7 +10,7 @@ actor "Serpent Staff" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1600
     Weapon.YAdjust 10
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 1
     Obituary "$SAMSARA_HEXEN_OB_SLOT4_1"
     Tag "Serpent Staff"
@@ -265,7 +265,7 @@ actor "Blight Shock" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1600
     Weapon.YAdjust 10
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 5
     Obituary "$SAMSARA_HEXEN_OB_SLOT4_1"
     Tag "Blight Shock"
@@ -417,7 +417,7 @@ actor "Jotunn's Flail" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1600
     Weapon.YAdjust 10
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 1
     Obituary "$SAMSARA_HEXEN_OB_SLOT4_1"
     Tag "Jotunn's Flail"

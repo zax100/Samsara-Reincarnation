@@ -13,10 +13,10 @@ actor Wraithverge : CWeapWraithverge // [tv50] my hatred for this weapon has not
     Inventory.PickupSound "hexen/weaponget"
     Inventory.RestrictedTo "HexenPlayer"
     Weapon.AmmoType1 "Clip"
-    Weapon.AmmoGive1 0 // 25
+    Weapon.AmmoGive1 25
     Weapon.AmmoUse1 0 // 20
     Weapon.AmmoType2 "Cell"
-    Weapon.AmmoGive2 0 // 35
+    Weapon.AmmoGive2 35
     Weapon.AmmoUse2 0 // 30
     Obituary "$SAMSARA_HEXEN_OB_SLOT7"
     Tag "Wraithverge"
@@ -358,10 +358,10 @@ actor Bloodscourge : SamsaraHexenWeapon
     Weapon.SelectionOrder 3100
     Weapon.YAdjust 20
     Weapon.AmmoType1 "Clip"
-    //Weapon.AmmoGive1 25
+    Weapon.AmmoGive1 25
     Weapon.AmmoUse1 15
     Weapon.AmmoType2 "Cell"
-    //Weapon.AmmoGive2 25
+    Weapon.AmmoGive2 25
     Weapon.AmmoUse2 15
     Obituary "$SAMSARA_HEXEN_OB_SLOT7"
     Tag "Bloodscourge"
@@ -506,10 +506,10 @@ actor Quietus : SamsaraHexenWeapon
     Weapon.SelectionOrder 2900
     Weapon.YAdjust 10
     Weapon.AmmoType1 "Clip"
-    //Weapon.AmmoGive1 25
+    Weapon.AmmoGive1 25
     Weapon.AmmoUse1 7
     Weapon.AmmoType2 "Cell"
-    //Weapon.AmmoGive2 25
+    Weapon.AmmoGive2 25
     Weapon.AmmoUse2 7
     Obituary "$SAMSARA_HEXEN_OB_SLOT7"
     Tag "Quietus"

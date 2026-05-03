@@ -7,7 +7,7 @@ actor "Bishop's Shortsword" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1500
     Weapon.YAdjust -12
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 4
     Obituary "$SAMSARA_HEXEN_OB_SLOT3"
     Tag "Bishop's Shortsword"
@@ -387,7 +387,7 @@ actor "Timon's Axe" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1500
     Weapon.YAdjust -12
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 3
     Obituary "$SAMSARA_HEXEN_OB_SLOT3"
     Tag "Timon's Axe"
@@ -834,7 +834,7 @@ actor "Fire Blast" : SamsaraHexenWeapon
     Weapon.SelectionOrder 1500
     Weapon.YAdjust 20
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 25
+    Weapon.AmmoGive 25
     Weapon.AmmoUse 3
     Obituary "$SAMSARA_HEXEN_OB_SLOT3"
     Tag "Fire Blast"
