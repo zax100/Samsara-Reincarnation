@@ -38,6 +38,12 @@ Hexen I:
 
 * Fixed the improved PVE damage values not properly applying to the bishop's shortsword strong projectiles.
 
+Duke Nukem 3D:
+
+-Duke Nukem (Original/Life's a Beach)-
+
+* Fixed second and third unique pickups not giving extra ammo on first pickup when playing PVP in Doom or Chex Quest.
+
 Security Officer (Marathon):
 
 * Fixed the Talon Ceramic Combat Blade melee puff not having lights.

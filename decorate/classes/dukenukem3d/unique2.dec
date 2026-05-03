@@ -5,7 +5,7 @@ actor "Shrinker" : DukeWeapon
 	Weapon.SlotNumber 8
 	Weapon.SelectionOrder 800
 	Weapon.AmmoUse 1
-	Weapon.AmmoGive 0 // 3
+	Weapon.AmmoGive 3
 	Weapon.AmmoType "ShrinkerAmmo"
 	Inventory.Pickupmessage "You got the Shrink Ray!"
 	Inventory.PickupSound "duke/itemget"

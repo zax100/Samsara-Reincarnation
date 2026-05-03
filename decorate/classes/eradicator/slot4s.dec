@@ -8,7 +8,7 @@ actor EradEnergywhip : SamsaraEradicatorWeapon
     Weapon.SlotNumber 4
     Weapon.SelectionOrder 900
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 30
+    Weapon.AmmoGive 30
     Weapon.AmmoUse 1
     Obituary "%o was electrocuted by %k's energywhip."
     Tag "Energywhip"
@@ -205,7 +205,7 @@ actor EradNitrofogger : SamsaraEradicatorWeapon
     Weapon.SlotNumber 4
     Weapon.SelectionOrder 900
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 30
+    Weapon.AmmoGive 30
     Weapon.AmmoUse 1
     Obituary "%o was gassed by %k's nitrofogger."
     Tag "Nitrofogger"
@@ -397,7 +397,7 @@ actor EradFlamethrower : SamsaraEradicatorWeapon
     Weapon.SlotNumber 4
     Weapon.SelectionOrder 900
     Weapon.AmmoType "Clip"
-    //Weapon.AmmoGive 30
+    Weapon.AmmoGive 30
     Weapon.AmmoUse 1
     Obituary "%o was burned by %k's flamethrower."
     Tag "Flamethrower"

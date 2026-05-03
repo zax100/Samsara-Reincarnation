@@ -13,7 +13,7 @@ actor " Arachnicator " : SamsaraEradicatorWeapon
     Weapon.SlotPriority 0
     Weapon.SelectionOrder 2800
     Weapon.AmmoType "RocketAmmo"
-    //Weapon.AmmoGive 3
+    Weapon.AmmoGive 3
     Weapon.AmmoUse 1
     Obituary "%k didn't know %o was arachnophobic."
     Tag "Arachnicator"
@@ -302,7 +302,7 @@ actor EradRovingMine : SamsaraEradicatorWeapon
     Weapon.SlotPriority 0
     Weapon.SelectionOrder 2800
     Weapon.AmmoType "RocketAmmo"
-    //Weapon.AmmoGive 3
+    Weapon.AmmoGive 3
     Weapon.AmmoUse 1
     Obituary "%o was killed by %k's cylindrical roving mine."
     Tag "Roving Mine"
@@ -522,7 +522,7 @@ actor EradMiniTankDetonator : SamsaraEradicatorWeapon
     Weapon.SlotPriority 0
     Weapon.SelectionOrder 2800
     Weapon.AmmoType "RocketAmmo"
-    //Weapon.AmmoGive 3
+    Weapon.AmmoGive 3
     Weapon.AmmoUse 1
     Obituary "%o's foot was ran over by %k's mini tank detonator."
     Tag "Mini Tank Detonator"

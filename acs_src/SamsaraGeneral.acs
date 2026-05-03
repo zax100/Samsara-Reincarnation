@@ -6630,11 +6630,10 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("LifeLeech"))
                 {
                     GiveInventory("LifeLeech", 1);
-                    GiveInventory("Cell", dmextraammo ? 40 * 5 / 2 : 40);
                     if (dropped <= 0 && startmode == 0 && weaponstay) { SetInventory("SamsaraBloodLifeLeechLastPickupTime", Timer() + pickuptimer); }
                     result = 1;
                 } else if (CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Cell", 40);
+                    GiveInventory("LifeLeech", 1);
                     if (dropped <= 0 && startmode == 0 && weaponstay) { SetInventory("SamsaraBloodLifeLeechLastPickupTime", Timer() + pickuptimer); }
                     result = 1;
                 }
@@ -6889,10 +6888,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory(" Arachnicator "))
                 {
                     GiveInventory(" Arachnicator ", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 3 * 5 / 2 : 3);
                     result = 1;
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("RocketAmmo", 3);
+                    GiveInventory(" Arachnicator ", 1);
                     result = 1;
                 }
                 break;
@@ -6901,10 +6899,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Death Bomb"))
                 {
                     GiveInventory("Death Bomb", 1);
-                    GiveInventory("Shell", dmextraammo ? 12 * 5 / 2 : 12);
                     result = 1;
                 } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Shell", 12);
+                    GiveInventory("Death Bomb", 1);
                     result = 1;
                 }
                 break;
@@ -6913,10 +6910,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Eleena Smoke Bomb"))
                 {
                     GiveInventory("Eleena Smoke Bomb", 1);
-                    GiveInventory("Cell", dmextraammo ? 48 * 5 / 2 : 48);
                     result = 1;
                 } else if (CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Cell", 48);
+                    GiveInventory("Eleena Smoke Bomb", 1);
                     result = 1;
                 }
                 break;
@@ -6925,10 +6921,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("EradEnergywhip"))
                 {
                     GiveInventory("EradEnergywhip", 1);
-                    GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
                     result = 1;
                 } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Clip", 30);
+                    GiveInventory("EradEnergywhip", 1);
                     result = 1;
                 }
                 break;
@@ -6946,10 +6941,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("EradRovingMine"))
                 {
                     GiveInventory("EradRovingMine", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 3 * 5 / 2 : 3);
                     result = 1;
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("RocketAmmo", 3);
+                    GiveInventory("EradRovingMine", 1);
                     result = 1;
                 }
                 break;
@@ -6958,10 +6952,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Cluster Bomb"))
                 {
                     GiveInventory("Cluster Bomb", 1);
-                    GiveInventory("Shell", dmextraammo ? 12 * 5 / 2 : 12);
                     result = 1;
                 } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Shell", 12);
+                    GiveInventory("Cluster Bomb", 1);
                     result = 1;
                 }
                 break;
@@ -6970,10 +6963,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Napalm Charge"))
                 {
                     GiveInventory("Napalm Charge", 1);
-                    GiveInventory("Cell", dmextraammo ? 48 * 5 / 2 : 48);
                     result = 1;
                 } else if (CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Cell", 48);
+                    GiveInventory("Napalm Charge", 1);
                     result = 1;
                 }
                 break;
@@ -6982,10 +6974,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("EradNitrofogger"))
                 {
                     GiveInventory("EradNitrofogger", 1);
-                    GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
                     result = 1;
                 } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Clip", 30);
+                    GiveInventory("EradNitrofogger", 1);
                     result = 1;
                 }
                 break;
@@ -7003,10 +6994,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("EradMiniTankDetonator"))
                 {
                     GiveInventory("EradMiniTankDetonator", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 3 * 5 / 2 : 3);
                     result = 1;
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("RocketAmmo", 3);
+                    GiveInventory("EradMiniTankDetonator", 1);
                     result = 1;
                 }
                 break;
@@ -7015,10 +7005,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Pellet Bomb"))
                 {
                     GiveInventory("Pellet Bomb", 1);
-                    GiveInventory("Shell", dmextraammo ? 12 * 5 / 2 : 12);
                     result = 1;
                 } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Shell", 12);
+                    GiveInventory("Pellet Bomb", 1);
                     result = 1;
                 }
                 break;
@@ -7027,10 +7016,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Ion Sphere"))
                 {
                     GiveInventory("Ion Sphere", 1);
-                    GiveInventory("Cell", dmextraammo ? 48 * 5 / 2 : 48);
                     result = 1;
                 } else if (CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Cell", 48);
+                    GiveInventory("Ion Sphere", 1);
                     result = 1;
                 }
                 break;
@@ -7039,10 +7027,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("EradFlamethrower"))
                 {
                     GiveInventory("EradFlamethrower", 1);
-                    GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
                     result = 1;
                 } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Clip", 30);
+                    GiveInventory("EradFlamethrower", 1);
                     result = 1;
                 }
                 break;
@@ -7060,10 +7047,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory(" Arachnicator "))
                 {
                     GiveInventory(" Arachnicator ", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 3 * 5 / 2 : 3);
                     result = 1;
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("RocketAmmo", 3);
+                    GiveInventory(" Arachnicator ", 1);
                     result = 1;
                 }
                 break;
@@ -7072,10 +7058,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Pellet Bomb"))
                 {
                     GiveInventory("Pellet Bomb", 1);
-                    GiveInventory("Shell", dmextraammo ? 12 * 5 / 2 : 12);
                     result = 1;
                 } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Shell", 12);
+                    GiveInventory("Pellet Bomb", 1);
                     result = 1;
                 }
                 break;
@@ -7084,10 +7069,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Napalm Charge"))
                 {
                     GiveInventory("Napalm Charge", 1);
-                    GiveInventory("Cell", dmextraammo ? 48 * 5 / 2 : 48);
                     result = 1;
                 } else if (CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Cell", 48);
+                    GiveInventory("Napalm Charge", 1);
                     result = 1;
                 }
                 break;
@@ -7096,10 +7080,9 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("EradFlamethrower"))
                 {
                     GiveInventory("EradFlamethrower", 1);
-                    GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
                     result = 1;
                 } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Clip", 30);
+                    GiveInventory("EradFlamethrower", 1);
                     result = 1;
                 }
                 break;
@@ -10319,10 +10302,9 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (!CheckInventory("Shrinker"))
                 {
                     GiveInventory("Shrinker", 1);
-                    GiveInventory("ShrinkerAmmo", 3);
                     result = 1;
                 } else if (CheckInventory("ShrinkerAmmo") < GetAmmoCapacity("ShrinkerAmmo")) {
-                    GiveInventory("ShrinkerAmmo", 3);
+                    GiveInventory("Shrinker", 1);
                     result = 1;
                 }
 
@@ -10342,10 +10324,9 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (!CheckInventory("Expander"))
                 {
                     GiveInventory("Expander", 1);
-                    GiveInventory("ExpanderAmmo", 20);
                     result = 1;
                 } else if (CheckInventory("ExpanderAmmo") < GetAmmoCapacity("ExpanderAmmo")) {
-                    GiveInventory("ExpanderAmmo", 20);
+                    GiveInventory("Expander", 1);
                     result = 1;
                 }
 

@@ -6,7 +6,7 @@ actor "Eleena Smoke Bomb" : SamsaraEradicatorWeapon
     Weapon.SlotNumber 6
     Weapon.SelectionOrder 1350
     Weapon.AmmoType "Cell"
-    //Weapon.AmmoGive 48
+    Weapon.AmmoGive 48
     Weapon.AmmoUse 4
     Obituary "%o was suffocated by %k's smokebomb."
     Tag "Smoke Bomb"
@@ -263,7 +263,7 @@ actor "Napalm Charge" : SamsaraEradicatorWeapon
     Weapon.SlotNumber 6
     Weapon.SelectionOrder 1350
     Weapon.AmmoType "Cell"
-    //Weapon.AmmoGive 48
+    Weapon.AmmoGive 48
     Weapon.AmmoUse 4
     Obituary "%k made a new scar on %o's face."
     Tag "Napalm Charge"
@@ -680,7 +680,7 @@ actor "Ion Sphere" : SamsaraEradicatorWeapon
     Weapon.SlotNumber 6
     Weapon.SelectionOrder 1350
     Weapon.AmmoType "Cell"
-    //Weapon.AmmoGive 48
+    Weapon.AmmoGive 48
     Weapon.AmmoUse 4
     Obituary "%o was electrocuted by %k's Ion Sphere."
     Tag "Ion Sphere"

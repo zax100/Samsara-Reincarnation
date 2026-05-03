@@ -6,7 +6,7 @@ actor "Death Bomb" : SamsaraEradicatorWeapon
     Weapon.SlotNumber 3
     Weapon.SelectionOrder 1400
     Weapon.AmmoType "Shell"
-    //Weapon.AmmoGive 12
+    Weapon.AmmoGive 12
     Weapon.AmmoUse 2
     Obituary "%k threw a death ball at %o."
     Tag "Death Bomb"
@@ -309,7 +309,7 @@ actor "Cluster Bomb" : SamsaraEradicatorWeapon
     Weapon.SlotNumber 3
     Weapon.SelectionOrder 1400
     Weapon.AmmoType "Shell"
-    //Weapon.AmmoGive 12
+    Weapon.AmmoGive 12
     Weapon.AmmoUse 2
     Obituary "%k threw a cluster bomb at %o."
     Tag "Cluster Bomb"
@@ -502,7 +502,7 @@ actor "Pellet Bomb" : SamsaraEradicatorWeapon
     Weapon.SlotNumber 3
     Weapon.SelectionOrder 1400
     Weapon.AmmoType "Shell"
-    //Weapon.AmmoGive 12
+    Weapon.AmmoGive 12
     Weapon.AmmoUse 1
     Obituary "%k threw some balls at %o's face."
     Tag "Pellet Bomb"

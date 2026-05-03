@@ -2274,12 +2274,16 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if(CheckInventory("DukeHasShrinker"))
 							{
-								GiveInventory("Shrinker", 1);
+                                storedammopriname = "ShrinkerAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Shrinker", 1);
+                                SetInventory(storedammopriname, storedammopri);
 							}
 
 							if(CheckInventory("DukeHasExpander"))
 							{
-								GiveInventory("Expander", 1);
+                                storedammopriname = "ExpanderAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Expander", 1);
+                                SetInventory(storedammopriname, storedammopri);
 							}
 
                             if (CheckInventory("DukePortJetpack64")) { GiveInventory("DukePortJetpack", 1); }
@@ -2359,12 +2363,16 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if(CheckInventory("DukeHasShrinker"))
 							{
-								GiveInventory("Shrinker", 1);
+                                storedammopriname = "ShrinkerAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Shrinker", 1);
+                                SetInventory(storedammopriname, storedammopri);
 							}
 
 							if(CheckInventory("DukeHasExpander"))
 							{
-								GiveInventory("Expander", 1);
+                                storedammopriname = "ExpanderAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Expander", 1);
+                                SetInventory(storedammopriname, storedammopri);
 							}
 
                             if (CheckInventory("DukePortJetpack64")) { GiveInventory("DukePortJetpack", 1); }
@@ -2782,7 +2790,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						{
 							if (CheckInventory("EradRovingMine") || CheckInventory("EradMiniTankDetonator"))
 							{
-								SetInventory(" Arachnicator ", 1);
+                                storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory(" Arachnicator ", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("EradRovingMine") || CheckWeapon("EradMiniTankDetonator")) { SetWeapon(" Arachnicator "); }
 
@@ -2792,7 +2802,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("Cluster Bomb") || CheckInventory("Pellet Bomb"))
 							{
-								SetInventory("Death Bomb", 1);
+                                storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Death Bomb", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("Cluster Bomb") || CheckWeapon("Pellet Bomb")) { SetWeapon("Death Bomb"); }
 
@@ -2802,7 +2814,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("EradNitrofogger") || CheckInventory("EradFlamethrower"))
 							{
-								SetInventory("EradEnergywhip", 1);
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("EradEnergywhip", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("EradNitrofogger") || CheckWeapon("EradFlamethrower")) { SetWeapon("EradEnergywhip"); }
 
@@ -2812,7 +2826,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("Napalm Charge") || CheckInventory("Ion Sphere"))
 							{
-								SetInventory("Eleena Smoke Bomb", 1);
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Eleena Smoke Bomb", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("Napalm Charge") || CheckWeapon("Ion Sphere")) { SetWeapon("Eleena Smoke Bomb"); }
 
@@ -2828,7 +2844,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						} else if (eradmode == 1) {
 							if (CheckInventory(" Arachnicator ") || CheckInventory("EradMiniTankDetonator"))
 							{
-								SetInventory("EradRovingMine", 1);
+                                storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("EradRovingMine", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon(" Arachnicator ") || CheckWeapon("EradMiniTankDetonator")) { SetWeapon("EradRovingMine"); }
 
@@ -2838,7 +2856,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("Death Bomb") || CheckInventory("Pellet Bomb"))
 							{
-								SetInventory("Cluster Bomb", 1);
+                                storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Cluster Bomb", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("Death Bomb") || CheckWeapon("Pellet Bomb")) { SetWeapon("Cluster Bomb"); }
 
@@ -2848,7 +2868,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("EradEnergywhip") || CheckInventory("EradFlamethrower"))
 							{
-								SetInventory("EradNitrofogger", 1);
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("EradNitrofogger", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("EradEnergywhip") || CheckWeapon("EradFlamethrower")) { SetWeapon("EradNitrofogger"); }
 
@@ -2858,7 +2880,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("Eleena Smoke Bomb") || CheckInventory("Ion Sphere"))
 							{
-								SetInventory("Napalm Charge", 1);
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Napalm Charge", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("Eleena Smoke Bomb") || CheckWeapon("Ion Sphere")) { SetWeapon("Napalm Charge"); }
 
@@ -2874,7 +2898,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						} else if (eradmode == 2) {
 							if (CheckInventory(" Arachnicator ") || CheckInventory("EradRovingMine"))
 							{
-								SetInventory("EradMiniTankDetonator", 1);
+                                storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("EradMiniTankDetonator", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon(" Arachnicator ") || CheckWeapon("EradRovingMine")) { SetWeapon("EradMiniTankDetonator"); }
 
@@ -2884,7 +2910,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("Death Bomb") || CheckInventory("Cluster Bomb"))
 							{
-								SetInventory("Pellet Bomb", 1);
+                                storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Pellet Bomb", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("Death Bomb") || CheckWeapon("Cluster Bomb")) { SetWeapon("Pellet Bomb"); }
 
@@ -2894,7 +2922,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("EradEnergywhip") || CheckInventory("EradNitrofogger"))
 							{
-								SetInventory("EradFlamethrower", 1);
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("EradFlamethrower", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("EradEnergywhip") || CheckWeapon("EradNitrofogger")) { SetWeapon("EradFlamethrower"); }
 
@@ -2904,7 +2934,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("Eleena Smoke Bomb") || CheckInventory("Napalm Charge"))
 							{
-								SetInventory("Ion Sphere", 1);
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Ion Sphere", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("Eleena Smoke Bomb") || CheckWeapon("Napalm Charge")) { SetWeapon("Ion Sphere"); }
 
@@ -2920,7 +2952,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						} else if (eradmode == 3) {
 							if (CheckInventory("EradRovingMine") || CheckInventory("EradMiniTankDetonator"))
 							{
-								SetInventory(" Arachnicator ", 1);
+                                storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory(" Arachnicator ", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("EradRovingMine") || CheckWeapon("EradMiniTankDetonator")) { SetWeapon(" Arachnicator "); }
 
@@ -2930,7 +2964,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("Death Bomb") || CheckInventory("Cluster Bomb"))
 							{
-								SetInventory("Pellet Bomb", 1);
+                                storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Pellet Bomb", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("Death Bomb") || CheckWeapon("Cluster Bomb")) { SetWeapon("Pellet Bomb"); }
 
@@ -2940,7 +2976,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("EradEnergywhip") || CheckInventory("EradNitrofogger"))
 							{
-								SetInventory("EradFlamethrower", 1);
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("EradFlamethrower", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("EradEnergywhip") || CheckWeapon("EradNitrofogger")) { SetWeapon("EradFlamethrower"); }
 
@@ -2950,7 +2988,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 							if (CheckInventory("Eleena Smoke Bomb") || CheckInventory("Ion Sphere"))
 							{
-								SetInventory("Napalm Charge", 1);
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Napalm Charge", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
 								if (CheckWeapon("Eleena Smoke Bomb") || CheckWeapon("Ion Sphere")) { SetWeapon("Napalm Charge"); }
 

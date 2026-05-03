@@ -5,7 +5,7 @@ actor "Expander" : DukeWeapon
 	Weapon.SelectionOrder 1100
 	Weapon.SlotNumber 9
 	Weapon.AmmoUse 1
-	Weapon.AmmoGive 0 // 20
+	Weapon.AmmoGive 20
 	Weapon.AmmoType "ExpanderAmmo"
 	Inventory.Pickupmessage "You got the Expander!"
 	Inventory.PickupSound "duke/itemget"
