@@ -7,7 +7,7 @@ actor "  Dual Chainguns  ": InstantSwitchWeapon
 	Weapon.SlotPriority 1
     Inventory.PickUpSound "wolfen/weaponget"
     Weapon.AmmoUse 1
-    //Weapon.AmmoGive 40
+    Weapon.AmmoGive 40
     Weapon.AmmoType "Clip"
     +DONTBOB
     +INVENTORY.UNDROPPABLE

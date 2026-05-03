@@ -200,7 +200,7 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
     },
     { // Wolfenstein 3D
         {"Knife",                   "",           "", "ForceCheck", ""},
-        {"BJSuperKnife",            "",           "", "ForceCheck", ""},
+        {"BJSuperKnife",            "",           "", "ForceCheck", ""}, // an altclass uses an ammo type, uses script for proper ammo handling for equipmentstart 2
         {"Luger",                   "",           "", "ForceCheck", ""},
         {"Machine Gun",             "",           "", "ForceCheck", ""}, // an altclass uses a different ammo type, uses script for proper ammo handling for equipmentstart 2
         {"Mauser Rifle",            "",           "", "ForceCheck", ""}, // an altclass uses a different ammo type, uses script for proper ammo handling for equipmentstart 2
@@ -253,7 +253,7 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
     },
     { // Quake I
         {"Axe",                    "",           "", "",           ""},
-        {"Mjolnir",                "",           "", "ForceCheck", ""}, // a loadout weapon uses a different ammo type or no ammo at all, uses script for proper ammo handling for equipmentstart 2
+        {"Mjolnir",                "",           "", "ForceCheck", ""}, // a loadout weapon uses no ammo type, uses script for proper ammo handling for equipmentstart 2
         {"Single Shotgun",         "",           "", "",           ""},
         {"Double Shotgun",         "Shell",      "", "",           ""},
         {"Grenade Launcher",       "RocketAmmo", "", "",           ""},

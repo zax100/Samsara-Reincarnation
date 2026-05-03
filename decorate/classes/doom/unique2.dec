@@ -12,7 +12,7 @@ actor "Plasma Repeater" : Weapon
 	Inventory.RestrictedTo "DoomguyPlayer"
 	Weapon.SlotNumber 8
 	Weapon.AmmoType "Cell"
-	//Weapon.AmmoGive 20
+	Weapon.AmmoGive 20
 	Weapon.AmmoUse 1
 	Obituary "%k disintegrated %o with the repeater."
 	Tag "Plasma Repeater"

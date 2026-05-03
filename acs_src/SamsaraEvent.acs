@@ -171,7 +171,8 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
     int morphset;
     int respawnhealth = 100;
     bool hasfist = false, haspistol = false; // netplay hack to stop dummy weapons being given on map change
-    int storedammo;
+    str storedammopriname = "Placeholder", storedammosecname = "Placeholder";
+    int storedammopri = 0, storedammosec = 0;
 
 	ACS_NamedExecuteWithResult("SamsaraFirstTimeUserTutorialSystem", PlayerNumber(), 0, 0);
 
@@ -767,11 +768,21 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						}
 						else if(doommode == 2)
 						{
-							if (CheckInventory("DGStrHasHomingRocketLauncher") && !CheckInventory("Homing Rocket Launcher")) { GiveInventory("Homing Rocket Launcher", 1); }
+                            if (CheckInventory("DGStrHasHomingRocketLauncher") && !CheckInventory("Homing Rocket Launcher"))
+                            {
+                                storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Homing Rocket Launcher", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                            }
 
-							if (CheckInventory("DGStrHasPlasmaRepeater") && !CheckInventory("Plasma Repeater")) { GiveInventory("Plasma Repeater", 1); }
+                            if (CheckInventory("DGStrHasPlasmaRepeater") && !CheckInventory("Plasma Repeater"))
+                            {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Plasma Repeater", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                            }
 
-							if (CheckInventory("DGStrHasWPK")) { SetInventory("SamsaraDoomguyStrWeaponPowerItem", CheckInventory("DGStrHasWPK")); }
+                            if (CheckInventory("DGStrHasWPK")) { SetInventory("SamsaraDoomguyStrWeaponPowerItem", CheckInventory("DGStrHasWPK")); }
 
 							if(CheckInventory("Doom64_IHaveUnmaker"))
 							{
@@ -1309,14 +1320,18 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Wolfen_IHaveSlot4"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_MP40", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("  Chaingun  ")) { SetWeapon("Totenkopf_MP40"); }
                             }
 
                             if (CheckInventory("Wolfen_IHaveDualChainguns"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_MP40", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("  Dual Chainguns  ")) { SetWeapon("Totenkopf_MP40"); }
                             }
@@ -1334,7 +1349,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory(" Rocket Launcher "))
                             {
+                                storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_Panzerschreck", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon(" Rocket Launcher ")) { SetWeapon("Totenkopf_Panzerschreck"); }
 
@@ -1343,7 +1360,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory(" Flamethrower "))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_Chaingun", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon(" Flamethrower ")) { SetWeapon("Totenkopf_Chaingun"); }
 
@@ -1352,7 +1371,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Spear of Destiny"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_Flakgun", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Spear of Destiny")) { SetWeapon("Totenkopf_Flakgun"); }
 
@@ -1361,14 +1382,29 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             SetInventory("WolfExtraLife", 0);
 
-                            if (CheckInventory("Totenkopf_IHaveFlamethrower")) { SetInventory("Totenkopf_Flamethrower", 1); }
+                            if (CheckInventory("Totenkopf_IHaveFlamethrower"))
+                            {
+                                storedammopriname = "Totenkopf_FlameThrowerFuel", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Totenkopf_Flamethrower", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                            }
 
                             SetInventory("WolfenAmmoCrate", 0);
                             SetInventory("WolfenAmmoCrateLost", 0);
 
-                            if (CheckInventory("Totenkopf_IHaveMG42")) { SetInventory("Totenkopf_MG42", 1); }
+                            if (CheckInventory("Totenkopf_IHaveMG42"))
+                            {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Totenkopf_MG42", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                            }
 
-                            if (CheckInventory("Totenkopf_IHaveScope")) { SetInventory("Totenkopf_Sniper", 1); }
+                            if (CheckInventory("Totenkopf_IHaveScope"))
+                            {
+                                storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("Totenkopf_Sniper", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                            }
 
 							if(CheckInventory("Totenkopf_IHavePowerArmor") && (!CheckInventory("TotenkopfHasPowerArmor"))) { GiveInventory("TotenkopfHasPowerArmor", 1); }
 							if(CheckInventory("Totenkopf_IAmWolverine") && (!CheckInventory("TotenkopfHasHealingOrb"))) { GiveInventory("TotenkopfHasHealingOrb", 1); }
@@ -1440,11 +1476,18 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory("Totenkopf_STG44", 0);
                             }
 
-                            if (CheckInventory("Wolfen_IHaveDualChainguns")) { GiveInventory("  Dual Chainguns  ", 1); }
+                            if (CheckInventory("Wolfen_IHaveDualChainguns"))
+                            {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("  Dual Chainguns  ", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                            }
 
                             if (CheckInventory("Wolfen_IHaveSlot4"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("  Chaingun  ", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Totenkopf_MP40")) { SetWeapon("  Chaingun  "); }
                             } else {
@@ -1468,7 +1511,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Totenkopf_Panzerschreck"))
                             {
+                                storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory(" Rocket Launcher ", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Totenkopf_Panzerschreck")) { SetWeapon(" Rocket Launcher "); }
 
@@ -1477,7 +1522,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Totenkopf_Chaingun"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory(" Flamethrower ", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Totenkopf_Chaingun")) { SetWeapon(" Flamethrower "); }
 
@@ -1486,7 +1533,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Totenkopf_Flakgun"))
                             {
+                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Spear of Destiny", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Totenkopf_Flakgun")) { SetWeapon("Spear of Destiny"); }
 
@@ -3453,11 +3502,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 					{
 						if (!CheckInventory(" Chicken Crossbow "))
                         {
-                            storedammo = CheckInventory("ChickenAmmo");
-
-                            GiveInventory(" Chicken Crossbow ", 1);
-
-                            SetInventory("ChickenAmmo", storedammo); // don't give extra; only the ammo pickup itself should give ammo
+                            storedammopriname = "ChickenAmmo", storedammopri = CheckInventory(storedammopriname);
+                            SetInventory(" Chicken Crossbow ", 1);
+                            SetInventory(storedammopriname, storedammopri); // don't give extra; only the ammo pickup itself should give ammo
                         }
 					} else {
 						if (CheckInventory(" Chicken Crossbow ") && !CheckWeapon(" Chicken Crossbow ")) { TakeInventory(" Chicken Crossbow ", 1); }
@@ -4566,11 +4613,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				{
 					if (!CheckInventory("Catacomb_WavesQuickSpell"))
                     {
-                        storedammo = CheckInventory("Catacomb_Waves");
-
-                        GiveInventory("Catacomb_WavesQuickSpell", 1);
-
-                        SetInventory("Catacomb_Waves", storedammo);
+                        storedammopriname = "Catacomb_Waves", storedammopri = CheckInventory(storedammopriname);
+                        SetInventory("Catacomb_WavesQuickSpell", 1);
+                        SetInventory(storedammopriname, storedammopri);
                     }
 				} else {
 					if (CheckInventory("Catacomb_WavesQuickSpell") && !CheckWeapon("Catacomb_WavesQuickSpell")) { TakeInventory("Catacomb_WavesQuickSpell", 1); }
@@ -4580,11 +4625,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				{
 					if (!CheckInventory("Catacomb_XTerminatorsQuickSpell"))
                     {
-                        storedammo = CheckInventory("Catacomb_XTerminators");
-
-                        GiveInventory("Catacomb_XTerminatorsQuickSpell", 1);
-
-                        SetInventory("Catacomb_XTerminators", storedammo);
+                        storedammopriname = "Catacomb_XTerminators", storedammopri = CheckInventory(storedammopriname);
+                        SetInventory("Catacomb_XTerminatorsQuickSpell", 1);
+                        SetInventory(storedammopriname, storedammopri);
                     }
 				} else {
 					if (CheckInventory("Catacomb_XTerminatorsQuickSpell") && !CheckWeapon("Catacomb_XTerminatorsQuickSpell")) { TakeInventory("Catacomb_XTerminatorsQuickSpell", 1); }
@@ -4594,11 +4637,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				{
 					if (!CheckInventory("Catacomb_BurstsQuickSpell"))
                     {
-                        storedammo = CheckInventory("Catacomb_Bursts");
-
-                        GiveInventory("Catacomb_BurstsQuickSpell", 1);
-
-                        SetInventory("Catacomb_Bursts", storedammo);
+                        storedammopriname = "Catacomb_Bursts", storedammopri = CheckInventory(storedammopriname);
+                        SetInventory("Catacomb_BurstsQuickSpell", 1);
+                        SetInventory(storedammopriname, storedammopri);
                     }
 				} else {
 					if (CheckInventory("Catacomb_BurstsQuickSpell") && !CheckWeapon("Catacomb_BurstsQuickSpell")) { TakeInventory("Catacomb_BurstsQuickSpell", 1); }
@@ -4608,11 +4649,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				{
 					if (!CheckInventory("Catacomb_ZappersQuickSpell"))
                     {
-                        storedammo = CheckInventory("Catacomb_Zappers");
-
-                        GiveInventory("Catacomb_ZappersQuickSpell", 1);
-
-                        SetInventory("Catacomb_Zappers", storedammo);
+                        storedammopriname = "Catacomb_Zappers", storedammopri = CheckInventory(storedammopriname);
+                        SetInventory("Catacomb_ZappersQuickSpell", 1);
+                        SetInventory(storedammopriname, storedammopri);
                     }
 				} else {
 					if (CheckInventory("Catacomb_ZappersQuickSpell") && !CheckWeapon("Catacomb_ZappersQuickSpell")) { TakeInventory("Catacomb_ZappersQuickSpell", 1); }
@@ -4622,11 +4661,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				{
 					if (!CheckInventory("Catacomb_NukesQuickSpell"))
                     {
-                        storedammo = CheckInventory("Catacomb_Nukes");
-
-                        GiveInventory("Catacomb_NukesQuickSpell", 1);
-
-                        SetInventory("Catacomb_Nukes", storedammo);
+                        storedammopriname = "Catacomb_Nukes", storedammopri = CheckInventory(storedammopriname);
+                        SetInventory("Catacomb_NukesQuickSpell", 1);
+                        SetInventory(storedammopriname, storedammopri);
                     }
 				} else {
 					if (CheckInventory("Catacomb_NukesQuickSpell") && !CheckWeapon("Catacomb_NukesQuickSpell")) { TakeInventory("Catacomb_NukesQuickSpell", 1); }
@@ -4636,11 +4673,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				{
 					if (!CheckInventory("Catacomb_BoltsQuickSpell"))
                     {
-                        storedammo = CheckInventory("Catacomb_Bolts");
-
-                        GiveInventory("Catacomb_BoltsQuickSpell", 1);
-
-                        SetInventory("Catacomb_Bolts", storedammo);
+                        storedammopriname = "Catacomb_Bolts", storedammopri = CheckInventory(storedammopriname);
+                        SetInventory("Catacomb_BoltsQuickSpell", 1);
+                        SetInventory(storedammopriname, storedammopri);
                     }
 				} else {
 					if (CheckInventory("Catacomb_BoltsQuickSpell") && !CheckWeapon("Catacomb_BoltsQuickSpell")) { TakeInventory("Catacomb_BoltsQuickSpell", 1); }

@@ -7,7 +7,7 @@ actor "Spear of Destiny" : InstantSwitchWeapon
     Weapon.SelectionOrder 2900
     Inventory.PickUpSound "wolfen/spearget"
     Weapon.AmmoUse 40
-    //Weapon.AmmoGive 120
+    Weapon.AmmoGive 120
     Weapon.AmmoType "Cell"
     +DONTBOB
     +INVENTORY.UNDROPPABLE
@@ -356,7 +356,7 @@ actor Totenkopf_Flakgun : InstantSwitchWeapon
     Weapon.SelectionOrder 2900
     Inventory.PickUpSound "Totenkopf/getweapon"
     Weapon.AmmoUse 3
-    //Weapon.AmmoGive 120
+    Weapon.AmmoGive 120
     Weapon.AmmoType "Cell"
     +DONTBOB
     +INVENTORY.UNDROPPABLE

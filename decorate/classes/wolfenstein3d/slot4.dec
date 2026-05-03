@@ -11,7 +11,7 @@ actor "  Chaingun  " : InstantSwitchWeapon
 	Weapon.SlotPriority 0
     Inventory.PickUpSound "wolfen/weaponget"
     Weapon.AmmoUse 1
-    //Weapon.AmmoGive 20
+    Weapon.AmmoGive 20
     Weapon.AmmoType "Clip"
     +DONTBOB
     +INVENTORY.UNDROPPABLE
@@ -237,7 +237,7 @@ actor Totenkopf_MP40 : InstantSwitchWeapon
 	Weapon.SlotPriority 0
     Inventory.PickUpSound "Totenkopf/getweapon"
     Weapon.AmmoUse 1
-    //Weapon.AmmoGive 20
+    Weapon.AmmoGive 20
     Weapon.AmmoType "Clip"
     +DONTBOB
     +INVENTORY.UNDROPPABLE
@@ -292,7 +292,7 @@ actor Totenkopf_MP40Dual : Totenkopf_MP40
 {
     Weapon.SelectionOrder 100
 	Weapon.SlotPriority 1
-	//Weapon.AmmoGive 0
+	Weapon.AmmoGive 0
     Tag "MP40 Submachine Gun (Dual)"
     States
     {

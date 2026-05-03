@@ -8,7 +8,7 @@ actor " Rocket Launcher " : InstantSwitchWeapon
     Weapon.SlotNumber 5
     Inventory.PickUpSound "wolfen/rocketget"
     Weapon.AmmoUse 1
-    //Weapon.AmmoGive 2
+    Weapon.AmmoGive 2
     Weapon.AmmoType "RocketAmmo"
     +DONTBOB
     +EXPLOSIVE
@@ -264,7 +264,7 @@ actor Totenkopf_Panzerschreck : InstantSwitchWeapon
     Weapon.SlotNumber 5
     Inventory.PickUpSound "Totenkopf/getweapon"
     Weapon.AmmoUse 1
-    //Weapon.AmmoGive 2
+    Weapon.AmmoGive 2
     Weapon.AmmoType "RocketAmmo"
     +DONTBOB
     +EXPLOSIVE

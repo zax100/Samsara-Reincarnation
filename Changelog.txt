@@ -18,11 +18,19 @@ Doom:
 
 + Added Perkristan altsounds for the railgun and the Legacy of Rust loadout weapons.
 
+-Doomguy (Stronghold)-
+
+* Fixed first and second unique pickups not giving extra ammo on first pickup when playing PVP in Doom or Chex Quest.
+
 Wolfenstein 3D:
 
 -B.J. Blazkowicz (Original/Lost Episodes)-
 
 ! The ammo crate's Compendium entry has been updated to make mention of bullet weapons in general.
+
+-B.J. Blazkowicz (Castle Totenkopf SDL)-
+
+* Fixed unique pickups not giving extra ammo on first pickup when playing PVP in Doom or Chex Quest.
 
 Hexen I:
 

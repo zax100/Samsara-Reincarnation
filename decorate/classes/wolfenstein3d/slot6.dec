@@ -8,7 +8,7 @@ actor " Flamethrower " : InstantSwitchWeapon
     Weapon.SlotNumber 6
     Inventory.PickUpSound "wolfen/flameget"
     Weapon.AmmoUse 1
-    //Weapon.AmmoGive 40
+    Weapon.AmmoGive 40
     Weapon.AmmoType "Cell"
     +DONTBOB
     +INVENTORY.UNDROPPABLE
@@ -152,7 +152,7 @@ actor Totenkopf_Chaingun : InstantSwitchWeapon
     Weapon.SlotNumber 6
     Inventory.PickUpSound "Totenkopf/getweapon"
     Weapon.AmmoUse 1
-    //Weapon.AmmoGive 40
+    Weapon.AmmoGive 40
     Weapon.AmmoType "Cell"
     +DONTBOB
     +INVENTORY.UNDROPPABLE

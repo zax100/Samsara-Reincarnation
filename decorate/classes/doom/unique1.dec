@@ -11,7 +11,7 @@ actor "Homing Rocket Launcher" : Weapon
 	Inventory.RestrictedTo "DoomguyPlayer"
 	Weapon.SlotNumber 8
 	Weapon.AmmoType "RocketAmmo"
-	//Weapon.AmmoGive 4
+	Weapon.AmmoGive 4
 	Weapon.AmmoUse 1
 	Tag "Homing Rocket Launcher"
 	+ALT_USES_BOTH // only one ammo type with same ammo amount use, so this makes alt fire behave as intended
