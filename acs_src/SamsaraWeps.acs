@@ -492,7 +492,7 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
     },
     { // GoldenEye 007
         {"Goldeneye_Slapper",         "",           "", "",                                   ""},
-        {"Goldeneye_ThrowingKnives",  "",           "", "ForceCheck",                         ""}, // dropped pickups can give 0 ammo, uses script to check for it as a hackaround
+        {"Goldeneye_ThrowingKnives",  "",           "", "ForceCheck",                         ""}, // dropped pickups can give 0 ammo, uses script to check for it as a hackaround. an altclass also uses a different ammo type
         {"Goldeneye_PP7Silenced",     "",           "", "ForceCheck",                         ""},
         {"Goldeneye_KF7Soviet",       "Clip",       "", "Goldeneye_KF7DualToken",             ""},
         {"Goldeneye_AutoShotgun",     "",           "", "ForceCheck",                         ""}, // can give multiple weapons that use the same ammo type, uses script for proper ammo calculations

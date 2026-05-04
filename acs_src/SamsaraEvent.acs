@@ -3839,7 +3839,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_MP40"))
                     {
+                        storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_KF7Soviet", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_MP40")) { SetWeapon("Goldeneye_KF7Soviet"); }
 
@@ -3863,7 +3865,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_AK47"))
                     {
+                        storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_AR33", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_AK47")) { SetWeapon("Goldeneye_AR33"); }
 
@@ -3882,7 +3886,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_SuperBazooka"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_RocketLauncher", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_SuperBazooka")) { SetWeapon("Goldeneye_RocketLauncher"); }
 
@@ -3891,7 +3897,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_M79"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_GrenadeLauncher", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_M79")) { SetWeapon("Goldeneye_GrenadeLauncher"); }
 
@@ -3900,7 +3908,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_M1Carbine"))
                     {
+                        storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_RCP90", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_M1Carbine")) { SetWeapon("Goldeneye_RCP90"); }
 
@@ -3944,7 +3954,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_AR7"))
                     {
+                        storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_SniperRifle", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_AR7")) { SetWeapon("Goldeneye_SniperRifle"); }
 
@@ -3953,9 +3965,26 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_UZI") || CheckInventory("Goldfinger_SmithWesson22") || CheckInventory("Goldfinger_SmithWesson36"))
                     {
-                        if (!CheckInventory("SamsaraGoldenEyeLoadoutUnique2") || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldeneye_SilencedD5K", 1); }
-                        if (CheckInventory("SamsaraGoldenEyeLoadoutUnique2") == 1 || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldeneye_ZMG", 1); }
-                        if (CheckInventory("SamsaraGoldenEyeLoadoutUnique2") >= 2 || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldeneye_D5KDeutsche", 1); }
+                        if (!CheckInventory("SamsaraGoldenEyeLoadoutUnique2") || CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                        {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                            SetInventory("Goldeneye_SilencedD5K", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                        }
+
+                        if (CheckInventory("SamsaraGoldenEyeLoadoutUnique2") == 1 || CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                        {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                            SetInventory("Goldeneye_ZMG", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                        }
+
+                        if (CheckInventory("SamsaraGoldenEyeLoadoutUnique2") >= 2 || CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                        {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                            SetInventory("Goldeneye_D5KDeutsche", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                        }
 
                         if (CheckWeapon("Goldfinger_UZI") || CheckWeapon("Goldfinger_SmithWesson22") || CheckWeapon("Goldfinger_SmithWesson36"))
                         {
@@ -3982,7 +4011,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_Limpet"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_TimedMines", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_Limpet")) { SetWeapon("Goldeneye_TimedMines"); }
 
@@ -3991,7 +4022,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_LandMine"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_ProximityMines", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_LandMine")) { SetWeapon("Goldeneye_ProximityMines"); }
 
@@ -4000,7 +4033,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldfinger_Claymore"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_RemoteMines", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_Claymore")) { SetWeapon("Goldeneye_RemoteMines"); }
 
@@ -4009,7 +4044,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("SamsaraGoldenEyeHasGoldPP7"))
                     {
+                        storedammopriname = "Goldeneye_GoldenGunRounds", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldeneye_GoldPP7", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldfinger_GoldMagnum")) { SetWeapon("Goldeneye_GoldPP7"); }
                     }
@@ -4125,27 +4162,41 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                     {
                         if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
                         {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Goldeneye_SilencedD5K", 1);
+                            SetInventory(storedammopriname, storedammopri);
+
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Goldeneye_ZMG", 1);
+                            SetInventory(storedammopriname, storedammopri);
+
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Goldeneye_D5KDeutsche", 1);
+                            SetInventory(storedammopriname, storedammopri);
                         } else {
                             if (!CheckInventory("SamsaraGoldenEyeLoadoutUnique2"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Goldeneye_SilencedD5K", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Goldeneye_ZMG") || CheckWeapon("Goldeneye_D5KDeutsche")) { SetWeapon("Goldeneye_SilencedD5K"); }
 
                                 SetInventory("Goldeneye_ZMG", 0);
                                 SetInventory("Goldeneye_D5KDeutsche", 0);
                             } else if (CheckInventory("SamsaraGoldenEyeLoadoutUnique2") == 1) {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Goldeneye_ZMG", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Goldeneye_SilencedD5K") || CheckWeapon("Goldeneye_D5KDeutsche")) { SetWeapon("Goldeneye_ZMG"); }
 
                                 SetInventory("Goldeneye_SilencedD5K", 0);
                                 SetInventory("Goldeneye_D5KDeutsche", 0);
                             } else if (CheckInventory("SamsaraGoldenEyeLoadoutUnique2") >= 2) {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Goldeneye_D5KDeutsche", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Goldeneye_SilencedD5K") || CheckWeapon("Goldeneye_ZMG")) { SetWeapon("Goldeneye_D5KDeutsche"); }
 
@@ -4172,7 +4223,6 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						!CheckInventory("SamsaraGoldenEyeHasGoldPP7"))
 					{
 						GiveInventory("Goldeneye_GoldPP7", 1);
-						GiveInventory("Goldeneye_GoldenGunRounds", 7);
 						GiveInventory("SamsaraGoldenEyeHasGoldPP7", 1);
 						dualpickupcheck++;
 					}
@@ -4184,8 +4234,8 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						CheckInventory("Goldeneye_SniperDualToken") && CheckInventory("Goldeneye_D5KDualToken") && CheckInventory("SamsaraGoldenEyeHasGoldPP7") &&
 						!CheckInventory("Goldeneye_GoldPP7DualToken"))
 					{
+						GiveInventory("Goldeneye_GoldPP7", 1);
 						GiveInventory("Goldeneye_GoldPP7DualToken", 1);
-						GiveInventory("Goldeneye_GoldenGunRounds", 7);
 						dualpickupcheck += 2;
 					}
 
@@ -4323,7 +4373,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_KF7Soviet"))
                     {
+                        storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_MP40", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_KF7Soviet")) { SetWeapon("Goldfinger_MP40"); }
 
@@ -4347,7 +4399,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_AR33"))
                     {
+                        storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_AK47", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_AR33")) { SetWeapon("Goldfinger_AK47"); }
 
@@ -4370,7 +4424,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_RocketLauncher"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_SuperBazooka", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_RocketLauncher")) { SetWeapon("Goldfinger_SuperBazooka"); }
 
@@ -4379,7 +4435,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_GrenadeLauncher"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_M79", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_GrenadeLauncher")) { SetWeapon("Goldfinger_M79"); }
 
@@ -4388,7 +4446,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_RCP90"))
                     {
+                        storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_M1Carbine", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_RCP90")) { SetWeapon("Goldfinger_M1Carbine"); }
 
@@ -4431,7 +4491,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_SniperRifle"))
                     {
+                        storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_AR7", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_SniperRifle")) { SetWeapon("Goldfinger_AR7"); }
 
@@ -4440,9 +4502,26 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_SilencedD5K") || CheckInventory("Goldeneye_ZMG") || CheckInventory("Goldeneye_D5KDeutsche"))
                     {
-                        if (!CheckInventory("SamsaraGoldfingerLoadoutUnique2") || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldfinger_UZI", 1); }
-                        if (CheckInventory("SamsaraGoldfingerLoadoutUnique2") == 1 || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldfinger_SmithWesson22", 1); }
-                        if (CheckInventory("SamsaraGoldfingerLoadoutUnique2") >= 2 || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldfinger_SmithWesson36", 1); }
+                        if (!CheckInventory("SamsaraGoldfingerLoadoutUnique2") || CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                        {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                            SetInventory("Goldfinger_UZI", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                        }
+
+                        if (CheckInventory("SamsaraGoldfingerLoadoutUnique2") == 1 || CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                        {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                            SetInventory("Goldfinger_SmithWesson22", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                        }
+
+                        if (CheckInventory("SamsaraGoldfingerLoadoutUnique2") >= 2 || CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                        {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
+                            SetInventory("Goldfinger_SmithWesson36", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                        }
 
                         if (CheckWeapon("Goldeneye_SilencedD5K") || CheckWeapon("Goldeneye_ZMG") || CheckWeapon("Goldeneye_D5KDeutsche"))
                         {
@@ -4469,7 +4548,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_TimedMines"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_Limpet", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_TimedMines")) { SetWeapon("Goldfinger_Limpet"); }
 
@@ -4478,7 +4559,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_ProximityMines"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_LandMine", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_ProximityMines")) { SetWeapon("Goldfinger_LandMine"); }
 
@@ -4487,7 +4570,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("Goldeneye_RemoteMines"))
                     {
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_Claymore", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_RemoteMines")) { SetWeapon("Goldfinger_Claymore"); }
 
@@ -4496,7 +4581,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                     if (CheckInventory("SamsaraGoldfingerHasGoldMagnum"))
                     {
+                        storedammopriname = "Goldeneye_GoldenGunRounds", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Goldfinger_GoldMagnum", 1);
+                        SetInventory(storedammopriname, storedammopri);
 
                         if (CheckWeapon("Goldeneye_GoldPP7")) { SetWeapon("Goldfinger_GoldMagnum"); }
                     }
@@ -4640,27 +4727,41 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                     {
                         if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
                         {
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Goldfinger_UZI", 1);
+                            SetInventory(storedammopriname, storedammopri);
+
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Goldfinger_SmithWesson22", 1);
+                            SetInventory(storedammopriname, storedammopri);
+
+                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Goldfinger_SmithWesson36", 1);
+                            SetInventory(storedammopriname, storedammopri);
                         } else {
                             if (!CheckInventory("SamsaraGoldfingerLoadoutUnique2"))
                             {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Goldfinger_UZI", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Goldfinger_SmithWesson22") || CheckWeapon("Goldfinger_SmithWesson36")) { SetWeapon("Goldfinger_UZI"); }
 
                                 SetInventory("Goldfinger_SmithWesson22", 0);
                                 SetInventory("Goldfinger_SmithWesson36", 0);
                             } else if (CheckInventory("SamsaraGoldfingerLoadoutUnique2") == 1) {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Goldfinger_SmithWesson22", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Goldfinger_UZI") || CheckWeapon("Goldfinger_SmithWesson36")) { SetWeapon("Goldfinger_SmithWesson22"); }
 
                                 SetInventory("Goldfinger_UZI", 0);
                                 SetInventory("Goldfinger_SmithWesson36", 0);
                             } else if (CheckInventory("SamsaraGoldfingerLoadoutUnique2") >= 2) {
+                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Goldfinger_SmithWesson36", 1);
+                                SetInventory(storedammopriname, storedammopri);
 
                                 if (CheckWeapon("Goldfinger_UZI") || CheckWeapon("Goldfinger_SmithWesson22")) { SetWeapon("Goldfinger_SmithWesson36"); }
 
@@ -4688,7 +4789,6 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						!CheckInventory("SamsaraGoldfingerHasGoldMagnum"))
 					{
 						GiveInventory("Goldfinger_GoldMagnum", 1);
-						GiveInventory("Goldeneye_GoldenGunRounds", 6);
 						GiveInventory("SamsaraGoldfingerHasGoldMagnum", 1);
 						dualpickupcheck++;
 					}
@@ -4699,8 +4799,8 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                         CheckInventory("Goldeneye_LaserDualToken") && CheckInventory("Goldeneye_GoldenGunDualToken") && CheckInventory("Goldeneye_SniperDualToken") &&
                         CheckInventory("Goldeneye_D5KDualToken") && CheckInventory("SamsaraGoldfingerHasGoldMagnum") && !CheckInventory("Goldfinger_GoldMagnumDualToken"))
 					{
+						GiveInventory("Goldfinger_GoldMagnum", 1);
 						GiveInventory("Goldfinger_GoldMagnumDualToken", 1);
-						GiveInventory("Goldeneye_GoldenGunRounds", 6);
 						dualpickupcheck += 2;
 					}
 

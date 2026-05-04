@@ -7724,12 +7724,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldeneye_KF7Soviet"))
                 {
                     GiveInventory("Goldeneye_KF7Soviet", 1);
-                    GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
 
                     if (!CheckInventory("Goldeneye_KF7DualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldeneye_KF7Soviet", 1);
                         GiveInventory("Goldeneye_KF7DualToken", 1);
-                        GiveInventory("Clip", 30);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_KF7SovietLevelLimiter", 1); }
@@ -7754,8 +7753,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldeneye_KF7Soviet", 1);
                         GiveInventory("Goldeneye_KF7DualToken", 1);
-                        GiveInventory("Clip", 30);
 
                         if (duallimiting) { GiveInventory("Goldeneye_KF7SovietLevelLimiter", 1); }
 
@@ -7768,7 +7767,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Clip", 30);
+                    GiveInventory("Goldeneye_KF7Soviet", 1);
                     result = 1;
                 }
 
@@ -7915,12 +7914,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldeneye_AR33"))
                 {
                     GiveInventory("Goldeneye_AR33", 1);
-                    GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
 
                     if (!CheckInventory("Goldeneye_AR33DualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldeneye_AR33", 1);
                         GiveInventory("Goldeneye_AR33DualToken", 1);
-                        GiveInventory("Clip", 30);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_AR33LevelLimiter", 1); }
@@ -7945,8 +7943,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldeneye_AR33", 1);
                         GiveInventory("Goldeneye_AR33DualToken", 1);
-                        GiveInventory("Clip", 30);
 
                         if (duallimiting) { GiveInventory("Goldeneye_AR33LevelLimiter", 1); }
 
@@ -7959,7 +7957,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Clip", 30);
+                    GiveInventory("Goldeneye_AR33", 1);
                     result = 1;
                 }
 
@@ -7979,12 +7977,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldeneye_RocketLauncher"))
                 {
                     GiveInventory("Goldeneye_RocketLauncher", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 3 * 5 / 2 : 3);
 
                     if (!CheckInventory("Goldeneye_RocketLauncherDualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldeneye_RocketLauncher", 1);
                         GiveInventory("Goldeneye_RocketLauncherDualToken", 1);
-                        GiveInventory("RocketAmmo", 3);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_RocketLauncherLevelLimiter", 1); }
@@ -8009,8 +8006,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldeneye_RocketLauncher", 1);
                         GiveInventory("Goldeneye_RocketLauncherDualToken", 1);
-                        GiveInventory("RocketAmmo", 3);
 
                         if (duallimiting) { GiveInventory("Goldeneye_RocketLauncherLevelLimiter", 1); }
 
@@ -8023,7 +8020,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("RocketAmmo", 3);
+                    GiveInventory("Goldeneye_RocketLauncher", 1);
                     result = 1;
                 }
 
@@ -8043,12 +8040,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldeneye_RCP90"))
                 {
                     GiveInventory("Goldeneye_RCP90", 1);
-                    GiveInventory("Cell", dmextraammo ? 80 * 5 / 2 : 80);
 
                     if (!CheckInventory("Goldeneye_RCP90DualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldeneye_RCP90", 1);
                         GiveInventory("Goldeneye_RCP90DualToken", 1);
-                        GiveInventory("Cell", 80);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_RCP90LevelLimiter", 1); }
@@ -8073,8 +8069,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldeneye_RCP90", 1);
                         GiveInventory("Goldeneye_RCP90DualToken", 1);
-                        GiveInventory("Cell", 80);
 
                         if (duallimiting) { GiveInventory("Goldeneye_RCP90LevelLimiter", 1); }
 
@@ -8087,7 +8083,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Cell", 80);
+                    GiveInventory("Goldeneye_RCP90", 1);
                     result = 1;
                 }
 
@@ -8236,12 +8232,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldeneye_GrenadeLauncher"))
                 {
                     GiveInventory("Goldeneye_GrenadeLauncher", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 6 * 5 / 2 : 6);
 
                     if (!CheckInventory("Goldeneye_GrenadeLauncherDualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldeneye_GrenadeLauncher", 1);
                         GiveInventory("Goldeneye_GrenadeLauncherDualToken", 1);
-                        GiveInventory("RocketAmmo", 6);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_GrenadeLauncherLevelLimiter", 1); }
@@ -8266,8 +8261,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldeneye_GrenadeLauncher", 1);
                         GiveInventory("Goldeneye_GrenadeLauncherDualToken", 1);
-                        GiveInventory("RocketAmmo", 6);
 
                         if (duallimiting) { GiveInventory("Goldeneye_GrenadeLauncherLevelLimiter", 1); }
 
@@ -8280,7 +8275,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("RocketAmmo", 6);
+                    GiveInventory("Goldeneye_GrenadeLauncher", 1);
                     result = 1;
                 }
 
@@ -8679,12 +8674,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldfinger_MP40"))
                 {
                     GiveInventory("Goldfinger_MP40", 1);
-                    GiveInventory("Clip", dmextraammo ? 32 * 5 / 2 : 32);
 
                     if (!CheckInventory("Goldeneye_KF7DualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldfinger_MP40", 1);
                         GiveInventory("Goldeneye_KF7DualToken", 1);
-                        GiveInventory("Clip", 32);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_KF7SovietLevelLimiter", 1); }
@@ -8709,8 +8703,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldfinger_MP40", 1);
                         GiveInventory("Goldeneye_KF7DualToken", 1);
-                        GiveInventory("Clip", 32);
 
                         if (duallimiting) { GiveInventory("Goldeneye_KF7SovietLevelLimiter", 1); }
 
@@ -8723,7 +8717,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Clip", 32);
+                    GiveInventory("Goldfinger_MP40", 1);
                     result = 1;
                 }
 
@@ -8870,12 +8864,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldfinger_AK47"))
                 {
                     GiveInventory("Goldfinger_AK47", 1);
-                    GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
 
                     if (!CheckInventory("Goldeneye_AR33DualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldfinger_AK47", 1);
                         GiveInventory("Goldeneye_AR33DualToken", 1);
-                        GiveInventory("Clip", 30);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_AR33LevelLimiter", 1); }
@@ -8900,8 +8893,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldfinger_AK47", 1);
                         GiveInventory("Goldeneye_AR33DualToken", 1);
-                        GiveInventory("Clip", 30);
 
                         if (duallimiting) { GiveInventory("Goldeneye_AR33LevelLimiter", 1); }
 
@@ -8914,7 +8907,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Clip", 30);
+                    GiveInventory("Goldfinger_AK47", 1);
                     result = 1;
                 }
 
@@ -8934,12 +8927,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldfinger_SuperBazooka"))
                 {
                     GiveInventory("Goldfinger_SuperBazooka", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 3 * 5 / 2 : 3);
 
                     if (!CheckInventory("Goldeneye_RocketLauncherDualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldfinger_SuperBazooka", 1);
                         GiveInventory("Goldeneye_RocketLauncherDualToken", 1);
-                        GiveInventory("RocketAmmo", 3);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_RocketLauncherLevelLimiter", 1); }
@@ -8964,8 +8956,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldfinger_SuperBazooka", 1);
                         GiveInventory("Goldeneye_RocketLauncherDualToken", 1);
-                        GiveInventory("RocketAmmo", 3);
 
                         if (duallimiting) { GiveInventory("Goldeneye_RocketLauncherLevelLimiter", 1); }
 
@@ -8978,7 +8970,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("RocketAmmo", 3);
+                    GiveInventory("Goldfinger_SuperBazooka", 1);
                     result = 1;
                 }
 
@@ -8998,12 +8990,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldfinger_M1Carbine"))
                 {
                     GiveInventory("Goldfinger_M1Carbine", 1);
-                    GiveInventory("Cell", dmextraammo ? 30 * 5 / 2 : 30);
 
                     if (!CheckInventory("Goldeneye_RCP90DualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldfinger_M1Carbine", 1);
                         GiveInventory("Goldeneye_RCP90DualToken", 1);
-                        GiveInventory("Cell", 30);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_RCP90LevelLimiter", 1); }
@@ -9028,8 +9019,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldfinger_M1Carbine", 1);
                         GiveInventory("Goldeneye_RCP90DualToken", 1);
-                        GiveInventory("Cell", 30);
 
                         if (duallimiting) { GiveInventory("Goldeneye_RCP90LevelLimiter", 1); }
 
@@ -9042,7 +9033,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("Cell", 30);
+                    GiveInventory("Goldfinger_M1Carbine", 1);
                     result = 1;
                 }
 
@@ -9252,12 +9243,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (!CheckInventory("Goldfinger_M79"))
                 {
                     GiveInventory("Goldfinger_M79", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 3 * 5 / 2 : 3);
 
                     if (!CheckInventory("Goldeneye_GrenadeLauncherDualToken") && dualgiveboth)
                     {
+                        GiveInventory("Goldfinger_M79", 1);
                         GiveInventory("Goldeneye_GrenadeLauncherDualToken", 1);
-                        GiveInventory("RocketAmmo", 3);
                     }
 
                     if (duallimiting) { GiveInventory("Goldeneye_GrenadeLauncherLevelLimiter", 1); }
@@ -9282,8 +9272,8 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
 
                     if (dualreqcheck || dropped >= 1 || startmode != 0 || !weaponstay)
                     {
+                        GiveInventory("Goldfinger_M79", 1);
                         GiveInventory("Goldeneye_GrenadeLauncherDualToken", 1);
-                        GiveInventory("RocketAmmo", 3);
 
                         if (duallimiting) { GiveInventory("Goldeneye_GrenadeLauncherLevelLimiter", 1); }
 
@@ -9296,7 +9286,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                         result = 1;
                     }
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                    GiveInventory("RocketAmmo", 3);
+                    GiveInventory("Goldfinger_M79", 1);
                     result = 1;
                 }
 
@@ -10944,13 +10934,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (!CheckInventory("Goldeneye_SniperRifle"))
                 {
                     GiveInventory("Goldeneye_SniperRifle", 1);
-                    GiveInventory("Shell", dmextraammo ? 8 * 5 / 2 : 8);
                     GiveInventory("Shell", 5); // bonus ammo
 
                     if (!CheckInventory("Goldeneye_SniperDualToken") && dualgiveboth)
                     {
                         GiveInventory("Goldeneye_SniperDualToken", 1);
-                        GiveInventory("Shell", 5);
+                        GiveInventory("Shell", 5); // subsequent pickup
                         GiveInventory("Shell", 5); // bonus ammo
                     }
 
@@ -10958,12 +10947,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                     result = 1;
                 } else if (!CheckInventory("Goldeneye_SniperDualToken") && !duallimited) {
                     GiveInventory("Goldeneye_SniperDualToken", 1);
-                    GiveInventory("Shell", 5);
+                    GiveInventory("Shell", 5); // subsequent pickup
                     GiveInventory("Shell", 5); // bonus ammo
                     if (duallimiting) { GiveInventory("Goldeneye_SniperLevelLimiter", 1); }
                     result = 1;
                 } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell")) {
-                    GiveInventory("Shell", 5);
+                    GiveInventory("Shell", 5); // subsequent pickup
                     GiveInventory("Shell", 5); // bonus ammo
                     result = 1;
                 }
@@ -10981,13 +10970,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                     if (!hasweapon)
                     {
                         GiveInventory("Goldeneye_SilencedD5K", 1);
-                        GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
                         GiveInventory("Clip", 10); // bonus ammo
 
                         if (!hasdualtoken && dualgiveboth)
                         {
                             GiveInventory("Goldeneye_D5KDualToken", 1);
-                            GiveInventory("Clip", 10);
+                            GiveInventory("Clip", 10); // subsequent pickup
                             GiveInventory("Clip", 10); // bonus ammo
                         }
 
@@ -10995,12 +10983,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                         result = 1;
                     } else if (!hasdualtoken && !duallimited) {
                         GiveInventory("Goldeneye_D5KDualToken", 1);
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         if (duallimiting) { GiveInventory("Goldeneye_D5KLevelLimiter", 1); }
                         result = 1;
                     } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip")) {
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         result = 1;
                     }
@@ -11013,13 +11001,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                     if (!hasweapon)
                     {
                         GiveInventory("Goldeneye_ZMG", 1);
-                        GiveInventory("Clip", dmextraammo ? 32 * 5 / 2 : 32);
                         GiveInventory("Clip", 10); // bonus ammo
 
                         if (!hasdualtoken && dualgiveboth)
                         {
                             GiveInventory("Goldeneye_D5KDualToken", 1);
-                            GiveInventory("Clip", 10);
+                            GiveInventory("Clip", 10); // subsequent pickup
                             GiveInventory("Clip", 10); // bonus ammo
                         }
 
@@ -11027,12 +11014,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                         result = 1;
                     } else if (!hasdualtoken && !duallimited) {
                         GiveInventory("Goldeneye_D5KDualToken", 1);
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         if (duallimiting) { GiveInventory("Goldeneye_D5KLevelLimiter", 1); }
                         result = 1;
                     } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip")) {
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         result = 1;
                     }
@@ -11045,13 +11032,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                     if (!hasweapon)
                     {
                         GiveInventory("Goldeneye_D5KDeutsche", 1);
-                        GiveInventory("Clip", dmextraammo ? 30 * 5 / 2 : 30);
                         GiveInventory("Clip", 10); // bonus ammo
 
                         if (!hasdualtoken && dualgiveboth)
                         {
                             GiveInventory("Goldeneye_D5KDualToken", 1);
-                            GiveInventory("Clip", 10);
+                            GiveInventory("Clip", 10); // subsequent pickup
                             GiveInventory("Clip", 10); // bonus ammo
                         }
 
@@ -11059,12 +11045,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                         result = 1;
                     } else if (!hasdualtoken && !duallimited) {
                         GiveInventory("Goldeneye_D5KDualToken", 1);
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         if (duallimiting) { GiveInventory("Goldeneye_D5KLevelLimiter", 1); }
                         result = 1;
                     } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip")) {
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         result = 1;
                     }
@@ -11104,13 +11090,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (!CheckInventory("Goldfinger_AR7"))
                 {
                     GiveInventory("Goldfinger_AR7", 1);
-                    GiveInventory("Shell", dmextraammo ? 8 * 5 / 2 : 8);
                     GiveInventory("Shell", 5); // bonus ammo
 
                     if (!CheckInventory("Goldeneye_SniperDualToken") && dualgiveboth)
                     {
                         GiveInventory("Goldeneye_SniperDualToken", 1);
-                        GiveInventory("Shell", 5);
+                        GiveInventory("Shell", 5); // subsequent pickup
                         GiveInventory("Shell", 5); // bonus ammo
                     }
 
@@ -11118,12 +11103,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                     result = 1;
                 } else if (!CheckInventory("Goldeneye_SniperDualToken") && !duallimited) {
                     GiveInventory("Goldeneye_SniperDualToken", 1);
-                    GiveInventory("Shell", 5);
+                    GiveInventory("Shell", 5); // subsequent pickup
                     GiveInventory("Shell", 5); // bonus ammo
                     if (duallimiting) { GiveInventory("Goldeneye_SniperLevelLimiter", 1); }
                     result = 1;
                 } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell")) {
-                    GiveInventory("Shell", 5);
+                    GiveInventory("Shell", 5); // subsequent pickup
                     GiveInventory("Shell", 5); // bonus ammo
                     result = 1;
                 }
@@ -11141,13 +11126,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                     if (!hasweapon)
                     {
                         GiveInventory("Goldfinger_UZI", 1);
-                        GiveInventory("Clip", dmextraammo ? 15 * 5 / 2 : 15);
                         GiveInventory("Clip", 10); // bonus ammo
 
                         if (!hasdualtoken && dualgiveboth)
                         {
                             GiveInventory("Goldeneye_D5KDualToken", 1);
-                            GiveInventory("Clip", 10);
+                            GiveInventory("Clip", 10); // subsequent pickup
                             GiveInventory("Clip", 10); // bonus ammo
                         }
 
@@ -11155,12 +11139,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                         result = 1;
                     } else if (!hasdualtoken && !duallimited) {
                         GiveInventory("Goldeneye_D5KDualToken", 1);
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         if (duallimiting) { GiveInventory("Goldeneye_D5KLevelLimiter", 1); }
                         result = 1;
                     } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip")) {
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         result = 1;
                     }
@@ -11173,13 +11157,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                     if (!hasweapon)
                     {
                         GiveInventory("Goldfinger_SmithWesson22", 1);
-                        GiveInventory("Clip", dmextraammo ? 18 * 5 / 2 : 18);
                         GiveInventory("Clip", 10); // bonus ammo
 
                         if (!hasdualtoken && dualgiveboth)
                         {
                             GiveInventory("Goldeneye_D5KDualToken", 1);
-                            GiveInventory("Clip", 10);
+                            GiveInventory("Clip", 10); // subsequent pickup
                             GiveInventory("Clip", 10); // bonus ammo
                         }
 
@@ -11187,12 +11170,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                         result = 1;
                     } else if (!hasdualtoken && !duallimited) {
                         GiveInventory("Goldeneye_D5KDualToken", 1);
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         if (duallimiting) { GiveInventory("Goldeneye_D5KLevelLimiter", 1); }
                         result = 1;
                     } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip")) {
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         result = 1;
                     }
@@ -11205,13 +11188,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                     if (!hasweapon)
                     {
                         GiveInventory("Goldfinger_SmithWesson36", 1);
-                        GiveInventory("Clip", dmextraammo ? 18 * 5 / 2 : 18);
                         GiveInventory("Clip", 10); // bonus ammo
 
                         if (!hasdualtoken && dualgiveboth)
                         {
                             GiveInventory("Goldeneye_D5KDualToken", 1);
-                            GiveInventory("Clip", 10);
+                            GiveInventory("Clip", 10); // subsequent pickup
                             GiveInventory("Clip", 10); // bonus ammo
                         }
 
@@ -11219,12 +11201,12 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                         result = 1;
                     } else if (!hasdualtoken && !duallimited) {
                         GiveInventory("Goldeneye_D5KDualToken", 1);
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         if (duallimiting) { GiveInventory("Goldeneye_D5KLevelLimiter", 1); }
                         result = 1;
                     } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip")) {
-                        GiveInventory("Clip", 10);
+                        GiveInventory("Clip", 10); // subsequent pickup
                         GiveInventory("Clip", 10); // bonus ammo
                         result = 1;
                     }

@@ -18,7 +18,7 @@ actor Goldeneye_SilencedD5K : SamsaraGoldenEyeWeapon
     Weapon.AmmoType1 "Goldeneye_D5KSilencedMagazine"
     Weapon.AmmoUse1 1
     Weapon.AmmoType2 "Clip"
-    //Weapon.AmmoGive2 30
+    Weapon.AmmoGive2 30
     Obituary "%o was drilled by %k's D5K."
     Tag "D5K Deutsche (Silenced)"
     States
@@ -592,7 +592,7 @@ actor Goldeneye_ZMG : SamsaraGoldenEyeWeapon
     Weapon.AmmoType1 "Goldeneye_ZMGMagazine"
     Weapon.AmmoUse1 1
     Weapon.AmmoType2 "Clip"
-    //Weapon.AmmoGive2 32
+    Weapon.AmmoGive2 32
     Obituary "%o was drilled by %k's ZMG."
     Tag "ZMG"
     States
@@ -1166,7 +1166,7 @@ actor Goldeneye_D5KDeutsche : SamsaraGoldenEyeWeapon
     Weapon.AmmoType1 "Goldeneye_D5KMagazine"
     Weapon.AmmoUse1 1
     Weapon.AmmoType2 "Clip"
-    //Weapon.AmmoGive2 30
+    Weapon.AmmoGive2 30
     Obituary "%o was drilled by %k's D5K."
     Tag "D5K Deutsche"
     States
@@ -1708,7 +1708,7 @@ actor Goldfinger_UZI : SamsaraGoldenEyeWeapon
     Weapon.AmmoType1 "Goldfinger_UZIMagazine"
     Weapon.AmmoUse1 1
     Weapon.AmmoType2 "Clip"
-    //Weapon.AmmoGive2 15
+    Weapon.AmmoGive2 15
     Obituary "%o was drilled by %k's UZI."
     Tag "UZI"
     States
@@ -2209,7 +2209,7 @@ actor Goldfinger_SmithWesson22 : SamsaraGoldenEyeWeapon
     Weapon.AmmoType1 "Goldfinger_SmithWesson22Magazine"
     Weapon.AmmoUse1 1
     Weapon.AmmoType2 "Clip"
-    //Weapon.AmmoGive2 18
+    Weapon.AmmoGive2 18
     Obituary "%o was blown away by %k's S&W Model 22."
     Tag "Smith and Wesson Model 22"
     States
@@ -2741,7 +2741,7 @@ actor Goldfinger_SmithWesson36 : SamsaraGoldenEyeWeapon
     Weapon.AmmoType1 "Goldfinger_SmithWesson36Magazine"
     Weapon.AmmoUse1 1
     Weapon.AmmoType2 "Clip"
-    //Weapon.AmmoGive2 18
+    Weapon.AmmoGive2 18
     Obituary "%o was blown away by %k's S&W Model 36."
     Tag "Smith and Wesson Model 36"
     States
