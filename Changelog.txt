@@ -38,6 +38,10 @@ Hexen I:
 
 * Fixed the improved PVE damage values not properly applying to the bishop's shortsword strong projectiles.
 
+-All-
+
+! The icon of the defender now shows an icon when active.
+
 Duke Nukem 3D:
 
 -Duke Nukem (Original/Life's a Beach)-

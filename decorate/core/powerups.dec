@@ -1091,7 +1091,7 @@ actor SamsaraPowerFakeInvulnerableGiverCleric : SamsaraPowerupGiver
     Powerup.Color "Gray", 0.1
 }
 
-actor PowerFakeInvulnerableCleric : PowerFakeInvulnerable {}
+actor PowerFakeInvulnerableCleric : PowerFakeInvulnerable { Inventory.Icon "HXINV0" }
 
 actor SamsaraPowerFakeInvulnerableGiverMage : SamsaraPowerupGiver
 {
@@ -1099,7 +1099,7 @@ actor SamsaraPowerFakeInvulnerableGiverMage : SamsaraPowerupGiver
     Powerup.Color "Gray", 0.1
 }
 
-actor PowerFakeInvulnerableMage : PowerFakeInvulnerable {}
+actor PowerFakeInvulnerableMage : PowerFakeInvulnerable { Inventory.Icon "HXINV0" }
 
 actor SamsaraPowerFakeInvulnerableGiverFighter : SamsaraPowerupGiver
 {
@@ -1107,7 +1107,7 @@ actor SamsaraPowerFakeInvulnerableGiverFighter : SamsaraPowerupGiver
     Powerup.Color "Gray", 0.1
 }
 
-actor PowerFakeInvulnerableFighter : PowerFakeInvulnerable {}
+actor PowerFakeInvulnerableFighter : PowerFakeInvulnerable { Inventory.Icon "HXINV0" }
 
 actor SamsaraPowerFakeInvulnerableGiverDuke : SamsaraPowerFakeInvulnerableGiver { Powerup.Color "GoldMap" }
 
