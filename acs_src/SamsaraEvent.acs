@@ -3492,18 +3492,33 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                 {
                     if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
                     {
-                        if (CheckInventory("SamsaraHalfLifeSnarksAvailable")) { SetInventory("HL Squeaks", 1); }
+                        if (CheckInventory("SamsaraHalfLifeSnarksAvailable"))
+                        {
+                            storedammopriname = "HLSqueakAmmo", storedammopri = CheckInventory(storedammopriname);
+                            SetInventory("HL Squeaks", 1);
+                            SetInventory(storedammopriname, storedammopri);
+                        }
+
+                        storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("Mk 2 Grenades", 1);
+                        SetInventory(storedammopriname, storedammopri);
                     } else {
                         if (!CheckInventory("SamsaraHalfLifeLoadoutUnique1"))
                         {
-                            if (CheckInventory("SamsaraHalfLifeSnarksAvailable")) { SetInventory("HL Squeaks", 1); }
+                            if (CheckInventory("SamsaraHalfLifeSnarksAvailable"))
+                            {
+                                storedammopriname = "HLSqueakAmmo", storedammopri = CheckInventory(storedammopriname);
+                                SetInventory("HL Squeaks", 1);
+                                SetInventory(storedammopriname, storedammopri);
+                            }
 
                             if (CheckWeapon("Mk 2 Grenades") && CheckInventory("HL Squeaks")) { SetWeapon("HL Squeaks"); }
 
                             SetInventory("Mk 2 Grenades", 0);
                         } else if (CheckInventory("SamsaraHalfLifeLoadoutUnique1")) {
+                            storedammopriname = "RocketAmmo", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("Mk 2 Grenades", 1);
+                            SetInventory(storedammopriname, storedammopri);
 
                             if (CheckWeapon("HL Squeaks")) { SetWeapon("Mk 2 Grenades"); }
 
@@ -3516,18 +3531,27 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                 {
                     if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
                     {
+                        storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("HL Crossbow", 1);
+                        SetInventory(storedammopriname, storedammopri);
+
+                        storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
                         SetInventory("M40A1 Sniper Rifle", 1);
+                        SetInventory(storedammopriname, storedammopri);
                     } else {
                         if (!CheckInventory("SamsaraHalfLifeLoadoutUnique2"))
                         {
+                            storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("HL Crossbow", 1);
+                            SetInventory(storedammopriname, storedammopri);
 
                             if (CheckWeapon("M40A1 Sniper Rifle")) { SetWeapon("HL Crossbow"); }
 
                             SetInventory("M40A1 Sniper Rifle", 0);
                         } else if (CheckInventory("SamsaraHalfLifeLoadoutUnique2")) {
+                            storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
                             SetInventory("M40A1 Sniper Rifle", 1);
+                            SetInventory(storedammopriname, storedammopri);
 
                             if (CheckWeapon("HL Crossbow")) { SetWeapon("M40A1 Sniper Rifle"); }
 

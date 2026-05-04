@@ -10603,12 +10603,10 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (!hasweapon)
                 {
                     GiveInventory("HL Squeaks", 1);
-                    GiveInventory("HLSqueakAmmo", 5);
                     GiveInventory("SamsaraHalfLifeSnarksAvailable", 1);
                     result = 1;
                 } else if (!CheckInventory("SamsaraHalfLifeSnarksAvailable") || CheckInventory("HLSqueakAmmo") < GetAmmoCapacity("HLSqueakAmmo")) {
                     GiveInventory("HL Squeaks", 1);
-                    GiveInventory("HLSqueakAmmo", 5);
                     GiveInventory("SamsaraHalfLifeSnarksAvailable", 1);
                     result = 1;
                 }
@@ -10621,10 +10619,9 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (!hasweapon)
                 {
                     GiveInventory("Mk 2 Grenades", 1);
-                    GiveInventory("RocketAmmo", dmextraammo ? 3 * 5 / 2 : 3);
                     result = 1;
                 } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo")) {
-                    GiveInventory("RocketAmmo", 3);
+                    GiveInventory("Mk 2 Grenades", 1);
                     result = 1;
                 }
 
@@ -10648,10 +10645,9 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (!hasweapon)
                 {
                     GiveInventory("HL Crossbow", 1);
-                    GiveInventory("Shell", dmextraammo ? 10 * 5 / 2 : 10);
                     result = 1;
                 } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell")) {
-                    GiveInventory("Shell", 10);
+                    GiveInventory("HL Crossbow", 1);
                     result = 1;
                 }
 
@@ -10663,10 +10659,9 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 if (!hasweapon)
                 {
                     GiveInventory("M40A1 Sniper Rifle", 1);
-                    GiveInventory("Shell", dmextraammo ? 10 * 5 / 2 : 10);
                     result = 1;
                 } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell")) {
-                    GiveInventory("Shell", 10);
+                    GiveInventory("M40A1 Sniper Rifle", 1);
                     result = 1;
                 }
 

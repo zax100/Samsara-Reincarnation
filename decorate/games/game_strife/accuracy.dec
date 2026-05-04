@@ -609,14 +609,12 @@ actor HalfLifeStrifeUnique1 : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraHalfLifeAcquiredUnique1",1,"PickupLoadout0Fill")
       PickupLoadout0First:
         TNT1 A 0 A_GiveInventory("HL Squeaks")
-        TNT1 A 0 A_GiveInventory("HLSqueakAmmo",5)
         TNT1 A 0 A_GiveInventory("SamsaraHalfLifeSnarksAvailable")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasAllLoadoutEquipment",1,"PickupLoadout1First")
         goto PickupFirstFinish
 
       PickupLoadout0Fill:
         TNT1 A 0 A_GiveInventory("HL Squeaks")
-        TNT1 A 0 A_GiveInventory("HLSqueakAmmo",5)
         TNT1 A 0 A_GiveInventory("SamsaraHalfLifeSnarksAvailable")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasAllLoadoutEquipment",1,"PickupLoadout1Fill")
         stop
@@ -626,7 +624,6 @@ actor HalfLifeStrifeUnique1 : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraHalfLifeAcquiredUnique1",1,"PickupLoadout1Fill")
       PickupLoadout1First:
         TNT1 A 0 A_GiveInventory("Mk 2 Grenades")
-        TNT1 A 0 A_GiveInventory("RocketAmmo",3)
         goto PickupFirstFinish
 
       PickupLoadout1Fill:
@@ -653,7 +650,6 @@ actor HalfLifeStrifeUnique2 : Trigger
         TNT1 A 0 A_JumpIfInventory("M40A1 Sniper Rifle",1,"PickupLoadout0Fill")
       PickupLoadout0First:
         TNT1 A 0 A_GiveInventory("HL Crossbow")
-        TNT1 A 0 A_GiveInventory("Shell",10)
         TNT1 A 0 A_JumpIfInventory("SamsaraHasAllLoadoutEquipment",1,"PickupLoadout1First")
         goto PickupFirstFinish
 
@@ -668,7 +664,6 @@ actor HalfLifeStrifeUnique2 : Trigger
         TNT1 A 0 A_JumpIfInventory("M40A1 Sniper Rifle",1,"PickupLoadout1Fill")
       PickupLoadout1First:
         TNT1 A 0 A_GiveInventory("M40A1 Sniper Rifle")
-        TNT1 A 0 A_GiveInventory("Shell",10)
         goto PickupFirstFinish
 
       PickupLoadout1Fill:

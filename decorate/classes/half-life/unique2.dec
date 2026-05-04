@@ -16,7 +16,7 @@ actor "HL Crossbow" : HLWeapon
     Weapon.AmmoType1 "HLXBowAmmoCounter"
     Weapon.AmmoUse1 1
     Weapon.AmmoType2 "Shell"
-    //Weapon.AmmoGive2 10
+    Weapon.AmmoGive2 10
     Tag "Crossbow"
     +NOAUTOAIM
     States
@@ -1089,7 +1089,7 @@ actor "M40A1 Sniper Rifle" : HLWeapon
     Weapon.AmmoType1 "HLSniperCounter"
     Weapon.AmmoUse1 1
     Weapon.AmmoType2 "Shell"
-    //Weapon.AmmoGive2 10
+    Weapon.AmmoGive2 10
     Tag "M40A1 Sniper Rifle"
     +NOAUTOAIM
     States
