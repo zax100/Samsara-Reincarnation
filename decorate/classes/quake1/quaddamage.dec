@@ -62,7 +62,7 @@ actor QuadDamagePower : PowerDamage
     DamageFactor "Normal", 4
     DamageFactor "QuakeExplosive", 4
     DamageFactor "QuakeElectric", 4
-    DamageFactor "QuakeQuadded", 4
+    DamageFactor "QuakeQuadded", 4 // this isn't really used
     DamageFactor "NotQuadded", 1
     DamageFactor "SpectralNoQuad", 1
     DamageFactor "EnemyInfightDamage", 0

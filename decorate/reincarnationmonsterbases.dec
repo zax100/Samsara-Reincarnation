@@ -323,12 +323,16 @@ Actor SamsaraMonsterReincPainElemental : SamsaraMonsterDemonicTotalGib
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -1074,12 +1078,16 @@ Actor SamsaraMonsterReincHereticImp : HereticImp
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -1846,12 +1854,16 @@ Actor SamsaraMonsterReincHereticImp2 : HereticImpLeader
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -2666,12 +2678,16 @@ Actor SamsaraMonsterReincWizard : Wizard
 			Stop
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -3443,12 +3459,16 @@ Actor SamsaraMonsterReincWizardFriend : Wizard
 			Stop
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -4246,12 +4266,16 @@ Actor SamsaraMonsterReincKnight : Knight
 			Stop
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -5066,12 +5090,16 @@ Actor SamsaraMonsterReincKnight2 : KnightGhost
 			Stop
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -7446,12 +7474,16 @@ Actor SamsaraMonsterReincChicken : Chicken
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -8218,12 +8250,16 @@ Actor SamsaraMonsterReincAfrit : FireDemon
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -10082,12 +10118,16 @@ Actor SamsaraMonsterReincWraith : Wraith
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -10854,12 +10894,16 @@ Actor SamsaraMonsterReincWraithBuried : WraithBuried
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -11626,12 +11670,16 @@ Actor SamsaraMonsterReincSerpent : Serpent
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -12398,12 +12446,16 @@ Actor SamsaraMonsterReincSerpentLeader : SerpentLeader
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -15039,12 +15091,16 @@ Actor SamsaraMonsterReincPig : Pig
 			Stop
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -15869,12 +15925,16 @@ Actor SamsaraMonsterReincAcolyte : Acolyte
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -16700,12 +16760,16 @@ Actor SamsaraMonsterReincAcolyteBlue : AcolyteBlue
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
@@ -17530,12 +17594,16 @@ Actor SamsaraMonsterReincStrifeHumanoid : StrifeHumanoid
 			Wait
 
 		// XDeath states (Doesn't uses actor's XDeath state)
+		Death.QuakeDamage:
+		Death.QuakePistol:
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:

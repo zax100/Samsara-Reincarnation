@@ -155,7 +155,7 @@ actor SamsaraQuakeAxeSwingSoundPlayer : Trigger
 actor QuakeAxePuff: QuakeBulletPuff
 {
     +PUFFONACTORS
-    DamageType "QuakeExplosive"
+    DamageType "QuakePistol"
     AttackSound "quakeweps/axewall"
     SeeSound "quakeweps/axehit"
     MeleeSound "quakeweps/axehit"

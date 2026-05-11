@@ -196,6 +196,8 @@ actor DeusEx_Augmentation_ProtectionBase : PowerProtection
     DamageFactor "DukeDamage", 1
     DamageFactor "DukePistol", 1
     DamageFactor "MightyBoot", 1
+    DamageFactor "QuakeDamage", 1
+    DamageFactor "QuakePistol", 1
     DamageFactor "PSBullet", 1
     DamageFactor "RRBullet", 1
     DamageFactor "LeonardDamage0", 1
@@ -415,6 +417,8 @@ Actor DeusEx_Augmentation_BallisticProtection1 : DeusEx_Augmentation_ProtectionB
     DamageFactor "DukeDamage", 0.8
     DamageFactor "DukePistol", 0.8
     DamageFactor "MightyBoot", 0.8
+    DamageFactor "QuakeDamage", 0.8
+    DamageFactor "QuakePistol", 0.8
     DamageFactor "PSBullet", 0.8
     DamageFactor "RRBullet", 0.8
     DamageFactor "LeonardDamage0", 0.8
@@ -475,6 +479,8 @@ Actor DeusEx_Augmentation_BallisticProtection2 : DeusEx_Augmentation_ProtectionB
     DamageFactor "DukeDamage", 0.65
     DamageFactor "DukePistol", 0.65
     DamageFactor "MightyBoot", 0.65
+    DamageFactor "QuakeDamage", 0.65
+    DamageFactor "QuakePistol", 0.65
     DamageFactor "PSBullet", 0.65
     DamageFactor "RRBullet", 0.65
     DamageFactor "LeonardDamage0", 0.65
@@ -535,6 +541,8 @@ Actor DeusEx_Augmentation_BallisticProtection3 : DeusEx_Augmentation_ProtectionB
     DamageFactor "DukeDamage", 0.5
     DamageFactor "DukePistol", 0.5
     DamageFactor "MightyBoot", 0.5
+    DamageFactor "QuakeDamage", 0.5
+    DamageFactor "QuakePistol", 0.5
     DamageFactor "PSBullet", 0.5
     DamageFactor "RRBullet", 0.5
     DamageFactor "LeonardDamage0", 0.5
@@ -595,6 +603,8 @@ Actor DeusEx_Augmentation_BallisticProtection4 : DeusEx_Augmentation_ProtectionB
     DamageFactor "DukeDamage", 0.35
     DamageFactor "DukePistol", 0.35
     DamageFactor "MightyBoot", 0.35
+    DamageFactor "QuakeDamage", 0.35
+    DamageFactor "QuakePistol", 0.35
     DamageFactor "PSBullet", 0.35
     DamageFactor "RRBullet", 0.35
     DamageFactor "LeonardDamage0", 0.35

@@ -1176,6 +1176,8 @@ actor HereticCorvusClone : SamsaraMiscCharHumanoidStatic
 			TNT1 A -1
 			Stop
 
+		XDeath.QuakeDamage:
+		XDeath.QuakePistol:
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:

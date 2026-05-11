@@ -2,7 +2,7 @@ actor QuakeBulletPuff
 {
     //+CLIENTSIDEONLY
     +NOINTERACTION
-    DamageType "QuakeExplosive"
+    DamageType "QuakeDamage"
     States
     {
       Spawn:
@@ -31,7 +31,7 @@ actor QuakeBulletPuff2 : BulletPuff
     Renderstyle Translucent
     VSpeed 0
     Speed 0
-    DamageType "QuakeExplosive"    
+    DamageType "QuakeDamage"
     +MISSILE
     -SOLID
     +NOCLIP
@@ -72,7 +72,7 @@ actor QuakeBulletPuff4 : QuakeBulletPuff2
     }
 }
 
-actor QuakePistolPuff : QuakeBulletPuff { DamageType "QuakeExplosive" }
+actor QuakePistolPuff : QuakeBulletPuff { DamageType "QuakePistol" }
 actor QuakePistolPuffCoop : QuakePistolPuff { +MTHRUSPECIES }
 
 actor QuakeBulletPuffSoundDMC : QuakeBulletPuff
@@ -91,5 +91,5 @@ actor QuakeBulletPuffCoopSoundDMC : QuakeBulletPuffSoundDMC { +MTHRUSPECIES }
 actor QuakeBulletPuffThruGhostSoundDMC : QuakeBulletPuffSoundDMC { +THRUGHOST }
 actor QuakeBulletPuffThruGhostCoopSoundDMC : QuakeBulletPuffThruGhostSoundDMC { +MTHRUSPECIES }
 
-actor QuakePistolPuffSoundDMC : QuakeBulletPuffSoundDMC { DamageType "QuakeExplosive" }
+actor QuakePistolPuffSoundDMC : QuakeBulletPuffSoundDMC { DamageType "QuakePistol" }
 actor QuakePistolPuffCoopSoundDMC : QuakePistolPuffSoundDMC { +MTHRUSPECIES }

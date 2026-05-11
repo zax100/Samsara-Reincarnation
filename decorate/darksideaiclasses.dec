@@ -2656,6 +2656,8 @@ Actor Ranger_AI : SamsaraMonsterDarkSideAIRegular
 		PLY9 DEFGH 3
 		PLY9 I -1
 		Stop
+	XDeath.QuakeDamage:
+	XDeath.QuakePistol:
 	XDeath.QuakeElectric:
 	XDeath.NotQuadded:
 	XDeath.QuakeExplosive:

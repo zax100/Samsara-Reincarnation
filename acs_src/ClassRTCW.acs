@@ -1543,7 +1543,7 @@ Script "RTCW_BulletDamage" (int damage, int soundtype)
 			soundName = CheckInventory("RTCW_MetalMonster") ? "RTCWET/BulletHitMetal" : "RTCWET/BulletHitFlesh";
 			break;
 		case 1:
-			soundName = "RTCWConsole/BulletHitFlesh";
+			soundName = CheckInventory("RTCW_MetalMonster") ? "RTCW/BulletHitMetal" : "RTCWConsole/BulletHitFlesh";
 			break;
 		default:
 			soundName = CheckInventory("RTCW_MetalMonster") ? "RTCW/BulletHitMetal" : "RTCW/BulletHitFlesh";

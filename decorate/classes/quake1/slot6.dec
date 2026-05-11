@@ -214,7 +214,6 @@ actor SamsaraQuakeSuperNailgunNormalAttackHandler : SamsaraQuakeNailgunNormalAtt
 actor QuakeSuperNail: QuakeNail
 {
     Damage (18)
-	DamageType "QuakeExplosive"
     Obituary "$SAMSARA_RANGER_OB_SLOT6_1"
     States
     {
@@ -469,7 +468,6 @@ actor SamsaraQuakeSuperNailgunLavaAttackHandler : SamsaraQuakeNailgunLavaAttackH
 actor QuakeSLNail: QuakeLavaNail
 {
     Damage (28)
-    DamageType "QuakeFire"
     Obituary "$SAMSARA_RANGER_OB_SLOT6_2"
     States
     {

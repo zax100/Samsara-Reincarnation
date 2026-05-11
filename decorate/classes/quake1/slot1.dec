@@ -311,7 +311,7 @@ actor MjolnirPuff: BulletPuff
     SeeSound "quakeweps/mjolnirwhack"
     AttackSound "quakeweps/mjolnirwall"
     ActiveSound "quakeweps/mjolnirmiss"
-	DamageType "QuakeExplosive"
+	DamageType "QuakeDamage"
     States
     {
       Spawn:

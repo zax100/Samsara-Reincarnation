@@ -363,12 +363,11 @@ actor QuakeNail: FastProjectile
     Radius 1
     Height 2
     Speed 75
-	DamageType "QuakeNail"
+	DamageType "QuakeDamage"
     Projectile
     Damage (9)
     +BLOODSPLATTER
     +THRUGHOST
-	+NOEXTREMEDEATH
 	Scale 1.5
     //Decal BulletChip
     States
