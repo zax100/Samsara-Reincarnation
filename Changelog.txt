@@ -131,6 +131,10 @@ Doom:
 
 * Fixed spectres not having OptFuzzy rendering on ZorchRaise.
 
+Strife: Quest for the Sigil:
+
+* Fixed bosses not being disintegrated by the Duke Nukem 64 version of Duke Nukem's plasma cannon.
+
 Hacx: Twitch 'n Kill:
 
 * Fixed stealth buzzers not having OptFuzzy rendering on ZorchRaise.

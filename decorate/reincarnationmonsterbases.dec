@@ -6011,7 +6011,6 @@ Actor SamsaraMonsterReincMaulotaur : Minotaur
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -6362,7 +6361,6 @@ Actor SamsaraMonsterReincDsparil1 : Sorcerer1
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -6750,7 +6748,6 @@ Actor SamsaraMonsterReincDsparil2 : Sorcerer2
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -9030,7 +9027,6 @@ Actor SamsaraMonsterReincDragon : Dragon
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -12862,7 +12858,6 @@ Actor SamsaraMonsterReincFighterBoss : FighterBoss
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -13226,7 +13221,6 @@ Actor SamsaraMonsterReincClericBoss : ClericBoss
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -13590,7 +13584,6 @@ Actor SamsaraMonsterReincMageBoss : MageBoss
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -13954,7 +13947,6 @@ Actor SamsaraMonsterReincHeresiarch : Heresiarch
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -14318,7 +14310,6 @@ Actor SamsaraMonsterReincKorax : Korax
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -18010,7 +18001,6 @@ Actor SamsaraMonsterReincMacil : Macil2
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -18365,7 +18355,6 @@ Actor SamsaraMonsterReincStrifeBishop : StrifeBishop
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -18706,7 +18695,6 @@ Actor SamsaraMonsterReincLoremaster : Loremaster
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -19047,7 +19035,6 @@ Actor SamsaraMonsterReincProgrammer : Programmer
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -21410,7 +21397,6 @@ Actor SamsaraMonsterReincInquisitor : Inquisitor
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
 		Death.ExpanderDMGCoop:
@@ -22739,7 +22725,6 @@ Actor SamsaraMonsterReincAlienSpectre : AlienSpectre1
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.DukeIce:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
@@ -23430,7 +23415,6 @@ Actor SamsaraMonsterReincEntityBoss : EntityBoss
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.DukeIce:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
@@ -23748,7 +23732,6 @@ Actor SamsaraMonsterReincSubEntity : EntitySecond
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.DukeIce:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
@@ -24070,7 +24053,6 @@ Actor SamsaraMonsterReincSamsaraSpectre1 : AlienSpectre1
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.DukeIce:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
@@ -24392,7 +24374,6 @@ Actor SamsaraMonsterReincSamsaraSpectre2 : AlienSpectre2
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.DukeIce:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
@@ -24714,7 +24695,6 @@ Actor SamsaraMonsterReincSamsaraSpectre3 : AlienSpectre3
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.DukeIce:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
@@ -25036,7 +25016,6 @@ Actor SamsaraMonsterReincSamsaraSpectre4 : AlienSpectre4
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.DukeIce:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
@@ -25358,7 +25337,6 @@ Actor SamsaraMonsterReincSamsaraSpectre5 : AlienSpectre5
 		Death.MightyBoot:
 		Death.DukeDamage:
 		Death.DukePistol:
-		Death.DukePlasma:
 		Death.DukeIce:
 		Death.ExpanderDMG:
 		XDeath.ExpanderDMG:
