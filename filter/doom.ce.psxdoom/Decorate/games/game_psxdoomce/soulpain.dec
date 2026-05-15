@@ -1,4 +1,4 @@
-Actor PsxLostSoul_Samsara : SamsaraMonsterGhost replaces LostSoul2
+Actor PsxLostSoul_Samsara : SamsaraMonsterReincLostSoul replaces LostSoul2
 {
 	Health 60
 	Radius 16
@@ -22,9 +22,8 @@ Actor PsxLostSoul_Samsara : SamsaraMonsterGhost replaces LostSoul2
 	Obituary "$OB_SKULL"
 	Tag "Lost Soul"
 	Species "SamsaraLostSoul"
-	RenderStyle "Normal" // gzdoom
+	RenderStyle "Normal" // gzdoom // originally still used SoulTrans, but Normal just looks nicer here
 	DamageFactor "LostSoul64Explosion", 0
-	+NOBLOOD
 	States
 	{
 	Spawn:

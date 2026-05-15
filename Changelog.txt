@@ -130,6 +130,7 @@ Sarge (Quake III Arena):
 Doom:
 
 * Fixed spectres not having OptFuzzy rendering on ZorchRaise.
+* Fixed the lost soul not having +RETARGETAFTERSLAM in GZDoom.
 
 Strife: Quest for the Sigil:
 

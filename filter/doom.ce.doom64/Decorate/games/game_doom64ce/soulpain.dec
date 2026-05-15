@@ -1,4 +1,4 @@
-Actor D64LostSoul_Samsara : SamsaraMonsterGhost replaces LostSoul2
+Actor D64LostSoul_Samsara : SamsaraMonsterReincLostSoul replaces LostSoul2
 {
 	Health 50
 	Radius 16
@@ -22,9 +22,8 @@ Actor D64LostSoul_Samsara : SamsaraMonsterGhost replaces LostSoul2
 	Obituary "$OB_SKULL"
 	Tag "Lost Soul"
 	Species "SamsaraLostSoul"
-	RenderStyle "SoulTrans"
+	RenderStyle "Normal" // gzdoom // originally still used SoulTrans, but Normal just looks nicer here
 	DamageFactor "LostSoul64Explosion", 0
-	+NOBLOOD
 	States
 	{
 	Spawn:

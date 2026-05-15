@@ -1,4 +1,4 @@
-actor LostSoul2 : SamsaraMonsterGhost replaces LostSoul
+actor LostSoul2 : SamsaraMonsterReincLostSoul replaces LostSoul
 {
    	Game Doom
 	SpawnID 110
@@ -15,6 +15,7 @@ actor LostSoul2 : SamsaraMonsterGhost replaces LostSoul
 	+MISSILEMORE
 	+DONTFALL
 	+NOBLOOD
+	//+RETARGETAFTERSLAM // not in zandronum, which explains why we need this monster base
 	AttackSound "skull/melee"
 	PainSound "skull/pain"
 	DeathSound "skull/death"

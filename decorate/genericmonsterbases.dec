@@ -17609,7 +17609,7 @@ Actor SamsaraDropItemKeenDie
 // Arachnotron - SamsaraMonsterCyberneticTotalGib
 // Cyberdemon - SamsaraMonsterCyberneticBoss
 // Demon - SamsaraMonsterDemonicTotalGib
-// Lost Soul - SamsaraMonsterGhost
+// Lost Soul - SamsaraMonsterReincLostSoul
 // Mancubus - SamsaraMonsterCyberneticTotalGib
 // Pain Elemental - SamsaraMonsterReincPainElemental
 // Revenant - SamsaraMonsterDemonicTotalGib
@@ -17755,7 +17755,7 @@ Actor SamsaraDropItemKeenDie
 // Arachnotron - SamsaraMonsterCyberneticTotalGib
 // Cyberdemon - SamsaraMonsterCyberneticBoss
 // Demon - SamsaraMonsterDemonicTotalGib
-// Lost Soul - SamsaraMonsterGhost
+// Lost Soul - SamsaraMonsterReincLostSoul
 // Mancubus - SamsaraMonsterCyberneticTotalGib
 // Pain Elemental - SamsaraMonsterReincPainElemental
 // Revenant - SamsaraMonsterDemonicTotalGib
