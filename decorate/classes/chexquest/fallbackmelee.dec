@@ -95,7 +95,6 @@ actor SamsaraChexBootspoonAttackHandler : Trigger
       // Berserk
       PickupBerserk:
         TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupBerserkImproved")
-        //TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 28), "PickupBerserkImproved")
       // Berserk (vanilla)
       PickupBerserkVanilla:
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupBerserkVanillaCoop")
@@ -148,6 +147,7 @@ actor ChexSpoonPuff : BulletPuff
     RenderStyle Add
     -BLOODSPLATTER
     +BLOODLESSIMPACT
+    +PUFFGETSOWNER
     +PUFFONACTORS
     Alpha 0.4
     Scale 0.22
@@ -157,16 +157,38 @@ actor ChexSpoonPuff : BulletPuff
       Spawn:
       Melee:
         CMIS D 0 Bright Light("CPUFF1") A_SpawnItemEx("Switchable_FlyingBlood_NonViolent",0,0,0,random(-350,350)/100.00,random(-350,350)/100.00,random(500,1000)/100.00,random(-180,180),33)
-        TNT1 A 0 A_PlaySound("chex/spoon")
+        TNT1 A 0 A_GiveInventory("SamsaraChexBootspoonHitActorSoundPlayer",1,AAPTR_TARGET)
       SpawnFinish:
         CMIS D 4 Bright Light("CPUFF1")
         CMIS CB 4 Bright Light("CPUFF2")
         stop
 
       Crash:
-        TNT1 A 0 A_PlaySound("chex/wallspoon")
+        TNT1 A 0 A_GiveInventory("SamsaraChexBootspoonHitWallSoundPlayer",1,AAPTR_TARGET)
         goto SpawnFinish
     }
 }
 
 actor ChexSpoonPuffCoop : ChexSpoonPuff { +MTHRUSPECIES }
+
+actor SamsaraChexBootspoonHitWallSoundPlayer : Trigger
+{
+    States
+    {
+      // Sound stuff
+      Pickup:
+        TNT1 A 0 A_PlaySound("chex/wallspoon",CHAN_WEAPON)
+        stop
+    }
+}
+
+actor SamsaraChexBootspoonHitActorSoundPlayer : Trigger
+{
+    States
+    {
+      // Sound stuff
+      Pickup:
+        TNT1 A 0 A_PlaySound("chex/spoon",CHAN_WEAPON)
+        stop
+    }
+}

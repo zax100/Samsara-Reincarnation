@@ -22,6 +22,14 @@ Doom:
 
 * Fixed first and second unique pickups not giving extra ammo on first pickup when playing PVP in Doom or Chex Quest.
 
+-All-
+
+! The brass knuckles sounds now play on the player's CHAN_WEAPON sound channel.
+
+Fred Chexter (Chex Quest):
+
+! The bootspoon sounds now play on the player's CHAN_WEAPON sound channel.
+
 Wolfenstein 3D:
 
 -B.J. Blazkowicz (Original/Lost Episodes)-
