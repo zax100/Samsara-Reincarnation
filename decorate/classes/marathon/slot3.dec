@@ -668,7 +668,7 @@ actor SamsaraMarathonFusionSuper : SamsaraMarathonFusionShot
     Radius 20
     Height 24
     Speed 35
-    Damage (random(135,160))
+    Damage (random(120,150))
     Scale 0.75
     Decal "Scorch"
     States

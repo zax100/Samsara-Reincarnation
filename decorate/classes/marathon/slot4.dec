@@ -1,4 +1,4 @@
-actor UsingAssaultRifle: Boolean {}
+`actor UsingAssaultRifle: Boolean {}
 actor AssaultFiredS: Counter {}
 actor AssaultClicked: Counter {}
 actor AssaultClicked2: Counter {}
@@ -414,12 +414,12 @@ actor MarathonARBulletCoop : MarathonARBullet
     Radius 1
     Height 1
     Speed 80
-    Damage (random(9,15))
+    Damage (random(10,16))
     Species "Player"
     +THRUSPECIES
 }
 
-actor MarathonARBulletCoopImproved : MarathonARBulletCoop { Damage (random(10,16)) }
+actor MarathonARBulletCoopImproved : MarathonARBulletCoop { Damage (random(10,18)) }
 
 actor 32mmCasingSpawner : SamsaraMarathonCasingSpawner
 {
