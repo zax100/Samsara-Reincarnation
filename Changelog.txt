@@ -52,8 +52,9 @@ Security Officer (Marathon):
 
 ! Damage received from Ranger's Mjolnir (lightning) and thunderbolt now causes a white screen flash.
 + The fusion pistol primary fire bolts now deal 45-60 damage (vanilla; increased from 42-56) or 60-80 damage (improved; PVE only; increased from 45-60).
-+ The fusion pistol secondary fire bolts now deal 120-150 damage (vanilla; increased from 105-140) or 160-200 damage (improved; PVE only; increased from 135-160).
++ The fusion pistol secondary fire bolts now deal 120-150 damage (vanilla; increased from 105-140) or 160-200 damage (improved; PVE only; increased from 120-150).
 * The fusion pistol's improved damage values in PVE are now taken into account when fired underwater.
++ In PVE, the MA-75B Assault Rifle primary bullets now deal 10-16 damage (vanilla; increased from 9-15) or 10-18 damage (improved; increased from 10-16).
 * Fixed the Talon Ceramic Combat Blade melee puff not having lights.
 * Fixed thrown Talon Ceramic Combat Blades multiplying on hitting specific corners of map geometry in GZDoom.
 

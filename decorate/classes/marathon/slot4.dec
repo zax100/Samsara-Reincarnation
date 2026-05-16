@@ -1,4 +1,4 @@
-`actor UsingAssaultRifle: Boolean {}
+actor UsingAssaultRifle: Boolean {}
 actor AssaultFiredS: Counter {}
 actor AssaultClicked: Counter {}
 actor AssaultClicked2: Counter {}
