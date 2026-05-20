@@ -386,6 +386,7 @@ Actor WTShieldProjectile_Coop : WTShieldProjectile
   damagefactor "Pistol", 0.0
   DamageFactor "DoomFist", 0.0
   damagefactor "ZorchPistol", 0.0
+  damagefactor "StrifePistol", 0.0
   damagefactor "Wraithverge", 0.0
   damagefactor "zorch", 0.0
   damagefactor "bfg", 0.0
@@ -577,6 +578,7 @@ Actor WTSuperProtection : PowerProtection
 	damagefactor "Pistol", 0.0
 	//DamageFactor "DoomFist", 0.0
 	damagefactor "ZorchPistol", 0.0
+	damagefactor "StrifePistol", 0.0
 	damagefactor "Wraithverge", 0.0
 	damagefactor "zorch", 0.0
 	damagefactor "fire", 0.0

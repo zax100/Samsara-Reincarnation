@@ -15,7 +15,9 @@ actor Heresiarch2 : SamsaraMonsterReincHeresiarch replaces Heresiarch
 	DamageFactor "DoomDamageTypePistol", 1.75
 	DamageFactor "DoomFist", 1.75
 	DamageFactor "DoomDamageTypeFist", 1.75
+	DamageFactor "PunchDagger", 1.75
 	DamageFactor "ZorchPistol", 1.75
+	DamageFactor "StrifePistol", 1.75
 	DamageFactor "Wraithverge", 1.1
 	DamageFactor "Normal", 1.1
 	DamageFactor "DoomDamageType", 1.1

@@ -9,7 +9,9 @@ actor Wraith2 : SamsaraMonsterReincWraith replaces Wraith
 	DamageFactor "DoomDamageTypePistol", 3
 	DamageFactor "DoomFist", 3
 	DamageFactor "DoomDamageTypeFist", 3
+	DamageFactor "PunchDagger", 3
 	DamageFactor "ZorchPistol", 3
+	DamageFactor "StrifePistol", 3
 	DamageFactor "Wraithverge", 1.2
 	DamageFactor "Normal", 1.15
 	DamageFactor "DoomDamageType", 1.15
@@ -476,7 +478,9 @@ actor WraithBuried2 : SamsaraMonsterReincWraithBuried replaces WraithBuried
 	DamageFactor "DoomDamageTypePistol", 3
 	DamageFactor "DoomFist", 3
 	DamageFactor "DoomDamageTypeFist", 3
+	DamageFactor "PunchDagger", 3
 	DamageFactor "ZorchPistol", 3
+	DamageFactor "StrifePistol", 3
 	DamageFactor "Wraithverge", 1.2
 	DamageFactor "Normal", 1.15
 	DamageFactor "DoomDamageType", 1.15

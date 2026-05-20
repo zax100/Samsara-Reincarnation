@@ -28,7 +28,9 @@ actor Demon1B : SamsaraMonsterBeast replaces Demon1
 	DamageFactor "DoomDamageTypePistol", 3
 	DamageFactor "DoomFist", 3
 	DamageFactor "DoomDamageTypeFist", 3
+	DamageFactor "PunchDagger", 3
 	DamageFactor "ZorchPistol", 3
+	DamageFactor "StrifePistol", 3
 	DamageFactor "Wraithverge", 1.2
 	DamageFactor "Normal", 1.15
 	DamageFactor "DoomDamageType", 1.15
@@ -523,7 +525,9 @@ actor Demon2B : SamsaraMonsterBeast replaces Demon2
 	DamageFactor "DoomDamageTypePistol", 3
 	DamageFactor "DoomFist", 3
 	DamageFactor "DoomDamageTypeFist", 3
+	DamageFactor "PunchDagger", 3
 	DamageFactor "ZorchPistol", 3
+	DamageFactor "StrifePistol", 3
 	DamageFactor "Wraithverge", 1.2
 	DamageFactor "Normal", 1.15
 	DamageFactor "DoomDamageType", 1.15

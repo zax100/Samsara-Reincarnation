@@ -88,6 +88,7 @@ Caleb (Blood):
 Strifeguy (Strife):
 
 * Fixed the burn death sound playing later than intended.
++ The punch dagger and pistol now deal extra damage to Hexen monsters outside of ReMixer (for reference, the DamageFactor amounts from Doomguy's brass knuckles and pistol/rifle, respectively, are used).
 
 In Pursuit of Greed:
 

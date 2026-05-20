@@ -499,9 +499,10 @@ actor SuperFriendlyChicken : SuperCoopChicken
     DamageFactor "VillainTeam", 0.0
     DamageFactor "Pistol", 0.0
     DamageFactor "ZorchPistol", 0.0
+    DamageFactor "StrifePistol", 0.0
     DamageFactor "Telefrag", 0.0
     DamageFactor "CorvusHellstaff", 0.0
-    DamageFactor "VillainTeamFire", 0.0
+    DamageFactor "VillainTeamFire", 0.0 // used for the currently defunct naraka mod
 }
 
 actor ChickodemonBall : CacodemonBall
@@ -661,9 +662,10 @@ actor AssaultFriendlyChicken : AssaultChicken
     DamageFactor "VillainTeam", 0.0
     DamageFactor "Pistol", 0.0
     DamageFactor "ZorchPistol", 0.0
+    DamageFactor "StrifePistol", 0.0
     DamageFactor "Telefrag", 0.0
     DamageFactor "CorvusHellstaff", 0.0
-    DamageFactor "VillainTeamFire", 0.0
+    DamageFactor "VillainTeamFire", 0.0 // used for the currently defunct naraka mod
 }
 
 actor ExplosiveChicken : SuperCoopChicken
@@ -798,9 +800,10 @@ actor ExplosiveFriendlyChicken : ExplosiveChicken
     DamageFactor "VillainTeam", 0.0
     DamageFactor "Pistol", 0.0
     DamageFactor "ZorchPistol", 0.0
+    DamageFactor "StrifePistol", 0.0
     DamageFactor "Telefrag", 0.0
     DamageFactor "CorvusHellstaff", 0.0
-    DamageFactor "VillainTeamFire", 0.0
+    DamageFactor "VillainTeamFire", 0.0 // used for the currently defunct naraka mod
     DamageType "EnemyInfightDamage"
     States
     {

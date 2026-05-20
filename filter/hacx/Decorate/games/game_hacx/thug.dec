@@ -21,6 +21,7 @@ actor HacxThug_Samsara : SamsaraMonsterHumanoid replaces Zombieman
 	DamageFactor "Pistol", 1.2
 	DamageFactor "DukePistol", 1.2
 	DamageFactor "ZorchPistol", 1.2
+	DamageFactor "StrifePistol", 1.2
 	DamageFactor "MightyBoot", 1.5
     PainChance "MightyBoot", 255
 	Tag "Thug"
