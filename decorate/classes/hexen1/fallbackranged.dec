@@ -272,6 +272,7 @@ actor HexenImpalerPuff : BulletPuff
     Radius 4
     Height 8
     VSpeed 0
+    DamageType "Pistol"
     Mass 100
     RenderStyle "Normal"
     ActiveSound "FighterPunchMiss"
@@ -330,6 +331,7 @@ actor HexenImpalerMissile : FastProjectile
     Height 8
     Speed 80
     Damage (random(1,4)*10)
+    DamageType "Pistol"
     SeeSound "Hexen/Weapon/XBowFire"
     +BLOODSPLATTER
     States

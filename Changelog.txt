@@ -46,6 +46,10 @@ Hexen I:
 
 * Fixed the improved PVE damage values not properly applying to the bishop's shortsword strong projectiles.
 
+-Baratus-
+
+! The impaler crossbow now uses the Pistol damage type for both melee and projectile attacks.
+
 -All-
 
 ! The icon of the defender now shows an icon when active.
