@@ -27,7 +27,9 @@ actor Heresiarch2 : SamsaraMonsterReincHeresiarch replaces Heresiarch
 	DamageFactor "Zorch", 1.1
 	DamageFactor "PhasingZorch", 1.1
 	DamageFactor "BFG", 0.5
+	DamageFactor "DoomDamageTypeBFG", 1.1
 	DamageFactor "BFGSpray", 0.5
+	DamageFactor "DoomDamageTypeDevastator", 1.1
 	DamageFactor "Fire", 1.1
 	DamageFactor "DoomDamageTypeFire", 1.1
 	DamageFactor "DoomDamageTypeFireExplosive", 1.1
