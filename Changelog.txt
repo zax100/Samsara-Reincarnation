@@ -24,7 +24,7 @@ Doom:
 
 -All-
 
-! Attacks will now base damage multipliers on an actor's DamageFactor "Normal" property (if an actor has this property set to 1.15, for example, attacks will do 1.15x damage at minimum; if it's set below 1, it will still be ignored).
+! Attacks will now base damage multipliers on an actor's DamageFactor "Normal" property (if an actor has this property set to 1.15, for example, attacks will do 1.15x damage at minimum; if it's set below 1, the minimum damage multiplier will still be 1x).
 ! The brass knuckles sounds now play on the player's CHAN_WEAPON sound channel.
 
 Fred Chexter (Chex Quest):
