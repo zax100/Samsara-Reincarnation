@@ -162,6 +162,7 @@ PSX Doom CE/PSX Final Doom CE:
 -Settings-
 
 ! The "Boss Monologues" setting has caused some issues when ReMixer's "Performance Mode" setting is enabled, so the former has been forcibly disabled in that scenario for the time being.
++ samsara_pinatapartyperformance has been added, determining whether enemies should drop containers that reveal their contents when a player gets close enough, much like the Christmas presents with "Christmas Mode" enabled. It can be found in the "Samsara Serverside Options" menu, under "Party Mode Options", with the label "Pinata Party Performance Mode".
 * Fixed "Pistol Start" taking effect in PVP and invasion; having it active in those cases is redundant.
 ! "Quake I: Quad Damage Behavior" has been renamed to "Quake Quad Damage Behavior" and moved to "Serverside Ability Options". The CVar name itself remains unchanged.
 

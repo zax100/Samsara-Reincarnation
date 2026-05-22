@@ -8,7 +8,7 @@
 #include "SamsaraDefs.acs"
 
 #DEFINE MAXWEAPONS 32
-#DEFINE MAXOPTIONS 93
+#DEFINE MAXOPTIONS 94
 
 // Label, index, damage, defense, range, attack speed, difficulty, character symbol, small character, game logo, large character, big font, big font color, small font, small font color, background top wall, background bottom wall, background side banner right, background logo, background character symbol, background right banner, selected font color
 str ClassInfo[CLASSCOUNT][MAXMODES][31] = 
@@ -3119,6 +3119,7 @@ str CVarOptionsandInfo[3][MAXOPTIONS][2] =
 		{ "Permanent Powered Weapons", "The world of Parthoris and Tulku can be very dangerous, so Corvus and the Demoness often carry Tomes of Power with them. This party mode allows their weapons to fire as if they were in effect of a Tome of Power. This also affects the Stronghold version of Doomguy, Eleena Brynstaarl, Kyle Katarn, and Daniel Garner. Due to the sheer power boost these classes get with this mode, it's highly recommended that they are only activated on cooperative gamemodes." },
 		{ "Pinata Party", "Want enemies to shed useful items on death? This party mode's great for celebrations and other fun events. The items and weapons dropped depends on the enemy health." },
 		{ "Pinata Party Extras", "This setting determines if Skulltag items, powerups, and armors can be spawned in Pinata Party mode, as well as additional items found only in Heretic, Hexen, or even Samsara itself." },
+		{ "Pinata Party Performance Mode", "This setting determines whether enemies should drop containers that reveal their contents when a player gets close enough. By default, this setting is enabled, as having a large amount of enemies drop items in quick succession can be taxing." },
 		{ "Sigil For Everyone", "The Sigil of the One God is a powerful artifact that is believed to originate from a higher deity outside of any human existence. It is the most powerful weapon in Strife: Quest for the Sigil, and with this party mode enabled, every character can equip it outside of Strife. The Sigil is granted when picking up any equipment past Slot III, just like Strifeguy. Note that this setting has no effect in Strife, because the method for getting the Sigil is different in that game." },
 		{ "All Loadout Equipment", "This setting determines if characters with loadout equipment should be able to hold all of them at once." },
 		{ "Ultimate Weapons Stay", "This setting determines if Slot VIIs and Slot VIISs should have to respawn or if they should be able to stay like other weapons when the weapon stay setting is on. This is usually off for competitive gamemodes." },

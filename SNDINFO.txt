@@ -433,7 +433,8 @@ $alias Compendium/Select marathon/shieldhit
 LLoyd/MostAnnoyingSound "Sounds/Samsara/lloyd_errrrr.ogg"
 LLoyd/MostAnnoyingSoundLoop "Sounds/Samsara/lloyd_errrrr_loop.ogg"
 
-Samsara/OpenPresent XMAGIFTO
+Samsara/OpenContainer XMAGIFTO
+$alias Samsara/OpenPresent Samsara/OpenContainer
 Samsara/Naughty XMASRASP
 $alias Samsara/PiePickup RTCW/HotMeal //wolfen/chicken
 
