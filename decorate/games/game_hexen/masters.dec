@@ -324,7 +324,7 @@ actor ClericBoss2 : SamsaraMonsterReincClericBoss replaces ClericBoss
 			Stop
 		Burn:
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
-			FDTH C 5 bright A_PlaySound("PlayerClericBurnDeath")
+			FDTH C 5 bright A_PlaySound("PlayerClericBurnDeath") // originally a sprite from See; fixed
 			FDTH D 4 bright
 			FDTH G 5 bright
 			FDTH H 4 bright A_Scream
