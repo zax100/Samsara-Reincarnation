@@ -615,20 +615,21 @@ script "Freeman_HEV_Enter" (void) clientside//hev suit
 
 	While(ClassifyActor(0) & ACTOR_PLAYER && CheckInventory("HalfLifeClass"))
 	{
-		If(GetCvar("samsara_cl_hevtalk") == true)
-		{
+		//if (GetCVar("samsara_cl_hevtalk"))
+		//{
 			If(GetActorProperty(0,APROP_Health) - CurrentHealth < 0)
 			{
-				if(CheckInventory("HLHEVIsTalking") == false)
+				if(CheckInventory("HLHEVDamageType") == 7)
+				{
+					if(GetActorProperty(0,APROP_Health) - CurrentHealth <= -50) { SetInventory("HLHEVDamageType", 8); }
+				} else if(CheckInventory("HLHEVDamageType") == 9) { // hmm
+					if(GetActorProperty(0,APROP_Health) - CurrentHealth <= -50) { SetInventory("HLHEVDamageType", 10); }
+				}
+
+				if (GetCVar("samsara_cl_hevtalk") && !CheckInventory("HLHEVIsTalking"))
 				{
 					GiveInventory("HLHEVIsTalking", 1);
 					ACS_NamedExecuteAlways("HLHEVTalk",0,0,0,0);
-					if(CheckInventory("HLHEVDamageType") == 7)
-					{
-						if(GetActorProperty(0,APROP_Health) - CurrentHealth <= -50){SetInventory("HLHEVDamageType", 8);}
-					} else if(CheckInventory("HLHEVDamageType") == 9) { // hmm
-						if(GetActorProperty(0,APROP_Health) - CurrentHealth <= -50){SetInventory("HLHEVDamageType", 10);}
-					}
 					LocalAmbientSound(damagestrings[CheckInventory("HLHEVDamageType")][CheckInventory("HalfLifeOpposingForce")],127);
 				}
 			}
@@ -637,7 +638,7 @@ script "Freeman_HEV_Enter" (void) clientside//hev suit
 			{
 				if(CheckInventory("BasicArmor") - CurrentArmor > 1)
 				{
-					if(CheckInventory("HLHEVIsTalking") == false)
+					if (GetCVar("samsara_cl_hevtalk") && !CheckInventory("HLHEVIsTalking"))
 					{
 						GiveInventory("HLHEVIsTalking", 1);
 						ACS_NamedExecuteAlways("HLHEVTalk",0,0,0,0);
@@ -654,7 +655,7 @@ script "Freeman_HEV_Enter" (void) clientside//hev suit
 			{
 				if(armorrange != armormod)
 				{
-					if(CheckInventory("HLHEVIsTalking") == false)
+					if (GetCVar("samsara_cl_hevtalk") && !CheckInventory("HLHEVIsTalking"))
 					{
 						GiveInventory("HLHEVIsTalking", 1);
 						ACS_NamedExecuteAlways("HLHEVTalk",0,0,0,0);
@@ -667,7 +668,7 @@ script "Freeman_HEV_Enter" (void) clientside//hev suit
 			//done with armor, and of lower priority if pickups :D
 			if(CheckInventory("HLHEVPickupID") != 0)
 			{
-				if(CheckInventory("HLHEVIsTalking") == false)
+				if (GetCVar("samsara_cl_hevtalk") && !CheckInventory("HLHEVIsTalking"))
 				{
 					GiveInventory("HLHEVIsTalking", 1);
 					ACS_NamedExecuteAlways("HLHEVTalk",0,3,0,0);
@@ -676,7 +677,7 @@ script "Freeman_HEV_Enter" (void) clientside//hev suit
 				TakeInventory("HLHEVPickupID", 255);
 				TakeInventory("HLHEVLoadoutID", 255);
 			}	
-		}
+		//}
 		
 		CurrentHealth = GetActorProperty(0,APROP_Health);
 		CurrentArmor = CheckInventory("BasicArmor");
