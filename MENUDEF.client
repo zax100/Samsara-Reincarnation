@@ -43,7 +43,7 @@ OptionMenu "SamsaraClientOptions"
     Option "Heretic: Eye of the Ancients",            "samsara_cl_corvusproxybomb",      "OnOff"
     Option "Duke Nukem 3D: Legacy Duke Talk",         "samsara_cl_legacydukevoices",     "DukeVoiceLineSetting"
     Slider "Quake I: Explosion Particles",            "samsara_cl_expparticles",         -1, 200, 5
-    Option "Half-Life: Freeman HEV Talk",             "samsara_cl_hevtalk",              "OnOff"
+    Option "Half-Life: HEV/PCV Audio",                "samsara_cl_hevtalk",              "OnOff"
     Option "Shadow Warrior: Fortune Cookie Messages", "samsara_cl_lowangcookiemessages", "LoWangCookieMessageSetting"
     Option "Redneck Rampage: Alcohol & Gut",          "samsara_cl_alcoholgut",           "OnOff"
     Option "Redneck Rampage: Bike Aim",               "samsara_cl_rr_bikeaim",           "RRBikeAimMode"
