@@ -13,7 +13,7 @@ gameinfo
 					"DanielGarner", "UnrealPlayer", "RTCW_Blazkowicz", "Q3Sarge", "DescentPyroGX", "JCDenton"
 	weaponslot = 0, " Fist ", " Staff ", "Mace of Contrition", " Bootspoon ", "Knife", "Mighty Boot", "Steel Knuckles", "Axe"
 	weaponslot = 1, " Chainsaw ", "Gauntlets of the Necromancer", "Super Bootspork", "Pipebombs", "KKV-7 SMG Flechette",
-					"Spiked Gauntlet", "Spear of Longinus", "Talon Ceramic Combat Blade", "Tech.50 Pacifier", "Gauntlet", "Mjolnir",
+					"Spiked Gauntlet", "Spear of Longinus", "Talon Ceramic Combat Blade", "Tech.50 Pacifier", "Q1Chainsaw", "Mjolnir",
 					" Pistol ", "Elven Wand", "Sapphire Wand", "Mini-Zorcher", "Luger", "Glock 17", ".44 Magnum Mega Class A1", "Single Shotgun"
 	weaponslot = 2, " Shotgun ", " Firemace ", "Frost Shards", "Large Zorcher", "Machine Gun", "  Shotgun  ", "WSTE-M5 Combat Shotgun", "Double Shotgun"
 	weaponslot = 3, "Super Shotgun", "Ethereal Crossbow", "Timon's Axe", "Super Large Zorcher", "Explosive Shotgun", "Fusion Pistol", "Grenade Launcher"

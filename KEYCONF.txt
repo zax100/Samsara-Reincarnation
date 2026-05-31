@@ -207,7 +207,7 @@ addslotdefault 0 "Steel Knuckles"
 addslotdefault 0 "Talon Ceramic Combat Blade"
 
 addslotdefault 1 "Mjolnir"
-addslotdefault 1 "Gauntlet"
+addslotdefault 1 "Q1Chainsaw"
 addslotdefault 1 "Single Shotgun"
 addslotdefault 2 "Double Shotgun"
 addslotdefault 3 "Grenade Launcher"

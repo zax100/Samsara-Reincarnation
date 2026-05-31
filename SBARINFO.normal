@@ -3545,7 +3545,7 @@ StatusBar Normal, ForceScaled
             DrawImage "QUAKBART", 0, 0;
 
             // Slot 1
-            InInventory SamsaraQuake1LoadoutSlot1 // Gauntlet
+            InInventory SamsaraQuake1LoadoutSlot1 // Chainsaw
             {
                 InInventory GotWeapon0
                 {
@@ -3553,7 +3553,7 @@ StatusBar Normal, ForceScaled
                     DrawImage "WPQUAK1N", 49, 11;
                 }
 
-                IsSelected Gauntlet
+                IsSelected Q1Chainsaw
                 {
                     DrawImage "WEPSELY1", 54, 0;
                     DrawImage "WPQUAK1Y", 49, 11;

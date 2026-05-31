@@ -2611,6 +2611,40 @@ Model Mjolnir
    FrameIndex UNIQ P 0 0
 }
 
+Model Q1Chainsaw
+{
+   Path "models"
+   Model 0 "v_saw.md3"
+   Skin 0 "v_saw.pcx"
+   ZOffset 2
+   Scale -1.0 1.0 1.0
+   Offset 0.0 -1.5 1.0
+   NOINTERPOLATION
+
+   FrameIndex QSAW A 0 0
+   FrameIndex QSAW B 0 1
+   FrameIndex QSAW C 0 2
+   FrameIndex QSAW D 0 3
+   FrameIndex QSAW E 0 4
+   FrameIndex QSAW F 0 5
+   FrameIndex QSAW G 0 6
+   FrameIndex QSAW H 0 7
+   FrameIndex QSAW I 0 8
+   FrameIndex QSAW J 0 9
+   FrameIndex QSAW K 0 10
+}
+
+Model Q1Chainsaw
+{
+   Path "models"
+   Model 0 "g_saw.md3"
+   Skin 0 "g_saw.pcx"
+   ROTATING
+   Scale 1.0 1.0 1.0
+
+   FrameIndex QSAW Z 0 0
+}
+
 Model "Rocket Powered Impaler"
 {
    Path "models"

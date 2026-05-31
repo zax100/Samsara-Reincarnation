@@ -570,7 +570,7 @@ OptionValue "DukeLABSlot4ClientOptions"
 OptionValue "Quake1Slot1ClientOptions"
 {
     0, "Mjolnir"
-    1, "Gauntlet"
+    1, "Chainsaw"
 }
 
 OptionValue "HalfLifeFallbackMeleeClientOptions"

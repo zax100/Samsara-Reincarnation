@@ -76,6 +76,7 @@ Credits:
 - Tommy Galano (for Doomguy's new crouching sprites)
 - Tarles X (for the completing the rotations for Tommy Galano's Doomguy crouching sprites)
 - FreeDoom Team (for the MDWTAK sprites and sounds)
+- Nihilism Unlimited (for making Zerstörer - Testament of the Destroyer, which is where the chainsaw loadout weapon comes from)
 
 Special Thanks:
 - Hiragamer : for his amazing work on HUDs and every art related stuff, and beign a great support too :D

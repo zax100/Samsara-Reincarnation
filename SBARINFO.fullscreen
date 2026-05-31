@@ -1000,7 +1000,7 @@ StatusBar Fullscreen, ForceScaled
                 // Slot 1
                 InInventory GotWeapon0 { DrawImage "STYSNUM1", 126, 10; }
 
-                IsSelected Mjolnir, Gauntlet { DrawImage "STY2NUM1", 126, 10; }
+                IsSelected Mjolnir, Q1Chainsaw { DrawImage "STY2NUM1", 126, 10; }
 
                 // Slot 2
                 InInventory GotWeapon2 { DrawImage "STYSNUM2", 136, 10; }
@@ -5724,7 +5724,7 @@ StatusBar Fullscreen, ForceScaled
                 {
                     InInventory UsingDualPistols { DrawImage "STY2NUM1", 126, 10; }
                 }
-                IsSelected Mjolnir, Gauntlet { DrawImage "STY2NUM1", 126, 10; }
+                IsSelected Mjolnir, Q1Chainsaw { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected "Double Pistols" { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected "Auto Charge Pistol"
                 {

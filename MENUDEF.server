@@ -947,7 +947,7 @@ OptionValue "Quake1Slot1ServerOptions"
 {
     0, "User-Defined"
     1, "Mjolnir"
-    2, "Gauntlet"
+    2, "Chainsaw"
 }
 
 OptionValue "HalfLifeFallbackMeleeServerOptions"

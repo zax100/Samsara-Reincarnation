@@ -537,18 +537,6 @@ script "SamsaraClientDecorate" (int which, int a1, int a2) clientside //212 -- S
 		Print(l:"TXT_NEEDMAP");
 		break;
 
-	case 9:
-		x = GetActorX(0); y = GetActorY(0); z = GetActorZ(0);
-		i = GetActorPitch(0);
-		j = GetActorAngle(0);
-		k = unusedTID(4000, 14000);
-
-		z += itof(cond(isCrouching(28.0), random(10, 14), random(30, 34)));
-
-		Spawn("GauntletSparks", x + FixedMul(cos(i), 16 * cos(j)), y + FixedMul(cos(i), 16 * sin(j)), z - (16 * sin(i)), k);
-		SetActorVelocity(k, GetActorVelX(0), GetActorVelY(0), GetActorVelZ(0), 0,0);
-		break;
-
 	case 10:
 		if (GetCVar("samsara_runninginzdoom") == 1) { bloodyHellCVar = GetCvar("samsara_zd_bloodyhell"); }
 		else { bloodyHellCVar = GetUserCvar(ConsolePlayerNumber(), "samsara_cl_bloodyhell"); }
@@ -2489,7 +2477,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Thunderbolt DOE", INTMAX);
 			TakeInventory("Rocket Powered Impaler", INTMAX);
 			TakeInventory("Mjolnir", INTMAX);
-			TakeInventory("Gauntlet", INTMAX);
+			TakeInventory("Q1Chainsaw", INTMAX);
 			TakeInventory("Double Shotgun", INTMAX);
 			TakeInventory("Grenade Launcher", INTMAX);
 			TakeInventory("Grenade Launcher DOE", INTMAX);
@@ -6489,7 +6477,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             break;
 
           case SLOT_CHAINSAW:
-            hasweapon = CheckInventory("Mjolnir") || CheckInventory("Gauntlet");
+            hasweapon = CheckInventory("Mjolnir") || CheckInventory("Q1Chainsaw");
 
             if (loadoutchoice <= 0 || completeloadout) // Mjolnir
             {
@@ -6506,11 +6494,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
                 if (startmode <= -1 || startmode >= 2) { GiveInventory("Cell", GetAmmoCapacity("Cell")); }
             }
 
-            if (loadoutchoice >= 1 || completeloadout) // Gauntlet
+            if (loadoutchoice >= 1 || completeloadout) // Chainsaw
             {
                 if (!hasweapon)
                 {
-                    GiveInventory("Gauntlet", 1);
+                    GiveInventory("Q1Chainsaw", 1);
                     result = 1;
                 }
             }

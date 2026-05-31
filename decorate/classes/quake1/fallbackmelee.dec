@@ -165,7 +165,7 @@ actor QuakeAxePuff: QuakeBulletPuff
       Crash:
         TNT1 A 0
         TNT1 A 0 A_PlaySound("quakeweps/axewall")
-        goto Super::Spawn
+        goto SpawnFinish
 
       Melee:
         TNT1 A 1 A_PlaySound("quakeweps/axehit")
@@ -184,7 +184,7 @@ actor QuakeAxePuffSoundRerelease : QuakeAxePuff
       Crash:
         TNT1 A 0
         TNT1 A 0 A_PlaySound("quakeweps/rerelease/axewall")
-        goto Super::Spawn
+        goto SpawnFinish
     }
 }
 

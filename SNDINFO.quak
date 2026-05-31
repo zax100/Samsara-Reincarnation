@@ -75,9 +75,13 @@ quakeweps/itemget                 sounds/ranger/lock4.wav
 quakeweps/megahealth              sounds/ranger/m_health.ogg
 quakeweps/megasphere              sounds/ranger/megasphere.ogg
 
-quakeweps/gauntlet              sounds/ranger/fstrun.ogg
-quakeweps/gauntlethit           sounds/ranger/fstatck.ogg
-$limit quakeweps/gauntlethit 0
+quakeweps/saw/revving           sounds/ranger/zsawidle.wav
+quakeweps/saw/idle              sounds/ranger/zsawridle.wav
+quakeweps/saw/attack            sounds/ranger/zsawatck.wav
+$alias quakeweps/saw/hitwall    quakeweps/axewall
+$limit quakeweps/saw/hitwall    0
+quakeweps/saw/hit               sounds/ranger/zsawguts.wav
+$limit quakeweps/saw/hit        0
 
 quakeweps/lasershot             sounds/ranger/laserg.ogg
 quakeweps/laserbounce           sounds/ranger/laserric.ogg
@@ -167,6 +171,9 @@ plasmacell/fly Sounds/Quake/pboltfly.ogg
 
 quakeweps/megahealth51	R2_MEGAH
 $Random quakeweps/megahealthSA { quakeweps/megahealth quakeweps/megahealth51 }
+
+$alias quakeweps/rerelease/saw/hitwall    quakeweps/rerelease/axewall
+$limit quakeweps/rerelease/saw/hitwall    0
 
 quakeweps/rerelease/lasershot             Sounds/ranger/laserg_alt.flac
 quakeweps/rerelease/laserbounce           Sounds/ranger/laserric_alt.flac

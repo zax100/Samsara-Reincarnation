@@ -81,7 +81,7 @@ Ranger (Quake I):
 ! The Mjolnir and thunderbolt now have +NOAUTOFIRE to prevent accidental discharges and the latter's use of the plasma mode's explosive projectile when running out of ammo for other weapons.
 + The Mjolnir now gives 80 rounds of Ammo 4 on pickup.
 - The Mjolnir now uses 10 rounds of Ammo 4 for each use of its lightning attack.
-+ Originally a punchdrunk weapon, the gauntlet has been added as a loadout choice for the slot 1 equipment (samsara_cl_ranger_slot1 1 (client) or samsara_ranger_slot1 2 (server))!
++ Originally a punchdrunk weapon, the gauntlet has been repurposed as the chainsaw from Zerstörer - Testament of the Destroyer, a loadout choice for the slot 1 equipment (samsara_cl_ranger_slot1 1 (client) or samsara_ranger_slot1 2 (server))!
 ! Splash damage from Ranger's own explosives now thrusts him away further to help with his rocket jumping game while keeping the damage amounts unchanged.
 * Fixed the nailgun's normal nails not having their intended damage type.
 
