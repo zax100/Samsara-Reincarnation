@@ -738,6 +738,7 @@ ACTOR StrifePeasant1 : Peasant
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -746,6 +747,7 @@ ACTOR StrifePeasant1 : Peasant
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)
@@ -3729,6 +3731,7 @@ ACTOR StrifeBeggar : Beggar
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -3737,6 +3740,7 @@ ACTOR StrifeBeggar : Beggar
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 A_GiveInventory("EnemyZorched",1)

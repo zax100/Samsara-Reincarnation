@@ -227,7 +227,7 @@ actor LaserCannonBolt
     Speed 50
     Projectile
     Damage (10)
-    DamageType "QuakeDamage"
+    DamageType "QuakeLaser"
     BounceType "Hexen"
     +BLOODSPLATTER
     BounceCount 3

@@ -662,6 +662,7 @@ Actor SamsaraMonsterHumanoid
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -670,6 +671,7 @@ Actor SamsaraMonsterHumanoid
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
@@ -1982,6 +1984,7 @@ Actor SamsaraMonsterDemonic
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -1990,6 +1993,7 @@ Actor SamsaraMonsterDemonic
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
@@ -3256,6 +3260,7 @@ Actor SamsaraMonsterAlien
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -3264,6 +3269,7 @@ Actor SamsaraMonsterAlien
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
@@ -4534,6 +4540,7 @@ Actor SamsaraMonsterCybernetic
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -4542,6 +4549,7 @@ Actor SamsaraMonsterCybernetic
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
@@ -5808,6 +5816,7 @@ Actor SamsaraMonsterBeast
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -5816,6 +5825,7 @@ Actor SamsaraMonsterBeast
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
@@ -9984,6 +9994,7 @@ Actor SamsaraMiscCharHumanoidStatic
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -9992,6 +10003,7 @@ Actor SamsaraMiscCharHumanoidStatic
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 A_ChangeFlag("USESPECIAL", false)
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
@@ -10999,6 +11011,7 @@ Actor SamsaraMiscCharHumanoidDynamic : SwitchableDecoration
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -11007,6 +11020,7 @@ Actor SamsaraMiscCharHumanoidDynamic : SwitchableDecoration
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 A_ChangeFlag("USESPECIAL", false)
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
@@ -11962,6 +11976,7 @@ Actor SamsaraMiscCharAnimalStatic
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -11970,6 +11985,7 @@ Actor SamsaraMiscCharAnimalStatic
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 A_ChangeFlag("USESPECIAL", false)
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
@@ -12874,6 +12890,7 @@ Actor SamsaraMiscCharAnimalDynamic : SwitchableDecoration
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -12882,6 +12899,7 @@ Actor SamsaraMiscCharAnimalDynamic : SwitchableDecoration
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 A_ChangeFlag("USESPECIAL", false)
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
@@ -15669,6 +15687,7 @@ Actor SamsaraMonsterDarkSideAIRegular
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -15677,6 +15696,7 @@ Actor SamsaraMonsterDarkSideAIRegular
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
@@ -16622,6 +16642,7 @@ Actor SamsaraMonsterDarkSideAIColored
 		Death.QuakeElectric:
 		Death.NotQuadded:
 		Death.QuakeExplosive:
+		Death.QuakeLaser:
 			TNT1 A 0 A_JumpIfHealthLower(-50, "XDeathForRanger")
 			TNT1 A -1 A_Jump(256,"Death")
 			Wait
@@ -16630,6 +16651,7 @@ Actor SamsaraMonsterDarkSideAIColored
 		XDeath.QuakeElectric:
 		XDeath.NotQuadded:
 		XDeath.QuakeExplosive:
+		XDeath.QuakeLaser:
 		XDeathForRanger:
 			TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound")
 			TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
