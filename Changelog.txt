@@ -85,6 +85,12 @@ Ranger (Quake I):
 ! Splash damage from Ranger's own explosives now thrusts him away further to help with his rocket jumping game while keeping the damage amounts unchanged.
 * Fixed the nailgun's normal nails not having their intended damage type.
 
+Rise of the Triad:
+
+-All-
+
+! The status bar HUD has been improved and now shows Skulltag weapons.
+
 Caleb (Blood):
 
 ! Renamed some actor names to avoid name conflicts with other mods.

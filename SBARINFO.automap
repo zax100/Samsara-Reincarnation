@@ -3677,16 +3677,6 @@ StatusBar Automap, ForceScaled
         DrawBar "ROTTBAR4", "ROTTBAR5", Armor, Horizontal, 172, 178;
         DrawBar "ROTTBAR6", "ROTTBAR7", Armor (200), Horizontal, 131, 178;
 
-        // Unique 1
-        InInventory Excalibat { DrawImage "RTTWPN8", -7, 170; }
-
-        IsSelected Excalibat { DrawImage "RTTWPY8", -7, 170; }
-
-        // Unique 3
-        InInventory "Dark Staff" { DrawImage "RTTWPN9", 78, 170; }
-
-        IsSelected "Dark Staff" { DrawImage "RTTWPY9", 78, 170; }
-
         // Doom keys
         InInventory BlueCard { DrawImage "STKEYS0", 222, 171; }
         InInventory YellowCard { DrawImage "STKEYS1", 234, 171; }
@@ -3775,95 +3765,130 @@ StatusBar Automap, ForceScaled
         {
             DrawImage "ROTTBART", 0, -3;
 
-            // Slot 1
-            InInventory GotWeapon0
+            // Unique 1
+            InInventory Excalibat { DrawImage "RTTWPN8", 4, 26; }
+
+            IsSelected Excalibat
             {
-                DrawImage "RTTWF1N", 28, 14;
-                DrawImage "RTTWPN1", 19, 26;
+                DrawImage "RTTWF8Y", 17, 16;
+                DrawImage "RTTWPY8", 4, 26;
             }
+
+            // Slot 1
+            InInventory GotWeapon0 { DrawImage "RTTWPN1", 39, 26; }
 
             IsSelected "Double Pistols"
             {
-                DrawImage "RTTWF1Y", 28, 14;
-                DrawImage "RTTWPY1", 19, 26;
+                DrawImage "RTTWF1Y", 53, 16;
+                DrawImage "RTTWPY1", 39, 26;
             }
 
             // Slot 2
-            InInventory GotWeapon2
-            {
-                DrawImage "RTTWF2N", 70, 14;
-                DrawImage "RTTWPN3", 62, 26;
-            }
+            InInventory GotWeapon2 { DrawImage "RTTWPN2", 74, 26; }
 
             IsSelected MP40
             {
-                DrawImage "RTTWF2Y", 70, 14;
-                DrawImage "RTTWPY3", 62, 26;
+                DrawImage "RTTWF2Y", 86, 16;
+                DrawImage "RTTWPY2", 74, 26;
             }
 
             // Slot 3
-            InInventory GotWeapon3
-            {
-                DrawImage "RTTWF3N", 110, 14;
-                DrawImage "RTTWPN0", 104, 26;
-            }
+            InInventory GotWeapon3 { DrawImage "RTTWPN3", 109, 26; }
 
             IsSelected HeatSeeker
             {
-                DrawImage "RTTWF3Y", 110, 14;
-                DrawImage "RTTWPY0", 104, 26;
+                DrawImage "RTTWF3Y", 118, 16;
+                DrawImage "RTTWPY3", 109, 26;
             }
 
             // Slot 4
-            InInventory GotWeapon4
+            IsSelected not RoTTM60
             {
-                DrawImage "RTTWF4N", 155, 14;
-                DrawImage "RTTWPN4", 150, 26;
+                InInventory GotWeapon4 { DrawImage "RTTWPN4", 144, 26; }
             }
 
             IsSelected Bazooka
             {
-                DrawImage "RTTWF4Y", 155, 14;
-                DrawImage "RTTWPY4", 150, 26;
+                DrawImage "RTTWF4Y", 156, 16;
+                DrawImage "RTTWPY4", 144, 26;
+            }
+
+            // Slot 4S
+            InInventory not GotWeapon4
+            {
+                InInventory RoTTM60 { DrawImage "RTTWPN4S", 144, 26; }
+            }
+
+            IsSelected RoTTM60
+            {
+                DrawImage "RTTWF4Y", 156, 16;
+                DrawImage "RTTWPY4S", 144, 26;
             }
 
             // Slot 5
-            InInventory GotWeapon5
+            IsSelected not Doomstick
             {
-                DrawImage "RTTWF5N", 199, 14;
-                DrawImage "RTTWPN5", 195, 26;
+                InInventory GotWeapon5 { DrawImage "RTTWPN5", 179, 26; }
             }
 
             IsSelected " Firebomb "
             {
-                DrawImage "RTTWF5Y", 199, 14;
-                DrawImage "RTTWPY5", 195, 26;
+                DrawImage "RTTWF5Y", 193, 16;
+                DrawImage "RTTWPY5", 179, 26;
+            }
+
+            // Slot 5S
+            InInventory not GotWeapon5
+            {
+                InInventory Doomstick { DrawImage "RTTWPN5S", 179, 26; }
+            }
+
+            IsSelected Doomstick
+            {
+                DrawImage "RTTWF5Y", 193, 16;
+                DrawImage "RTTWPY5S", 179, 26;
             }
 
             // Slot 6
-            InInventory GotWeapon6
+            IsSelected not "Split Missile"
             {
-                DrawImage "RTTWF6N", 239, 14;
-                DrawImage "RTTWPN6", 231, 26;
+                InInventory GotWeapon6 { DrawImage "RTTWPN6", 214, 26; }
             }
 
             IsSelected DrunkMissiles
             {
-                DrawImage "RTTWF6Y", 239, 14;
-                DrawImage "RTTWPY6", 231, 26;
+                DrawImage "RTTWF6Y", 226, 16;
+                DrawImage "RTTWPY6", 214, 26;
+            }
+
+            // Slot 6S
+            InInventory not GotWeapon6
+            {
+                InInventory "Split Missile" { DrawImage "RTTWPN6S", 214, 26; }
+            }
+
+            IsSelected "Split Missile"
+            {
+                DrawImage "RTTWF6Y", 226, 16;
+                DrawImage "RTTWPY6S", 214, 26;
             }
 
             // Slot 7
-            InInventory GotWeapon7
-            {
-                DrawImage "RTTWF7N", 281, 14;
-                DrawImage "RTTWPN7", 276, 26;
-            }
+            InInventory GotWeapon7 { DrawImage "RTTWPN7", 249, 26; }
 
             IsSelected FlameWall
             {
-                DrawImage "RTTWF7Y", 281, 14;
-                DrawImage "RTTWPY7", 276, 26;
+                DrawImage "RTTWF7Y", 258, 16;
+                DrawImage "RTTWPY7", 249, 26;
+            }
+
+            // Unique 2
+            InInventory "Dark Staff" { DrawImage "RTTWPN9", 284, 26; }
+
+            IsSelected "Dark Staff"
+            {
+                DrawImage "RTTWF8Y", 297, 16;
+                DrawImage "RTTWPY9", 284, 26;
             }
         }*/
 
