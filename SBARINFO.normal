@@ -786,31 +786,21 @@ StatusBar Normal, ForceScaled
                 }
 
                 // Slot 4
-                InInventory SamsaraDoomOriginalLoadoutSlot4 // Machine Gun
+                InInventory GotWeapon4
                 {
-                    InInventory GotWeapon4
-                    {
-                        DrawImage "DOOM4BNT", 155, 2;
-                        DrawImage "WPDOM4N1", 148, 10;
-                    }
+                    DrawImage "DOOM4BNT", 155, 2;
 
-                    IsSelected " Machine Gun "
-                    {
-                        DrawImage "DOOM4BRT", 155, 2;
-                        DrawImage "WPDOM4Y1", 148, 10;
-                    }
-                } else { // Chaingun
-                    InInventory GotWeapon4
-                    {
-                        DrawImage "DOOM4BNT", 155, 2;
-                        DrawImage "WPDOOM4N", 148, 10;
-                    }
+                    InInventory SamsaraDoomOriginalLoadoutSlot4 { DrawImage "WPDOM4N1", 148, 10; } // Machine Gun
+                    else { DrawImage "WPDOOM4N", 148, 10; } // Chaingun
+                }
 
-                    IsSelected " Chaingun "
-                    {
-                        DrawImage "DOOM4BRT", 155, 2;
-                        DrawImage "WPDOOM4Y", 148, 10;
-                    }
+                IsSelected " Chaingun "
+                {
+                    DrawImage "DOOM4BRT", 155, 2;
+                    DrawImage "WPDOOM4Y", 148, 10;
+                } else IsSelected " Machine Gun " {
+                    DrawImage "DOOM4BRT", 155, 2;
+                    DrawImage "WPDOM4Y1", 148, 10;
                 }
 
                 // Slot 4S
@@ -859,31 +849,21 @@ StatusBar Normal, ForceScaled
                 }
 
                 // Slot 6
-                InInventory SamsaraDoomOriginalLoadoutSlot6 // Incinerator
+                InInventory GotWeapon6
                 {
-                    InInventory GotWeapon6
-                    {
-                        DrawImage "DOOM6BNT", 219, 2;
-                        DrawImage "WPDOM6N1", 212, 10;
-                    }
+                    DrawImage "DOOM6BNT", 219, 2;
 
-                    IsSelected " Incinerator "
-                    {
-                        DrawImage "DOOM6BRT", 219, 2;
-                        DrawImage "WPDOM6Y1", 212, 10;
-                    }
-                } else { // Plasma Rifle
-                    InInventory GotWeapon6
-                    {
-                        DrawImage "DOOM6BNT", 219, 2;
-                        DrawImage "WPDOOM6N", 212, 10;
-                    }
+                    InInventory SamsaraDoomOriginalLoadoutSlot6 { DrawImage "WPDOM6N1", 212, 10; } // Incinerator
+                    else { DrawImage "WPDOOM6N", 212, 10; } // Plasma Rifle
+                }
 
-                    IsSelected "Plasma Rifle"
-                    {
-                        DrawImage "DOOM6BRT", 219, 2;
-                        DrawImage "WPDOOM6Y", 212, 10;
-                    }
+                IsSelected "Plasma Rifle"
+                {
+                    DrawImage "DOOM6BRT", 219, 2;
+                    DrawImage "WPDOOM6Y", 212, 10;
+                } else IsSelected " Incinerator " {
+                    DrawImage "DOOM6BRT", 219, 2;
+                    DrawImage "WPDOM6Y1", 212, 10;
                 }
 
                 // Slot 6S
@@ -903,43 +883,25 @@ StatusBar Normal, ForceScaled
                 }
 
                 // Slot 7
-                InInventory SamsaraDoomOriginalLoadoutSlot7, 2 // Calamity Blade
+                InInventory GotWeapon6
                 {
-                    InInventory GotWeapon7
-                    {
-                        DrawImage "DOOM7BNT", 250, 2;
-                        DrawImage "WPDOM7N2", 244, 10;
-                    }
+                    DrawImage "DOOM7BNT", 250, 2;
 
-                    IsSelected "Calamity Blade"
-                    {
-                        DrawImage "DOOM7BRT", 250, 2;
-                        DrawImage "WPDOM7Y2", 244, 10;
-                    }
-                } else InInventory SamsaraDoomOriginalLoadoutSlot7, 1 { // B.F.G. 2704
-                    InInventory GotWeapon7
-                    {
-                        DrawImage "DOOM7BNT", 250, 2;
-                        DrawImage "WPDOM7N1", 244, 10;
-                    }
+                    InInventory SamsaraDoomOriginalLoadoutSlot7, 2 { DrawImage "WPDOM7N2", 244, 10; } // Calamity Blade
+                    else InInventory SamsaraDoomOriginalLoadoutSlot7, 1 { DrawImage "WPDOM7N1", 244, 10; } // B.F.G. 2704
+                    else { DrawImage "WPDOOM7N", 244, 10; } // B.F.G. 9000
+                }
 
-                    IsSelected "B.F.G. 2704"
-                    {
-                        DrawImage "DOOM7BRT", 250, 2;
-                        DrawImage "WPDOM7Y1", 244, 10;
-                    }
-                } else { // B.F.G. 9000
-                    InInventory GotWeapon7
-                    {
-                        DrawImage "DOOM7BNT", 250, 2;
-                        DrawImage "WPDOOM7N", 244, 10;
-                    }
-
-                    IsSelected "B.F.G. 9000"
-                    {
-                        DrawImage "DOOM7BRT", 250, 2;
-                        DrawImage "WPDOOM7Y", 244, 10;
-                    }
+                IsSelected "B.F.G. 9000"
+                {
+                    DrawImage "DOOM7BRT", 250, 2;
+                    DrawImage "WPDOOM7Y", 244, 10;
+                } else IsSelected "B.F.G. 2704" {
+                    DrawImage "DOOM7BRT", 250, 2;
+                    DrawImage "WPDOM7Y1", 244, 10;
+                } else IsSelected "Calamity Blade" {
+                    DrawImage "DOOM7BRT", 250, 2;
+                    DrawImage "WPDOM7Y2", 244, 10;
                 }
 
                 // Slot 7S
@@ -2933,35 +2895,29 @@ StatusBar Normal, ForceScaled
                 }
 
                 // Slot 4
-                InInventory SamsaraDukeLoadoutSlot4 // M16
+                InInventory GotWeapon4
                 {
-                    InInventory GotWeapon4
+                    DrawImage "DN7DFNT4", 125, 3;
+
+                    InInventory SamsaraDukeLoadoutSlot4 // M16
                     {
-                        DrawImage "DN7DFNT4", 125, 3;
                         InInventory DukeClassMode, 1 { DrawImage "WPDU2E4N", 116, 11; } // Life's A Beach
                         else { DrawImage "WPDU2E4N", 116, 11; } // Original
-                    }
-
-                    IsSelected Duke3D_M16
-                    {
-                        DrawImage "DN8DFNT4", 125, 3;
-                        InInventory DukeClassMode, 1 { DrawImage "WPDU2E4Y", 116, 11; } // Life's A Beach
-                        else { DrawImage "WPDU2E4Y", 116, 11; } // Original
-                    }
-                } else { // Chaingun Cannon/Water Repeater
-                    InInventory GotWeapon4
-                    {
-                        DrawImage "DN7DFNT4", 125, 3;
+                    } else { // Chaingun Cannon/Water Repeater
                         InInventory DukeClassMode, 1 { DrawImage "WPDUK24N", 116, 11; } // Life's A Beach
                         else { DrawImage "WPDUKE4N", 116, 11; } // Original
                     }
+                }
 
-                    IsSelected "Chaingun Cannon"
-                    {
-                        DrawImage "DN8DFNT4", 125, 3;
-                        InInventory DukeClassMode, 1 { DrawImage "WPDUK24Y", 116, 11; } // Life's A Beach
-                        else { DrawImage "WPDUKE4Y", 116, 11; } // Original
-                    }
+                IsSelected "Chaingun Cannon"
+                {
+                    DrawImage "DN8DFNT4", 125, 3;
+                    InInventory DukeClassMode, 1 { DrawImage "WPDUK24Y", 116, 11; } // Life's A Beach
+                    else { DrawImage "WPDUKE4Y", 116, 11; } // Original
+                } else IsSelected Duke3D_M16 {
+                    DrawImage "DN8DFNT4", 125, 3;
+                    InInventory DukeClassMode, 1 { DrawImage "WPDU2E4Y", 116, 11; } // Life's A Beach
+                    else { DrawImage "WPDU2E4Y", 116, 11; } // Original
                 }
 
                 // Slot 4S
@@ -3688,31 +3644,21 @@ StatusBar Normal, ForceScaled
             DrawImage "QUAKBART", 0, 0;
 
             // Slot 1
-            InInventory SamsaraQuake1LoadoutSlot1 // Chainsaw
+            InInventory GotWeapon0
             {
-                InInventory GotWeapon0
-                {
-                    DrawImage "WEPSELN1", 54, 0;
-                    DrawImage "WPQUAK1N", 49, 11;
-                }
+                DrawImage "WEPSELN1", 54, 0;
 
-                IsSelected Q1Chainsaw
-                {
-                    DrawImage "WEPSELY1", 54, 0;
-                    DrawImage "WPQUAK1Y", 49, 11;
-                }
-            } else { // Mjolnir
-                InInventory GotWeapon0
-                {
-                    DrawImage "WEPSELN1", 54, 0;
-                    DrawImage "WPQUAK1N", 49, 11;
-                }
+                InInventory SamsaraQuake1LoadoutSlot1 { DrawImage "WPQUAK1N", 49, 11; } // Chainsaw
+                else { DrawImage "WPQUAK1N", 49, 11; } // Mjolnir
+            }
 
-                IsSelected Mjolnir
-                {
-                    DrawImage "WEPSELY1", 54, 0;
-                    DrawImage "WPQUAK1Y", 49, 11;
-                }
+            IsSelected Mjolnir
+            {
+                DrawImage "WEPSELY1", 54, 0;
+                DrawImage "WPQUAK1Y", 49, 11;
+            } else IsSelected Q1Chainsaw {
+                DrawImage "WEPSELY1", 54, 0;
+                DrawImage "WPQUAK1Y", 49, 11;
             }
 
             // Slot 2
@@ -7247,23 +7193,19 @@ StatusBar Normal, ForceScaled
                 DrawImage "OPFBART", 0, 0;
 
                 // Slot 1
-                InInventory SamsaraHalfLifeLoadoutSlot1 // Shock Roach
+                InInventory GotWeapon0
                 {
-                    InInventory GotWeapon0 { DrawImage "WPOPF1N1", 37, 16; }
+                    InInventory SamsaraHalfLifeLoadoutSlot1 { DrawImage "WPOPF1N1", 37, 16; } // Shock Roach
+                    else { DrawImage "WPOPF1N", 37, 16; } // Hivehand
+                }
 
-                    IsSelected "Shock Roach"
-                    {
-                        DrawImage "OPFWSEL1", 46, 3;
-                        DrawImage "WPOPF1Y1", 37, 16;
-                    }
-                } else { // Hivehand
-                    InInventory GotWeapon0 { DrawImage "WPOPF1N", 37, 16; }
-
-                    IsSelected Hornetgun
-                    {
-                        DrawImage "OPFWSEL1", 46, 3;
-                        DrawImage "WPOPF1Y", 37, 16;
-                    }
+                IsSelected Hornetgun
+                {
+                    DrawImage "OPFWSEL1", 46, 3;
+                    DrawImage "WPOPF1Y", 37, 16;
+                } else IsSelected "Shock Roach" {
+                    DrawImage "OPFWSEL1", 46, 3;
+                    DrawImage "WPOPF1Y1", 37, 16;
                 }
 
                 // Slot 2
@@ -7276,23 +7218,19 @@ StatusBar Normal, ForceScaled
                 }
 
                 // Slot 3
-                InInventory SamsaraHalfLifeLoadoutSlot3 // Desert Eagle
+                InInventory GotWeapon3
                 {
-                    InInventory GotWeapon3 { DrawImage "WPOPF3N1", 109, 16; }
+                    InInventory SamsaraHalfLifeLoadoutSlot3 { DrawImage "WPOPF3N1", 109, 16; } // Desert Eagle
+                    else { DrawImage "WPOPF3N", 109, 16; } // .357 Python
+                }
 
-                    IsSelected "Desert Eagle"
-                    {
-                        DrawImage "OPFWSEL3", 117, 3;
-                        DrawImage "WPOPF3Y1", 109, 16;
-                    }
-                } else { // .357 Python
-                    InInventory GotWeapon3 { DrawImage "WPOPF3N", 109, 16; }
-
-                    IsSelected ".357 Python"
-                    {
-                        DrawImage "OPFWSEL3", 117, 3;
-                        DrawImage "WPOPF3Y", 109, 16;
-                    }
+                IsSelected ".357 Python"
+                {
+                    DrawImage "OPFWSEL3", 117, 3;
+                    DrawImage "WPOPF3Y", 109, 16;
+                } else IsSelected "Desert Eagle" {
+                    DrawImage "OPFWSEL3", 117, 3;
+                    DrawImage "WPOPF3Y1", 109, 16;
                 }
 
                 // Slot 4
@@ -7305,88 +7243,74 @@ StatusBar Normal, ForceScaled
                 }
 
                 // Slot 5
-                InInventory SamsaraHalfLifeLoadoutSlot5 // Spore Launcher
+                InInventory GotWeapon5
                 {
-                    InInventory GotWeapon5 { DrawImage "WPOPF5N1", 181, 16; }
+                    InInventory SamsaraHalfLifeLoadoutSlot5 { DrawImage "WPOPF5N1", 181, 16; } // Spore Launcher
+                    else { DrawImage "WPOPF5N", 181, 16; } // RPG
+                }
 
-                    IsSelected "Spore Launcher"
-                    {
-                        DrawImage "OPFWSEL5", 188, 3;
-                        DrawImage "WPOPF5Y1", 181, 16;
-                    }
-                } else { // RPG
-                    InInventory GotWeapon5 { DrawImage "WPOPF5N", 181, 16; }
-
-                    IsSelected " RPG "
-                    {
-                        DrawImage "OPFWSEL5", 188, 3;
-                        DrawImage "WPOPF5Y", 181, 16;
-                    }
+                IsSelected " RPG "
+                {
+                    DrawImage "OPFWSEL5", 188, 3;
+                    DrawImage "WPOPF5Y", 181, 16;
+                } else IsSelected "Spore Launcher" {
+                    DrawImage "OPFWSEL5", 188, 3;
+                    DrawImage "WPOPF5Y1", 181, 16;
                 }
 
                 // Slot 6
-                InInventory SamsaraHalfLifeLoadoutSlot6 // M249 Squad Automatic Weapon
+                InInventory GotWeapon6
                 {
-                    InInventory GotWeapon6 { DrawImage "WPOPF6N1", 218, 16; }
+                    InInventory SamsaraHalfLifeLoadoutSlot6 { DrawImage "WPOPF6N1", 218, 16; } // M249 Squad Automatic Weapon
+                    else { DrawImage "WPOPF6N", 218, 16; } // Tau Cannon
+                }
 
-                    IsSelected "M249 Squad Automatic Weapon"
-                    {
-                        DrawImage "OPFWSEL6", 222, 3;
-                        DrawImage "WPOPF6Y1", 218, 16;
-                    }
-                } else { // Tau Cannon
-                    InInventory GotWeapon6 { DrawImage "WPOPF6N", 218, 16; }
-
-                    IsSelected "Gauss Cannon"
-                    {
-                        DrawImage "OPFWSEL6", 222, 3;
-                        DrawImage "WPOPF6Y", 218, 16;
-                    }
+                IsSelected "Gauss Cannon"
+                {
+                    DrawImage "OPFWSEL6", 222, 3;
+                    DrawImage "WPOPF6Y", 218, 16;
+                } else IsSelected "M249 Squad Automatic Weapon" {
+                    DrawImage "OPFWSEL6", 222, 3;
+                    DrawImage "WPOPF6Y1", 218, 16;
                 }
 
                 // Slot 7
-                InInventory SamsaraHalfLifeLoadoutSlot7 // Displacer Cannon
+                InInventory GotWeapon7
                 {
-                    InInventory GotWeapon7 { DrawImage "WPOPF7N1", 254, 16; }
+                    InInventory SamsaraHalfLifeLoadoutSlot7 { DrawImage "WPOPF7N1", 254, 16; } // Displacer Cannon
+                    else { DrawImage "WPOPF7N", 254, 16; } // Gluon Gun
+                }
 
-                    IsSelected "Displacer Cannon"
-                    {
-                        DrawImage "OPFWSEL7", 256, 3;
-                        DrawImage "WPOPF7Y1", 254, 16;
-                    }
-                } else { // Gluon Gun
-                    InInventory GotWeapon7 { DrawImage "WPOPF7N", 254, 16; }
-
-                    IsSelected "E.G.O.N."
-                    {
-                        DrawImage "OPFWSEL7", 256, 3;
-                        DrawImage "WPOPF7Y", 254, 16;
-                    }
+                IsSelected "E.G.O.N."
+                {
+                    DrawImage "OPFWSEL7", 256, 3;
+                    DrawImage "WPOPF7Y", 254, 16;
+                } else IsSelected "Displacer Cannon" {
+                    DrawImage "OPFWSEL7", 256, 3;
+                    DrawImage "WPOPF7Y1", 254, 16;
                 }
 
                 // Unique 1
                 InInventory SamsaraHalfLifeLoadoutUnique1 // Mk 2 Grenades
                 {
                     InInventory "Mk 2 Grenades" { DrawImage "WPOPF9N1", 1, 16; }
-
-                    IsSelected "Mk 2 Grenades" { DrawImage "WPOPF9Y1", 1, 16; }
                 } else { // Snarks
                     InInventory "HL Squeaks" { DrawImage "WPOPF9N", 1, 16; }
-
-                    IsSelected "HL Squeaks" { DrawImage "WPOPF9Y", 1, 16; }
                 }
+
+                IsSelected "HL Squeaks" { DrawImage "WPOPF9Y", 1, 16; }
+                else IsSelected "Mk 2 Grenades" { DrawImage "WPOPF9Y1", 1, 16; }
 
                 // Unique 2
                 InInventory SamsaraHalfLifeLoadoutUnique2 // M40A1 Sniper Rifle
                 {
                     InInventory "M40A1 Sniper Rifle" { DrawImage "WPOPF8N1", 290, 16; }
-
-                    IsSelected "M40A1 Sniper Rifle" { DrawImage "WPOPF8Y1", 290, 16; }
                 } else { // Crossbow
                     InInventory "HL Crossbow" { DrawImage "WPOPF8N", 290, 16; }
-
-                    IsSelected "HL Crossbow" { DrawImage "WPOPF8Y", 290, 16; }
                 }
+
+                IsSelected "HL Crossbow" { DrawImage "WPOPF8Y", 290, 16; }
+                else IsSelected "M40A1 Sniper Rifle" { DrawImage "WPOPF8Y1", 290, 16; }
             }
         } else { // Gordon Freeman
             DrawImage "HALFBAR", 0, 160;
@@ -7533,31 +7457,21 @@ StatusBar Normal, ForceScaled
                 DrawImage "HALFBART", 0, 0;
 
                 // Slot 1
-                InInventory SamsaraHalfLifeLoadoutSlot1 // Shock Roach
+                InInventory GotWeapon0
                 {
-                    InInventory GotWeapon0
-                    {
-                        DrawImage "HEPSELN1", 59, 1;
-                        DrawImage "WPHAL1N1", 50, 12;
-                    }
+                    DrawImage "HEPSELN1", 59, 1;
 
-                    IsSelected "Shock Roach"
-                    {
-                        DrawImage "HEPSELE1", 59, 1;
-                        DrawImage "WPHAL1Y1", 50, 12;
-                    }
-                } else { // Hivehand
-                    InInventory GotWeapon0
-                    {
-                        DrawImage "HEPSELN1", 59, 1;
-                        DrawImage "WPHAL1N", 50, 12;
-                    }
+                    InInventory SamsaraHalfLifeLoadoutSlot1 { DrawImage "WPHAL1N1", 50, 12; } // Shock Roach
+                    else { DrawImage "WPHAL1N", 50, 12; } // Hivehand
+                }
 
-                    IsSelected Hornetgun
-                    {
-                        DrawImage "HEPSELE1", 59, 1;
-                        DrawImage "WPHAL1Y", 50, 12;
-                    }
+                IsSelected Hornetgun
+                {
+                    DrawImage "HEPSELE1", 59, 1;
+                    DrawImage "WPHAL1Y", 50, 12;
+                } else IsSelected "Shock Roach" {
+                    DrawImage "HEPSELE1", 59, 1;
+                    DrawImage "WPHAL1Y1", 50, 12;
                 }
 
                 // Slot 2
@@ -7574,31 +7488,21 @@ StatusBar Normal, ForceScaled
                 }
 
                 // Slot 3
-                InInventory SamsaraHalfLifeLoadoutSlot3 // Desert Eagle
+                InInventory GotWeapon3
                 {
-                    InInventory GotWeapon3
-                    {
-                        DrawImage "HEPSELN3", 122, 1;
-                        DrawImage "WPHAL3N1", 115, 12;
-                    }
+                    DrawImage "HEPSELN3", 122, 1;
 
-                    IsSelected "Desert Eagle"
-                    {
-                        DrawImage "HEPSELE3", 122, 1;
-                        DrawImage "WPHAL3Y1", 115, 12;
-                    }
-                } else { // .357 Python
-                    InInventory GotWeapon3
-                    {
-                        DrawImage "HEPSELN3", 122, 1;
-                        DrawImage "WPHAL3N", 115, 12;
-                    }
+                    InInventory SamsaraHalfLifeLoadoutSlot3 { DrawImage "WPHAL3N1", 115, 12; } // Desert Eagle
+                    else { DrawImage "WPHAL3N", 115, 12; } // .357 Python
+                }
 
-                    IsSelected ".357 Python"
-                    {
-                        DrawImage "HEPSELE3", 122, 1;
-                        DrawImage "WPHAL3Y", 115, 12;
-                    }
+                IsSelected ".357 Python"
+                {
+                    DrawImage "HEPSELE3", 122, 1;
+                    DrawImage "WPHAL3Y", 115, 12;
+                } else IsSelected "Desert Eagle" {
+                    DrawImage "HEPSELE3", 122, 1;
+                    DrawImage "WPHAL3Y1", 115, 12;
                 }
 
                 // Slot 4
@@ -7615,112 +7519,80 @@ StatusBar Normal, ForceScaled
                 }
 
                 // Slot 5
-                InInventory SamsaraHalfLifeLoadoutSlot5 // Spore Launcher
+                InInventory GotWeapon5
                 {
-                    InInventory GotWeapon5
-                    {
-                        DrawImage "HEPSELN5", 187, 1;
-                        DrawImage "WPHAL5N1", 180, 12;
-                    }
+                    DrawImage "HEPSELN5", 187, 1;
 
-                    IsSelected "Spore Launcher"
-                    {
-                        DrawImage "HEPSELE5", 187, 1;
-                        DrawImage "WPHAL5Y1", 180, 12;
-                    }
-                } else { // RPG
-                    InInventory GotWeapon5
-                    {
-                        DrawImage "HEPSELN5", 187, 1;
-                        DrawImage "WPHAL5N", 180, 12;
-                    }
+                    InInventory SamsaraHalfLifeLoadoutSlot5 { DrawImage "WPHAL5N1", 180, 12; } // Spore Launcher
+                    else { DrawImage "WPHAL5N", 180, 12; } // RPG
+                }
 
-                    IsSelected " RPG "
-                    {
-                        DrawImage "HEPSELE5", 187, 1;
-                        DrawImage "WPHAL5Y", 180, 12;
-                    }
+                IsSelected " RPG "
+                {
+                    DrawImage "HEPSELE5", 187, 1;
+                    DrawImage "WPHAL5Y", 180, 12;
+                } else IsSelected "Spore Launcher" {
+                    DrawImage "HEPSELE5", 187, 1;
+                    DrawImage "WPHAL5Y1", 180, 12;
                 }
 
                 // Slot 6
-                InInventory SamsaraHalfLifeLoadoutSlot6 // M249 Squad Automatic Weapon
+                InInventory GotWeapon6
                 {
-                    InInventory GotWeapon6
-                    {
-                        DrawImage "HEPSELN6", 217, 1;
-                        DrawImage "WPHAL6N1", 212, 12;
-                    }
+                    DrawImage "HEPSELN6", 217, 1;
 
-                    IsSelected "M249 Squad Automatic Weapon"
-                    {
-                        DrawImage "HEPSELE6", 217, 1;
-                        DrawImage "WPHAL6Y1", 212, 12;
-                    }
-                } else { // Tau Cannon
-                    InInventory GotWeapon6
-                    {
-                        DrawImage "HEPSELN6", 217, 1;
-                        DrawImage "WPHAL6N", 212, 12;
-                    }
+                    InInventory SamsaraHalfLifeLoadoutSlot6 { DrawImage "WPHAL6N1", 212, 12; } // M249 Squad Automatic Weapon
+                    else { DrawImage "WPHAL6N", 212, 12; } // Tau Cannon
+                }
 
-                    IsSelected "Gauss Cannon"
-                    {
-                        DrawImage "HEPSELE6", 217, 1;
-                        DrawImage "WPHAL6Y", 212, 12;
-                    }
+                IsSelected "Gauss Cannon"
+                {
+                    DrawImage "HEPSELE6", 217, 1;
+                    DrawImage "WPHAL6Y", 212, 12;
+                } else IsSelected "M249 Squad Automatic Weapon" {
+                    DrawImage "HEPSELE6", 217, 1;
+                    DrawImage "WPHAL6Y1", 212, 12;
                 }
 
                 // Slot 7
-                InInventory SamsaraHalfLifeLoadoutSlot7 // Displacer Cannon
+                InInventory GotWeapon7
                 {
-                    InInventory GotWeapon7
-                    {
-                        DrawImage "HEPSELN7", 247, 1;
-                        DrawImage "WPHAL7N1", 244, 12;
-                    }
+                    DrawImage "HEPSELN7", 247, 1;
 
-                    IsSelected "Displacer Cannon"
-                    {
-                        DrawImage "HEPSELE7", 247, 1;
-                        DrawImage "WPHAL7Y1", 244, 12;
-                    }
-                } else { // Gluon Gun
-                    InInventory GotWeapon7
-                    {
-                        DrawImage "HEPSELN7", 247, 1;
-                        DrawImage "WPHAL7N", 244, 12;
-                    }
+                    InInventory SamsaraHalfLifeLoadoutSlot7 { DrawImage "WPHAL7N1", 244, 12; } // M249 Squad Automatic Weapon
+                    else { DrawImage "WPHAL7N", 244, 12; } // Tau Cannon
+                }
 
-                    IsSelected "E.G.O.N."
-                    {
-                        DrawImage "HEPSELE7", 247, 1;
-                        DrawImage "WPHAL7Y", 244, 12;
-                    }
+                IsSelected "E.G.O.N."
+                {
+                    DrawImage "HEPSELE7", 247, 1;
+                    DrawImage "WPHAL7Y", 244, 12;
+                } else IsSelected "Displacer Cannon" {
+                    DrawImage "HEPSELE7", 247, 1;
+                    DrawImage "WPHAL7Y1", 244, 12;
                 }
 
                 // Unique 1
                 InInventory SamsaraHalfLifeLoadoutUnique1 // Mk 2 Grenades
                 {
                     InInventory "Mk 2 Grenades" { DrawImage "WPHAL9N1", 18, 12; }
-
-                    IsSelected "Mk 2 Grenades" { DrawImage "WPHAL9Y1", 18, 12; }
                 } else { // Snarks
                     InInventory "HL Squeaks" { DrawImage "WPHAL9N", 18, 12; }
-
-                    IsSelected "HL Squeaks" { DrawImage "WPHAL9Y", 18, 12; }
                 }
+
+                IsSelected "HL Squeaks" { DrawImage "WPHAL9Y", 18, 12; }
+                else IsSelected "Mk 2 Grenades" { DrawImage "WPHAL9Y1", 18, 12; }
 
                 // Unique 2
                 InInventory SamsaraHalfLifeLoadoutUnique2 // M40A1 Sniper Rifle
                 {
                     InInventory "M40A1 Sniper Rifle" { DrawImage "WPHAL8N1", 277, 12; }
-
-                    IsSelected "M40A1 Sniper Rifle" { DrawImage "WPHAL8Y1", 277, 12; }
                 } else { // Crossbow
                     InInventory "HL Crossbow" { DrawImage "WPHAL8N", 277, 12; }
-
-                    IsSelected "HL Crossbow" { DrawImage "WPHAL8Y", 277, 12; }
                 }
+
+                IsSelected "HL Crossbow" { DrawImage "WPHAL8Y", 277, 12; }
+                else IsSelected "M40A1 Sniper Rifle" { DrawImage "WPHAL8Y1", 277, 12; }
             }
         }
     }
@@ -9533,45 +9405,27 @@ StatusBar Normal, ForceScaled
                         else InInventory Goldfinger_WatchDetonator { DrawImage "GFU3L0N", 32, 5; }
                     }
 
-                    IsSelected Goldfinger_WatchDetonator { DrawImage "GFU3L0Y", 32, 5; }
+                    IsSelected Goldfinger_PPKSilenced
+                    {
+                        InInventory BondDualWieldToken { DrawImage "GFPSL0DY", 32, 5; }
+                        else { DrawImage "GFPSL0Y", 32, 5; }
+                    } else IsSelected Goldfinger_PPK {
+                        InInventory BondDualWieldToken { DrawImage "GFPSL1DY", 32, 5; }
+                        else { DrawImage "GFPSL1Y", 32, 5; }
+                    } else IsSelected Goldfinger_ColtM1911 {
+                        InInventory BondDualWieldToken { DrawImage "GFPSL2DY", 32, 5; }
+                        else { DrawImage "GFPSL2Y", 32, 5; }
+                    } else IsSelected Goldfinger_LugerP08 {
+                        InInventory BondDualWieldToken { DrawImage "GFPSL3DY", 32, 5; }
+                        else { DrawImage "GFPSL3Y", 32, 5; }
+                    } else IsSelected Goldfinger_WaltherP38 {
+                        InInventory BondDualWieldToken { DrawImage "GFPSL4DY", 32, 5; }
+                        else { DrawImage "GFPSL4Y", 32, 5; }
+                    }
+                    else IsSelected Goldfinger_WatchDetonator { DrawImage "GFU3L0Y", 32, 5; }
                     else IsSelected Goldfinger_Limpet { DrawImage "GFU3L0Y1", 32, 5; }
                     else IsSelected Goldfinger_LandMine { DrawImage "GFU3L0Y2", 32, 5; }
                     else IsSelected Goldfinger_Claymore { DrawImage "GFU3L0Y3", 32, 5; }
-                    else
-                    {
-                        InInventory SamsaraGoldfingerLoadoutFallbackRanged, 4 // Walther P38
-                        {
-                            IsSelected Goldfinger_WaltherP38
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GFPSL4DY", 32, 5; }
-                                else { DrawImage "GFPSL4Y", 32, 5; }
-                            }
-                        } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 3 { // Luger P08
-                            IsSelected Goldfinger_LugerP08
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GFPSL3DY", 32, 5; }
-                                else { DrawImage "GFPSL3Y", 32, 5; }
-                            }
-                        } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 2 { // Colt M1911
-                            IsSelected Goldfinger_ColtM1911
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GFPSL2DY", 32, 5; }
-                                else { DrawImage "GFPSL2Y", 32, 5; }
-                            }
-                        } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 1 { // Walther PPK/s
-                            IsSelected Goldfinger_PPK
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GFPSL1DY", 32, 5; }
-                                else { DrawImage "GFPSL1Y", 32, 5; }
-                            }
-                        } else { // PPK/s (Silenced)
-                            IsSelected Goldfinger_PPKSilenced
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GFPSL0DY", 32, 5; }
-                                else { DrawImage "GFPSL0Y", 32, 5; }
-                            }
-                        }
-                    }
 
                     // Unique 2
                     InInventory SamsaraGoldfingerLoadoutUnique2, 2 // Smith and Wesson Model 36
@@ -9581,23 +9435,11 @@ StatusBar Normal, ForceScaled
                             InInventory Goldeneye_D5KDualToken { DrawImage "GFU2L2DN", 56, 5; }
                             else { DrawImage "GFU2L2N", 56, 5; }
                         }
-
-                        IsSelected Goldfinger_SmithWesson36
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GFU2L2DY", 56, 5; }
-                            else { DrawImage "GFU2L2Y", 56, 5; }
-                        }
                     } else InInventory SamsaraGoldfingerLoadoutUnique2, 1 { // Smith and Wesson Model 22
                         InInventory Goldfinger_SmithWesson22
                         {
                             InInventory Goldeneye_D5KDualToken { DrawImage "GFU2L1DN", 56, 5; }
                             else { DrawImage "GFU2L1N", 56, 5; }
-                        }
-
-                        IsSelected Goldfinger_SmithWesson22
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GFU2L1DY", 56, 5; }
-                            else { DrawImage "GFU2L1Y", 56, 5; }
                         }
                     } else { // UZI (9mm)
                         InInventory Goldfinger_UZI
@@ -9605,12 +9447,18 @@ StatusBar Normal, ForceScaled
                             InInventory Goldeneye_D5KDualToken { DrawImage "GFU2L0DN", 56, 5; }
                             else { DrawImage "GFU2L0N", 56, 5; }
                         }
+                    }
 
-                        IsSelected Goldfinger_UZI
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GFU2L0DY", 56, 5; }
-                            else { DrawImage "GFU2L0Y", 56, 5; }
-                        }
+                    IsSelected Goldfinger_UZI
+                    {
+                        InInventory BondDualWieldToken { DrawImage "GFU2L0DY", 56, 5; }
+                        else { DrawImage "GFU2L0Y", 56, 5; }
+                    } else IsSelected Goldfinger_SmithWesson22 {
+                        InInventory BondDualWieldToken { DrawImage "GFU2L1DY", 56, 5; }
+                        else { DrawImage "GFU2L1Y", 56, 5; }
+                    } else IsSelected Goldfinger_SmithWesson36 {
+                        InInventory BondDualWieldToken { DrawImage "GFU2L2DY", 56, 5; }
+                        else { DrawImage "GFU2L2Y", 56, 5; }
                     }
 
                     // Slot 1
@@ -9642,35 +9490,29 @@ StatusBar Normal, ForceScaled
                     }
 
                     // Slot 3
-                    InInventory SamsaraGoldfingerLoadoutSlot3 // Over/Under
+                    InInventory GotWeapon3
                     {
-                        InInventory GotWeapon3
+                        InInventory SamsaraGoldfingerLoadoutSlot3 // Over/Under
                         {
                             InInventory Goldeneye_AutoShotgunDualToken { DrawImage "GFW3L1DN", 127, 9; }
                             else { DrawImage "GFW3L1N", 127, 9; }
-                            DrawImage "GFWSEL3N", 128, 0;
-                        }
-
-                        IsSelected Goldfinger_OverUnder
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GFW3L1DY", 127, 9; }
-                            else { DrawImage "GFW3L1Y", 127, 9; }
-                            DrawImage "GFWSEL3Y", 128, 0;
-                        }
-                    } else { // Remington 870
-                        InInventory GotWeapon3
-                        {
+                        } else { // Remington 870
                             InInventory Goldeneye_AutoShotgunDualToken { DrawImage "GFW3L0DN", 127, 9; }
                             else { DrawImage "GFW3L0N", 127, 9; }
-                            DrawImage "GFWSEL3N", 128, 0;
                         }
 
-                        IsSelected Goldfinger_Shotgun
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GFW3L0DY", 127, 9; }
-                            else { DrawImage "GFW3L0Y", 127, 9; }
-                            DrawImage "GFWSEL3Y", 128, 0;
-                        }
+                        DrawImage "GFWSEL3N", 128, 0;
+                    }
+
+                    IsSelected Goldfinger_Shotgun
+                    {
+                        InInventory BondDualWieldToken { DrawImage "GFW3L0DY", 127, 9; }
+                        else { DrawImage "GFW3L0Y", 127, 9; }
+                        DrawImage "GFWSEL3Y", 128, 0;
+                    } else IsSelected Goldfinger_OverUnder {
+                        InInventory BondDualWieldToken { DrawImage "GFW3L1DY", 127, 9; }
+                        else { DrawImage "GFW3L1Y", 127, 9; }
+                        DrawImage "GFWSEL3Y", 128, 0;
                     }
 
                     // Slot 4
@@ -10060,40 +9902,25 @@ StatusBar Normal, ForceScaled
                         else InInventory Goldeneye_WatchDetonator { DrawImage "GEU3L0N", 32, 5; }
                     }
 
-                    IsSelected Goldeneye_WatchMagnet, Goldeneye_WatchLaser { DrawImage "GEU3L0Y", 32, 5; }
+                    IsSelected Goldeneye_PP7Silenced
+                    {
+                        InInventory BondDualWieldToken { DrawImage "GEPSL0DY", 32, 5; }
+                        else { DrawImage "GEPSL0Y", 32, 5; }
+                    } else IsSelected Goldeneye_Klobb {
+                        InInventory BondDualWieldToken { DrawImage "GEPSL1DY", 32, 5; }
+                        else { DrawImage "GEPSL1Y", 32, 5; }
+                    } else IsSelected Goldeneye_PP7SpecialIssue {
+                        InInventory BondDualWieldToken { DrawImage "GEPSL2DY", 32, 5; }
+                        else { DrawImage "GEPSL2Y", 32, 5; }
+                    } else IsSelected Goldeneye_DD44 {
+                        InInventory BondDualWieldToken { DrawImage "GEPSL3DY", 32, 5; }
+                        else { DrawImage "GEPSL3Y", 32, 5; }
+                    }
+                    else IsSelected Goldeneye_WatchMagnet, Goldeneye_WatchLaser { DrawImage "GEU3L0Y", 32, 5; }
                     else IsSelected Goldeneye_WatchDetonator { DrawImage "GEU3L0Y", 32, 5; } //why must you make me do this?
                     else IsSelected Goldeneye_TimedMines { DrawImage "GEU3L0Y1", 32, 5; }
                     else IsSelected Goldeneye_ProximityMines { DrawImage "GEU3L0Y2", 32, 5; }
                     else IsSelected Goldeneye_RemoteMines { DrawImage "GEU3L0Y3", 32, 5; }
-                    else
-                    {
-                        InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 3 // DD44 Dostovei
-                        {
-                            IsSelected Goldeneye_DD44
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GEPSL3DY", 32, 5; }
-                                else { DrawImage "GEPSL3Y", 32, 5; }
-                            }
-                        } else InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 2 { // PP7 Special Issue
-                            IsSelected Goldeneye_PP7SpecialIssue
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GEPSL2DY", 32, 5; }
-                                else { DrawImage "GEPSL2Y", 32, 5; }
-                            }
-                        } else InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 1 { // Klobb
-                            IsSelected Goldeneye_Klobb
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GEPSL1DY", 32, 5; }
-                                else { DrawImage "GEPSL1Y", 32, 5; }
-                            }
-                        } else { // PP7 Special Issue (Silenced)
-                            IsSelected Goldeneye_PP7Silenced
-                            {
-                                InInventory BondDualWieldToken { DrawImage "GEPSL0DY", 32, 5; }
-                                else { DrawImage "GEPSL0Y", 32, 5; }
-                            }
-                        }
-                    }
 
                     // Unique 2
                     InInventory SamsaraGoldenEyeLoadoutUnique2, 2 // D5K Deutsche
@@ -10103,23 +9930,11 @@ StatusBar Normal, ForceScaled
                             InInventory Goldeneye_D5KDualToken { DrawImage "GEU2L2DN", 56, 5; }
                             else { DrawImage "GEU2L2N", 56, 5; }
                         }
-
-                        IsSelected Goldeneye_D5KDeutsche
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GEU2L2DY", 56, 5; }
-                            else { DrawImage "GEU2L2Y", 56, 5; }
-                        }
                     } else InInventory SamsaraGoldenEyeLoadoutUnique2, 1 { // ZMG
                         InInventory Goldeneye_ZMG
                         {
                             InInventory Goldeneye_D5KDualToken { DrawImage "GEU2L1DN", 56, 5; }
                             else { DrawImage "GEU2L1N", 56, 5; }
-                        }
-
-                        IsSelected Goldeneye_ZMG
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GEU2L1DY", 56, 5; }
-                            else { DrawImage "GEU2L1Y", 56, 5; }
                         }
                     } else { // D5K Deutsche (Silenced)
                         InInventory Goldeneye_SilencedD5K
@@ -10127,12 +9942,18 @@ StatusBar Normal, ForceScaled
                             InInventory Goldeneye_D5KDualToken { DrawImage "GEU2L0DN", 56, 5; }
                             else { DrawImage "GEU2L0N", 56, 5; }
                         }
+                    }
 
-                        IsSelected Goldeneye_SilencedD5K
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GEU2L0DY", 56, 5; }
-                            else { DrawImage "GEU2L0Y", 56, 5; }
-                        }
+                    IsSelected Goldeneye_SilencedD5K
+                    {
+                        InInventory BondDualWieldToken { DrawImage "GEU2L0DY", 56, 5; }
+                        else { DrawImage "GEU2L0Y", 56, 5; }
+                    } else IsSelected Goldeneye_ZMG {
+                        InInventory BondDualWieldToken { DrawImage "GEU2L1DY", 56, 5; }
+                        else { DrawImage "GEU2L1Y", 56, 5; }
+                    } else IsSelected Goldeneye_D5KDeutsche {
+                        InInventory BondDualWieldToken { DrawImage "GEU2L2DY", 56, 5; }
+                        else { DrawImage "GEU2L2Y", 56, 5; }
                     }
 
                     // Slot 1
@@ -10166,35 +9987,29 @@ StatusBar Normal, ForceScaled
                     }
 
                     // Slot 3
-                    InInventory SamsaraGoldenEyeLoadoutSlot3 // Shotgun
+                    InInventory GotWeapon3
                     {
-                        InInventory GotWeapon3
+                        InInventory SamsaraGoldenEyeLoadoutSlot3 // Shotgun
                         {
                             InInventory Goldeneye_AutoShotgunDualToken { DrawImage "GEW3L1DN", 127, 9; }
                             else { DrawImage "GEW3L1N", 127, 9; }
-                            DrawImage "GEWSEL3N", 128, 0;
-                        }
-
-                        IsSelected Goldeneye_Shotgun
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GEW3L1DY", 127, 9; }
-                            else { DrawImage "GEW3L1Y", 127, 9; }
-                            DrawImage "GEWSEL3Y", 128, 0;
-                        }
-                    } else { // Automatic Shotgun
-                        InInventory GotWeapon3
-                        {
+                        } else { // Automatic Shotgun
                             InInventory Goldeneye_AutoShotgunDualToken { DrawImage "GEW3L0DN", 127, 9; }
                             else { DrawImage "GEW3L0N", 127, 9; }
-                            DrawImage "GEWSEL3N", 128, 0;
                         }
 
-                        IsSelected Goldeneye_AutoShotgun
-                        {
-                            InInventory BondDualWieldToken { DrawImage "GEW3L0DY", 127, 9; }
-                            else { DrawImage "GEW3L0Y", 127, 9; }
-                            DrawImage "GEWSEL3Y", 128, 0;
-                        }
+                        DrawImage "GEWSEL3N", 128, 0;
+                    }
+
+                    IsSelected Goldeneye_AutoShotgun
+                    {
+                        InInventory BondDualWieldToken { DrawImage "GEW3L0DY", 127, 9; }
+                        else { DrawImage "GEW3L0Y", 127, 9; }
+                        DrawImage "GEWSEL3Y", 128, 0;
+                    } else IsSelected Goldeneye_Shotgun {
+                        InInventory BondDualWieldToken { DrawImage "GEW3L1DY", 127, 9; }
+                        else { DrawImage "GEW3L1Y", 127, 9; }
+                        DrawImage "GEWSEL3Y", 128, 0;
                     }
 
                     // Slot 4
