@@ -17,6 +17,11 @@ Doom:
 -Doomguy (Original)-
 
 + Added Perkristan altsounds for the railgun and the Legacy of Rust loadout weapons.
+! The status bar HUD now shows Skulltag weapons.
+
+-Doomguy (Doom 64)-
+
+! The status bar HUD now shows Skulltag weapons.
 
 -Doomguy (Stronghold)-
 
@@ -34,6 +39,7 @@ Fred Chexter (Chex Quest):
 Corvus (Heretic):
 
 ! The staff now has a sprite for the Compendium and the alternate HUD.
+! The status bar HUD now shows the tempest wand.
 
 Wolfenstein 3D:
 
