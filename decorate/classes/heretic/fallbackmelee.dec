@@ -12,6 +12,10 @@ actor " Staff " : Weapon
     Tag "Staff"
     States
     {
+      Spawn:
+        WSTF A -1
+        stop
+	
       // Unpowered
       Ready:
 		TNT1 A 0 A_TakeInventory("CorvusHoldingSlot")

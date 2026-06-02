@@ -15,6 +15,10 @@ actor "Mace of Contrition" : SamsaraHexenWeapon
     +WIMPY_WEAPON
     States
     {
+      Spawn:
+        WCMC A -1
+        stop
+	
       Ready:
         CMCE A 1 A_WeaponReady
         loop

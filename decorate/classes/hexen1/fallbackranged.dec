@@ -98,6 +98,10 @@ actor "Sapphire Wand" : SamsaraHexenWeapon
     +WIMPY_WEAPON
     States
     {
+      Spawn:
+        WMWD A -1
+        stop
+	
       Ready:
         MWND A 1 A_WeaponReady
         loop
