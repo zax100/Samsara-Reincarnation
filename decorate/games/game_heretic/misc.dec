@@ -73,21 +73,23 @@ actor Teleglitter2B : Teleglitter2 replaces Teleglitter2
 	}
 }
 
-actor EggFX_2 : MorphProjectile replaces EggFX
+actor SamsaraEggFX : MorphProjectile replaces EggFX
 {
-	Game Heretic
-	SpawnID 40
-	Radius 8
-	Height 8
-	Speed 18
-	MorphProjectile.MonsterClass "Chicken2"
-	States
-	{
-	Spawn:
-		EGGM ABCDE 4
-		Loop
-	Death:
-		FX01 FFGH 3 Bright
-		Stop
-	}
+    Game Heretic
+    SpawnID 40
+    Radius 8
+    Height 8
+    Speed 18
+    MorphProjectile.MonsterClass "Chicken2"
+    MorphProjectile.MorphStyle MRF_UNDOBYTOMEOFPOWER|MRF_UNDOBYCHAOSDEVICE // allow unmorphing via chaos device like in hexen
+    States
+    {
+      Spawn:
+        EGGM ABCDE 4
+        loop
+
+      Death:
+        FX01 FFGH 3 Bright
+        stop
+    }
 }
