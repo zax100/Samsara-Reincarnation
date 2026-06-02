@@ -168,6 +168,9 @@ actor " Lock-on Cannon " : SamsaraDisruptorWeapon
         goto Deselect
 
       NoAmmoSwitchBinary:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
+        TNT1 A 0 A_JumpIfInventory("RocketAmmo",1,1)
+        goto NoAmmoSwitch
         TNT1 A 0 A_ClearReFire
         goto AltFire
     }

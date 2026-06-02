@@ -117,6 +117,10 @@ In Pursuit of Greed:
 + The gatling gun has been added as the slot 4S weapon!
 ! The IPOG blood splatters are no longer affected by the "Gib Persistence" setting, and now disappear after 150 tics.
 
+Jack Curtis (Disruptor):
+
+! When running out of alternate ammo, weapons will now switch to another weapon if there is not enough normal ammo.
+
 Leonard (Redneck Rampage):
 
 ! When running out of alternate ammo, the hunting crossbow will now switch to the previous ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with any alternate ammo remaining.
