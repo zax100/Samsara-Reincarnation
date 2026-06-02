@@ -9366,37 +9366,43 @@ StatusBar Automap, ForceScaled
                 {
                     DrawImage "007BART2", 0, 0;
 
-                    // Fallback Ranged
-                    InInventory SamsaraGoldfingerLoadoutFallbackRanged, 4 // Walther P38
+                    // Fallback Ranged + Golden Magnum
+                    InInventory Goldfinger_GoldMagnum
                     {
-                        InInventory Goldfinger_WaltherP38
+                        InInventory Goldfinger_GoldMagnumDualToken { DrawImage "GFGML0DN", 32, 5; }
+                        else { DrawImage "GFGML0N", 32, 5; }
+                    } else {
+                        InInventory SamsaraGoldfingerLoadoutFallbackRanged, 4 // Walther P38
                         {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL4DN", 32, 5; }
-                            else { DrawImage "GFPSL4N", 32, 5; }
-                        }
-                    } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 3 { // Luger P08
-                        InInventory Goldfinger_LugerP08
-                        {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL3DN", 32, 5; }
-                            else { DrawImage "GFPSL3N", 32, 5; }
-                        }
-                    } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 2 { // Colt M1911
-                        InInventory Goldfinger_ColtM1911
-                        {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL2DN", 32, 5; }
-                            else { DrawImage "GFPSL2N", 32, 5; }
-                        }
-                    } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 1 { // Walther PPK/s
-                        InInventory Goldfinger_PPK
-                        {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL1DN", 32, 5; }
-                            else { DrawImage "GFPSL1N", 32, 5; }
-                        }
-                    } else { // PPK/s (Silenced)
-                        InInventory Goldfinger_PPKSilenced
-                        {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL0DN", 32, 5; }
-                            else { DrawImage "GFPSL0N", 32, 5; }
+                            InInventory Goldfinger_WaltherP38
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL4DN", 32, 5; }
+                                else { DrawImage "GFPSL4N", 32, 5; }
+                            }
+                        } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 3 { // Luger P08
+                            InInventory Goldfinger_LugerP08
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL3DN", 32, 5; }
+                                else { DrawImage "GFPSL3N", 32, 5; }
+                            }
+                        } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 2 { // Colt M1911
+                            InInventory Goldfinger_ColtM1911
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL2DN", 32, 5; }
+                                else { DrawImage "GFPSL2N", 32, 5; }
+                            }
+                        } else InInventory SamsaraGoldfingerLoadoutFallbackRanged, 1 { // Walther PPK/s
+                            InInventory Goldfinger_PPK
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL1DN", 32, 5; }
+                                else { DrawImage "GFPSL1N", 32, 5; }
+                            }
+                        } else { // PPK/s (Silenced)
+                            InInventory Goldfinger_PPKSilenced
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GFPSL0DN", 32, 5; }
+                                else { DrawImage "GFPSL0N", 32, 5; }
+                            }
                         }
                     }
 
@@ -9416,6 +9422,9 @@ StatusBar Automap, ForceScaled
                     } else IsSelected Goldfinger_WaltherP38 {
                         InInventory BondDualWieldToken { DrawImage "GFPSL4DY", 32, 5; }
                         else { DrawImage "GFPSL4Y", 32, 5; }
+                    } else IsSelected Goldfinger_GoldMagnum {
+                        InInventory BondDualWieldToken { DrawImage "GFGML0DY", 32, 5; }
+                        else { DrawImage "GFGML0Y", 32, 5; }
                     }
 
                     // Unique 2
@@ -9952,31 +9961,37 @@ StatusBar Automap, ForceScaled
                 {
                     DrawImage "007BART", 0, 0;
 
-                    // Fallback Ranged
-                    InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 3 // DD44 Dostovei
+                    // Fallback Ranged + Gold PP7 Special Issue
+                    InInventory Goldeneye_GoldPP7
                     {
-                        InInventory Goldeneye_DD44
+                        InInventory Goldeneye_GoldPP7DualToken { DrawImage "GEGPL0DN", 32, 5; }
+                        else { DrawImage "GEGPL0N", 32, 5; }
+                    } else {
+                        InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 3 // DD44 Dostovei
                         {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GEPSL3DN", 32, 5; }
-                            else { DrawImage "GEPSL3N", 32, 5; }
-                        }
-                    } else InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 2 { // PP7 Special Issue
-                        InInventory Goldeneye_PP7SpecialIssue
-                        {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GEPSL2DN", 32, 5; }
-                            else { DrawImage "GEPSL2N", 32, 5; }
-                        }
-                    } else InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 1 { // Klobb
-                        InInventory Goldeneye_Klobb
-                        {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GEPSL1DN", 32, 5; }
-                            else { DrawImage "GEPSL1N", 32, 5; }
-                        }
-                    } else { // PP7 Special Issue (Silenced)
-                        InInventory Goldeneye_PP7Silenced
-                        {
-                            InInventory Goldeneye_PP7DualToken { DrawImage "GEPSL0DN", 32, 5; }
-                            else { DrawImage "GEPSL0N", 32, 5; }
+                            InInventory Goldeneye_DD44
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GEPSL3DN", 32, 5; }
+                                else { DrawImage "GEPSL3N", 32, 5; }
+                            }
+                        } else InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 2 { // PP7 Special Issue
+                            InInventory Goldeneye_PP7SpecialIssue
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GEPSL2DN", 32, 5; }
+                                else { DrawImage "GEPSL2N", 32, 5; }
+                            }
+                        } else InInventory SamsaraGoldenEyeLoadoutFallbackRanged, 1 { // Klobb
+                            InInventory Goldeneye_Klobb
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GEPSL1DN", 32, 5; }
+                                else { DrawImage "GEPSL1N", 32, 5; }
+                            }
+                        } else { // PP7 Special Issue (Silenced)
+                            InInventory Goldeneye_PP7Silenced
+                            {
+                                InInventory Goldeneye_PP7DualToken { DrawImage "GEPSL0DN", 32, 5; }
+                                else { DrawImage "GEPSL0N", 32, 5; }
+                            }
                         }
                     }
 
@@ -9993,6 +10008,9 @@ StatusBar Automap, ForceScaled
                     } else IsSelected Goldeneye_DD44 {
                         InInventory BondDualWieldToken { DrawImage "GEPSL3DY", 32, 5; }
                         else { DrawImage "GEPSL3Y", 32, 5; }
+                    } else IsSelected Goldeneye_GoldPP7 {
+                        InInventory BondDualWieldToken { DrawImage "GEGPL0DY", 32, 5; }
+                        else { DrawImage "GEGPL0Y", 32, 5; }
                     }
 
                     // Unique 2

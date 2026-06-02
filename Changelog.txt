@@ -163,7 +163,7 @@ GoldenEye 007:
 
 -All-
 
-! The status bar HUD now shows Skulltag weapons, while the space that was occupied by the slot 7S is now occupied by the third unique equipment.
+! The status bar HUD now shows Skulltag weapons and the Gold PP7/Golden Magnum, while the space that was occupied by the slot 7S is now occupied by the third unique equipment.
 * Fixed third unique pickups not giving extra ammo on first pickup when playing PVP in Doom or Chex Quest.
 
 Petton Everhail (Catacomb 3D):
