@@ -224,6 +224,7 @@ actor " Grenade Launcher WP " : " Grenade Launcher "
     Weapon.AmmoGive 0
     //Obituary "%k \cimade\c- %o \citake a flame bath."
     Tag "Grenade Launcher (White Phosphorus Grenades)"
+    +AMMO_OPTIONAL
     States
     {
       Ready:
@@ -341,7 +342,16 @@ actor " Grenade Launcher WP " : " Grenade Launcher "
       // "No ammo" switch
       NoAmmoSwitch:
         TNT1 A 0 A_ClearReFire
+        TNT1 A 0 A_JumpIfInventory(" Grenade Launcher ",1,"NoAmmoSwitchToPrev")
+      NoAmmoSwitchToWeapon:
         TNT1 A 0 A_SelectWeapon("   Pistol   ")
+        goto Deselect
+
+      NoAmmoSwitchToPrev:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
+        TNT1 A 0 A_JumpIfInventory("RocketAmmo",1,1)
+        goto NoAmmoSwitchToWeapon
+        TNT1 A 0 A_SelectWeapon(" Grenade Launcher ")
         goto Deselect
     }
 }
@@ -577,6 +587,7 @@ actor " Grenade Launcher Gas " : " Grenade Launcher "
     Weapon.AmmoGive 0
     //Obituary "%k \cimade\c- %o \citake an acid trip."
     Tag "Grenade Launcher (Gas Grenades)"
+    +AMMO_OPTIONAL
     States
     {
       Ready:
@@ -694,7 +705,26 @@ actor " Grenade Launcher Gas " : " Grenade Launcher "
       // "No ammo" switch
       NoAmmoSwitch:
         TNT1 A 0 A_ClearReFire
+      NoAmmoSwitchCheckWP:
+        TNT1 A 0 A_JumpIfInventory(" Grenade Launcher WP ",1,"NoAmmoSwitchToPrevWP")
+      NoAmmoSwitchCheckNormal:
+        TNT1 A 0 A_JumpIfInventory(" Grenade Launcher ",1,"NoAmmoSwitchToPrevNormal")
+      NoAmmoSwitchToWeapon:
         TNT1 A 0 A_SelectWeapon("   Pistol   ")
+        goto Deselect
+
+      NoAmmoSwitchToPrevWP:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
+        TNT1 A 0 A_JumpIfInventory("WhitePhosGrenade",1,1)
+        goto NoAmmoSwitchCheckNormal
+        TNT1 A 0 A_SelectWeapon(" Grenade Launcher WP ")
+        goto Deselect
+
+      NoAmmoSwitchToPrevNormal:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,2)
+        TNT1 A 0 A_JumpIfInventory("RocketAmmo",1,1)
+        goto NoAmmoSwitchToWeapon
+        TNT1 A 0 A_SelectWeapon(" Grenade Launcher ")
         goto Deselect
     }
 }

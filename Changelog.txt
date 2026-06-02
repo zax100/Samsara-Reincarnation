@@ -102,6 +102,8 @@ Strifeguy (Strife):
 
 * Fixed the burn death sound playing later than intended.
 + The punch dagger and pistol now deal extra damage to Hexen monsters outside of ReMixer (for reference, the DamageFactor amounts from Doomguy's brass knuckles and pistol/rifle, respectively, are used).
+! When running out of alternate ammo, weapons will now switch to the previous ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with any alternate ammo remaining.
+! When having less than 30 rounds of Ammo 4 for the mauler's torpedo mode, the mauler will now switch to the scatter mode if there is at least 10 rounds remaining.
 
 In Pursuit of Greed:
 
