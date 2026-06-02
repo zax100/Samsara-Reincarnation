@@ -548,6 +548,19 @@ actor "  Rocket Launcher DOE  " : "  Rocket Launcher  "
         QMRL E 4 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         QMRL FG 5 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         QMRL H 6 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QMRL A 0 A_JumpIfInventory("  Rocket Launcher  ",1,"FireFinishAmmoCheck")
+        goto FireFinish
+
+      FireFinishAmmoCheck:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"FireFinish")
+        TNT1 A 0 A_JumpIfInventory("MultiRocketAmmo",1,"FireFinish")
+        TNT1 A 0 A_JumpIfInventory("RocketAmmo",1,1)
+        goto FireFinish
+        TNT1 A 0 A_ClearReFire
+        TNT1 A 0 A_SelectWeapon("  Rocket Launcher  ")
+        goto Deselect
+
+      FireFinish:
         QMRL A 0 A_ReFire
         goto Ready
 

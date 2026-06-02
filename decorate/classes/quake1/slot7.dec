@@ -484,6 +484,19 @@ actor "Thunderbolt DOE" : "Thunderbolt"
         PLS2 B 0 A_GiveInventory("SamsaraQuakeThunderboltPlasmaAttackHandler")
         PLS2 BCDE 3 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         PLS2 A 16 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        PLS2 A 0 A_JumpIfInventory("Thunderbolt",1,"FireFinishAmmoCheck")
+        goto FireFinish
+
+      FireFinishAmmoCheck:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"FireFinish")
+        TNT1 A 0 A_JumpIfInventory("PlasmaCell",1,"FireFinish")
+        TNT1 A 0 A_JumpIfInventory("Cell",1,1)
+        goto FireFinish
+        TNT1 A 0 A_ClearReFire
+        TNT1 A 0 A_SelectWeapon("Thunderbolt")
+        goto Deselect
+
+      FireFinish:
         PLS2 A 0 A_ReFire
         PLS2 A 3 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         goto Ready
@@ -492,6 +505,19 @@ actor "Thunderbolt DOE" : "Thunderbolt"
         PLS2 A 0 A_ClearReFire
         PLS2 A 0 A_GiveInventory("SamsaraQuakeThunderboltPlasmaDischargeAttackHandler") // you're probably dead now
         PLS2 A 55 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        PLS2 A 0 A_JumpIfInventory("Thunderbolt",1,"FireDischargeFinishAmmoCheck")
+        goto FireDischargeFinish
+
+      FireDischargeFinishAmmoCheck:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"FireDischargeFinish")
+        TNT1 A 0 A_JumpIfInventory("PlasmaCell",1,"FireDischargeFinish")
+        TNT1 A 0 A_JumpIfInventory("Cell",1,1)
+        goto FireDischargeFinish
+        TNT1 A 0 A_ClearReFire
+        TNT1 A 0 A_SelectWeapon("Thunderbolt")
+        goto Deselect
+
+      FireDischargeFinish:
         PLS2 A 0 A_ReFire
         goto Ready
 

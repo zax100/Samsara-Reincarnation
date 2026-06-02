@@ -84,6 +84,7 @@ Ranger (Quake I):
 * Fixed the Mjolnir spawning a bullet puff when hitting non-bleeding actors in Doom.
 * Fixed the Mjolnir lightning displaying incorrectly on its first tic.
 + Originally a punchdrunk weapon, the gauntlet has been repurposed as the chainsaw from Zerstörer - Testament of the Destroyer, a loadout choice for the slot 1 equipment (samsara_cl_ranger_slot1 1 (client) or samsara_ranger_slot1 2 (server))!
+! When running out of alternate ammo, weapons will now switch to normal ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with alternate ammo remaining.
 ! Splash damage from Ranger's own explosives now thrusts him away further to help with his rocket jumping game while keeping the damage amounts unchanged.
 * Fixed the nailgun's normal nails not having their intended damage type.
 
