@@ -501,6 +501,22 @@ StatusBar Normal, ForceScaled
                     DrawImage "WPDM644Y", 129, 14;
                 }
 
+				// Slot 4s
+				InInventory not GotWeapon4
+				{
+					InInventory " Minigun "
+                    {
+                        DrawImage "DM644BNT", 137, 4;
+                        DrawImage "WPD644NS", 129, 14;
+                    }
+				}
+				
+				IsSelected " Minigun "
+				{
+					DrawImage "DM644BRT", 137, 4;
+					DrawImage "WPD644YS", 129, 14;
+				}
+
                 // Slot 5
                 InInventory GotWeapon5
                 {
@@ -513,6 +529,22 @@ StatusBar Normal, ForceScaled
                     DrawImage "DM645BRT", 174, 4;
                     DrawImage "WPDM645Y", 165, 14;
                 }
+				
+				// Slot 5s
+				InInventory not GotWeapon5
+				{
+					InInventory " GrenadeLauncher "
+                    {
+						DrawImage "DM645BNT", 174, 4;
+                        DrawImage "WPD645NS", 165, 14;
+                    }
+				}
+				
+				IsSelected " GrenadeLauncher "
+				{
+                    DrawImage "DM645BRT", 174, 4;
+					DrawImage "WPD645YS", 165, 14;
+				}
 
                 // Slot 6
                 InInventory GotWeapon6
@@ -526,6 +558,22 @@ StatusBar Normal, ForceScaled
                     DrawImage "DM646BRT", 208, 4;
                     DrawImage "WPDM646Y", 201, 14;
                 }
+				
+				// Slot 6s
+				InInventory not GotWeapon6
+				{
+					InInventory " RailGun "
+                    {
+						DrawImage "DM646BNT", 208, 4;
+                        DrawImage "WPD646NS", 201, 14;
+                    }
+				}
+				
+				IsSelected " RailGun "
+				{
+                    DrawImage "DM646BRT", 208, 4;
+					DrawImage "WPD646YS", 201, 14;
+				}
 
                 // Slot 7A
                 InInventory GotWeapon7
@@ -540,6 +588,22 @@ StatusBar Normal, ForceScaled
                     DrawImage "WPDM647Y", 237, 14;
                 }
 
+				// Slot 7s
+				InInventory not GotWeapon7
+				{
+					InInventory " BFG10K "
+                    {
+						DrawImage "DM647BNT", 242, 4;
+                        DrawImage "WPD647NS", 237, 14;
+                    }
+				}
+				
+				IsSelected " BFG10K "
+				{
+					DrawImage "DM647BRT", 242, 4;
+                    DrawImage "WPD647YS", 237, 14;
+				}
+				
                 // Slot 7B
                 InInventory " Unmaker "
                 {
@@ -749,6 +813,22 @@ StatusBar Normal, ForceScaled
                     }
                 }
 
+				// Slot 4s
+				InInventory not GotWeapon4
+				{
+					InInventory " Minigun "
+                    {
+                        DrawImage "DOOM4BNT", 155, 2;
+                        DrawImage "WPDOM4NS", 148, 10;
+                    }
+				}
+				
+				IsSelected " Minigun "
+				{
+					DrawImage "DOOM4BRT", 155, 2;
+					DrawImage "WPDOM4YS", 148, 10;
+				}
+
                 // Slot 5
                 InInventory GotWeapon5
                 {
@@ -760,6 +840,22 @@ StatusBar Normal, ForceScaled
                 {
                     DrawImage "DOOM5BRT", 189, 2;
                     DrawImage "WPDOOM5Y", 180, 10;
+                }
+				
+                // Slot 5s
+				InInventory not GotWeapon5
+				{
+					InInventory " GrenadeLauncher "
+                    {
+						DrawImage "DOOM5BNT", 189, 2;
+                        DrawImage "WPDOM5NS", 180, 10;
+                    }
+				}
+
+                IsSelected " GrenadeLauncher "
+                {
+                    DrawImage "DOOM5BRT", 189, 2;
+                    DrawImage "WPDOM5YS", 180, 10;
                 }
 
                 // Slot 6
@@ -788,6 +884,22 @@ StatusBar Normal, ForceScaled
                         DrawImage "DOOM6BRT", 219, 2;
                         DrawImage "WPDOOM6Y", 212, 10;
                     }
+                }
+				
+                // Slot 6s
+				InInventory not GotWeapon6
+				{
+					InInventory " RailGun "
+                    {
+						DrawImage "DOOM6BNT", 219, 2;
+                        DrawImage "WPDOM6NS", 212, 10;
+                    }
+				}
+
+                IsSelected " RailGun "
+                {
+                    DrawImage "DOOM6BRT", 219, 2;
+                    DrawImage "WPDOM6YS", 212, 10;
                 }
 
                 // Slot 7
@@ -828,6 +940,21 @@ StatusBar Normal, ForceScaled
                         DrawImage "DOOM7BRT", 250, 2;
                         DrawImage "WPDOOM7Y", 244, 10;
                     }
+                }
+                // Slot 7s
+				InInventory not GotWeapon7
+				{
+					InInventory " BFG10K "
+                    {
+						DrawImage "DOOM7BNT", 250, 2;
+                        DrawImage "WPDOM7NS", 244, 10;
+                    }
+				}
+
+                IsSelected " BFG10K "
+                {
+                    DrawImage "DOOM7BRT", 250, 2;
+                    DrawImage "WPDOM7YS", 244, 10;
                 }
             }
         }
@@ -1248,12 +1375,21 @@ StatusBar Normal, ForceScaled
             }
 
             // Slot 6
-            InInventory GotWeapon6 { DrawImage "WPHERE6N", 213, 10; }
+			IsSelected not CorvusTempestWand { InInventory GotWeapon6 { DrawImage "WPHERE6N", 213, 10; } }
 
             IsSelected Hellstaff
             {
                 DrawImage "WEPSELZ6", 219, 1;
                 DrawImage "WPHERE6Y", 213, 10;
+            }
+			
+			// Slot 6s
+            InInventory not GotWeapon6 { InInventory CorvusTempestWand { DrawImage "WPHER6NS", 213, 10; } }
+
+            IsSelected CorvusTempestWand
+            {
+                DrawImage "WEPSELZ6", 219, 1;
+                DrawImage "WPHER6YS", 213, 10;
             }
 
             // Slot 7
