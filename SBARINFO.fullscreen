@@ -1170,7 +1170,7 @@ StatusBar Fullscreen, ForceScaled
                 // Damage Booster
                 InInventory not PowerQ2QuadDamage
                 {
-                    InInventory SamsaraQuake2QuadDamageCooldownDisplay { DrawNumber 3, Q2SMALLFONT, Untranslated, SamsaraQuake2QuadDamageCooldownDisplay, 312, 166; }
+                    InInventory SamsaraQuake2QuadDamageCooldownDisplay { DrawNumber 3, Q2SMALLFONT, Untranslated, SamsaraQuake2QuadDamageCooldownDisplay, 354, 191; }
                 }
             }
 
