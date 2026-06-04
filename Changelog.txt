@@ -16,8 +16,8 @@ Doom:
 
 -Doomguy (Original)-
 
-+ Added Perkristan altsounds for the railgun and the Legacy of Rust loadout weapons.
 ! The status bar HUD now shows Skulltag weapons.
++ Added Perkristan altsounds for the Legacy of Rust loadout weapons and the railgun.
 
 -Doomguy (Doom 64)-
 
@@ -38,8 +38,8 @@ Fred Chexter (Chex Quest):
 
 Corvus (Heretic):
 
-! The staff now has a sprite for the Compendium and the alternate HUD.
 ! The status bar HUD now shows the tempest wand.
+! The staff now has a sprite for the Compendium and the alternate HUD.
 
 Wolfenstein 3D:
 
@@ -96,6 +96,7 @@ Security Officer (Marathon):
 
 Ranger (Quake I):
 
+! The status bar HUD now shows the rocket powered impaler and the laser cannon.
 * Fixed a missing flag for the fullscreen HUD's mugshot.
 * Fixed the axe, Mjolnir (melee), shotgun weapons, super nailgun (normal nails), and laser cannon using an explosive damage type. They should now be treated as ballistic (except for the laser cannon, which is treated as energy).
 * Fixed the Hexen monsters not taking more damage from the axe and single-barreled shotgun.

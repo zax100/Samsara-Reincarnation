@@ -3641,7 +3641,7 @@ StatusBar Normal, ForceScaled
 
         InInventory ExpandedHud
         {
-            DrawImage "QUAKBAR2", 0, 0;
+            DrawImage "QUAKBART", 0, 0;
 
             // Slot 1
             InInventory GotWeapon0
@@ -3660,10 +3660,7 @@ StatusBar Normal, ForceScaled
             }
 
             // Slot 2
-            InInventory GotWeapon2
-            {
-                DrawImage "WPQUAK2N", 65, 11;
-            }
+            InInventory GotWeapon2 { DrawImage "WPQUAK2N", 65, 11; }
 
             IsSelected "Double Shotgun"
             {
@@ -3672,10 +3669,7 @@ StatusBar Normal, ForceScaled
             }
 
             // Slot 3
-            InInventory GotWeapon3
-            {
-                DrawImage "WPQUAK3N", 98, 11;
-            }
+            InInventory GotWeapon3 { DrawImage "WPQUAK3N", 98, 11; }
 
             IsSelected "Grenade Launcher"
             {
@@ -3687,10 +3681,7 @@ StatusBar Normal, ForceScaled
             }
 
             // Slot 4
-            InInventory GotWeapon4
-            {
-                DrawImage "WPQUAK4N", 131, 11;
-            }
+            InInventory GotWeapon4 { DrawImage "WPQUAK4N", 131, 11; }
 
             IsSelected Nailgun
             {
@@ -3702,10 +3693,7 @@ StatusBar Normal, ForceScaled
             }
 
             // Slot 5
-            InInventory GotWeapon5
-            {
-                DrawImage "WPQUAK5N", 164, 11;
-            }
+            InInventory GotWeapon5 { DrawImage "WPQUAK5N", 164, 11; }
 
             IsSelected "  Rocket Launcher  "
             {
@@ -3717,10 +3705,7 @@ StatusBar Normal, ForceScaled
             }
 
             // Slot 6
-            InInventory GotWeapon6
-            {
-                DrawImage "WPQUAK6N", 197, 11;
-            }
+            InInventory GotWeapon6 { DrawImage "WPQUAK6N", 197, 11; }
 
             IsSelected "Super Nailgun"
             {
@@ -3730,12 +3715,13 @@ StatusBar Normal, ForceScaled
                 DrawImage "QUAK6BRT", 204, 3;
                 DrawImage "WPQUAK6S", 197, 11;
             }
+
             // Slot 6S
             InInventory not GotWeapon6
             {
                 InInventory "Rocket Powered Impaler" { DrawImage "WPQUK6NS", 197, 11; }
             }
-			
+
             IsSelected "Rocket Powered Impaler"
             {
                 DrawImage "QUAK6BRT", 204, 3;
@@ -3743,10 +3729,7 @@ StatusBar Normal, ForceScaled
             }
 
             // Slot 7
-            InInventory GotWeapon7
-            {
-                DrawImage "WPQUAK7N", 230, 11;
-            }
+            InInventory GotWeapon7 { DrawImage "WPQUAK7N", 230, 11; }
 
             IsSelected Thunderbolt
             {
@@ -3757,18 +3740,15 @@ StatusBar Normal, ForceScaled
                 DrawImage "WPQUAK7S", 230, 11;
             }
 
-            // Unique 1/Slot 8
-            InInventory "Laser Cannon"
-            {
-                DrawImage "WPQUAK8N", 263, 11;
-            }
+            // Unique (Listed as Slot 8 for convenience)
+            InInventory "Laser Cannon" { DrawImage "WPQUAK8N", 263, 11; }
 
             IsSelected "Laser Cannon"
             {
                 DrawImage "QUAK8BRT", 267, 3;
                 DrawImage "WPQUAK8Y", 263, 11;
             }
-			
+
             // Damage Booster
             InInventory SamsaraQuadDamageCooldownDisplay { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraQuadDamageCooldownDisplay, 293, 48; }
         }
