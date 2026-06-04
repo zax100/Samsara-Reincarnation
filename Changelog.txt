@@ -55,13 +55,14 @@ Hexen I:
 
 -Parias (Reincarnation)-
 
-! Renamed some actor names to avoid name conflicts with other mods.
+! Renamed some actor names and sound files to avoid name conflicts with other mods.
 ! The mace of contrition now has a sprite for the Compendium and the alternate HUD.
 * Fixed the improved PVE damage values not properly applying to the bishop's shortsword strong projectiles.
 
 -Daedolon-
 
 ! The sapphire wand now has a sprite for the Compendium and the alternate HUD.
+! Renamed the viscerelagh projectile's actor names and some sound files to avoid name conflicts with other mods.
 
 -Baratus-
 
