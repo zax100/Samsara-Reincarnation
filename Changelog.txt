@@ -189,6 +189,10 @@ Daniel Garner (Painkiller):
 + The rocket launcher primary now deals 128 splash damage across 128 map units without Weapon Modifier active (increased from 120 splash damage across 102 map units), and 128 splash damage across 160 map units with Weapon Modifier active (increased from 120 splash damage across 153 map units).
 * Fixed gold and silver tarot cards not being properly taken with pistol start enabled.
 
+Prisoner 849 (Unreal):
+
+* Fixed the Razorjack's damage applying when hitting map geometry.
+
 B.J. Blazkowicz (Return to Castle Wolfenstein):
 
 * Fixed the knife backstab hint not showing up when targeting non-bleeding actors.
