@@ -1276,7 +1276,7 @@ Script "Painkiller_SpawnGrenadeHitBox" (int type)
 
 Script "Painkiller_DemonModeActive" (void)
 {
-	While(CheckWeapon("Painkiller_DemonMorph"))
+	While(CheckWeapon("Painkiller_DemonMorph") && !isDead(0))
 	{
 		SetHudSize(768,1024,0);
 		SetFont("PKDEMONC");
@@ -1412,7 +1412,7 @@ Script "Painkiller_StartDemonMorph" (int duration)
 
 	until (morphtime >= duration)
 	{
-		if (!CheckInventory("Painkiller_DemonMorph")) { break; }
+		if (!CheckInventory("Painkiller_DemonMorph") || isDead(0)) { break; }
 
 		if (!CheckWeapon("Painkiller_DemonMorph")) { SetWeapon("Painkiller_DemonMorph"); }
 		morphtime++;
@@ -1421,7 +1421,7 @@ Script "Painkiller_StartDemonMorph" (int duration)
 
 	TakeInventory("PainkillerDemonMorphActive", 1);
 
-	while (CheckWeapon("Painkiller_DemonMorph")) { Delay(1); }
+	while (CheckWeapon("Painkiller_DemonMorph") && !isDead(0)) { Delay(1); }
 
 	HudMessage(s:""; HUDMSG_PLAIN|HUDMSG_NOTWITHFULLMAP|HUDMSG_LAYER_UNDERHUD, 32600, 0, 0.0, 0.0, 0.5, 0.1);
 }
@@ -2345,7 +2345,7 @@ Script "Painkiller_BlackTarot_CardLoop" (int type, int extra)
 
 			while (CheckInventory("Painkiller_GoldActive"))
 			{
-				if (!CheckInventory("Painkiller_DemonMorph")) { break; }
+				if (!CheckInventory("Painkiller_DemonMorph") || isDead(0)) { break; }
 
 				if (!CheckWeapon("Painkiller_DemonMorph")) { SetWeapon("Painkiller_DemonMorph"); }
 				Delay(1);
@@ -2353,7 +2353,7 @@ Script "Painkiller_BlackTarot_CardLoop" (int type, int extra)
 
 			TakeInventory("PainkillerDemonMorphActive", 1);
 
-			while (CheckWeapon("Painkiller_DemonMorph")) { Delay(1); }
+			while (CheckWeapon("Painkiller_DemonMorph") && !isDead(0)) { Delay(1); }
 
 			HudMessage(s:""; HUDMSG_PLAIN|HUDMSG_NOTWITHFULLMAP|HUDMSG_LAYER_UNDERHUD, 32600, 0, 0.0, 0.0, 0.5, 0.1);
 			break;
