@@ -22,17 +22,17 @@ actor " Mauler " : SamsaraStrifeguyWeapon
 
       Ready:
         TNT1 A 0 A_JumpIfInventory(" Mauler Torpedo ",1,5)
-        MAU1 ABCD 6 A_WeaponReady(WRF_NOSECONDARY)
+        MAU1 BCDA 6 A_WeaponReady(WRF_NOSECONDARY)
         loop
-        MAU1 ABCD 6 A_WeaponReady
+        MAU1 BCDA 6 A_WeaponReady
         loop
 
       Deselect:
-        MAU1 D 1 A_Lower
+        MAU1 A 1 A_Lower
         loop
 
       Select:
-        MAU1 D 1 A_Raise
+        MAU1 A 1 A_Raise
         loop
 
       Fire:
@@ -42,9 +42,9 @@ actor " Mauler " : SamsaraStrifeguyWeapon
         MALF B 3 Bright A_Light1
         MALF C 2 A_Light2
         MALF DE 2
-        MAU1 D 7 A_Light0
-        MAU1 A 7
-        MAU1 B 7 A_CheckReload
+        MAU1 A 7 A_Light0
+        MAU1 D 7
+        MAU1 C 7 A_CheckReload
         goto Ready
 
       AltFire:
