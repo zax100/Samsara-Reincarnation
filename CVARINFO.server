@@ -60,6 +60,8 @@ server bool samsara_permaweaponlevel2 = false;
 server bool samsara_pinataparty = false;
 server bool samsara_pinatapartyextras = false;
 server bool samsara_pinatapartyperformance = true;
+server int samsara_pinatapartychance = 100;
+server int samsara_pinatapartybosschance = 100;
 server bool samsara_sigilmode = false;
 server bool samsara_allloadoutequipment = false;
 
