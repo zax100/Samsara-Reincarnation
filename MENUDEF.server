@@ -66,6 +66,11 @@ OptionMenu "SamsaraServerSideOptions"
     Option "Pinata Party Performance Mode",        "samsara_pinatapartyperformance",    "OnOff"
     Slider "Pinata Party Spawn Chance",            "samsara_pinatapartychance",         0, 100,  5
     Slider "Pinata Party Spawn Chance (Bosses)",   "samsara_pinatapartybosschance",     0, 100,  5
+    Slider "Pinata Party Item Tier 1 Health",      "samsara_pinatapartyhealthtier1",    0, 5000, 10
+    Slider "Pinata Party Item Tier 2 Health",      "samsara_pinatapartyhealthtier2",    0, 5000, 10
+    Slider "Pinata Party Item Tier 3 Health",      "samsara_pinatapartyhealthtier3",    0, 5000, 10
+    Slider "Pinata Party Item Tier 4 Health",      "samsara_pinatapartyhealthtier4",    0, 5000, 10
+    Slider "Pinata Party Item Tier 5 Health",      "samsara_pinatapartyhealthtier5",    0, 5000, 10
     Option "Sigil For Everyone",                   "samsara_sigilmode",                 "OnOff"
     Option "All Loadout Equipment",                "samsara_allloadoutequipment",       "OnOff"
     StaticText ""

@@ -62,6 +62,11 @@ server bool samsara_pinatapartyextras = false;
 server bool samsara_pinatapartyperformance = true;
 server int samsara_pinatapartychance = 100;
 server int samsara_pinatapartybosschance = 100;
+server int samsara_pinatapartyhealthtier1 = 0;
+server int samsara_pinatapartyhealthtier2 = 200;
+server int samsara_pinatapartyhealthtier3 = 1000;
+server int samsara_pinatapartyhealthtier4 = 2500;
+server int samsara_pinatapartyhealthtier5 = 5000;
 server bool samsara_sigilmode = false;
 server bool samsara_allloadoutequipment = false;
 

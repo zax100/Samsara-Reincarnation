@@ -247,6 +247,7 @@ PSX Doom CE/PSX Final Doom CE:
 ! The "Death Explosion" settings no longer take effect for dead player voodoo dolls.
 + samsara_pinatapartyperformance has been added, determining whether enemies should drop containers that reveal their contents when a player gets close enough, much like the Christmas presents with "Christmas Mode" enabled. It can be found in the "Samsara Serverside Options" menu, under "Party Mode Options", with the label "Pinata Party Performance Mode".
 + samsara_pinataparty[boss]chance has been added, determining the percentage chance at which Pinata Party can occur on enemy deaths. They can be found in the "Samsara Serverside Options" menu, under "Party Mode Options", with the label "Pinata Party Spawn Chance [(Bosses)]".
++ samsara_pinatapartyhealthtier[1-5] has been added, determining the minimum amount of health needed for each Pinata Party item tier drop. They can be found in the "Samsara Serverside Options" menu, under "Party Mode Options", with the label "Pinata Party Item Tier [1-5] Health".
 * Fixed "Pistol Start" taking effect in PVP and invasion; having it active in those cases is redundant.
 + samsara_allowcorvus[time/remote/proxy]bomb has been added, which determines which of Corvus' respective bomb items should be allowed in play. They can be found in the "Samsara Serverside Options" menu, under "Class-Based Ability Options", with the labels "Heretic: Allow [Time/Remote/Proximity] Bomb".
 ! "Heretic: Allow Bomb Walls" has been renamed to "Heretic: Allow Remote Bomb Walls". The CVar name itself remains unchanged.

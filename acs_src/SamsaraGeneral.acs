@@ -1759,7 +1759,7 @@ Script "Samsara_KillCount" (int override)
 
         if (canpinata)
         {
-            if (!GetCVar("samsara_merrychristmas") && !GetCVar("samsara_pinatapartyperformance")) { ACS_NamedExecuteAlways("Samsara_PinataHandler", 0, health, GetActorProperty(0,APROP_Radius) >> 16, GetActorProperty(0,APROP_Height) >> 16); }
+            if (!GetCVar("samsara_merrychristmas") && !GetCVar("samsara_pinatapartyperformance")) { ACS_NamedExecuteAlways("Samsara_PinataHandler", 0, health, GetActorProperty(0, APROP_Radius) >> 16, GetActorProperty(0, APROP_Height) >> 16); }
             else
             {
                 int presentTid = UniqueTid();
@@ -13620,6 +13620,11 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_pinatapartyperformance", true);
 		SetCVar("samsara_pinatapartychance", 100);
 		SetCVar("samsara_pinatapartybosschance", 100);
+		SetCVar("samsara_pinatapartyhealthtier1", 0);
+		SetCVar("samsara_pinatapartyhealthtier2", 200);
+		SetCVar("samsara_pinatapartyhealthtier3", 1000);
+		SetCVar("samsara_pinatapartyhealthtier4", 2500);
+		SetCVar("samsara_pinatapartyhealthtier5", 5000);
 		SetCVar("samsara_sigilmode", false);
 		SetCVar("samsara_allloadoutequipment", false);
 
@@ -14038,6 +14043,11 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_pinatapartyperformance", true);
 		SetCVar("samsara_pinatapartychance", 100);
 		SetCVar("samsara_pinatapartybosschance", 100);
+		SetCVar("samsara_pinatapartyhealthtier1", 0);
+		SetCVar("samsara_pinatapartyhealthtier2", 200);
+		SetCVar("samsara_pinatapartyhealthtier3", 1000);
+		SetCVar("samsara_pinatapartyhealthtier4", 2500);
+		SetCVar("samsara_pinatapartyhealthtier5", 5000);
 		SetCVar("samsara_sigilmode", false);
 		SetCVar("samsara_allloadoutequipment", false);
 
@@ -14456,6 +14466,11 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_pinatapartyperformance", true);
 		SetCVar("samsara_pinatapartychance", 100);
 		SetCVar("samsara_pinatapartybosschance", 100);
+		SetCVar("samsara_pinatapartyhealthtier1", 0);
+		SetCVar("samsara_pinatapartyhealthtier2", 200);
+		SetCVar("samsara_pinatapartyhealthtier3", 1000);
+		SetCVar("samsara_pinatapartyhealthtier4", 2500);
+		SetCVar("samsara_pinatapartyhealthtier5", 5000);
 		SetCVar("samsara_sigilmode", false);
 		SetCVar("samsara_allloadoutequipment", false);
 
@@ -14875,6 +14890,11 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_pinatapartyperformance", true);
 		SetCVar("samsara_pinatapartychance", 100);
 		SetCVar("samsara_pinatapartybosschance", 100);
+		SetCVar("samsara_pinatapartyhealthtier1", 0);
+		SetCVar("samsara_pinatapartyhealthtier2", 200);
+		SetCVar("samsara_pinatapartyhealthtier3", 1000);
+		SetCVar("samsara_pinatapartyhealthtier4", 2500);
+		SetCVar("samsara_pinatapartyhealthtier5", 5000);
 		SetCVar("samsara_sigilmode", false);
 		SetCVar("samsara_allloadoutequipment", false);
 
@@ -15299,6 +15319,11 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_pinatapartyperformance", true);
 		SetCVar("samsara_pinatapartychance", 15);
 		SetCVar("samsara_pinatapartybosschance", 100);
+		SetCVar("samsara_pinatapartyhealthtier1", 0);
+		SetCVar("samsara_pinatapartyhealthtier2", 200);
+		SetCVar("samsara_pinatapartyhealthtier3", 1000);
+		SetCVar("samsara_pinatapartyhealthtier4", 2500);
+		SetCVar("samsara_pinatapartyhealthtier5", 5000);
 		SetCVar("samsara_sigilmode", false);
 		SetCVar("samsara_allloadoutequipment", false);
 
@@ -15783,7 +15808,7 @@ script "Samsara_PinataHandler" (int health, int radius, int height, int friendly
 {
     if (!GetCVar("samsara_pinataparty")) { terminate; }
 
-    int currentpooltier, currentpoolamount;
+    int currentpooltier = 0, currentpoolamount = 0;
     int spawneditems, randomchance, randomitem;
     int newtid = UniqueTID();
     int maxitems = ((height * 4) * (radius * radius)) / 4096;
@@ -15792,37 +15817,27 @@ script "Samsara_PinataHandler" (int health, int radius, int height, int friendly
 
     if (!naughty)
     {
-        // Start at Common
-        currentpooltier = GetCVar("samsara_pinatapartyextras") ? 5 : 0;
-        currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 13 : 9;
-
-        // Upgrade to Uncommon
-        if (health >= 200)
+        if (health >= GetCVar("samsara_pinatapartyhealthtier5")) // Legendary
         {
-            currentpooltier++;
-            currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 24 : 17;
-        }
-
-        // Upgrade to Rare
-        if (health >= 1000)
-        {
-            currentpooltier++;
-            currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 28 : 21;
-        }
-
-        // Upgrade to Epic
-        if (health >= 2500)
-        {
-            currentpooltier++;
-            currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 31 : 16;
-        }
-
-        // Upgrade to Legendary
-        if (health >= 5000)
-        {
-            currentpooltier++;
+            currentpooltier = 5;
             currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 14 : 12;
+        } else if (health >= GetCVar("samsara_pinatapartyhealthtier4")) { // Epic
+            currentpooltier = 4;
+            currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 31 : 16;
+        } else if (health >= GetCVar("samsara_pinatapartyhealthtier3")) { // Rare
+            currentpooltier = 3;
+            currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 28 : 21;
+        } else if (health >= GetCVar("samsara_pinatapartyhealthtier2")) { // Uncommon
+            currentpooltier = 2;
+            currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 24 : 17;
+        } else if (health >= GetCVar("samsara_pinatapartyhealthtier1")) { // Common
+            currentpooltier = 1;
+            currentpoolamount = GetCVar("samsara_pinatapartyextras") ? 13 : 9;
         }
+
+        if (currentpooltier <= 0) { terminate; }
+
+        if (GetCVar("samsara_pinatapartyextras")) { currentpooltier += 5; }
     }
 
     str itemtospawn = "Placeholder";
@@ -15836,12 +15851,12 @@ script "Samsara_PinataHandler" (int health, int radius, int height, int friendly
             randomchance = Random(0, 100);
             randomitem = Random(0, currentpoolamount - 1);
 
-            itemtospawn = PinataItemActors[currentpooltier][randomitem];
+            itemtospawn = PinataItemActors[currentpooltier - 1][randomitem];
 
             if (!StrCmp(itemtospawn, "HealPack1") && Random(0, 100) > 99 && xmas) { itemtospawn = "BecauseTermSaidSo"; }
         }
 
-        if (naughty || randomchance < PinataItemChances[currentpooltier][randomitem])
+        if (naughty || randomchance < PinataItemChances[currentpooltier - 1][randomitem])
         {
             SpawnForced(itemtospawn, GetActorX(0), GetActorY(0), GetActorZ(0), newtid);
             ThrustThing(Random(0, 256), 2, 0, newtid);
