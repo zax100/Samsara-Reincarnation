@@ -40,6 +40,35 @@ actor FlemoidGibTrail
 	}
 }
 
+actor FlemoidEyeGib
+{
+	Scale 0.8
+	Health 1
+	Radius 2
+	Height 2
+	Mass 1
+	Speed 8
+	+CORPSE
+	+NOTELEPORT
+	-SOLID
+	+NOBLOCKMAP
+	+CLIENTSIDEONLY
+	+MOVEWITHSECTOR
+	States
+	{
+	Spawn:
+		TNT1 A 0 ThrustThingZ (0, 28, 0, 1)
+	Spawn2:
+		FLBL RSTU 4
+		Loop
+
+	Crash:
+		FLBL VWXY 4
+		FLBL Z -1
+		Stop
+	}
+}
+
 actor FlemoidPowerStrand_Samsara 2035
 {
 	Game Chex

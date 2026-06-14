@@ -230,6 +230,15 @@ Strife: Quest for the Sigil:
 
 * Fixed bosses not being disintegrated by the Duke Nukem 64 version of Duke Nukem's plasma cannon.
 
+Chex Quest 1:
+
++ Added new death animations made by SuperDave938 for some of the flemoids.
+
+Chex Quest 3:
+
++ Added new death animations made by SuperDave938 for some of the flemoids.
++ The Flemoidus Quadrumpus and the Larva now spawn eye gibs on death.
+
 Hacx: Twitch 'n Kill:
 
 * Fixed stealth buzzers not having OptFuzzy rendering on ZorchRaise.
