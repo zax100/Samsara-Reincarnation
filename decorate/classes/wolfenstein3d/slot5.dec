@@ -133,6 +133,7 @@ actor WolfRocket
         loop
 
       Death:
+        TNT1 A 0 A_SetDamageType("Explosive")
         TNT1 A 0 A_Explode(128,32,0)
       DeathFinish:
         WFLB C 8 Bright Light("BJROCKETEXPSHIT_")
@@ -147,6 +148,7 @@ actor WolfRocketRJ : WolfRocket
     States
     {
       Death:
+        TNT1 A 0 A_SetDamageType("Explosive")
         TNT1 A 0 A_Explode(128,64)
         goto DeathFinish
     }
@@ -223,6 +225,7 @@ actor LostRocket : WolfRocket
         Loop
 
       Death:
+        TNT1 A 0 A_SetDamageType("Explosive")
         TNT1 A 0 A_Explode(128,32,0)
       DeathFinish:
         WEX2 A 8 Bright Light("BJROCKETEXPSHIT_")
@@ -237,6 +240,7 @@ actor LostRocketRJ : LostRocket
     States
     {
       Death:
+        TNT1 A 0 A_SetDamageType("Explosive")
         TNT1 A 0 A_Explode(128,64)
         goto DeathFinish
     }

@@ -42,6 +42,8 @@ actor PowerAsbestosArmor : PowerProtection
     // Explosive damage types
     DamageFactor "Explosive", 0.25
     DamageFactor "DoomDamageTypeExplosive", 0.25
+    DamageFactor "TotenkopfRocket", 0.25
+    DamageFactor "TotenkopfFlak", 0.25
     DamageFactor "DukeExplosive", 0.25
     DamageFactor "DukeSpectral", 0.25
     DamageFactor "NotQuadded", 0.25

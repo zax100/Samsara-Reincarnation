@@ -2103,6 +2103,8 @@ actor StrifeArmorPack3ArmorQuakePlusTier2Active : ArmorPack3ArmorQuake // actual
     // Explosive damage types
     DamageFactor "Explosive", 0.125
     DamageFactor "DoomDamageTypeExplosive", 0.125
+    DamageFactor "TotenkopfRocket", 0.125
+    DamageFactor "TotenkopfFlak", 0.125
     DamageFactor "DukeExplosive", 0.125
     DamageFactor "DukeSpectral", 0.125
     DamageFactor "NotQuadded", 0.125
@@ -2302,6 +2304,8 @@ actor ArmorPack4ArmorNormal : BasicArmorPickup
     // Explosive damage types
     DamageFactor "Explosive", 0.125
     DamageFactor "DoomDamageTypeExplosive", 0.125
+    DamageFactor "TotenkopfRocket", 0.125
+    DamageFactor "TotenkopfFlak", 0.125
     DamageFactor "DukeExplosive", 0.125
     DamageFactor "DukeSpectral", 0.125
     DamageFactor "NotQuadded", 0.125

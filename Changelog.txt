@@ -45,10 +45,12 @@ Wolfenstein 3D:
 
 -B.J. Blazkowicz (Original/Lost Episodes)-
 
++ Red armor now provides resistance against the rocket launcher's splash damage.
 ! The ammo crate's Compendium entry has been updated to make mention of bullet weapons in general.
 
 -B.J. Blazkowicz (Castle Totenkopf SDL)-
 
++ Red armor now provides resistance against the Panzerschreck and flakgun.
 * Fixed unique pickups not giving extra ammo on first pickup when playing PVP in Doom or Chex Quest.
 
 Hexen I:
@@ -86,6 +88,7 @@ Duke Nukem 3D:
 
 Security Officer (Marathon):
 
+! Damage received from Original/Lost B.J.'s rocket launcher (splash damage only) and Totenkopf B.J.'s Panzerschreck/flakgun now causes a yellow screen flash.
 ! Damage received from Ranger's Mjolnir (lightning) and thunderbolt now causes a white screen flash.
 + The fusion pistol primary fire bolts now deal 45-60 damage (vanilla; increased from 42-56) or 60-80 damage (improved; PVE only; increased from 45-60).
 + The fusion pistol secondary fire bolts now deal 120-150 damage (vanilla; increased from 105-140) or 160-200 damage (improved; PVE only; increased from 120-150).
