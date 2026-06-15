@@ -69,7 +69,7 @@ actor SamsaraUniquePickup2 : SamsaraUniquePickup1
       DukeSpecial:             DKSR Y 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BeachDukeSpecial:        DKSR X 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       MarathonSpecial:         UNIQ I 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      RottSpecial:             PRBT A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
+      RottSpecial:             PRBT B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       CalebSpecial:            UNQC C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HalfLifeSpecial:         UNIQ X 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HalfLifeSpecialLoadout1: UNI2 X 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

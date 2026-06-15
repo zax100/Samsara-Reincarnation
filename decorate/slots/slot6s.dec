@@ -63,7 +63,7 @@ actor SamsaraSlotSixSkulltagPickup : SamsaraSlotSixPickup replaces RailGun
       HereticFull:      PHST B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
       MarathonFull:     MATC J 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       QuakeFull:        PSNG B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      RottFull:         PWE6 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      RottFull:         PWE0 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       CalebFull:        CP6S B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RMRFull:          RMZ6 L 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
       KatarnFull:       PDF9 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -84,7 +84,7 @@ actor SamsaraSlotSixSkulltagPickup : SamsaraSlotSixPickup replaces RailGun
       HereticEmpty:      PHST A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
       MarathonEmpty:     MATC I 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       QuakeEmpty:        PSNG A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      RottEmpty:         PWE6 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      RottEmpty:         PWE0 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       CalebEmpty:        CP6S A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RMREmpty:          RMZ6 M 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
       KatarnEmpty:       PDF9 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

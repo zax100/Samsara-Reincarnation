@@ -119,6 +119,7 @@ Rise of the Triad:
 -All-
 
 ! The status bar HUD has been improved and now shows Skulltag weapons.
+! Updated the hybrid pickup sprites for the weapons, sprites done by zax.
 
 Caleb (Blood):
 
