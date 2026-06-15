@@ -504,6 +504,9 @@ OptionMenu "SamsaraClientCharacterEquipmentLoadoutOptions"
     Option "Unique 2",       "samsara_cl_shephard_unique2",       "HalfLifeUnique2ClientOptions"
     Option "Unique 3",       "samsara_cl_shephard_unique3",       "HalfLifeUnique3ClientOptions"
     StaticText ""
+    StaticText "Bitterman", 1
+    Option "Slot 7S", "samsara_cl_bitterman_slot7s", "Quake2Slot7SClientOptions"
+    StaticText ""
     StaticText "James Bond (GoldenEye 007)", 1
     Option "Fallback Ranged", "samsara_cl_bond_fallbackranged", "GoldenEyeFallbackRangedClientOptions"
     Option "Slot 3",          "samsara_cl_bond_slot3",          "GoldenEyeSlot3ClientOptions"
@@ -625,6 +628,12 @@ OptionValue "HalfLifeUnique3ClientOptions"
 {
     0, "Long Jump Module"
     1, "Barnacle Grappling Hook"
+}
+
+OptionValue "Quake2Slot7SClientOptions"
+{
+    0, "Trap"
+    1, "Disruptor"
 }
 
 OptionValue "GoldenEyeFallbackRangedClientOptions"

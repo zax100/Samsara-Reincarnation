@@ -629,7 +629,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
             {"Q2Misc/W_Pkup"},
             {"Q2Misc/W_Pkup"},
             {"Q2Misc/W_Pkup"},
-            {"Q2Misc/W_Pkup"},
+            {"Q2Misc/W_Pkup", "Q2Misc/W_Pkup"},
         }},
         {{
             {"Hexen2/WeaponPickup"},
@@ -1385,7 +1385,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
             {"Q2Misc/ammo_pkup"},
             {"Q2Misc/ammo_pkup"},
             {"Q2Misc/ammo_pkup"},
-            {"Q2Misc/ammo_pkup"},
+            {"Q2Misc/ammo_pkup", "Q2Misc/ammo_pkup"},
         }},
         {{
             {"Hexen2/ItemPickup"},

@@ -70,6 +70,9 @@ Q2Weapons/TrapDown				"Sounds/Quake2/Weapons/quake2_trapdown.flac"
 Q2Weapons/TrapLoop				"Sounds/Quake2/Weapons/quake2_traploop.flac"
 Q2Weapons/TrapSuck				"Sounds/Quake2/Weapons/quake2_trapsuck.wav"
 $alias Q2Weapons/TrapExplosion  Q2Weapons/RocketExplosion
+Q2Weapons/DisruptorAttack "Sounds/Quake2/Weapons/quake2_dis_atk.wav"
+Q2Weapons/DisruptorImpact "Sounds/Quake2/Weapons/quake2_dis_hit.wav"
+Q2Weapons/DisruptorIdle "Sounds/Quake2/Weapons/quake2_dis_idle.flac"
 
 Q2Weapons/Rerelease/RailGunLoop    "Sounds/Quake2/Weapons/quake2r_rg_hum.flac"
 Q2Weapons/Rerelease/RailGunReload  "Sounds/Quake2/Weapons/quake2r_railgr1b.flac"

@@ -89,6 +89,18 @@ PointLight GreenBlaster_X2 { Color 0.0 0.5 0.0 Size 30 }
 PointLight GreenBlaster_X3 { Color 0.0 0.33 0.0 Size 20 }
 PointLight GreenBlaster_X4 { Color 0.0 0.25 0.0 Size 10 }
 
+pointlight Q2DISPROJ
+{
+    color 1.0 1.0 1.0
+    Subtractive 1
+    size 80
+}
+
+object Q2Disruptor_Proj
+{
+    frame NULL { light Q2DISPROJ }
+}
+
 //Brightmaps by TheCamaleonMalingo
 BrightMap Texture "Models/Quake2/Blaster/Blaster.png" { Map "BrightMaps/Classes/Quake2/BlasterBM.png" }
 BrightMap Texture "Models/Quake2/Shotgun/vshotgun.png" { Map "BrightMaps/Classes/Quake2/vshotgunbm.png" }

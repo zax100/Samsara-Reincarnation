@@ -3769,6 +3769,43 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
 					SetInventory("SamsaraQuake2RailgunLoopSoundCheck", 0);
 				}
+
+                loadoutmode = GetCVar("samsara_bitterman_slot7s") > 0 && !CheckInventory("SamsaraHasAllLoadoutEquipment") ? GetCVar("samsara_bitterman_slot7s") - 1 : GetUserCVar(pln, "samsara_cl_bitterman_slot7s");
+
+                if (loadoutmode > 1) { loadoutmode = 1; }
+                else if (loadoutmode < 0) { loadoutmode = 0; }
+
+                SetInventory("SamsaraQuake2LoadoutSlot7S", loadoutmode);
+            
+                if (loadoutPrevValue[pln][SLOT_BFG10K] != CheckInventory("SamsaraQuake2LoadoutSlot7S"))
+                {
+                    ACS_NamedExecuteAlways("SAMSARA_CLIENT_CLASSLOADOUT", 0, SLOT_BFG10K, CheckInventory("SamsaraQuake2LoadoutSlot7S"), pln);
+                    loadoutPrevValue[pln][SLOT_BFG10K] = CheckInventory("SamsaraQuake2LoadoutSlot7S");
+                }
+
+                if (CheckInventory("Q2Trap") || CheckInventory("Q2Disruptor"))
+                {
+                    if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                    {
+                        SetInventory("Q2Trap", 1);
+                        SetInventory("Q2Disruptor", 1);
+                    } else {
+                        if (!CheckInventory("SamsaraQuake2LoadoutSlot7S"))
+                        {
+                            SetInventory("Q2Trap", 1);
+
+                            if (CheckWeapon("Q2Disruptor")) { SetWeapon("Q2Trap"); }
+
+                            SetInventory("Q2Disruptor", 0);
+                        } else if (CheckInventory("SamsaraQuake2LoadoutSlot7S")) {
+                            SetInventory("Q2Disruptor", 1);
+
+                            if (CheckWeapon("Q2Trap")) { SetWeapon("Q2Disruptor"); }
+
+                            SetInventory("Q2Trap", 0);
+                        }
+                    }
+                }
 				break;
 
 			case CLASS_BOND:
