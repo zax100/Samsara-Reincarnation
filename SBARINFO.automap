@@ -3672,7 +3672,7 @@ StatusBar Automap, ForceScaled
             // Slot 3
             InInventory GotWeapon3
             {
-                InInventory SamsaraQuake1LoadoutSlot3 { DrawImage "WPQUAK3N", 98, 11; } // Widowmaker
+                InInventory SamsaraQuake1LoadoutSlot3 { DrawImage "WPQUK3N1", 98, 11; } // Widowmaker
                 else { DrawImage "WPQUAK3N", 98, 11; } // Grenade Launcher
             }
 
@@ -3685,7 +3685,7 @@ StatusBar Automap, ForceScaled
                 DrawImage "WPQUAK3S", 98, 11;
             } else IsSelected Q1Widowmaker {
                 DrawImage "QUAK3BRT", 106, 3;
-                DrawImage "WPQUAK3Y", 98, 11;
+                DrawImage "WPQUK3Y1", 98, 11;
             }
 
             // Slot 4
