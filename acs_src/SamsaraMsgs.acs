@@ -2471,18 +2471,32 @@ str ClassPickupMessages[CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT][MSGCOUNT]
             "\caHA HA HA ACTUALLY PUTTING SHELLS IN THE GUN.",
             "Shells are stupid anyway.",
         }},
-        {{
-            "You got the Grenade Launcher.",
-            "Guaranteed to make friends with campers.",
-            "Should have cut out those fuses ahead of time.",
-            "It's like a pitching machine from hell. And brown. And explosive.",
-            "Like skipping rocks except with more dismemberment.",
-            "Do not taunt the happy fun ball.",
-            "Going into melee is not advised.",
-            "\caHOLY CRAP IT BOUNCES.",
-            "And just how in the hell did you fit 5 grenades into there?",
-            "... where's the rockets?",
-        }},
+        {
+            {
+                "You got the Grenade Launcher.",
+                "Guaranteed to make friends with campers.",
+                "Should have cut out those fuses ahead of time.",
+                "It's like a pitching machine from hell. And brown. And explosive.",
+                "Like skipping rocks except with more dismemberment.",
+                "Do not taunt the happy fun ball.",
+                "Going into melee is not advised.",
+                "\caHOLY CRAP IT BOUNCES.",
+                "And just how in the hell did you fit 5 grenades into there?",
+                "... where's the rockets?",
+            },
+            {
+                "You got the Widowmaker Shotgun.",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+            },
+        },
         {{
             "You got the Nailgun.",
             "What construction is this good for?",
@@ -10603,4 +10617,4 @@ str MiscPickupMessages[MISCPICKUPCOUNT][LOADOUTCOUNT][MSGCOUNT] =
     }},
 };
 
-// jesus fucking christ, 10600 lines
+// jesus fucking christ, 10620 lines

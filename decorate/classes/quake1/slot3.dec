@@ -1,4 +1,5 @@
 // Tokens
+
 actor SamsaraQuake1LoadoutSlot3 : Boolean {}
 actor Ranger_ExplosiveSelected : Boolean { Inventory.InterHubAmount 0 }
 
@@ -12,7 +13,7 @@ actor "Grenade Launcher" : SamsaraQuakeWeapon
     Weapon.SlotPriority 0
     Weapon.SelectionOrder 3
     Weapon.AmmoType "RocketAmmo"
-    Weapon.AmmoGive 5
+    //Weapon.AmmoGive 5
     Weapon.AmmoUse 1
     Tag "Grenade Launcher (Normal Grenades)"
     +EXPLOSIVE
@@ -57,7 +58,7 @@ actor "Grenade Launcher" : SamsaraQuakeWeapon
         QGRL A 0 A_ReFire
         goto Ready
 
-	  AltFire:
+      AltFire:
         QGRL A 8 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         TNT1 A 0 A_SelectWeapon("Grenade Launcher DOE")
         goto Deselect
@@ -232,7 +233,7 @@ actor QuakeGrenade
     +DEHEXPLOSION
     //+GRENADETRAIL
     +MOVEWITHSECTOR
-	+USEBOUNCESTATE
+    +USEBOUNCESTATE
     ReactionTime 92
     BounceSound "quakeweps/grenadebounce"
     Obituary "$SAMSARA_RANGER_OB_SLOT3_1"
@@ -241,77 +242,77 @@ actor QuakeGrenade
     {
       Spawn:
         QGRN A 0
-		QGRN A 0 A_Jump(32,2)
-		QGRN A 0 A_ChangeFlag(EXTREMEDEATH, true)
+        QGRN A 0 A_Jump(32,2)
+        QGRN A 0 A_ChangeFlag(EXTREMEDEATH, true)
         QGRN A 0 A_Recoil(-1) // to stop the "freeze in midair" bug from happening
         goto SpawnLoop
-        
+
       Bounce.Floor:
-	  Bounce.Ceiling:
-	  Bounce.Wall:
+      Bounce.Ceiling:
+      Bounce.Wall:
       SpawnLoop:
-	    QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN C 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN C 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN D 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN D 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN E 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN E 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN F 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN F 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN G 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN G 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN H 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN H 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN I 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN I 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN J 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN J 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN K 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN K 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN L 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
-		QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QGRN AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QGRN L 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QGRN A 0 A_Countdown
         loop
-        
+
       StopSpawnStart:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
@@ -320,14 +321,14 @@ actor QuakeGrenade
         TNT1 A 0 A_ChangeFlag("BOUNCEONWALLS",false)
         TNT1 A 0 A_ChangeFlag("USEBOUNCESTATE",false)
         goto StopSpawn
-        
+
       StopSpawn:
         QGRN C 1 A_Stop
         QGRN A 0 A_Countdown
         loop
-        
+
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -340,7 +341,7 @@ actor QuakeGrenade
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(64,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
         stop
     }
 }
@@ -349,11 +350,11 @@ actor QuakeGrenadeCoop: QuakeGrenade
 {
     +THRUSPECIES
     Species "Player"
-	Damage (45)
-	States
-	{
+    Damage (45)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -366,18 +367,18 @@ actor QuakeGrenadeCoop: QuakeGrenade
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(80,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeCoopImproved: QuakeGrenadeCoop
 {
-	Damage (30)
-	States
-	{
+    Damage (30)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -390,9 +391,9 @@ actor QuakeGrenadeCoopImproved: QuakeGrenadeCoop
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(96,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeQuad: QuakeGrenade
@@ -401,7 +402,7 @@ actor QuakeGrenadeQuad: QuakeGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -423,11 +424,11 @@ actor QuakeGrenadeCoopQuad: QuakeGrenadeQuad
 {
     +THRUSPECIES
     Species "Player"
-	Damage (180)
-	States
-	{
+    Damage (180)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -440,18 +441,18 @@ actor QuakeGrenadeCoopQuad: QuakeGrenadeQuad
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(320,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeCoopQuadImproved: QuakeGrenadeCoopQuad
 {
-	Damage (120)
-	States
-	{
+    Damage (120)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -464,9 +465,9 @@ actor QuakeGrenadeCoopQuadImproved: QuakeGrenadeCoopQuad
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(384,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosion")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeSoundRerelease : QuakeGrenade
@@ -475,7 +476,7 @@ actor QuakeGrenadeSoundRerelease : QuakeGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -488,7 +489,7 @@ actor QuakeGrenadeSoundRerelease : QuakeGrenade
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(64,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
         stop
     }
 }
@@ -497,11 +498,11 @@ actor QuakeGrenadeCoopSoundRerelease : QuakeGrenadeSoundRerelease
 {
     +THRUSPECIES
     Species "Player"
-	Damage (45)
-	States
-	{
+    Damage (45)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -514,18 +515,18 @@ actor QuakeGrenadeCoopSoundRerelease : QuakeGrenadeSoundRerelease
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(80,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeCoopSoundRereleaseImproved : QuakeGrenadeCoopSoundRerelease
 {
-	Damage (30)
-	States
-	{
+    Damage (30)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -538,9 +539,9 @@ actor QuakeGrenadeCoopSoundRereleaseImproved : QuakeGrenadeCoopSoundRerelease
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(96,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeQuadSoundRerelease : QuakeGrenadeSoundRerelease
@@ -549,7 +550,7 @@ actor QuakeGrenadeQuadSoundRerelease : QuakeGrenadeSoundRerelease
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -571,11 +572,11 @@ actor QuakeGrenadeCoopQuadSoundRerelease : QuakeGrenadeQuadSoundRerelease
 {
     +THRUSPECIES
     Species "Player"
-	Damage (180)
-	States
-	{
+    Damage (180)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -588,18 +589,18 @@ actor QuakeGrenadeCoopQuadSoundRerelease : QuakeGrenadeQuadSoundRerelease
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(320,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeCoopQuadSoundRereleaseImproved : QuakeGrenadeCoopQuadSoundRerelease
 {
-	Damage (120)
-	States
-	{
+    Damage (120)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -612,9 +613,9 @@ actor QuakeGrenadeCoopQuadSoundRereleaseImproved : QuakeGrenadeCoopQuadSoundRere
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(384,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundRerelease")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeSoundDMC : QuakeGrenade
@@ -622,7 +623,7 @@ actor QuakeGrenadeSoundDMC : QuakeGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -635,7 +636,7 @@ actor QuakeGrenadeSoundDMC : QuakeGrenade
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(64,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
         stop
     }
 }
@@ -644,11 +645,11 @@ actor QuakeGrenadeCoopSoundDMC : QuakeGrenadeSoundDMC
 {
     +THRUSPECIES
     Species "Player"
-	Damage (45)
-	States
-	{
+    Damage (45)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -661,18 +662,18 @@ actor QuakeGrenadeCoopSoundDMC : QuakeGrenadeSoundDMC
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(80,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeCoopSoundDMCImproved : QuakeGrenadeCoopSoundDMC
 {
-	Damage (30)
-	States
-	{
+    Damage (30)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -685,9 +686,9 @@ actor QuakeGrenadeCoopSoundDMCImproved : QuakeGrenadeCoopSoundDMC
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(96,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeQuadSoundDMC : QuakeGrenadeSoundDMC
@@ -696,7 +697,7 @@ actor QuakeGrenadeQuadSoundDMC : QuakeGrenadeSoundDMC
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -718,11 +719,11 @@ actor QuakeGrenadeCoopQuadSoundDMC : QuakeGrenadeQuadSoundDMC
 {
     +THRUSPECIES
     Species "Player"
-	Damage (180)
-	States
-	{
+    Damage (180)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -735,18 +736,18 @@ actor QuakeGrenadeCoopQuadSoundDMC : QuakeGrenadeQuadSoundDMC
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(320,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
         stop
-	}
+    }
 }
 
 actor QuakeGrenadeCoopQuadSoundDMCImproved : QuakeGrenadeCoopQuadSoundDMC
 {
-	Damage (120)
-	States
-	{
+    Damage (120)
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -759,9 +760,9 @@ actor QuakeGrenadeCoopQuadSoundDMCImproved : QuakeGrenadeCoopQuadSoundDMC
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(384,128)
-		TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
+        TNT1 A 1 A_SpawnItemEx("QuakeExplosionSoundDMC")
         stop
-	}
+    }
 }
 
 // Multi grenades
@@ -801,7 +802,7 @@ actor "Grenade Launcher DOE" : "Grenade Launcher"
         QMGL A 0 A_ReFire
         goto Ready
 
-	  AltFire:
+      AltFire:
         QMGL A 8 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         TNT1 A 0 A_SelectWeapon("Grenade Launcher")
         goto Deselect
@@ -953,7 +954,7 @@ actor QuakeClusterGrenade: QuakeGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -979,7 +980,7 @@ actor QuakeClusterGrnCoop: QuakeClusterGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1003,7 +1004,7 @@ actor QuadClusterGrenade: QuakeClusterGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1029,7 +1030,7 @@ actor QuadClusterGrnCoop: QuadClusterGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1059,54 +1060,54 @@ actor QuakeTinyGrenade: QuakeGrenade
     {
       Spawn:
         QMGR A 0
-		QMGR A 0 A_Jump(32,2)
-		QMGR A 0 A_ChangeFlag(EXTREMEDEATH, true)
+        QMGR A 0 A_Jump(32,2)
+        QMGR A 0 A_ChangeFlag(EXTREMEDEATH, true)
         QMGR A 0 ThrustThingZ(0, random(0, 8), random(0, 1), 1)
         goto SpawnLoop
-        
+
       Bounce.Floor:
-	  Bounce.Ceiling:
-	  Bounce.Wall:
+      Bounce.Ceiling:
+      Bounce.Wall:
       SpawnLoop:
-	    QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR C 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR C 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR D 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR D 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR E 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR E 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR F 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR F 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR G 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR G 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR H 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
-		QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
+        QMGR AAA 0 A_SpawnItemEx(QuakeSmokeTrail,Random2(5),0,Random2(5),0,0,FRandom(0.1,0.5),Random(1,360),0,128)
         QMGR H 1 A_JumpIf(ACS_NamedExecuteWithResult("QuakeGrenade", momx, momy, momz) < 1, "StopSpawnStart")
         QMGR A 0 A_Countdown
         loop
-	  
-	  StopSpawnStart:
+
+      StopSpawnStart:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1114,15 +1115,15 @@ actor QuakeTinyGrenade: QuakeGrenade
         TNT1 A 0 A_ChangeFlag("BOUNCEONWALLS",false)
         TNT1 A 0 A_ChangeFlag("USEBOUNCESTATE",false)
         goto StopSpawn
-        
+
       StopSpawn:
         QMGR H 1 A_Stop
         QMGR A 0 A_Jump(64, "StopSpawn")
         QMGR A 0 A_Countdown
         loop
-        
+
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1135,7 +1136,7 @@ actor QuakeTinyGrenade: QuakeGrenade
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(25,91)
-		TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosion")
+        TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosion")
         stop
     }
 }
@@ -1145,10 +1146,10 @@ actor QuakeTinyGrnCoop: QuakeTinyGrenade
     +THRUSPECIES
     Species "Player"
     Damage (4)
-	States
-	{
+    States
+    {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1161,9 +1162,9 @@ actor QuakeTinyGrnCoop: QuakeTinyGrenade
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(32,91)
-		TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosion")
+        TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosion")
         stop
-	}
+    }
 }
 
 actor QuadTinyGrenade: QuakeTinyGrenade
@@ -1172,7 +1173,7 @@ actor QuadTinyGrenade: QuakeTinyGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1198,7 +1199,7 @@ actor QuadTinyGrnCoop: QuadTinyGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1222,7 +1223,7 @@ actor QuakeClusterGrenadeSoundRerelease : QuakeClusterGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1248,7 +1249,7 @@ actor QuakeClusterGrnCoopSoundRerelease : QuakeClusterGrenadeSoundRerelease
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1272,7 +1273,7 @@ actor QuadClusterGrenadeSoundRerelease : QuakeClusterGrenadeSoundRerelease
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1298,7 +1299,7 @@ actor QuadClusterGrnCoopSoundRerelease : QuadClusterGrenadeSoundRerelease
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1322,7 +1323,7 @@ actor QuakeTinyGrenadeSoundRerelease : QuakeTinyGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1335,7 +1336,7 @@ actor QuakeTinyGrenadeSoundRerelease : QuakeTinyGrenade
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(25,91)
-		TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundRerelease")
+        TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundRerelease")
         stop
     }
 }
@@ -1348,7 +1349,7 @@ actor QuakeTinyGrnCoopSoundRerelease : QuakeTinyGrenadeSoundRerelease
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1361,7 +1362,7 @@ actor QuakeTinyGrnCoopSoundRerelease : QuakeTinyGrenadeSoundRerelease
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(32,91)
-		TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundRerelease")
+        TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundRerelease")
         stop
     }
 }
@@ -1372,7 +1373,7 @@ actor QuadTinyGrenadeSoundRerelease : QuakeTinyGrenadeSoundRerelease
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1398,7 +1399,7 @@ actor QuadTinyGrnCoopSoundRerelease : QuadTinyGrenadeSoundRerelease
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1421,7 +1422,7 @@ actor QuakeClusterGrenadeSoundDMC : QuakeClusterGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1447,7 +1448,7 @@ actor QuakeClusterGrnCoopSoundDMC : QuakeClusterGrenadeSoundDMC
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1471,7 +1472,7 @@ actor QuadClusterGrenadeSoundDMC : QuakeClusterGrenadeSoundDMC
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1497,7 +1498,7 @@ actor QuadClusterGrnCoopSoundDMC : QuadClusterGrenadeSoundDMC
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1520,7 +1521,7 @@ actor QuakeTinyGrenadeSoundDMC : QuakeTinyGrenade
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1533,7 +1534,7 @@ actor QuakeTinyGrenadeSoundDMC : QuakeTinyGrenade
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(25,91)
-		TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundDMC")
+        TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundDMC")
         stop
     }
 }
@@ -1546,7 +1547,7 @@ actor QuakeTinyGrnCoopSoundDMC : QuakeTinyGrenadeSoundDMC
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1559,7 +1560,7 @@ actor QuakeTinyGrnCoopSoundDMC : QuakeTinyGrenadeSoundDMC
         TNT1 A 0 A_TakeInventory("PowerSamsaraRangerNoSelfDamage",1,0,AAPTR_TARGET)
         TNT1 A 0 A_ChangeFlag("FORCERADIUSDMG",true)
         TNT1 A 0 A_Explode(32,91)
-		TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundDMC")
+        TNT1 A 1 A_SpawnItemEx("QuakeTinyExplosionSoundDMC")
         stop
     }
 }
@@ -1570,7 +1571,7 @@ actor QuadTinyGrenadeSoundDMC : QuakeTinyGrenadeSoundDMC
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1596,7 +1597,7 @@ actor QuadTinyGrnCoopSoundDMC : QuadTinyGrenadeSoundDMC
     States
     {
       Bounce.Actor.Creature:
-	  Death:
+      Death:
         TNT1 A 0 A_ChangeFlag("ALLOWBOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONACTORS",false)
         TNT1 A 0 A_ChangeFlag("BOUNCEONCEILINGS",false)
@@ -1616,24 +1617,26 @@ actor QuadTinyGrnCoopSoundDMC : QuadTinyGrenadeSoundDMC
 
 // Widowmaker
 
-actor "Quake_Widowmaker" : SamsaraQuakeWeapon
+actor "Q1Widowmaker" : SamsaraQuakeWeapon
 {
     Inventory.PickupMessage "You got the Widowmaker Shotgun."
     Weapon.SelectionOrder 3
     Weapon.Kickback 100
     Weapon.AmmoType "Shell"
-    Weapon.AmmoGive 0 //16
-    Weapon.AmmoUse 2
-    Obituary "$SAMSARA_RANGER_OB_SLOT2"
+    //Weapon.AmmoGive 16
+    Weapon.AmmoUse 1 // arcane dimensions uses 3 shells, but could be switched to and fired with 2 shells (albeit with reduced power), and is unusable with 1 shell
+    Obituary "$SAMSARA_RANGER_OB_SLOT3_LOADOUT1"
     Tag "Widowmaker"
     States
     {
       Spawn:
-        QDBS Z -1
+        QWID Z -1
         stop
+
       Ready:
-        QDBS A 1 A_WeaponReady
+        QWID A 1 A_WeaponReady
         loop
+
       Select:
         TNT1 A 0 A_TakeInventory("Ranger_AxeSelected")
         TNT1 A 0 A_GiveInventory("Ranger_GunSelected")
@@ -1641,86 +1644,88 @@ actor "Quake_Widowmaker" : SamsaraQuakeWeapon
         TNT1 A 0 A_TakeInventory("Ranger_NailSelected")
         TNT1 A 0 A_TakeInventory("Ranger_PlasmaSelected")
         goto Super::Select
+
       Fire:
-        QDBS B 0 A_GiveInventory("SamsaraQuakeWeaponAlert")
-        QDBS B 0 A_GiveInventory("SamsaraQuakeWidowmakerAttackHandler")
-        QDBS BC 2 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        QDBS D 4 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        QDBS EFG 7 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        QDBS A 10 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        QDBS A 0 A_ReFire
+        QWID B 0 A_GiveInventory("SamsaraQuakeWeaponAlert")
+        QWID B 0 A_GiveInventory("SamsaraQuakeWidowmakerAttackHandler")
+        QWID BC 2 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QWID D 4 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QWID EFG 7 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QWID A 10 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QWID A 0 A_ReFire
         goto Ready
 
     }
-} 
+}
 
-actor SamsaraQuakeWidowmakerAttackHandler : Trigger
+actor SamsaraQuakeWidowmakerAttackHandler : SamsaraQuakeDoubleShotgunAttackHandler
 {
     States
     {
       // Ammo checking/taking stuff
       Pickup:
-        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"PickupPlaySound")
+      PickupWidowmaker:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"PickupPlaySoundWidowmaker")
         TNT1 A 0 A_JumpIfInventory("Shell",2,1)
-        stop
+        goto PickupDSG // 1 shell left? use the double shotgun version
         TNT1 A 0 A_TakeInventory("Shell",2)
-        goto PickupPlaySound
+        goto PickupPlaySoundWidowmaker
 
       // Sound stuff
-      PickupPlaySound:
-        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",2,"PickupAttack") // defined in attack state
-        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupPlaySoundRerelease")
+      PickupPlaySoundWidowmaker:
+        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",2,"PickupAttackWidowmaker") // defined in attack state
+        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupPlaySoundWidowmakerRerelease")
       // Original sounds
-      PickupPlaySoundOriginal:
+      PickupPlaySoundWidowmakerOriginal:
         TNT1 A 0 A_PlaySound("quakeweps/widowfire",CHAN_WEAPON)
-        goto PickupAttack
+        goto PickupAttackWidowmaker
 
       // Rerelease sounds
-      PickupPlaySoundRerelease:
-        TNT1 A 0 A_PlaySound("quake/rerelease/impalwall",CHAN_WEAPON)
-        goto PickupAttack
+      PickupPlaySoundWidowmakerRerelease:
+        TNT1 A 0 A_PlaySound("quakeweps/rerelease/widowfire",CHAN_WEAPON)
+        goto PickupAttackWidowmaker
 
       // Attack stuff
-      PickupAttack:
-        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",2,"PickupAttackDMC")
+      PickupAttackWidowmaker:
+        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",2,"PickupAttackWidowmakerDMC")
       // Original/Rerelease sounds (of which there are not actually any)
-      PickupAttackQuakeI:
-        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackQuakeICoop")
-        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackQuakeICoop")
-      PickupAttackQuakeIDM:
+      PickupAttackWidowmakerQuakeI:
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackWidowmakerQuakeICoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackWidowmakerQuakeICoop")
+      PickupAttackWidowmakerQuakeIDM:
         TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhost",FBF_NORANDOM|FBF_NOFLASH)
-        goto PickupFinish
+        goto PickupFinishWidowmaker
 
-      PickupAttackQuakeICoop:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackQuakeICoopImproved")
+      PickupAttackWidowmakerQuakeICoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackWidowmakerQuakeICoopImproved")
         TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostCoop",FBF_NORANDOM|FBF_NOFLASH)
-        goto PickupFinish
+        goto PickupFinishWidowmaker
 
-      PickupAttackQuakeICoopImproved:
+      PickupAttackWidowmakerQuakeICoopImproved:
         TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostCoop",FBF_NORANDOM|FBF_NOFLASH)
-        goto PickupFinish
+        goto PickupFinishWidowmaker
 
       // Deathmatch Classic sounds
-      PickupAttackDMC:
+      PickupAttackWidowmakerDMC:
         TNT1 A 0 A_PlaySound("quakeweps/dmc/widowfire",CHAN_WEAPON)
-        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackDMCCoop")
-        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackDMCCoop")
-      PickupAttackDMCDM:
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackWidowmakerDMCCoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackWidowmakerDMCCoop")
+      PickupAttackWidowmakerDMCDM:
         TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostSoundDMC",FBF_NORANDOM|FBF_NOFLASH)
-        goto PickupFinish
+        goto PickupFinishWidowmaker
 
-      PickupAttackDMCCoop:
-        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackDMCCoopImproved")
+      PickupAttackWidowmakerDMCCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackWidowmakerDMCCoopImproved")
         TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostCoopSoundDMC",FBF_NORANDOM|FBF_NOFLASH)
-        goto PickupFinish
+        goto PickupFinishWidowmaker
 
-      PickupAttackDMCCoopImproved:
+      PickupAttackWidowmakerDMCCoopImproved:
         TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostCoopSoundDMC",FBF_NORANDOM|FBF_NOFLASH)
-        goto PickupFinish
+        goto PickupFinishWidowmaker
 
       // Finishing stuff
-      PickupFinish:
+      PickupFinishWidowmaker:
         TNT1 A 0 ACS_NamedExecuteAlways("SamsaraRecoil", 0, 6, 5, 20)
         stop
     }
-} 
+}

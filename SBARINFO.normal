@@ -3476,9 +3476,10 @@ StatusBar Normal, ForceScaled
 
         //Shells
         IsSelected "Single Shotgun", "Double Shotgun" { DrawImage "Q1_AMMO1", 224, 176; }
+        IsSelected Q1Widowmaker { DrawImage "Q1_AMMO1", 224, 176; }
         //Nails
         IsSelected Nailgun, "Super Nailgun" { DrawImage "Q1_AMMO2", 224, 176; }
-         IsSelected "Nailgun DOE", "Super Nailgun DOE" { DrawImage "Q1DAMMO2", 224, 176; }
+        IsSelected "Nailgun DOE", "Super Nailgun DOE" { DrawImage "Q1DAMMO2", 224, 176; }
         //Rockets
         IsSelected "Grenade Launcher", "  Rocket Launcher  " { DrawImage "Q1_AMMO3", 224, 176; }
         IsSelected "Rocket Powered Impaler" { DrawImage "Q1_AMMO3", 224, 176; }
@@ -3669,7 +3670,11 @@ StatusBar Normal, ForceScaled
             }
 
             // Slot 3
-            InInventory GotWeapon3 { DrawImage "WPQUAK3N", 98, 11; }
+            InInventory GotWeapon3
+            {
+                InInventory SamsaraQuake1LoadoutSlot3 { DrawImage "WPQUAK3N", 98, 11; } // Widowmaker
+                else { DrawImage "WPQUAK3N", 98, 11; } // Grenade Launcher
+            }
 
             IsSelected "Grenade Launcher"
             {
@@ -3678,6 +3683,9 @@ StatusBar Normal, ForceScaled
             } else IsSelected "Grenade Launcher DOE" {
                 DrawImage "QUAK3BRT", 106, 3;
                 DrawImage "WPQUAK3S", 98, 11;
+            } else IsSelected Q1Widowmaker {
+                DrawImage "QUAK3BRT", 106, 3;
+                DrawImage "WPQUAK3Y", 98, 11;
             }
 
             // Slot 4

@@ -6584,7 +6584,7 @@ Model Q2Disruptor
 	Frame Q2DS N 0 "putway04"
 	Frame Q2DS O 0 "putway05"
 
-	Path "Models"
+	Path "Models/Quake2/Disruptor"
 	Model 0 "g_dist.md2"
 	Skin 0 "g_dist.png"
 	Scale 1.25 1.25 1.25

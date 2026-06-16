@@ -2667,7 +2667,7 @@ Model "Rocket Powered Impaler"
    FrameIndex QIMP J 0 9
 }
 
-Model "Quake_Widowmaker"
+Model "Q1Widowmaker"
 {
    Path "models"
    Model 0 "v_shot3.md3"
@@ -2677,16 +2677,16 @@ Model "Quake_Widowmaker"
    Offset 0.0 -1.5 1.0
    NOINTERPOLATION
 
-   FrameIndex QDBS A 0 0
-   FrameIndex QDBS B 0 1
-   FrameIndex QDBS C 0 2
-   FrameIndex QDBS D 0 3
-   FrameIndex QDBS E 0 4
-   FrameIndex QDBS F 0 5
-   FrameIndex QDBS G 0 6
+   FrameIndex QWID A 0 0
+   FrameIndex QWID B 0 1
+   FrameIndex QWID C 0 2
+   FrameIndex QWID D 0 3
+   FrameIndex QWID E 0 4
+   FrameIndex QWID F 0 5
+   FrameIndex QWID G 0 6
 }
 
-Model "Quake_Widowmaker"
+Model "Q1Widowmaker"
 {
    Path "models"
    Model 0 "g_shot3.md3"
@@ -2694,7 +2694,7 @@ Model "Quake_Widowmaker"
    ROTATING
    Scale 1.0 1.0 1.0
 
-   FrameIndex QDBS Z 0 0
+   FrameIndex QWID Z 0 0
 }
 
 Model Quake_GIB1

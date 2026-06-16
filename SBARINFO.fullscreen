@@ -936,6 +936,7 @@ StatusBar Fullscreen, ForceScaled
 
             //Shells
             IsSelected "Single Shotgun", "Double Shotgun" { DrawImage "Q1_AMMO1", 295, 176; }
+            IsSelected Q1Widowmaker { DrawImage "Q1_AMMO1", 295, 176; }
             //Nails
             IsSelected Nailgun, "Super Nailgun" { DrawImage "Q1_AMMO2", 295, 176; }
             IsSelected "Nailgun DOE", "Super Nailgun DOE" { DrawImage "Q1DAMMO2", 295, 176; }
@@ -1011,6 +1012,7 @@ StatusBar Fullscreen, ForceScaled
                 InInventory GotWeapon3 { DrawImage "STYSNUM3", 146, 10; }
 
                 IsSelected "Grenade Launcher", "Grenade Launcher DOE" { DrawImage "STY2NUM3", 146, 10; }
+                else IsSelected Q1Widowmaker { DrawImage "STY2NUM3", 146, 10; }
 
                 // Slot 4
                 InInventory GotWeapon4 { DrawImage "STYSNUM4", 156, 10; }
@@ -5866,6 +5868,7 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected "Explosive Shotgun" { DrawImage "STY2NUM3", 146, 10; }
                 IsSelected "Fusion Pistol" { DrawImage "STY2NUM3", 146, 10; }
                 IsSelected "Grenade Launcher", "Grenade Launcher DOE" { DrawImage "STY2NUM3", 146, 10; } // Need to change
+                IsSelected Q1Widowmaker { DrawImage "STY2NUM3", 146, 10; }
                 IsSelected HeatSeeker { DrawImage "STY2NUM3", 146, 10; }
                 IsSelected "Heavy Assault Weapon" { DrawImage "STY2NUM3", 146, 10; }
                 IsSelected Sawedoff { DrawImage "STY2NUM3", 146, 10; }

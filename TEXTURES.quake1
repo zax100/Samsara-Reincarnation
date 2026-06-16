@@ -117,6 +117,14 @@ Sprite "QDBSZ0", 172, 51
 	Patch "QDBSZ0", 0, 0
 }
 
+Sprite "QWIDZ0", 172, 51
+{
+	XScale 3.400
+	YScale 3.400
+	Offset 82, 51
+	Patch "QWIDZ0", 0, 0
+}
+
 Sprite "UNIQP0", 48, 105
 {
 	XScale 3.400

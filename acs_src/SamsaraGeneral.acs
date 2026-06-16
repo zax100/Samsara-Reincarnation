@@ -2489,6 +2489,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Double Shotgun", INTMAX);
 			TakeInventory("Grenade Launcher", INTMAX);
 			TakeInventory("Grenade Launcher DOE", INTMAX);
+			TakeInventory("Q1Widowmaker", INTMAX);
 			TakeInventory("  Rocket Launcher  ", INTMAX);
 			TakeInventory("  Rocket Launcher DOE  ", INTMAX);
 			TakeInventory("Super Nailgun", INTMAX);
@@ -4188,6 +4189,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
           case SLOT_CHAINSAW:
             if (startmode != 0) { loadoutchoice = GetCVar("samsara_ranger_slot1") > 0 ? GetCVar("samsara_ranger_slot1") - 1 : GetUserCVar(pln, "samsara_cl_ranger_slot1"); }
             else { loadoutchoice = CheckInventory("SamsaraQuake1LoadoutSlot1"); }
+            break;
+
+          case SLOT_SUPERSHOTGUN:
+            if (startmode != 0) { loadoutchoice = GetCVar("samsara_ranger_slot3") > 0 ? GetCVar("samsara_ranger_slot3") - 1 : GetUserCVar(pln, "samsara_cl_ranger_slot3"); }
+            else { loadoutchoice = CheckInventory("SamsaraQuake1LoadoutSlot3"); }
             break;
         }
         break;
@@ -6527,25 +6533,53 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             break;
 
           case SLOT_SUPERSHOTGUN:
-            if (!CheckInventory("Grenade Launcher"))
+            hasweapon = CheckInventory("Grenade Launcher") || CheckInventory("Q1Widowmaker");
+
+            if (loadoutchoice <= 0 || completeloadout) // Grenade Launcher
             {
-                GiveInventory("Grenade Launcher", 1);
-                result = 1;
-            } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
-                GiveInventory("Grenade Launcher", 1);
-                result = 1;
+                if (!hasweapon)
+                {
+                    GiveInventory("Grenade Launcher", 1);
+                    if (!GetCVar("samsara_vanillaquake")) { GiveInventory("Grenade Launcher DOE", 1); }
+                    GiveInventory("RocketAmmo", dmextraammo ? 5 / tossedammo * 5 / 2 : 5 / tossedammo);
+                    result = 1;
+                } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") && (dropped >= 1 || startmode != 0 || !weaponstay)) {
+                    GiveInventory("RocketAmmo", 5 / tossedammo);
+                    result = 1;
+                }
+
+                if (startmode <= -1 || startmode >= 2)
+                {
+                    GiveInventory("RocketAmmo", GetAmmoCapacity("RocketAmmo"));
+                    if (startmode <= -1 && !GetCVar("samsara_vanillaquake")) { GiveInventory("MultiRocketAmmo", GetAmmoCapacity("MultiRocketAmmo")); }
+                }
             }
 
-            if (startmode <= -1 && !GetCVar("samsara_vanillaquake")) { GiveInventory("MultiRocketAmmo", GetAmmoCapacity("MultiRocketAmmo")); }
+            if (loadoutchoice >= 1 || completeloadout) // Widowmaker
+            {
+                if (!hasweapon)
+                {
+                    GiveInventory("Q1Widowmaker", 1);
+                    GiveInventory("Shell", dmextraammo ? 16 / tossedammo * 5 / 2 : 16 / tossedammo);
+                    result = 1;
+                } else if (CheckInventory("Shell") < GetAmmoCapacity("Shell") && (dropped >= 1 || startmode != 0 || !weaponstay)) {
+                    GiveInventory("Shell", 16 / tossedammo);
+                    result = 1;
+                }
+
+                if (startmode <= -1 || startmode >= 2) { GiveInventory("Shell", GetAmmoCapacity("Shell")); }
+            }
             break;
 
           case SLOT_CHAINGUN:
             if (!CheckInventory("Nailgun"))
             {
                 GiveInventory("Nailgun", 1);
+                if (!GetCVar("samsara_vanillaquake")) { GiveInventory("Nailgun DOE", 1); }
                 result = 1;
             } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
                 GiveInventory("Nailgun", 1);
+                if (!GetCVar("samsara_vanillaquake")) { GiveInventory("Nailgun DOE", 1); }
                 result = 1;
             }
 
@@ -6556,9 +6590,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             if (!CheckInventory("  Rocket Launcher  "))
             {
                 GiveInventory("  Rocket Launcher  ", 1);
+                if (!GetCVar("samsara_vanillaquake")) { GiveInventory("  Rocket Launcher DOE  ", 1); }
                 result = 1;
             } else if (CheckInventory("RocketAmmo") < GetAmmoCapacity("RocketAmmo") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
                 GiveInventory("  Rocket Launcher  ", 1);
+                if (!GetCVar("samsara_vanillaquake")) { GiveInventory("  Rocket Launcher DOE  ", 1); }
                 result = 1;
             }
 
@@ -6569,9 +6605,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             if (!CheckInventory("Super Nailgun"))
             {
                 GiveInventory("Super Nailgun", 1);
+                if (!GetCVar("samsara_vanillaquake")) { GiveInventory("Super Nailgun DOE", 1); }
                 result = 1;
             } else if (CheckInventory("Clip") < GetAmmoCapacity("Clip") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
                 GiveInventory("Super Nailgun", 1);
+                if (!GetCVar("samsara_vanillaquake")) { GiveInventory("Super Nailgun DOE", 1); }
                 result = 1;
             }
 
@@ -6582,9 +6620,11 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             if (!CheckInventory("Thunderbolt"))
             {
                 GiveInventory("Thunderbolt", 1);
+                if (!GetCVar("samsara_vanillaquake")) { GiveInventory("Thunderbolt DOE", 1); }
                 result = 1;
             } else if (CheckInventory("Cell") < GetAmmoCapacity("Cell") / tosseddiv && (dropped >= 1 || startmode != 0 || !weaponstay)) {
                 GiveInventory("Thunderbolt", 1);
+                if (!GetCVar("samsara_vanillaquake")) { GiveInventory("Thunderbolt DOE", 1); }
                 result = 1;
             }
 
@@ -12886,6 +12926,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_duke_slot4", false);
 		SetCVar("samsara_cl_dukelab_slot4", false);
 		SetCVar("samsara_cl_ranger_slot1", false);
+		SetCVar("samsara_cl_ranger_slot3", false);
 		SetCVar("samsara_cl_freeman_fallbackmelee", false);
 		SetCVar("samsara_cl_freeman_slot1", false);
 		SetCVar("samsara_cl_freeman_slot3", false);
@@ -13060,6 +13101,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_duke_slot4", false);
 		SetCVar("samsara_cl_dukelab_slot4", false);
 		SetCVar("samsara_cl_ranger_slot1", false);
+		SetCVar("samsara_cl_ranger_slot3", false);
 		SetCVar("samsara_cl_freeman_fallbackmelee", false);
 		SetCVar("samsara_cl_freeman_slot1", false);
 		SetCVar("samsara_cl_freeman_slot3", false);
@@ -13234,6 +13276,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_duke_slot4", false);
 		SetCVar("samsara_cl_dukelab_slot4", false);
 		SetCVar("samsara_cl_ranger_slot1", false);
+		SetCVar("samsara_cl_ranger_slot3", false);
 		SetCVar("samsara_cl_freeman_fallbackmelee", false);
 		SetCVar("samsara_cl_freeman_slot1", false);
 		SetCVar("samsara_cl_freeman_slot3", false);
@@ -13409,6 +13452,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_duke_slot4", false);
 		SetCVar("samsara_cl_dukelab_slot4", false);
 		SetCVar("samsara_cl_ranger_slot1", false);
+		SetCVar("samsara_cl_ranger_slot3", false);
 		SetCVar("samsara_cl_freeman_fallbackmelee", false);
 		SetCVar("samsara_cl_freeman_slot1", false);
 		SetCVar("samsara_cl_freeman_slot3", false);
@@ -13583,6 +13627,7 @@ script "SamsaraClientSidePresetSelection" (void)
 		SetCVar("samsara_cl_duke_slot4", true);
 		SetCVar("samsara_cl_dukelab_slot4", true);
 		SetCVar("samsara_cl_ranger_slot1", false);
+		SetCVar("samsara_cl_ranger_slot3", false);
 		SetCVar("samsara_cl_freeman_fallbackmelee", false);
 		SetCVar("samsara_cl_freeman_slot1", false);
 		SetCVar("samsara_cl_freeman_slot3", false);
@@ -14020,6 +14065,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_duke_slot4", 0);
 		SetCVar("samsara_dukelab_slot4", 0);
 		SetCVar("samsara_ranger_slot1", 0);
+		SetCVar("samsara_ranger_slot3", 0);
 		SetCVar("samsara_freeman_fallbackmelee", 0);
 		SetCVar("samsara_freeman_slot1", 0);
 		SetCVar("samsara_freeman_slot3", 0);
@@ -14449,6 +14495,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_duke_slot4", 0);
 		SetCVar("samsara_dukelab_slot4", 0);
 		SetCVar("samsara_ranger_slot1", 0);
+		SetCVar("samsara_ranger_slot3", 0);
 		SetCVar("samsara_freeman_fallbackmelee", 0);
 		SetCVar("samsara_freeman_slot1", 0);
 		SetCVar("samsara_freeman_slot3", 0);
@@ -14878,6 +14925,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_duke_slot4", 0);
 		SetCVar("samsara_dukelab_slot4", 0);
 		SetCVar("samsara_ranger_slot1", 0);
+		SetCVar("samsara_ranger_slot3", 0);
 		SetCVar("samsara_freeman_fallbackmelee", 0);
 		SetCVar("samsara_freeman_slot1", 0);
 		SetCVar("samsara_freeman_slot3", 0);
@@ -15308,6 +15356,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_duke_slot4", 0);
 		SetCVar("samsara_dukelab_slot4", 0);
 		SetCVar("samsara_ranger_slot1", 0);
+		SetCVar("samsara_ranger_slot3", 0);
 		SetCVar("samsara_freeman_fallbackmelee", 0);
 		SetCVar("samsara_freeman_slot1", 0);
 		SetCVar("samsara_freeman_slot3", 0);
@@ -15743,6 +15792,7 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_duke_slot4", 0);
 		SetCVar("samsara_dukelab_slot4", 0);
 		SetCVar("samsara_ranger_slot1", 0);
+		SetCVar("samsara_ranger_slot3", 0);
 		SetCVar("samsara_freeman_fallbackmelee", 0);
 		SetCVar("samsara_freeman_slot1", 0);
 		SetCVar("samsara_freeman_slot3", 0);

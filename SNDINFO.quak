@@ -330,9 +330,9 @@ plasmacell/dmc/hit Sounds/Quake/pboltexp_dmc.flac
 $alias plasmacell/dmc/fire HLShockRoach/Discharge
 $alias plasmacell/dmc/fly HLShockRoach/Recharge
 
-quakeweps/widowfire	Sounds/ranger/widow_fire.wav
-$alias quake/rerelease/impalwall      Quake3/ShotGun/Fire
-quakeweps/dmc/widowfire	Sounds/ranger/widow_fire2.wav	//from counter-strike
+quakeweps/widowfire                  Sounds/ranger/widow_fire.wav
+$alias quakeweps/rerelease/widowfire Quake3/ShotGun/Fire
+quakeweps/dmc/widowfire              Sounds/ranger/widow_fire2.wav //from counter-strike
 
 DarkSideAI/Ranger/Taunt				sounds/ranger/plyrjmp8.ogg
 $random DarkSideAI/Ranger/Pain		{ ranger/pain100_1 ranger/pain100_2 }

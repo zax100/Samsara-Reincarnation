@@ -256,7 +256,7 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
         {"Mjolnir",                "",           "", "ForceCheck", ""}, // a loadout weapon uses no ammo type, uses script for proper ammo handling for equipmentstart 2
         {"Single Shotgun",         "",           "", "",           ""},
         {"Double Shotgun",         "Shell",      "", "",           ""},
-        {"Grenade Launcher",       "RocketAmmo", "", "",           ""},
+        {"Grenade Launcher",       "",           "", "ForceCheck", ""}, // a loadout weapon uses a different ammo type, uses script for proper ammo handling for equipmentstart 2
         {"Nailgun",                "Clip",       "", "",           ""},
         {"  Rocket Launcher  ",    "RocketAmmo", "", "",           ""},
         {"Super Nailgun",          "Clip",       "", "",           ""},
@@ -732,7 +732,7 @@ str ClassHotKeyWeapon[CLASSCOUNT][MAXMODES][SLOTCOUNT + UNIQUECOUNT][LOADOUTCOUN
         {"Steel Knuckles"}, {"KKV-7 SMG Flechette"}, {".44 Magnum Mega Class A1"}, {"WSTE-M5 Combat Shotgun"}, {"Fusion Pistol"}, {"MA-75B Assault Rifle"}, {"SPNKR-XP SSM Launcher"}, {"TOZT-7 Napalm Unit"}, {"ONI-71 Wave Motion Cannon"}, {"Alien Weapon"}, {" Alien Weapon "}, {""}, {""}, {""}, {"SPNKR-25 Auto Cannon"},
     }},
     {{
-        {"QuakeAxe"}, {"Mjolnir", "Q1Chainsaw"}, {"Single Shotgun"}, {"Double Shotgun"}, {"Grenade Launcher"}, {"Nailgun"}, {"  Rocket Launcher  "}, {"Super Nailgun"}, {"Thunderbolt"}, {"Laser Cannon"}, {""}, {""}, {""}, {""}, {"Rocket Powered Impaler"},
+        {"QuakeAxe"}, {"Mjolnir", "Q1Chainsaw"}, {"Single Shotgun"}, {"Double Shotgun"}, {"Grenade Launcher", "Q1Widowmaker"}, {"Nailgun"}, {"  Rocket Launcher  "}, {"Super Nailgun"}, {"Thunderbolt"}, {"Laser Cannon"}, {""}, {""}, {""}, {""}, {"Rocket Powered Impaler"},
     }},
     {
         {
@@ -1080,7 +1080,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 		{
 			{ "QuakeAxe", "Q1Chainsaw", "", "", "", "", "", "", "", "" },
 			{ "Single Shotgun", "", "", "", "", "", "", "", "", "" },
-			{ "Double Shotgun", "", "", "", "", "", "", "", "", "" },
+			{ "Double Shotgun", "Q1Widowmaker", "", "", "", "", "", "", "", "" },
 			{ "Nailgun", "Nailgun DOE", "", "", "", "", "", "", "", "" },
 			{ "Super Nailgun", "Super Nailgun DOE", "", "", "", "", "", "", "", "" },
 			{ "Grenade Launcher", "Grenade Launcher DOE", "", "", "", "", "", "", "", "" },
