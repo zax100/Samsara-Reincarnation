@@ -1,4 +1,8 @@
+// Tokens
+actor SamsaraQuake1LoadoutSlot3 : Boolean {}
 actor Ranger_ExplosiveSelected : Boolean { Inventory.InterHubAmount 0 }
+
+// Grenade Launcher
 
 // Normal grenades
 
@@ -1609,3 +1613,114 @@ actor QuadTinyGrnCoopSoundDMC : QuadTinyGrenadeSoundDMC
         stop
     }
 }
+
+// Widowmaker
+
+actor "Quake_Widowmaker" : SamsaraQuakeWeapon
+{
+    Inventory.PickupMessage "You got the Widowmaker Shotgun."
+    Weapon.SelectionOrder 3
+    Weapon.Kickback 100
+    Weapon.AmmoType "Shell"
+    Weapon.AmmoGive 0 //16
+    Weapon.AmmoUse 2
+    Obituary "$SAMSARA_RANGER_OB_SLOT2"
+    Tag "Widowmaker"
+    States
+    {
+      Spawn:
+        QDBS Z -1
+        stop
+      Ready:
+        QDBS A 1 A_WeaponReady
+        loop
+      Select:
+        TNT1 A 0 A_TakeInventory("Ranger_AxeSelected")
+        TNT1 A 0 A_GiveInventory("Ranger_GunSelected")
+        TNT1 A 0 A_TakeInventory("Ranger_ExplosiveSelected")
+        TNT1 A 0 A_TakeInventory("Ranger_NailSelected")
+        TNT1 A 0 A_TakeInventory("Ranger_PlasmaSelected")
+        goto Super::Select
+      Fire:
+        QDBS B 0 A_GiveInventory("SamsaraQuakeWeaponAlert")
+        QDBS B 0 A_GiveInventory("SamsaraQuakeWidowmakerAttackHandler")
+        QDBS BC 2 Bright A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QDBS D 4 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QDBS EFG 7 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QDBS A 10 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        QDBS A 0 A_ReFire
+        goto Ready
+
+    }
+} 
+
+actor SamsaraQuakeWidowmakerAttackHandler : Trigger
+{
+    States
+    {
+      // Ammo checking/taking stuff
+      Pickup:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"PickupPlaySound")
+        TNT1 A 0 A_JumpIfInventory("Shell",2,1)
+        stop
+        TNT1 A 0 A_TakeInventory("Shell",2)
+        goto PickupPlaySound
+
+      // Sound stuff
+      PickupPlaySound:
+        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",2,"PickupAttack") // defined in attack state
+        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",1,"PickupPlaySoundRerelease")
+      // Original sounds
+      PickupPlaySoundOriginal:
+        TNT1 A 0 A_PlaySound("quakeweps/widowfire",CHAN_WEAPON)
+        goto PickupAttack
+
+      // Rerelease sounds
+      PickupPlaySoundRerelease:
+        TNT1 A 0 A_PlaySound("quake/rerelease/impalwall",CHAN_WEAPON)
+        goto PickupAttack
+
+      // Attack stuff
+      PickupAttack:
+        TNT1 A 0 A_JumpIfInventory("SamsaraAlternateSoundToken",2,"PickupAttackDMC")
+      // Original/Rerelease sounds (of which there are not actually any)
+      PickupAttackQuakeI:
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackQuakeICoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackQuakeICoop")
+      PickupAttackQuakeIDM:
+        TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhost",FBF_NORANDOM|FBF_NOFLASH)
+        goto PickupFinish
+
+      PickupAttackQuakeICoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackQuakeICoopImproved")
+        TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostCoop",FBF_NORANDOM|FBF_NOFLASH)
+        goto PickupFinish
+
+      PickupAttackQuakeICoopImproved:
+        TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostCoop",FBF_NORANDOM|FBF_NOFLASH)
+        goto PickupFinish
+
+      // Deathmatch Classic sounds
+      PickupAttackDMC:
+        TNT1 A 0 A_PlaySound("quakeweps/dmc/widowfire",CHAN_WEAPON)
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackDMCCoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackDMCCoop")
+      PickupAttackDMCDM:
+        TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostSoundDMC",FBF_NORANDOM|FBF_NOFLASH)
+        goto PickupFinish
+
+      PickupAttackDMCCoop:
+        TNT1 A 0 A_JumpIfInventory("SamsaraImprovedBalance",1,"PickupAttackDMCCoopImproved")
+        TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostCoopSoundDMC",FBF_NORANDOM|FBF_NOFLASH)
+        goto PickupFinish
+
+      PickupAttackDMCCoopImproved:
+        TNT1 A 0 A_FireBullets(9,7,28,5,"QuakeBulletPuffThruGhostCoopSoundDMC",FBF_NORANDOM|FBF_NOFLASH)
+        goto PickupFinish
+
+      // Finishing stuff
+      PickupFinish:
+        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraRecoil", 0, 6, 5, 20)
+        stop
+    }
+} 
