@@ -77,6 +77,7 @@ Credits:
 - Tarles X (for the completing the rotations for Tommy Galano's Doomguy crouching sprites)
 - FreeDoom Team (for the MDWTAK sprites and sounds)
 - Nihilism Unlimited (for making Zerstörer - Testament of the Destroyer, which is where the Quake I chainsaw loadout weapon comes from)
+- Arcane Dimensions Team (for making Arcane Dimensions, which is where the Quake I widowmaker loadout weapon comes from)
 
 Special Thanks:
 - Hiragamer : for his amazing work on HUDs and every art related stuff, and beign a great support too :D
