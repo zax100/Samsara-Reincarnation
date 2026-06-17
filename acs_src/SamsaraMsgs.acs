@@ -132,13 +132,13 @@ str ClassPickupMessages[CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT][MSGCOUNT]
                 {
                     "You got the incinerator!",
                     "I wonder if I can make s'mores with this thing...",
+                    "Crack open this canister, and \c[G5]BOOM\c-!",
+                    "At this point, being near you is a liability.",
                     "Fear the wrath of my pyroblasters, space weirdos! \c[G5]Kablooey! Kablammy!\c-", //Kid Icarus: Uprising.
                     "Some men just want to watch the world burn.",
                     "I'm certain wielding this around is good for whatever's next to you.",
                     "Meanwhile, everyone backs away and looks at you like you're a maniac.",
-                    "w+m1. As soon as you have gasoline.",
-                    "Crack open this canister, and \c[G5]BOOM\c-!",
-                    "At this point, being near you is a liability.",
+                    "w+m1. As soon as you have cells.",
                     "",
                 },
             },
