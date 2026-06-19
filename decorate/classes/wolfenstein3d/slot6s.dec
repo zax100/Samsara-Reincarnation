@@ -1,8 +1,6 @@
 actor Wolfen_IHaveLightningGun : Boolean {}
 actor SamsaraWolfenLIghtningGunAttackSilentSound : Boolean {}
 
-// Original/Lost Episodes
-
 actor Wolf3DLightningGun : InstantSwitchWeapon
 {
     Inventory.PickupMessage "You got the Lightning Gun!"
