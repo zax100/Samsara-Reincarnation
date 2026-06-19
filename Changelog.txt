@@ -45,6 +45,7 @@ Wolfenstein 3D:
 
 -B.J. Blazkowicz (Original/Lost Episodes)-
 
+! The status bar HUD now shows the dual chainguns (albeit with the single chaingun graphic).
 ! The rocket launcher now uses the Explosive damage type for its splash damage.
 + The lightning gun has been added as the slot 6S weapon!
 ! The ammo crate's Compendium entry has been updated to make mention of bullet weapons in general.
@@ -61,6 +62,10 @@ Hexen I:
 ! Renamed some actor names and sound files to avoid name conflicts with other mods.
 ! The mace of contrition now has a sprite for the Compendium and the alternate HUD.
 * Fixed the improved PVE damage values not properly applying to the bishop's shortsword strong projectiles.
+
+-Parias (Classic)-
+
+! The status bar HUD now shows the Bloodscourge.
 
 -Daedolon-
 

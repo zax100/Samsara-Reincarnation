@@ -2334,6 +2334,26 @@ StatusBar Automap, ForceScaled
                 }
             }
 
+            // Slot 7S
+            InInventory HexenClassMode, 2 {} // Daedolon/Baratus
+            else InInventory HexenClassMode, 1 // Parias (Classic)
+            {
+                InInventory not GotWeapon7
+                {
+                    InInventory " Bloodscourge "
+                    {
+                        DrawImage "WEPSELG7", 250, 2;
+                        DrawImage "WPHEXM7N", 247, 12;
+                    }
+                }
+
+                IsSelected " Bloodscourge "
+                {
+                    DrawImage "WEPSELZ7", 250, 2;
+                    DrawImage "WPHEXM7Y", 247, 12;
+                }
+            }
+
             // Unique 2
             InInventory HexenClassMode, 2 {} // Daedolon/Baratus
             else // Parias (Reincarnation/Classic)
