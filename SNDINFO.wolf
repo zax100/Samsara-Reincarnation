@@ -69,6 +69,7 @@ wolfen/missilefire2			bjmissf2
 wolfen/weaponget2           bjwpngt2
 wolfen/spearget2            bjwpngs2
 wolfen/rifle2        bjrifl2
+wolfen/lightning2        tsspark2
 $limit  wolfen/machinegun2	 		0
 $limit  wolfen/chaingun2		 	0
 

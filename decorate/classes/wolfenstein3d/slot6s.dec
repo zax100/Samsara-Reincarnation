@@ -88,24 +88,24 @@ actor Wolf3DLightningGun : InstantSwitchWeapon
         TNT1 A 0 A_JumpIfInventory("SamsaraUsingSmoothAnims",1,"FireLostSmooth")
       FireLostVanilla:
         TNT1 A 0 A_TakeInventory("SamsaraTakingAmmo")
-        WLGT U 1 Bright A_GiveInventory("SamsaraWolfenLightningGunAttackHandler")
+        WLGT U 1 Bright A_GiveInventory("SamsaraWolfenLostLightningGunAttackHandler")
         TNT1 A 0 A_GiveInventory("SamsaraTakingAmmo")
-        WLGT U 1 Bright A_GiveInventory("SamsaraWolfenLightningGunAttackHandler")
+        WLGT U 1 Bright A_GiveInventory("SamsaraWolfenLostLightningGunAttackHandler")
         TNT1 A 0 A_TakeInventory("SamsaraTakingAmmo")
-        WLGT W 1 Bright A_GiveInventory("SamsaraWolfenLightningGunAttackHandler")
+        WLGT W 1 Bright A_GiveInventory("SamsaraWolfenLostLightningGunAttackHandler")
         TNT1 A 0 A_GiveInventory("SamsaraTakingAmmo")
-        WLGT W 1 Bright A_GiveInventory("SamsaraWolfenLightningGunAttackHandler")
+        WLGT W 1 Bright A_GiveInventory("SamsaraWolfenLostLightningGunAttackHandler")
         goto FireFinishLost
 
       FireLostSmooth:
         TNT1 A 0 A_TakeInventory("SamsaraTakingAmmo")
-        WLGT U 1 Bright A_GiveInventory("SamsaraWolfenLightningGunAttackHandler")
+        WLGT U 1 Bright A_GiveInventory("SamsaraWolfenLostLightningGunAttackHandler")
         TNT1 A 0 A_GiveInventory("SamsaraTakingAmmo")
-        WLGT V 1 Bright A_GiveInventory("SamsaraWolfenLightningGunAttackHandler")
+        WLGT V 1 Bright A_GiveInventory("SamsaraWolfenLostLightningGunAttackHandler")
         TNT1 A 0 A_TakeInventory("SamsaraTakingAmmo")
-        WLGT W 1 Bright A_GiveInventory("SamsaraWolfenLightningGunAttackHandler")
+        WLGT W 1 Bright A_GiveInventory("SamsaraWolfenLostLightningGunAttackHandler")
         TNT1 A 0 A_GiveInventory("SamsaraTakingAmmo")
-        WLGT X 1 Bright A_GiveInventory("SamsaraWolfenLightningGunAttackHandler")
+        WLGT X 1 Bright A_GiveInventory("SamsaraWolfenLostLightningGunAttackHandler")
         goto FireFinishLostSmooth
 
       FireFinishLost:
@@ -138,6 +138,41 @@ actor SamsaraWolfenLightningGunAttackHandler : Trigger
       PickupAttack:
         TNT1 A 0 A_JumpIfInventory("SamsaraWolfenLightningGunAttackSilentSound",1,2)
         TNT1 A 0 A_PlaySound("wolfen/lightning",CHAN_WEAPON)
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
+        TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
+      PickupAttackDM:
+        TNT1 A 0 A_FireCustomMissile("SamsaraWolfenLightning",0,false,0,-5) //random(10,-10) spread if needed
+        goto PickupFinish
+
+      PickupAttackCoop:
+        TNT1 A 0 A_FireCustomMissile("SamsaraWolfenLightningCoop",0,false,0,-5)
+        goto PickupFinish
+
+      // Finishing stuff
+      PickupFinish:
+        TNT1 A 0 A_GiveInventory("SamsaraWolfenLightningGunAttackSilentSound")
+        stop
+    }
+}
+
+actor SamsaraWolfenLostLightningGunAttackHandler : Trigger
+{
+    States
+    {
+      // Ammo checking/taking stuff
+      Pickup:
+        TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"PickupAttack")
+        TNT1 A 0 A_JumpIfInventory("Cell",1,1)
+        stop
+        TNT1 A 0 A_JumpIfInventory("SamsaraTakingAmmo",1,1)
+        goto PickupAttack
+        TNT1 A 0 A_TakeInventory("Cell",1)
+        goto PickupAttack
+
+      // Attack stuff
+      PickupAttack:
+        TNT1 A 0 A_JumpIfInventory("SamsaraWolfenLightningGunAttackSilentSound",1,2)
+        TNT1 A 0 A_PlaySound("wolfen/lightning2",CHAN_WEAPON)
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
       PickupAttackDM:
