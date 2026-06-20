@@ -1,6 +1,6 @@
-actor Wolfen_IHaveSlot6 : Boolean {}
-
 // Original/Lost Episodes
+
+actor Wolfen_IHaveSlot6 : Boolean {}
 
 actor " Flamethrower " : InstantSwitchWeapon
 {
@@ -145,6 +145,7 @@ actor WolfenFireCoop: WolfenFire { +THRUSPECIES Species "Player" }
 
 // Castle Totenkopf SDL
 
+actor Totenkopf_IHaveChaingun : Boolean {}
 actor SamsaraTotenkopfChaingunAttackSilentSound : Boolean {}
 
 actor Totenkopf_Chaingun : InstantSwitchWeapon

@@ -1249,6 +1249,14 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				break;
 
 			case CLASS_WOLFEN:
+                if (CheckInventory("Totenkopf_Kar98k") && CheckInventory("Totenkopf_IHaveScope"))
+                {
+                    storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
+                    SetInventory("Totenkopf_Sniper", 1);
+                    SetInventory(storedammopriname, storedammopri);
+                }
+                else { SetInventory("Totenkopf_Sniper", 0); }
+
 				wolfmode = GetUserCVar(pln, "samsara_cl_wolfmode");
 
                 if (wolfmode > 2) { wolfmode = 2; }
@@ -1300,7 +1308,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             if (CheckInventory("Totenkopf_IHaveDualPistols")) { SetInventory("Totenkopf_PistolDual", 1); }
 
-                            if (CheckInventory("Wolfen_IHaveSlot2") || CheckInventory("Totenkopf_IHaveScope"))
+                            if (CheckInventory("Totenkopf_IHaveKar98k"))
                             {
                                 SetInventory("Totenkopf_Kar98k", 1);
 
@@ -1318,7 +1326,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory("Mauser Rifle", 0);
                             }
 
-                            if (CheckInventory("Wolfen_IHaveSlot4"))
+                            if (CheckInventory("Totenkopf_IHaveMP40"))
                             {
                                 storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_MP40", 1);
@@ -1327,7 +1335,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 if (CheckWeapon("  Chaingun  ")) { SetWeapon("Totenkopf_MP40"); }
                             }
 
-                            if (CheckInventory("Wolfen_IHaveDualChainguns"))
+                            if (CheckInventory("Wolfen_IHaveDualChainguns") && CheckInventory("Totenkopf_IHaveMP40"))
                             {
                                 storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_MP40", 1);
@@ -1345,7 +1353,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 
                             SetInventory("  Dual Chainguns  ", 0);
 
-                            if (CheckInventory("Totenkopf_IHaveDualMP40s")) { SetInventory("Totenkopf_MP40Dual", 1); }
+                            if (CheckInventory("Totenkopf_IHaveMP40") && CheckInventory("Totenkopf_IHaveDualMP40s")) { SetInventory("Totenkopf_MP40Dual", 1); }
 
                             if (CheckInventory(" Rocket Launcher "))
                             {
@@ -1358,7 +1366,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory(" Rocket Launcher ", 0);
                             }
 
-                            if (CheckInventory("Wolfen_IHaveSlot6"))
+                            if (CheckInventory("Totenkopf_IHaveChaingun"))
                             {
                                 storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_Chaingun", 1);
@@ -1367,7 +1375,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 if (CheckWeapon(" Flamethrower ")) { SetWeapon("Totenkopf_Chaingun"); }
                             }
 
-                            if (CheckInventory("Wolfen_IHaveLightningGun"))
+                            if (CheckInventory("Wolfen_IHaveLightningGun") && CheckInventory("Totenkopf_IHaveChaingun"))
                             {
                                 storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
                                 SetInventory("Totenkopf_Chaingun", 1);
@@ -1415,20 +1423,24 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory(storedammopriname, storedammopri);
                             }
 
-                            if (CheckInventory("Totenkopf_IHaveScope"))
+                            if (CheckInventory("Totenkopf_IHaveKar98k"))
                             {
-                                storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
-                                SetInventory("Totenkopf_Sniper", 1);
-                                SetInventory(storedammopriname, storedammopri);
+                                if (CheckInventory("Totenkopf_IHaveScope"))
+                                {
+                                    storedammopriname = "Shell", storedammopri = CheckInventory(storedammopriname);
+                                    SetInventory("Totenkopf_Sniper", 1);
+                                    SetInventory(storedammopriname, storedammopri);
+                                }
                             }
+                            else { SetInventory("Totenkopf_Sniper", 0); }
 
 							if(CheckInventory("Totenkopf_IHavePowerArmor") && (!CheckInventory("TotenkopfHasPowerArmor"))) { GiveInventory("TotenkopfHasPowerArmor", 1); }
 							if(CheckInventory("Totenkopf_IAmWolverine") && (!CheckInventory("TotenkopfHasHealingOrb"))) { GiveInventory("TotenkopfHasHealingOrb", 1); }
 
                             SetInventory("GotWeapon0", CheckInventory("Wolfen_IHaveSlot1"));
-                            SetInventory("GotWeapon2", CheckInventory("Wolfen_IHaveSlot2") || CheckInventory("Totenkopf_IHaveScope"));
-                            SetInventory("GotWeapon4", CheckInventory("Wolfen_IHaveSlot4") || CheckInventory("Wolfen_IHaveDualChainguns"));
-                            SetInventory("GotWeapon6", CheckInventory("Wolfen_IHaveSlot6") || CheckInventory("Wolfen_IHaveLightningGun"));
+                            SetInventory("GotWeapon2", CheckInventory("Totenkopf_IHaveKar98k"));
+                            SetInventory("GotWeapon4", CheckInventory("Totenkopf_IHaveMP40"));
+                            SetInventory("GotWeapon6", CheckInventory("Totenkopf_IHaveChaingun"));
 
                             SetActorProperty(0, APROP_SoundClass, "TotenkopfPlayer");
 						}

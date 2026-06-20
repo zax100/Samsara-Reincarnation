@@ -1,6 +1,6 @@
-actor Wolfen_IHaveSlot2 : Boolean {}
-
 // Original/Lost Episodes
+
+actor Wolfen_IHaveSlot2 : Boolean {}
 
 actor "Machine Gun" : InstantSwitchWeapon
 {
@@ -173,6 +173,8 @@ actor SamsaraWolfenLostMachineGunAttackHandler : Trigger
 }
 
 // Castle Totenkopf SDL
+
+actor Totenkopf_IHaveKar98k : Boolean {}
 
 actor Totenkopf_Kar98k : InstantSwitchWeapon
 {

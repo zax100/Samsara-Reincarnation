@@ -52,6 +52,7 @@ Wolfenstein 3D:
 
 -B.J. Blazkowicz (Castle Totenkopf SDL)-
 
+! If the unscoped Kar98k rifle is taken away, you will not be able to use the scoped version.
 + Red armor now provides resistance against the Panzerschreck and flakgun.
 * Fixed unique pickups not giving extra ammo on first pickup when playing PVP in Doom or Chex Quest.
 

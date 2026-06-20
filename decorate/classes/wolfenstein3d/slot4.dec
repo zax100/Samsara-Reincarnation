@@ -1,8 +1,6 @@
-// Token
+// Original/Lost Episodes
 
 actor Wolfen_IHaveSlot4 : Boolean {}
-
-// Original/Lost Episodes
 
 actor "  Chaingun  " : InstantSwitchWeapon
 {
@@ -228,6 +226,7 @@ actor SamsaraWolfenLostChaingunAttackHandler : Trigger
 
 // Castle Totenkopf SDL
 
+actor Totenkopf_IHaveMP40 : Boolean {}
 actor Totenkopf_IHaveDualMP40s : Boolean {}
 
 actor Totenkopf_MP40 : InstantSwitchWeapon
