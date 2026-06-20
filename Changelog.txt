@@ -135,6 +135,7 @@ Blake Stone (Blake Stone):
 
 + The Gatling Fusion Devastator now has actual pickup sprites.
 ! The Gatling Fusion Devastator's Planet Strike sprites have been slightly redone, and it now has Aliens of Gold sprites.
+! A Compendium description has been added for the Gatling Fusion Devastator.
 + To accommodate for the Gatling Fusion Devastator's slightly redone animation, it now takes 3 tics before the attack is called (decreased from 6), and 6 tics failing refire (decreased from 12; total amount decreased from 24 to 15 if not held, and from 18 to 12 if held).
 
 Caleb (Blood):
