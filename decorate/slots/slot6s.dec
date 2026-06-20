@@ -10,7 +10,7 @@ actor SamsaraSlotSixSkulltagPickup : SamsaraSlotSixPickup replaces RailGun
     States
     {
       Spawn:
-        WEPG F 0 Bright NoDelay ACS_NamedExecuteWithResult("Samsara_SwitchableObject", 42) // NEEDS NEW SPRITE
+        WEPG I 0 Bright NoDelay ACS_NamedExecuteWithResult("Samsara_SwitchableObject", 42)
         goto SpawnDropCheck
 
       SpawnActual:
@@ -31,7 +31,7 @@ actor SamsaraSlotSixSkulltagPickup : SamsaraSlotSixPickup replaces RailGun
         loop
 
       // Old-Style
-      NoGuy: WEPG F 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      NoGuy: WEPG I 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
 
       // Class-Specific
       Doomguy:            WRLG A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -61,14 +61,14 @@ actor SamsaraSlotSixSkulltagPickup : SamsaraSlotSixPickup replaces RailGun
       Doom64Full:             64RA L 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       DoomStrFull:            WRAL C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       ChexFull:               PLAC D 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      HereticFull:            PHST B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      HereticFull:            PGWN B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       WolfFull:               WLGP D 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       LostWolfFull:           WLGP F 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       MarathonFull:           MATC J 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       QuakeFull:              PSNG B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RottFull:               PWE0 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       CalebFull:              CP6S B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      RMRFull:                RMZ6 L 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      RMRFull:                RMZ9 N 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       KatarnFull:             PDF9 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       DisruptorFull:          SQ83 F 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BittermanFull:          Q2WP C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -84,14 +84,14 @@ actor SamsaraSlotSixSkulltagPickup : SamsaraSlotSixPickup replaces RailGun
       Doom64Empty:             64RA K 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       DoomStrEmpty:            WRAL B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       ChexEmpty:               PLAC C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      HereticEmpty:            PHST A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      HereticEmpty:            PGWN A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       WolfEmpty:               WLGP C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       LostWolfEmpty:           WLGP E 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       MarathonEmpty:           MATC I 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       QuakeEmpty:              PSNG A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       RottEmpty:               PWE0 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       CalebEmpty:              CP6S A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      RMREmpty:                RMZ6 M 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      RMREmpty:                RMZ6 Q 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       KatarnEmpty:             PDF9 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       DisruptorEmpty:          SQ73 F 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BittermanEmpty:          Q2WP B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

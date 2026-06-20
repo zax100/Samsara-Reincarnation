@@ -10,7 +10,7 @@ actor SamsaraSlotFourSkulltagPickup : SamsaraSlotFourPickup replaces Minigun
     States
     {
       Spawn:
-        WEPG D 0 Bright NoDelay ACS_NamedExecuteWithResult("Samsara_SwitchableObject", 38) // NEEDS NEW SPRITE
+        WEPG H 0 Bright NoDelay ACS_NamedExecuteWithResult("Samsara_SwitchableObject", 38)
         goto SpawnDropCheck
 
       SpawnActual:
@@ -31,7 +31,7 @@ actor SamsaraSlotFourSkulltagPickup : SamsaraSlotFourPickup replaces Minigun
         loop
 
       // Old-Style
-      NoGuy: WEPG D 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      NoGuy: WEPG H 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
 
       // Class-Specific
       Doomguy:              WMNG A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -45,7 +45,7 @@ actor SamsaraSlotFourSkulltagPickup : SamsaraSlotFourPickup replaces Minigun
       BeachDukeguy:         PISP D 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BeachDukeguyLoadout1: goto BeachDukeguy // not a loadout weapon, but a lazy fix
       Rott:                 PM60 A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      Blake:                WCHP A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      Blake:                BGFD x 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       AOG:                  goto Blake
       Caleb:                BLMP A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Erad:                 ER11 DEFGH 4 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -74,7 +74,7 @@ actor SamsaraSlotFourSkulltagPickup : SamsaraSlotFourPickup replaces Minigun
       BeachDukeFull:          PISP H 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BeachDukeFullLoadout1:  goto BeachDukeFull // not a loadout weapon, but a lazy fix
       RottFull:               PWE8 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      BlakeFull:              PWCG B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      BlakeFull:              BGFD Z 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       AOGFull:                goto BlakeFull
       CalebFull:              CP4S B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       EradFull:               ER11 J 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -82,7 +82,7 @@ actor SamsaraSlotFourSkulltagPickup : SamsaraSlotFourPickup replaces Minigun
       EradDanFull:            ER09 I 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       EradMarineFull:         goto EradDanFull
       KatarnFull:             KD19 X 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      POGreedFull:            PPG4 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      POGreedFull:            GW40 X 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HalfLifeFull:           PHL4 B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BittermanFull:          Q2WP C 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BondFull:               GE00 X 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -103,7 +103,7 @@ actor SamsaraSlotFourSkulltagPickup : SamsaraSlotFourPickup replaces Minigun
       BeachDukeEmpty:          PISP G 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BeachDukeEmptyLoadout1:  goto BeachDukeEmpty // not a loadout weapon, but a lazy fix
       RottEmpty:               PWE8 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      BlakeEmpty:              PWCG A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      BlakeEmpty:              BGFD Y 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       AOGEmpty:                goto BlakeEmpty
       CalebEmpty:              CP4S A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       EradEmpty:               ER11 I 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
@@ -111,7 +111,7 @@ actor SamsaraSlotFourSkulltagPickup : SamsaraSlotFourPickup replaces Minigun
       EradDanEmpty:            ER09 H 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       EradMarineEmpty:         goto EradDanEmpty
       KatarnEmpty:             KD19 Y 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      POGreedEmpty:            PPG4 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      POGreedEmpty:            GW40 W 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       HalfLifeEmpty:           PHL4 A 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BittermanEmpty:          Q2WP B 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       BondEmpty:               GE00 Y 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop

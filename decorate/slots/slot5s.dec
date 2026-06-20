@@ -10,7 +10,7 @@ actor SamsaraSlotFiveSkulltagPickup : SamsaraSlotFivePickup replaces GrenadeLaun
     States
     {
       Spawn:
-        WEPG E 0 Bright NoDelay ACS_NamedExecuteWithResult("Samsara_SwitchableObject", 40) // NEEDS NEW SPRITE
+        WEPG J 0 Bright NoDelay ACS_NamedExecuteWithResult("Samsara_SwitchableObject", 40)
         goto SpawnDropCheck
 
       SpawnActual:
@@ -31,7 +31,7 @@ actor SamsaraSlotFiveSkulltagPickup : SamsaraSlotFivePickup replaces GrenadeLaun
         loop
 
       // Old-Style
-      NoGuy: WEPG E 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop // NEEDS NEW SPRITE
+      NoGuy: WEPG J 35 Bright A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
 
       // Class-Specific
       Doomguy:    WDGL A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
