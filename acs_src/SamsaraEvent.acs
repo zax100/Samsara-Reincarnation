@@ -1332,20 +1332,6 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory("Totenkopf_MP40", 1);
                                 SetInventory(storedammopriname, storedammopri);
 
-                                if (CheckWeapon("  Chaingun  ")) { SetWeapon("Totenkopf_MP40"); }
-                            }
-
-                            if (CheckInventory("Wolfen_IHaveDualChainguns") && CheckInventory("Totenkopf_IHaveMP40"))
-                            {
-                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
-                                SetInventory("Totenkopf_MP40", 1);
-                                SetInventory(storedammopriname, storedammopri);
-
-                                if (CheckWeapon("  Dual Chainguns  ")) { SetWeapon("Totenkopf_MP40"); }
-                            }
-
-                            if (CheckInventory("  Chaingun  ") || CheckInventory("  Dual Chainguns  "))
-                            {
                                 if (CheckWeapon("  Chaingun  ") || CheckWeapon("  Dual Chainguns  ")) { SetWeapon("Totenkopf_MP40"); }
                             }
 
@@ -1372,20 +1358,6 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory("Totenkopf_Chaingun", 1);
                                 SetInventory(storedammopriname, storedammopri);
 
-                                if (CheckWeapon(" Flamethrower ")) { SetWeapon("Totenkopf_Chaingun"); }
-                            }
-
-                            if (CheckInventory("Wolfen_IHaveLightningGun") && CheckInventory("Totenkopf_IHaveChaingun"))
-                            {
-                                storedammopriname = "Cell", storedammopri = CheckInventory(storedammopriname);
-                                SetInventory("Totenkopf_Chaingun", 1);
-                                SetInventory(storedammopriname, storedammopri);
-
-                                if (CheckWeapon("Wolf3DLightningGun")) { SetWeapon("Totenkopf_Chaingun"); }
-                            }
-
-                            if (CheckInventory(" Flamethrower ") || CheckInventory("Wolf3DLightningGun"))
-                            {
                                 if (CheckWeapon(" Flamethrower ") || CheckWeapon("Wolf3DLightningGun")) { SetWeapon("Totenkopf_Chaingun"); }
                             }
 
@@ -1518,24 +1490,14 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory("  Chaingun  ", 1);
                                 SetInventory(storedammopriname, storedammopri);
 
-                                if (CheckWeapon("Totenkopf_MP40")) { SetWeapon("  Chaingun  "); }
+                                if (CheckWeapon("Totenkopf_MP40") || CheckWeapon("Totenkopf_MP40Dual")) { SetWeapon("  Chaingun  "); }
                             } else {
-                                if (CheckWeapon("  Chaingun  ") || CheckWeapon("Totenkopf_MP40")) { SetWeapon("  Dual Chainguns  "); }
+                                if (CheckWeapon("  Chaingun  ") || CheckWeapon("Totenkopf_MP40") || CheckWeapon("Totenkopf_MP40Dual")) { SetWeapon("  Dual Chainguns  "); }
 
                                 SetInventory("  Chaingun  ", 0);
                             }
 
                             SetInventory("Totenkopf_MP40", 0);
-
-                            if (CheckInventory("Totenkopf_MP40Dual"))
-                            {
-                                if (CheckWeapon("Totenkopf_MP40Dual"))
-                                {
-                                    if (CheckInventory("  Chaingun  ")) { SetWeapon("  Chaingun  "); }
-                                    else if (CheckInventory("  Dual Chainguns  ")) { SetWeapon("  Dual Chainguns  "); }
-                                }
-                            }
-
                             SetInventory("Totenkopf_MP40Dual", 0);
 
                             if (CheckInventory("Totenkopf_Panzerschreck"))
@@ -1909,22 +1871,6 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory(storedammopriname, storedammopri);
                                 SetInventory(storedammosecname, storedammosec);
 
-                                if (CheckWeapon("Wraithverge") || CheckWeapon("Quietus")) { SetWeapon("Bloodscourge"); }
-                            }
-
-                            if (CheckInventory("SamsaraClassicPariasHasBloodscourge") && CheckInventory("SamsaraHexenHasSlot7"))
-                            {
-                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
-                                storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
-                                SetInventory("Bloodscourge", 1);
-                                SetInventory(storedammopriname, storedammopri);
-                                SetInventory(storedammosecname, storedammosec);
-
-                                if (CheckWeapon(" Bloodscourge ")) { SetWeapon("Bloodscourge"); }
-                            }
-
-                            if (CheckInventory("Wraithverge") || CheckInventory("Quietus") || CheckInventory(" Bloodscourge "))
-                            {
                                 if (CheckWeapon("Wraithverge") || CheckWeapon("Quietus") || CheckWeapon(" Bloodscourge ")) { SetWeapon("Bloodscourge"); }
                             }
 
@@ -2077,22 +2023,6 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                                 SetInventory(storedammopriname, storedammopri);
                                 SetInventory(storedammosecname, storedammosec);
 
-                                if (CheckWeapon("Wraithverge") || CheckWeapon("Bloodscourge")) { SetWeapon("Quietus"); }
-                            }
-
-                            if (CheckInventory("SamsaraClassicPariasHasBloodscourge") && CheckInventory("SamsaraHexenHasSlot7"))
-                            {
-                                storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
-                                storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
-                                SetInventory("Quietus", 1);
-                                SetInventory(storedammopriname, storedammopri);
-                                SetInventory(storedammosecname, storedammosec);
-
-                                if (CheckWeapon(" Bloodscourge ")) { SetWeapon("Quietus"); }
-                            }
-
-                            if (CheckInventory("Wraithverge") || CheckInventory("Bloodscourge") || CheckInventory(" Bloodscourge "))
-                            {
                                 if (CheckWeapon("Wraithverge") || CheckWeapon("Bloodscourge") || CheckWeapon(" Bloodscourge ")) { SetWeapon("Quietus"); }
                             }
 
@@ -2249,22 +2179,6 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                             SetInventory(storedammopriname, storedammopri);
                             SetInventory(storedammosecname, storedammosec);
 
-                            if (CheckWeapon("Bloodscourge") || CheckWeapon("Quietus")) { SetWeapon("Wraithverge"); }
-                        }
-
-                        if (CheckInventory("SamsaraClassicPariasHasBloodscourge") && CheckInventory("SamsaraHexenHasSlot7"))
-                        {
-                            storedammopriname = "Clip", storedammopri = CheckInventory(storedammopriname);
-                            storedammosecname = "Cell", storedammosec = CheckInventory(storedammosecname);
-                            SetInventory("Wraithverge", 1);
-                            SetInventory(storedammopriname, storedammopri);
-                            SetInventory(storedammosecname, storedammosec);
-
-                            if (CheckWeapon(" Bloodscourge ")) { SetWeapon("Wraithverge"); }
-                        }
-
-                        if (CheckInventory("Bloodscourge") || CheckInventory("Quietus") || CheckInventory(" Bloodscourge "))
-                        {
                             if (CheckWeapon("Bloodscourge") || CheckWeapon("Quietus") || CheckWeapon(" Bloodscourge ")) { SetWeapon("Wraithverge"); }
                         }
 
