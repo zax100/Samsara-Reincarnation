@@ -102,7 +102,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"wolfen/rocketget"},
                 {"wolfen/flameget"},
                 {"wolfen/spearget2"},
-                {"wolfen/dualweaponget"},
+                {"wolfen/dualweaponget2"},
                 {""},
                 {"wolfen/lightningget"},
             },

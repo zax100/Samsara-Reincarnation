@@ -66,7 +66,8 @@ wolfen/pistol2				bjpistl2
 wolfen/machinegun2			bjmgun2
 wolfen/chaingun2			bjchgun2
 wolfen/missilefire2			bjmissf2
-wolfen/weaponget2           bjwpngt2
+$alias wolfen/weaponget2    wolfen/weaponget
+wolfen/dualweaponget2       bjwpngc2
 wolfen/spearget2            bjwpngs2
 wolfen/rifle2        bjrifl2
 wolfen/lightning2        tsspark2
