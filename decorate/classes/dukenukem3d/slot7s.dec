@@ -10,7 +10,7 @@ actor "Duke_X3000" : DukeWeapon
 	Weapon.AmmoUse 0
 	Weapon.AmmoGive 100
 	Weapon.AmmoType "Cell"
-	Obituary "111"
+	Obituary "$SAMSARA_DUKE_OB_SLOT7s"
 	Inventory.Pickupmessage "You got the X-3000!"
 	Inventory.PickupSound "duke/weaponget"
 	weapon.upsound ""

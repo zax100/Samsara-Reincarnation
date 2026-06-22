@@ -865,10 +865,13 @@ StatusBar Fullscreen, ForceScaled
 
                 IsSelected Freezethrower { DrawImage "DN5DFNT6", 275, 184; }
 
-                // Slot 7
-                InInventory GotWeapon7 { DrawImage "DN4DFNT7", 267, 190; }
+                // Slot 7 + Slot 7s
+                InInventory GotWeapon7 || "Duke_X3000" { DrawImage "DN4DFNT7", 267, 190; }
 
                 IsSelected "Devastator Weapon" { DrawImage "DN5DFNT7", 267, 190; }
+				
+				IsSelected "Duke_X3000" { DrawImage "DN6DFNT7", 267, 190; }
+				
 
                 // Unique 2 // yes I listed the Uniques as slot 8 & 9, but to be fair those are the numbers they're are bound to so yeah.
                 InInventory Shrinker { DrawImage "DN4DFNT8", 271, 190; }
@@ -6351,6 +6354,7 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected " BFG10K " { DrawImage "STY3NUM7", 186, 10; }
                 IsSelected "Liquid Zorcher" { DrawImage "STY3NUM7", 186, 10; }
                 IsSelected " Bloodscourge " { DrawImage "STY3NUM7", 186, 10; }
+				IsSelected "Duke_X3000" { DrawImage "STY3NUM7", 186, 10; }
                 IsSelected BloodNaturomDemonto { DrawImage "STY3NUM7", 186, 10; }
                 IsSelected "Wookie Bowcaster" { DrawImage "STY3NUM7", 186, 10; }
                 IsSelected Q2Trap, Q2Disruptor { DrawImage "STY3NUM7", 186, 10; }

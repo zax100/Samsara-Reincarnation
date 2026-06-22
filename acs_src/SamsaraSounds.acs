@@ -195,6 +195,9 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"duke/weaponget"},
                 {"duke/weaponget"},
                 {"duke/adveagleup"},
+				{""},
+				{""},
+				{"duke/weaponget"},
             },
             {
                 {"duke/itemget"},
@@ -207,6 +210,9 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
                 {"duke/woohoo"},
                 {"duke/woohoo"},
                 {"duke/woohoo"},
+				{""},
+				{""},
+				{"duke/woohoo"},
             },
             {
                 {"duke/itemget"},
