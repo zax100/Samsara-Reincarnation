@@ -1980,15 +1980,8 @@ StatusBar Normal, ForceScaled
             // Moving these down here for easier viewability
             InInventory ExpandedHud
             {
-                // Flechette - Slot 1 (already covered by weapon bar)
-                /*InInventory HexenClassMode, 3 // Baratus
-                {
-                    InInventory Flechette3Cooldown { DrawNumber 3, HEXHUDSG, Untranslated, Flechette3Cooldown, 164, 165; }
-                } else InInventory HexenClassMode, 2 { // Daedolon
-                    InInventory Flechette2Cooldown { DrawNumber 3, HEXHUDSG, Untranslated, Flechette2Cooldown, 164, 165; }
-                } else { // Parias (Reincarnation/Classic)
-                    InInventory FlechetteCooldown { DrawNumber 3, HEXHUDSG, Untranslated, FlechetteCooldown, 164, 165; }
-                }*/
+                // Tome of Power - Unique 1
+                InInventory SamsaraHexenTomeOfPowerCooldown { DrawNumber 3, HEXHUDSG, Black, SamsaraHexenTomeOfPowerCooldown, 164, 165; } // has different text color to avoid confusion between cooldowns
 
                 // Disc of Repulsion - Unique 2
                 InInventory SamsaraDiscOfRepulsionCooldown { DrawNumber 3, HEREHUDS, Yellow, SamsaraDiscOfRepulsionCooldown, 150, 184; } // has different text color to avoid confusion between cooldowns
@@ -2354,11 +2347,22 @@ StatusBar Normal, ForceScaled
                 }
             }
 
+            // Unique 1
+            InInventory HexenClassMode, 2 {} // Daedolon/Baratus
+            else // Parias (Reincarnation/Classic)
+            {
+                InInventory SamsaraHexenTomeOfPowerCooldown { DrawNumber 3, HEREHUDS, Black, SamsaraHexenTomeOfPowerCooldown, 293, 48; } // has different text color to avoid confusion between cooldowns
+            }
+
             // Unique 2
             InInventory HexenClassMode, 2 {} // Daedolon/Baratus
             else // Parias (Reincarnation/Classic)
             {
-                InInventory SamsaraDiscOfRepulsionCooldown { DrawNumber 3, HEREHUDS, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 48; } // has different text color to avoid confusion between cooldowns
+                InInventory SamsaraDiscOfRepulsionCooldown // // has different text color to avoid confusion between cooldowns
+                {
+                    InInventory SamsaraHexenTomeOfPowerCooldown { DrawNumber 3, HEREHUDS, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 56; }
+                    else { DrawNumber 3, HEREHUDS, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 48; }
+                }
             }
 
             // Unique 3
@@ -2369,8 +2373,14 @@ StatusBar Normal, ForceScaled
                 {
                     InInventory SamsaraDarkServantCooldown // has different text color to avoid confusion between cooldowns
                     {
-                        InInventory SamsaraDiscOfRepulsionCooldown { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
-                        else { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 48; }
+                        InInventory SamsaraDiscOfRepulsionCooldown
+                        {
+                            InInventory SamsaraHexenTomeOfPowerCooldown { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                            else { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                        } else {
+                            InInventory SamsaraHexenTomeOfPowerCooldown { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                            else { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 48; }
+                        }
                     }
                 }
                 else InInventory SamsaraHexen1LoadoutUnique3 {} // Porkalator
@@ -2378,8 +2388,14 @@ StatusBar Normal, ForceScaled
                 {
                     InInventory SamsaraDarkServantCooldown // has different text color to avoid confusion between cooldowns
                     {
-                        InInventory SamsaraDiscOfRepulsionCooldown { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
-                        else { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 48; }
+                        InInventory SamsaraDiscOfRepulsionCooldown
+                        {
+                            InInventory SamsaraHexenTomeOfPowerCooldown { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                            else { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                        } else {
+                            InInventory SamsaraHexenTomeOfPowerCooldown { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                            else { DrawNumber 3, HEREHUDS, DarkBrown, SamsaraDarkServantCooldown, 293, 48; }
+                        }
                     }
                 }
             }

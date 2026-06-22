@@ -6552,7 +6552,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 18);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 26);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -6882,7 +6882,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 21);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 29);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -6950,7 +6950,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0 && currentiwad != GAME_STRIFE)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 22);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 30);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -6980,7 +6980,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0 && currentiwad != GAME_STRIFE)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 22);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 30);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -7020,7 +7020,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0 && currentiwad != GAME_STRIFE)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 22);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 30);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -7050,7 +7050,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0 && currentiwad != GAME_STRIFE)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 22);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 30);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -7082,7 +7082,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0 && currentiwad != GAME_STRIFE)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 22);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 30);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -7416,7 +7416,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 32);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 40);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -7803,7 +7803,7 @@ script "Samsara_GiveCustomSlot" (int slot, int dropped, int startmode)
             {
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 33);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 41);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", dropped);
                 }
@@ -10629,32 +10629,93 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
             result = -1;
             break;
 
-          case SLOT_UNIQUE2:
-            if (!CheckInventory("SamsaraHexenDiscOfRepulsion"))
+          case SLOT_UNIQUE1:
+            if (!CheckInventory("SamsaraHexenTomeOfPower"))
             {
-                GiveInventory("SamsaraHexenDiscOfRepulsion", 1);
+                GiveInventory("SamsaraHexenTomeOfPower", 1);
                 result = 1;
+            } else if (CheckInventory("SamsaraHexenTomeOfPowerCooldown")) {
+                GiveInventory("SamsaraHexenTomeOfPower", 1);
+                ACS_NamedExecuteWithResult("SamsaraHexenTomeOfPowerCooldownDecrement");
+                result = 1;
+            }
+
+            if (CheckInventory("PortMysticAmbit") < 16) { result = 1; }
+
+            if (startmode != 0) { result = 1; }
+
+            if (result == 1)
+            {
+                GiveInventory("PortMysticAmbit", 1);
+
+                if (startmode == 0)
+                {
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 17 + altclasschoice);
+                    SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
+                    SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
+                }
+            }
+            break;
+
+          case SLOT_UNIQUE2:
+            if (CheckInventory("SamsaraHexenTomeOfPower") && CheckInventory("SamsaraHexenDiscOfRepulsion") &&
+                !CheckInventory("SamsaraHexenTomeOfPowerCooldown") &&
+                CheckInventory("PortMysticAmbit") < 16)
+            { result = 1; } // if maxed out on everything but mystic ambit incant, treat this unique as the giver
+            else
+            {
+                if (!CheckInventory("SamsaraHexenDiscOfRepulsion"))
+                {
+                    GiveInventory("SamsaraHexenDiscOfRepulsion", 1);
+                    result = 1;
+                }
+            }
+
+            // allow smart pickup to skip this unique
+
+            if (startmode != 0) { result = 1; }
+
+            if (result == 1)
+            {
+                if (startmode == 0 || startmode == 1 || startmode == 3) { GiveInventory("PortMysticAmbit", 1); } // do not give again if giving all uniques on spawn
+
+                if (startmode == 0)
+                {
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 17 + altclasschoice);
+                    SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
+                    SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
+                }
             }
             break;
 
           case SLOT_UNIQUE3:
-            if (loadoutchoice <= 0 || completeloadout) // Dark Servant
+            if (CheckInventory("SamsaraHexenTomeOfPower") && CheckInventory("SamsaraHexenDiscOfRepulsion") &&
+                ((CheckInventory("SamsaraHexenDarkServant") && (loadoutchoice <= 0 || completeloadout)) || ((CheckInventory("SamsaraHexenPorkalator") >= 16 || morphitemsbanned)) && (loadoutchoice >= 1 || completeloadout)) &&
+                !CheckInventory("SamsaraHexenTomeOfPowerCooldown") &&
+                CheckInventory("PortMysticAmbit") < 16)
+            { result = 1; } // if maxed out on everything but mystic ambit incant, treat this unique as the giver
+            else
             {
-                if (!CheckInventory("SamsaraHexenDarkServant"))
+                if (loadoutchoice <= 0 || completeloadout) // Dark Servant
                 {
-                    GiveInventory("SamsaraHexenDarkServant", 1);
-                    result = 1;
+                    if (!CheckInventory("SamsaraHexenDarkServant"))
+                    {
+                        GiveInventory("SamsaraHexenDarkServant", 1);
+                        result = 1;
+                    }
+                }
+
+                if (loadoutchoice >= 1 || completeloadout) // Porkalator
+                {
+                    if (CheckInventory("SamsaraHexenPorkalator") < 16 && !morphitemsbanned)
+                    {
+                        GiveInventory("SamsaraHexenPorkalator", 1);
+                        result = 1;
+                    }
                 }
             }
 
-            if (loadoutchoice >= 1 || completeloadout) // Porkalator
-            {
-                if (CheckInventory("SamsaraHexenPorkalator") < 16 && !morphitemsbanned)
-                {
-                    GiveInventory("SamsaraHexenPorkalator", 1);
-                    result = 1;
-                }
-            }
+            // allow smart pickup to skip this unique
 
             if (startmode != 0) { result = 1; }
 
@@ -10663,6 +10724,15 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
                 GiveInventory("SamsaraHexen1AcquiredUnique3", 1);
 
                 if (CheckInventory("SamsaraHexenHasPorkalator") < 16 && !morphitemsbanned) { GiveInventory("SamsaraHexenHasPorkalator", 1); }
+
+                if (startmode == 0 || startmode == 1 || startmode == 3) { GiveInventory("PortMysticAmbit", 1); } // do not give again if giving all uniques on spawn
+
+                if (startmode == 0)
+                {
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 17 + altclasschoice);
+                    SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
+                    SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
+                }
             }
             break;
         }
@@ -11217,7 +11287,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
 
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 38);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 46);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
                 }
@@ -11253,7 +11323,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
 
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 38);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 46);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
                 }
@@ -11289,7 +11359,7 @@ script "Samsara_GiveCustomUnique" (int unum, int startmode)
 
                 if (startmode == 0)
                 {
-                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 38);
+                    SetInventory("SamsaraMiscPickupDisplayExtraChoice1", 46);
                     SetInventory("SamsaraMiscPickupDisplayExtraLoadout1", 0);
                     SetInventory("SamsaraMiscPickupDisplayExtraDropped1", 0);
                 }

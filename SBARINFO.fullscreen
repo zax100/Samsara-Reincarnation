@@ -6368,10 +6368,21 @@ StatusBar Fullscreen, ForceScaled
                 {
                     InInventory TomeOfPowerCooldown { DrawNumber 4, INDEXFONT, Red, TomeOfPowerCooldown, 293, 48; }
                 }
+                InInventory SamsaraHexenTomeOfPowerCooldown // has different text color to avoid confusion between cooldowns
+                {
+                    GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, Black, SamsaraHexenTomeOfPowerCooldown, 293, 48; }
+                    else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, Black, SamsaraHexenTomeOfPowerCooldown, 293, 56; }
+                }
                 InInventory SamsaraDiscOfRepulsionCooldown // has different text color to avoid confusion between cooldowns
                 {
-                    GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 48; }
-                    else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 56; }
+                    InInventory SamsaraHexenTomeOfPowerCooldown
+                    {
+                        GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 56; }
+                        else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 64; }
+                    } else {
+                        GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 48; }
+                        else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, Yellow, SamsaraDiscOfRepulsionCooldown, 293, 56; }
+                    }
                 }
                 InInventory SamsaraHasAllLoadoutEquipment
                 {
@@ -6379,11 +6390,23 @@ StatusBar Fullscreen, ForceScaled
                     {
                         InInventory SamsaraDiscOfRepulsionCooldown
                         {
-                            GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
-                            else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                            InInventory SamsaraHexenTomeOfPowerCooldown
+                            {
+                                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                                else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 72; }
+                            } else {
+                                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                                else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                            }
                         } else {
-                            GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 48; }
-                            else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                            InInventory SamsaraHexenTomeOfPowerCooldown
+                            {
+                                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                                else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                            } else {
+                                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 48; }
+                                else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                            }
                         }
                     }
                 }
@@ -6394,11 +6417,23 @@ StatusBar Fullscreen, ForceScaled
                     {
                         InInventory SamsaraDiscOfRepulsionCooldown
                         {
-                            GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
-                            else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                            InInventory SamsaraHexenTomeOfPowerCooldown
+                            {
+                                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                                else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 72; }
+                            } else {
+                                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                                else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                            }
                         } else {
-                            GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 48; }
-                            else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                            InInventory SamsaraHexenTomeOfPowerCooldown
+                            {
+                                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                                else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 64; }
+                            } else {
+                                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 48; }
+                                else GameMode SinglePlayer, Cooperative, Invasion, Survival { DrawNumber 3, INDEXFONT, DarkBrown, SamsaraDarkServantCooldown, 293, 56; }
+                            }
                         }
                     }
                 }

@@ -30,7 +30,10 @@ actor SamsaraUniquePickup1 : SamsaraUniquePickup
       Wolfguy:          WFLF A 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       LostWolfguy:      WFLF B 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
       Totenkopf:        TK06 F 35 A_ChangeFlag("FLOATBOB",false) goto SpawnLoop
-      Hexen:            HRAD ABCDEFGHIJKLMNOP 4 A_ChangeFlag("FLOATBOB",true) goto SpawnLoop
+      Hexen:
+        TNT1 A 0 A_ChangeFlag("FLOATBOB",true)
+        PWBK A 35 //61 A_SpawnItemEx("SamsaraHexenMysticAmbitIncantDummy",0.1,0.1)
+        goto SpawnLoop
       HexenClassic:     goto Hexen
       HexenMage:        goto Hexen
       HexenFighter:     goto Hexen
@@ -145,6 +148,17 @@ actor SamsaraDoomguyStrHRLDummy : SamsaraUniquePickupDummy
     {
       Spawn:
         WHRL A 38
+        stop
+    }
+}
+
+actor SamsaraHexenMysticAmbitIncantDummy : SamsaraUniquePickupDummy
+{
+    +FLOATBOB
+    States
+    {
+      Spawn:
+        HRAD ABCDEFGHIJKLMNOP 4
         stop
     }
 }

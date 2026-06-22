@@ -8,6 +8,8 @@ script "SamsaraHexenTomeOfPowerCooldown" (void) //207
     }
 }
 
+script "SamsaraHexenTomeOfPowerCooldownDecrement" (void) { SetInventory("SamsaraHexenTomeOfPowerCooldown", CheckInventory("SamsaraHexenTomeOfPowerCooldown") / 2); }
+
 script "DiscOfRepulsionCooldown" (void) //207
 {
     if (CheckInventory("SamsaraDiscOfRepulsionCooldown") > 0)

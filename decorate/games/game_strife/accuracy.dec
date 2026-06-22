@@ -19,7 +19,7 @@ actor StrifeStaminaReplacement : Trigger replaces UpgradeStamina
         TNT1 A 0 A_GiveInventory("StaminaUpgradeDamage",10)
         TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraPlayerSpawnHealthAdjust", 10, 1, 7, 100)
         TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraPlayerHealer")
-        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraClientMiscPickup", 0, 24, -1, 0)
+        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraClientMiscPickup", 0, 32, -1, 0)
         stop
     }
 }
@@ -62,7 +62,7 @@ actor StrifeStaminaAccuracyReplacement : Trigger // hack to make the strifeguy s
       PickupFinish:
         TNT1 A 0 A_JumpIfInventory("StrifeClass",1,1)
         stop
-        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraClientMiscPickup", 0, 24, -1, 0)
+        TNT1 A 0 ACS_NamedExecuteAlways("SamsaraClientMiscPickup", 0, 32, -1, 0)
         stop
     }
 }
@@ -236,30 +236,93 @@ actor CorvusStrifeUnique1 : Trigger
     }
 }
 
-actor HexenStrifeUnique3 : Trigger
+actor HexenStrifeUnique1 : Trigger
 {
     States
     {
       Pickup:
+        TNT1 A 0 A_JumpIfInventory("HexenClassMode",3,"PickupMessageInitFighter")
+        TNT1 A 0 A_JumpIfInventory("HexenClassMode",2,"PickupMessageInitMage")
+        TNT1 A 0 A_JumpIfInventory("HexenClassMode",1,"PickupMessageInitClericClassic")
+      PickupMessageInitCleric:
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",21)
+        goto PickupMessageInitDone
+
+      PickupMessageInitClericClassic:
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",22)
+        goto PickupMessageInitDone
+
+      PickupMessageInitMage:
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",23)
+        goto PickupMessageInitDone
+
+      PickupMessageInitFighter:
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
+        TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",24)
+        goto PickupMessageInitDone
+
+      PickupMessageInitDone:
+        TNT1 A 0 A_Jump(256,"PickupStart") // for inheriting actors
+        goto PickupStart
+
+      PickupStart:
+        TNT1 A 0 A_GiveInventory("SamsaraHexenTomeOfPower")
+        TNT1 A 0 A_JumpIfInventory("SamsaraHexenTomeOfPowerCooldown",1,1)
+        goto PickupFinish
+        TNT1 A 0 ACS_NamedExecuteWithResult("SamsaraHexenTomeOfPowerCooldownDecrement")
+        goto PickupFinish
+
+      PickupFinish:
+        TNT1 A 0 A_GiveInventory("PortMysticAmbit")
+        stop
+    }
+}
+
+actor HexenStrifeUnique2 : HexenStrifeUnique1
+{
+    States
+    {
+      PickupStart:
+        TNT1 A 0 A_GiveInventory("SamsaraHexenDiscOfRepulsion")
+        goto PickupFinish
+    }
+}
+
+actor HexenStrifeUnique3 : HexenStrifeUnique1
+{
+    States
+    {
+      PickupStart:
         TNT1 A 0 A_JumpIfInventory("SamsaraHasAllLoadoutEquipment",1,"PickupLoadout0")
         TNT1 A 0 A_JumpIfInventory("SamsaraHexen1LoadoutUnique3",1,"PickupLoadout1")
       // Dark Servant
       PickupLoadout0:
         TNT1 A 0 A_GiveInventory("SamsaraHexenDarkServant")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasAllLoadoutEquipment",1,"PickupLoadout1")
-        goto PickupFinish
+        goto PickupAcquiredUnique3
 
       // Porkalator
       PickupLoadout1:
-        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 45), "PickupFinish")
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 45), "PickupAcquiredUnique3")
         TNT1 A 0 A_GiveInventory("SamsaraHexenPorkalator")
-        goto PickupFinish
+        goto PickupAcquiredUnique3
 
-      PickupFinish:
+      PickupAcquiredUnique3:
         TNT1 A 0 A_GiveInventory("SamsaraHexen1AcquiredUnique3")
-        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 45), "PickupStop")
+        TNT1 A 0 A_JumpIf(CallACS("SamsaraDecorate", 45), "PickupFinish")
         TNT1 A 0 A_GiveInventory("SamsaraHexenHasPorkalator")
-        stop
+        goto PickupFinish
     }
 }
 
@@ -552,7 +615,7 @@ actor IPOGStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",27)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",35)
       Pickup1Start:
         TNT1 A 0 A_GiveInventory("ShieldCharge")
         stop
@@ -561,7 +624,7 @@ actor IPOGStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",28)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",36)
       Pickup2Start:
         TNT1 A 0 A_GiveInventory("IPOGProximityMineItem",5)
         stop
@@ -570,7 +633,7 @@ actor IPOGStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",29)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",37)
       Pickup3Start:
         TNT1 A 0 A_GiveInventory("IPOGTimeBombItem",5)
         stop
@@ -579,7 +642,7 @@ actor IPOGStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",30)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",38)
       Pickup4Start:
         TNT1 A 0 A_GiveInventory("IPOGCloneItem")
         stop
@@ -588,7 +651,7 @@ actor IPOGStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",31)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",39)
       Pickup5Start:
         TNT1 A 0 A_TakeInventory("SamsaraIPOGUniqueMedtubeLoopCount") // reset
       Pickup5Loop:
@@ -747,7 +810,7 @@ actor CyberMageStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",34)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",42)
       Pickup1Start:
         TNT1 A 0 A_JumpIfInventory("MagicMode1",1,"Pickup1Fill")
         TNT1 A 0 A_GiveInventory("MagicMode1")
@@ -762,7 +825,7 @@ actor CyberMageStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",35)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",43)
       Pickup2Start:
         TNT1 A 0 A_JumpIfInventory("MagicMode2",1,"Pickup2Fill")
         TNT1 A 0 A_GiveInventory("MagicMode2")
@@ -777,7 +840,7 @@ actor CyberMageStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",36)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",44)
       Pickup3Start:
         TNT1 A 0 A_JumpIfInventory("MagicMode3",1,"Pickup3Fill")
         TNT1 A 0 A_GiveInventory("MagicMode3")
@@ -792,7 +855,7 @@ actor CyberMageStrifeUnique : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",37)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",45)
       Pickup4Start:
         TNT1 A 0 A_JumpIfInventory("MagicMode4",1,"Pickup4Fill")
         TNT1 A 0 A_GiveInventory("MagicMode4")
@@ -845,7 +908,7 @@ actor BittermanStrifeUnique1 : Trigger
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraChoice1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraLoadout1")
         TNT1 A 0 A_TakeInventory("SamsaraMiscPickupDisplayExtraDropped1")
-        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",38)
+        TNT1 A 0 A_GiveInventory("SamsaraMiscPickupDisplayExtraChoice1",46)
         goto PickupMessageInitDone
 
       PickupMessageInitDone:
