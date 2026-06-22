@@ -304,7 +304,6 @@ Actor SamsaraMonsterHumanoid
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
@@ -1030,6 +1029,12 @@ Actor SamsaraMonsterHumanoidFemaleTotalGib : SamsaraMonsterHumanoidTotalGib
 			TNT1 A 0 A_PlaySound("Goldeneye/Tank/Squish",CHAN_6)
 			TNT1 A 0 A_PlaySound("Goldeneye/DeathF",CHAN_5)
 			TNT1 A -1 A_Jump(256,"Death")
+			Wait
+
+		// Fire/Ice Death states
+		Death.RTCWFire:
+			TNT1 A 0 A_PlaySound("RTCW/Enemy/BurnF",CHAN_7,1.0)
+			TNT1 A -1 A_Jump(256, "Burn")
 			Wait
 	}
 }
@@ -9651,7 +9656,6 @@ Actor SamsaraMiscCharHumanoidStatic
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
@@ -10668,7 +10672,6 @@ Actor SamsaraMiscCharHumanoidDynamic : SwitchableDecoration
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait

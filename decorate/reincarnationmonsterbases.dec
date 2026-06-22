@@ -15955,7 +15955,6 @@ Actor SamsaraMonsterReincAcolyte : Acolyte
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
@@ -16791,7 +16790,6 @@ Actor SamsaraMonsterReincAcolyteBlue : AcolyteBlue
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
@@ -17629,7 +17627,6 @@ Actor SamsaraMonsterReincStrifeHumanoid : StrifeHumanoid
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait

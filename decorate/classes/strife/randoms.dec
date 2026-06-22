@@ -407,7 +407,6 @@ ACTOR StrifePeasant1 : Peasant
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
@@ -3400,7 +3399,6 @@ ACTOR StrifeBeggar : Beggar
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait

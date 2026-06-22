@@ -317,7 +317,6 @@ ACTOR ScriptedMarine2 : ScriptedMarine replaces ScriptedMarine
 		Death.PGFire:
 		Death.QuakeFire:
 		Death.WTRangedFire:
-		Death.RTCWFire:
 		Death.DoomDamageTypeFire:
 			TNT1 A -1 A_Jump(256,"Burn")
 			Wait
