@@ -660,7 +660,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
         {
             {
                 {"Goldeneye/Weaponup"},
-                {"Goldeneye/KnifeSwitch"},
+                {"Goldeneye/KnifeSwitch", "Goldeneye/KnifeSwitch"},
                 {"Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup"},
                 {"Goldeneye/Weaponup"},
                 {"Goldeneye/Weaponup", "Goldeneye/Weaponup"},
@@ -675,7 +675,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
             },
             {
                 {"Goldeneye/Weaponup"},
-                {"Goldfinger/HatSwitch"},
+                {"Goldfinger/HatSwitch", "Goldfinger/HatSwitch"},
                 {"Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup"},
                 {"Goldeneye/Weaponup"},
                 {"Goldeneye/Weaponup", "Goldeneye/Weaponup"},
@@ -1431,7 +1431,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
         {
             {
                 {"Goldeneye/Weaponup"},
-                {"Goldeneye/KnifeSwitch"},
+                {"Goldeneye/KnifeSwitch", "Goldeneye/KnifeSwitch"},
                 {"Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup"},
                 {"Goldeneye/Weaponup"},
                 {"Goldeneye/Weaponup", "Goldeneye/Weaponup"},
@@ -1446,7 +1446,7 @@ str ClassPickupSounds[2][CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT] =
             },
             {
                 {"Goldeneye/Weaponup"},
-                {"Goldfinger/HatSwitch"},
+                {"Goldfinger/HatSwitch", "Goldfinger/HatSwitch"},
                 {"Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup", "Goldeneye/Weaponup"},
                 {"Goldeneye/Weaponup"},
                 {"Goldeneye/Weaponup", "Goldeneye/Weaponup"},

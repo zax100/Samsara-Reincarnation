@@ -202,7 +202,7 @@ Script "BondAltHold" (void) Clientside
 	}
 }
 
-#define GOLDENEYEWEAPONS 32
+#define GOLDENEYEWEAPONS 33
 
 //Class name, list name, main page name, main ammo type, magazine ammo type, ammo graphic, dual magazine type
 str GoldeneyeWeaponInfo[2][GOLDENEYEWEAPONS][9] = 
@@ -214,7 +214,8 @@ str GoldeneyeWeaponInfo[2][GOLDENEYEWEAPONS][9] =
         {"Goldeneye_PP7SpecialIssue", "PP7",                  "PP7 Special Issue", "-2",                           "Goldeneye_PP7Magazine",             "B57B31", "Goldeneye_PP7DualMagazine",            "Goldeneye_PP7DualToken",             "GEWPP7"},
         {"Goldeneye_DD44",            "DD44",                 "DD44 Dostovei",     "-2",                           "Goldeneye_DD44Magazine",            "B57B31", "Goldeneye_DD44DualMagazine",           "Goldeneye_PP7DualToken",             "GEWDD4"},
         {"-1",                        "-1",                   "-1",                "-1",                           "-1",                                "-1",     "-1",                                   "-1",                                 "-1"},
-        {"Goldeneye_ThrowingKnives",  "Throwing Knife",       "Throwing Knife",    "Goldeneye_ThrowingKnivesAmmo", "-1",                                "B47A9D", "-1",                                   "Goldeneye_KnifeDualToken",           "GEWKNI"},
+        {"Goldeneye_ThrowingKnives",  "Throwing Knife",       "Throwing Knife",    "Goldeneye_ThrowingKnivesAmmo", "-1",                                "B47A9D", "-1",                                   "Goldeneye_ThrowingKnivesDualToken",  "GEWKNI"},
+        {"Goldeneye_HuntingKnife",    "Hunting Knife",        "Hunting Knife",     "-1",                           "-1",                                "-1",     "-1",                                   "Goldeneye_ThrowingKnivesDualToken",  "GEWKN2"},
         {"Goldeneye_KF7Soviet",       "KF7 Soviet",           "KF7\nSoviet",       "Clip",                         "Goldeneye_KF7Magazine",             "B579A6", "Goldeneye_KF7DualMagazine",            "Goldeneye_KF7DualToken",             "GEWKF7"},
         {"Goldeneye_AutoShotgun",     "Auto Shotgun",         "Automatic Shotgun", "Shell",                        "Goldeneye_AutoShotgunMagazine",     "B47C9E", "Goldeneye_AutoShotgunDualMagazine",    "Goldeneye_AutoShotgunDualToken",     "GEWASG"},
         {"Goldeneye_Shotgun",         "Shotgun",              "Shotgun",           "Shell",                        "Goldeneye_ShotgunMagazine",         "B47C9E", "Goldeneye_ShotgunDualMagazine",        "Goldeneye_AutoShotgunDualToken",     "GEWSHO"},
@@ -249,6 +250,7 @@ str GoldeneyeWeaponInfo[2][GOLDENEYEWEAPONS][9] =
         {"Goldfinger_LugerP08",       "Luger P08",            "Luger P08",                  "-2",                        "Goldfinger_LugerP08Magazine",      "GE09A0", "Goldfinger_LugerP08DualMagazine",      "Goldeneye_PP7DualToken",             "GFWLUG"},
         {"Goldfinger_WaltherP38",     "Walther P38",          "Walther\nP38",               "-2",                        "Goldfinger_WaltherP38Magazine",    "GE09A0", "Goldfinger_WaltherP38DualMagazine",    "Goldeneye_PP7DualToken",             "GFWP38"},
         {"Goldfinger_OddJobHat",      "Oddjob's Hat",         "Oddjob's\nBowler Hat",       "Goldfinger_OddJobHatAmmo",  "-1",                               "GE09I0", "-1",                                   "-1",                                 "GFWODD"},
+        {"Goldfinger_GolfClub",       "Golf Club",            "Golf Club",                  "-1",                        "-1",                               "-1",     "-1",                                   "Goldeneye_ThrowingKnivesDualToken",  "GFWCLB"},
         {"Goldfinger_AK47",           "AK47 Kalashnikov",     "AK47\nKalashnikov",          "Clip",                      "Goldfinger_AK47Magazine",          "GE09K0", "Goldfinger_AK47DualMagazine",          "Goldeneye_AR33DualToken",            "GFWAK4"},
         {"Goldfinger_UZI",            "UZI (9mm)",            "UZI (9mm)",                  "Clip",                      "Goldfinger_UZIMagazine",           "GE09A0", "Goldfinger_UZIDualMagazine",           "Goldeneye_D5KDualToken",             "GFWUZI"},
         {"Goldfinger_MP40",           "MP40",                 "MP40",                       "Clip",                      "Goldfinger_MP40Magazine",          "GE09A0", "Goldfinger_MP40DualMagazine",          "Goldeneye_KF7DualToken",             "GFWMP4"},

@@ -1294,7 +1294,7 @@ StatusBar Fullscreen, ForceScaled
                         // Slot 1
                         InInventory GotWeapon0 { DrawImage "STYSNUM1", 126, 10; }
 
-                        IsSelected Goldfinger_OddjobHat { DrawImage "STY2NUM1", 126, 10; }
+                        IsSelected Goldfinger_OddjobHat, Goldfinger_GolfClub { DrawImage "STY2NUM1", 126, 10; }
 
                         // Slot 2
                         InInventory GotWeapon2 { DrawImage "STYSNUM2", 136, 10; }
@@ -1339,7 +1339,7 @@ StatusBar Fullscreen, ForceScaled
                         // Slot 1
                         InInventory GotWeapon0 { DrawImage "STYSNUM1", 126, 10; }
 
-                        IsSelected Goldeneye_ThrowingKnives { DrawImage "STY2NUM1", 126, 10; }
+                        IsSelected Goldeneye_ThrowingKnives, Goldeneye_HuntingKnife { DrawImage "STY2NUM1", 126, 10; }
 
                         // Slot 2
                         InInventory GotWeapon2 { DrawImage "STYSNUM2", 136, 10; }
@@ -5762,8 +5762,8 @@ StatusBar Fullscreen, ForceScaled
                 IsSelected " RR Rip Saw " { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected Q2Machinegun { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected Hexen2IceMace { DrawImage "STY2NUM1", 126, 10; }
-                IsSelected Goldeneye_ThrowingKnives { DrawImage "STY2NUM1", 126, 10; }
-                IsSelected Goldfinger_OddjobHat { DrawImage "STY2NUM1", 126, 10; }
+                IsSelected Goldeneye_ThrowingKnives, Goldeneye_HuntingKnife { DrawImage "STY2NUM1", 126, 10; }
+                IsSelected Goldfinger_OddjobHat, Goldfinger_GolfClub { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected Catacomb_WavesQuickSpell { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected Painkiller_Stakegun { DrawImage "STY2NUM1", 126, 10; }
                 IsSelected Unreal_RazorJack { DrawImage "STY2NUM1", 126, 10; }

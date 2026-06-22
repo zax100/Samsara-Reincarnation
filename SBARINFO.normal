@@ -9556,13 +9556,23 @@ StatusBar Normal, ForceScaled
                     // Slot 1
                     InInventory GotWeapon0
                     {
-                        DrawImage "GFW1L0N", 80, 9;
+                        InInventory SamsaraGoldfingerLoadoutSlot1 // Golf Club
+                        {
+                            InInventory Goldeneye_ThrowingKnivesDualToken { DrawImage "GFW1L0N", 80, 9; }
+                            else { DrawImage "GFW1L0N", 80, 9; }
+                        }
+                        else { DrawImage "GFW1L0N", 80, 9; } // Oddjob's Hat
+
                         DrawImage "GFWSEL1N", 86, 0;
                     }
 
                     IsSelected Goldfinger_OddjobHat
                     {
                         DrawImage "GFW1L0Y", 80, 9;
+                        DrawImage "GFWSEL1Y", 86, 0;
+                    } else IsSelected Goldfinger_GolfClub {
+                        InInventory BondDualWieldToken { DrawImage "GFW1L0Y", 80, 9; }
+                        else { DrawImage "GFW1L0Y", 80, 9; }
                         DrawImage "GFWSEL1Y", 86, 0;
                     }
 
@@ -10142,13 +10152,24 @@ StatusBar Normal, ForceScaled
                     // Slot 1
                     InInventory GotWeapon0
                     {
-                        InInventory Goldeneye_ThrowingKnivesDualToken { DrawImage "GEW1L0DN", 80, 9; }
-                        else { DrawImage "GEW1L0N", 80, 9; }
+                        InInventory SamsaraGoldenEyeLoadoutSlot1 // Hunting Knife
+                        {
+                            InInventory Goldeneye_ThrowingKnivesDualToken { DrawImage "GEW1L0DN", 80, 9; }
+                            else { DrawImage "GEW1L0N", 80, 9; }
+                        } else { // Throwing Knives
+                            InInventory Goldeneye_ThrowingKnivesDualToken { DrawImage "GEW1L0DN", 80, 9; }
+                            else { DrawImage "GEW1L0N", 80, 9; }
+                        }
+
                         DrawImage "GEWSEL1N", 86, 0;
                     }
 
                     IsSelected Goldeneye_ThrowingKnives
                     {
+                        InInventory BondDualWieldToken { DrawImage "GEW1L0DY", 80, 9; }
+                        else { DrawImage "GEW1L0Y", 80, 9; }
+                        DrawImage "GEWSEL1Y", 86, 0;
+                    } else IsSelected Goldeneye_HuntingKnife {
                         InInventory BondDualWieldToken { DrawImage "GEW1L0DY", 80, 9; }
                         else { DrawImage "GEW1L0Y", 80, 9; }
                         DrawImage "GEWSEL1Y", 86, 0;

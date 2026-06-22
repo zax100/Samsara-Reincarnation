@@ -6998,6 +6998,18 @@ str ClassPickupMessages[CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT][MSGCOUNT]
                     "Latest Q-branch invention.",
                     "",
                 },
+                {
+                    "Picked up a hunting knife. Find some Soviets!",
+                    "Now let's cut some necks!",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                },
             },
             {
                 {
@@ -7244,6 +7256,18 @@ str ClassPickupMessages[CLASSCOUNT][MAXMODES][SLOTCOUNT][LOADOUTCOUNT][MSGCOUNT]
             {
                 {
                     "Picked up a bowlerhat. Find some henchmen!",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                },
+                {
+                    "Picked up a golf club. Find some henchmen!",
                     "",
                     "",
                     "",
@@ -10907,4 +10931,4 @@ str MiscPickupMessages[MISCPICKUPCOUNT][LOADOUTCOUNT][MSGCOUNT] =
     }},
 };
 
-// jesus fucking christ, 10910 lines
+// jesus fucking christ, 10930 lines

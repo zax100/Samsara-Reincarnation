@@ -3941,6 +3941,13 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				{
 					SetInventory("SamsaraAlternateSoundToken", GetUserCVar(pln, "samsara_cl_goldeneyesounds"));
 
+                    loadoutmode = GetCVar("samsara_bond_slot1") > 0 && !CheckInventory("SamsaraHasAllLoadoutEquipment") ? GetCVar("samsara_bond_slot1") - 1 : GetUserCVar(pln, "samsara_cl_bond_slot1");
+
+                    if (loadoutmode > 1) { loadoutmode = 1; }
+                    else if (loadoutmode < 0) { loadoutmode = 0; }
+
+                    SetInventory("SamsaraGoldenEyeLoadoutSlot1", loadoutmode);
+
                     loadoutmode = GetCVar("samsara_bond_fallbackranged") > 0 && !CheckInventory("SamsaraHasAllLoadoutEquipment") ? GetCVar("samsara_bond_fallbackranged") - 1 : GetUserCVar(pln, "samsara_cl_bond_fallbackranged");
 
                     if (loadoutmode > 3) { loadoutmode = 3; }
@@ -3968,6 +3975,12 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                     else if (loadoutmode < 0) { loadoutmode = 0; }
 
                     SetInventory("SamsaraGoldenEyeLoadoutUnique2", loadoutmode);
+
+                    if (loadoutPrevValue[pln][SLOT_CHAINSAW] != CheckInventory("SamsaraGoldenEyeLoadoutSlot1"))
+                    {
+                        ACS_NamedExecuteAlways("SAMSARA_CLIENT_CLASSLOADOUT", 0, SLOT_CHAINSAW, CheckInventory("SamsaraGoldenEyeLoadoutSlot1"), pln);
+                        loadoutPrevValue[pln][SLOT_CHAINSAW] = CheckInventory("SamsaraGoldenEyeLoadoutSlot1");
+                    }
 
                     if (loadoutPrevValue[pln][SLOT_PISTOL] != CheckInventory("SamsaraGoldenEyeLoadoutFallbackRanged"))
                     {
@@ -4022,13 +4035,19 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                         SetInventory("Goldfinger_WaltherP38", 0);
                     }
 
-                    if (CheckInventory("Goldfinger_OddjobHat"))
+                    if (CheckInventory("Goldfinger_OddjobHat") || CheckInventory("Goldfinger_GolfClub"))
                     {
-                        SetInventory("Goldeneye_ThrowingKnives", 1);
+                        if (!CheckInventory("SamsaraGoldenEyeLoadoutSlot1") || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldeneye_ThrowingKnives", 1); }
+                        if (CheckInventory("SamsaraGoldenEyeLoadoutSlot1") || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldeneye_HuntingKnife", 1); }
 
-                        if (CheckWeapon("Goldfinger_OddjobHat")) { SetWeapon("Goldeneye_ThrowingKnives"); }
+                        if (CheckWeapon("Goldfinger_OddjobHat") || CheckWeapon("Goldfinger_GolfClub"))
+                        {
+                            if (!CheckInventory("SamsaraGoldenEyeLoadoutSlot1")) { SetWeapon("Goldeneye_ThrowingKnives"); }
+                            else if (CheckInventory("SamsaraGoldenEyeLoadoutSlot1")) { SetWeapon("Goldeneye_HuntingKnife"); }
+                        }
 
                         SetInventory("Goldfinger_OddjobHat", 0);
+                        SetInventory("Goldfinger_GolfClub", 0);
                     }
 
                     if (CheckInventory("Goldfinger_MP40"))
@@ -4294,6 +4313,30 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                         }
                     }
 
+                    if (CheckInventory("Goldeneye_ThrowingKnives") || CheckInventory("Goldeneye_HuntingKnife"))
+                    {
+                        if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                        {
+                            SetInventory("Goldeneye_ThrowingKnives", 1);
+                            SetInventory("Goldeneye_HuntingKnife", 1);
+                        } else {
+                            if (!CheckInventory("SamsaraGoldenEyeLoadoutSlot1"))
+                            {
+                                SetInventory("Goldeneye_ThrowingKnives", 1);
+
+                                if (CheckWeapon("Goldeneye_HuntingKnife")) { SetWeapon("Goldeneye_ThrowingKnives"); }
+
+                                SetInventory("Goldeneye_HuntingKnife", 0);
+                            } else if (CheckInventory("SamsaraGoldenEyeLoadoutSlot1")) {
+                                SetInventory("Goldeneye_HuntingKnife", 1);
+
+                                if (CheckWeapon("Goldeneye_ThrowingKnives")) { SetWeapon("Goldeneye_HuntingKnife"); }
+
+                                SetInventory("Goldeneye_ThrowingKnives", 0);
+                            }
+                        }
+                    }
+
                     if (CheckInventory("Goldeneye_AutoShotgun") || CheckInventory("Goldeneye_Shotgun"))
                     {
                         if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
@@ -4405,7 +4448,8 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 					if (CheckInventory("Goldeneye_Slapper") &&
 						(CheckInventory("Goldeneye_PP7Silenced") || CheckInventory("Goldeneye_Klobb") || CheckInventory("Goldeneye_PP7SpecialIssue") ||
 						CheckInventory("Goldeneye_DD44")) &&
-						CheckInventory("Goldeneye_ThrowingKnives") && CheckInventory("Goldeneye_KF7Soviet") &&
+						(CheckInventory("Goldeneye_ThrowingKnives") || CheckInventory("Goldeneye_HuntingKnife")) &&
+						CheckInventory("Goldeneye_KF7Soviet") &&
 						(CheckInventory("Goldeneye_AutoShotgun") || CheckInventory("Goldeneye_Shotgun")) &&
 						CheckInventory("Goldeneye_AR33") && CheckInventory("Goldeneye_Phantom") && CheckInventory("Goldeneye_RocketLauncher") &&
 						CheckInventory("Goldeneye_GrenadeLauncher") && CheckInventory("Goldeneye_RCP90") &&
@@ -4442,7 +4486,8 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 					if (CheckInventory("Goldeneye_Slapper") &&
 						(CheckInventory("Goldeneye_PP7Silenced") || CheckInventory("Goldeneye_Klobb") || CheckInventory("Goldeneye_PP7SpecialIssue") ||
 						CheckInventory("Goldeneye_DD44")) &&
-						CheckInventory("Goldeneye_ThrowingKnives") && CheckInventory("Goldeneye_KF7Soviet") &&
+						(CheckInventory("Goldeneye_ThrowingKnives") || CheckInventory("Goldeneye_HuntingKnife")) &&
+						CheckInventory("Goldeneye_KF7Soviet") &&
 						(CheckInventory("Goldeneye_AutoShotgun") || CheckInventory("Goldeneye_Shotgun")) &&
 						CheckInventory("Goldeneye_AR33") && CheckInventory("Goldeneye_Phantom") && CheckInventory("Goldeneye_RocketLauncher") &&
 						CheckInventory("Goldeneye_GrenadeLauncher") && CheckInventory("Goldeneye_RCP90") &&
@@ -4466,6 +4511,13 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				else
 				{
 					SetInventory("SamsaraAlternateSoundToken", 0);
+
+                    loadoutmode = GetCVar("samsara_bondgf_slot1") > 0 && !CheckInventory("SamsaraHasAllLoadoutEquipment") ? GetCVar("samsara_bondgf_slot1") - 1 : GetUserCVar(pln, "samsara_cl_bondgf_slot1");
+
+                    if (loadoutmode > 1) { loadoutmode = 1; }
+                    else if (loadoutmode < 0) { loadoutmode = 0; }
+
+                    SetInventory("SamsaraGoldfingerLoadoutSlot1", loadoutmode);
 
                     loadoutmode = GetCVar("samsara_bondgf_fallbackranged") > 0 && !CheckInventory("SamsaraHasAllLoadoutEquipment") ? GetCVar("samsara_bondgf_fallbackranged") - 1 : GetUserCVar(pln, "samsara_cl_bondgf_fallbackranged");
 
@@ -4501,6 +4553,12 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                     else if (loadoutmode < 0) { loadoutmode = 0; }
 
                     SetInventory("SamsaraGoldfingerLoadoutUnique2", loadoutmode);
+
+                    if (loadoutPrevValue[pln][SLOT_CHAINSAW] != CheckInventory("SamsaraGoldfingerLoadoutSlot1"))
+                    {
+                        ACS_NamedExecuteAlways("SAMSARA_CLIENT_CLASSLOADOUT", 0, SLOT_CHAINSAW, CheckInventory("SamsaraGoldfingerLoadoutSlot1"), pln);
+                        loadoutPrevValue[pln][SLOT_CHAINSAW] = CheckInventory("SamsaraGoldfingerLoadoutSlot1");
+                    }
 
                     if (loadoutPrevValue[pln][SLOT_PISTOL] != CheckInventory("SamsaraGoldfingerLoadoutFallbackRanged"))
                     {
@@ -4556,13 +4614,19 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                         SetInventory("Goldeneye_DD44", 0);
                     }
 
-                    if (CheckInventory("Goldeneye_ThrowingKnives"))
+                    if (CheckInventory("Goldeneye_ThrowingKnives") || CheckInventory("Goldeneye_HuntingKnife"))
                     {
-                        SetInventory("Goldfinger_OddjobHat", 1);
+                        if (!CheckInventory("SamsaraGoldfingerLoadoutSlot1") || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldfinger_OddjobHat", 1); }
+                        if (CheckInventory("SamsaraGoldfingerLoadoutSlot1") || CheckInventory("SamsaraHasAllLoadoutEquipment")) { SetInventory("Goldfinger_GolfClub", 1); }
 
-                        if (CheckWeapon("Goldeneye_ThrowingKnives")) { SetWeapon("Goldfinger_OddjobHat"); }
+                        if (CheckWeapon("Goldeneye_ThrowingKnives") || CheckWeapon("Goldeneye_HuntingKnife"))
+                        {
+                            if (!CheckInventory("SamsaraGoldfingerLoadoutSlot1")) { SetWeapon("Goldfinger_OddjobHat"); }
+                            else if (CheckInventory("SamsaraGoldfingerLoadoutSlot1")) { SetWeapon("Goldfinger_GolfClub"); }
+                        }
 
                         SetInventory("Goldeneye_ThrowingKnives", 0);
+                        SetInventory("Goldeneye_HuntingKnife", 0);
                     }
 
                     if (CheckInventory("Goldeneye_KF7Soviet"))
@@ -4845,6 +4909,30 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
                         }
                     }
 
+                    if (CheckInventory("Goldfinger_OddjobHat") || CheckInventory("Goldfinger_GolfClub"))
+                    {
+                        if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
+                        {
+                            SetInventory("Goldfinger_OddjobHat", 1);
+                            SetInventory("Goldfinger_GolfClub", 1);
+                        } else {
+                            if (!CheckInventory("SamsaraGoldfingerLoadoutSlot1"))
+                            {
+                                SetInventory("Goldfinger_OddjobHat", 1);
+
+                                if (CheckWeapon("Goldfinger_GolfClub")) { SetWeapon("Goldfinger_OddjobHat"); }
+
+                                SetInventory("Goldfinger_GolfClub", 0);
+                            } else if (CheckInventory("SamsaraGoldfingerLoadoutSlot1")) {
+                                SetInventory("Goldfinger_GolfClub", 1);
+
+                                if (CheckWeapon("Goldfinger_OddjobHat")) { SetWeapon("Goldfinger_GolfClub"); }
+
+                                SetInventory("Goldfinger_OddjobHat", 0);
+                            }
+                        }
+                    }
+
                     if (CheckInventory("Goldfinger_Shotgun") || CheckInventory("Goldfinger_OverUnder"))
                     {
                         if (CheckInventory("SamsaraHasAllLoadoutEquipment"))
@@ -4970,7 +5058,8 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 					if (CheckInventory("Goldeneye_Slapper") &&
 						(CheckInventory("Goldfinger_PPKSilenced") || CheckInventory("Goldfinger_PPK") || CheckInventory("Goldfinger_ColtM1911") ||
 						CheckInventory("Goldfinger_LugerP08") || CheckInventory("Goldfinger_WaltherP38")) &&
-						CheckInventory("Goldfinger_OddjobHat") && CheckInventory("Goldfinger_MP40") &&
+						(CheckInventory("Goldfinger_OddjobHat") || CheckInventory("Goldfinger_GolfClub")) &&
+						CheckInventory("Goldfinger_MP40") &&
 						(CheckInventory("Goldfinger_Shotgun") || CheckInventory("Goldfinger_OverUnder")) &&
 						CheckInventory("Goldfinger_AK47") &&
                         (CheckInventory("Goldfinger_ThompsonDrum") || CheckInventory("Goldfinger_Thompson")) &&
@@ -5007,7 +5096,8 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 					if (CheckInventory("Goldeneye_Slapper") &&
 						(CheckInventory("Goldfinger_PPKSilenced") || CheckInventory("Goldfinger_PPK") || CheckInventory("Goldfinger_ColtM1911") ||
 						CheckInventory("Goldfinger_LugerP08") || CheckInventory("Goldfinger_WaltherP38")) &&
-						CheckInventory("Goldfinger_OddjobHat") && CheckInventory("Goldfinger_MP40") &&
+						(CheckInventory("Goldfinger_OddjobHat") || CheckInventory("Goldfinger_GolfClub")) &&
+						CheckInventory("Goldfinger_MP40") &&
 						(CheckInventory("Goldfinger_Shotgun") || CheckInventory("Goldfinger_OverUnder")) &&
 						CheckInventory("Goldfinger_AK47") &&
                         (CheckInventory("Goldfinger_ThompsonDrum") || CheckInventory("Goldfinger_Thompson")) &&

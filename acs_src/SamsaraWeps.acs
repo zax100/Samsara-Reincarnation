@@ -498,7 +498,7 @@ str ClassWeapons[CLASSCOUNT][SLOTCOUNT][CHOICECOUNT] =
     },
     { // GoldenEye 007
         {"Goldeneye_Slapper",         "",           "", "",                                   "", ""},
-        {"Goldeneye_ThrowingKnives",  "",           "", "ForceCheck",                         "", "GotWeapon0"}, // dropped pickups can give 0 ammo, uses script to check for it as a hackaround. an altclass also uses a different ammo type
+        {"Goldeneye_ThrowingKnives",  "",           "", "ForceCheck",                         "", "GotWeapon0"}, // dropped pickups can give 0 ammo, uses script to check for it as a hackaround. an altclass also uses a different ammo type for a weapon
         {"Goldeneye_PP7Silenced",     "",           "", "ForceCheck",                         "", ""},
         {"Goldeneye_KF7Soviet",       "Clip",       "", "Goldeneye_KF7DualToken",             "", "GotWeapon2"},
         {"Goldeneye_AutoShotgun",     "",           "", "ForceCheck",                         "", "GotWeapon3"}, // can give multiple weapons that use the same ammo type, uses script for proper ammo calculations
@@ -845,10 +845,10 @@ str ClassHotKeyWeapon[CLASSCOUNT][MAXMODES][SLOTCOUNT + UNIQUECOUNT][LOADOUTCOUN
     }},
     {
         {
-            {"Goldeneye_Slapper"}, {"Goldeneye_ThrowingKnives"}, {"Goldeneye_PP7Silenced", "Goldeneye_Klobb", "Goldeneye_PP7SpecialIssue", "Goldeneye_DD44"}, {"Goldeneye_KF7Soviet"}, {"Goldeneye_AutoShotgun", "Goldeneye_Shotgun"}, {"Goldeneye_AR33"}, {"Goldeneye_RocketLauncher"}, {"Goldeneye_RCP90"}, {"Goldeneye_Moonraker"}, {"Goldeneye_SniperRifle"}, {"Goldeneye_SilencedD5K", "Goldeneye_ZMG", "Goldeneye_D5KDeutsche"}, {"Goldeneye_RemoteMines"}, {"Goldeneye_Phantom"}, {"Goldeneye_GrenadeLauncher"}, {"Goldeneye_Cougar", "Goldeneye_SilverPP7", "Goldeneye_ArabahViper"}, {"Goldeneye_GoldenGun"},
+            {"Goldeneye_Slapper"}, {"Goldeneye_ThrowingKnives", "Goldeneye_HuntingKnife"}, {"Goldeneye_PP7Silenced", "Goldeneye_Klobb", "Goldeneye_PP7SpecialIssue", "Goldeneye_DD44"}, {"Goldeneye_KF7Soviet"}, {"Goldeneye_AutoShotgun", "Goldeneye_Shotgun"}, {"Goldeneye_AR33"}, {"Goldeneye_RocketLauncher"}, {"Goldeneye_RCP90"}, {"Goldeneye_Moonraker"}, {"Goldeneye_SniperRifle"}, {"Goldeneye_SilencedD5K", "Goldeneye_ZMG", "Goldeneye_D5KDeutsche"}, {"Goldeneye_RemoteMines"}, {"Goldeneye_Phantom"}, {"Goldeneye_GrenadeLauncher"}, {"Goldeneye_Cougar", "Goldeneye_SilverPP7", "Goldeneye_ArabahViper"}, {"Goldeneye_GoldenGun"},
         },
         {
-            {"Goldeneye_Slapper"}, {"Goldfinger_OddjobHat"}, {"Goldfinger_PPKSilenced", "Goldfinger_PPK", "Goldfinger_ColtM1911", "Goldfinger_LugerP08", "Goldfinger_WaltherP38"}, {"Goldfinger_MP40"}, {"Goldfinger_Shotgun", "Goldfinger_OverUnder"}, {"Goldfinger_AK47"}, {"Goldfinger_SuperBazooka"}, {"Goldfinger_M1Carbine"}, {"Goldfinger_Laser"}, {"Goldfinger_AR7"}, {"Goldfinger_UZI", "Goldfinger_SmithWesson22", "Goldfinger_SmithWesson36"}, {"Goldfinger_Claymore"}, {"Goldfinger_ThompsonDrum", "Goldfinger_Thompson"}, {"Goldfinger_M79"}, {"Goldfinger_M1Garand", "Goldfinger_Kar98k"}, {"Goldfinger_M14"},
+            {"Goldeneye_Slapper"}, {"Goldfinger_OddjobHat", "Goldfinger_GolfClub"}, {"Goldfinger_PPKSilenced", "Goldfinger_PPK", "Goldfinger_ColtM1911", "Goldfinger_LugerP08", "Goldfinger_WaltherP38"}, {"Goldfinger_MP40"}, {"Goldfinger_Shotgun", "Goldfinger_OverUnder"}, {"Goldfinger_AK47"}, {"Goldfinger_SuperBazooka"}, {"Goldfinger_M1Carbine"}, {"Goldfinger_Laser"}, {"Goldfinger_AR7"}, {"Goldfinger_UZI", "Goldfinger_SmithWesson22", "Goldfinger_SmithWesson36"}, {"Goldfinger_Claymore"}, {"Goldfinger_ThompsonDrum", "Goldfinger_Thompson"}, {"Goldfinger_M79"}, {"Goldfinger_M1Garand", "Goldfinger_Kar98k"}, {"Goldfinger_M14"},
         },
     },
     {{
@@ -1506,7 +1506,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 	},
 	{ //Goldeneye
 		{
-			{ "Goldeneye_ThrowingKnives", "Goldeneye_Slapper", "", "", "", "", "", "", "", "" },
+			{ "Goldeneye_ThrowingKnives", "Goldeneye_HuntingKnife", "Goldeneye_Slapper", "", "", "", "", "", "", "" },
 			{ "Goldeneye_PP7Silenced", "Goldeneye_Klobb", "Goldeneye_PP7SpecialIssue", "Goldeneye_DD44", "", "", "", "", "", "" },
 			{ "Goldeneye_SilencedD5K", "Goldeneye_D5KDeutsche", "Goldeneye_ZMG", "", "", "", "", "", "", "" },
 			{ "Goldeneye_KF7Soviet", "", "", "", "", "", "", "", "", "" },
@@ -1518,7 +1518,7 @@ str OriginalHotKeyWeapon[CLASSCOUNT][MAXMODES][ORIGINALCOUNT][ORIGINALCOUNT] =
 			{ "Goldeneye_WatchLaser", "Goldeneye_TimedMines", "Goldeneye_ProximityMines", "Goldeneye_RemoteMines", "Goldeneye_WatchDetonator", "Goldeneye_WatchMagnet", "", "", "", "" },
 		},
 		{
-			{ "Goldfinger_OddjobHat", "Goldeneye_Slapper", "", "", "", "", "", "", "", "" },
+			{ "Goldfinger_OddjobHat", "Goldfinger_GolfClub", "Goldeneye_Slapper", "", "", "", "", "", "", "" },
 			{ "Goldfinger_PPKSilenced", "Goldfinger_PPK", "Goldfinger_ColtM1911", "Goldfinger_LugerP08", "Goldfinger_WaltherP38", "", "", "", "", "" },
 			{ "Goldfinger_UZI", "Goldfinger_SmithWesson22", "Goldfinger_SmithWesson36", "", "", "", "", "", "", "" },
 			{ "Goldfinger_MP40", "", "", "", "", "", "", "", "", "" },
