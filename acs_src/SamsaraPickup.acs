@@ -618,7 +618,7 @@ script "SamsaraBackpackPickupDisplayHexenHack" (int choice)
 
           case 2:
             ACS_NamedExecuteAlways("SamsaraPickupMessages", 0, 3, 12, 1);
-            ACS_NamedExecuteAlways("SamsaraClientMiscPickup", 0, 16, -1, 0);
+            ACS_NamedExecuteAlways("SamsaraClientMiscPickup", 0, 24, -1, 0);
             break;
 
           case 3:
@@ -675,7 +675,7 @@ script "SamsaraBackpackPickupDisplayHexenHack" (int choice)
             break;
 
           case 2:
-            ACS_NamedExecuteAlways("SamsaraClientMiscPickup", 0, 16, -1, 0);
+            ACS_NamedExecuteAlways("SamsaraClientMiscPickup", 0, 24, -1, 0);
             ACS_NamedExecuteAlways("SamsaraPickupMessages", 0, 3, 12, 1);
             break;
 
