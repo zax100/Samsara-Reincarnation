@@ -6903,7 +6903,7 @@ Model "Goldfinger_SmithWesson22"
 	Path "models/goldfinger/sw22"
 	Model 0 "sw22.md3"
 	Model 1 "sw22_text.md3"
-	Path "models/goldeneye/leftarm"
+	Path "models/goldfinger/leftarm"
     Model 2 "leftarm.md3"
     Scale -1.0 1.0 1.0
 
@@ -7099,7 +7099,7 @@ Model "Goldfinger_SmithWesson36"
 {
 	Path "models/goldfinger/sw36"
 	Model 0 "sw36.md3"
-	Path "models/goldeneye/leftarm"
+	Path "models/goldfinger/leftarm"
     Model 1 "leftarm.md3"
     Scale -1.0 1.0 1.0
 
@@ -7249,7 +7249,7 @@ Model "Goldfinger_GoldMagnum"
 {
 	Path "models/goldfinger/goldmagnum"
 	Model 0 "goldmagnum.md3"
-	Path "models/goldeneye/leftarm"
+	Path "models/goldfinger/leftarm"
     Model 1 "leftarm.md3"
     Scale -1.0 1.0 1.0
 
@@ -7411,7 +7411,7 @@ Model "Goldfinger_Laser"
 	Path "models/goldfinger/laser"
 	Model 0 "laser.md3"
 	Model 1 "laser_coils.md3"
-	Path "models/goldeneye/leftarm"
+	Path "models/goldfinger/leftarm"
     Model 2 "leftarm.md3"
     Scale -1.0 1.0 1.0
 
@@ -7912,7 +7912,7 @@ Model "Goldfinger_OddJobHat"
 {
 	Path "models/goldfinger/oddjobhat"
 	Model 0 "oddjobhat.md3"
-	Path "models/goldeneye/leftarm"
+	Path "models/goldfinger/leftarm"
     Model 1 "leftarm.md3"
     Scale -1.0 1.0 1.0
 
@@ -8403,7 +8403,6 @@ Model "Goldfinger_WatchDetonator"
    FrameIndex GE02 I 0 0
    PitchOffset 0
    Offset 0 0 0
-
 }
 
 Model "Goldfinger_WatchDetonator"
@@ -8452,6 +8451,54 @@ Model "Goldfinger_WatchDetonator"
 	FrameIndex GE14 S 1 18
 	FrameIndex GE14 T 0 0
 	FrameIndex GE14 T 1 19
+}
+
+Model "Goldeneye_Slapper"
+{
+	Path "models/goldfinger/leftarm"
+    Model 1 "leftarm.md3"
+    Scale -1.0 1.0 1.0
+
+	FrameIndex GF14 A 0 0
+	FrameIndex GF14 A 1 0
+	FrameIndex GF14 B 0 0
+	FrameIndex GF14 B 1 1
+	FrameIndex GF14 C 0 0
+	FrameIndex GF14 C 1 2
+	FrameIndex GF14 D 0 0
+	FrameIndex GF14 D 1 3
+	FrameIndex GF14 E 0 0
+	FrameIndex GF14 E 1 4
+	FrameIndex GF14 F 0 0
+	FrameIndex GF14 F 1 5
+	FrameIndex GF14 G 0 0
+	FrameIndex GF14 G 1 6
+	FrameIndex GF14 H 0 0
+	FrameIndex GF14 H 1 7
+	FrameIndex GF14 I 0 0
+	FrameIndex GF14 I 1 8
+	FrameIndex GF14 J 0 0
+	FrameIndex GF14 J 1 9
+	FrameIndex GF14 K 0 0
+	FrameIndex GF14 K 1 10
+	FrameIndex GF14 L 0 0
+	FrameIndex GF14 L 1 11
+	FrameIndex GF14 M 0 0
+	FrameIndex GF14 M 1 12
+	FrameIndex GF14 N 0 0
+	FrameIndex GF14 N 1 13
+	FrameIndex GF14 O 0 0
+	FrameIndex GF14 O 1 14
+	FrameIndex GF14 P 0 0
+	FrameIndex GF14 P 1 15
+	FrameIndex GF14 Q 0 0
+	FrameIndex GF14 Q 1 16
+	FrameIndex GF14 R 0 0
+	FrameIndex GF14 R 1 17
+	FrameIndex GF14 S 0 0
+	FrameIndex GF14 S 1 18
+	FrameIndex GF14 T 0 0
+	FrameIndex GF14 T 1 19
 }
 
 Model "Goldfinger_GolfClub"
@@ -10054,4 +10101,100 @@ Model SamsaraUniquePickup3
 
 	FrameIndex GF00 Y 0 0
 	FrameIndex GF00 Y 1 0
+}
+
+Model Goldeneye_TankWeapon
+{
+	Path "models/goldfinger/leftarm"
+    Model 1 "leftarm.md3"
+    Scale -1.0 1.0 1.0
+
+	FrameIndex GF14 A 0 0
+	FrameIndex GF14 A 1 0
+	FrameIndex GF14 B 0 0
+	FrameIndex GF14 B 1 1
+	FrameIndex GF14 C 0 0
+	FrameIndex GF14 C 1 2
+	FrameIndex GF14 D 0 0
+	FrameIndex GF14 D 1 3
+	FrameIndex GF14 E 0 0
+	FrameIndex GF14 E 1 4
+	FrameIndex GF14 F 0 0
+	FrameIndex GF14 F 1 5
+	FrameIndex GF14 G 0 0
+	FrameIndex GF14 G 1 6
+	FrameIndex GF14 H 0 0
+	FrameIndex GF14 H 1 7
+	FrameIndex GF14 I 0 0
+	FrameIndex GF14 I 1 8
+	FrameIndex GF14 J 0 0
+	FrameIndex GF14 J 1 9
+	FrameIndex GF14 K 0 0
+	FrameIndex GF14 K 1 10
+	FrameIndex GF14 L 0 0
+	FrameIndex GF14 L 1 11
+	FrameIndex GF14 M 0 0
+	FrameIndex GF14 M 1 12
+	FrameIndex GF14 N 0 0
+	FrameIndex GF14 N 1 13
+	FrameIndex GF14 O 0 0
+	FrameIndex GF14 O 1 14
+	FrameIndex GF14 P 0 0
+	FrameIndex GF14 P 1 15
+	FrameIndex GF14 Q 0 0
+	FrameIndex GF14 Q 1 16
+	FrameIndex GF14 R 0 0
+	FrameIndex GF14 R 1 17
+	FrameIndex GF14 S 0 0
+	FrameIndex GF14 S 1 18
+	FrameIndex GF14 T 0 0
+	FrameIndex GF14 T 1 19
+}
+
+Model Goldfinger_DB5MachineGuns
+{
+	Path "models/goldfinger/leftarm"
+    Model 1 "leftarm.md3"
+    Scale -1.0 1.0 1.0
+
+	FrameIndex GF14 A 0 0
+	FrameIndex GF14 A 1 0
+	FrameIndex GF14 B 0 0
+	FrameIndex GF14 B 1 1
+	FrameIndex GF14 C 0 0
+	FrameIndex GF14 C 1 2
+	FrameIndex GF14 D 0 0
+	FrameIndex GF14 D 1 3
+	FrameIndex GF14 E 0 0
+	FrameIndex GF14 E 1 4
+	FrameIndex GF14 F 0 0
+	FrameIndex GF14 F 1 5
+	FrameIndex GF14 G 0 0
+	FrameIndex GF14 G 1 6
+	FrameIndex GF14 H 0 0
+	FrameIndex GF14 H 1 7
+	FrameIndex GF14 I 0 0
+	FrameIndex GF14 I 1 8
+	FrameIndex GF14 J 0 0
+	FrameIndex GF14 J 1 9
+	FrameIndex GF14 K 0 0
+	FrameIndex GF14 K 1 10
+	FrameIndex GF14 L 0 0
+	FrameIndex GF14 L 1 11
+	FrameIndex GF14 M 0 0
+	FrameIndex GF14 M 1 12
+	FrameIndex GF14 N 0 0
+	FrameIndex GF14 N 1 13
+	FrameIndex GF14 O 0 0
+	FrameIndex GF14 O 1 14
+	FrameIndex GF14 P 0 0
+	FrameIndex GF14 P 1 15
+	FrameIndex GF14 Q 0 0
+	FrameIndex GF14 Q 1 16
+	FrameIndex GF14 R 0 0
+	FrameIndex GF14 R 1 17
+	FrameIndex GF14 S 0 0
+	FrameIndex GF14 S 1 18
+	FrameIndex GF14 T 0 0
+	FrameIndex GF14 T 1 19
 }
