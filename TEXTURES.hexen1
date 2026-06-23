@@ -13,4 +13,16 @@ Sprite "H101\0", 323, 165
 	Patch "H101B0", 0, 0
 }
 
+Sprite "H100P0", 179, 80
+{
+	Offset -23, -168
+	Patch "H100A0", 0, 0
+}
+
+Sprite "H100Q0", 179, 80
+{
+	Offset -103, -112
+	Patch "H100A0", 0, 0
+}
+
 // End of texture definitions

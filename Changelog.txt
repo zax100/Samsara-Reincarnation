@@ -67,6 +67,7 @@ Hexen I:
 
 ! Renamed some actor names and sound files to avoid name conflicts with other mods.
 ! The mace of contrition now has a sprite for the Compendium and the alternate HUD.
+! The bishop's shortsword now has widescreen sprites.
 * Fixed the improved PVE damage values not properly applying to the bishop's shortsword strong projectiles.
 + Originally intended to be Parias' slot 3 during Samsara Reincarnation's development, the wand of embers has been added as a loadout choice for the slot 3 equipment (samsara_cl_parias_slot3 1 (client) or samsara_parias_slot3 2 (server)).
 
