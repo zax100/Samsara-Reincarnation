@@ -1469,92 +1469,92 @@ actor Goldfinger_GolfClub : SamsaraGoldenEyeWeapon
         TNT1 A 0 A_JumpIfInventory("BondWatchToken",1,"WatchReady")
         TNT1 A 0 A_JumpIfInventory("BondAltToggle",1,"DualWield")
       ReadyStart:
-        GF00 A 1 A_WeaponReady
+        GE00 A 1 A_WeaponReady
         goto Ready
 
       Deselect:
-        GF00 A 0 A_JumpIfInventory("Goldeneye_ThrowingKnivesDualToken",1,2)
-        GF00 A 0 A_GunFlash("DualForceRemoval",GFF_NOEXTCHANGE)
+        GE00 A 0 A_JumpIfInventory("Goldeneye_ThrowingKnivesDualToken",1,2)
+        GE00 A 0 A_GunFlash("DualForceRemoval",GFF_NOEXTCHANGE)
         goto DeselectLoop
-        GF00 A 0 A_JumpIfInventory("BondDualWieldToken",1,1)
+        GE00 A 0 A_JumpIfInventory("BondDualWieldToken",1,1)
         goto DeselectLoop
-        GF00 A 0 A_GunFlash("DeselectDual",GFF_NOEXTCHANGE)
+        GE00 A 0 A_GunFlash("DeselectDual",GFF_NOEXTCHANGE)
       DeselectLoop:
-        GF00 A 0 A_TakeInventory("BondFireDelay")
-        GF00 A 0 A_TakeInventory("BondAlternateFire")
-        GF00 A 0 A_TakeInventory("BondDualWieldToken")
-        GF00 A 0 A_TakeInventory("BondAltToggle")
-        GF00 A 0 A_TakeInventory("BondZoomToken")
-        GF00 A 0 A_TakeInventory("BondZoomAmountModifyActive")
-        GF00 A 0 A_TakeInventory("BondDualWieldSpamProtector")
-        GF00 A 0 A_TakeInventory("BondDryFireSpamProtector1")
-        GF00 A 0 A_TakeInventory("BondDryFireSpamProtector2")
-        GF00 A 0 A_TakeInventory("BondAltActivationToken")
-        GF00 A 1 A_Lower
+        GE00 A 0 A_TakeInventory("BondFireDelay")
+        GE00 A 0 A_TakeInventory("BondAlternateFire")
+        GE00 A 0 A_TakeInventory("BondDualWieldToken")
+        GE00 A 0 A_TakeInventory("BondAltToggle")
+        GE00 A 0 A_TakeInventory("BondZoomToken")
+        GE00 A 0 A_TakeInventory("BondZoomAmountModifyActive")
+        GE00 A 0 A_TakeInventory("BondDualWieldSpamProtector")
+        GE00 A 0 A_TakeInventory("BondDryFireSpamProtector1")
+        GE00 A 0 A_TakeInventory("BondDryFireSpamProtector2")
+        GE00 A 0 A_TakeInventory("BondAltActivationToken")
+        GE00 A 1 A_Lower
         loop
 
       Select:
-        GF00 A 0 A_PlaySound("Goldfinger/HatSwitch",CHAN_7)
+        GE00 A 0 A_PlaySound("Goldfinger/HatSwitch",CHAN_7)
       SelectDualCheck:
-        GF00 A 0 A_JumpIfInventory("Goldeneye_ThrowingKnivesDualToken",1,2)
-        GF00 A 0 A_GunFlash("DualForceRemoval",GFF_NOEXTCHANGE)
+        GE00 A 0 A_JumpIfInventory("Goldeneye_ThrowingKnivesDualToken",1,2)
+        GE00 A 0 A_GunFlash("DualForceRemoval",GFF_NOEXTCHANGE)
         goto SelectLoop
-        GF00 A 0 A_JumpIfInventory("BondDualWieldToken",1,1)
+        GE00 A 0 A_JumpIfInventory("BondDualWieldToken",1,1)
         goto SelectLoop
-        GF00 A 0 A_GunFlash("SelectDual",GFF_NOEXTCHANGE)
+        GE00 A 0 A_GunFlash("SelectDual",GFF_NOEXTCHANGE)
       SelectLoop:
-        GF00 A 0 A_TakeInventory("Goldeneye_UnarmedToken")
-        GF00 A 0 A_TakeInventory("Goldeneye_PP7Token")
-        GF00 A 0 A_GiveInventory("Goldeneye_KnifeToken")
-        GF00 A 0 A_TakeInventory("Goldeneye_KF7Token")
-        GF00 A 0 A_TakeInventory("Goldeneye_AutoShotgunToken")
-        GF00 A 0 A_TakeInventory("Goldeneye_AR33Token")
-        GF00 A 0 A_TakeInventory("Goldeneye_RocketLauncherToken")
-        GF00 A 0 A_TakeInventory("Goldeneye_RCP90Token")
-        GF00 A 0 A_TakeInventory("Goldeneye_LaserToken")
-        GF00 A 0 A_TakeInventory("Goldeneye_GoldenGunToken")
-        GF00 A 0 A_TakeInventory("Goldeneye_SniperToken")
-        GF00 A 0 A_TakeInventory("Goldeneye_D5KToken")
-        GF00 A 1 A_Raise
+        GE00 A 0 A_TakeInventory("Goldeneye_UnarmedToken")
+        GE00 A 0 A_TakeInventory("Goldeneye_PP7Token")
+        GE00 A 0 A_GiveInventory("Goldeneye_KnifeToken")
+        GE00 A 0 A_TakeInventory("Goldeneye_KF7Token")
+        GE00 A 0 A_TakeInventory("Goldeneye_AutoShotgunToken")
+        GE00 A 0 A_TakeInventory("Goldeneye_AR33Token")
+        GE00 A 0 A_TakeInventory("Goldeneye_RocketLauncherToken")
+        GE00 A 0 A_TakeInventory("Goldeneye_RCP90Token")
+        GE00 A 0 A_TakeInventory("Goldeneye_LaserToken")
+        GE00 A 0 A_TakeInventory("Goldeneye_GoldenGunToken")
+        GE00 A 0 A_TakeInventory("Goldeneye_SniperToken")
+        GE00 A 0 A_TakeInventory("Goldeneye_D5KToken")
+        GE00 A 1 A_Raise
         goto SelectDualCheck
 
       Fire:
-        GF01 B 0 A_JumpIfInventory("SamsaraSynthFireRight",1,1)
+        GE01 B 0 A_JumpIfInventory("SamsaraSynthFireRight",1,1)
         goto FireAltDualCheck
-        GF01 B 0 A_JumpIfInventory("BondAltActivationToken",1,"FireAltDualCheck")
-        GF01 B 0 A_TakeInventory("BondAltToggle")
-        GF01 B 0 A_GiveInventory("BondAltActivationToken")
-        GF01 B 0 ACS_NamedExecuteAlways("BondAltFire")
+        GE01 B 0 A_JumpIfInventory("BondAltActivationToken",1,"FireAltDualCheck")
+        GE01 B 0 A_TakeInventory("BondAltToggle")
+        GE01 B 0 A_GiveInventory("BondAltActivationToken")
+        GE01 B 0 ACS_NamedExecuteAlways("BondAltFire")
         loop
 
       FireAltDualCheck:
-        GF01 C 0 A_JumpIfInventory("BondAltToggle",1,"DualWieldFire")
+        GE01 C 0 A_JumpIfInventory("BondAltToggle",1,"DualWieldFire")
       FireCheckDualOrder:
-        GF01 C 0 A_JumpIfInventory("BondDualWieldToken",1,1)
+        GE01 C 0 A_JumpIfInventory("BondDualWieldToken",1,1)
         goto FireStart
-        GF01 C 0 A_JumpIfInventory("BondAlternateFire",1,"Ready")
+        GE01 C 0 A_JumpIfInventory("BondAlternateFire",1,"Ready")
         goto FireStart
 
       FireStart:
-        GF01 C 0 A_GiveInventory("BondFiringToken")
-        GF01 C 0 A_Jump(256,"FireStart1","FireStart2")
+        GE01 C 0 A_GiveInventory("BondFiringToken")
+        GE01 C 0 A_Jump(256,"FireStart1","FireStart2")
       FireStart1:
-        GF01 CDEGH 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        GF01 I 0 A_PlaySound("Goldfinger/HatThrow",CHAN_WEAPON)
-        GF01 I 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        GF01 J 0 A_GiveInventory("SamsaraGoldfingerGolfClubAttackHandler")
-        GF01 JKLM 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        GF01 NOPQRS 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE01 CDEGH 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE01 I 0 A_PlaySound("Goldfinger/HatThrow",CHAN_WEAPON)
+        GE01 I 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE01 J 0 A_GiveInventory("SamsaraGoldfingerGolfClubAttackHandler")
+        GE01 JKLM 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE01 NOPQRS 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         goto FireSetDualOrder
 
       FireStart2:
-        GF02 BCEGH 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        GF02 I 0 A_PlaySound("Goldfinger/HatThrow",CHAN_WEAPON)
-        GF02 I 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        GF02 J 0 A_GiveInventory("SamsaraGoldfingerGolfClubAttackHandler")
-        GF02 JKLM 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        GF02 NOPQR 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
-        GF01 S 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE02 BCEGH 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE02 I 0 A_PlaySound("Goldfinger/HatThrow",CHAN_WEAPON)
+        GE02 I 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE02 J 0 A_GiveInventory("SamsaraGoldfingerGolfClubAttackHandler")
+        GE02 JKLM 2 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE02 NOPQR 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
+        GE01 S 1 A_WeaponReady(WRF_NOSWITCH|WRF_NOFIRE)
         goto FireSetDualOrder
 
       FireSetDualOrder:
@@ -1586,19 +1586,19 @@ actor Goldfinger_GolfClub : SamsaraGoldenEyeWeapon
         goto ReadyStart
 
       DualUnwieldFire:
-        GF01 C 0 A_TakeInventory("BondAlternateFire")
-        GF01 C 0 A_JumpIfInventory("BondDualWieldSpamProtector",1,5)
-        GF01 C 0 A_TakeInventory("BondDualWieldToken")
-        GF01 C 0 A_TakeInventory("BondDryFireSpamProtector1")
-        GF01 C 0 A_TakeInventory("BondDryFireSpamProtector2")
-        GF01 C 0 A_GunFlash("DualLower",GFF_NOEXTCHANGE)
-        GF01 C 0 A_ZoomFactor(1)
+        GE01 C 0 A_TakeInventory("BondAlternateFire")
+        GE01 C 0 A_JumpIfInventory("BondDualWieldSpamProtector",1,5)
+        GE01 C 0 A_TakeInventory("BondDualWieldToken")
+        GE01 C 0 A_TakeInventory("BondDryFireSpamProtector1")
+        GE01 C 0 A_TakeInventory("BondDryFireSpamProtector2")
+        GE01 C 0 A_GunFlash("DualLower",GFF_NOEXTCHANGE)
+        GE01 C 0 A_ZoomFactor(1)
         goto FireCheckDualOrder
 
       DualLower:
-        TNT1 A 0 A_TakeInventory("BondDualReloadSpamProtector")
-        TNT1 A 0 A_GiveInventory("BondDualWieldSpamProtector")
-        GF13 ABCDEFGHI 1
+        GE13 A 0 A_TakeInventory("BondDualReloadSpamProtector")
+        GE13 A 1 A_GiveInventory("BondDualWieldSpamProtector")
+        GE13 BCDEFGHI 1
         TNT1 A 0 A_TakeInventory("BondDualWieldSpamProtector")
         stop
 
@@ -1616,23 +1616,23 @@ actor Goldfinger_GolfClub : SamsaraGoldenEyeWeapon
         goto ReadyStart
 
       DualWieldFire:
-        GF01 C 0 A_TakeInventory("BondAltActivationToken")
-        GF01 C 0 A_TakeInventory("BondAltToggle")
-        GF01 C 0 A_TakeInventory("BondZoomToken")
-        GF01 C 0 A_JumpIfInventory("Goldeneye_ThrowingKnivesDualToken",1,1)
+        GE01 C 0 A_TakeInventory("BondAltActivationToken")
+        GE01 C 0 A_TakeInventory("BondAltToggle")
+        GE01 C 0 A_TakeInventory("BondZoomToken")
+        GE01 C 0 A_JumpIfInventory("Goldeneye_ThrowingKnivesDualToken",1,1)
         goto FireCheckDualOrder
-        GF01 C 0 A_JumpIfInventory("BondDualWieldToken",1,"DualUnwieldFire")
-        GF01 C 0 A_JumpIfInventory("BondDualWieldSpamProtector",1,3)
-        GF01 C 0 A_GiveInventory("BondDualWieldToken")
-        GF01 C 0 A_GunFlash("DualRaise",GFF_NOEXTCHANGE)
-        GF01 C 0 A_ZoomFactor(1)
+        GE01 C 0 A_JumpIfInventory("BondDualWieldToken",1,"DualUnwieldFire")
+        GE01 C 0 A_JumpIfInventory("BondDualWieldSpamProtector",1,3)
+        GE01 C 0 A_GiveInventory("BondDualWieldToken")
+        GE01 C 0 A_GunFlash("DualRaise",GFF_NOEXTCHANGE)
+        GE01 C 0 A_ZoomFactor(1)
         goto FireCheckDualOrder
 
       DualRaise:
-        GF13 I 0 A_TakeInventory("BondDualReloadSpamProtector")
-        GF13 I 0 A_GiveInventory("BondDualWieldSpamProtector")
-        GF13 I 1 A_PlaySound("Goldfinger/HatSwitch",CHAN_7)
-        GF13 HGFEDCBA 1
+        GE13 I 0 A_TakeInventory("BondDualReloadSpamProtector")
+        GE13 I 0 A_GiveInventory("BondDualWieldSpamProtector")
+        GE13 I 1 A_PlaySound("Goldfinger/HatSwitch",CHAN_7)
+        GE13 HGFEDCBA 1
         TNT1 A 0 A_TakeInventory("BondDualWieldSpamProtector")
         goto ReadyStartDual
 
@@ -1642,42 +1642,42 @@ actor Goldfinger_GolfClub : SamsaraGoldenEyeWeapon
         goto ReadyStartDual
         TNT1 A 0 A_JumpIfInventory("SamsaraSynthFireLeft",1,"FireDual")
       ReadyStartDual:
-        GF10 A 1
+        GE10 A 1
         goto ReadyDual
 
       DeselectDual:
-        GF10 A 0 A_TakeInventory("BondDualReloadSpamProtector")
-        GF10 A 1 A_TakeInventory("BondDualWieldSpamProtector")
-        GF10 AAAAAAAAAAAAAAA 1
+        GE10 A 0 A_TakeInventory("BondDualReloadSpamProtector")
+        GE10 A 1 A_TakeInventory("BondDualWieldSpamProtector")
+        GE10 AAAAAAAAAAAAAAA 1
         stop
 
       SelectDual:
-        GF10 A 0 A_TakeInventory("BondDualReloadSpamProtector")
-        GF10 A 1 A_TakeInventory("BondDualWieldSpamProtector")
+        GE10 A 0 A_TakeInventory("BondDualReloadSpamProtector")
+        GE10 A 1 A_TakeInventory("BondDualWieldSpamProtector")
         goto ReadyStartDual
 
       FireDual:
-        GF11 B 0 A_JumpIfInventory("BondAlternateFire",1,"FireStartDual")
+        GE11 B 0 A_JumpIfInventory("BondAlternateFire",1,"FireStartDual")
         goto ReadyDual
 
       FireStartDual:
-        GF11 C 0 A_GiveInventory("BondFiringToken")
-        GF11 C 0 A_Jump(256,"FireStart1Dual","FireStart2Dual")
+        GE11 C 0 A_GiveInventory("BondFiringToken")
+        GE11 C 0 A_Jump(256,"FireStart1Dual","FireStart2Dual")
       FireStart1Dual:
-        GF11 CDEGH 2
-        GF11 I 2 A_PlaySound("Goldfinger/HatThrow",CHAN_WEAPON)
-        GF11 J 2 A_GiveInventory("SamsaraGoldfingerGolfClubAttackHandler")
-        GF11 KLM 2
-        GF11 NOPQRS 1
+        GE11 CDEGH 2
+        GE11 I 2 A_PlaySound("Goldfinger/HatThrow",CHAN_WEAPON)
+        GE11 J 2 A_GiveInventory("SamsaraGoldfingerGolfClubAttackHandler")
+        GE11 KLM 2
+        GE11 NOPQRS 1
         goto FireSetDualOrderDual
 
       FireStart2Dual:
-        GF12 BCEGH 2
-        GF12 I 2 A_PlaySound("Goldfinger/HatThrow",CHAN_WEAPON)
-        GF12 J 2 A_GiveInventory("SamsaraGoldfingerGolfClubAttackHandler")
-        GF12 KLM 2
-        GF12 NOPQR 1
-        GF11 S 1
+        GE12 BCEGH 2
+        GE12 I 2 A_PlaySound("Goldfinger/HatThrow",CHAN_WEAPON)
+        GE12 J 2 A_GiveInventory("SamsaraGoldfingerGolfClubAttackHandler")
+        GE12 KLM 2
+        GE12 NOPQR 1
+        GE11 S 1
         goto FireSetDualOrderDual
 
       FireSetDualOrderDual:

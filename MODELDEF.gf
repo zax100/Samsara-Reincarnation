@@ -8460,71 +8460,71 @@ Model "Goldfinger_GolfClub"
    Model 0 "golfclub.md3"
    Scale -1.0 1.0 1.0
 
-   FrameIndex GF00 A 0 0
-   FrameIndex GF01 B 0 1
-   FrameIndex GF01 C 0 2
-   FrameIndex GF01 D 0 3
-   FrameIndex GF01 E 0 4
-   FrameIndex GF01 F 0 5
-   FrameIndex GF01 G 0 6
-   FrameIndex GF01 H 0 7
-   FrameIndex GF01 I 0 8
-   FrameIndex GF01 J 0 9
-   FrameIndex GF01 K 0 10
-   FrameIndex GF01 L 0 11
-   FrameIndex GF01 M 0 12
-   FrameIndex GF01 N 0 13
-   FrameIndex GF01 O 0 14
-   FrameIndex GF01 P 0 15
-   FrameIndex GF01 Q 0 16
-   FrameIndex GF01 R 0 17
-   FrameIndex GF01 S 0 18
-   FrameIndex GF02 A 0 19
-   FrameIndex GF02 B 0 20
-   FrameIndex GF02 C 0 21
-   FrameIndex GF02 D 0 22
-   FrameIndex GF02 E 0 23
-   FrameIndex GF02 F 0 24
-   FrameIndex GF02 G 0 25
-   FrameIndex GF02 H 0 26
-   FrameIndex GF02 I 0 27
-   FrameIndex GF02 J 0 28
-   FrameIndex GF02 K 0 29
-   FrameIndex GF02 L 0 30
-   FrameIndex GF02 M 0 31
-   FrameIndex GF02 N 0 32
-   FrameIndex GF02 O 0 33
-   FrameIndex GF02 P 0 34
-   FrameIndex GF02 Q 0 35
-   FrameIndex GF02 R 0 36
+   FrameIndex GE00 A 0 0
+   FrameIndex GE01 B 0 1
+   FrameIndex GE01 C 0 2
+   FrameIndex GE01 D 0 3
+   FrameIndex GE01 E 0 4
+   FrameIndex GE01 F 0 5
+   FrameIndex GE01 G 0 6
+   FrameIndex GE01 H 0 7
+   FrameIndex GE01 I 0 8
+   FrameIndex GE01 J 0 9
+   FrameIndex GE01 K 0 10
+   FrameIndex GE01 L 0 11
+   FrameIndex GE01 M 0 12
+   FrameIndex GE01 N 0 13
+   FrameIndex GE01 O 0 14
+   FrameIndex GE01 P 0 15
+   FrameIndex GE01 Q 0 16
+   FrameIndex GE01 R 0 17
+   FrameIndex GE01 S 0 18
+   FrameIndex GE02 A 0 19
+   FrameIndex GE02 B 0 20
+   FrameIndex GE02 C 0 21
+   FrameIndex GE02 D 0 22
+   FrameIndex GE02 E 0 23
+   FrameIndex GE02 F 0 24
+   FrameIndex GE02 G 0 25
+   FrameIndex GE02 H 0 26
+   FrameIndex GE02 I 0 27
+   FrameIndex GE02 J 0 28
+   FrameIndex GE02 K 0 29
+   FrameIndex GE02 L 0 30
+   FrameIndex GE02 M 0 31
+   FrameIndex GE02 N 0 32
+   FrameIndex GE02 O 0 33
+   FrameIndex GE02 P 0 34
+   FrameIndex GE02 Q 0 35
+   FrameIndex GE02 R 0 36
 
    PitchOffset -3
    Offset 0 0 -1
-   FrameIndex GF03 A 0 0
+   FrameIndex GE03 A 0 0
    PitchOffset -6
    Offset 0 0 -2
-   FrameIndex GF03 B 0 0
+   FrameIndex GE03 B 0 0
    PitchOffset -9
    Offset 0 0 -3
-   FrameIndex GF03 C 0 0
+   FrameIndex GE03 C 0 0
    PitchOffset -12
    Offset 0 0 -4
-   FrameIndex GF03 D 0 0
+   FrameIndex GE03 D 0 0
    PitchOffset -15
    Offset 0 0 -5
-   FrameIndex GF03 E 0 0
+   FrameIndex GE03 E 0 0
    PitchOffset -18
    Offset 0 0 -6
-   FrameIndex GF03 F 0 0
+   FrameIndex GE03 F 0 0
    PitchOffset -21
    Offset 0 0 -7
-   FrameIndex GF03 G 0 0
+   FrameIndex GE03 G 0 0
    PitchOffset -24
    Offset 0 0 -8
-   FrameIndex GF03 H 0 0
+   FrameIndex GE03 H 0 0
    PitchOffset -27
    Offset 0 0 -9
-   FrameIndex GF03 I 0 0
+   FrameIndex GE03 I 0 0
    PitchOffset 0
    Offset 0 0 0
 }
@@ -8535,71 +8535,71 @@ Model "Goldfinger_GolfClub"
    Model 0 "golfclub.md3"
    Scale 1.0 1.0 1.0
 
-   FrameIndex GF10 A 0 0
-   FrameIndex GF11 B 0 1
-   FrameIndex GF11 C 0 2
-   FrameIndex GF11 D 0 3
-   FrameIndex GF11 E 0 4
-   FrameIndex GF11 F 0 5
-   FrameIndex GF11 G 0 6
-   FrameIndex GF11 H 0 7
-   FrameIndex GF11 I 0 8
-   FrameIndex GF11 J 0 9
-   FrameIndex GF11 K 0 10
-   FrameIndex GF11 L 0 11
-   FrameIndex GF11 M 0 12
-   FrameIndex GF11 N 0 13
-   FrameIndex GF11 O 0 14
-   FrameIndex GF11 P 0 15
-   FrameIndex GF11 Q 0 16
-   FrameIndex GF11 R 0 17
-   FrameIndex GF11 S 0 18
-   FrameIndex GF12 A 0 19
-   FrameIndex GF12 B 0 20
-   FrameIndex GF12 C 0 21
-   FrameIndex GF12 D 0 22
-   FrameIndex GF12 E 0 23
-   FrameIndex GF12 F 0 24
-   FrameIndex GF12 G 0 25
-   FrameIndex GF12 H 0 26
-   FrameIndex GF12 I 0 27
-   FrameIndex GF12 J 0 28
-   FrameIndex GF12 K 0 29
-   FrameIndex GF12 L 0 30
-   FrameIndex GF12 M 0 31
-   FrameIndex GF12 N 0 32
-   FrameIndex GF12 O 0 33
-   FrameIndex GF12 P 0 34
-   FrameIndex GF12 Q 0 35
-   FrameIndex GF12 R 0 36
+   FrameIndex GE10 A 0 0
+   FrameIndex GE11 B 0 1
+   FrameIndex GE11 C 0 2
+   FrameIndex GE11 D 0 3
+   FrameIndex GE11 E 0 4
+   FrameIndex GE11 F 0 5
+   FrameIndex GE11 G 0 6
+   FrameIndex GE11 H 0 7
+   FrameIndex GE11 I 0 8
+   FrameIndex GE11 J 0 9
+   FrameIndex GE11 K 0 10
+   FrameIndex GE11 L 0 11
+   FrameIndex GE11 M 0 12
+   FrameIndex GE11 N 0 13
+   FrameIndex GE11 O 0 14
+   FrameIndex GE11 P 0 15
+   FrameIndex GE11 Q 0 16
+   FrameIndex GE11 R 0 17
+   FrameIndex GE11 S 0 18
+   FrameIndex GE12 A 0 19
+   FrameIndex GE12 B 0 20
+   FrameIndex GE12 C 0 21
+   FrameIndex GE12 D 0 22
+   FrameIndex GE12 E 0 23
+   FrameIndex GE12 F 0 24
+   FrameIndex GE12 G 0 25
+   FrameIndex GE12 H 0 26
+   FrameIndex GE12 I 0 27
+   FrameIndex GE12 J 0 28
+   FrameIndex GE12 K 0 29
+   FrameIndex GE12 L 0 30
+   FrameIndex GE12 M 0 31
+   FrameIndex GE12 N 0 32
+   FrameIndex GE12 O 0 33
+   FrameIndex GE12 P 0 34
+   FrameIndex GE12 Q 0 35
+   FrameIndex GE12 R 0 36
 
    PitchOffset -3
    Offset 0 0 -1
-   FrameIndex GF13 A 0 0
+   FrameIndex GE13 A 0 0
    PitchOffset -6
    Offset 0 0 -2
-   FrameIndex GF13 B 0 0
+   FrameIndex GE13 B 0 0
    PitchOffset -9
    Offset 0 0 -3
-   FrameIndex GF13 C 0 0
+   FrameIndex GE13 C 0 0
    PitchOffset -12
    Offset 0 0 -4
-   FrameIndex GF13 D 0 0
+   FrameIndex GE13 D 0 0
    PitchOffset -15
    Offset 0 0 -5
-   FrameIndex GF13 E 0 0
+   FrameIndex GE13 E 0 0
    PitchOffset -18
    Offset 0 0 -6
-   FrameIndex GF13 F 0 0
+   FrameIndex GE13 F 0 0
    PitchOffset -21
    Offset 0 0 -7
-   FrameIndex GF13 G 0 0
+   FrameIndex GE13 G 0 0
    PitchOffset -24
    Offset 0 0 -8
-   FrameIndex GF13 H 0 0
+   FrameIndex GE13 H 0 0
    PitchOffset -27
    Offset 0 0 -9
-   FrameIndex GF13 I 0 0
+   FrameIndex GE13 I 0 0
    PitchOffset 0
    Offset 0 0 0
 }

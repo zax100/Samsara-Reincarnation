@@ -215,6 +215,8 @@ GoldenEye 007:
 
 + The golf club has been added as a loadout choice for the slot 1 equipment (samsara_cl_bondgf_slot1 1 (client) or samsara_bondgf_slot1 2 (server)).
 * Fixed the Golden Magnum not giving extra ammo on first acquirement when playing PVP in Doom or Chex Quest.
+* Fixed the DB5's forward facing machine guns not being taken when IDFA is in effect.
+! The watch menu's weapon selection order now matches Samsara's, like the GoldenEye version's watch.
 
 -All-
 
