@@ -694,11 +694,19 @@ actor SamsaraHexenMysticAmbitIncantAmmoCheck : Trigger
         goto PickupCheck1Hexen1
 
       PickupCheck1Catacomb:
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseWaves",1,1)
+        goto PickupSuccess
         TNT1 A 0 A_JumpIfInventory("Catacomb_Waves",0,1)
+        goto PickupSuccess
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseXTerminators",1,1)
         goto PickupSuccess
         TNT1 A 0 A_JumpIfInventory("Catacomb_XTerminators",0,1)
         goto PickupSuccess
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseZappers",1,1)
+        goto PickupSuccess
         TNT1 A 0 A_JumpIfInventory("Catacomb_Zappers",0,1)
+        goto PickupSuccess
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseBursts",1,1)
         goto PickupSuccess
         TNT1 A 0 A_JumpIfInventory("Catacomb_Bursts",0,"PickupCheck2")
         goto PickupSuccess
@@ -729,7 +737,11 @@ actor SamsaraHexenMysticAmbitIncantAmmoCheck : Trigger
         goto PickupCheck2Hexen1
 
       PickupCheck2Catacomb:
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseNukes",1,1)
+        goto PickupSuccess
         TNT1 A 0 A_JumpIfInventory("Catacomb_Nukes",0,1)
+        goto PickupSuccess
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseBolts",1,1)
         goto PickupSuccess
         TNT1 A 0 A_JumpIfInventory("Catacomb_Bolts",0,"PickupStop")
         goto PickupSuccess
@@ -928,11 +940,19 @@ actor SamsaraHexenMysticAmbitIncantAmmoGiver : Trigger
         goto PickupCheckAmmo1Hexen1
 
       PickupCheckAmmo1Catacomb:
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseWaves",1,1)
+        goto PickupSuccessSound1
         TNT1 A 0 A_JumpIfInventory("Catacomb_Waves",0,1)
+        goto PickupSuccessSound1
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseXTerminators",1,1)
         goto PickupSuccessSound1
         TNT1 A 0 A_JumpIfInventory("Catacomb_XTerminators",0,1)
         goto PickupSuccessSound1
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseZappers",1,1)
+        goto PickupSuccessSound1
         TNT1 A 0 A_JumpIfInventory("Catacomb_Zappers",0,1)
+        goto PickupSuccessSound1
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseBursts",1,1)
         goto PickupSuccessSound1
         TNT1 A 0 A_JumpIfInventory("Catacomb_Bursts",0,"PickupCheckAmmo2")
         goto PickupSuccessSound1
@@ -1009,7 +1029,11 @@ actor SamsaraHexenMysticAmbitIncantAmmoGiver : Trigger
         goto PickupCheckAmmo2Hexen1
 
       PickupCheckAmmo2Catacomb:
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseNukes",1,1)
+        goto PickupSuccessSound2
         TNT1 A 0 A_JumpIfInventory("Catacomb_Nukes",0,1)
+        goto PickupSuccessSound2
+        TNT1 A 0 A_JumpIfInventory("SamsaraCatacombCanUseBolts",1,1)
         goto PickupSuccessSound2
         TNT1 A 0 A_JumpIfInventory("Catacomb_Bolts",0,"PickupStop")
         goto PickupSuccessSound2
