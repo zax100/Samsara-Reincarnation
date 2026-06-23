@@ -309,32 +309,49 @@ Script "HexenGrapplePull" (void)
 	int newTid = UniqueTid();
 	Thing_ChangeTid(0,newTid);
 	
+	//IF an enemy if too big it should pull the player.
+	SetActivator(newTid,AAPTR_Tracer);
+	int normalEnemy = GetActorProperty(0,APROP_HEIGHT) <= 80.0 && GetActorProperty(0,APROP_RADIUS) <= 24.0;
+	SetActivator(newtid);
+	
 	//Get the player's coordinates
-	SetActivator(0,AAPTR_Target);
+	//If it hits a heavy enemy, use the projectile as the pivot
+	if(normalEnemy)
+		SetActivator(0,AAPTR_Target);
 	int myX = GetActorX(0);
 	int myY = GetActorY(0);
 	int myZ = GetActorZ(0);
 	
-	//Now go back to the projectile and set the activator to the hit enemy
-	SetActivator(newTid);
-	Thing_ChangeTid(newTid, 0);
-	SetActivator(0,AAPTR_Tracer);
+	//Now go to the projectile and to what it hit. If it hits a lighter enemy,
+	//the enemy will move. If it doesn't, the player will move
+	if(normalEnemy)
+		SetActivator(newTid,AAPTR_Tracer);
+	else
+		SetActivator(newTid,AAPTR_Target);
+
+	if(ClassifyActor(0) & ACTOR_ALIVE)
+	{
+		//Get enemy coordinates
+		int destX = GetActorX(0);
+		int destY = GetActorY(0);
+		int destZ = GetActorZ(0);
+		
+		//Calculate vectors here
+		int vecX = destX - myX;
+		int vecY = destY - myY;
+		int vecZ = destZ - myZ;
+		int angle = VectorAngle(vecX, vecY);
+		int pitch = VectorAngle(VectorLength(vecX, vecY), vecZ);
+		int velocity = -80; //Negative as we want it to move closer to player
+		
+		//Finally, set velocity
+		SetActorVelocity(0, velocity * cos(angle), velocity * sin(angle), velocity * sin(pitch), 0, 0);
+		
+		//Play winch sound on player if it hit an enemy
+		if(normalEnemy) SetActivator(newTid,AAPTR_Target);
+		PlaySound(0,"Hexen/GrapplePull",CHAN_5,1.0,0,1.0,false);
+	}
 	
-	//TO-DO, implement stuff that would prevent enemies from being grappled, such as a boss
-	
-	//Get enemy coordinates
-	int enemyX = GetActorX(0);
-	int enemyY = GetActorY(0);
-	int enemyZ = GetActorZ(0);
-	
-	//Calculate vectors here
-	int vecX = enemyX - myX;
-	int vecY = enemyY - myY;
-	int vecZ = enemyZ - myZ;
-	int angle = VectorAngle(vecX, vecY);
-	int pitch = VectorAngle(magnitudeTwo_f(vecX, vecY), vecZ);
-	int velocity = -160; //Negative as we want it to move closer to player
-	
-	//Finally, set velocity
-	SetActorVelocity(0, velocity * cos(angle), velocity * sin(angle), velocity * sin(-pitch), 0, 0);
+	//Clear tid on the original projectile
+	Thing_ChangeTid(newTid, myTid);
 }
