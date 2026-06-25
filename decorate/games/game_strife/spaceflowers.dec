@@ -74,6 +74,7 @@ actor AlienSpectre1B : SamsaraMonsterReincAlienSpectre replaces AlienSpectre1
 		Goto See2+6
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		AL1P A 6 bright A_SpectreChunkSmall
 		AL1P B 6 bright A_Scream
@@ -188,6 +189,7 @@ actor AlienSpectreFake : SamsaraMonsterReincAlienSpectreFake
 		Goto See
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		AL1P A 6 bright ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		AL1P B 6 bright A_Scream
 		ALN1 J 4 A_SetTranslucent(0.6,0)
@@ -280,7 +282,7 @@ actor AlienSpectre4B : AlienSpectre1B replaces AlienSpectre4
 	}
 }
 
-actor AlienSpectre5B : AlienSpectre1b replaces AlienSpectre5
+actor AlienSpectre5B : AlienSpectre1B replaces AlienSpectre5
 {
 	Game Strife
 	ConversationID 73
@@ -516,6 +518,7 @@ actor EntityBoss2 : SamsaraMonsterReincEntityBoss replaces EntityBoss
 		Goto See2+6
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		MNAL L 7 bright A_SpectreChunkSmall
 		MNAL M 7 bright A_Scream
@@ -615,6 +618,7 @@ actor EntitySecond2 : SamsaraMonsterReincSubEntity replaces EntitySecond
 		Goto See
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		MDTH A 3 Bright A_Scream
 		MDTH B 3 Bright A_TossGib

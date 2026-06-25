@@ -87,6 +87,7 @@ actor SamsaraStrifeMaulerScatterAttackHandler : Trigger
 
 actor StrifeMaulerPuff : MaulerPuff replaces MaulerPuff
 {
+    DamageType "StrifeMauler"
     Decal "RailScorchLower"
     +FORCEXYBILLBOARD
     States
@@ -386,6 +387,7 @@ actor SamsaraStrifeMaulerTorpedoWaveAngleIncrement : Counter { Inventory.MaxAmou
 actor StrifeMaulerTorpedo : MaulerTorpedo replaces MaulerTorpedo
 {
     Damage (random(1,4))
+    DamageType "StrifeMauler"
     SeeSound "strife/maulerfire2"
     DeathSound "strife/maulerhit"
     Obituary "%k \civiciously vaporized\c- %o\ci."
@@ -442,6 +444,7 @@ actor StrifeMaulerTorpedo2 : StrifeMaulerTorpedo
 actor StrifeTorpedoWave : MaulerTorpedoWave replaces MaulerTorpedoWave
 {
     Damage (random(1,4)*10)
+    DamageType "StrifeMauler"
     Obituary "%k \civiciously vaporized\c- %o\ci."
     -BLOODSPLATTER
     +FORCEXYBILLBOARD

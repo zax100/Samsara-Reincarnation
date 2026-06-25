@@ -391,7 +391,8 @@ Actor WTShieldProjectile_Coop : WTShieldProjectile
   damagefactor "zorch", 0.0
   damagefactor "bfg", 0.0
   damagefactor "bfgspray", 0.0
-  damagefactor "disintegrate", 0.0
+  damagefactor "Disintegrate", 0.0
+  damagefactor "StrifeMauler", 0.0
   DamageFactor "BFG", 0.0
   DamageFactor "BFGSpray", 0.0
   DamageFactor "PoisonCloud", 0.0
@@ -588,7 +589,8 @@ Actor WTSuperProtection : PowerProtection
 	damagefactor "slime", 0.0
 	damagefactor "bfg", 0.0
 	damagefactor "bfgspray", 0.0
-	damagefactor "disintegrate", 0.0
+	damagefactor "Disintegrate", 0.0
+	damagefactor "StrifeMauler", 0.0
 	damagefactor "electric", 0.0
 	DamageFactor "BFG", 0.0
 	DamageFactor "BFGSpray", 0.0

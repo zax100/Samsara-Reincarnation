@@ -1,3 +1,5 @@
+// is this file even needed?
+
 actor SamsaraSpectre1: SamsaraMonsterReincSamsaraSpectre1 replaces AlienSpectre1
 {
 	Game Strife
@@ -59,6 +61,7 @@ actor SamsaraSpectre1: SamsaraMonsterReincSamsaraSpectre1 replaces AlienSpectre1
 		Goto See+6
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		AL1P A 6 bright A_SpectreChunkSmall
 		AL1P B 6 bright A_Scream
@@ -137,6 +140,7 @@ actor SamsaraSpectre2 : SamsaraMonsterReincSamsaraSpectre2 replaces AlienSpectre
 		Goto See+6
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		AL1P A 6 bright A_SpectreChunkSmall
 		AL1P B 6 bright A_Scream
@@ -216,6 +220,7 @@ actor SamsaraSpectre3 : SamsaraMonsterReincSamsaraSpectre3 replaces AlienSpectre
 		Goto See+6
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		AL1P A 6 bright A_SpectreChunkSmall
 		AL1P B 6 bright A_Scream
@@ -294,6 +299,7 @@ actor SamsaraSpectre4 : SamsaraMonsterReincSamsaraSpectre4 replaces AlienSpectre
 		Goto See+6
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		AL1P A 6 bright A_SpectreChunkSmall
 		AL1P B 6 bright A_Scream
@@ -372,6 +378,7 @@ actor SamsaraSpectre5 : SamsaraMonsterReincSamsaraSpectre5 replaces AlienSpectre
 		Goto See+6
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		AL1P A 6 bright A_SpectreChunkSmall
 		AL1P B 6 bright A_Scream

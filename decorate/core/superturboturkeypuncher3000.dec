@@ -346,6 +346,7 @@ Actor SuperCoopChicken
 		TNT1 A -1 ACS_NamedExecuteWithResult("SamsaraBossDeathToggler")
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		"####" "#" 0 A_GiveToTarget("ChickenKillCount",1)
 		"####" "#" 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)

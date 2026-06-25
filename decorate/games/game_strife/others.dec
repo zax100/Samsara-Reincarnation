@@ -93,6 +93,7 @@ ACTOR Macil2B : SamsaraMonsterReincMacil replaces Macil2
 		BURN V -1 A_SpawnItemEx("AlienSpectre4", 0, 0, 0, 0, 0, random[spectrespawn](0,255)*0.0078125, 0, SXF_NOCHECKPOSITION)
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		DISR A 5 A_PlaySound("misc/disruptordeath", CHAN_VOICE)
 		DISR BC 5
@@ -151,6 +152,7 @@ ACTOR StrifeBishop2 : SamsaraMonsterReincStrifeBishop replaces StrifeBishop
 		Goto See2
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		MLDR G 3 Bright
 		MLDR H 5 Bright A_Scream
@@ -233,6 +235,7 @@ ACTOR Loremaster2 : SamsaraMonsterReincLoremaster replaces Loremaster
 		Goto See2
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		PDED A 6
 		PDED B 6 A_Scream
@@ -313,6 +316,7 @@ ACTOR Programmer2 : SamsaraMonsterReincProgrammer replaces Programmer
 		Goto See2+4
 	Death:
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		PRGR L 7 bright A_TossGib
 		PRGR M 7 bright A_Scream

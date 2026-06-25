@@ -803,6 +803,7 @@ ACTOR FriendlyGrunt
 		TNT1 A 5 A_SpawnItem("RGodModeDeath")
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		"####" "#" 0 A_GiveToTarget("KillCount",1)
 		"####" "#" 0 A_NoBlocking
 		"####" "#" 0 A_ChangeFlag("DONTGIB",1)
@@ -1100,6 +1101,7 @@ ACTOR FriendlyLowGuard
 		TNT1 A 0 A_SpawnItem("RGodModeDeath")
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 A_GiveInventory("EnemyZorched",1)
 		TNT1 A 0 A_NoBlocking
 		TNT1 A 0 A_ChangeFlag("DONTGIB",1)

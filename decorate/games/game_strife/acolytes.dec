@@ -161,6 +161,7 @@ actor Acolyte2 : SamsaraMonsterReincAcolyte replaces Acolyte
 		BURN V -1 A_AcolyteDie
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		DISR A 5 A_PlaySound("misc/disruptordeath", CHAN_VOICE)
 		DISR BC 5
@@ -448,6 +449,7 @@ actor AcolyteBlue2 : SamsaraMonsterReincAcolyteBlue replaces AcolyteBlue // Give
 		BURN V -1 ACS_NamedExecuteWithResult("SamsaraStrifeAcolyteBlueDeathChecker")
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		DISR A 5 A_PlaySound("misc/disruptordeath", CHAN_VOICE)
 		DISR BC 5

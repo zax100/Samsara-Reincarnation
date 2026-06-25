@@ -1077,6 +1077,7 @@ actor HereticCorvusClone : SamsaraMiscCharHumanoidStatic
 			TNT1 A -1 A_NoBlocking
 			Stop
 		Disintegrate:
+        Death.StrifeMauler:
 			"####" "#" 0 ACS_NamedExecuteWithResult("SamsaraActorStopSound", 1)
 			"####" "#" 0 A_ChangeFlag("DONTGIB",1)
 			"####" "#" 0 A_Stop

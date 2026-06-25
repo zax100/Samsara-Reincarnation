@@ -3676,6 +3676,7 @@ Actor StrifeGuy_AI : SamsaraMonsterDarkSideAIRegular
 		DIE2 A -1
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		TNT1 A 0 ACS_NamedExecuteAlways("Samsara_KillCount", 0, 0)
 		SDIS A 5 A_PlaySoundEx("strife/disruptdeath", CHAN_VOICE)
 		SDIS BC 5

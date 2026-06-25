@@ -138,6 +138,7 @@ ACTOR StrifePeasant1 : Peasant
 		SBRN V -1
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		SDIS A 5 A_PlaySound("strife/disruptdeath", CHAN_VOICE)
 		SDIS BC 5
 		SDIS D 5 A_NoBlocking
@@ -3130,6 +3131,7 @@ ACTOR StrifeBeggar : Beggar
 		SBRN V -1
 		Stop
 	Disintegrate:
+	Death.StrifeMauler:
 		SDIS A 5 A_PlaySound("strife/disruptdeath", CHAN_VOICE)
 		SDIS BC 5
 		SDIS D 5 A_NoBlocking
