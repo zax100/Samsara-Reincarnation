@@ -1380,7 +1380,7 @@ Script "Goldeneye_SlapperDamage" (int isKnife)
 	}
 	else
 	{
-		if (isKnife) { SetResultValue(40); }
+		if (isKnife) { SetResultValue(50); }
 		else { SetResultValue(20); }
 	}
 }
