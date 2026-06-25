@@ -25,6 +25,7 @@ actor FighterBoss2 : SamsaraMonsterReincFighterBoss replaces FighterBoss
 	DamageFactor "MarathonPlasmaFire", 0.9
 	DamageFactor "Ice", 0.9
 	DamageFactor "Disintegrate", 0.9
+	DamageFactor "StrifeMauler", 0.9
 	DamageFactor "DukeDamage", 0.9
 	DamageFactor "DukeExplosive", 0.75
 	DamageFactor "DukeIce", 0.9
@@ -258,6 +259,7 @@ actor ClericBoss2 : SamsaraMonsterReincClericBoss replaces ClericBoss
 	DamageFactor "MarathonPlasmaFire", 0.9
 	DamageFactor "Ice", 0.9
 	DamageFactor "Disintegrate", 0.9
+	DamageFactor "StrifeMauler", 0.9
 	DamageFactor "DukeDamage", 0.9
 	DamageFactor "DukeExplosive", 0.75
 	DamageFactor "DukeIce", 0.9
@@ -659,6 +661,7 @@ actor MageBoss2 : SamsaraMonsterReincMageBoss replaces MageBoss
 	DamageFactor "MarathonPlasmaFire", 0.9
 	DamageFactor "Ice", 0.9
 	DamageFactor "Disintegrate", 0.9
+	DamageFactor "StrifeMauler", 0.9
 	DamageFactor "DukeDamage", 0.9
 	DamageFactor "DukeExplosive", 0.75
 	DamageFactor "DukeIce", 0.9

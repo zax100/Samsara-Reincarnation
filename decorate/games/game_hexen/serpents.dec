@@ -51,6 +51,7 @@ actor Demon1B : SamsaraMonsterBeast replaces Demon1
 	DamageFactor "Ice", 1.15
 	DamageFactor "DoomDamageTypeIce", 1.15
 	DamageFactor "Disintegrate", 1.15
+	DamageFactor "StrifeMauler", 1.15
 	DamageFactor "DukeDamage", 1.15
 	DamageFactor "DukeExplosive", 1.05
 	DamageFactor "DukeIce", 1.2
@@ -549,6 +550,7 @@ actor Demon2B : SamsaraMonsterBeast replaces Demon2
 	DamageFactor "Ice", 1.15
 	DamageFactor "DoomDamageTypeIce", 1.15
 	DamageFactor "Disintegrate", 1.15
+	DamageFactor "StrifeMauler", 1.15
 	DamageFactor "DukeDamage", 1.15
 	DamageFactor "DukeExplosive", 1.05
 	DamageFactor "DukeIce", 1.2

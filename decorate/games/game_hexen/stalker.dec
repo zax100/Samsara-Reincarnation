@@ -31,6 +31,7 @@ actor Serpent2 : SamsaraMonsterReincSerpent replaces Serpent
 	DamageFactor "Ice", 1.15
 	DamageFactor "DoomDamageTypeIce", 1.15
 	DamageFactor "Disintegrate", 1.15
+	DamageFactor "StrifeMauler", 1.15
 	DamageFactor "DukeDamage", 1.15
 	DamageFactor "DukeExplosive", 1.05
 	DamageFactor "DukeIce", 1.2
@@ -144,6 +145,7 @@ actor SerpentLeader2 : SamsaraMonsterReincSerpentLeader replaces SerpentLeader
 	DamageFactor "Ice", 1.15
 	DamageFactor "DoomDamageTypeIce", 1.15
 	DamageFactor "Disintegrate", 1.15
+	DamageFactor "StrifeMauler", 1.15
 	DamageFactor "DukeDamage", 1.15
 	DamageFactor "DukeExplosive", 1.05
 	DamageFactor "DukeIce", 1.2

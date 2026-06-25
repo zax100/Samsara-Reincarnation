@@ -30,6 +30,7 @@ actor IceGuy2 : SamsaraMonsterReincWendigo replaces IceGuy
 	DamageFactor "Ice", 1.15
 	DamageFactor "DoomDamageTypeIce", 1.15
 	DamageFactor "Disintegrate", 1.15
+	DamageFactor "StrifeMauler", 1.15
 	DamageFactor "DukeDamage", 1.15
 	DamageFactor "DukeExplosive", 1.05
 	DamageFactor "DukeIce", 1.2

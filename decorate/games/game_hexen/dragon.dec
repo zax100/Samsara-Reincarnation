@@ -26,6 +26,7 @@ actor Dragon2 : SamsaraMonsterReincDragon replaces Dragon
 	DamageFactor "MarathonPlasmaFire", 0.9
 	DamageFactor "Ice", 0.9
 	DamageFactor "Disintegrate", 0.9
+	DamageFactor "StrifeMauler", 0.9
 	DamageFactor "DukeDamage", 0.9
 	DamageFactor "DukeExplosive", 0.75
 	DamageFactor "DukeIce", 0.9

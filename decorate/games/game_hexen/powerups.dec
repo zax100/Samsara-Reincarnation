@@ -265,6 +265,7 @@ Actor PowerQuackQuarterDamage : PowerDamage
 	DamageFactor "MarathonPlasmaFire", 1.25
 	DamageFactor "Ice", 1.25
 	DamageFactor "Disintegrate", 1.25
+	DamageFactor "StrifeMauler", 1.25
 	DamageFactor "WolfenFlamethrower", 1.25
 	DamageFactor "DukeDamage", 1.25
 	DamageFactor "DukeExplosive", 1.25

@@ -33,6 +33,7 @@ actor Follower_Samsara : SamsaraMonsterHumanoid replaces ShotgunGuy
 	DamageFactor "DoomDamageTypeFireExplosive", 1.1
 	DamageFactor "DoomDamageTypeIce", 1.1
     DamageFactor "Disintegrate", 1.1
+    DamageFactor "StrifeMauler", 1.1
     DamageFactor "DukeDamage", 1.1
     DamageFactor "DukeIce", 1.1
 	DamageFactor "DoomDamageTypeExplosive", 1.1
@@ -396,6 +397,7 @@ actor FallingFollower_Samsara : SamsaraMonsterHumanoid replaces Archvile
 	DamageFactor "DoomDamageTypeFireExplosive", 1.1
 	DamageFactor "DoomDamageTypeIce", 1.1
     DamageFactor "Disintegrate", 1.1
+    DamageFactor "StrifeMauler", 1.1
     DamageFactor "DukeDamage", 1.1
     DamageFactor "DukeIce", 1.1
 	DamageFactor "DoomDamageTypeExplosive", 1.1
