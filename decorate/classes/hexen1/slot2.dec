@@ -145,7 +145,7 @@ actor HexenShockArrowPowered : HexenShockArrow
     States
 	{
 		XDeath:
-			TNT1 A 0 A_SpawnItemEx("LightningCeilingDM",0,0,min(ceilingz-z,100),0,0,0,0,SXF_TRANSFERPOINTERS)
+			TNT1 A 0 A_SpawnItemEx("LightningCeilingDM",0,0,CallACS("Samsara_Min",(ceilingz-z,100)),0,0,0,0,SXF_TRANSFERPOINTERS)
 			Goto Super::Death
 	}
 }
