@@ -16244,8 +16244,8 @@ script "SamsaraServerSidePresetSelection" (void)
 		SetCVar("samsara_pdwtak_fulldamagedistance", 0);
 		SetCVar("samsara_pdwtak_monsters", false);
 		SetCVar("samsara_permaweaponlevel2", false);
-		SetCVar("samsara_pinataparty", isZDoom() ? true : false);
-		SetCVar("samsara_pinatapartyextras", isZDoom() ? true : false);
+		SetCVar("samsara_pinataparty", true);
+		SetCVar("samsara_pinatapartyextras", true);
 		SetCVar("samsara_pinatapartyperformance", true);
 		SetCVar("samsara_pinatapartychance", 15);
 		SetCVar("samsara_pinatapartyhealthtier1", 1);
