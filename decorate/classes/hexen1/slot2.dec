@@ -59,7 +59,7 @@ actor SamsaraHexenCrusadersLongbowAttackHandler : Trigger
       // Attack stuff
       PickupAttack:
         TNT1 A 0 A_PlaySound("Hexen/ElectricArrow",CHAN_WEAPON)
-		TNT1 A 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,"PickupPowered")
+        TNT1 A 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,"PickupPowered")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"PickupPowered")
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
@@ -75,11 +75,11 @@ actor SamsaraHexenCrusadersLongbowAttackHandler : Trigger
       PickupAttackCoopImproved:
         TNT1 A 0 A_FireCustomMissile("HexenShockArrow2Improved",0,false,5,0)
         stop
-		
-	  PickupPowered:
-		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackPoweredCoop")
+
+      PickupPowered:
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackPoweredCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackPoweredCoop")
-	  PickupAttackPoweredDM:
+      PickupAttackPoweredDM:
         TNT1 A 0 A_FireCustomMissile("HexenShockArrowPowered",0,false,5,0)
         stop
 
@@ -141,25 +141,25 @@ actor HexenElectroTrail
 
 actor HexenShockArrowPowered : HexenShockArrow
 {
-	+HITTRACER
+    +HITTRACER
     States
-	{
-		XDeath:
-			TNT1 A 0 A_SpawnItemEx("LightningCeilingDM",0,0,CallACS("Samsara_Min",(ceilingz-z,100)),0,0,0,0,SXF_TRANSFERPOINTERS)
-			Goto Super::Death
-	}
+    {
+        XDeath:
+            TNT1 A 0 A_SpawnItemEx("LightningCeilingDM",0,0,CallACS("Samsara_Min", ceilingz-z, 100),0,0,0,0,SXF_TRANSFERPOINTERS)
+            Goto Super::Death
+    }
 }
 
 actor HexenShockArrowPoweredCoop : HexenShockArrowPowered
 {
-	Species "Player"
+    Species "Player"
     +THRUSPECIES
     States
-	{
-		XDeath:
-			TNT1 A 0 A_SpawnItemEx("LightningCeilingCoop",0,0,min(ceilingz-z,100),0,0,0,0,SXF_TRANSFERPOINTERS)
-			Goto Super::Death
-	}
+    {
+        XDeath:
+            TNT1 A 0 A_SpawnItemEx("LightningCeiling2",0,0,CallACS("Samsara_Min", ceilingz-z, 100),0,0,0,0,SXF_TRANSFERPOINTERS)
+            Goto Super::Death
+    }
 }
 
 // Parias (Classic)/Daedolon
@@ -237,8 +237,8 @@ actor "Frost Shards" : SamsaraHexenWeapon
         CONE J 4
       HoldMage:
         CONE K 3
-		CONE L 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,"HoldMagePowered")
-		CONE L 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"HoldMagePowered")
+        CONE L 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,"HoldMagePowered")
+        CONE L 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"HoldMagePowered")
         CONE L 5 Bright
         CONE M 4 Bright A_GiveInventory("SamsaraHexenFrostShardsAttackHandler")
         CONE N 4
@@ -247,16 +247,16 @@ actor "Frost Shards" : SamsaraHexenWeapon
         goto Ready
 
       HoldMagePowered:
-		CONE L 0 A_PlaySound("Hexen/FreezeRay",CHAN_WEAPON,1.0,true)
-	  HoldMagePowered2:
+        CONE L 0 A_PlaySound("Hexen/FreezeRay",CHAN_WEAPON,1.0,true)
+      HoldMagePowered2:
         CONE L 2 Bright A_GiveInventory("SamsaraHexenFrostShardsAttackPoweredHandler")
-		CONE L 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,2)
-		CONE L 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,1)
-		Goto MagePoweredFinish
-		CONE L 0 A_JumpIfInventory("Clip",1,1)
-		Goto MagePoweredFinish
-		CONE L 0 A_Refire("HoldMagePowered2")
-	  MagePoweredFinish:
+        CONE L 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,2)
+        CONE L 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,1)
+        Goto MagePoweredFinish
+        CONE L 0 A_JumpIfInventory("Clip",1,1)
+        Goto MagePoweredFinish
+        CONE L 0 A_Refire("HoldMagePowered2")
+      MagePoweredFinish:
         CONE M 4 Bright A_StopSound(CHAN_WEAPON)
         CONE N 4
         CONE H 5
@@ -488,34 +488,34 @@ actor SamsaraHexenFrostShardsAttackPoweredHandler : Trigger
       // Attack stuff
       PickupAttack:
         //TNT1 A 0 A_JumpIfCloser(92,"PickupAttackMelee")
-		TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
+        TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
-	  PickupAttackDM:
-		TNT1 A 0 A_FireCustomMissile("HexenFrostRayDM",0,false,8)
+      PickupAttackDM:
+        TNT1 A 0 A_FireCustomMissile("HexenFrostRayDM",0,false,8)
         stop
-	  PickupAttackCoop:
-		TNT1 A 0 A_FireCustomMissile("HexenFrostRayCoop",0,false,8)
+      PickupAttackCoop:
+        TNT1 A 0 A_FireCustomMissile("HexenFrostRayCoop",0,false,8)
         stop
-	
-	}
+
+    }
 }
 
 actor HexenFrostRayDM : FastProjectile
 {
     Damage (random(5,10))
-	Radius 13
-	Height 8
-	Speed 48
+    Radius 13
+    Height 8
+    Speed 48
     DamageType "HexenIce"
     Obituary "$SAMSARA_HEXEN_OB_SLOT2"
-	DeathSound "MageShardsExplode"
+    DeathSound "MageShardsExplode"
     +BLOODSPLATTER
     +THRUGHOST
     States
     {
       Spawn:
         H118 C 7 Bright
-		H118 C -1 Bright A_Die
+        H118 C -1 Bright A_Die
       Death:
         SHEX D 3 Bright Light("MFROSTSHARD_X1")
         SHEX E 3 Bright Light("MFROSTSHARD_X2")
@@ -898,18 +898,18 @@ actor SamsaraHexenJavelinOfZealRangedAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackStrongCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackStrongCoop")
       PickupAttackStrongDM:
-		TNT1 A 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,"PickupAttackPoweredDM")
+        TNT1 A 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,"PickupAttackPoweredDM")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"PickupAttackPoweredDM")
         TNT1 A 0 A_FireCustomMissile("Hexen_FSpearFX2",0,false,8,16)
         stop
 
       PickupAttackStrongCoop:
-		TNT1 A 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,"PickupAttackPoweredCoop")
+        TNT1 A 0 A_JumpIfInventory("PowerSamsaraHexenWeaponLevel2",1,"PickupAttackPoweredCoop")
         TNT1 A 0 A_JumpIfInventory("SamsaraHasPermaWeaponLevel2",1,"PickupAttackPoweredCoop")
         TNT1 A 0 A_FireCustomMissile("Hexen_FSpearFX2Coop",0,false,8,16)
         stop
-		
-	  PickupAttackPoweredDM:
+
+      PickupAttackPoweredDM:
         TNT1 A 0 A_FireCustomMissile("Hexen_FSpearSpiker",0,false,8,16)
         stop
 
@@ -1067,21 +1067,21 @@ actor Hexen_FSpearFX5
 
 actor Hexen_FSpearSpiker : Hexen_FSpearFX2
 {
-	+HITTRACER
-	+NODAMAGETHRUST
+    +HITTRACER
+    +NODAMAGETHRUST
     States
     {
       Death:
         TNT1 A 0 A_AlertMonsters
       DeathFinish:
-		TNT1 A 0 A_CheckFloor(1)
-		Goto DeathFinishSpawner
-		TNT1 A 0 A_SpawnItemEx("Hexen_SpearSpike",0,0,0,0,0,-100,0,SXF_TRANSFERPOINTERS|SXF_NOCHECKPOSITION)
-	  DeathFinishSpawner:
+        TNT1 A 0 A_CheckFloor(1)
+        Goto DeathFinishSpawner
+        TNT1 A 0 A_SpawnItemEx("Hexen_SpearSpike",0,0,0,0,0,-100,0,SXF_TRANSFERPOINTERS|SXF_NOCHECKPOSITION)
+      DeathFinishSpawner:
         TNT1 A 1 A_SpawnItemEx("Hexen_FSpearFX5Spawner",0,0,0,0,0,0,0,SXF_CLIENTSIDE)
         stop
-	  XDeath:
-		Goto DeathFinish+1
+      XDeath:
+        Goto DeathFinish+1
     }
 }
 
@@ -1089,101 +1089,101 @@ actor Hexen_FSpearSpikerCoop : Hexen_FSpearSpiker
 {
     Species "Player"
     +THRUSPECIES
-	States
+    States
     {
       Death:
         TNT1 A 0 A_AlertMonsters
       DeathFinish:
-		TNT1 A 0 A_CheckFloor(1)
-		Goto DeathFinishSpawner
-		TNT1 A 0 A_SpawnItemEx("Hexen_SpearSpikeCoop",0,0,0,0,0,-100,0,SXF_TRANSFERPOINTERS|SXF_NOCHECKPOSITION)
-	  DeathFinishSpawner:
+        TNT1 A 0 A_CheckFloor(1)
+        Goto DeathFinishSpawner
+        TNT1 A 0 A_SpawnItemEx("Hexen_SpearSpikeCoop",0,0,0,0,0,-100,0,SXF_TRANSFERPOINTERS|SXF_NOCHECKPOSITION)
+      DeathFinishSpawner:
         TNT1 A 1 A_SpawnItemEx("Hexen_FSpearFX5Spawner",0,0,0,0,0,0,0,SXF_CLIENTSIDE)
         stop
-	  XDeath:
-		Goto DeathFinish+1
+      XDeath:
+        Goto DeathFinish+1
     }
 }
 
 Actor Hexen_SpearSpikeGravitySwitchOff : Trigger
 {
-	States
-	{
-		Pickup:
-			TNT1 A 0 A_CheckFlag("NOGRAVITY","EnableGravity")
-			Stop
-		EnableGravity:
-			TNT1 A 0 A_GiveInventory("Hexen_SpearSpikeGravitySwitchTracker")
-			TNT1 A 0 A_Gravity
-			Stop
-	}
+    States
+    {
+        Pickup:
+            TNT1 A 0 A_CheckFlag("NOGRAVITY","EnableGravity")
+            Stop
+        EnableGravity:
+            TNT1 A 0 A_GiveInventory("Hexen_SpearSpikeGravitySwitchTracker")
+            TNT1 A 0 A_Gravity
+            Stop
+    }
 }
 
 Actor Hexen_SpearSpikeGravitySwitchOn : Trigger
 {
-	States
-	{
-		Pickup:
-			TNT1 A 0 A_JumpIfInventory("Hexen_SpearSpikeGravitySwitchTracker",1,"DisableGravity")
-			Stop
-		DisableGravity:
-			TNT1 A 0 A_TakeInventory("Hexen_SpearSpikeGravitySwitchTracker")
-			TNT1 A 0 A_NoGravity
-			Stop
-	}
+    States
+    {
+        Pickup:
+            TNT1 A 0 A_JumpIfInventory("Hexen_SpearSpikeGravitySwitchTracker",1,"DisableGravity")
+            Stop
+        DisableGravity:
+            TNT1 A 0 A_TakeInventory("Hexen_SpearSpikeGravitySwitchTracker")
+            TNT1 A 0 A_NoGravity
+            Stop
+    }
 }
 
 Actor Hexen_SpearSpikeGravitySwitchTracker : TemporaryBoolean {}
 
 Actor Hexen_SpearSpike
 {
-	+ISMONSTER
-	-COUNTKILL
-	+NODAMAGE
-	-SHOOTABLE
-	+NODAMAGETHRUST
-	Mass 10000000
-	Radius 16
-	Height 64
-	States
-	{
-		Spawn:
-			TSPK E 0 NoDelay A_SetSolid
-			TSPK E 0 A_SpawnItemEx("HexenDirtClump")
-			TSPK E 0 A_RearrangePointers(AAPTR_NULL,AAPTR_TARGET,AAPTR_DEFAULT)
-			TSPK E 0 A_TransferPointer(AAPTR_DEFAULT,AAPTR_DEFAULT,AAPTR_FRIENDPLAYER,AAPTR_MASTER)
-			//TODO - this isn't working as expected with flying enemies, we need a better way to check if they reached the floor
-			TSPK E 0 A_JumpIfTracerCloser(512,1)
-			Goto SpawnFinish
-			TSPK E 0 A_GiveInventory("Hexen_SpearSpikeGravitySwitchOff",1,AAPTR_TRACER)
-		SpawnLoop:
-			TSPK E 2 A_JumpIfTracerCloser(48,"SpawnFinish")
-			Loop
-		SpawnFinish:
-			TSPK E 0 A_GiveInventory("Hexen_SpearSpikeGravitySwitchOn",1,AAPTR_TRACER)
-			TSPK E 0 A_PlaySound("Hexen/Spike3",CHAN_BODY)
-			TSPK EFGHIJKLMN 3 A_Explode(30,32,XF_NOTMISSILE,false) //We only really need to hurt enemies here
-			TSPK E 0 A_PlaySound("Hexen/Spike2",CHAN_5)
-			TSPK ANMLKJIHGFE 3
-			Stop
-	}
+    +ISMONSTER
+    -COUNTKILL
+    +NODAMAGE
+    -SHOOTABLE
+    +NODAMAGETHRUST
+    Mass 10000000
+    Radius 16
+    Height 64
+    States
+    {
+        Spawn:
+            TSPK E 0 NoDelay A_SetSolid
+            TSPK E 0 A_SpawnItemEx("HexenDirtClump")
+            TSPK E 0 A_RearrangePointers(AAPTR_NULL,AAPTR_TARGET,AAPTR_DEFAULT)
+            TSPK E 0 A_TransferPointer(AAPTR_DEFAULT,AAPTR_DEFAULT,AAPTR_FRIENDPLAYER,AAPTR_MASTER)
+            //TODO - this isn't working as expected with flying enemies, we need a better way to check if they reached the floor
+            TSPK E 0 A_JumpIfTracerCloser(512,1)
+            Goto SpawnFinish
+            TSPK E 0 A_GiveInventory("Hexen_SpearSpikeGravitySwitchOff",1,AAPTR_TRACER)
+        SpawnLoop:
+            TSPK E 2 A_JumpIfTracerCloser(48,"SpawnFinish")
+            Loop
+        SpawnFinish:
+            TSPK E 0 A_GiveInventory("Hexen_SpearSpikeGravitySwitchOn",1,AAPTR_TRACER)
+            TSPK E 0 A_PlaySound("Hexen/Spike3",CHAN_BODY)
+            TSPK EFGHIJKLMN 3 A_Explode(30,32,XF_NOTMISSILE,false) //We only really need to hurt enemies here
+            TSPK E 0 A_PlaySound("Hexen/Spike2",CHAN_5)
+            TSPK ANMLKJIHGFE 3
+            Stop
+    }
 }
 
 Actor Hexen_SpearSpikeCoop : Hexen_SpearSpike
 {
-	Species "Player"
+    Species "Player"
     +THRUSPECIES
 }
 
 ACTOR HexenDirtClump : DirtClump
 {
-	+NOBLOCKMAP
-	+NOTELEPORT
-	States
-	{
-		Spawn:
-			TSPK C 200
-			TSPK C 2 A_Fadeout(0.1)
-			Wait
-	}
+    +NOBLOCKMAP
+    +NOTELEPORT
+    States
+    {
+        Spawn:
+            TSPK C 200
+            TSPK C 2 A_Fadeout(0.1)
+            Wait
+    }
 }

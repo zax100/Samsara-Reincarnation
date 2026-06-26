@@ -187,6 +187,7 @@ Half-Life:
 -All-
 
 * Fixed bullet damage applying when hitting map geometry.
+! The status bar HUD now shows the Uzi.
 
 Lo Wang (Shadow Warrior):
 

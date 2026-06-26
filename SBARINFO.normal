@@ -7321,6 +7321,18 @@ StatusBar Normal, ForceScaled
                     DrawImage "WPOPF4Y", 145, 16;
                 }
 
+                // Slot 4S
+                InInventory not GotWeapon4
+                {
+                    InInventory HLUzi { DrawImage "WPOPF4N", 145, 16; }
+                }
+
+                IsSelected HLUzi
+                {
+                    DrawImage "OPFWSEL4", 149, 3;
+                    DrawImage "WPOPF4Y", 145, 16;
+                }
+
                 // Slot 5
                 InInventory GotWeapon5
                 {
@@ -7592,6 +7604,22 @@ StatusBar Normal, ForceScaled
                 }
 
                 IsSelected MP5
+                {
+                    DrawImage "HEPSELE4", 154, 1;
+                    DrawImage "WPHAL4Y", 147, 12;
+                }
+
+                // Slot 4S
+                InInventory not GotWeapon4
+                {
+                    InInventory HLUzi
+                    {
+                        DrawImage "HEPSELN4", 154, 1;
+                        DrawImage "WPHAL4N", 147, 12;
+                    }
+                }
+
+                IsSelected HLUzi
                 {
                     DrawImage "HEPSELE4", 154, 1;
                     DrawImage "WPHAL4Y", 147, 12;
