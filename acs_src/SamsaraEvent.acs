@@ -1583,6 +1583,13 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				break;
 
 			case CLASS_HEXEN:
+				if (CheckInventory("SamsaraHexenFrostShardsPoweredFiringSoundCheck") && !CheckWeapon("Frost Shards"))
+				{
+					StopSound(0, CHAN_WEAPON);
+
+					SetInventory("SamsaraHexenFrostShardsPoweredFiringSoundCheck", 0);
+				}
+
 				hexmode = GetUserCVar(pln, "samsara_cl_hexclass");
 
                 if (hexmode > 3) { hexmode = 3; }

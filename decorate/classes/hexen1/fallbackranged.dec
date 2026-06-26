@@ -76,6 +76,8 @@ actor SamsaraHexenJadeWandAttackHandler : Trigger
     }
 }
 
+// Unpowered
+
 actor SamsaraHexenJadePuff
 {
     DamageType "Electric"
@@ -100,6 +102,8 @@ actor SamsaraHexenJadePuff
 }
 
 actor SamsaraHexenJadePuffCoop : SamsaraHexenJadePuff { +MTHRUSPECIES }
+
+// Powered
 
 actor SamsaraHexenJadeWandBlob
 {
@@ -448,6 +452,8 @@ actor SamsaraHexenImpalerCrossbowMeleePoweredAttackHandler : Trigger
     }
 }
 
+// Unpowered
+
 actor HexenImpalerPuff : BulletPuff
 {
     Radius 4
@@ -479,6 +485,8 @@ actor HexenImpalerPuff : BulletPuff
 }
 
 actor HexenImpalerPuffCoop : HexenImpalerPuff { +MTHRUSPECIES }
+
+// Powered
 
 /*
 actor HexenImpalerPoweredMeleePuff : HexenImpalerPuff
@@ -546,6 +554,8 @@ actor SamsaraHexenImpalerCrossbowRangedAttackHandler : Trigger
     }
 }
 
+// Unpowered
+
 actor HexenImpalerMissile : FastProjectile
 {
     Radius 4
@@ -578,6 +588,8 @@ actor HexenImpalerMissileCoop : HexenImpalerMissile
     Species "Player"
     +THRUSPECIES
 }
+
+// Powered
 
 actor HexenImpalerMissileSilent : HexenImpalerMissile { SeeSound "" }
 actor HexenImpalerMissileSilentCoop : HexenImpalerMissileCoop { SeeSound "" }
