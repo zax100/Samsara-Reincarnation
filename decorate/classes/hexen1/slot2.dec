@@ -207,7 +207,8 @@ actor HexenShockArrowBolt2 : HexenShockArrowBolt
 
 // Parias (Classic)/Daedolon
 
-actor SamsaraHexenFrostRaySoundPlaying : Boolean {}
+actor SamsaraHexenFrostShardsPoweredSoundPlaying : Boolean {}
+actor SamsaraHexenFrostShardsPoweredFiredCount : Counter { Inventory.MaxAmount 2 }
 
 actor "Frost Shards" : SamsaraHexenWeapon
 {
@@ -230,21 +231,21 @@ actor "Frost Shards" : SamsaraHexenWeapon
 
       // Parias (Classic)
       Ready:
-        TNT1 A 0 A_TakeInventory("SamsaraHexenFrostRaySoundPlaying")
+        TNT1 A 0 A_TakeInventory("SamsaraHexenFrostShardsPoweredSoundPlaying")
         TNT1 A 0 A_JumpIfInventory("HexenClassMode",2,"ReadyMage")
       ReadyClericClassic:
         CONE A 1 A_WeaponReady
         goto Ready
 
       Deselect:
-        TNT1 A 0 A_TakeInventory("SamsaraHexenFrostRaySoundPlaying")
+        TNT1 A 0 A_TakeInventory("SamsaraHexenFrostShardsPoweredSoundPlaying")
         TNT1 A 0 A_JumpIfInventory("HexenClassMode",2,"DeselectMage")
       DeselectClericClassic:
         CONE A 1 A_Lower
         goto Deselect
 
       Select:
-        TNT1 A 0 A_TakeInventory("SamsaraHexenFrostRaySoundPlaying")
+        TNT1 A 0 A_TakeInventory("SamsaraHexenFrostShardsPoweredSoundPlaying")
         TNT1 A 0 A_JumpIfInventory("HexenClassMode",2,"SelectMage")
       SelectClericClassic:
         CONE A 1 A_Raise
@@ -316,7 +317,7 @@ actor "Frost Shards" : SamsaraHexenWeapon
         goto HoldPoweredFinishClericClassic
 
       HoldPoweredFinishClericClassic:
-        CONE F 4 Bright A_TakeInventory("SamsaraHexenFrostRaySoundPlaying")
+        CONE F 4 Bright A_TakeInventory("SamsaraHexenFrostShardsPoweredSoundPlaying")
         CONE G 4
         CONE A 5
         CONE A 7 A_ReFire
@@ -366,7 +367,7 @@ actor "Frost Shards" : SamsaraHexenWeapon
         goto HoldPoweredFinishMage
 
       HoldPoweredFinishMage:
-        CONE M 4 Bright A_TakeInventory("SamsaraHexenFrostRaySoundPlaying")
+        CONE M 4 Bright A_TakeInventory("SamsaraHexenFrostShardsPoweredSoundPlaying")
         CONE N 4
         CONE H 5
         CONE H 7 A_ReFire
@@ -601,13 +602,17 @@ actor SamsaraHexenFrostShardsPoweredAttackHandler : Trigger
         TNT1 A 0 A_JumpIfInventory("SamsaraHasInfiniteAmmo",1,"PickupAttack")
         TNT1 A 0 A_JumpIfInventory("Clip",1,1)
         stop
+        TNT1 A 0 A_JumpIfInventory("SamsaraHexenFrostShardsPoweredFiredCount",0,2)
+        TNT1 A 0 A_GiveInventory("SamsaraHexenFrostShardsPoweredFiredCount")
+        goto PickupAttack
         TNT1 A 0 A_TakeInventory("Clip",1)
+        TNT1 A 0 A_TakeInventory("SamsaraHexenFrostShardsPoweredFiredCount")
         goto PickupAttack
 
       // Attack stuff
       PickupAttack:
-        TNT1 A 0 A_JumpIfInventory("SamsaraHexenFrostRaySoundPlaying",1,2)
-        TNT1 A 0 ACS_NamedExecuteWithResult("HexenIceShardsRaySound") // also gives the token
+        TNT1 A 0 A_JumpIfInventory("SamsaraHexenFrostShardsPoweredSoundPlaying",1,2)
+        TNT1 A 0 ACS_NamedExecuteWithResult("HexenFrostShardsRaySound") // also gives the token
         TNT1 A 0 A_JumpIfInventory("SPModeOn",1,"PickupAttackCoop")
         TNT1 A 0 A_JumpIfInventory("CoopModeOn",1,"PickupAttackCoop")
       PickupAttackDM:

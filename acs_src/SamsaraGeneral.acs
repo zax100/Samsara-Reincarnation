@@ -2370,6 +2370,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Hammer of Retribution", INTMAX);
 			TakeInventory("Crusader's Longbow", INTMAX);
 			TakeInventory("Frost Shards", INTMAX);
+            SetInventory("SamsaraHexenFrostShardsPoweredFiredCount", 0);
 			TakeInventory("Javelin of Zeal", INTMAX);
 			TakeInventory("Bishop's Shortsword", INTMAX);
 			TakeInventory("Wand of Embers", INTMAX);
