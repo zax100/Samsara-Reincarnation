@@ -357,13 +357,19 @@ Script "HexenGrapplePull" (void)
 }
 
 //Yeah, I need to loop the sound on my conditions
-Script "HexenIceShardsRaySound" (void)
+script "HexenIceShardsRaySound" (void)
 {
-	GiveInventory("HexenFrostRaySoundItem",1);
-	while(CheckInventory("HexenFrostRaySoundItem"))
-	{
-		PlaySound(0,"Hexen/FreezeRay",5+(timer()%3),1.0,false,1.0);
-		Delay(4);
-	}
-	StopSound(0,CHAN_WEAPON);
+    GiveInventory("SamsaraHexenFrostRaySoundPlaying", 1);
+
+    int channelincrement = -1;
+
+    while (CheckInventory("SamsaraHexenFrostRaySoundPlaying") && CheckWeapon("Frost Shards"))
+    {
+        PlaySound(0, "Hexen/FreezeRay", channelincrement > -1 ? CHAN_5 + channelincrement : CHAN_WEAPON);
+
+        if (channelincrement >= 2) { channelincrement = -1; }
+        else { channelincrement++; }
+
+        Delay(4);
+    }
 }
