@@ -355,3 +355,15 @@ Script "HexenGrapplePull" (void)
 	//Clear tid on the original projectile
 	Thing_ChangeTid(newTid, myTid);
 }
+
+//Yeah, I need to loop the sound on my conditions
+Script "HexenIceShardsRaySound" (void)
+{
+	GiveInventory("HexenFrostRaySoundItem",1);
+	while(CheckInventory("HexenFrostRaySoundItem"))
+	{
+		PlaySound(0,"Hexen/FreezeRay",5+(timer()%3),1.0,false,1.0);
+		Delay(4);
+	}
+	StopSound(0,CHAN_WEAPON);
+}
