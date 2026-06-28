@@ -217,7 +217,15 @@ actor SamsaraQuake2RailgunLoopSoundStopper : Trigger
     }
 }
 
-actor Q2RailgunPuff : Q2BulletPuff {}
+actor Q2RailgunPuff : Q2BulletPuff
+{
+    States
+    {
+      Spawn:
+        TNT1 A 1
+        stop
+    }
+}
 
 actor Q2RailgunPuff_Coop : Q2RailgunPuff
 {
