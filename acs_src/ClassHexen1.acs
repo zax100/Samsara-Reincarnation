@@ -363,7 +363,7 @@ script "HexenIceShardsRaySound" (void)
 
     int channelincrement = -1;
 
-    while (CheckInventory("SamsaraHexenFrostRaySoundPlaying") && CheckWeapon("Frost Shards"))
+    while (CheckWeapon("Frost Shards") && !isDead(0) && CheckInventory("SamsaraHexenFrostRaySoundPlaying"))
     {
         PlaySound(0, "Hexen/FreezeRay", channelincrement > -1 ? CHAN_5 + channelincrement : CHAN_WEAPON);
 
@@ -372,4 +372,6 @@ script "HexenIceShardsRaySound" (void)
 
         Delay(4);
     }
+
+    SetInventory("SamsaraHexenFrostRaySoundPlaying", 0);
 }
