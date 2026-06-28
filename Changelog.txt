@@ -159,6 +159,7 @@ Caleb (Blood):
 
 Strifeguy (Strife):
 
+* Fixed the crush pain sound not being called properly.
 * Fixed the burn death sound playing later than intended.
 + The punch dagger and pistol now deal extra damage to Hexen monsters outside of ReMixer (for reference, the DamageFactor amounts from Doomguy's brass knuckles and pistol/rifle, respectively, are used).
 ! When running out of alternate ammo, weapons will now switch to the previous ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with any alternate ammo remaining.

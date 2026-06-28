@@ -627,9 +627,9 @@ actor HexenFrostRayDM : FastProjectile
     Speed 128
     Damage (random(5,10))
     DamageType "HexenIce"
+    MissileType "HexenFrostRayParticle"
     DeathSound "MageShardsExplode"
     Obituary "$SAMSARA_HEXEN_OB_SLOT2"
-    MissileType "HexenFrostRayParticle"
     +BLOODLESSIMPACT
     +THRUGHOST
     States
@@ -1288,7 +1288,7 @@ actor Hexen_SpearSpike
 {
     Radius 16
     Height 64
-    DamageType "HexenJavelinSpike" // to be paired with Pain/Death.Crush
+    DamageType "HexenJavelinSpike"
     Mass 10000000
     +ISMONSTER
     +NODAMAGE
