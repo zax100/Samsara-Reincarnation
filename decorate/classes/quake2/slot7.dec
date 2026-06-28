@@ -197,6 +197,7 @@ actor BFG10KBall : BFGBall
     {
       Spawn:
         TNT1 A 1 NoDelay A_SpawnItemEx("BFG10KOrbitParticleSpawner")
+        // we have to do it like this throughout each spawn state, or else it'll flicker in netplay
         BGS1 A 0 Bright Light("Q2BFGBALL") A_ChangeFlag("MISSILE",true)
         BGS1 A 0 Bright Light("Q2BFGBALL") A_JumpIf(velx == 0, 1)
         goto SpawnContinue

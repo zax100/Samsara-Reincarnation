@@ -4506,6 +4506,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						!CheckInventory("SamsaraGoldfingerHasGoldMagnum"))
 					{ GiveInventory("SamsaraGoldfingerHasGoldMagnum", 1); }
 
+                    // due to the nature of loadout weapons (at least one weapon is not a dual wieldable), we are exempting the slot 1 from this check
 					if (CheckInventory("Goldeneye_PP7DualToken") && CheckInventory("Goldeneye_KF7DualToken") && CheckInventory("Goldeneye_AutoShotgunDualToken") &&
                         CheckInventory("Goldeneye_AR33DualToken") && CheckInventory("Goldeneye_PhantomDualToken") && CheckInventory("Goldeneye_RocketLauncherDualToken") &&
                         CheckInventory("Goldeneye_GrenadeLauncherDualToken") && CheckInventory("Goldeneye_RCP90DualToken") && CheckInventory("Goldeneye_CougarDualToken") &&
@@ -5083,6 +5084,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						dualpickupcheck++;
 					}
 
+                    // due to the nature of loadout weapons (at least one weapon is not a dual wieldable), we are exempting the slot 1 from this check
 					if (CheckInventory("Goldeneye_PP7DualToken") && CheckInventory("Goldeneye_KF7DualToken") && CheckInventory("Goldeneye_AutoShotgunDualToken") &&
                         CheckInventory("Goldeneye_AR33DualToken") && CheckInventory("Goldeneye_PhantomDualToken") && CheckInventory("Goldeneye_RocketLauncherDualToken") &&
                         CheckInventory("Goldeneye_GrenadeLauncherDualToken") && CheckInventory("Goldeneye_RCP90DualToken") && CheckInventory("Goldeneye_CougarDualToken") &&
