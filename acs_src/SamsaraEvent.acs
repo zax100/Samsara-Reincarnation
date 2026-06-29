@@ -2327,6 +2327,11 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				break;
 
 			case CLASS_DUKE:
+				SetInventory("SamsaraDuke64UsingAltAmmo", (CheckWeapon("Glock 17") && CheckInventory("Duke64UsingDumDums")) ||
+                                                          (CheckWeapon("  Shotgun  ") && CheckInventory("Duke64UsingExplosiveShells")) ||
+                                                          (CheckWeapon("RPG") && CheckInventory("Duke64UsingHeatSeeking")) ||
+                                                          (CheckWeapon("Freezethrower") && CheckInventory("Duke64UsingShrinker")));
+
 				if (CheckInventory("SamsaraDuke64PlasmaCannonLoopSoundCheck") && !CheckWeapon("Devastator Weapon"))
 				{
 					StopSound(0, CHAN_5);
@@ -3218,7 +3223,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				}
 				break;
 			case CLASS_DISRUPTOR:
-				SetInventory("SamsaraDisruptorUsingAltAmmo", (CheckWeapon(" Phase Rifle ") && CheckInventory("SamsaraDisruptorPhaseRifleMode")) || (CheckWeapon("Phase Repeater") && CheckInventory("SamsaraDisruptorPhaseRepeaterMode")) || (CheckWeapon(" Lock-on Cannon ") && CheckInventory("SamsaraDisruptorLockOnCannonMode")));
+				SetInventory("SamsaraDisruptorUsingAltAmmo", (CheckWeapon(" Phase Rifle ") && CheckInventory("SamsaraDisruptorPhaseRifleMode")) ||
+                                                             (CheckWeapon("Phase Repeater") && CheckInventory("SamsaraDisruptorPhaseRepeaterMode")) ||
+                                                             (CheckWeapon(" Lock-on Cannon ") && CheckInventory("SamsaraDisruptorLockOnCannonMode")));
 
 				if (CheckInventory("SamsaraDisruptorPlasmaLanceFiringSoundCheck") && !CheckWeapon(" Disruptor Plasmalance "))
 				{
