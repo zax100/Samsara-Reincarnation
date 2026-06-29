@@ -4460,99 +4460,196 @@ StatusBar Automap, ForceScaled
             }
         }
 
-        /*InInventory ExpandedHud
+        /*        InInventory ExpandedHud
         {
             DrawImage "BLUDBART", 0, 0;
 
             // Slot 1
             InInventory GotWeapon0
             {
-                DrawImage "BLUDF1N", 59, 0;
-                DrawImage "BLUDW1N", 47, 12;
+                DrawImage "BLUDF1N", 27, 4;
+                DrawImage "BLUDW1N", 15, 12;
             }
 
             IsSelected Dynamite
             {
-                DrawImage "BLUDF1Y", 59, 0;
-                DrawImage "BLUDW1Y", 47, 12;
+                DrawImage "BLUDF1Y", 27, 4;
+                DrawImage "BLUDW1Y", 15, 12;
             }
 
             // Slot 2
             InInventory GotWeapon2
             {
-                DrawImage "BLUDF2N", 90, 0;
-                DrawImage "BLUDW2N", 82, 12;
+                DrawImage "BLUDF2N", 57, 4;
+                DrawImage "BLUDW2N", 48, 12;
             }
 
             IsSelected Flaregun
             {
-                DrawImage "BLUDF2Y", 90, 0;
-                DrawImage "BLUDW2Y", 82, 12;
+                DrawImage "BLUDF2Y", 57, 4;
+                DrawImage "BLUDW2Y", 48, 12;
             }
 
             // Slot 3
             InInventory GotWeapon3
             {
-                DrawImage "BLUDF3N", 121, 0;
-                DrawImage "BLUDW3N", 115, 12;
+                DrawImage "BLUDF3N", 88, 4;
+                DrawImage "BLUDW3N", 81, 12;
             }
 
             IsSelected Sawedoff
             {
-                DrawImage "BLUDF3Y", 121, 0;
-                DrawImage "BLUDW3Y", 115, 12;
+                DrawImage "BLUDF3Y", 88, 4;
+                DrawImage "BLUDW3Y", 81, 12;
             }
 
             // Slot 4
             InInventory GotWeapon4
             {
-                DrawImage "BLUDF4N", 156, 0;
-                DrawImage "BLUDW4N", 150, 12;
+                DrawImage "BLUDF4N", 123, 4;
+                DrawImage "BLUDW4N", 114, 12;
             }
 
             IsSelected Tommygun
             {
-                DrawImage "BLUDF4Y", 156, 0;
-                DrawImage "BLUDW4Y", 150, 12;
+                DrawImage "BLUDF4Y", 123, 4;
+                DrawImage "BLUDW4Y", 114, 12;
+            }
+			
+            // Slot 4s
+            InInventory not GotWeapon4
+            {
+				InInventory BloodGreaseGun
+				{
+					DrawImage "BLUDF4N", 123, 4;
+					DrawImage "BLUDW4NS", 114, 12;
+				}
+            }
+
+            IsSelected BloodGreaseGun
+            {
+                DrawImage "BLUDF4Y", 123, 4;
+                DrawImage "BLUDW4YS", 114, 12;
             }
 
             // Slot 5
             InInventory GotWeapon5
             {
-                DrawImage "BLUDF5N", 189, 0;
-                DrawImage "BLUDW5N", 180, 12;
+                DrawImage "BLUDF5N", 157, 4;
+                DrawImage "BLUDW5N", 148, 12;
             }
 
             IsSelected NapalmLauncher
             {
-                DrawImage "BLUDF5Y", 189, 0;
-                DrawImage "BLUDW5Y", 180, 12;
+                DrawImage "BLUDF5Y", 157, 4;
+                DrawImage "BLUDW5Y", 148, 12;
             }
+			
+            // Slot 5s
+            InInventory not GotWeapon5
+            {
+				InInventory BloodProximityTNT || BloodRemoteTNT
+				{
+					DrawImage "BLUDF5N", 157, 4;
+					DrawImage "BLUDW5NS", 148, 12;
+				}
+			}
+
+            IsSelected BloodRemoteTNT
+            {
+                DrawImage "BLUDF5Y", 157, 4;
+                DrawImage "BLUDW5YS", 148, 12;
+            }
+			
+            IsSelected BloodProximityTNT
+            {
+                DrawImage "BLUDF5Y", 157, 4;
+                DrawImage "BLUDW5YP", 148, 12;
+            }
+
 
             // Slot 6
             InInventory GotWeapon6
             {
-                DrawImage "BLUDF6N", 220, 0;
-                DrawImage "BLUDW6N", 213, 12;
+                DrawImage "BLUDF6N", 187, 4;
+                DrawImage "BLUDW6N", 180, 12;
             }
 
             IsSelected TeslaCannon
             {
-                DrawImage "BLUDF6Y", 220, 0;
-                DrawImage "BLUDW6Y", 213, 12;
+                DrawImage "BLUDF6Y", 187, 4;
+                DrawImage "BLUDW6Y", 180, 12;
+            }
+			
+			// Slot 6s
+            InInventory not GotWeapon6
+            {
+				InInventory BloodFlamethrower
+				{
+					DrawImage "BLUDF6N", 187, 4;
+					DrawImage "BLUDW6NS", 180, 12;
+				}
+			}
+
+            IsSelected BloodFlamethrower
+            {
+                DrawImage "BLUDF6Y", 187, 4;
+                DrawImage "BLUDW6YS", 180, 12;
             }
 
             // Slot 7
             InInventory LifeLeech
             {
-                DrawImage "BLUDF7N", 251, 0;
-                DrawImage "BLUDW7N", 247, 12;
+                DrawImage "BLUDF7N", 217, 4;
+                DrawImage "BLUDW7N", 213, 12;
             }
 
             IsSelected LifeLeech
             {
-                DrawImage "BLUDF7Y", 251, 0;
-                DrawImage "BLUDW7Y", 247, 12;
+                DrawImage "BLUDF7Y", 217, 4;
+                DrawImage "BLUDW7Y", 213, 12;
+            }
+			
+            // Slot 7s
+            InInventory not GotWeapon7
+            {
+				InInventory BloodNaturomDemonto
+				{
+					DrawImage "BLUDF7N", 217, 4;
+					DrawImage "BLUDW7NS", 213, 12;
+				}
+			}
+
+            IsSelected BloodNaturomDemonto
+            {
+                DrawImage "BLUDF7Y", 217, 4;
+                DrawImage "BLUDW7YS", 213, 12;
+            }
+			
+            // Unique 1 / Slot 8
+            InInventory VoodooDoll
+            {
+                DrawImage "BLUDF8N", 248, 4;
+                DrawImage "BLUDW8N", 246, 12;
+            }
+
+            IsSelected VoodooDoll
+            {
+                DrawImage "BLUDF8Y", 248, 4;
+                DrawImage "BLUDW8Y", 246, 12;
+            }
+			
+            // Unique 3 / Slot 9
+            InInventory Spraycan
+            {
+                DrawImage "BLUDF9N", 286, 4;
+                DrawImage "BLUDW9N", 279, 12;
+            }
+
+            IsSelected Spraycan
+            {
+                DrawImage "BLUDF9Y", 286, 4;
+                DrawImage "BLUDW9Y", 279, 12;
             }
         }*/
     }
