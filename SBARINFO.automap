@@ -4545,13 +4545,13 @@ StatusBar Automap, ForceScaled
             InInventory GotWeapon5
             {
                 DrawImage "BLUDF5N", 157, 4;
-                DrawImage "BLUDW5N", 148, 12;
+                DrawImage "BLUDW5N", 147, 12;
             }
 
             IsSelected NapalmLauncher
             {
                 DrawImage "BLUDF5Y", 157, 4;
-                DrawImage "BLUDW5Y", 148, 12;
+                DrawImage "BLUDW5Y", 147, 12;
             }
 
             // Slot 5S
@@ -4560,22 +4560,18 @@ StatusBar Automap, ForceScaled
                 InInventory BloodProximityTNT || BloodRemoteTNT
                 {
                     DrawImage "BLUDF5N", 157, 4;
-                    DrawImage "BLUDW5NS", 148, 12;
+                    DrawImage "BLUDW5NS", 147, 12;
                 }
-            }
-
-            IsSelected BloodRemoteTNT
-            {
-                DrawImage "BLUDF5Y", 157, 4;
-                DrawImage "BLUDW5YS", 148, 12;
             }
 
             IsSelected BloodProximityTNT
             {
                 DrawImage "BLUDF5Y", 157, 4;
-                DrawImage "BLUDW5YP", 148, 12;
+                DrawImage "BLUDW5YP", 147, 12;
+            } else IsSelected BloodRemoteTNT {
+                DrawImage "BLUDF5Y", 157, 4;
+                DrawImage "BLUDW5YS", 147, 12;
             }
-
 
             // Slot 6
             InInventory GotWeapon6

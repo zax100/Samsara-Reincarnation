@@ -4564,18 +4564,14 @@ StatusBar Normal, ForceScaled
                 }
             }
 
-            IsSelected BloodRemoteTNT
-            {
-                DrawImage "BLUDF5Y", 157, 4;
-                DrawImage "BLUDW5YS", 147, 12;
-            }
-
             IsSelected BloodProximityTNT
             {
                 DrawImage "BLUDF5Y", 157, 4;
                 DrawImage "BLUDW5YP", 147, 12;
+            } else IsSelected BloodRemoteTNT {
+                DrawImage "BLUDF5Y", 157, 4;
+                DrawImage "BLUDW5YS", 147, 12;
             }
-
 
             // Slot 6
             InInventory GotWeapon6
