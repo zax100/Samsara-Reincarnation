@@ -2699,11 +2699,11 @@ StatusBar Normal, ForceScaled
                 {
                     InInventory Duke64UsingShrinker
                     {
-                        DrawImage "WPD646Y2", 214, 10;
                         DrawImage "DN643NM6", 218, 2;
+                        DrawImage "WPD646Y2", 214, 10;
                     } else {
-                        DrawImage "WPD646Y", 214, 10;
                         DrawImage "DN642NM6", 218, 2;
+                        DrawImage "WPD646Y", 214, 10;
                     }
                 }
 
