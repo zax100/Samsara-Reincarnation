@@ -2429,150 +2429,171 @@ StatusBar Automap, ForceScaled
                 {
                     InInventory SamsaraReloadMode, 2
                     {
-                        DrawNumber 3, DN64HUDF, Red, Ammo DukePistolDumDumReload, 53, 175;
-                        DrawNumber 3, DN64HUDF, Red, Ammo Duke64DumDums, 53, 183;
+                        DrawNumber 3, DN64HUDF, Red, Ammo DukePistolDumDumReload, 110, 175;
+                        DrawNumber 3, DN64HUDF, Red, Ammo Duke64DumDums, 110, 183;
                     }
-                    else { DrawNumber 3, DN64HUDF, Red, Ammo Duke64DumDums, 53, 181; }
+                    else { DrawNumber 3, DN64HUDF, Red, Ammo Duke64DumDums, 110, 179; }
                 } else {
                     InInventory SamsaraReloadMode, 2
                     {
                         InInventory PistolModeOn
                         {
-                            DrawNumber 3, DN64HUDF, Gold, Ammo1, 53, 175, 0, Untranslated, 0, Untranslated, 20;
-                            DrawNumber 3, DN64HUDF, Gold, Ammo Clip, 53, 183, 0, Untranslated, 0, Untranslated, 20;
+                            DrawNumber 3, DN64HUDF, Gold, Ammo1, 110, 175, 0, Untranslated, 0, Untranslated, 20;
+                            DrawNumber 3, DN64HUDF, Gold, Ammo Clip, 110, 183, 0, Untranslated, 0, Untranslated, 20;
                         }
-                        else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 53, 181, 0, Untranslated, 0, Untranslated, 20; }
+                        else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 110, 179, 0, Untranslated, 0, Untranslated, 20; }
                     }
-                    else InInventory PistolModeOn { DrawNumber 3, DN64HUDF, Gold, Ammo Clip, 53, 181, 0, Untranslated, 0, Untranslated, 20; }
+                    else InInventory PistolModeOn { DrawNumber 3, DN64HUDF, Gold, Ammo Clip, 110, 179, 0, Untranslated, 0, Untranslated, 20; }
                 }
             } else IsSelected "  Shotgun  " {
-                InInventory Duke64UsingExplosiveShells { DrawNumber 3, DN64HUDF, Red, Ammo Duke64ExplosiveShells, 53, 181; }
-                else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 53, 181, 0, Untranslated, 0, Untranslated, 20; }
+                InInventory Duke64UsingExplosiveShells { DrawNumber 3, DN64HUDF, Red, Ammo Duke64ExplosiveShells, 110, 179; }
+                else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 110, 179, 0, Untranslated, 0, Untranslated, 20; }
             } else IsSelected RPG {
-                InInventory Duke64UsingHeatSeeking { DrawNumber 3, DN64HUDF, Red, Ammo Duke64HeatSeekingRockets, 53, 181; }
-                else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 53, 181, 0, Untranslated, 0, Untranslated, 20; }
+                InInventory Duke64UsingHeatSeeking { DrawNumber 3, DN64HUDF, Red, Ammo Duke64HeatSeekingRockets, 110, 179; }
+                else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 110, 179, 0, Untranslated, 0, Untranslated, 20; }
             } else IsSelected Freezethrower {
-                InInventory Duke64UsingShrinker { DrawNumber 3, DN64HUDF, Red, Ammo Duke64ShrinkerAmmo, 53, 181; }
-                else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 53, 181, 0, Untranslated, 0, Untranslated, 20; }
+                InInventory Duke64UsingShrinker { DrawNumber 3, DN64HUDF, Red, Ammo Duke64ShrinkerAmmo, 110, 179; }
+                else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 110, 179, 0, Untranslated, 0, Untranslated, 20; }
             } else {
                 UsesSecondaryAmmo
                 {
-                    DrawNumber 3, DN64HUDF, Gold, Ammo1, 53, 175, 0, Untranslated, 0, Untranslated, 20;
-                    DrawNumber 3, DN64HUDF, Gold, Ammo2, 53, 183, 0, Untranslated, 0, Untranslated, 20;
+                    DrawNumber 3, DN64HUDF, Gold, Ammo1, 110, 175, 0, Untranslated, 0, Untranslated, 20;
+                    DrawNumber 3, DN64HUDF, Gold, Ammo2, 110, 179, 0, Untranslated, 0, Untranslated, 20;
                 }
-                else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 53, 181, 0, Untranslated, 0, Untranslated, 20; }
+                else { DrawNumber 3, DN64HUDF, Gold, Ammo1, 110, 179, 0, Untranslated, 0, Untranslated, 20; }
             }
 
-            DrawNumber 3, DN64HUDF, Gold, Health, 85, 181, 0, White, 24, Untranslated, 50;
-            DrawNumber 3, DN64HUDF, Gold, Armor, 202, 181, 0, Untranslated, 0, Untranslated, 50;
+            DrawNumber 3, DN64HUDF, Gold, Health, 46, 179, 0, White, 24, Untranslated, 50;
+            DrawNumber 3, DN64HUDF, Gold, Armor, 78, 179, 0, Untranslated, 0, Untranslated, 50;
 
             // Doom keys
-            InInventory BlueCard { DrawImage "D6HUDB", 271, 173; }
-            InInventory YellowCard { DrawImage "D6HUDY", 275, 180; }
-            InInventory RedCard { DrawImage "D6HUDR", 276, 188; }
-            InInventory BlueSkull { DrawImage "D6HUDB", 271, 173; }
-            InInventory YellowSkull { DrawImage "D6HUDY", 275, 180; }
-            InInventory RedSkull { DrawImage "D6HUDR", 276, 188; }
-            //Chex keys
-            InInventory ChexBlueCard { DrawImage "STKEYS0", 222, 175; }
-            InInventory ChexYellowCard { DrawImage "STKEYS1", 235, 175; }
-            InInventory ChexRedCard { DrawImage "STKEYS2", 248, 175; }
+            InInventory BlueCard { DrawImage "STKEYS0", 224, 178; }
+            InInventory YellowCard { DrawImage "STKEYS1", 232, 178; }
+            InInventory RedCard { DrawImage "STKEYS2", 240, 178; }
+            InInventory BlueSkull { DrawImage "STKEYS3", 224, 185; }
+            InInventory YellowSkull { DrawImage "STKEYS4", 232, 185; }
+            InInventory RedSkull { DrawImage "STKEYS5", 240, 185; }
+            // Chex keys
+            InInventory ChexBlueCard { DrawImage "STKEYS0", 222, 176; }
+            InInventory ChexYellowCard { DrawImage "STKEYS1", 230, 176; }
+            InInventory ChexRedCard { DrawImage "STKEYS2", 238, 176; }
             InInventory BlueFlemKey { DrawImage "STKEYS3", 222, 186; }
-            InInventory YellowFlemKey { DrawImage "STKEYS4", 235, 186; }
-            InInventory RedFlemKey { DrawImage "STKEYS5", 248, 186; }
-            //Heretic keys
-            InInventory KeyYellow { DrawImage "YKEYICON", 224, 181; }
-            InInventory KeyGreen { DrawImage "GKEYICON", 238, 181; }
-            InInventory KeyBlue { DrawImage "BKEYICON", 251, 181; }
-            //HeXen keys
-            InInventory KeySteel { DrawImage "HEXKEY1", 223, 171; }
-            InInventory KeyCave { DrawImage "HEXKEY2", 223, 181; }
-            InInventory KeyAxe { DrawImage "HEXKEY3", 223, 191; }
-            InInventory KeyFire { DrawImage "HEXKEY4", 233, 171; }
-            InInventory KeyEmerald { DrawImage "HEXKEY5", 233, 181; }
-            InInventory KeyDungeon { DrawImage "HEXKEY6", 233, 191; }
-            InInventory KeySilver { DrawImage "HEXKEY7", 243, 171; }
-            InInventory KeyRusted { DrawImage "HEXKEY8", 243, 181; }
-            InInventory KeyHorn { DrawImage "HEXKEY9", 243, 191; }
-            InInventory KeySwamp { DrawImage "HEXKEYA", 253, 171; }
-            InInventory KeyCastle { DrawImage "HEXKEYB", 253, 181; }
-            //Strife keys
-            InInventory BaseKey { DrawImage "STRIKEY1", 224, 171; }
-            InInventory GovsKey { DrawImage "STRIKEY2", 230, 171; }
-            InInventory PassCard { DrawImage "STRIKEY3", 236, 171; }
-            InInventory IDBadge { DrawImage "STRIKEY4", 243, 171; }
-            InInventory PrisonKey { DrawImage "STRIKEY5", 249, 171; }
-            InInventory SeveredHand { DrawImage "STRIKEY6", 256, 171; }
-            InInventory Power1Key { DrawImage "STRIKEY7", 224, 178; }
-            InInventory Power2Key { DrawImage "STRIKEY8", 230, 178; }
-            InInventory Power3Key { DrawImage "STRIKEY9", 236, 178; }
-            InInventory GoldKey { DrawImage "STRIKEYA", 243, 178; }
-            InInventory IDCard { DrawImage "STRIKEYB", 249, 178; }
-            InInventory SilverKey { DrawImage "STRIKEYC", 256, 178; }
-            InInventory OracleKey { DrawImage "STRIKEYD", 224, 185; }
-            InInventory MilitaryID { DrawImage "STRIKEYE", 230, 185; }
-            InInventory OrderKey { DrawImage "STRIKEYF", 236, 185; }
-            InInventory BrassKey { DrawImage "STRIKEYG", 243, 185; }
-            InInventory RedCrystalKey { DrawImage "STRIKEYH", 249, 185; }
-            InInventory BlueCrystalKey { DrawImage "STRIKEYI", 256, 185; }
-            InInventory ChapelKey { DrawImage "STRIKEYJ", 224, 192; }
-            InInventory CatacombKey { DrawImage "STRIKEYK", 230, 192; }
-            InInventory CoreKey { DrawImage "STRIKEYL", 236, 192; }
-            InInventory MaulerKey { DrawImage "STRIKEYM", 243, 192; }
-            InInventory FactoryKey { DrawImage "STRIKEYN", 249, 192; }
-            InInventory MineKey { DrawImage "STRIKEYO", 256, 192; }
+            InInventory YellowFlemKey { DrawImage "STKEYS4", 230, 186; }
+            InInventory RedFlemKey { DrawImage "STKEYS5", 238, 186; }
+            // Heretic keys
+            InInventory KeyYellow { DrawImage "YKEYICON", 225, 179; }
+            InInventory KeyGreen { DrawImage "GKEYICON", 236, 179; }
+            InInventory KeyBlue { DrawImage "BKEYICON", 230, 186; }
+            // Hexen keys
+            InInventory KeySteel { DrawImage "HEXKEY1", 219, 171; }
+            InInventory KeyCave { DrawImage "HEXKEY2", 219, 181; }
+            InInventory KeyAxe { DrawImage "HEXKEY3", 219, 191; }
+            InInventory KeyFire { DrawImage "HEXKEY4", 227, 171; }
+            InInventory KeyEmerald { DrawImage "HEXKEY5", 227, 181; }
+            InInventory KeyDungeon { DrawImage "HEXKEY6", 227, 191; }
+            InInventory KeySilver { DrawImage "HEXKEY7", 235, 171; }
+            InInventory KeyRusted { DrawImage "HEXKEY8", 235, 181; }
+            InInventory KeyHorn { DrawImage "HEXKEY9", 235, 191; }
+            InInventory KeySwamp { DrawImage "HEXKEYA", 243, 171; }
+            InInventory KeyCastle { DrawImage "HEXKEYB", 243, 181; }
+            // Strife keys
+            InInventory BaseKey { DrawImage "STRIKEY1", 221, 173; }
+            InInventory GovsKey { DrawImage "STRIKEY2", 226, 173; }
+            InInventory PassCard { DrawImage "STRIKEY3", 232, 174; }
+            InInventory IDBadge { DrawImage "STRIKEY4", 238, 173; }
+            InInventory PrisonKey { DrawImage "STRIKEY5", 243, 174; }
+            InInventory SeveredHand { DrawImage "STRIKEY6", 222, 179; }
+            InInventory Power1Key { DrawImage "STRIKEY7", 229, 179; }
+            InInventory Power2Key { DrawImage "STRIKEY8", 234, 179; }
+            InInventory Power3Key { DrawImage "STRIKEY9", 239, 179; }
+            InInventory GoldKey { DrawImage "STRIKEYA", 244, 179; }
+            InInventory IDCard { DrawImage "STRIKEYB", 224, 184; }
+            InInventory SilverKey { DrawImage "STRIKEYC", 229, 184; }
+            InInventory OracleKey { DrawImage "STRIKEYD", 234, 184; }
+            InInventory MilitaryID { DrawImage "STRIKEYE", 239, 183; }
+            InInventory OrderKey { DrawImage "STRIKEYF", 244, 184; }
+            InInventory BrassKey { DrawImage "STRIKEYG", 223, 189; }
+            InInventory RedCrystalKey { DrawImage "STRIKEYH", 229, 189; }
+            InInventory BlueCrystalKey { DrawImage "STRIKEYI", 234, 189; }
+            InInventory ChapelKey { DrawImage "STRIKEYJ", 239, 188; }
+            InInventory CatacombKey { DrawImage "STRIKEYK", 244, 188; }
+            InInventory CoreKey { DrawImage "STRIKEYL", 224, 193; }
+            InInventory MaulerKey { DrawImage "STRIKEYM", 228, 193; }
+            InInventory FactoryKey { DrawImage "STRIKEYN", 233, 194; }
+            InInventory MineKey { DrawImage "STRIKEYO", 238, 194; }
 
-            /*DrawNumber 3, DN3DAMFNT, Green, Ammo Clip, 289, 174;
-            DrawNumber 3, DN3DAMFNT, Green, Ammo Shell, 289, 180;
-            DrawNumber 3, DN3DAMFNT, Green, Ammo RocketAmmo, 289, 186;
-            DrawNumber 3, DN3DAMFNT, Green, Ammo Cell, 289, 192;
+            // Ammo Counters
+            InInventory SamsaraDuke64UsingAltAmmo
+            {
+                DrawNumber 3, DN64HDS2, SmallNukemOrange, Ammo Duke64DumDums, 274, 172;
+                DrawNumber 3, DN64HDS2, SmallNukemOrange, AmmoCapacity Duke64DumDums, 291, 172;
 
-            DrawNumber 3, DN3DAMFNT, Green, AmmoCapacity Clip, 315, 174;
-            DrawNumber 3, DN3DAMFNT, Green, AmmoCapacity Shell, 315, 180;
-            DrawNumber 3, DN3DAMFNT, Green, AmmoCapacity RocketAmmo, 315, 186;
-            DrawNumber 3, DN3DAMFNT, Green, AmmoCapacity Cell, 315, 192;*/
+                DrawNumber 3, DN64HDS2, SmallNukemOrange, Ammo Duke64ExplosiveShells, 274, 178;
+                DrawNumber 3, DN64HDS2, SmallNukemOrange, AmmoCapacity Duke64ExplosiveShells, 291, 178;
 
-            InInventory ChickenModeOn { DrawNumber 3, DN64HUDF, Untranslated, ChickenKillCount, 131, 181; }
+                DrawNumber 3, DN64HDS2, SmallNukemOrange, Ammo Duke64HeatSeekingRockets, 274, 184;
+                DrawNumber 3, DN64HDS2, SmallNukemOrange, AmmoCapacity Duke64HeatSeekingRockets, 291, 184;
+
+                DrawNumber 3, DN64HDS2, SmallNukemOrange, Ammo Duke64ShrinkerAmmo, 274, 190;
+                DrawNumber 3, DN64HDS2, SmallNukemOrange, AmmoCapacity Duke64ShrinkerAmmo, 291, 190;
+            } else {
+                DrawNumber 3, DN64HDS2, Untranslated, Ammo Clip, 274, 172;
+                DrawNumber 3, DN64HDS2, Untranslated, AmmoCapacity Clip, 291, 172;
+
+                DrawNumber 3, DN64HDS2, Untranslated, Ammo Shell, 274, 178;
+                DrawNumber 3, DN64HDS2, Untranslated, AmmoCapacity Shell, 291, 178;
+
+                DrawNumber 3, DN64HDS2, Untranslated, Ammo RocketAmmo, 274, 184;
+                DrawNumber 3, DN64HDS2, Untranslated, AmmoCapacity RocketAmmo, 291, 184;
+
+                DrawNumber 3, DN64HDS2, Untranslated, Ammo Cell, 274, 190;
+                DrawNumber 3, DN64HDS2, Untranslated, AmmoCapacity Cell, 291, 190;
+            }
+
+            InInventory ChickenModeOn { DrawNumber 3, DN64HUDF, Untranslated, ChickenKillCount, 142, 179; }
             else
             {
-                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, DN64HUDF, Untranslated, Frags, 131, 181; }
+                GameMode Deathmatch, Possession, TeamGame { DrawNumber 3, DN64HUDF, Untranslated, Frags, 142, 179; }
                 else GameMode SinglePlayer, Cooperative, Invasion, Survival
                 {
-                    DrawNumber 3, DN64HUDF, Untranslated, KillCountAmount, 131, 181;
-                    InInventory KillCountNotch, 1 { DrawImage "DUKENTCH", 103, 169; }
-                    InInventory KillCountNotch, 2 { DrawImage "DUKENTCH", 107, 169; }
-                    InInventory KillCountNotch, 3 { DrawImage "DUKENTCH", 111, 169; }
-                    InInventory KillCountNotch, 4 { DrawImage "DUKENTCH", 115, 169; }
-                    InInventory KillCountNotch, 5 { DrawImage "DUKENTCH", 119, 169; }
-                    InInventory KillCountNotch, 6 { DrawImage "DUKENTCH", 123, 169; }
-                    InInventory KillCountNotch, 7 { DrawImage "DUKENTCH", 127, 169; }
-                    InInventory KillCountNotch, 8 { DrawImage "DUKENTCH", 131, 169; }
-                    InInventory KillCountNotch, 9 { DrawImage "DUKENTCH", 135, 169; }
+                    DrawNumber 3, DN64HUDF, Untranslated, KillCountAmount, 142, 179;
+                    InInventory KillCountNotch, 1 { DrawImage "DUKENTCH", 105, 169; }
+                    InInventory KillCountNotch, 2 { DrawImage "DUKENTCH", 109, 169; }
+                    InInventory KillCountNotch, 3 { DrawImage "DUKENTCH", 113, 169; }
+                    InInventory KillCountNotch, 4 { DrawImage "DUKENTCH", 117, 169; }
+                    InInventory KillCountNotch, 5 { DrawImage "DUKENTCH", 121, 169; }
+                    InInventory KillCountNotch, 6 { DrawImage "DUKENTCH", 125, 169; }
+                    InInventory KillCountNotch, 7 { DrawImage "DUKENTCH", 129, 169; }
+                    InInventory KillCountNotch, 8 { DrawImage "DUKENTCH", 133, 169; }
+                    InInventory KillCountNotch, 9 { DrawImage "DUKENTCH", 137, 169; }
                 }
             }
 
             //InInventory SamsaraIsPlayingInZandronum { DrawImage RuneIcon, 20, 40, Center; }
 
-            /*DrawSelectedInventory AlwaysShowCounter, DN64HUDF, 290, 22, 293, 30, Untranslated;
+            DrawSelectedInventory AlwaysShowCounter, DN64HDS2, 177, 172, 214, 184, SmallNukemYellowUntranslated;
 
-            InInventory DukeJetpackFuel { DrawNumber 3, INDEXFONT, Yellow, DukeJetpackFuel, 293, 48; }
+            // Inventory percentages // Temp till we find a way to properly replicate how Duke 3D does inventory percentages #zdoom
+            InInventory HolodukeCooldown { DrawNumber 3, DN64HDS2, SmallNukemBlue, HolodukeCooldown, 214, 190; }
+
+            InInventory DukeJetpackFuel { DrawNumber 3, DN64HDS2, SmallNukemYellow, DukeJetpackFuel, 312, 190; DrawString DN64HDS2, SmallNukemYellow, "%", 316, 190; }
 
             InInventory DukeVisionFuel
             {
-                InInventory DukeJetpackFuel { DrawNumber 3, INDEXFONT, Green, DukeVisionFuel, 293, 56; }
-                else { DrawNumber 3, INDEXFONT, Green, DukeVisionFuel, 293, 48; }
+                InInventory DukeJetpackFuel { DrawNumber 3, DN64HDS2, NukemGreen, DukeVisionFuel, 312, 184; DrawString DN64HDS2, NukemGreen, "%", 316, 184; }
+                else { DrawNumber 3, DN64HDS2, NukemGreen, DukeVisionFuel, 312, 190; DrawString DN64HDS2, NukemGreen, "%", 316, 190; }
             }
 
             InInventory DukeSteroidsFuel
             {
                 InInventory DukeVisionFuel
                 {
-                    InInventory DukeJetpackFuel { DrawNumber 3, INDEXFONT, DarkBrown, DukeSteroidsFuel, 293, 64; }
-                    else { DrawNumber 3, INDEXFONT, DarkBrown, DukeSteroidsFuel, 293, 56; }
+                    InInventory DukeJetpackFuel { DrawNumber 3, DN64HDS2, SmallNukemOrange, DukeSteroidsFuel, 312, 178; DrawString DN64HDS2, SmallNukemOrange, "%", 316, 178; }
+                    else { DrawNumber 3, DN64HDS2, SmallNukemOrange, DukeSteroidsFuel, 312, 184; DrawString DN64HDS2, SmallNukemOrange, "%", 316, 184; }
                 }
-                else InInventory DukeJetpackFuel { DrawNumber 3, INDEXFONT, DarkBrown, DukeSteroidsFuel, 293, 56; }
-                else { DrawNumber 3, INDEXFONT, DarkBrown, DukeSteroidsFuel, 293, 48; }
-            }*/
+                else InInventory DukeJetpackFuel { DrawNumber 3, DN64HDS2, SmallNukemOrange, DukeSteroidsFuel, 312, 184; DrawString DN64HDS2, SmallNukemOrange, "%", 316, 184; }
+                else { DrawNumber 3, DN64HDS2, SmallNukemOrange, DukeSteroidsFuel, 312, 190; DrawString DN64HDS2, SmallNukemOrange, "%", 316, 190; }
+            }
 
             GameMode TeamGame, CTF, OneFlagCTF, Skulltag, TeamPossession, TeamLMS, Domination
             {
@@ -2591,9 +2612,9 @@ StatusBar Automap, ForceScaled
                 }*/
             }
 
-            InInventory PowerFakeInvulnerable { DrawImage "DKNGOD0", 143, 168; }
-            else InInventory PowerSamsaraDamageBooster { DrawImage "DKNARNO0", 143, 168; }
-            else { DrawMugShot 5, 143, 168; }
+            InInventory PowerFakeInvulnerable { DrawImage "DKNGOD0", 142, 168; }
+            else InInventory PowerSamsaraDamageBooster { DrawImage "DKNARNO0", 142, 168; }
+            else { DrawMugShot 5, 142, 168; }
 
             /*InInventory ExpandedHud
             {
@@ -2602,113 +2623,101 @@ StatusBar Automap, ForceScaled
                 // Slot 1
                 InInventory GotWeapon0
                 {
-                    DrawImage "WEPSELR1", 54, 0;
-                    DrawImage "WPDUKE1N", 49, 11;
+                    DrawImage "DN641NM1", 58, 2;
+                    DrawImage "WPD641N", 49, 10;
                 }
 
                 IsSelected Pipebombs
                 {
-                    DrawImage "WEPSELY1", 54, 0;
-                    DrawImage "WPDUKE1Y", 49, 11;
+                    DrawImage "DN642NM1", 58, 2;
+                    DrawImage "WPD641Y", 49, 10;
                 }
 
                 // Slot 2
                 InInventory GotWeapon2
                 {
-                    DrawImage "WEPSELR2", 87, 0;
-                    DrawImage "WPDUKE2N", 82, 11;
+                    DrawImage "DN641NM2", 88, 2;
+                    DrawImage "WPD642N", 82, 10;
                 }
 
                 IsSelected "  Shotgun  "
                 {
-                    DrawImage "WEPSELY2", 87, 0;
-                    DrawImage "WPDUKE2Y", 82, 11;
+                    InInventory Duke64UsingExplosiveShells { DrawImage "DN643NM2", 88, 2; }
+                    else { DrawImage "DN642NM2", 88, 2; }
+                    DrawImage "WPD642Y", 82, 10;
                 }
 
                 // Slot 3
                 InInventory GotWeapon3
                 {
-                    DrawImage "WEPSELR3", 120, 0;
-                    DrawImage "WPDUKE3N", 115, 11;
+                    DrawImage "DN641NM3", 118, 2;
+                    DrawImage "WPD643N", 115, 10;
                 }
 
                 IsSelected "Explosive Shotgun"
                 {
-                    DrawImage "WEPSELY3", 120, 0;
-                    DrawImage "WPDUKE3Y", 115, 11;
+                    DrawImage "DN642NM3", 118, 2;
+                    DrawImage "WPD643Y", 115, 10;
                 }
 
                 // Slot 4
                 InInventory GotWeapon4
                 {
-                    DrawImage "WEPSELR4", 154, 0;
-                    DrawImage "WPDUKE4N", 148, 11;
+                    DrawImage "DN641NM4", 153, 2;
+                    DrawImage "WPD644N", 148, 10;
                 }
 
                 IsSelected "Chaingun Cannon"
                 {
-                    DrawImage "WEPSELY4", 154, 0;
-                    DrawImage "WPDUKE4Y", 148, 11;
+                    DrawImage "DN642NM4", 153, 2;
+                    DrawImage "WPD644Y", 148, 10;
                 }
 
                 // Slot 5
                 InInventory GotWeapon5
                 {
-                    DrawImage "WEPSELR5", 186, 0;
-                    DrawImage "WPDUKE5N", 181, 11;
+                    DrawImage "DN641NM5", 189, 2;
+                    DrawImage "WPD645N", 181, 10;
                 }
 
                 IsSelected RPG
                 {
-                    DrawImage "WEPSELY5", 186, 0;
-                    DrawImage "WPDUKE5Y", 181, 11;
+                    InInventory Duke64UsingHeatSeeking { DrawImage "DN643NM5", 189, 2; }
+                    else { DrawImage "DN642NM5", 189, 2; }
+                    DrawImage "WPD645Y", 181, 10;
                 }
 
                 // Slot 6
                 InInventory GotWeapon6
                 {
-                    DrawImage "WEPSELR6", 219, 0;
-                    DrawImage "WPDUKE6N", 214, 11;
+                    DrawImage "DN641NM6", 218, 2;
+                    InInventory Duke64UsingShrinker { DrawImage "WPD646N2", 214, 10; }
+                    else { DrawImage "WPD646N", 214, 10; }
                 }
 
                 IsSelected Freezethrower
                 {
-                    DrawImage "WEPSELY6", 219, 0;
-                    DrawImage "WPDUKE6Y", 214, 11;
+                    InInventory Duke64UsingShrinker
+                    {
+                        DrawImage "WPD646Y2", 214, 10;
+                        DrawImage "DN643NM6", 218, 2;
+                    } else {
+                        DrawImage "WPD646Y", 214, 10;
+                        DrawImage "DN642NM6", 218, 2;
+                    }
                 }
 
                 // Slot 7
                 InInventory GotWeapon7
                 {
-                    DrawImage "WEPSELR7", 251, 0;
-                    DrawImage "WPDUKE7N", 247, 11;
+                    DrawImage "DN641NM7", 248, 2;
+                    DrawImage "WPD647N", 247, 10;
                 }
 
                 IsSelected "Devastator Weapon"
                 {
-                    DrawImage "WEPSELY7", 251, 0;
-                    DrawImage "WPDUKE7Y", 247, 11;
-                }
-
-                // HoloDuke
-                InInventory HolodukeCooldown
-                {
-                    InInventory DukeSteroidsFuel
-                    {
-                        InInventory DukeVisionFuel
-                        {
-                            InInventory DukeJetpackFuel { DrawNumber 3, INDEXFONT, LightBlue, HolodukeCooldown, 293, 72; }
-                            else { DrawNumber 3, INDEXFONT, LightBlue, HolodukeCooldown, 293, 64; }
-                        } else {
-                            InInventory DukeJetpackFuel { DrawNumber 3, INDEXFONT, LightBlue, HolodukeCooldown, 293, 64; }
-                            else { DrawNumber 3, INDEXFONT, LightBlue, HolodukeCooldown, 293, 56; }
-                        }
-                    } else InInventory DukeVisionFuel {
-                        InInventory DukeJetpackFuel { DrawNumber 3, INDEXFONT, LightBlue, HolodukeCooldown, 293, 64; }
-                        else { DrawNumber 3, INDEXFONT, LightBlue, HolodukeCooldown, 293, 56; }
-                    }
-                    else InInventory DukeJetpackFuel { DrawNumber 3, INDEXFONT, LightBlue, HolodukeCooldown, 293, 56; }
-                    else { DrawNumber 3, INDEXFONT, LightBlue, HolodukeCooldown, 293, 48; }
+                    DrawImage "DN642NM7", 248, 2;
+                    DrawImage "WPD647Y", 247, 10;
                 }
             }*/
         } else { // Original/Life's A Beach
@@ -4460,7 +4469,7 @@ StatusBar Automap, ForceScaled
             }
         }
 
-        /*        InInventory ExpandedHud
+        /*InInventory ExpandedHud
         {
             DrawImage "BLUDBART", 0, 0;
 
@@ -4515,15 +4524,15 @@ StatusBar Automap, ForceScaled
                 DrawImage "BLUDF4Y", 123, 4;
                 DrawImage "BLUDW4Y", 114, 12;
             }
-			
-            // Slot 4s
+
+            // Slot 4S
             InInventory not GotWeapon4
             {
-				InInventory BloodGreaseGun
-				{
-					DrawImage "BLUDF4N", 123, 4;
-					DrawImage "BLUDW4NS", 114, 12;
-				}
+                InInventory BloodGreaseGun
+                {
+                    DrawImage "BLUDF4N", 123, 4;
+                    DrawImage "BLUDW4NS", 114, 12;
+                }
             }
 
             IsSelected BloodGreaseGun
@@ -4544,23 +4553,23 @@ StatusBar Automap, ForceScaled
                 DrawImage "BLUDF5Y", 157, 4;
                 DrawImage "BLUDW5Y", 148, 12;
             }
-			
-            // Slot 5s
+
+            // Slot 5S
             InInventory not GotWeapon5
             {
-				InInventory BloodProximityTNT || BloodRemoteTNT
-				{
-					DrawImage "BLUDF5N", 157, 4;
-					DrawImage "BLUDW5NS", 148, 12;
-				}
-			}
+                InInventory BloodProximityTNT || BloodRemoteTNT
+                {
+                    DrawImage "BLUDF5N", 157, 4;
+                    DrawImage "BLUDW5NS", 148, 12;
+                }
+            }
 
             IsSelected BloodRemoteTNT
             {
                 DrawImage "BLUDF5Y", 157, 4;
                 DrawImage "BLUDW5YS", 148, 12;
             }
-			
+
             IsSelected BloodProximityTNT
             {
                 DrawImage "BLUDF5Y", 157, 4;
@@ -4580,16 +4589,16 @@ StatusBar Automap, ForceScaled
                 DrawImage "BLUDF6Y", 187, 4;
                 DrawImage "BLUDW6Y", 180, 12;
             }
-			
-			// Slot 6s
+
+            // Slot 6S
             InInventory not GotWeapon6
             {
-				InInventory BloodFlamethrower
-				{
-					DrawImage "BLUDF6N", 187, 4;
-					DrawImage "BLUDW6NS", 180, 12;
-				}
-			}
+                InInventory BloodFlamethrower
+                {
+                    DrawImage "BLUDF6N", 187, 4;
+                    DrawImage "BLUDW6NS", 180, 12;
+                }
+            }
 
             IsSelected BloodFlamethrower
             {
@@ -4609,24 +4618,24 @@ StatusBar Automap, ForceScaled
                 DrawImage "BLUDF7Y", 217, 4;
                 DrawImage "BLUDW7Y", 213, 12;
             }
-			
-            // Slot 7s
-            InInventory not GotWeapon7
+
+            // Slot 7S
+            InInventory not LifeLeech
             {
-				InInventory BloodNaturomDemonto
-				{
-					DrawImage "BLUDF7N", 217, 4;
-					DrawImage "BLUDW7NS", 213, 12;
-				}
-			}
+                InInventory BloodNaturomDemonto
+                {
+                    DrawImage "BLUDF7N", 217, 4;
+                    DrawImage "BLUDW7NS", 213, 12;
+                }
+            }
 
             IsSelected BloodNaturomDemonto
             {
                 DrawImage "BLUDF7Y", 217, 4;
                 DrawImage "BLUDW7YS", 213, 12;
             }
-			
-            // Unique 1 / Slot 8
+
+            // Unique 1 (Listed as Slot 8 for convenience)
             InInventory VoodooDoll
             {
                 DrawImage "BLUDF8N", 248, 4;
@@ -4638,8 +4647,8 @@ StatusBar Automap, ForceScaled
                 DrawImage "BLUDF8Y", 248, 4;
                 DrawImage "BLUDW8Y", 246, 12;
             }
-			
-            // Unique 3 / Slot 9
+
+            // Unique 3 (Listed as Slot 9 for convenience)
             InInventory Spraycan
             {
                 DrawImage "BLUDF9N", 286, 4;
