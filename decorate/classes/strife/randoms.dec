@@ -15,6 +15,7 @@ ACTOR StrifePeasant1 : Peasant
 	Deathsound "Strife/Peasant/Death"
 	Painsound "Strife/Rebel/Pain"
 	AttackSound "strife/hitmeat"
+	CrushPainSound "strife/crush"
 	Tag "Peasant"
 	+NEVERTARGET
 	+NOICEDEATH
@@ -3000,6 +3001,7 @@ ACTOR StrifeBeggar : Beggar
 	Deathsound "Strife/Peasant/Death"
 	Painsound "Strife/Rebel/Pain"
 	AttackSound "strife/hitmeat"
+	CrushPainSound "strife/crush"
 	Tag "Beggar"
 	+JUSTHIT
 	+FRIENDLY

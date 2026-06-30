@@ -1583,13 +1583,6 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				break;
 
 			case CLASS_HEXEN:
-				if (CheckInventory("SamsaraHexenFrostShardsPoweredFiringSoundCheck") && !CheckWeapon("Frost Shards"))
-				{
-					StopSound(0, CHAN_WEAPON);
-
-					SetInventory("SamsaraHexenFrostShardsPoweredFiringSoundCheck", 0);
-				}
-
 				hexmode = GetUserCVar(pln, "samsara_cl_hexclass");
 
                 if (hexmode > 3) { hexmode = 3; }
@@ -2334,6 +2327,11 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				break;
 
 			case CLASS_DUKE:
+				SetInventory("SamsaraDuke64UsingAltAmmo", (CheckWeapon("Glock 17") && CheckInventory("Duke64UsingDumDums")) ||
+                                                          (CheckWeapon("  Shotgun  ") && CheckInventory("Duke64UsingExplosiveShells")) ||
+                                                          (CheckWeapon("RPG") && CheckInventory("Duke64UsingHeatSeeking")) ||
+                                                          (CheckWeapon("Freezethrower") && CheckInventory("Duke64UsingShrinker")));
+
 				if (CheckInventory("SamsaraDuke64PlasmaCannonLoopSoundCheck") && !CheckWeapon("Devastator Weapon"))
 				{
 					StopSound(0, CHAN_5);
@@ -3225,7 +3223,9 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 				}
 				break;
 			case CLASS_DISRUPTOR:
-				SetInventory("SamsaraDisruptorUsingAltAmmo", (CheckWeapon(" Phase Rifle ") && CheckInventory("SamsaraDisruptorPhaseRifleMode")) || (CheckWeapon("Phase Repeater") && CheckInventory("SamsaraDisruptorPhaseRepeaterMode")) || (CheckWeapon(" Lock-on Cannon ") && CheckInventory("SamsaraDisruptorLockOnCannonMode")));
+				SetInventory("SamsaraDisruptorUsingAltAmmo", (CheckWeapon(" Phase Rifle ") && CheckInventory("SamsaraDisruptorPhaseRifleMode")) ||
+                                                             (CheckWeapon("Phase Repeater") && CheckInventory("SamsaraDisruptorPhaseRepeaterMode")) ||
+                                                             (CheckWeapon(" Lock-on Cannon ") && CheckInventory("SamsaraDisruptorLockOnCannonMode")));
 
 				if (CheckInventory("SamsaraDisruptorPlasmaLanceFiringSoundCheck") && !CheckWeapon(" Disruptor Plasmalance "))
 				{
@@ -4506,6 +4506,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						!CheckInventory("SamsaraGoldfingerHasGoldMagnum"))
 					{ GiveInventory("SamsaraGoldfingerHasGoldMagnum", 1); }
 
+                    // due to the nature of loadout weapons (at least one weapon is not a dual wieldable), we are exempting the slot 1 from this check
 					if (CheckInventory("Goldeneye_PP7DualToken") && CheckInventory("Goldeneye_KF7DualToken") && CheckInventory("Goldeneye_AutoShotgunDualToken") &&
                         CheckInventory("Goldeneye_AR33DualToken") && CheckInventory("Goldeneye_PhantomDualToken") && CheckInventory("Goldeneye_RocketLauncherDualToken") &&
                         CheckInventory("Goldeneye_GrenadeLauncherDualToken") && CheckInventory("Goldeneye_RCP90DualToken") && CheckInventory("Goldeneye_CougarDualToken") &&
@@ -5083,6 +5084,7 @@ script "SamsaraSpawn" (int respawning) //624 -- SAMSARA_SPAWN
 						dualpickupcheck++;
 					}
 
+                    // due to the nature of loadout weapons (at least one weapon is not a dual wieldable), we are exempting the slot 1 from this check
 					if (CheckInventory("Goldeneye_PP7DualToken") && CheckInventory("Goldeneye_KF7DualToken") && CheckInventory("Goldeneye_AutoShotgunDualToken") &&
                         CheckInventory("Goldeneye_AR33DualToken") && CheckInventory("Goldeneye_PhantomDualToken") && CheckInventory("Goldeneye_RocketLauncherDualToken") &&
                         CheckInventory("Goldeneye_GrenadeLauncherDualToken") && CheckInventory("Goldeneye_RCP90DualToken") && CheckInventory("Goldeneye_CougarDualToken") &&

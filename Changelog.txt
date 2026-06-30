@@ -102,6 +102,7 @@ Duke Nukem 3D:
 
 -Duke Nukem (Duke Nukem 64)-
 
+! The status bar HUD has been improved and now shows its own weapons.
 ! When running out of alternate ammo, weapons will now switch to normal ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with alternate ammo remaining.
 
 -All-
@@ -154,11 +155,13 @@ Blake Stone (Blake Stone):
 
 Caleb (Blood):
 
+! The status bar HUD has been improved and now shows Skulltag weapons.
 ! Renamed some actor names to avoid name conflicts with other mods.
 ! The Naturom Demonto sprites have been improved.
 
 Strifeguy (Strife):
 
+* Fixed the crush pain sound not being called properly.
 * Fixed the burn death sound playing later than intended.
 + The punch dagger and pistol now deal extra damage to Hexen monsters outside of ReMixer (for reference, the DamageFactor amounts from Doomguy's brass knuckles and pistol/rifle, respectively, are used).
 ! When running out of alternate ammo, weapons will now switch to the previous ammo if there is some remaining. Running out of normal ammo will still switch to another weapon, even with any alternate ammo remaining.
@@ -202,7 +205,9 @@ Leonard (Redneck Rampage):
 Bitterman (Quake II):
 
 ! The chainfist, phalanx particle cannon, plasma beam, and trap now have sprites for the Compendium and the alternate HUD.
+* The BFG10K projectile should no longer flicker in netplay.
 + Originally an unused weapon from the Ground Zero expansion for Quake II prior to its rerelease, the disruptor has been added as a loadout choice for the slot 7S equipment (samsara_cl_bitterman_slot7s 1 (client) or samsara_bitterman_slot7s 2 (server)).
+! The railgun no longer leaves a puff on non-bleeding actors.
 ! Bitterman's quad damage powerup is now affected by the "Quake Quad Damage Behavior" setting.
 
 Demoness (Hexen II):
@@ -327,6 +332,7 @@ PSX Doom CE/PSX Final Doom CE:
 -Other-
 
 ! New pickup messages have been added for the megasphere when playing with the Quake and Quake+ armor modes.
+* Unique equipment pickups dropped by the Pinata Party mode no longer respawn.
 ! Ammo pickups dropped by the Pinata Party mode and custom enemies outside of Samsara can no longer be crushed out of existence.
 ! Player voodoo dolls now have normalized gravity and mass to ensure some map design tricks work as intended.
 ! With "All Loadout Equipment" enabled, status bar HUDs now show all currently equipped weapons in a slot regardless of loadout setting, in a similar manner to fullscreen HUDs. Unequipped weapons are still shown based on loadout setting when using a weapon from a different slot.

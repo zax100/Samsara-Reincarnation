@@ -2370,6 +2370,7 @@ Script "Samsara_ResetInventory" (void)
 			TakeInventory("Hammer of Retribution", INTMAX);
 			TakeInventory("Crusader's Longbow", INTMAX);
 			TakeInventory("Frost Shards", INTMAX);
+            SetInventory("SamsaraHexenFrostShardsPoweredFiredCount", 0);
 			TakeInventory("Javelin of Zeal", INTMAX);
 			TakeInventory("Bishop's Shortsword", INTMAX);
 			TakeInventory("Wand of Embers", INTMAX);
@@ -16795,6 +16796,8 @@ script "Samsara_PinataHandler" (int health, int radius, int height, int actortyp
             itemtospawn = PinataItemActors[currentpooltier - 1][randomitem];
 
             if (!StrCmp(itemtospawn, "HealPack1") && Random(0, 100) > 99 && xmas) { itemtospawn = "BecauseTermSaidSo"; }
+
+            if (!StrCmp(itemtospawn, "SamsaraUniquePickupRandom")) { itemtospawn = StrParam(s:"SamsaraUniquePickup", d:Random(1, 3)); } // bypass RandomSpawner
         }
 
         if (naughty || randomchance < PinataItemChances[currentpooltier - 1][randomitem])
